@@ -6,7 +6,7 @@ labels: 'ProposalPaper'
 assignees: ''
 
 ---
-
+Paper title:  
 Paper URL:  
 Your Proposal Tags:  
 Comments:  
