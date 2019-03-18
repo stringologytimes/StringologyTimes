@@ -20,5 +20,5 @@ Comments:
 Example:
 
 Paper URL: https://arxiv.org/abs/1803.09517  
-Your proposal tags: 2018, ESA, LZ77, RLBWT, UpperBounds, Experiments  
+Your proposal tags: 2018, LATIN, LZ77, RLBWT, UpperBounds, Experiments  
 Comments:    
