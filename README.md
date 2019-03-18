@@ -11,7 +11,6 @@ Paper URLはその論文を特定できるWebページなら何でもよいで�
 
 
 ==========Template==========  
-Paper title:  
 Paper URL:  
 Your proposal tags:  
 Comments:  
@@ -20,7 +19,6 @@ Comments:
 
 Example:
 
-Paper title: On the Approximation Ratio of Greedy Parsings  
 Paper URL: https://arxiv.org/abs/1803.09517  
 Your proposal tags: 2018, ESA, LZ77, RLBWT, UpperBounds, Experiments  
 Comments:    
