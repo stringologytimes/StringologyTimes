@@ -6,6 +6,14 @@ labels: 'ProposalPaper'
 assignees: ''
 
 ---
-Paper URL:  
+Preprint (e.g, arXiv) URL:  
+Year of Publication:  
+
+Conference Paper URL:  
+Year of Publication:  
+
+Journal Paper URL:  
+Year of Publication:  
+
 Your Proposal Tags:  
 Comments:  
