@@ -1,3 +1,5 @@
+import { type } from "os";
+
 //import xmldom from "xmldom";
 var sleep = require('sleep');
 //var request = require('request');
@@ -23,6 +25,23 @@ function loadArxivXML() : ArxivXMLInfo{
     dic.add(id);
   }
   return info;
+}
+
+class ArxivArticle{
+  node : Element;
+  date : Date;
+  id : string;
+  title : string;
+  url : string;
+  public constructor(_node : Element){
+    this.node = _node;
+    const dateStr : string = this.node.getElementsByTagName("published").item(0).textContent;
+    this.date = new Date(dateStr);
+    
+    this.id = this.node.getAttribute("id");
+    this.title = this.node.getElementsByTagName("title").item(0).textContent;
+    this.url = `https://arxiv.org/abs/${this.id}`;
+  }
 }
 
 const arxivXMLInfo = loadArxivXML();
@@ -63,12 +82,14 @@ function myFunction(ids : string[], arxivInfo : ArxivXMLInfo) {
   const idsStr = ids.join(",")
 
   const document : XMLDocument = getArxivXML(`http://export.arxiv.org/api/query?id_list=${idsStr}`);
+  console.log(`get URL http://export.arxiv.org/api/query?id_list=${idsStr}`);
   const entryCol = document.getElementsByTagName('entry');
 
   const articlesNode = arxivInfo.document.getElementsByTagName("articles").item(0);
-  for(let i=0;i<entryCol.length;i++){
+  for(let i=entryCol.length-1;i >= 0;i--){
     const entry = entryCol.item(i);
     const idNode = entry.getElementsByTagName("id").item(0).textContent;
+    console.log(`${ids[i]} / ${idNode} / ${idNode.indexOf(ids[i]) != -1}`)
     if(idNode.indexOf(ids[i]) != -1){
       entry.setAttribute("id", ids[i]);
       articlesNode.appendChild(entry);
@@ -81,7 +102,7 @@ function myFunction2(ids : string[], arxivInfo : ArxivXMLInfo){
   const arr : string[] = new Array(0);
   for(let i=0;i<ids.length;i++){
       arr.push(ids[i]);
-      if(arr.length == 5 || (arr.length > 0 && i == ids.length-1)){
+      if(arr.length == 10 || (arr.length > 0 && i == ids.length-1)){
         myFunction(arr, arxivInfo);
         arr.length = 0;
       }
@@ -95,7 +116,38 @@ if(id_arr.length > 0){
 
 try {
   fs.writeFileSync("data/arxiv.xml", arxivXMLInfo.document.toString());
-  console.log('write end');
 }catch(e){
   console.log(e);
 }
+
+function createPaperHTML(arxivInfo : ArxivXMLInfo) : string {
+  const outputArr : string[] = new Array(0);
+  const entryCol = arxivInfo.document.getElementsByTagName('entry');
+  const arr : ArxivArticle[] = new Array(0);
+  for(let i=0;i<entryCol.length;i++){
+    arr.push(new ArxivArticle(entryCol.item(i)));
+  }
+  arr.sort((a,b) => {
+    return b.date.getTime() - a.date.getTime();
+  })
+
+  outputArr.push("# Arxiv Papers");
+  arr.forEach((v, i) =>{
+    if(i == 0 || arr[i-1].date.getMonth() != arr[i].date.getMonth()){
+      outputArr.push(`## ${v.date.getFullYear()}/${v.date.getMonth()+1}/`)
+
+    }
+    outputArr.push(`- [${v.title}](${v.url})`)
+    //console.log(v.id + "/" + v.date.getMonth());
+  })
+  return outputArr.join("\n");
+}
+
+const paperHTML = createPaperHTML(arxivXMLInfo);
+
+try {
+  fs.writeFileSync("data/arxiv_list.html", paperHTML);
+}catch(e){
+  console.log(e);
+}
+
