@@ -1,0 +1,2351 @@
+[
+	{
+		"id": 1279110016,
+		"node_id": "MDU6TGFiZWwxMjc5MTEwMDE2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/1999",
+		"name": "1999",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 1999"
+	},
+	{
+		"id": 1284557885,
+		"node_id": "MDU6TGFiZWwxMjg0NTU3ODg1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2001",
+		"name": "2001",
+		"color": "aaaaaa",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1279107236,
+		"node_id": "MDU6TGFiZWwxMjc5MTA3MjM2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2002",
+		"name": "2002",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 2002"
+	},
+	{
+		"id": 1283099447,
+		"node_id": "MDU6TGFiZWwxMjgzMDk5NDQ3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2005",
+		"name": "2005",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 2005"
+	},
+	{
+		"id": 1294326033,
+		"node_id": "MDU6TGFiZWwxMjk0MzI2MDMz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2007",
+		"name": "2007",
+		"color": "aaaaaa",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1279112950,
+		"node_id": "MDU6TGFiZWwxMjc5MTEyOTUw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2008",
+		"name": "2008",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 2008"
+	},
+	{
+		"id": 1294330285,
+		"node_id": "MDU6TGFiZWwxMjk0MzMwMjg1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2009",
+		"name": "2009",
+		"color": "aaaaaa",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1279220227,
+		"node_id": "MDU6TGFiZWwxMjc5MjIwMjI3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2010",
+		"name": "2010",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 2010"
+	},
+	{
+		"id": 1279222242,
+		"node_id": "MDU6TGFiZWwxMjc5MjIyMjQy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2011",
+		"name": "2011",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 2011"
+	},
+	{
+		"id": 1283234287,
+		"node_id": "MDU6TGFiZWwxMjgzMjM0Mjg3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2012",
+		"name": "2012",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 2012"
+	},
+	{
+		"id": 1277880245,
+		"node_id": "MDU6TGFiZWwxMjc3ODgwMjQ1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2013",
+		"name": "2013",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 2013"
+	},
+	{
+		"id": 1277880070,
+		"node_id": "MDU6TGFiZWwxMjc3ODgwMDcw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2014",
+		"name": "2014",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 2014"
+	},
+	{
+		"id": 1277879847,
+		"node_id": "MDU6TGFiZWwxMjc3ODc5ODQ3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2015",
+		"name": "2015",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 2015"
+	},
+	{
+		"id": 1277879659,
+		"node_id": "MDU6TGFiZWwxMjc3ODc5NjU5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2016",
+		"name": "2016",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 2016"
+	},
+	{
+		"id": 1274191312,
+		"node_id": "MDU6TGFiZWwxMjc0MTkxMzEy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2017",
+		"name": "2017",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 2017"
+	},
+	{
+		"id": 1274191026,
+		"node_id": "MDU6TGFiZWwxMjc0MTkxMDI2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2018",
+		"name": "2018",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 2018"
+	},
+	{
+		"id": 1274191206,
+		"node_id": "MDU6TGFiZWwxMjc0MTkxMjA2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2019",
+		"name": "2019",
+		"color": "aaaaaa",
+		"default": false,
+		"description": "This conference paper or informal paper was published in 2019"
+	},
+	{
+		"id": 1274194494,
+		"node_id": "MDU6TGFiZWwxMjc0MTk0NDk0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/2D",
+		"name": "2D",
+		"color": "bfdadc",
+		"default": false,
+		"description": "TwoDimension"
+	},
+	{
+		"id": 1289588893,
+		"node_id": "MDU6TGFiZWwxMjg5NTg4ODkz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/3SAT",
+		"name": "3SAT",
+		"color": "6a2cb7",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1279101591,
+		"node_id": "MDU6TGFiZWwxMjc5MTAxNTkx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/3SUM",
+		"name": "3SUM",
+		"color": "4fe504",
+		"default": false,
+		"description": "3SUM"
+	},
+	{
+		"id": 1275338333,
+		"node_id": "MDU6TGFiZWwxMjc1MzM4MzMz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/ACAutomaton",
+		"name": "ACAutomaton",
+		"color": "1a2a93",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1286008381,
+		"node_id": "MDU6TGFiZWwxMjg2MDA4Mzgx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/ALENEX",
+		"name": "ALENEX",
+		"color": "ffff00",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275525642,
+		"node_id": "MDU6TGFiZWwxMjc1NTI1NjQy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/APM",
+		"name": "APM",
+		"color": "1a1ac9",
+		"default": false,
+		"description": "Approximate Pattern Matching"
+	},
+	{
+		"id": 1274694434,
+		"node_id": "MDU6TGFiZWwxMjc0Njk0NDM0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Abelian",
+		"name": "Abelian",
+		"color": "ff00ff",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275423471,
+		"node_id": "MDU6TGFiZWwxMjc1NDIzNDcx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/AbsentWord",
+		"name": "AbsentWord",
+		"color": "f204d6",
+		"default": false,
+		"description": "Absent words"
+	},
+	{
+		"id": 1574742469,
+		"node_id": "MDU6TGFiZWwxNTc0NzQyNDY5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Airy%20function",
+		"name": "Airy function",
+		"color": "44d7ea",
+		"default": false,
+		"description": "Airy function"
+	},
+	{
+		"id": 1525413602,
+		"node_id": "MDU6TGFiZWwxNTI1NDEzNjAy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Algorithm",
+		"name": "Algorithm",
+		"color": "a9f9d8",
+		"default": false,
+		"description": "Algorithms"
+	},
+	{
+		"id": 1525326654,
+		"node_id": "MDU6TGFiZWwxNTI1MzI2NjU0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Amortization",
+		"name": "Amortization",
+		"color": "b28d27",
+		"default": false,
+		"description": "Amortization algorithms"
+	},
+	{
+		"id": 1525422042,
+		"node_id": "MDU6TGFiZWwxNTI1NDIyMDQy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Analytic%20combinatorics",
+		"name": "Analytic combinatorics",
+		"color": "2c77a5",
+		"default": false,
+		"description": "Analytic combinatorics"
+	},
+	{
+		"id": 1275556815,
+		"node_id": "MDU6TGFiZWwxMjc1NTU2ODE1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Antipower",
+		"name": "Antipower",
+		"color": "ac53ed",
+		"default": false,
+		"description": "Antipower"
+	},
+	{
+		"id": 1275529198,
+		"node_id": "MDU6TGFiZWwxMjc1NTI5MTk4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Approximate",
+		"name": "Approximate",
+		"color": "551efc",
+		"default": false,
+		"description": "Approximate Algoirthm"
+	},
+	{
+		"id": 1370393385,
+		"node_id": "MDU6TGFiZWwxMzcwMzkzMzg1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Arithmetic%20Algorithms",
+		"name": "Arithmetic Algorithms",
+		"color": "57bac1",
+		"default": false,
+		"description": "Arithmetic Algorithms"
+	},
+	{
+		"id": 1275555565,
+		"node_id": "MDU6TGFiZWwxMjc1NTU1NTY1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Array",
+		"name": "Array",
+		"color": "4adb4c",
+		"default": false,
+		"description": "Array"
+	},
+	{
+		"id": 1574735000,
+		"node_id": "MDU6TGFiZWwxNTc0NzM1MDAw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Association%20queries",
+		"name": "Association queries",
+		"color": "ced32e",
+		"default": false,
+		"description": "Association queries"
+	},
+	{
+		"id": 1574743056,
+		"node_id": "MDU6TGFiZWwxNTc0NzQzMDU2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Asymptotics",
+		"name": "Asymptotics",
+		"color": "39d37e",
+		"default": false,
+		"description": "Asymptotics"
+	},
+	{
+		"id": 1275734892,
+		"node_id": "MDU6TGFiZWwxMjc1NzM0ODky",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Automata",
+		"name": "Automata",
+		"color": "54b520",
+		"default": false,
+		"description": "Automata"
+	},
+	{
+		"id": 1455124611,
+		"node_id": "MDU6TGFiZWwxNDU1MTI0NjEx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/BDS",
+		"name": "BDS",
+		"color": "69e097",
+		"default": false,
+		"description": "Breadth-Depth Search"
+	},
+	{
+		"id": 1275558753,
+		"node_id": "MDU6TGFiZWwxMjc1NTU4NzUz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/BFS",
+		"name": "BFS",
+		"color": "835fef",
+		"default": false,
+		"description": "Breadth-First Search"
+	},
+	{
+		"id": 1277558439,
+		"node_id": "MDU6TGFiZWwxMjc3NTU4NDM5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/BST",
+		"name": "BST",
+		"color": "d93f0b",
+		"default": false,
+		"description": "Binary Search Tree"
+	},
+	{
+		"id": 1275749737,
+		"node_id": "MDU6TGFiZWwxMjc1NzQ5NzM3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/BTree",
+		"name": "BTree",
+		"color": "a5f7ef",
+		"default": false,
+		"description": "B-Trees"
+	},
+	{
+		"id": 1274399346,
+		"node_id": "MDU6TGFiZWwxMjc0Mzk5MzQ2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/BWT",
+		"name": "BWT",
+		"color": "00ffff",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1353884532,
+		"node_id": "MDU6TGFiZWwxMzUzODg0NTMy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/BalancedWord",
+		"name": "BalancedWord",
+		"color": "00ffff",
+		"default": false,
+		"description": "Balanced words"
+	},
+	{
+		"id": 1527422091,
+		"node_id": "MDU6TGFiZWwxNTI3NDIyMDkx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Bidirectional%20index",
+		"name": "Bidirectional index",
+		"color": "5fd86b",
+		"default": false,
+		"description": "Bidirectional indexes"
+	},
+	{
+		"id": 1574744034,
+		"node_id": "MDU6TGFiZWwxNTc0NzQ0MDM0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Bijection",
+		"name": "Bijection",
+		"color": "62e58e",
+		"default": false,
+		"description": "Bijection"
+	},
+	{
+		"id": 1294622534,
+		"node_id": "MDU6TGFiZWwxMjk0NjIyNTM0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Bijective",
+		"name": "Bijective",
+		"color": "bc562b",
+		"default": false,
+		"description": "Bijective BWT"
+	},
+	{
+		"id": 1455092422,
+		"node_id": "MDU6TGFiZWwxNDU1MDkyNDIy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Binary%20Strings",
+		"name": "Binary Strings",
+		"color": "00ffff",
+		"default": false,
+		"description": "Binary Strings"
+	},
+	{
+		"id": 1275337007,
+		"node_id": "MDU6TGFiZWwxMjc1MzM3MDA3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Bioinformatics",
+		"name": "Bioinformatics",
+		"color": "0052cc",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1294326202,
+		"node_id": "MDU6TGFiZWwxMjk0MzI2MjAy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/BitRecycling",
+		"name": "BitRecycling",
+		"color": "b07cd3",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275737116,
+		"node_id": "MDU6TGFiZWwxMjc1NzM3MTE2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/BlockTree",
+		"name": "BlockTree",
+		"color": "6ccc43",
+		"default": false,
+		"description": "Block Tree"
+	},
+	{
+		"id": 1274456246,
+		"node_id": "MDU6TGFiZWwxMjc0NDU2MjQ2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/BloomFilter",
+		"name": "BloomFilter",
+		"color": "d93f0b",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1400256897,
+		"node_id": "MDU6TGFiZWwxNDAwMjU2ODk3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Border",
+		"name": "Border",
+		"color": "00ffff",
+		"default": false,
+		"description": "Border words"
+	},
+	{
+		"id": 1281012893,
+		"node_id": "MDU6TGFiZWwxMjgxMDEyODkz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Bound",
+		"name": "Bound",
+		"color": "bfb4f7",
+		"default": false,
+		"description": "Upper and Lower bound"
+	},
+	{
+		"id": 1277844764,
+		"node_id": "MDU6TGFiZWwxMjc3ODQ0NzY0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/CDAWG",
+		"name": "CDAWG",
+		"color": "24c146",
+		"default": false,
+		"description": "CDAWG"
+	},
+	{
+		"id": 1274198653,
+		"node_id": "MDU6TGFiZWwxMjc0MTk4NjUz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/CPM",
+		"name": "CPM",
+		"color": "FFFF00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1511096066,
+		"node_id": "MDU6TGFiZWwxNTExMDk2MDY2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/CST",
+		"name": "CST",
+		"color": "0acc00",
+		"default": false,
+		"description": "Compressed suffix trees"
+	},
+	{
+		"id": 1433781824,
+		"node_id": "MDU6TGFiZWwxNDMzNzgxODI0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/CTW",
+		"name": "CTW",
+		"color": "ffff00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1456685263,
+		"node_id": "MDU6TGFiZWwxNDU2Njg1MjYz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Cache-Friendly",
+		"name": "Cache-Friendly",
+		"color": "f28c9b",
+		"default": false,
+		"description": "Cache-Friendly algorithms"
+	},
+	{
+		"id": 1374964861,
+		"node_id": "MDU6TGFiZWwxMzc0OTY0ODYx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Cartesian%20Tree",
+		"name": "Cartesian Tree",
+		"color": "096187",
+		"default": false,
+		"description": "Cartesian Tree"
+	},
+	{
+		"id": 1275523551,
+		"node_id": "MDU6TGFiZWwxMjc1NTIzNTUx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/ChoiceDictionary",
+		"name": "ChoiceDictionary",
+		"color": "436af9",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275729904,
+		"node_id": "MDU6TGFiZWwxMjc1NzI5OTA0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Circular",
+		"name": "Circular",
+		"color": "00ffff",
+		"default": false,
+		"description": "Circular strings"
+	},
+	{
+		"id": 1525322091,
+		"node_id": "MDU6TGFiZWwxNTI1MzIyMDkx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Combinatorics",
+		"name": "Combinatorics",
+		"color": "cc0eb9",
+		"default": false,
+		"description": "Combinatorics on word"
+	},
+	{
+		"id": 1507385353,
+		"node_id": "MDU6TGFiZWwxNTA3Mzg1MzUz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Compact",
+		"name": "Compact",
+		"color": "c5f9a2",
+		"default": false,
+		"description": "Compact data structures"
+	},
+	{
+		"id": 1525394054,
+		"node_id": "MDU6TGFiZWwxNTI1Mzk0MDU0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Compressed%20Word%20Problem",
+		"name": "Compressed Word Problem",
+		"color": "49c0c6",
+		"default": false,
+		"description": "Compressed Word Problem"
+	},
+	{
+		"id": 1274203831,
+		"node_id": "MDU6TGFiZWwxMjc0MjAzODMx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Compression",
+		"name": "Compression",
+		"color": "efb9a7",
+		"default": false,
+		"description": "Compression"
+	},
+	{
+		"id": 1275551612,
+		"node_id": "MDU6TGFiZWwxMjc1NTUxNjEy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Construction",
+		"name": "Construction",
+		"color": "060faa",
+		"default": false,
+		"description": "Construction algorithms"
+	},
+	{
+		"id": 1275740913,
+		"node_id": "MDU6TGFiZWwxMjc1NzQwOTEz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Conversion",
+		"name": "Conversion",
+		"color": "c4ffa3",
+		"default": false,
+		"description": "Conversion algorithm"
+	},
+	{
+		"id": 1507323335,
+		"node_id": "MDU6TGFiZWwxNTA3MzIzMzM1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Cover",
+		"name": "Cover",
+		"color": "39e236",
+		"default": false,
+		"description": "Covers"
+	},
+	{
+		"id": 1275565448,
+		"node_id": "MDU6TGFiZWwxMjc1NTY1NDQ4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/DCC",
+		"name": "DCC",
+		"color": "FFFF00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1275419039,
+		"node_id": "MDU6TGFiZWwxMjc1NDE5MDM5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/DFS",
+		"name": "DFS",
+		"color": "f9d0c4",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1464491879,
+		"node_id": "MDU6TGFiZWwxNDY0NDkxODc5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/DLT",
+		"name": "DLT",
+		"color": "ffff00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1527415239,
+		"node_id": "MDU6TGFiZWwxNTI3NDE1MjM5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/DNA%20Reads",
+		"name": "DNA Reads",
+		"color": "73a8d6",
+		"default": false,
+		"description": "DNA Reads"
+	},
+	{
+		"id": 1507384718,
+		"node_id": "MDU6TGFiZWwxNTA3Mzg0NzE4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/DNA%20sequencing",
+		"name": "DNA sequencing",
+		"color": "d86f36",
+		"default": false,
+		"description": "DNA sequencing"
+	},
+	{
+		"id": 1704290848,
+		"node_id": "MDU6TGFiZWwxNzA0MjkwODQ4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/DRAM",
+		"name": "DRAM",
+		"color": "5c93c9",
+		"default": false,
+		"description": "DRAM"
+	},
+	{
+		"id": 1274448904,
+		"node_id": "MDU6TGFiZWwxMjc0NDQ4OTA0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Dag",
+		"name": "Dag",
+		"color": "bfd4f2",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1511099253,
+		"node_id": "MDU6TGFiZWwxNTExMDk5MjUz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Data%20Structure",
+		"name": "Data Structure",
+		"color": "84d642",
+		"default": false,
+		"description": "Data Structures"
+	},
+	{
+		"id": 1370387804,
+		"node_id": "MDU6TGFiZWwxMzcwMzg3ODA0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Decompression",
+		"name": "Decompression",
+		"color": "cd25f7",
+		"default": false,
+		"description": "Decompression algorithms"
+	},
+	{
+		"id": 1368653289,
+		"node_id": "MDU6TGFiZWwxMzY4NjUzMjg5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/DegenerateString",
+		"name": "DegenerateString",
+		"color": "fce9c7",
+		"default": false,
+		"description": "Degenerate String"
+	},
+	{
+		"id": 1527324533,
+		"node_id": "MDU6TGFiZWwxNTI3MzI0NTMz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Dictionary%20Compression",
+		"name": "Dictionary Compression",
+		"color": "ba00c4",
+		"default": false,
+		"description": "Dictionary Compression"
+	},
+	{
+		"id": 1281452026,
+		"node_id": "MDU6TGFiZWwxMjgxNDUyMDI2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/DictionaryMatching",
+		"name": "DictionaryMatching",
+		"color": "3126c9",
+		"default": false,
+		"description": "Dictionary Matching"
+	},
+	{
+		"id": 1274447416,
+		"node_id": "MDU6TGFiZWwxMjc0NDQ3NDE2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/DocumentExchange",
+		"name": "DocumentExchange",
+		"color": "0052cc",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275744003,
+		"node_id": "MDU6TGFiZWwxMjc1NzQ0MDAz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/DocumentListing",
+		"name": "DocumentListing",
+		"color": "0000FF",
+		"default": false,
+		"description": "Document Listing Problem"
+	},
+	{
+		"id": 1574744774,
+		"node_id": "MDU6TGFiZWwxNTc0NzQ0Nzc0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Dyck%20paths",
+		"name": "Dyck paths",
+		"color": "b53024",
+		"default": false,
+		"description": "Dyck paths"
+	},
+	{
+		"id": 1274216939,
+		"node_id": "MDU6TGFiZWwxMjc0MjE2OTM5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Dynamic",
+		"name": "Dynamic",
+		"color": "ff00ff",
+		"default": false,
+		"description": "DynamicDataStructure"
+	},
+	{
+		"id": 1274451596,
+		"node_id": "MDU6TGFiZWwxMjc0NDUxNTk2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/ED",
+		"name": "ED",
+		"color": "f9d0c4",
+		"default": false,
+		"description": "EditDistance"
+	},
+	{
+		"id": 1274213825,
+		"node_id": "MDU6TGFiZWwxMjc0MjEzODI1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/ESA",
+		"name": "ESA",
+		"color": "FFFF00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1525322886,
+		"node_id": "MDU6TGFiZWwxNTI1MzIyODg2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Efficient",
+		"name": "Efficient",
+		"color": "99ffc8",
+		"default": false,
+		"description": "Efficient algorithms"
+	},
+	{
+		"id": 1455135395,
+		"node_id": "MDU6TGFiZWwxNDU1MTM1Mzk1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Encoding",
+		"name": "Encoding",
+		"color": "db8d59",
+		"default": false,
+		"description": "Encoding technique"
+	},
+	{
+		"id": 1400662642,
+		"node_id": "MDU6TGFiZWwxNDAwNjYyNjQy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Entropy",
+		"name": "Entropy",
+		"color": "829dd8",
+		"default": false,
+		"description": "Empirical Entropy"
+	},
+	{
+		"id": 1456686807,
+		"node_id": "MDU6TGFiZWwxNDU2Njg2ODA3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Experiment",
+		"name": "Experiment",
+		"color": "5ad0e8",
+		"default": false,
+		"description": "Experiment"
+	},
+	{
+		"id": 1275337534,
+		"node_id": "MDU6TGFiZWwxMjc1MzM3NTM0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/External",
+		"name": "External",
+		"color": "ff00ff",
+		"default": false,
+		"description": "External Data Structures"
+	},
+	{
+		"id": 1393479603,
+		"node_id": "MDU6TGFiZWwxMzkzNDc5NjAz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/FM-Index",
+		"name": "FM-Index",
+		"color": "06a357",
+		"default": false,
+		"description": "FM-Index"
+	},
+	{
+		"id": 1479390487,
+		"node_id": "MDU6TGFiZWwxNDc5MzkwNDg3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/FOCS",
+		"name": "FOCS",
+		"color": "FFFF00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1275729713,
+		"node_id": "MDU6TGFiZWwxMjc1NzI5NzEz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Factor",
+		"name": "Factor",
+		"color": "d0bdfc",
+		"default": false,
+		"description": "Factor"
+	},
+	{
+		"id": 1362136291,
+		"node_id": "MDU6TGFiZWwxMzYyMTM2Mjkx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/FibonacciTree",
+		"name": "FibonacciTree",
+		"color": "4c32ad",
+		"default": false,
+		"description": "Fibonacci Trees"
+	},
+	{
+		"id": 1512927945,
+		"node_id": "MDU6TGFiZWwxNTEyOTI3OTQ1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Filtration",
+		"name": "Filtration",
+		"color": "29bee8",
+		"default": false,
+		"description": "Filtration algorithms"
+	},
+	{
+		"id": 1511053674,
+		"node_id": "MDU6TGFiZWwxNTExMDUzNjc0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Finger%20Search",
+		"name": "Finger Search",
+		"color": "d38b3d",
+		"default": false,
+		"description": "Finger Search"
+	},
+	{
+		"id": 1527327636,
+		"node_id": "MDU6TGFiZWwxNTI3MzI3NjM2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/General%20matching%20relations",
+		"name": "General matching relations",
+		"color": "e2d956",
+		"default": false,
+		"description": "General matching relations"
+	},
+	{
+		"id": 1275336357,
+		"node_id": "MDU6TGFiZWwxMjc1MzM2MzU3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Geometry",
+		"name": "Geometry",
+		"color": "ff00ff",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1512928391,
+		"node_id": "MDU6TGFiZWwxNTEyOTI4Mzkx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Global%20parent",
+		"name": "Global parent",
+		"color": "a80019",
+		"default": false,
+		"description": "Global parent represation"
+	},
+	{
+		"id": 1274394474,
+		"node_id": "MDU6TGFiZWwxMjc0Mzk0NDc0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Grammar",
+		"name": "Grammar",
+		"color": "bfd4f2",
+		"default": false,
+		"description": "Grammar Compression, SLP, Straight-line Program"
+	},
+	{
+		"id": 1275422052,
+		"node_id": "MDU6TGFiZWwxMjc1NDIyMDUy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Graph",
+		"name": "Graph",
+		"color": "89f9bc",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1511098736,
+		"node_id": "MDU6TGFiZWwxNTExMDk4NzM2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Group-list",
+		"name": "Group-list",
+		"color": "d37d3f",
+		"default": false,
+		"description": "Group-list"
+	},
+	{
+		"id": 1275422868,
+		"node_id": "MDU6TGFiZWwxMjc1NDIyODY4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Hash",
+		"name": "Hash",
+		"color": "f4d2b0",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275731061,
+		"node_id": "MDU6TGFiZWwxMjc1NzMxMDYx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Heap",
+		"name": "Heap",
+		"color": "213087",
+		"default": false,
+		"description": "Heap"
+	},
+	{
+		"id": 1275744490,
+		"node_id": "MDU6TGFiZWwxMjc1NzQ0NDkw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/HighlyRepetitiveText",
+		"name": "HighlyRepetitiveText",
+		"color": "75f2f4",
+		"default": false,
+		"description": "Highly Repetitive Text Collection"
+	},
+	{
+		"id": 1393463153,
+		"node_id": "MDU6TGFiZWwxMzkzNDYzMTUz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Hybrid%20Index",
+		"name": "Hybrid Index",
+		"color": "2f408c",
+		"default": false,
+		"description": "Hybrid Indexes"
+	},
+	{
+		"id": 1460861648,
+		"node_id": "MDU6TGFiZWwxNDYwODYxNjQ4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/ICALP",
+		"name": "ICALP",
+		"color": "ffff00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1284604699,
+		"node_id": "MDU6TGFiZWwxMjg0NjA0Njk5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/ISAAC",
+		"name": "ISAAC",
+		"color": "ffff00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1390008682,
+		"node_id": "MDU6TGFiZWwxMzkwMDA4Njgy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/IWOCA",
+		"name": "IWOCA",
+		"color": "ffff00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1455119057,
+		"node_id": "MDU6TGFiZWwxNDU1MTE5MDU3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Implementation",
+		"name": "Implementation",
+		"color": "15bf42",
+		"default": false,
+		"description": "Implementation"
+	},
+	{
+		"id": 1274073769,
+		"node_id": "MDU6TGFiZWwxMjc0MDczNzY5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/InPlace",
+		"name": "InPlace",
+		"color": "7ca006",
+		"default": false,
+		"description": "InPlace"
+	},
+	{
+		"id": 1274220180,
+		"node_id": "MDU6TGFiZWwxMjc0MjIwMTgw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Index",
+		"name": "Index",
+		"color": "d4c5f9",
+		"default": false,
+		"description": "Index"
+	},
+	{
+		"id": 1499837235,
+		"node_id": "MDU6TGFiZWwxNDk5ODM3MjM1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Integer%20Programming",
+		"name": "Integer Programming",
+		"color": "2aafa0",
+		"default": false,
+		"description": "Integer Programming"
+	},
+	{
+		"id": 1511098076,
+		"node_id": "MDU6TGFiZWwxNTExMDk4MDc2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Inverted",
+		"name": "Inverted",
+		"color": "180e84",
+		"default": false,
+		"description": "Inverted indexes"
+	},
+	{
+		"id": 1375004146,
+		"node_id": "MDU6TGFiZWwxMzc1MDA0MTQ2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Japanese%20Paper",
+		"name": "Japanese Paper",
+		"color": "e1a8f4",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1286011198,
+		"node_id": "MDU6TGFiZWwxMjg2MDExMTk4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Journal",
+		"name": "Journal",
+		"color": "d4c5f9",
+		"default": false,
+		"description": "Journal paper"
+	},
+	{
+		"id": 1275437125,
+		"node_id": "MDU6TGFiZWwxMjc1NDM3MTI1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/KDD",
+		"name": "KDD",
+		"color": "FFFF00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1275750650,
+		"node_id": "MDU6TGFiZWwxMjc1NzUwNjUw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/KDTree",
+		"name": "KDTree",
+		"color": "706bf4",
+		"default": false,
+		"description": "k-d trees"
+	},
+	{
+		"id": 1501750126,
+		"node_id": "MDU6TGFiZWwxNTAxNzUwMTI2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Keywords",
+		"name": "Keywords",
+		"color": "8064bc",
+		"default": false,
+		"description": "This paper has keywords"
+	},
+	{
+		"id": 1275557051,
+		"node_id": "MDU6TGFiZWwxMjc1NTU3MDUx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LATA",
+		"name": "LATA",
+		"color": "FFFF00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1312229138,
+		"node_id": "MDU6TGFiZWwxMzEyMjI5MTM4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LCE",
+		"name": "LCE",
+		"color": "ce0a93",
+		"default": false,
+		"description": "Longest Common Extension"
+	},
+	{
+		"id": 1274701462,
+		"node_id": "MDU6TGFiZWwxMjc0NzAxNDYy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LCF",
+		"name": "LCF",
+		"color": "c2e0c6",
+		"default": false,
+		"description": "LongestCommonFactor"
+	},
+	{
+		"id": 1275743405,
+		"node_id": "MDU6TGFiZWwxMjc1NzQzNDA1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LCIS",
+		"name": "LCIS",
+		"color": "1f33b7",
+		"default": false,
+		"description": "Longest Common Increasing Subsequence Problem"
+	},
+	{
+		"id": 1275423976,
+		"node_id": "MDU6TGFiZWwxMjc1NDIzOTc2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LCP",
+		"name": "LCP",
+		"color": "e078e8",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275458141,
+		"node_id": "MDU6TGFiZWwxMjc1NDU4MTQx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LCS",
+		"name": "LCS",
+		"color": "79fc1b",
+		"default": false,
+		"description": "Longest Common Subsequence"
+	},
+	{
+		"id": 1461475205,
+		"node_id": "MDU6TGFiZWwxNDYxNDc1MjA1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LCStr",
+		"name": "LCStr",
+		"color": "ebed7d",
+		"default": false,
+		"description": "Longest Common Substring"
+	},
+	{
+		"id": 1275458780,
+		"node_id": "MDU6TGFiZWwxMjc1NDU4Nzgw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LIS",
+		"name": "LIS",
+		"color": "81e8c4",
+		"default": false,
+		"description": "Longest Increasing Subsequence"
+	},
+	{
+		"id": 1275421215,
+		"node_id": "MDU6TGFiZWwxMjc1NDIxMjE1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LSH",
+		"name": "LSH",
+		"color": "1d76db",
+		"default": false,
+		"description": "Locality Sensitive Hashing"
+	},
+	{
+		"id": 1275339653,
+		"node_id": "MDU6TGFiZWwxMjc1MzM5NjUz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LUF",
+		"name": "LUF",
+		"color": "b60205",
+		"default": false,
+		"description": "LongestUnborderedFactor"
+	},
+	{
+		"id": 1274199121,
+		"node_id": "MDU6TGFiZWwxMjc0MTk5MTIx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LZ77",
+		"name": "LZ77",
+		"color": "699fef",
+		"default": false,
+		"description": "Lempel-Ziv 77"
+	},
+	{
+		"id": 1279107817,
+		"node_id": "MDU6TGFiZWwxMjc5MTA3ODE3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LZ78",
+		"name": "LZ78",
+		"color": "1aa593",
+		"default": false,
+		"description": "LZ78"
+	},
+	{
+		"id": 1279491386,
+		"node_id": "MDU6TGFiZWwxMjc5NDkxMzg2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LZD",
+		"name": "LZD",
+		"color": "d856c5",
+		"default": false,
+		"description": "LZD"
+	},
+	{
+		"id": 1275425275,
+		"node_id": "MDU6TGFiZWwxMjc1NDI1Mjc1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LZFamily",
+		"name": "LZFamily",
+		"color": "087270",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1574743776,
+		"node_id": "MDU6TGFiZWwxNTc0NzQzNzc2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Lattice%20paths",
+		"name": "Lattice paths",
+		"color": "c7dafc",
+		"default": false,
+		"description": "Lattice paths"
+	},
+	{
+		"id": 1378305890,
+		"node_id": "MDU6TGFiZWwxMzc4MzA1ODkw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Lecture%20Note",
+		"name": "Lecture Note",
+		"color": "e0871a",
+		"default": false,
+		"description": "Lecture Note"
+	},
+	{
+		"id": 1525417983,
+		"node_id": "MDU6TGFiZWwxNTI1NDE3OTgz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Length%20Upper%20Bounds",
+		"name": "Length Upper Bounds",
+		"color": "eaa717",
+		"default": false,
+		"description": "Length Upper Bounds"
+	},
+	{
+		"id": 1275747167,
+		"node_id": "MDU6TGFiZWwxMjc1NzQ3MTY3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/LevelAncestor",
+		"name": "LevelAncestor",
+		"color": "0000FF",
+		"default": false,
+		"description": "Level Ancestor Query"
+	},
+	{
+		"id": 1462345404,
+		"node_id": "MDU6TGFiZWwxNDYyMzQ1NDA0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/List%20Decoding",
+		"name": "List Decoding",
+		"color": "2b7c06",
+		"default": false,
+		"description": "List Decoding"
+	},
+	{
+		"id": 1527417712,
+		"node_id": "MDU6TGFiZWwxNTI3NDE3NzEy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Lossless%20Data%20Compression",
+		"name": "Lossless Data Compression",
+		"color": "6aed73",
+		"default": false,
+		"description": "Lossless Data Compression"
+	},
+	{
+		"id": 1388005520,
+		"node_id": "MDU6TGFiZWwxMzg4MDA1NTIw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Lyndon",
+		"name": "Lyndon",
+		"color": "00ffff",
+		"default": false,
+		"description": "Lyndon words or factrizations"
+	},
+	{
+		"id": 1433905168,
+		"node_id": "MDU6TGFiZWwxNDMzOTA1MTY4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/MFCS",
+		"name": "MFCS",
+		"color": "ffff00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1274394683,
+		"node_id": "MDU6TGFiZWwxMjc0Mzk0Njgz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/MacroScheme",
+		"name": "MacroScheme",
+		"color": "00ffff",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1461468388,
+		"node_id": "MDU6TGFiZWwxNDYxNDY4Mzg4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Math",
+		"name": "Math",
+		"color": "8aff59",
+		"default": false,
+		"description": "Math arXiv"
+	},
+	{
+		"id": 1527421548,
+		"node_id": "MDU6TGFiZWwxNTI3NDIxNTQ4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Maximal%20Repeat",
+		"name": "Maximal Repeat",
+		"color": "a9db69",
+		"default": false,
+		"description": "Maximal Repeats"
+	},
+	{
+		"id": 1334957053,
+		"node_id": "MDU6TGFiZWwxMzM0OTU3MDUz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/MaximalSubstring",
+		"name": "MaximalSubstring",
+		"color": "00ffff",
+		"default": false,
+		"description": "Maximal substrings"
+	},
+	{
+		"id": 1274692920,
+		"node_id": "MDU6TGFiZWwxMjc0NjkyOTIw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/MaximumSubarray",
+		"name": "MaximumSubarray",
+		"color": "fef2c0",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1722547412,
+		"node_id": "MDU6TGFiZWwxNzIyNTQ3NDEy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Measure",
+		"name": "Measure",
+		"color": "db6974",
+		"default": false,
+		"description": "Measure"
+	},
+	{
+		"id": 1378293160,
+		"node_id": "MDU6TGFiZWwxMzc4MjkzMTYw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/MergeInsertion",
+		"name": "MergeInsertion",
+		"color": "c10dac",
+		"default": false,
+		"description": "MergeInsertion sorting algorithm"
+	},
+	{
+		"id": 1274711602,
+		"node_id": "MDU6TGFiZWwxMjc0NzExNjAy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/MinimumSegmentation",
+		"name": "MinimumSegmentation",
+		"color": "fbca04",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1370392798,
+		"node_id": "MDU6TGFiZWwxMzcwMzkyNzk4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Multiply",
+		"name": "Multiply",
+		"color": "6a8af2",
+		"default": false,
+		"description": "Multiply algorithms"
+	},
+	{
+		"id": 1275433666,
+		"node_id": "MDU6TGFiZWwxMjc1NDMzNjY2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/NNS",
+		"name": "NNS",
+		"color": "ed1410",
+		"default": false,
+		"description": "Nearest Neighbor Search"
+	},
+	{
+		"id": 1525416137,
+		"node_id": "MDU6TGFiZWwxNTI1NDE2MTM3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/NP",
+		"name": "NP",
+		"color": "650aaa",
+		"default": false,
+		"description": "NP problems"
+	},
+	{
+		"id": 1310690092,
+		"node_id": "MDU6TGFiZWwxMzEwNjkwMDky",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/NeuralNetwork",
+		"name": "NeuralNetwork",
+		"color": "1aef1a",
+		"default": false,
+		"description": "Neural Networks"
+	},
+	{
+		"id": 1461466119,
+		"node_id": "MDU6TGFiZWwxNDYxNDY2MTE5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/NoFreePaper",
+		"name": "NoFreePaper",
+		"color": "efbc15",
+		"default": false,
+		"description": "No Free Paper"
+	},
+	{
+		"id": 1513041164,
+		"node_id": "MDU6TGFiZWwxNTEzMDQxMTY0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Nyldon",
+		"name": "Nyldon",
+		"color": "4dd1b0",
+		"default": false,
+		"description": "Nyldon words"
+	},
+	{
+		"id": 1324351624,
+		"node_id": "MDU6TGFiZWwxMzI0MzUxNjI0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/ORAM",
+		"name": "ORAM",
+		"color": "fce1c7",
+		"default": false,
+		"description": "ORAM"
+	},
+	{
+		"id": 1275536012,
+		"node_id": "MDU6TGFiZWwxMjc1NTM2MDEy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Oblivious",
+		"name": "Oblivious",
+		"color": "ff00ff",
+		"default": false,
+		"description": "Oblivious"
+	},
+	{
+		"id": 1275528083,
+		"node_id": "MDU6TGFiZWwxMjc1NTI4MDgz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Online",
+		"name": "Online",
+		"color": "ff00ff",
+		"default": false,
+		"description": "Online algorithm"
+	},
+	{
+		"id": 1368651211,
+		"node_id": "MDU6TGFiZWwxMzY4NjUxMjEx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/OrderPreserving",
+		"name": "OrderPreserving",
+		"color": "5164bc",
+		"default": false,
+		"description": "Order Preserving Pattern Matching"
+	},
+	{
+		"id": 1324487066,
+		"node_id": "MDU6TGFiZWwxMzI0NDg3MDY2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/PLCP",
+		"name": "PLCP",
+		"color": "d2ffaf",
+		"default": false,
+		"description": "Permuted LCP Array"
+	},
+	{
+		"id": 1294622194,
+		"node_id": "MDU6TGFiZWwxMjk0NjIyMTk0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/PSC",
+		"name": "PSC",
+		"color": "ffff00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1275420026,
+		"node_id": "MDU6TGFiZWwxMjc1NDIwMDI2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Palindrome",
+		"name": "Palindrome",
+		"color": "ff00ff",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275329283,
+		"node_id": "MDU6TGFiZWwxMjc1MzI5Mjgz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Parallel",
+		"name": "Parallel",
+		"color": "ff00ff",
+		"default": false,
+		"description": "Parallel Algorithm"
+	},
+	{
+		"id": 1275734363,
+		"node_id": "MDU6TGFiZWwxMjc1NzM0MzYz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Parameterized",
+		"name": "Parameterized",
+		"color": "ff00ff",
+		"default": false,
+		"description": "Parameterized string"
+	},
+	{
+		"id": 1525413076,
+		"node_id": "MDU6TGFiZWwxNTI1NDEzMDc2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Parsing",
+		"name": "Parsing",
+		"color": "a7daf9",
+		"default": false,
+		"description": "Parsing"
+	},
+	{
+		"id": 1274211442,
+		"node_id": "MDU6TGFiZWwxMjc0MjExNDQy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/PartialSum",
+		"name": "PartialSum",
+		"color": "d4c5f9",
+		"default": false,
+		"description": "PartialSum"
+	},
+	{
+		"id": 1275540731,
+		"node_id": "MDU6TGFiZWwxMjc1NTQwNzMx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/PatternMatching",
+		"name": "PatternMatching",
+		"color": "7cdb6b",
+		"default": false,
+		"description": "Pattern Matching"
+	},
+	{
+		"id": 1461470310,
+		"node_id": "MDU6TGFiZWwxNDYxNDcwMzEw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Periodic",
+		"name": "Periodic",
+		"color": "00ffff",
+		"default": false,
+		"description": "Periodic Properties"
+	},
+	{
+		"id": 1275565110,
+		"node_id": "MDU6TGFiZWwxMjc1NTY1MTEw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Permutation",
+		"name": "Permutation",
+		"color": "eddb3d",
+		"default": false,
+		"description": "Permutation"
+	},
+	{
+		"id": 1275457689,
+		"node_id": "MDU6TGFiZWwxMjc1NDU3Njg5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/PositionHeap",
+		"name": "PositionHeap",
+		"color": "f7cfaf",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1295624710,
+		"node_id": "MDU6TGFiZWwxMjk1NjI0NzEw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/PrefixCode",
+		"name": "PrefixCode",
+		"color": "dd1825",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275459838,
+		"node_id": "MDU6TGFiZWwxMjc1NDU5ODM4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/PrivacyPreserving",
+		"name": "PrivacyPreserving",
+		"color": "1a97af",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1574733131,
+		"node_id": "MDU6TGFiZWwxNTc0NzMzMTMx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Probabilistic%20data%20structures",
+		"name": "Probabilistic data structures",
+		"color": "ffad6b",
+		"default": false,
+		"description": "Probabilistic data structures"
+	},
+	{
+		"id": 1455137281,
+		"node_id": "MDU6TGFiZWwxNDU1MTM3Mjgx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Programming",
+		"name": "Programming",
+		"color": "a8ed12",
+		"default": false,
+		"description": "Programming"
+	},
+	{
+		"id": 1277942723,
+		"node_id": "MDU6TGFiZWwxMjc3OTQyNzIz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/ProposalPaper",
+		"name": "ProposalPaper",
+		"color": "1d76db",
+		"default": false,
+		"description": "Proposal Paper"
+	},
+	{
+		"id": 1525417621,
+		"node_id": "MDU6TGFiZWwxNTI1NDE3NjIx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Quadratic%20Word%20Equations",
+		"name": "Quadratic Word Equations",
+		"color": "1f2791",
+		"default": false,
+		"description": "Quadratic Word Equations"
+	},
+	{
+		"id": 1455116426,
+		"node_id": "MDU6TGFiZWwxNDU1MTE2NDI2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Query",
+		"name": "Query",
+		"color": "db7b1c",
+		"default": false,
+		"description": "Queries"
+	},
+	{
+		"id": 1274399452,
+		"node_id": "MDU6TGFiZWwxMjc0Mzk5NDUy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/RLBWT",
+		"name": "RLBWT",
+		"color": "ba7aff",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275330463,
+		"node_id": "MDU6TGFiZWwxMjc1MzMwNDYz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/RLE",
+		"name": "RLE",
+		"color": "fbca04",
+		"default": false,
+		"description": "RunLength Encoding"
+	},
+	{
+		"id": 1275739201,
+		"node_id": "MDU6TGFiZWwxMjc1NzM5MjAx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/RMQ",
+		"name": "RMQ",
+		"color": "0000FF",
+		"default": false,
+		"description": "Range Minimum Query"
+	},
+	{
+		"id": 1525420882,
+		"node_id": "MDU6TGFiZWwxNTI1NDIwODgy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Random%20Expression",
+		"name": "Random Expression",
+		"color": "76d5f2",
+		"default": false,
+		"description": "Random Expressions"
+	},
+	{
+		"id": 1501692634,
+		"node_id": "MDU6TGFiZWwxNTAxNjkyNjM0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Random%20Walk",
+		"name": "Random Walk",
+		"color": "b314e8",
+		"default": false,
+		"description": "Random Walk"
+	},
+	{
+		"id": 1283096103,
+		"node_id": "MDU6TGFiZWwxMjgzMDk2MTAz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/RandomAccess",
+		"name": "RandomAccess",
+		"color": "cea10c",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1501691356,
+		"node_id": "MDU6TGFiZWwxNTAxNjkxMzU2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Range%20Mode",
+		"name": "Range Mode",
+		"color": "8c6bf9",
+		"default": false,
+		"description": "Range Mode"
+	},
+	{
+		"id": 1275522633,
+		"node_id": "MDU6TGFiZWwxMjc1NTIyNjMz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/RangeQuery",
+		"name": "RangeQuery",
+		"color": "0000FF",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275542081,
+		"node_id": "MDU6TGFiZWwxMjc1NTQyMDgx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/RankSelect",
+		"name": "RankSelect",
+		"color": "ffff7a",
+		"default": false,
+		"description": "Rank and Select Operations"
+	},
+	{
+		"id": 1525412204,
+		"node_id": "MDU6TGFiZWwxNTI1NDEyMjA0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Regular%20Expressions",
+		"name": "Regular Expressions",
+		"color": "b63af4",
+		"default": false,
+		"description": "Regular Expressions"
+	},
+	{
+		"id": 1275535138,
+		"node_id": "MDU6TGFiZWwxMjc1NTM1MTM4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Relative",
+		"name": "Relative",
+		"color": "ff00ff",
+		"default": false,
+		"description": "Relative Compression"
+	},
+	{
+		"id": 1275544129,
+		"node_id": "MDU6TGFiZWwxMjc1NTQ0MTI5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Repair",
+		"name": "Repair",
+		"color": "9df9bd",
+		"default": false,
+		"description": "Repair compression algorithm"
+	},
+	{
+		"id": 1501746134,
+		"node_id": "MDU6TGFiZWwxNTAxNzQ2MTM0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Repeat",
+		"name": "Repeat",
+		"color": "87ff7f",
+		"default": false,
+		"description": "Repeated patterns"
+	},
+	{
+		"id": 1281122366,
+		"node_id": "MDU6TGFiZWwxMjgxMTIyMzY2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Repetition",
+		"name": "Repetition",
+		"color": "00ffff",
+		"default": false,
+		"description": "Repetition"
+	},
+	{
+		"id": 1274078831,
+		"node_id": "MDU6TGFiZWwxMjc0MDc4ODMx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/RestoreModel",
+		"name": "RestoreModel",
+		"color": "f20292",
+		"default": false,
+		"description": "RestoreModel"
+	},
+	{
+		"id": 1511055905,
+		"node_id": "MDU6TGFiZWwxNTExMDU1OTA1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Rich",
+		"name": "Rich",
+		"color": "bf5922",
+		"default": false,
+		"description": "Rich words"
+	},
+	{
+		"id": 1334956517,
+		"node_id": "MDU6TGFiZWwxMzM0OTU2NTE3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SDM",
+		"name": "SDM",
+		"color": "f7c4a3",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1281508233,
+		"node_id": "MDU6TGFiZWwxMjgxNTA4MjMz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SEA",
+		"name": "SEA",
+		"color": "ffff00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1512928934,
+		"node_id": "MDU6TGFiZWwxNTEyOTI4OTM0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SIMD",
+		"name": "SIMD",
+		"color": "eda6d3",
+		"default": false,
+		"description": "SIMD"
+	},
+	{
+		"id": 1274201007,
+		"node_id": "MDU6TGFiZWwxMjc0MjAxMDA3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SODA",
+		"name": "SODA",
+		"color": "FFFF00",
+		"default": false,
+		"description": "SODA"
+	},
+	{
+		"id": 1460865452,
+		"node_id": "MDU6TGFiZWwxNDYwODY1NDUy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SOFSEM",
+		"name": "SOFSEM",
+		"color": "ffff00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1274212454,
+		"node_id": "MDU6TGFiZWwxMjc0MjEyNDU0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SPIRE",
+		"name": "SPIRE",
+		"color": "FFFF00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1275566541,
+		"node_id": "MDU6TGFiZWwxMjc1NTY2NTQx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/STACS",
+		"name": "STACS",
+		"color": "FFFF00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1279103880,
+		"node_id": "MDU6TGFiZWwxMjc5MTAzODgw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/STOC",
+		"name": "STOC",
+		"color": "FFFF00",
+		"default": false,
+		"description": "Conference"
+	},
+	{
+		"id": 1388006896,
+		"node_id": "MDU6TGFiZWwxMzg4MDA2ODk2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SUS",
+		"name": "SUS",
+		"color": "ea3807",
+		"default": false,
+		"description": "Shortest Unique Substring Query"
+	},
+	{
+		"id": 1513174506,
+		"node_id": "MDU6TGFiZWwxNTEzMTc0NTA2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Sampling",
+		"name": "Sampling",
+		"color": "f450c0",
+		"default": false,
+		"description": "Sampling algoirthms and data structures"
+	},
+	{
+		"id": 1722549771,
+		"node_id": "MDU6TGFiZWwxNzIyNTQ5Nzcx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Secure",
+		"name": "Secure",
+		"color": "f4b0ea",
+		"default": false,
+		"description": "Secure"
+	},
+	{
+		"id": 1274392526,
+		"node_id": "MDU6TGFiZWwxMjc0MzkyNTI2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SegmentQuery",
+		"name": "SegmentQuery",
+		"color": "0000FF",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275541299,
+		"node_id": "MDU6TGFiZWwxMjc1NTQxMjk5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SegmentTree",
+		"name": "SegmentTree",
+		"color": "17eda2",
+		"default": false,
+		"description": "Segment Tree"
+	},
+	{
+		"id": 1281128843,
+		"node_id": "MDU6TGFiZWwxMjgxMTI4ODQz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SemiGroup",
+		"name": "SemiGroup",
+		"color": "9eff93",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275737814,
+		"node_id": "MDU6TGFiZWwxMjc1NzM3ODE0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SetCover",
+		"name": "SetCover",
+		"color": "68168e",
+		"default": false,
+		"description": "Set Cover Problem"
+	},
+	{
+		"id": 1574734389,
+		"node_id": "MDU6TGFiZWwxNTc0NzM0Mzg5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Shifting%20bloom%20filter",
+		"name": "Shifting bloom filter",
+		"color": "ed8d8b",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1291280104,
+		"node_id": "MDU6TGFiZWwxMjkxMjgwMTA0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Similarity",
+		"name": "Similarity",
+		"color": "b9e57b",
+		"default": false,
+		"description": "similarity measures"
+	},
+	{
+		"id": 1525421593,
+		"node_id": "MDU6TGFiZWwxNTI1NDIxNTkz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Simplification%20algorithms",
+		"name": "Simplification algorithms",
+		"color": "08d19e",
+		"default": false,
+		"description": "simplification algorithms"
+	},
+	{
+		"id": 1274402448,
+		"node_id": "MDU6TGFiZWwxMjc0NDAyNDQ4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Slide",
+		"name": "Slide",
+		"color": "c2e0c6",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1576444475,
+		"node_id": "MDU6TGFiZWwxNTc2NDQ0NDc1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Sliding%20Window",
+		"name": "Sliding Window",
+		"color": "fcc2ba",
+		"default": false,
+		"description": "Sliding Window algorithms"
+	},
+	{
+		"id": 1514902308,
+		"node_id": "MDU6TGFiZWwxNTE0OTAyMzA4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Smallest%20Grammar",
+		"name": "Smallest Grammar",
+		"color": "f4d350",
+		"default": false,
+		"description": "Smallest Grammar Problem"
+	},
+	{
+		"id": 1274083275,
+		"node_id": "MDU6TGFiZWwxMjc0MDgzMjc1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Sort",
+		"name": "Sort",
+		"color": "f9d0c4",
+		"default": false,
+		"description": "Sort"
+	},
+	{
+		"id": 1507325868,
+		"node_id": "MDU6TGFiZWwxNTA3MzI1ODY4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Sources",
+		"name": "Sources",
+		"color": "d473f4",
+		"default": false,
+		"description": "Source codes"
+	},
+	{
+		"id": 1501691005,
+		"node_id": "MDU6TGFiZWwxNTAxNjkxMDA1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SpaceEfficient",
+		"name": "SpaceEfficient",
+		"color": "9b16cc",
+		"default": false,
+		"description": "Space Efficient Data Structures"
+	},
+	{
+		"id": 1278003718,
+		"node_id": "MDU6TGFiZWwxMjc4MDAzNzE4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Sparse",
+		"name": "Sparse",
+		"color": "c5cc4d",
+		"default": false,
+		"description": "Sparse Data Structures"
+	},
+	{
+		"id": 1574734001,
+		"node_id": "MDU6TGFiZWwxNTc0NzM0MDAx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Spatial%20bloom%20filter",
+		"name": "Spatial bloom filter",
+		"color": "f2437d",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1460878693,
+		"node_id": "MDU6TGFiZWwxNDYwODc4Njkz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Specific%20strings",
+		"name": "Specific strings",
+		"color": "00ffff",
+		"default": false,
+		"description": "Specific strings"
+	},
+	{
+		"id": 1511058153,
+		"node_id": "MDU6TGFiZWwxNTExMDU4MTUz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Splay",
+		"name": "Splay",
+		"color": "ffc6da",
+		"default": false,
+		"description": "Splay trees"
+	},
+	{
+		"id": 1400257670,
+		"node_id": "MDU6TGFiZWwxNDAwMjU3Njcw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Square",
+		"name": "Square",
+		"color": "00ffff",
+		"default": false,
+		"description": "Square words"
+	},
+	{
+		"id": 1275566409,
+		"node_id": "MDU6TGFiZWwxMjc1NTY2NDA5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Stream",
+		"name": "Stream",
+		"color": "ff00ff",
+		"default": false,
+		"description": "Streaming Algorithms"
+	},
+	{
+		"id": 1574744447,
+		"node_id": "MDU6TGFiZWwxNTc0NzQ0NDQ3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Stretched%20exponential",
+		"name": "Stretched exponential",
+		"color": "2834a0",
+		"default": false,
+		"description": "Stretched exponential"
+	},
+	{
+		"id": 1525390311,
+		"node_id": "MDU6TGFiZWwxNTI1MzkwMzEx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/String%20Algorithm",
+		"name": "String Algorithm",
+		"color": "fc92fa",
+		"default": false,
+		"description": "String Algorithms"
+	},
+	{
+		"id": 1722548024,
+		"node_id": "MDU6TGFiZWwxNzIyNTQ4MDI0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/String%20Attractors",
+		"name": "String Attractors",
+		"color": "d8b5f2",
+		"default": false,
+		"description": "String Attractors"
+	},
+	{
+		"id": 1527422498,
+		"node_id": "MDU6TGFiZWwxNTI3NDIyNDk4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/String%20depth%20contractin",
+		"name": "String depth contractin",
+		"color": "09609e",
+		"default": false,
+		"description": "String depth contractin"
+	},
+	{
+		"id": 1274203542,
+		"node_id": "MDU6TGFiZWwxMjc0MjAzNTQy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/StringAttractor",
+		"name": "StringAttractor",
+		"color": "b60205",
+		"default": false,
+		"description": "StringAttractor"
+	},
+	{
+		"id": 1461638392,
+		"node_id": "MDU6TGFiZWwxNDYxNjM4Mzky",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/StringProperties",
+		"name": "StringProperties",
+		"color": "00ffff",
+		"default": false,
+		"description": "The properties of strings"
+	},
+	{
+		"id": 1370386102,
+		"node_id": "MDU6TGFiZWwxMzcwMzg2MTAy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Sturmian",
+		"name": "Sturmian",
+		"color": "00ffff",
+		"default": false,
+		"description": "Sturmian words"
+	},
+	{
+		"id": 1274212257,
+		"node_id": "MDU6TGFiZWwxMjc0MjEyMjU3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Succinct",
+		"name": "Succinct",
+		"color": "ff00ff",
+		"default": false,
+		"description": "SuccinctDataStructure"
+	},
+	{
+		"id": 1275560156,
+		"node_id": "MDU6TGFiZWwxMjc1NTYwMTU2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SuffixArray",
+		"name": "SuffixArray",
+		"color": "4ca309",
+		"default": false,
+		"description": "Suffix Array"
+	},
+	{
+		"id": 1275457200,
+		"node_id": "MDU6TGFiZWwxMjc1NDU3MjAw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SuffixSorting",
+		"name": "SuffixSorting",
+		"color": "5bd8ac",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1275736706,
+		"node_id": "MDU6TGFiZWwxMjc1NzM2NzA2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SuffixTree",
+		"name": "SuffixTree",
+		"color": "f20414",
+		"default": false,
+		"description": "Suffix Tree"
+	},
+	{
+		"id": 1275727380,
+		"node_id": "MDU6TGFiZWwxMjc1NzI3Mzgw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/SuffixTrie",
+		"name": "SuffixTrie",
+		"color": "32c987",
+		"default": false,
+		"description": "Suffix Trie"
+	},
+	{
+		"id": 1274705685,
+		"node_id": "MDU6TGFiZWwxMjc0NzA1Njg1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Superstring",
+		"name": "Superstring",
+		"color": "00ffff",
+		"default": false,
+		"description": "Shortest Common Superstring"
+	},
+	{
+		"id": 1455099352,
+		"node_id": "MDU6TGFiZWwxNDU1MDk5MzUy",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Tandem",
+		"name": "Tandem",
+		"color": "00ffff",
+		"default": false,
+		"description": "Tandem Repeats"
+	},
+	{
+		"id": 1501812337,
+		"node_id": "MDU6TGFiZWwxNTAxODEyMzM3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Tango%20Tree",
+		"name": "Tango Tree",
+		"color": "17267c",
+		"default": false,
+		"description": "Tango Trees"
+	},
+	{
+		"id": 1513172121,
+		"node_id": "MDU6TGFiZWwxNTEzMTcyMTIx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Text%20processing",
+		"name": "Text processing",
+		"color": "6138ea",
+		"default": false,
+		"description": "Text processing algorithms"
+	},
+	{
+		"id": 1275522519,
+		"node_id": "MDU6TGFiZWwxMjc1NTIyNTE5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/TopKQuery",
+		"name": "TopKQuery",
+		"color": "a7fc80",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1391613133,
+		"node_id": "MDU6TGFiZWwxMzkxNjEzMTMz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Trapezoidal",
+		"name": "Trapezoidal",
+		"color": "00ffff",
+		"default": false,
+		"description": "Trapezoidal Word"
+	},
+	{
+		"id": 1274405315,
+		"node_id": "MDU6TGFiZWwxMjc0NDA1MzE1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Tree",
+		"name": "Tree",
+		"color": "ff00ff",
+		"default": false,
+		"description": "TreeDataStructure"
+	},
+	{
+		"id": 1277582900,
+		"node_id": "MDU6TGFiZWwxMjc3NTgyOTAw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Trie",
+		"name": "Trie",
+		"color": "fbca04",
+		"default": false,
+		"description": "Trie"
+	},
+	{
+		"id": 1574729798,
+		"node_id": "MDU6TGFiZWwxNTc0NzI5Nzk4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Ultra-Wide%20Word%20RAM",
+		"name": "Ultra-Wide Word RAM",
+		"color": "ffaf11",
+		"default": false,
+		"description": "Ultra-Wide Word RAM Models"
+	},
+	{
+		"id": 1525417204,
+		"node_id": "MDU6TGFiZWwxNTI1NDE3MjA0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Unavoidable",
+		"name": "Unavoidable",
+		"color": "e597e1",
+		"default": false,
+		"description": "Unavoidable patterns"
+	},
+	{
+		"id": 1274088105,
+		"node_id": "MDU6TGFiZWwxMjc0MDg4MTA1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Uncategorized",
+		"name": "Uncategorized",
+		"color": "FF0000",
+		"default": false,
+		"description": "Uncategorized"
+	},
+	{
+		"id": 1283123329,
+		"node_id": "MDU6TGFiZWwxMjgzMTIzMzI5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Unpublished",
+		"name": "Unpublished",
+		"color": "FF0000",
+		"default": false,
+		"description": "Unpublished paper"
+	},
+	{
+		"id": 1527328347,
+		"node_id": "MDU6TGFiZWwxNTI3MzI4MzQ3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Weaker%20sufficient%20conditions%20for%20indexing",
+		"name": "Weaker sufficient conditions for indexing",
+		"color": "1616bc",
+		"default": false,
+		"description": "Weaker sufficient conditions for indexing"
+	},
+	{
+		"id": 1525393377,
+		"node_id": "MDU6TGFiZWwxNTI1MzkzMzc3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/Word%20Problem",
+		"name": "Word Problem",
+		"color": "d8e069",
+		"default": false,
+		"description": "Word Problem"
+	},
+	{
+		"id": 1275338193,
+		"node_id": "MDU6TGFiZWwxMjc1MzM4MTkz",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/XBWT",
+		"name": "XBWT",
+		"color": "5319e7",
+		"default": false,
+		"description": ""
+	},
+	{
+		"id": 1274062984,
+		"node_id": "MDU6TGFiZWwxMjc0MDYyOTg0",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/bug",
+		"name": "bug",
+		"color": "d73a4a",
+		"default": true,
+		"description": "Something isn't working"
+	},
+	{
+		"id": 1274696696,
+		"node_id": "MDU6TGFiZWwxMjc0Njk2Njk2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/deBruijn",
+		"name": "deBruijn",
+		"color": "00ffff",
+		"default": false,
+		"description": "deBruijnWords"
+	},
+	{
+		"id": 1274062985,
+		"node_id": "MDU6TGFiZWwxMjc0MDYyOTg1",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/duplicate",
+		"name": "duplicate",
+		"color": "cfd3d7",
+		"default": true,
+		"description": "This issue or pull request already exists"
+	},
+	{
+		"id": 1274062986,
+		"node_id": "MDU6TGFiZWwxMjc0MDYyOTg2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/enhancement",
+		"name": "enhancement",
+		"color": "a2eeef",
+		"default": true,
+		"description": "New feature or request"
+	},
+	{
+		"id": 1274062988,
+		"node_id": "MDU6TGFiZWwxMjc0MDYyOTg4",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/good%20first%20issue",
+		"name": "good first issue",
+		"color": "7057ff",
+		"default": true,
+		"description": "Good for newcomers"
+	},
+	{
+		"id": 1274062987,
+		"node_id": "MDU6TGFiZWwxMjc0MDYyOTg3",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/help%20wanted",
+		"name": "help wanted",
+		"color": "008672",
+		"default": true,
+		"description": "Extra attention is needed"
+	},
+	{
+		"id": 1274062989,
+		"node_id": "MDU6TGFiZWwxMjc0MDYyOTg5",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/invalid",
+		"name": "invalid",
+		"color": "e4e669",
+		"default": true,
+		"description": "This doesn't seem right"
+	},
+	{
+		"id": 1527327336,
+		"node_id": "MDU6TGFiZWwxNTI3MzI3MzM2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/off-the-shelf%20indexing%20algorithms",
+		"name": "off-the-shelf indexing algorithms",
+		"color": "067a0d",
+		"default": false,
+		"description": "off-the-shelf indexing algorithms,"
+	},
+	{
+		"id": 1300269956,
+		"node_id": "MDU6TGFiZWwxMzAwMjY5OTU2",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/qgram",
+		"name": "qgram",
+		"color": "b6e069",
+		"default": false,
+		"description": "Q-gram"
+	},
+	{
+		"id": 1274062990,
+		"node_id": "MDU6TGFiZWwxMjc0MDYyOTkw",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/question",
+		"name": "question",
+		"color": "d876e3",
+		"default": true,
+		"description": "Further information is requested"
+	},
+	{
+		"id": 1274062991,
+		"node_id": "MDU6TGFiZWwxMjc0MDYyOTkx",
+		"url": "https://api.github.com/repos/stringologytimes/StringologyTimes/labels/wontfix",
+		"name": "wontfix",
+		"color": "ffffff",
+		"default": true,
+		"description": "This will not be worked on"
+	}
+]
