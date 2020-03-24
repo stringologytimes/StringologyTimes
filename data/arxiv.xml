@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?><articles>
+<entry id="1910.02611" xmlns="http://www.w3.org/2005/Atom">
+    <id>http://arxiv.org/abs/1910.02611v1</id>
+    <updated>2019-10-07T05:15:27Z</updated>
+    <published>2019-10-07T05:15:27Z</published>
+    <title>RAMBO: Repeated And Merged Bloom Filter for Multiple Set Membership
+  Testing (MSMT) in Sub-linear time</title>
+    <summary>  Approximate set membership is a common problem with wide applications in
+databases, networking, and search. Given a set S and a query q, the task is to
+determine whether q in S. The Bloom Filter (BF) is a popular data structure for
+approximate membership testing due to its simplicity. In particular, a BF
+consists of a bit array that can be incrementally updated. A related problem
+concerning this paper is the Multiple Set Membership Testing (MSMT) problem.
+Here we are given K different sets, and for any given query q the goal is the
+find all of the sets containing the query element. Trivially, a multiple set
+membership instance can be reduced to K membership testing instances, each with
+the same q, leading to O(K) query time. A simple array of Bloom Filters can
+achieve that. In this paper, we show the first non-trivial data-structure for
+streaming keys, RAMBO (Repeated And Merged Bloom Filter) that achieves expected
+O(sqrt(K) logK) query time with an additional worst case memory cost factor of
+O(logK) than the array of Bloom Filters. The proposed data-structure is simply
+a count-min sketch arrangement of Bloom Filters and retains all its favorable
+properties. We replace the addition operation with a set union and the minimum
+operation with a set intersection during estimation.
+</summary>
+    <author>
+      <name>Gaurav Gupta</name>
+    </author>
+    <author>
+      <name>Benjamin Coleman</name>
+    </author>
+    <author>
+      <name>Tharun Medini</name>
+    </author>
+    <author>
+      <name>Vijai Mohan</name>
+    </author>
+    <author>
+      <name>Anshumali Shrivastava</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">11 pages, 4 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/1910.02611v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1910.02611v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="1910.06416">
+    <id>http://arxiv.org/abs/1910.06416v2</id>
+    <updated>2019-11-30T11:47:44Z</updated>
+    <published>2019-10-14T20:50:22Z</published>
+    <title>RecSplit: Minimal Perfect Hashing via Recursive Splitting</title>
+    <summary>  A minimal perfect hash function bijectively maps a key set $S$ out of a
+universe $U$ into the first $|S|$ natural numbers. Minimal perfect hash
+functions are used, for example, to map irregularly-shaped keys, such as
+string, in a compact space so that metadata can then be simply stored in an
+array. While it is known that just $1.44$ bits per key are necessary to store a
+minimal perfect function, no published technique can go below $2$ bits per key
+in practice. We propose a new technique for storing minimal perfect hash
+functions with expected linear construction time and expected constant lookup
+time that makes it possible to build for the first time, for example,
+structures which need $1.56$ bits per key, that is, within $8.3$% of the lower
+bound, in less than $2$ ms per key. We show that instances of our construction
+are able to simultaneously beat the construction time, space usage and lookup
+time of the state-of-the-art data structure reaching $2$ bits per key.
+Moreover, we provide parameter choices giving structures which are competitive
+with alternative, larger-size data structures in terms of space and lookup
+time. The construction of our data structures can be easily parallelized or
+mapped on distributed computational units (e.g., within the MapReduce
+framework), and structures larger than the available RAM can be directly built
+in mass storage.
+</summary>
+    <author>
+      <name>Emmanuel Esposito</name>
+    </author>
+    <author>
+      <name>Thomas Mueller Graf</name>
+    </author>
+    <author>
+      <name>Sebastiano Vigna</name>
+    </author>
+    <link href="http://arxiv.org/abs/1910.06416v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1910.06416v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="1910.07849">
+    <id>http://arxiv.org/abs/1910.07849v2</id>
+    <updated>2019-10-28T10:22:03Z</updated>
+    <published>2019-10-17T12:15:09Z</published>
+    <title>Engineering Top-Down Weight-Balanced Trees</title>
+    <summary>  Weight-balanced trees are a popular form of self-balancing binary search
+trees. Their popularity is due to desirable guarantees, for example regarding
+the required work to balance annotated trees.
+  While usual weight-balanced trees perform their balancing operations in a
+bottom-up fashion after a modification to the tree is completed, there exists a
+top-down variant which performs these balancing operations during descend. This
+variant has so far received only little attention. We provide an in-depth
+analysis and engineering of these top-down weight-balanced trees, demonstrating
+their superior performance. We also gaining insights into how the balancing
+parameters necessary for a weight-balanced tree should be chosen - with the
+surprising observation that it is often beneficial to choose parameters which
+are not feasible in the sense of the correctness proofs for the rebalancing
+algorithm.
+</summary>
+    <author>
+      <name>Lukas Barth</name>
+    </author>
+    <author>
+      <name>Dorothea Wagner</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1137/1.9781611976007.13</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1137/1.9781611976007.13" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication at ALENEX 2020</arxiv:comment>
+    <link href="http://arxiv.org/abs/1910.07849v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1910.07849v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="1910.11993">
+    <id>http://arxiv.org/abs/1910.11993v1</id>
+    <updated>2019-10-26T04:17:37Z</updated>
+    <published>2019-10-26T04:17:37Z</published>
+    <title>Selection on $X_1+X_2+\cdots + X_m$ with layer-ordered heaps</title>
+    <summary>  Selection on $X_1+X_2+\cdots + X_m$ is an important problem with many
+applications in areas such as max-convolution, max-product Bayesian inference,
+calculating most probable isotopes, and computing non-parametric test
+statistics, among others. Faster-than-na\"{i}ve approaches exist for $m=2$:
+Johnson \&amp; Mizoguchi (1978) find the smallest $k$ values in $A+B$ with runtime
+$O(n \log(n))$. Frederickson \&amp; Johnson (1982) created a method for finding the
+$k$ smallest values in $A+B$ with runtime $O(n +
+\min(k,n)\log(\frac{k}{\min(k,n)}))$. In 1993, Frederickson published an
+optimal algorithm for selection on $A+B$, which runs in $O(n+k)$. In 2018,
+Kaplan \emph{et al.} described another optimal algorithm in terms Chazelle's of
+soft heaps. No fast methods exist for $m>2$. Johnson \&amp; Mizoguchi (1978)
+introduced a method to compute the minimal $k$ terms when $m>2$, but that
+method runs in $O(m\cdot n^{\frac{m}{2}} \log(n))$ and is inefficient when $m
+\gg 1$.
+  In this paper, we introduce the first efficient methods for problems where
+$m>2$. We introduce the ``layer-ordered heap,'' a simple special class of heap
+with which we produce a new, fast selection algorithm on the Cartesian product.
+Using this new algorithm to perform $k$-selection on the Cartesian product of
+$m$ arrays of length $n$ has runtime $\in o(m\cdot n + k\cdot m)$. We also
+provide implementations of the algorithms proposed and their performance in
+practice.
+</summary>
+    <author>
+      <name>Patrick Kreitzberg</name>
+    </author>
+    <author>
+      <name>Kyle Lucke</name>
+    </author>
+    <author>
+      <name>Oliver Serang</name>
+    </author>
+    <link href="http://arxiv.org/abs/1910.11993v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1910.11993v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="1910.03578">
+    <id>http://arxiv.org/abs/1910.03578v1</id>
+    <updated>2019-10-08T09:12:47Z</updated>
+    <published>2019-10-08T09:12:47Z</published>
+    <title>Stack Sorting with Increasing and Decreasing Stacks</title>
+    <summary>  We introduce a sorting machine consisting of $k+1$ stacks in series: the
+first $k$ stacks can only contain elements in decreasing order from top to
+bottom, while the last one has the opposite restriction. This device
+generalizes \cite{SM}, which studies the case $k=1$. Here we show that, for
+$k=2$, the set of sortable permutations is a class with infinite basis, by
+explicitly finding an antichain of minimal nonsortable permutations. This
+construction can easily be adapted to each $k \ge 3$. Next we describe an
+optimal sorting algorithm, again for the case $k=2$. We then analyze two types
+of left-greedy sorting procedures, obtaining complete results in one case and
+only some partial results in the other one. We close the paper by discussing a
+few open questions.
+</summary>
+    <author>
+      <name>Giulio Cerbai</name>
+    </author>
+    <author>
+      <name>Lapo Cioni</name>
+    </author>
+    <author>
+      <name>Luca Ferrari</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">16 pages, 4 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/1910.03578v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1910.03578v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="1910.06437">
+    <id>http://arxiv.org/abs/1910.06437v2</id>
+    <updated>2019-11-14T14:50:14Z</updated>
+    <published>2019-10-14T21:44:14Z</published>
+    <title>It is high time we let go of the Mersenne Twister</title>
+    <summary>  When the Mersenne Twister made his first appearance in 1997 it was a powerful
+example of how linear maps on $\mathbf F_2$ could be used to generate
+pseudorandom numbers. In particular, the easiness with which generators with
+long periods could be defined gave the Mersenne Twister a large following, in
+spite of the fact that such long periods are not a measure of quality, and they
+require a large amount of memory. Even at the time of its publication, several
+defects of the Mersenne Twister were predictable, but they were somewhat
+obscured by other interesting properties. Today the Mersenne Twister is the
+default generator in C compilers, the Python language, the Maple mathematical
+computation system, and in many other environments. Nonetheless, knowledge
+accumulated in the last $20$ years suggests that the Mersenne Twister has, in
+fact, severe defects, and should never be used as a general-purpose
+pseudorandom number generator. Many of these results are folklore, or are
+scattered through very specialized literature. This paper surveys these results
+for the non-specialist, providing new, simple, understandable examples, and it
+is intended as a guide for the final user, or for language implementors, so
+that they can take an informed decision about whether to use the Mersenne
+Twister or not.
+</summary>
+    <author>
+      <name>Sebastiano Vigna</name>
+    </author>
+    <link href="http://arxiv.org/abs/1910.06437v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1910.06437v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="1910.10406">
+    <id>http://arxiv.org/abs/1910.10406v1</id>
+    <updated>2019-10-23T08:24:15Z</updated>
+    <published>2019-10-23T08:24:15Z</published>
+    <title>Analyzing Trade-offs in Reversible Linear and Binary Search Algorithms</title>
+    <summary>  Reversible algorithms are algorithms in which each step represents a partial
+injective function; they are useful for performance optimization in reversible
+systems. In this study, using Janus, a reversible imperative high-level
+programming language, we have developed reversible linear and binary search
+algorithms. We have analyzed the non-trivial space-time trade-offs between
+them, focusing on the memory usage disregarding original inputs and outputs,
+the size of the output garbage disregarding the original inputs, and the
+maximum amount of traversal of the input. The programs in this study can easily
+be adapted to other reversible programming languages. Our analysis reveals that
+the change of the output data and/or the data structure affects the design of
+efficient reversible algorithms. For example, the number of input data
+traversals depends on whether the search has succeeded or failed, while it
+expectedly never changes in corresponding irreversible linear and binary
+searches. Our observations indicate the importance of the selection of data
+structures and what is regarded as the output with the aim of the reversible
+algorithm design.
+</summary>
+    <author>
+      <name>Hiroki Masuda</name>
+    </author>
+    <author>
+      <name>Tetsuo Yokoyama</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Proceedings of the Third Workshop on Software Foundations for Data
+  Interoperability (SFDI2019+), October 28, 2019, Fukuoka, Japan</arxiv:comment>
+    <link href="http://arxiv.org/abs/1910.10406v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1910.10406v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="1910.04728">
+    <id>http://arxiv.org/abs/1910.04728v1</id>
+    <updated>2019-10-10T17:41:53Z</updated>
+    <published>2019-10-10T17:41:53Z</published>
+    <title>LISA: Towards Learned DNA Sequence Search</title>
+    <summary>  Next-generation sequencing (NGS) technologies have enabled affordable
+sequencing of billions of short DNA fragments at high throughput, paving the
+way for population-scale genomics. Genomics data analytics at this scale
+requires overcoming performance bottlenecks, such as searching for short DNA
+sequences over long reference sequences. In this paper, we introduce LISA
+(Learned Indexes for Sequence Analysis), a novel learning-based approach to DNA
+sequence search. As a first proof of concept, we focus on accelerating one of
+the most essential flavors of the problem, called exact search. LISA builds on
+and extends FM-index, which is the state-of-the-art technique widely deployed
+in genomics tool-chains. Initial experiments with human genome datasets
+indicate that LISA achieves up to a factor of 4X performance speedup against
+its traditional counterpart.
+</summary>
+    <author>
+      <name>Darryl Ho</name>
+    </author>
+    <author>
+      <name>Jialin Ding</name>
+    </author>
+    <author>
+      <name>Sanchit Misra</name>
+    </author>
+    <author>
+      <name>Nesime Tatbul</name>
+    </author>
+    <author>
+      <name>Vikram Nathan</name>
+    </author>
+    <author>
+      <name>Vasimuddin Md</name>
+    </author>
+    <author>
+      <name>Tim Kraska</name>
+    </author>
+    <link href="http://arxiv.org/abs/1910.04728v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1910.04728v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="1910.07145">
+    <id>http://arxiv.org/abs/1910.07145v2</id>
+    <updated>2020-03-21T01:05:37Z</updated>
+    <published>2019-10-16T03:14:03Z</published>
+    <title>Practical Random Access to Large SLP-Compressed Texts</title>
+    <summary>  Grammar-based compression is a popular and powerful approach to compressing
+repetitive texts but until recently its relatively poor time-space trade-offs
+in real life made it impractical for truly massive datasets such as genomic
+databases. In a recent paper (SPIRE 2019) we showed how simple pre-processing
+can dramatically improve those trade-offs. Now that grammar-based compression
+itself is reasonably scalable, in this paper we turn our attention to one of
+the features that make grammar-based compression so attractive: the possibility
+of supporting fast random access. In this paper we introduce a new encoding in
+which we identify symbols by their offsets among those with the same expansion
+sizes, thus tightly integrating our encodings of the symbols in the parse tree
+and its shape.
+</summary>
+    <author>
+      <name>Travis Gagie</name>
+    </author>
+    <author>
+      <name>Tomohiro I</name>
+    </author>
+    <author>
+      <name>Giovanni Manzini</name>
+    </author>
+    <author>
+      <name>Gonzalo Navarro</name>
+    </author>
+    <author>
+      <name>Hiroshi Sakamoto</name>
+    </author>
+    <author>
+      <name>Louisa Seelbach Benkner</name>
+    </author>
+    <author>
+      <name>Yoshimasa Takabatake</name>
+    </author>
+    <link href="http://arxiv.org/abs/1910.07145v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1910.07145v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="1910.04640">
+    <id>http://arxiv.org/abs/1910.04640v1</id>
+    <updated>2019-10-10T15:19:19Z</updated>
+    <published>2019-10-10T15:19:19Z</published>
+    <title>E2FM: an encrypted and compressed full-text index for collections of
+  genomic sequences</title>
+    <summary>  Next Generation Sequencing (NGS) platforms and, more generally,
+high-throughput technologies are giving rise to an exponential growth in the
+size of nucleotide sequence databases. Moreover, many emerging applications of
+nucleotide datasets -- as those related to personalized medicine -- require the
+compliance with regulations about the storage and processing of sensitive data.
+We have designed and carefully engineered E2FM-index, a new full-text index in
+minute space which was optimized for compressing and encrypting nucleotide
+sequence collections in FASTA format and for performing fast pattern-search
+queries. E2FM-index allows to build self-indexes which occupy till to 1/20 of
+the storage required by the input FASTA file, thus permitting to save about 95%
+of storage when indexing collections of highly similar sequences; moreover, it
+can exactly search the built indexes for patterns in times ranging from few
+milliseconds to a few hundreds milliseconds, depending on pattern length.
+Supplementary material and supporting datasets are available through
+Bioinformatics Online and https://figshare.com/s/6246ee9c1bd730a8bf6e.
+</summary>
+    <author>
+      <name>Ferdinando Montecuollo</name>
+    </author>
+    <author>
+      <name>Giovannni Schmid</name>
+    </author>
+    <author>
+      <name>Roberto Tagliaferri</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1093/bioinformatics/btx313</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1093/bioinformatics/btx313" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">23 pages with pseudo-code and experimental results</arxiv:comment>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">Bioinformatics, 33(18), 2017, 2808-2817</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/1910.04640v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1910.04640v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="1910.10631">
+    <id>http://arxiv.org/abs/1910.10631v1</id>
+    <updated>2019-10-23T15:54:53Z</updated>
+    <published>2019-10-23T15:54:53Z</published>
+    <title>Resolution of the Burrows-Wheeler Transform Conjecture</title>
+    <summary>  Burrows-Wheeler Transform (BWT) is an invertible text transformation that
+permutes symbols of a text according to the lexicographical order of its
+suffixes. BWT is the main component of some of the most popular lossless
+compression methods as well as of compressed indexes, central in modern
+bioinformatics. The compression ratio of BWT-based compressors, such as bzip2,
+is quantified by the number $r$ of maximal equal-letter runs in the BWT. This
+is also (up to ${\rm polylog}\,n$ factors, where $n$ is the length of the text)
+the space used by the state-of-the-art BWT-based indexes, such as the recent
+$r$-index [Gagie et al., SODA 2018]. The output size of virtually every known
+compression method is known to be either within a ${\rm polylog}\,n$ factor
+from $z$, the size of Lempel-Ziv (LZ77) parsing of the text, or significantly
+larger (by a $n^{\epsilon}$ factor for $\epsilon > 0$). The value of $r$ has
+resisted, however, all attempts and until now, no non-trivial upper bounds on
+$r$ were known.
+  In this paper, we show that every text satisfies $r=\mathcal{O}(z\log^2 n)$.
+This result has a number of immediate implications: (1) it proves that a large
+body of work related to BWT automatically applies to the so-far disjoint field
+of Lempel--Ziv indexing and compression, e.g., it is possible to obtain full
+functionality of the suffix tree and the suffix array in $\mathcal{O}(z\,{\rm
+polylog}\,n)$ space; (2) it lets us relate the number of runs in the BWT of the
+text and its reverse; (3) it shows that many fundamental text processing tasks
+can be solved in the optimal time assuming that the text is compressible by a
+sufficiently large ${\rm polylog}\,n$ factor using LZ77.
+</summary>
+    <author>
+      <name>Dominik Kempa</name>
+    </author>
+    <author>
+      <name>Tomasz Kociumaka</name>
+    </author>
+    <link href="http://arxiv.org/abs/1910.10631v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1910.10631v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry></articles>
