@@ -136,8 +136,30 @@ async function main() {
     fs.writeFile('./data/output.md', str, (err, data) => {
         if (err) console.log(err);
         else console.log('write end');
-    });
+    });    
 }
 
-main();
+async function main2() {
+    const json = <IssueJson[]>await loadJson("./data/issue.json");
+    const items = createIssueItems(json);
+    //let re = new RegExp('https://arxiv.org/abs/\d+\.\d+?');
+    const re = new RegExp('https://arxiv.org/abs/[0-9]+\.[0-9]+');
+
+    const urlList : string[] = new Array(0);
+    json.forEach((v) =>{
+        var result = v.body.match(re);
+        if(result != null){            
+            urlList.push(result[0]);
+        }
+    })
+    const log = urlList.join("\n");
+    fs.writeFile('./data/fil_arxiv_url.txt', log, (err, data) => {
+        if (err) console.log(err);
+        else console.log('write end');
+    });    
+
+}
+
+
+main2();
 console.log('ファイル読み込み中でも処理が走ります。');

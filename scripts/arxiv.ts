@@ -35,11 +35,11 @@ class ArxivArticle{
   url : string;
   public constructor(_node : Element){
     this.node = _node;
-    const dateStr : string = this.node.getElementsByTagName("published").item(0).textContent;
+    const dateStr : string = this.node.getElementsByTagName("published").item(0)!.textContent!;
     this.date = new Date(dateStr);
     
-    this.id = this.node.getAttribute("id");
-    this.title = this.node.getElementsByTagName("title").item(0).textContent;
+    this.id = this.node.getAttribute("id")!;
+    this.title = this.node.getElementsByTagName("title").item(0)!.textContent!;
     this.url = `https://arxiv.org/abs/${this.id}`;
   }
 }
@@ -85,10 +85,10 @@ function myFunction(ids : string[], arxivInfo : ArxivXMLInfo) {
   console.log(`get URL http://export.arxiv.org/api/query?id_list=${idsStr}`);
   const entryCol = document.getElementsByTagName('entry');
 
-  const articlesNode = arxivInfo.document.getElementsByTagName("articles").item(0);
+  const articlesNode = arxivInfo.document.getElementsByTagName("articles").item(0)!;
   for(let i=entryCol.length-1;i >= 0;i--){
-    const entry = entryCol.item(i);
-    const idNode = entry.getElementsByTagName("id").item(0).textContent;
+    const entry = entryCol.item(i)!;
+    const idNode = entry.getElementsByTagName("id").item(0)!.textContent!;
     console.log(`${ids[i]} / ${idNode} / ${idNode.indexOf(ids[i]) != -1}`)
     if(idNode.indexOf(ids[i]) != -1){
       entry.setAttribute("id", ids[i]);
@@ -125,7 +125,7 @@ function createPaperHTML(arxivInfo : ArxivXMLInfo) : string {
   const entryCol = arxivInfo.document.getElementsByTagName('entry');
   const arr : ArxivArticle[] = new Array(0);
   for(let i=0;i<entryCol.length;i++){
-    arr.push(new ArxivArticle(entryCol.item(i)));
+    arr.push(new ArxivArticle(entryCol.item(i)!));
   }
   arr.sort((a,b) => {
     return b.date.getTime() - a.date.getTime();
