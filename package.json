@@ -1,0 +1,24 @@
+{
+  "name": "stringologytimes",
+  "version": "1.0.0",
+  "description": "アルゴリズムやデータ構造に関係していると思われる論文がIssueページでタグ付けされています。",
+  "main": "index.js",
+  "dependencies": {
+    "sync-request": "^6.1.0",
+    "xmldom": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stringologytimes/StringologyTimes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stringologytimes/StringologyTimes/issues"
+  },
+  "homepage": "https://github.com/stringologytimes/StringologyTimes#readme"
+}

@@ -1,13 +1,20 @@
 import { type } from "os";
 
 //import xmldom from "xmldom";
-var sleep = require('sleep');
+//var sleep = require('sleep');
 //var request = require('request');
 var request = require('sync-request');
 var xmldom = require('xmldom');
 
 const fs = require('fs');
 
+function sleep(time) {
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {
+          resolve();
+      }, time);
+  });
+}
 
 type ArxivXMLInfo = {
   document : XMLDocument,
@@ -76,7 +83,8 @@ function getArxivXML(url) {
 */
 
 function myFunction(ids : string[], arxivInfo : ArxivXMLInfo) {
-  sleep.sleep(5);
+  sleep(5000);
+  //sleep.sleep(5);
   console.log("get infomation");
   console.log(ids);
   const idsStr = ids.join(",")
@@ -146,7 +154,7 @@ function createPaperHTML(arxivInfo : ArxivXMLInfo) : string {
 const paperHTML = createPaperHTML(arxivXMLInfo);
 
 try {
-  fs.writeFileSync("data/arxiv_list.html", paperHTML);
+  fs.writeFileSync("data/arxiv_list.md", paperHTML);
 }catch(e){
   console.log(e);
 }
