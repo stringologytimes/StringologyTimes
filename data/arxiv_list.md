@@ -1,5 +1,51 @@
 # Arxiv Papers
+## 2020/5/
+- [On repetitiveness measures of Thue-Morse words](https://arxiv.org/abs/2005.09524)
+- [Linear Time Construction of Indexable Founder Block Graphs](https://arxiv.org/abs/2005.09342)
+- [On Weighted Prefix Normal Words](https://arxiv.org/abs/2005.09281)
+- [A reduction of the dynamic time warping distance to the longest
+  increasing subsequence length](https://arxiv.org/abs/2005.09169)
+- [Towards Efficient Interactive Computation of Dynamic Time Warping
+  Distance](https://arxiv.org/abs/2005.08190)
+- [Quantum string comparison method](https://arxiv.org/abs/2005.08950)
+- [Edit Distance in Near-Linear Time: it's a Constant Factor](https://arxiv.org/abs/2005.07678)
+- [Breadth-First Rank/Select in Succinct Trees and Distance Oracles for
+  Interval Graphs](https://arxiv.org/abs/2005.07644)
+- [k-Approximate Quasiperiodicity under Hamming and Edit Distance](https://arxiv.org/abs/2005.06329)
+- [Efficient and Effective Query Auto-Completion](https://arxiv.org/abs/2005.06213)
+- [Counting Distinct Patterns in Internal Dictionary Matching](https://arxiv.org/abs/2005.05681)
+- [Incremental Multiple Longest Common Sub-Sequences](https://arxiv.org/abs/2005.02725)
+- [Palindromic Length of Words with Many Periodic Palindromes](https://arxiv.org/abs/2005.01371)
+- [Pointer-Machine Algorithms for Fully-Online Construction of Suffix Trees
+  and DAWGs on Multiple Strings](https://arxiv.org/abs/2005.00681)
+## 2020/4/
+- [Approximating longest common substring with $k$ mismatches: Theory and
+  practice](https://arxiv.org/abs/2004.13389)
+- [The Streaming k-Mismatch Problem: Tradeoffs between Space and Total Time](https://arxiv.org/abs/2004.12881)
+- [In-Place Bijective Burrows-Wheeler Transforms](https://arxiv.org/abs/2004.12590)
+- [Black-White Array: A New Data Structure for Dynamic Data Sets](https://arxiv.org/abs/2004.09051)
+- [Faster Approximate Pattern Matching: A Unified Approach](https://arxiv.org/abs/2004.08350)
+- [Lower Bound for Succinct Range Minimum Query](https://arxiv.org/abs/2004.05738)
+- [Locality-Sensitive Hashing Scheme based on Longest Circular Co-Substring](https://arxiv.org/abs/2004.05345)
+- [Grammar-compressed Self-index with Lyndon Words](https://arxiv.org/abs/2004.05309)
+- [Pattern Discovery in Colored Strings](https://arxiv.org/abs/2004.04858)
+- [Two halves of a meaningful text are statistically different](https://arxiv.org/abs/2004.06474)
+- [Storing Set Families More Compactly with Top ZDDs](https://arxiv.org/abs/2004.04586)
+- [A Pedagogically Sound yet Efficient Deletion algorithm for Red-Black
+  Trees: The Parity-Seeking Delete Algorithm](https://arxiv.org/abs/2004.04344)
+- [Zipping Segment Trees](https://arxiv.org/abs/2004.03206)
+- [SOPanG 2: online searching over a pan-genome without false positives](https://arxiv.org/abs/2004.03033)
+- [Indexing Highly Repetitive String Collections](https://arxiv.org/abs/2004.02781)
+- [Enumeration of LCP values, LCP intervals and Maximal repeats in BWT-runs
+  Bounded Space](https://arxiv.org/abs/2004.01493)
+- [No Repetition: Fast Streaming with Highly Concentrated Hashing](https://arxiv.org/abs/2004.01156)
+- [On Locating Paths in Compressed Cardinal Trees](https://arxiv.org/abs/2004.01120)
+- [Grammar-Compressed Indexes with Logarithmic Search Time](https://arxiv.org/abs/2004.01032)
 ## 2020/3/
+- [A Faster Subquadratic Algorithm for the Longest Common Increasing
+  Subsequence Problem](https://arxiv.org/abs/2003.13589)
+- [Succinct Dynamic Ordered Sets with Random Access](https://arxiv.org/abs/2003.11835)
+- [Further Results on Colored Range Searching](https://arxiv.org/abs/2003.11604)
 - [Grammar compression with probabilistic context-free grammar](https://arxiv.org/abs/2003.08097)
 - [An Efficient Implementation of Manacher's Algorithm](https://arxiv.org/abs/2003.08211)
 - [Approximating LCS in Linear Time: Beating the $\sqrt{n}$ Barrier](https://arxiv.org/abs/2003.07285)
