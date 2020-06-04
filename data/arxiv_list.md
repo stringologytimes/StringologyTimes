@@ -1,5 +1,22 @@
 # Arxiv Papers
+## 2020/6/
+- [Dynamic Longest Common Substring in Polylogarithmic Time](https://arxiv.org/abs/2006.02408)
+- [LCP-Aware Parallel String Sorting](https://arxiv.org/abs/2006.02219)
+- [Computing Palindromic Trees for a Sliding Window and Its Applications](https://arxiv.org/abs/2006.02134)
+- [Efficient tree-structured categorical retrieval](https://arxiv.org/abs/2006.01825)
+- [A Fast Algorithm for Online k-servers Problem on Trees](https://arxiv.org/abs/2006.00605)
 ## 2020/5/
+- [Longest Square Subsequence Problem Revisited](https://arxiv.org/abs/2006.00216)
+- [Classical and Quantum Algorithms for Constructing Text from Dictionary
+  Problem](https://arxiv.org/abs/2005.14335)
+- [On the improvement of the in-place merge algorithm parallelization](https://arxiv.org/abs/2005.12648)
+- [An inequality for the number of periods in a word](https://arxiv.org/abs/2005.11718)
+- [Still Simpler Static Level Ancestors](https://arxiv.org/abs/2005.11188)
+- [Succinct Trit-array Trie for Scalable Trajectory Similarity Search](https://arxiv.org/abs/2005.10917)
+- [New Approximation Algorithms for Maximum Asymmetric Traveling Salesman
+  and Shortest Superstring](https://arxiv.org/abs/2005.10800)
+- [Primitive Sets of Words](https://arxiv.org/abs/2005.10668)
+- [The K-Centre Problem for Necklaces](https://arxiv.org/abs/2005.10095)
 - [On repetitiveness measures of Thue-Morse words](https://arxiv.org/abs/2005.09524)
 - [Linear Time Construction of Indexable Founder Block Graphs](https://arxiv.org/abs/2005.09342)
 - [On Weighted Prefix Normal Words](https://arxiv.org/abs/2005.09281)

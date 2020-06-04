@@ -18959,4 +18959,489 @@ per update in the worst case.
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2005.14335">
+    <id>http://arxiv.org/abs/2005.14335v1</id>
+    <updated>2020-05-28T22:44:01Z</updated>
+    <published>2020-05-28T22:44:01Z</published>
+    <title>Classical and Quantum Algorithms for Constructing Text from Dictionary
+  Problem</title>
+    <summary>  We study algorithms for solving the problem of constructing a text (long
+string) from a dictionary (sequence of small strings). The problem has an
+application in bioinformatics and has a connection with the Sequence assembly
+method for reconstructing a long DNA sequence from small fragments. The problem
+is constructing a string $t$ of length $n$ from strings $s^1,\dots, s^m$ with
+possible intersections. We provide a classical algorithm with running time
+$O\left(n+L +m(\log n)^2\right)=\tilde{O}(n+L)$ where $L$ is the sum of lengths
+of $s^1,\dots,s^m$. We provide a quantum algorithm with running time $O\left(n
++\log n\cdot(\log m+\log\log n)\cdot \sqrt{m\cdot L}\right)=\tilde{O}\left(n
++\sqrt{m\cdot L}\right)$. Additionally, we show that the lower bound for the
+classical algorithm is $\Omega(n+L)$. Thus, our classical algorithm is optimal
+up to a log factor, and our quantum algorithm shows speed-up comparing to any
+classical algorithm in a case of non-constant length of strings in the
+dictionary.
+</summary>
+    <author>
+      <name>Kamil Khadiev</name>
+    </author>
+    <author>
+      <name>Vladislav Remidovskii</name>
+    </author>
+    <link href="http://arxiv.org/abs/2005.14335v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2005.14335v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2006.00216">
+    <id>http://arxiv.org/abs/2006.00216v1</id>
+    <updated>2020-05-30T08:09:44Z</updated>
+    <published>2020-05-30T08:09:44Z</published>
+    <title>Longest Square Subsequence Problem Revisited</title>
+    <summary>  The longest square subsequence (LSS) problem consists of computing a longest
+subsequence of a given string $S$ that is a square, i.e., a longest subsequence
+of form $XX$ appearing in $S$. It is known that an LSS of a string $S$ of
+length $n$ can be computed using $O(n^2)$ time [Kosowski 2004], or with
+(model-dependent) polylogarithmic speed-ups using $O(n^2 (\log \log n)^2 /
+\log^2 n)$ time [Tiskin 2013]. We present the first algorithm for LSS whose
+running time depends on other parameters, i.e., we show that an LSS of $S$ can
+be computed in $O(r \min\{n, M\}\log \frac{n}{r} + M \log n)$ time with $O(M)$
+space, where $r$ is the length of an LSS of $S$ and $M$ is the number of
+matching points on $S$.
+</summary>
+    <author>
+      <name>Takafumi Inoue</name>
+    </author>
+    <author>
+      <name>Shunsuke Inenaga</name>
+    </author>
+    <author>
+      <name>Hideo Bannai</name>
+    </author>
+    <link href="http://arxiv.org/abs/2006.00216v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2006.00216v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2006.00605">
+    <id>http://arxiv.org/abs/2006.00605v1</id>
+    <updated>2020-05-31T20:49:52Z</updated>
+    <published>2020-05-31T20:49:52Z</published>
+    <title>A Fast Algorithm for Online k-servers Problem on Trees</title>
+    <summary>  We consider online algorithms for the $k$-servers problem on trees. There is
+an $k$-competitive algorithm for this problem, and it is the best competitive
+ratio. M. Chrobak and L. Larmore suggested it. At the same time, the existing
+implementation has $O(n)$ time complexity, where $n$ is a number of nodes in a
+tree. We suggest a new time-efficient implementation of the algorithm. It has
+$O(n)$ time complexity for preprocessing and $O\left(k(\log n)^2\right)$ for
+processing a query.
+</summary>
+    <author>
+      <name>Kamil Khadiev</name>
+    </author>
+    <author>
+      <name>Maxim Yagafarov</name>
+    </author>
+    <link href="http://arxiv.org/abs/2006.00605v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2006.00605v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2005.12648">
+    <id>http://arxiv.org/abs/2005.12648v1</id>
+    <updated>2020-05-26T12:08:04Z</updated>
+    <published>2020-05-26T12:08:04Z</published>
+    <title>On the improvement of the in-place merge algorithm parallelization</title>
+    <summary>  In this paper, we present several improvements in the parallelization of the
+in-place merge algorithm, which merges two contiguous sorted arrays into one
+with an O(T) space complexity (where T is the number of threads). The approach
+divides the two arrays into as many pairs of partitions as there are threads
+available; such that each thread can later merge a pair of partitions
+independently of the others. We extend the existing method by proposing a new
+algorithm to find the median of two partitions. Additionally, we provide a new
+strategy to divide the input arrays where we minimize the data movement, but at
+the cost of making this stage sequential. Finally, we provide the so-called
+linear shifting algorithm that swaps two partitions in-place with contiguous
+data access. We emphasize that our approach is straightforward to implement and
+that it can also be used for external (out of place) merging. The results
+demonstrate that it provides a significant speedup compared to sequential
+executions, when the size of the arrays is greater than a thousand elements.
+</summary>
+    <author>
+      <name>Berenger Bramas</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Inria, ICube, CAMUS</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Quentin Bramas</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">ICube, UNISTRA</arxiv:affiliation>
+    </author>
+    <link href="http://arxiv.org/abs/2005.12648v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2005.12648v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2005.11718">
+    <id>http://arxiv.org/abs/2005.11718v2</id>
+    <updated>2020-05-27T07:13:27Z</updated>
+    <published>2020-05-24T11:12:02Z</published>
+    <title>An inequality for the number of periods in a word</title>
+    <summary>  We prove an inequality for the number of periods in a word x in terms of the
+length of x and its initial critical exponent. Next, we characterize all
+periods of the length-n prefix of a characteristic Sturmian word in terms of
+the lazy Ostrowski representation of n, and use this result to show that our
+inequality is tight for infinitely many words x. We propose two related
+measures of periodicity for infinite words. Finally, we also consider special
+cases where x is overlap-free or squarefree.
+</summary>
+    <author>
+      <name>Daniel Gabric</name>
+    </author>
+    <author>
+      <name>Narad Rampersad</name>
+    </author>
+    <author>
+      <name>Jeffrey Shallit</name>
+    </author>
+    <link href="http://arxiv.org/abs/2005.11718v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2005.11718v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2005.10917">
+    <id>http://arxiv.org/abs/2005.10917v1</id>
+    <updated>2020-05-21T21:42:30Z</updated>
+    <published>2020-05-21T21:42:30Z</published>
+    <title>Succinct Trit-array Trie for Scalable Trajectory Similarity Search</title>
+    <summary>  Massive datasets of spatial trajectories representing the mobility of a
+diversity of moving objects are ubiquitous in research and industry. Similarity
+search of a large collection of trajectories is indispensable for turning these
+datasets into knowledge. Current methods for similarity search of trajectories
+are inefficient in terms of search time and memory when applied to massive
+datasets. In this paper, we address this problem by presenting a scalable
+similarity search for Fr\'echet distance on trajectories, which we call
+trajectory-indexing succinct trit-array trie (tSTAT). tSTAT achieves time and
+memory efficiency by leveraging locality sensitive hashing (LSH) for Fr\'echet
+distance and a trie data structure. We also present two novel techniques of
+node reduction and a space-efficient representation for tries, which enable to
+dramatically enhance a memory efficiency of tries. We experimentally test tSTAT
+on its ability to retrieve similar trajectories for a query from large
+collections of trajectories and show that tSTAT performs superiorly with
+respect to search time and memory efficiency.
+</summary>
+    <author>
+      <name>Shunsuke Kanda</name>
+    </author>
+    <author>
+      <name>Koh Takeuchi</name>
+    </author>
+    <author>
+      <name>Keisuke Fujii</name>
+    </author>
+    <author>
+      <name>Yasuo Tabei</name>
+    </author>
+    <link href="http://arxiv.org/abs/2005.10917v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2005.10917v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2005.11188">
+    <id>http://arxiv.org/abs/2005.11188v1</id>
+    <updated>2020-05-22T13:45:23Z</updated>
+    <published>2020-05-22T13:45:23Z</published>
+    <title>Still Simpler Static Level Ancestors</title>
+    <summary>  A level-ancestor or LA query about a rooted tree $T$ takes as arguments a
+node $v$ in $T$, of depth $d_v$, say, and an integer $d$ with $0\le d\le d_v$
+and returns the ancestor of $v$ in $T$ of depth $d$. The static LA problem is
+to process a given rooted tree $T$ so as to support efficient subsequent
+processing of LA queries about $T$. All previous efficient solutions to the
+static LA problem work by reducing a given instance of the problem to a smaller
+instance of the same or a related problem, solved with a less efficient data
+structure, and a collection of small micro-instances for which a different
+solution is provided. We indicate the first efficient solution to the static LA
+problem that works directly, without resorting to reductions or
+micro-instances.
+</summary>
+    <author>
+      <name>Torben Hagerup</name>
+    </author>
+    <link href="http://arxiv.org/abs/2005.11188v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2005.11188v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2005.10668">
+    <id>http://arxiv.org/abs/2005.10668v1</id>
+    <updated>2020-05-20T16:14:00Z</updated>
+    <published>2020-05-20T16:14:00Z</published>
+    <title>Primitive Sets of Words</title>
+    <summary>  Given a (finite or infinite) subset $X$ of the free monoid $A^*$ over a
+finite alphabet $A$, the rank of $X$ is the minimal cardinality of a set $F$
+such that $X \subseteq F^*$. We say that a submonoid $M$ generated by $k$
+elements of $A^*$ is {\em $k$-maximal} if there does not exist another
+submonoid generated by at most $k$ words containing $M$. We call a set $X
+\subseteq A^*$ {\em primitive} if it is the basis of a $|X|$-maximal submonoid.
+This definition encompasses the notion of primitive word -- in fact, $\{w\}$ is
+a primitive set if and only if $w$ is a primitive word. By definition, for any
+set $X$, there exists a primitive set $Y$ such that $X \subseteq Y^*$. We
+therefore call $Y$ a {\em primitive root} of $X$. As a main result, we prove
+that if a set has rank $2$, then it has a unique primitive root. To obtain this
+result, we prove that the intersection of two $2$-maximal submonoids is either
+the empty word or a submonoid generated by one single primitive word. For a
+single word $w$, we say that the set $\{x,y\}$ is a {\em bi-root} of $w$ if $w$
+can be written as a concatenation of copies of $x$ and $y$ and $\{x,y\}$ is a
+primitive set. We prove that every primitive word $w$ has at most one bi-root
+$\{x,y\}$ such that $|x|+|y|&lt;\sqrt{|w|}$. That is, the bi-root of a word is
+unique provided the word is sufficiently long with respect to the size (sum of
+lengths) of the root. Our results are also compared to previous approaches that
+investigate pseudo-repetitions, where a morphic involutive function $\theta$ is
+defined on $A^*$. In this setting, the notions of $\theta$-power,
+$\theta$-primitive and $\theta$-root are defined, and it is shown that any word
+has a unique $\theta$-primitive root. This result can be obtained with our
+approach by showing that a word $w$ is $\theta$-primitive if and only if $\{w,
+\theta(w)\}$ is a primitive set.
+</summary>
+    <author>
+      <name>Giuseppa Castiglione</name>
+    </author>
+    <author>
+      <name>Gabriele Fici</name>
+    </author>
+    <author>
+      <name>Antonio Restivo</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submitted. arXiv admin note: substantial text overlap with
+  arXiv:1810.02182</arxiv:comment>
+    <link href="http://arxiv.org/abs/2005.10668v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2005.10668v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2005.10800">
+    <id>http://arxiv.org/abs/2005.10800v1</id>
+    <updated>2020-05-21T17:29:40Z</updated>
+    <published>2020-05-21T17:29:40Z</published>
+    <title>New Approximation Algorithms for Maximum Asymmetric Traveling Salesman
+  and Shortest Superstring</title>
+    <summary>  In the maximum asymmetric traveling salesman problem (Max ATSP) we are given
+a complete directed graph with nonnegative weights on the edges and we wish to
+compute a traveling salesman tour of maximum weight. In this paper we give a
+fast combinatorial $\frac{7}{10}$-approximation algorithm for Max ATSP. It is
+based on techniques of {\em eliminating} and {\em diluting} problematic
+subgraphs with the aid of {\it half-edges} and a method of edge coloring. (A
+{\it half-edge} of edge $(u,v)$ is informally speaking "either a head or a tail
+of $(u,v)$".) A novel technique of {\em diluting} a problematic subgraph $S$
+consists in a seeming reduction of its weight, which allows its better
+handling.
+  The current best approximation algorithms for Max ATSP, achieving the
+approximation guarantee of $\frac 23$, are due to Kaplan, Lewenstein, Shafrir,
+Sviridenko (2003) and Elbassioni, Paluch, van Zuylen (2012). Using a result by
+Mucha, which states that an $\alpha$-approximation algorithm for Max ATSP
+implies a $(2+\frac{11(1-\alpha)}{9-2\alpha})$-approximation algorithm for the
+shortest superstring problem (SSP), we obtain also a $(2 \frac{33}{76} \approx
+2,434)$-approximation algorithm for SSP, beating the previously best known
+(having an approximation factor equal to $2 \frac{11}{23} \approx 2,4782$.)
+</summary>
+    <author>
+      <name>Katarzyna Paluch</name>
+    </author>
+    <link href="http://arxiv.org/abs/2005.10800v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2005.10800v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2005.10095">
+    <id>http://arxiv.org/abs/2005.10095v1</id>
+    <updated>2020-05-20T14:56:59Z</updated>
+    <published>2020-05-20T14:56:59Z</published>
+    <title>The K-Centre Problem for Necklaces</title>
+    <summary>  In graph theory, the objective of the k-centre problem is to find a set of
+$k$ vertices for which the largest distance of any vertex to its closest vertex
+in the $k$-set is minimised. In this paper, we introduce the $k$-centre problem
+for sets of necklaces, i.e. the equivalence classes of words under the cyclic
+shift. This can be seen as the k-centre problem on the complete weighted graph
+where every necklace is represented by a vertex, and each edge has a weight
+given by the overlap distance between any pair of necklaces. Similar to the
+graph case, the goal is to choose $k$ necklaces such that the distance from any
+word in the language and its nearest centre is minimised. However, in a case of
+k-centre problem for languages the size of associated graph maybe exponential
+in relation to the description of the language, i.e., the length of the words l
+and the size of the alphabet q. We derive several approximation algorithms for
+the $k$-centre problem on necklaces, with logarithmic approximation factor in
+the context of l and k, and within a constant factor for a more restricted
+case.
+</summary>
+    <author>
+      <name>Duncan Adamson</name>
+    </author>
+    <author>
+      <name>Argyrios Deligkas</name>
+    </author>
+    <author>
+      <name>Vladimir V. Gusev</name>
+    </author>
+    <author>
+      <name>Igor Potapov</name>
+    </author>
+    <link href="http://arxiv.org/abs/2005.10095v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2005.10095v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2006.01825">
+    <id>http://arxiv.org/abs/2006.01825v1</id>
+    <updated>2020-06-02T17:56:42Z</updated>
+    <published>2020-06-02T17:56:42Z</published>
+    <title>Efficient tree-structured categorical retrieval</title>
+    <summary>  We study a document retrieval problem in the new framework where $D$ text
+documents are organized in a {\em category tree} with a pre-defined number $h$
+of categories. This situation occurs e.g. with taxomonic trees in biology or
+subject classification systems for scientific literature. Given a string
+pattern $p$ and a category (level in the category tree), we wish to efficiently
+retrieve the $t$ \emph{categorical units} containing this pattern and belonging
+to the category. We propose several efficient solutions for this problem. One
+of them uses $n(\log\sigma(1+o(1))+\log D+O(h)) + O(\Delta)$ bits of space and
+$O(|p|+t)$ query time, where $n$ is the total length of the documents, $\sigma$
+the size of the alphabet used in the documents and $\Delta$ is the total number
+of nodes in the category tree. Another solution uses
+$n(\log\sigma(1+o(1))+O(\log D))+O(\Delta)+O(D\log n)$ bits of space and
+$O(|p|+t\log D)$ query time. We finally propose other solutions which are more
+space-efficient at the expense of a slight increase in query time.
+</summary>
+    <author>
+      <name>Djamal Belazzougui</name>
+    </author>
+    <author>
+      <name>Gregory Kucherov</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Full version of a paper accepted for presentation at the 31st Annual
+  Symposium on Combinatorial Pattern Matching (CPM 2020)</arxiv:comment>
+    <link href="http://arxiv.org/abs/2006.01825v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2006.01825v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2006.02408">
+    <id>http://arxiv.org/abs/2006.02408v1</id>
+    <updated>2020-06-03T17:33:31Z</updated>
+    <published>2020-06-03T17:33:31Z</published>
+    <title>Dynamic Longest Common Substring in Polylogarithmic Time</title>
+    <summary>  The longest common substring problem consists in finding a longest string
+that appears as a (contiguous) substring of two input strings. We consider the
+dynamic variant of this problem, in which we are to maintain two dynamic
+strings $S$ and $T$, each of length at most $n$, that undergo substitutions of
+letters, in order to be able to return a longest common substring after each
+substitution. Recently, Amir et al. [ESA 2019] presented a solution for this
+problem that needs only $\tilde{\mathcal{O}}(n^{2/3})$ time per update. This
+brought the challenge of determining whether there exists a faster solution
+with polylogarithmic update time, or (as is the case for other dynamic
+problems), we should expect a polynomial (conditional) lower bound. We answer
+this question by designing a significantly faster algorithm that processes each
+substitution in amortized $\log^{\mathcal{O}(1)} n$ time with high probability.
+Our solution relies on exploiting the local consistency of the parsing of a
+collection of dynamic strings due to Gawrychowski et al. [SODA 2018], and on
+maintaining two dynamic trees with labeled bicolored leaves, so that after each
+update we can report a pair of nodes, one from each tree, of maximum combined
+weight, which have at least one common leaf-descendant of each color. We
+complement this with a lower bound of $\Omega(\log n/ \log\log n)$ for the
+update time of any polynomial-size data structure that maintains the LCS of two
+dynamic strings, and the same lower bound for the update time of any data
+structure of size $\tilde{\mathcal{O}}(n)$ that maintains the LCS of a static
+and a dynamic string. Both lower bounds hold even allowing amortization and
+randomization.
+</summary>
+    <author>
+      <name>Panagiotis Charalampopoulos</name>
+    </author>
+    <author>
+      <name>Paweł Gawrychowski</name>
+    </author>
+    <author>
+      <name>Karol Pokorski</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Full version of a paper that is to appear in the ICALP 2020
+  proceedings</arxiv:comment>
+    <link href="http://arxiv.org/abs/2006.02408v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2006.02408v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2006.02134">
+    <id>http://arxiv.org/abs/2006.02134v1</id>
+    <updated>2020-06-03T10:02:51Z</updated>
+    <published>2020-06-03T10:02:51Z</published>
+    <title>Computing Palindromic Trees for a Sliding Window and Its Applications</title>
+    <summary>  The palindromic tree (a.k.a. eertree) for a string $S$ of length $n$ is a
+tree-like data structure that represents the set of all distinct palindromic
+substrings of $S$, using $O(n)$ space [Rubinchik and Shur, 2018]. It is known
+that, when $S$ is over an alphabet of size $\sigma$ and is given in an online
+manner, then the palindromic tree of $S$ can be constructed in $O(n\log\sigma)$
+time with $O(n)$ space. In this paper, we consider the sliding window version
+of the problem: For a fixed window length $d$, we propose two algorithms to
+maintain the palindromic tree of size $O(d)$ for every sliding window
+$S[i..i+d-1]$ over $S$, one running in $O(n\log\sigma')$ time with $O(d)$ space
+where $\sigma' \leq d$ is the maximum number of distinct characters in the
+windows, and the other running in $O(n + d\sigma)$ time with $d\sigma + O(d)$
+space. We also present applications of our algorithms for computing minimal
+unique palindromic substrings (MUPS) and for computing minimal absent
+palindromic words (MAPW) for a sliding window.
+</summary>
+    <author>
+      <name>Takuya Mieno</name>
+    </author>
+    <author>
+      <name>Kiichi Watanabe</name>
+    </author>
+    <author>
+      <name>Yuto Nakashima</name>
+    </author>
+    <author>
+      <name>Shunsuke Inenaga</name>
+    </author>
+    <author>
+      <name>Hideo Bannai</name>
+    </author>
+    <author>
+      <name>Masayuki Takeda</name>
+    </author>
+    <link href="http://arxiv.org/abs/2006.02134v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2006.02134v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2006.02219">
+    <id>http://arxiv.org/abs/2006.02219v1</id>
+    <updated>2020-06-03T12:30:53Z</updated>
+    <published>2020-06-03T12:30:53Z</published>
+    <title>LCP-Aware Parallel String Sorting</title>
+    <summary>  When lexicographically sorting strings, it is not always necessary to inspect
+all symbols. For example, the lexicographical rank of "europar" amongst the
+strings "eureka", "eurasia", and "excells" only depends on its so called
+relevant prefix "euro". The distinguishing prefix size $D$ of a set of strings
+is the number of symbols that actually need to be inspected to establish the
+lexicographical ordering of all strings. Efficient string sorters should be
+$D$-aware, i.e. their complexity should depend on $D$ rather than on the total
+number $N$ of all symbols in all strings. While there are many $D$-aware
+sorters in the sequential setting, there appear to be no such results in the
+PRAM model. We propose a framework yielding a $D$-aware modification of any
+existing PRAM string sorter. The derived algorithms are work-optimal with
+respect to their original counterpart: If the original algorithm requires
+$O(w(N))$ work, the derived one requires $O(w(D))$ work. The execution time
+increases only by a small factor that is logarithmic in the length of the
+longest relevant prefix. Our framework universally works for deterministic and
+randomized algorithms in all variations of the PRAM model, such that future
+improvements in ($D$-unaware) parallel string sorting will directly result in
+improvements in $D$-aware parallel string sorting.
+</summary>
+    <author>
+      <name>Jonas Ellert</name>
+    </author>
+    <author>
+      <name>Johannes Fischer</name>
+    </author>
+    <author>
+      <name>Nodari Sitchinava</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted at Euro-Par 2020 and to be published by Springer as part of
+  the conference proceedings</arxiv:comment>
+    <link href="http://arxiv.org/abs/2006.02219v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2006.02219v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
   </entry></articles>
