@@ -154,7 +154,7 @@ function createPaperHTML(arxivInfo : ArxivXMLInfo) : string {
 const paperHTML = createPaperHTML(arxivXMLInfo);
 
 try {
-  fs.writeFileSync("data/arxiv_list.md", paperHTML);
+  fs.writeFileSync("docs/arxiv_list.md", paperHTML);
 }catch(e){
   console.log(e);
 }
