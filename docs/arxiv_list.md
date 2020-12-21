@@ -1,5 +1,33 @@
 # Arxiv Papers
+## 2020/7/
+- [Optimal construction of a layer-ordered heap](https://arxiv.org/abs/2007.13356)
+- [Beyond the Worst-Case Analysis of Algorithms (Introduction)](https://arxiv.org/abs/2007.13241)
+- [Sublinear-Time Algorithms for Computing & Embedding Gap Edit Distance](https://arxiv.org/abs/2007.12762)
+- [A New Upper Bound for Separating Words](https://arxiv.org/abs/2007.12097)
+- [A Big Data Approach for Sequences Indexing on the Cloud via Burrows
+  Wheeler Transform](https://arxiv.org/abs/2007.10095)
+- [The Edit Distance to $k$-Subsequence Universality](https://arxiv.org/abs/2007.09192)
+- [Substring Complexity in Sublinear Space](https://arxiv.org/abs/2007.08357)
+- [The Simplest Binary Word with Only Three Squares](https://arxiv.org/abs/2007.08188)
+- [On Indexing and Compressing Finite Automata](https://arxiv.org/abs/2007.07718)
+- [Update Query Time Trade-off for dynamic Suffix Arrays](https://arxiv.org/abs/2007.06604)
+- [Local Editing in LZ-End Compressed Data](https://arxiv.org/abs/2007.06167)
+- [String Indexing for Top-$k$ Close Consecutive Occurrences](https://arxiv.org/abs/2007.04128)
+- [Near-Linear Time Edit Distance for Indel Channels](https://arxiv.org/abs/2007.03040)
 ## 2020/6/
+- [Pattern Masking for Dictionary Matching](https://arxiv.org/abs/2006.16137)
+- [The Number of Repetitions in 2D-Strings](https://arxiv.org/abs/2006.15999)
+- [Random Access in Persistent Strings](https://arxiv.org/abs/2006.15575)
+- [Small Longest Tandem Scattered Subsequences](https://arxiv.org/abs/2006.14029)
+- [Lyndon Words, the Three Squares Lemma, and Primitive Squares](https://arxiv.org/abs/2006.13576)
+- [Fast Preprocessing for Optimal Orthogonal Range Reporting and Range
+  Successor with Applications to Text Indexing](https://arxiv.org/abs/2006.11978)
+- [PFP Data Structures](https://arxiv.org/abs/2006.11687)
+- [Extremal overlap-free and extremal $β$-free binary words](https://arxiv.org/abs/2006.10152)
+- [Tailoring r-index for metagenomics](https://arxiv.org/abs/2006.05871)
+- [Optimal-Time Queries on BWT-runs Compressed Indexes](https://arxiv.org/abs/2006.05104)
+- [Sumsets of Wythoff Sequences, Fibonacci Representation, and Beyond](https://arxiv.org/abs/2006.04177)
+- [Efficient Semi-External Depth-First Search](https://arxiv.org/abs/2006.03198)
 - [Dynamic Longest Common Substring in Polylogarithmic Time](https://arxiv.org/abs/2006.02408)
 - [LCP-Aware Parallel String Sorting](https://arxiv.org/abs/2006.02219)
 - [Computing Palindromic Trees for a Sliding Window and Its Applications](https://arxiv.org/abs/2006.02134)
