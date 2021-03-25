@@ -11,7 +11,7 @@ const fs = require('fs');
 function sleep(time) {
   return new Promise((resolve, reject) => {
       setTimeout(() => {
-          resolve();
+          resolve('Success');
       }, time);
   });
 }
@@ -58,9 +58,12 @@ const lines = text.toString().split('\n');
 const id_arr : string[] = new Array(0);
 for (let line of lines) {
   const subs = line.split("/");
-  const id = subs[subs.length-1];
+  const id : string = subs[subs.length-1];
   if(!arxivXMLInfo.dic.has(id)){
     console.log(`new ID = ${id}`)
+    if(id.indexOf('\r') != -1){
+      throw new Error("The arXiv URL contains \\r character! Please remove the character from the URL.");
+    }
     id_arr.push(id);
   }
 }
@@ -90,7 +93,10 @@ function myFunction(ids : string[], arxivInfo : ArxivXMLInfo) {
   const idsStr = ids.join(",")
 
   const document : XMLDocument = getArxivXML(`http://export.arxiv.org/api/query?id_list=${idsStr}`);
+  console.log("END");
   console.log(`get URL http://export.arxiv.org/api/query?id_list=${idsStr}`);
+  console.log("END2");
+
   const entryCol = document.getElementsByTagName('entry');
 
   const articlesNode = arxivInfo.document.getElementsByTagName("articles").item(0)!;

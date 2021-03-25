@@ -20333,4 +20333,2448 @@ dataset, allowing to fully benefit of the available cloud resources.
     <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2009.09442">
+    <id>http://arxiv.org/abs/2009.09442v1</id>
+    <updated>2020-09-20T14:46:48Z</updated>
+    <published>2020-09-20T14:46:48Z</published>
+    <title>TADOC: Text Analytics Directly on Compression</title>
+    <summary>  This article provides a comprehensive description of Text Analytics Directly
+on Compression (TADOC), which enables direct document analytics on compressed
+textual data. The article explains the concept of TADOC and the challenges to
+its effective realizations. Additionally, a series of guidelines and technical
+solutions that effectively address those challenges, including the adoption of
+a hierarchical compression method and a set of novel algorithms and data
+structure designs, are presented. Experiments on six data analytics tasks of
+various complexities show that TADOC can save 90.8% storage space and 87.9%
+memory usage, while halving data processing times.
+</summary>
+    <author>
+      <name>Feng Zhang</name>
+    </author>
+    <author>
+      <name>Jidong Zhai</name>
+    </author>
+    <author>
+      <name>Xipeng Shen</name>
+    </author>
+    <author>
+      <name>Dalin Wang</name>
+    </author>
+    <author>
+      <name>Zheng Chen</name>
+    </author>
+    <author>
+      <name>Onur Mutlu</name>
+    </author>
+    <author>
+      <name>Wenguang Chen</name>
+    </author>
+    <author>
+      <name>Xiaoyong Du</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1007/s00778-020-00636-3</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1007/s00778-020-00636-3" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">25 pages, 18 figures, VLDB Journal (2020)</arxiv:comment>
+    <link href="http://arxiv.org/abs/2009.09442v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2009.09442v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68P30" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="E.1; E.2; E.4" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2009.08588">
+    <id>http://arxiv.org/abs/2009.08588v1</id>
+    <updated>2020-09-18T02:08:40Z</updated>
+    <published>2020-09-18T02:08:40Z</published>
+    <title>Longest Common Subsequence in Sublinear Space</title>
+    <summary>  We present the first $\mathrm{o}(n)$-space polynomial-time algorithm for
+computing the length of a longest common subsequence. Given two strings of
+length $n$, the algorithm runs in $\mathrm{O}(n^{3})$ time with
+$\mathrm{O}\left(\frac{n \log^{1.5} n}{2^{\sqrt{\log n}}}\right)$ bits of
+space.
+</summary>
+    <author>
+      <name>Masashi Kiyomi</name>
+    </author>
+    <author>
+      <name>Takashi Horiyama</name>
+    </author>
+    <author>
+      <name>Yota Otachi</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">6 pages, 2 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2009.08588v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2009.08588v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2009.04821">
+    <id>http://arxiv.org/abs/2009.04821v1</id>
+    <updated>2020-09-10T12:46:07Z</updated>
+    <published>2020-09-10T12:46:07Z</published>
+    <title>Pushdown and Lempel-Ziv Depth</title>
+    <summary>  This paper expands upon existing and introduces new formulations of Bennett's
+logical depth. In previously published work by Jordon and Moser, notions of
+finite-state-depth and pushdown-depth were examined and compared. These were
+based on finite-state transducers and information lossless pushdown compressors
+respectively. Unfortunately a full separation between the two notions was not
+established. This paper introduces a new formulation of pushdown-depth based on
+restricting how fast a pushdown compressor's stack can grow. This improved
+formulation allows us to do a full comparison by demonstrating the existence of
+sequences with high finite-state-depth and low pushdown-depth, and vice-versa.
+A new notion based on the Lempel-Ziv `78 algorithm is also introduced. Its
+difference from finite-state-depth is shown by demonstrating the existence of a
+Lempel-Ziv deep sequence that is not finite-state deep and vice versa.
+Lempel-Ziv-depth's difference from pushdown-depth is shown by building
+sequences that have a pushdown-depth of roughly $1/2$ but low Lempel-Ziv depth,
+and a sequence with high Lempel-Ziv depth but low pushdown-depth. Properties of
+all three notions are also discussed and proved.
+</summary>
+    <author>
+      <name>Liam Jordon</name>
+    </author>
+    <author>
+      <name>Philippe Moser</name>
+    </author>
+    <link href="http://arxiv.org/abs/2009.04821v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2009.04821v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2009.04827">
+    <id>http://arxiv.org/abs/2009.04827v1</id>
+    <updated>2020-09-10T12:56:00Z</updated>
+    <published>2020-09-10T12:56:00Z</published>
+    <title>A Normal Sequence Compressed by PPM$^*$ but not by Lempel-Ziv 78</title>
+    <summary>  In this paper we compare the difference in performance of two of the
+Prediction by Partial Matching (PPM) family of compressors (PPM$^*$ and the
+original Bounded PPM algorithm) and the Lempel-Ziv 78 (LZ) algorithm. We
+construct an infinite binary sequence whose worst-case compression ratio for
+PPM$^*$ is $0$, while Bounded PPM's and LZ's best-case compression ratios are
+at least $1/2$ and $1$ respectively. This sequence is an enumeration of all
+binary strings in order of length, i.e. all strings of length $1$ followed by
+all strings of length $2$ and so on. It is therefore normal, and is built using
+repetitions of de Bruijn strings of increasing order
+</summary>
+    <author>
+      <name>Liam Jordon</name>
+    </author>
+    <author>
+      <name>Philippe Moser</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1007/978-3-030-67731-2_28</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1007/978-3-030-67731-2_28" rel="related"/>
+    <link href="http://arxiv.org/abs/2009.04827v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2009.04827v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.IT" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2009.03352">
+    <id>http://arxiv.org/abs/2009.03352v1</id>
+    <updated>2020-09-07T18:12:58Z</updated>
+    <published>2020-09-07T18:12:58Z</published>
+    <title>A Fast Randomized Algorithm for Finding the Maximal Common Subsequences</title>
+    <summary>  Finding the common subsequences of $L$ multiple strings has many applications
+in the area of bioinformatics, computational linguistics, and information
+retrieval. A well-known result states that finding a Longest Common Subsequence
+(LCS) for $L$ strings is NP-hard, e.g., the computational complexity is
+exponential in $L$. In this paper, we develop a randomized algorithm, referred
+to as {\em Random-MCS}, for finding a random instance of Maximal Common
+Subsequence ($MCS$) of multiple strings. A common subsequence is {\em maximal}
+if inserting any character into the subsequence no longer yields a common
+subsequence. A special case of MCS is LCS where the length is the longest. We
+show the complexity of our algorithm is linear in $L$, and therefore is
+suitable for large $L$. Furthermore, we study the occurrence probability for a
+single instance of MCS and demonstrate via both theoretical and experimental
+studies that the longest subsequence from multiple runs of {\em Random-MCS}
+often yields a solution to $LCS$.
+</summary>
+    <author>
+      <name>Jin Cao</name>
+    </author>
+    <author>
+      <name>Dewei Zhong</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">9 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2009.03352v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2009.03352v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2009.03675">
+    <id>http://arxiv.org/abs/2009.03675v1</id>
+    <updated>2020-09-05T19:09:41Z</updated>
+    <published>2020-09-05T19:09:41Z</published>
+    <title>Space efficient merging of de Bruijn graphs and Wheeler graphs</title>
+    <summary>  The merging of succinct data structures is a well established technique for
+the space efficient construction of large succinct indexes. In the first part
+of the paper we propose a new algorithm for merging succinct representations of
+de Bruijn graphs. Our algorithm has the same asymptotic cost of the state of
+the art algorithm for the same problem but it uses less than half of its
+working space. A novel important feature of our algorithm, not found in any of
+the existing tools, is that it can compute the Variable Order succinct
+representation of the union graph within the same asymptotic time/space bounds.
+In the second part of the paper we consider the more general problem of merging
+succinct representations of Wheeler graphs, a recently introduced graph family
+which includes as special cases de Bruijn graphs and many other known succinct
+indexes based on the BWT or one of its variants. We show that Wheeler graphs
+merging is in general a much more difficult problem, and we provide a space
+efficient algorithm for the slightly simplified problem of determining whether
+the union graph has an ordering that satisfies the Wheeler conditions.
+</summary>
+    <author>
+      <name>Lavinia Egidi</name>
+    </author>
+    <author>
+      <name>Felipe A. Louza</name>
+    </author>
+    <author>
+      <name>Giovanni Manzini</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">23 pages, 10 figures. arXiv admin note: text overlap with
+  arXiv:1902.02889</arxiv:comment>
+    <link href="http://arxiv.org/abs/2009.03675v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2009.03675v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2009.02934">
+    <id>http://arxiv.org/abs/2009.02934v1</id>
+    <updated>2020-09-07T08:09:32Z</updated>
+    <published>2020-09-07T08:09:32Z</published>
+    <title>On prefix palindromic length of automatic words</title>
+    <summary>  The prefix palindromic length $\mathrm{PPL}_{\mathbf{u}}(n)$ of an infinite
+word $\mathbf{u}$ is the minimal number of concatenated palindromes needed to
+express the prefix of length $n$ of $\mathbf{u}$. Since 2013, it is still
+unknown if $\mathrm{PPL}_{\mathbf{u}}(n)$ is unbounded for every aperiodic
+infinite word $\mathbf{u}$, even though this has been proven for almost all
+aperiodic words. At the same time, the only well-known nontrivial infinite word
+for which the function $\mathrm{PPL}_{\mathbf{u}}(n)$ has been precisely
+computed is the Thue-Morse word $\mathbf{t}$. This word is $2$-automatic and,
+predictably, its function $\mathrm{PPL}_{\mathbf{t}}(n)$ is $2$-regular, but is
+this the case for all automatic words?
+  In this paper, we prove that this function is $k$-regular for every
+$k$-automatic word containing only a finite number of palindromes. For two such
+words, namely the paperfolding word and the Rudin-Shapiro word, we derive a
+formula for this function. Our computational experiments suggest that generally
+this is not true: for the period-doubling word, the prefix palindromic length
+does not look $2$-regular, and for the Fibonacci word, it does not look
+Fibonacci-regular. If proven, these results would give rare (if not first)
+examples of a natural function of an automatic word which is not regular.
+</summary>
+    <author>
+      <name>Anna E. Frid</name>
+    </author>
+    <author>
+      <name>Enzo Laborde</name>
+    </author>
+    <author>
+      <name>Jarkko Peltomäki</name>
+    </author>
+    <link href="http://arxiv.org/abs/2009.02934v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2009.02934v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68R15" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2009.02233">
+    <id>http://arxiv.org/abs/2009.02233v1</id>
+    <updated>2020-09-04T15:05:49Z</updated>
+    <published>2020-09-04T15:05:49Z</published>
+    <title>Access-Adaptive Priority Search Tree</title>
+    <summary>  In this paper we show that the priority search tree of McCreight, which was
+originally developed to satisfy a class of spatial search queries on
+2-dimensional points, can be adapted to the problem of dynamically maintaining
+a set of keys so that the query complexity adapts to the distribution of
+queried keys. Presently, the best-known example of such a data structure is the
+splay tree, which dynamically reconfigures itself during each query so that
+frequently accessed keys move to the top of the tree and thus can be retrieved
+with fewer queries than keys that are lower in the tree. However, while the
+splay tree is conjectured to offer optimal adaptive amortized query complexity,
+it may require O(n) for individual queries. We show that an access-adaptive
+priority search tree (AAPST) can provide competitive adaptive query performance
+while ensuring O(log n) worst-case query performance, thus potentially making
+it more suitable for certain interactive (e.g.,online and real-time)
+applications for which the response time must be bounded.
+</summary>
+    <author>
+      <name>Haley Massa</name>
+    </author>
+    <author>
+      <name>Jeffrey Uhlmann</name>
+    </author>
+    <link href="http://arxiv.org/abs/2009.02233v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2009.02233v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2009.01353">
+    <id>http://arxiv.org/abs/2009.01353v1</id>
+    <updated>2020-09-02T21:29:30Z</updated>
+    <published>2020-09-02T21:29:30Z</published>
+    <title>Zuckerli: A New Compressed Representation for Graphs</title>
+    <summary>  Zuckerli is a scalable compression system meant for large real-world graphs.
+Graphs are notoriously challenging structures to store efficiently due to their
+linked nature, which makes it hard to separate them into smaller, compact
+components. Therefore, effective compression is crucial when dealing with large
+graphs, which can have billions of nodes and edges. Furthermore, a good
+compression system should give the user fast and reasonably flexible access to
+parts of the compressed data without requiring full decompression, which may be
+unfeasible on their system. Zuckerli improves multiple aspects of WebGraph, the
+current state-of-the-art in compressing real-world graphs, by using advanced
+compression techniques and novel heuristic graph algorithms. It can produce
+both a compressed representation for storage and one which allows fast direct
+access to the adjacency lists of the compressed graph without decompressing the
+entire graph. We validate the effectiveness of Zuckerli on real-world graphs
+with up to a billion nodes and 90 billion edges, conducting an extensive
+experimental evaluation of both compression density and decompression
+performance. We show that Zuckerli-compressed graphs are 10% to 29% smaller,
+and more than 20% in most cases, with a resource usage for decompression
+comparable to that of WebGraph.
+</summary>
+    <author>
+      <name>Luca Versari</name>
+    </author>
+    <author>
+      <name>Iulia M. Comsa</name>
+    </author>
+    <author>
+      <name>Alessio Conte</name>
+    </author>
+    <author>
+      <name>Roberto Grossi</name>
+    </author>
+    <link href="http://arxiv.org/abs/2009.01353v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2009.01353v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.IT" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2008.13209">
+    <id>http://arxiv.org/abs/2008.13209v2</id>
+    <updated>2020-11-26T06:01:46Z</updated>
+    <published>2020-08-30T16:23:28Z</published>
+    <title>Tight Bound for the Number of Distinct Palindromes in a Tree</title>
+    <summary>  For an undirected tree with $n$ edges labelled by single letters, we consider
+its substrings, which are labels of the simple paths between pairs of nodes. We
+prove that there are $O(n^{1.5})$ different palindromic substrings. This solves
+an open problem of Brlek, Lafreni\`ere, and Proven\c{c}al (DLT 2015), who gave
+a matching lower-bound construction. Hence, we settle the tight bound of
+$\Theta(n^{1.5})$ for the maximum palindromic complexity of trees. For standard
+strings, i.e., for paths, the palindromic complexity is $n+1$. We also propose
+$O(n^{1.5} \log{n})$-time algorithm for reporting all distinct palindromes in
+an undirected tree with $n$ edges.
+</summary>
+    <author>
+      <name>Paweł Gawrychowski</name>
+    </author>
+    <author>
+      <name>Tomasz Kociumaka</name>
+    </author>
+    <author>
+      <name>Wojciech Rytter</name>
+    </author>
+    <author>
+      <name>Tomasz Waleń</name>
+    </author>
+    <link href="http://arxiv.org/abs/2008.13209v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2008.13209v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="F.2.2" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2010.08840">
+    <id>http://arxiv.org/abs/2010.08840v1</id>
+    <updated>2020-10-17T18:24:08Z</updated>
+    <published>2020-10-17T18:24:08Z</published>
+    <title>Lazy Search Trees</title>
+    <summary>  We introduce the lazy search tree data structure. The lazy search tree is a
+comparison-based data structure on the pointer machine that supports
+order-based operations such as rank, select, membership, predecessor,
+successor, minimum, and maximum while providing dynamic operations insert,
+delete, change-key, split, and merge. We analyze the performance of our data
+structure based on a partition of current elements into a set of gaps
+$\{\Delta_i\}$ based on rank. A query falls into a particular gap and splits
+the gap into two new gaps at a rank $r$ associated with the query operation. If
+we define $B = \sum_i |\Delta_i| \log_2(n/|\Delta_i|)$, our performance over a
+sequence of $n$ insertions and $q$ distinct queries is $O(B + \min(n \log \log
+n, n \log q))$. We show $B$ is a lower bound.
+  Effectively, we reduce the insertion time of binary search trees from
+$\Theta(\log n)$ to $O(\min(\log(n/|\Delta_i|) + \log \log |\Delta_i|, \; \log
+q))$, where $\Delta_i$ is the gap in which the inserted element falls. Over a
+sequence of $n$ insertions and $q$ queries, a time bound of $O(n \log q + q
+\log n)$ holds; better bounds are possible when queries are non-uniformly
+distributed. As an extreme case of non-uniformity, if all queries are for the
+minimum element, the lazy search tree performs as a priority queue with $O(\log
+\log n)$ time insert and decrease-key operations. The same data structure
+supports queries for any rank, interpolating between binary search trees and
+efficient priority queues.
+  Lazy search trees can be implemented to operate mostly on arrays, requiring
+only $O(\min(q, n))$ pointers. Via direct reduction, our data structure also
+supports the efficient access theorems of the splay tree, providing a powerful
+data structure for non-uniform element access, both when the number of accesses
+is small and large.
+</summary>
+    <author>
+      <name>Bryce Sandlund</name>
+    </author>
+    <author>
+      <name>Sebastian Wild</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication in FOCS 2020</arxiv:comment>
+    <link href="http://arxiv.org/abs/2010.08840v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2010.08840v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2010.09014">
+    <id>http://arxiv.org/abs/2010.09014v1</id>
+    <updated>2020-10-18T16:16:18Z</updated>
+    <published>2020-10-18T16:16:18Z</published>
+    <title>Solving Shisen-Sho boards</title>
+    <summary>  We give a simple proof of that determining solvability of Shisen-Sho boards
+is NP-complete. Furthermore, we show that under realistic assumptions, one can
+compute in logarithmic time if two tiles form a playable pair.
+  We combine an implementation of the algoritm to test playability of pairs
+with my earlier algorithm to solve Mahjong Solitaire boards with peeking, to
+obtain an algorithm to solve Shisen-Sho boards. We sample several Shisen-Sho
+and Mahjong Solitaire layouts for solvability for Shisen-Sho and Mahjong
+Solitaire.
+</summary>
+    <author>
+      <name>Michiel de Bondt</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">14 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2010.09014v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2010.09014v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2010.07960">
+    <id>http://arxiv.org/abs/2010.07960v1</id>
+    <updated>2020-10-15T18:05:52Z</updated>
+    <published>2020-10-15T18:05:52Z</published>
+    <title>Efficient constructions of the Prefer-same and Prefer-opposite de Bruijn
+  sequences</title>
+    <summary>  The greedy Prefer-same de Bruijn sequence construction was first presented by
+Eldert et al.[AIEE Transactions 77 (1958)]. As a greedy algorithm, it has one
+major downside: it requires an exponential amount of space to store the length
+$2^n$ de Bruijn sequence. Though de Bruijn sequences have been heavily studied
+over the last 60 years, finding an efficient construction for the Prefer-same
+de Bruijn sequence has remained a tantalizing open problem. In this paper, we
+unveil the underlying structure of the Prefer-same de Bruijn sequence and solve
+the open problem by presenting an efficient algorithm to construct it using
+$O(n)$ time per bit and only $O(n)$ space. Following a similar approach, we
+also present an efficient algorithm to construct the Prefer-opposite de Bruijn
+sequence.
+</summary>
+    <author>
+      <name>Evan Sala</name>
+    </author>
+    <author>
+      <name>Joe Sawada</name>
+    </author>
+    <author>
+      <name>Abbas Alhakim</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">28 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2010.07960v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2010.07960v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2010.07076">
+    <id>http://arxiv.org/abs/2010.07076v1</id>
+    <updated>2020-10-14T13:25:51Z</updated>
+    <published>2020-10-14T13:25:51Z</published>
+    <title>Contextual Pattern Matching</title>
+    <summary>  The research on indexing repetitive string collections has focused on the
+same search problems used for regular string collections, though they can make
+little sense in this scenario. For example, the basic pattern matching query
+"list all the positions where pattern $P$ appears" can produce huge outputs
+when $P$ appears in an area shared by many documents. All those occurrences are
+essentially the same.
+  In this paper we propose a new query that can be more appropriate in these
+collections, which we call {\em contextual pattern matching}. The basic query
+of this type gives, in addition to $P$, a context length $\ell$, and asks to
+report the occurrences of all {\em distinct} strings $XPY$, with
+$|X|=|Y|=\ell$.
+  While this query is easily solved in optimal time and linear space, we focus
+on using space related to the repetitiveness of the text collection and present
+the first solution of this kind. Letting $\ovr$ be the maximum of the number of
+runs in the BWT of the text $T[1..n]$ and of its reverse, our structure uses
+$O(\ovr\log(n/\ovr))$ space and finds the $c$ contextual occurrences $XPY$ of
+$(P,\ell)$ in time $O(|P| + c \log n)$. We give other space/time tradeoffs as
+well, for compressed and uncompressed indexes.
+</summary>
+    <author>
+      <name>Gonzalo Navarro</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Improvements and corrections over my SPIRE 2020 paper with the same
+  title</arxiv:comment>
+    <link href="http://arxiv.org/abs/2010.07076v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2010.07076v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2010.05805">
+    <id>http://arxiv.org/abs/2010.05805v3</id>
+    <updated>2021-02-11T14:54:45Z</updated>
+    <published>2020-10-12T16:01:42Z</published>
+    <title>New Sublinear Algorithms and Lower Bounds for LIS Estimation</title>
+    <summary>  Estimating the length of the longest increasing subsequence (LIS) in an array
+is a problem of fundamental importance. Despite the significance of the LIS
+estimation problem and the amount of attention it has received, there are
+important aspects of the problem that are not yet fully understood. There are
+no better lower bounds for LIS estimation than the obvious bounds implied by
+testing monotonicity (for adaptive or nonadaptive algorithms). In this paper,
+we give the first nontrivial lower bound on the complexity of LIS estimation,
+and also provide novel algorithms that complement our lower bound.
+  Specifically, for every constant $\epsilon \in (0,1)$, every nonadaptive
+algorithm that outputs an estimate of the length of the LIS in an array of
+length $n$ to within an additive error of $\epsilon \cdot n$ has to make
+$\log^{\Omega(\log (1/\epsilon))} n)$ queries. Next, we design nonadaptive LIS
+estimation algorithms whose complexity decreases as the the number of distinct
+values, $r$, in the array decreases. We first present a simple algorithm that
+makes $\tilde{O}(r/\epsilon^3)$ queries and approximates the LIS length with an
+additive error bounded by $\epsilon n$. We then use it to construct a
+nonadaptive algorithm with query complexity $\tilde{O}(\sqrt{r} \cdot
+\text{poly}(1/\lambda))$ that, for an array with LIS length at least $\lambda
+n$, outputs a multiplicative $\Omega(\lambda)$-approximation to the LIS length.
+  Finally, we describe a nonadaptive erasure-resilient tester for sortedness,
+with query complexity $O(\log n)$. Our result implies that nonadaptive tolerant
+testing is strictly harder than nonadaptive erasure-resilient testing for the
+natural property of monotonicity.
+</summary>
+    <author>
+      <name>Ilan Newman</name>
+    </author>
+    <author>
+      <name>Nithin Varma</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">32 pages, 3 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2010.05805v3" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2010.05805v3" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2010.05005">
+    <id>http://arxiv.org/abs/2010.05005v2</id>
+    <updated>2020-11-13T07:10:25Z</updated>
+    <published>2020-10-10T14:01:21Z</published>
+    <title>Decode efficient prefix codes</title>
+    <summary>  Data compression is used in a wide variety of tasks, including compression of
+databases, large learning models, videos, images, etc. The cost of
+decompressing (decoding) data can be prohibitive for certain real-time
+applications. In many scenarios, it is acceptable to sacrifice (to some extent)
+on compression in the interest of fast decoding. In this work, we introduce and
+study a novel problem of finding a prefix tree having the best decode time
+under the constraint that the code length does not exceed a certain threshold
+for a natural class of memory access cost functions that use blocking (also
+referred to as lookup tables), i.e., these decoding schemes access multiple
+prefix tree entries in a single access, using associative memory table
+look-ups. We present (i) an exact algorithm for this problem that is polynomial
+in the number of characters and the codelength; (ii) a strongly polynomial
+pseudo approximation algorithm that achieves the best decode time by relaxing
+the codelength constraint by a small factor; and (iii) a more efficient version
+of the pseudo approximation algorithm that achieves near optimal decode time by
+relaxing the codelength constraint by a small factor. All our algorithms are
+based on dynamic programming and capitalize on an interesting structure of the
+optimal solution. To the best of our knowledge, there is no prior work that
+gives any provable theoretical guarantees for minimizing decode time along with
+the code length. We also demonstrate the performance benefits of our algorithm
+on different types of real-world data sets, namely (i) a deep learning model
+(Mobilenet-V2); (ii) image and (iii) text data. We also implement and evaluate
+the performance of our algorithms on the GPU.
+</summary>
+    <author>
+      <name>Shashwat Banchhor</name>
+    </author>
+    <author>
+      <name>Rishikesh Gajjala</name>
+    </author>
+    <author>
+      <name>Yogish Sabharwal</name>
+    </author>
+    <author>
+      <name>Sandeep Sen</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">17 pages, 6 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2010.05005v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2010.05005v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.IT" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2010.04752">
+    <id>http://arxiv.org/abs/2010.04752v1</id>
+    <updated>2020-10-09T18:20:14Z</updated>
+    <published>2020-10-09T18:20:14Z</published>
+    <title>A Tale of Two Trees: New Analysis for AVL Tree and Binary Heap</title>
+    <summary>  In this paper, we provide new insights and analysis for the two elementary
+tree-based data structures - the AVL tree and binary heap. We presented two
+simple properties that gives a more direct way of relating the size of an AVL
+tree and the Fibonacci recurrence to establish the AVL tree's logarithmic
+height. We then give a potential function-based analysis of the bottom-up heap
+construction to get a simpler and tight bound for its worst-case running-time.
+</summary>
+    <author>
+      <name>Russel L. Villacarlos</name>
+    </author>
+    <author>
+      <name>Jaime M. Samaniego</name>
+    </author>
+    <author>
+      <name>Arian J. Jacildo</name>
+    </author>
+    <author>
+      <name>Maria Art Antonette D. Clariño</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">4 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2010.04752v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2010.04752v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="E.1; F.2.0" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2009.11789">
+    <id>http://arxiv.org/abs/2009.11789v1</id>
+    <updated>2020-09-24T16:33:22Z</updated>
+    <published>2020-09-24T16:33:22Z</published>
+    <title>A Case for Partitioned Bloom Filters</title>
+    <summary>  In a partitioned Bloom Filter the $m$ bit vector is split into $k$ disjoint
+$m/k$ sized parts, one per hash function. Contrary to hardware designs, where
+they prevail, software implementations mostly adopt standard Bloom filters,
+considering partitioned filters slightly worse, due to the slightly larger
+false positive rate (FPR). In this paper, by performing an in-depth analysis,
+first we show that the FPR advantage of standard Bloom filters is smaller than
+thought; more importantly, by studying the per-element FPR, we show that
+standard Bloom filters have weak spots in the domain: elements which will be
+tested as false positives much more frequently than expected. This is relevant
+in scenarios where an element is tested against many filters, e.g., in packet
+forwarding. Moreover, standard Bloom filters are prone to exhibit extremely
+weak spots if naive double hashing is used, something occurring in several,
+even mainstream, libraries. Partitioned Bloom filters exhibit a uniform
+distribution of the FPR over the domain and are robust to the naive use of
+double hashing, having no weak spots. Finally, by surveying several usages
+other than testing set membership, we point out the many advantages of having
+disjoint parts: they can be individually sampled, extracted, added or retired,
+leading to superior designs for, e.g., SIMD usage, size reduction, test of set
+disjointness, or duplicate detection in streams. Partitioned Bloom filters are
+better, and should replace the standard form, both in general purpose libraries
+and as the base for novel designs.
+</summary>
+    <author>
+      <name>Paulo Sérgio Almeida</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">21 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2009.11789v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2009.11789v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="E.1" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2009.11559">
+    <id>http://arxiv.org/abs/2009.11559v1</id>
+    <updated>2020-09-24T09:13:17Z</updated>
+    <published>2020-09-24T09:13:17Z</published>
+    <title>Dynamic Similarity Search on Integer Sketches</title>
+    <summary>  Similarity-preserving hashing is a core technique for fast similarity
+searches, and it randomly maps data points in a metric space to strings of
+discrete symbols (i.e., sketches) in the Hamming space. While traditional
+hashing techniques produce binary sketches, recent ones produce integer
+sketches for preserving various similarity measures. However, most similarity
+search methods are designed for binary sketches and inefficient for integer
+sketches. Moreover, most methods are either inapplicable or inefficient for
+dynamic datasets, although modern real-world datasets are updated over time. We
+propose dynamic filter trie (DyFT), a dynamic similarity search method for both
+binary and integer sketches. An extensive experimental analysis using large
+real-world datasets shows that DyFT performs superiorly with respect to
+scalability, time performance, and memory efficiency. For example, on a huge
+dataset of 216 million data points, DyFT performs a similarity search 6,000
+times faster than a state-of-the-art method while reducing to one-thirteenth in
+memory.
+</summary>
+    <author>
+      <name>Shunsuke Kanda</name>
+    </author>
+    <author>
+      <name>Yasuo Tabei</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted by IEEE ICDM 2020 as a full paper</arxiv:comment>
+    <link href="http://arxiv.org/abs/2009.11559v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2009.11559v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2009.10045">
+    <id>http://arxiv.org/abs/2009.10045v1</id>
+    <updated>2020-09-21T17:36:38Z</updated>
+    <published>2020-09-21T17:36:38Z</published>
+    <title>Space/time-efficient RDF stores based on circular suffix sorting</title>
+    <summary>  In recent years, RDF has gained popularity as a format for the standardized
+publication and exchange of information in the Web of Data. In this paper we
+introduce RDFCSA, a data structure that is able to self-index an RDF dataset in
+small space and supports efficient querying. RDFCSA regards the triples of the
+RDF store as short circular strings and applies suffix sorting on those
+strings, so that triple-pattern queries reduce to prefix searching on the
+string set. The RDF store is then represented compactly using a Compressed
+Suffix Array (CSA), a proved technology in text indexing that efficiently
+supports prefix searches. Our experimental evaluation shows that RDFCSA is able
+to answer triple-pattern queries in a few microseconds per result while using
+less than 60% of the space required by the raw original data. We also support
+join queries, which provide the basis for full SPARQL query support. Even
+though smaller-space solutions exist, as well as faster ones, RDFCSA is shown
+to provide an excellent space/time tradeoff, with fast and consistent query
+times within much less space than alternatives that compete in time.
+</summary>
+    <author>
+      <name>Nieves R. Brisaboa</name>
+    </author>
+    <author>
+      <name>Ana Cerdeira-Pena</name>
+    </author>
+    <author>
+      <name>Guillermo de Bernardo</name>
+    </author>
+    <author>
+      <name>Antonio Fariña</name>
+    </author>
+    <author>
+      <name>Gonzalo Navarro</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">This work has been submitted to the IEEE TKDE for possible
+  publication. Copyright may be transferred without notice, after which this
+  version may no longer be accessible</arxiv:comment>
+    <link href="http://arxiv.org/abs/2009.10045v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2009.10045v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2011.10870">
+    <id>http://arxiv.org/abs/2011.10870v1</id>
+    <updated>2020-11-21T21:32:05Z</updated>
+    <published>2020-11-21T21:32:05Z</published>
+    <title>Erdös-Szekeres Partitioning Problem</title>
+    <summary>  In this note, we present a substantial improvement on the computational
+complexity of the Erd\"{o}s-Szekeres partitioning problem and review recent
+works on dynamic \textsf{LIS}.
+</summary>
+    <author>
+      <name>Michael Mitzenmacher</name>
+    </author>
+    <author>
+      <name>Saeed Seddighin</name>
+    </author>
+    <link href="http://arxiv.org/abs/2011.10870v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2011.10870v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2011.11772">
+    <id>http://arxiv.org/abs/2011.11772v1</id>
+    <updated>2020-11-23T22:30:32Z</updated>
+    <published>2020-11-23T22:30:32Z</published>
+    <title>Selectable Heaps and Optimal Lazy Search Trees</title>
+    <summary>  We show the $O(\log n)$ time extract minimum function of efficient priority
+queues can be generalized to the extraction of the $k$ smallest elements in
+$O(k \log(n/k))$ time, where we define $\log(x)$ as $\max(\log_2(x), 1)$. We
+first show heap-ordered tree selection (Kaplan et al., SOSA '19) can be applied
+on the heap-ordered trees of the classic Fibonacci heap to support the
+extraction in $O(k \log(n/k))$ amortized time. We then show selection is
+possible in a priority queue with optimal worst-case guarantees by applying
+heap-ordered tree selection on Brodal queues (SODA '96), supporting the
+operation in $O(k \log(n/k))$ worst-case time. Via a reduction from the
+multiple selection problem, $\Omega(k \log(n/k))$ time is necessary if
+insertion is supported in $o(\log n)$ time.
+  We then apply the result to lazy search trees (Sandlund &amp; Wild, FOCS '20),
+creating a new interval data structure based on selectable heaps. This gives
+optimal $O(B+n)$ time lazy search tree performance, lowering insertion
+complexity into a gap $\Delta_i$ to $O(\log(n/|\Delta_i|))$ time. An $O(1)$
+time merge operation is also made possible when used as a priority queue, among
+other situations. If Brodal queues are used, runtimes of the lazy search tree
+can be made worst-case in the general case of two-sided gaps. The presented
+data structure makes fundamental use of soft heaps (Chazelle, J. ACM '00),
+biased search trees, and efficient priority queues, approaching the
+theoretically-best data structure for ordered data.
+</summary>
+    <author>
+      <name>Bryce Sandlund</name>
+    </author>
+    <author>
+      <name>Lingyi Zhang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2011.11772v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2011.11772v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2011.10874">
+    <id>http://arxiv.org/abs/2011.10874v2</id>
+    <updated>2021-03-09T20:37:39Z</updated>
+    <published>2020-11-21T21:39:37Z</published>
+    <title>Improved Dynamic Algorithms for Longest Increasing Subsequence</title>
+    <summary>  We study dynamic algorithms for the longest increasing subsequence
+(\textsf{LIS}) problem. A dynamic \textsf{LIS} algorithm maintains a sequence
+subject to operations of the following form arriving one by one: (i) insert an
+element, (ii) delete an element, or (iii) substitute an element for another.
+After performing each operation, the algorithm must report the length of the
+longest increasing subsequence of the current sequence.
+  Our main contribution is the first exact dynamic \textsf{LIS} algorithm with
+sublinear update time. More precisely, we present a randomized algorithm that
+performs each operation in time $\tilde O(n^{2/3})$ and after each update,
+reports the answer to the \textsf{LIS} problem correctly with high probability.
+We use several novel techniques and observations for this algorithm that may
+find their applications in future work.
+  In the second part of the paper, we study approximate dynamic \textsf{LIS}
+algorithms, which are allowed to underestimate the solution size within a
+bounded multiplicative factor. In this setting, we give a deterministic
+algorithm with update time $O(n^{o(1)})$ and approximation factor $1-o(1)$.
+This result substantially improves upon the previous work of Mitzenmacher and
+Seddighin (STOC'20) that presents an $\Omega(\epsilon
+^{O(1/\epsilon)})$-approximation algorithm with update time $\tilde
+O(n^\epsilon)$ for any constant $\epsilon > 0$.
+</summary>
+    <author>
+      <name>Tomasz Kociumaka</name>
+    </author>
+    <author>
+      <name>Saeed Seddighin</name>
+    </author>
+    <link href="http://arxiv.org/abs/2011.10874v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2011.10874v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2011.09761">
+    <id>http://arxiv.org/abs/2011.09761v2</id>
+    <updated>2020-12-03T12:13:19Z</updated>
+    <published>2020-11-19T10:39:58Z</published>
+    <title>Fully Dynamic Approximation of LIS in Polylogarithmic Time</title>
+    <summary>  We revisit the problem of maintaining the longest increasing subsequence
+(LIS) of an array under (i) inserting an element, and (ii) deleting an element
+of an array. In a recent breakthrough, Mitzenmacher and Seddighin [STOC 2020]
+designed an algorithm that maintains an
+$\mathcal{O}((1/\epsilon)^{\mathcal{O}(1/\epsilon)})$-approximation of LIS
+under both operations with worst-case update time $\mathcal{\tilde
+O}(n^{\epsilon})$, for any constant $\epsilon>0$. We exponentially improve on
+their result by designing an algorithm that maintains an
+$(1+\epsilon)$-approximation of LIS under both operations with worst-case
+update time $\mathcal{\tilde O}(\epsilon^{-5})$. Instead of working with the
+grid packing technique introduced by Mitzenmacher and Seddighin, we take a
+different approach building on a new tool that might be of independent
+interest: LIS sparsification.
+  A particularly interesting consequence of our result is an improved solution
+for the so-called Erd\H{o}s-Szekeres partitioning, in which we seek a partition
+of a given permutation of $\{1,2,\ldots,n\}$ into $\mathcal{O}(\sqrt{n})$
+monotone subsequences. This problem has been repeatedly stated as one of the
+natural examples in which we see a large gap between the decision-tree
+complexity and algorithmic complexity. The result of Mitzenmacher and Seddighin
+implies an $\mathcal{O}(n^{1+\epsilon})$ time solution for this problem, for
+any $\epsilon>0$. Our algorithm (in fact, its simpler decremental version)
+further improves this to $\mathcal{\tilde O}(n)$.
+</summary>
+    <author>
+      <name>Paweł Gawrychowski</name>
+    </author>
+    <author>
+      <name>Wojciech Janczewski</name>
+    </author>
+    <link href="http://arxiv.org/abs/2011.09761v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2011.09761v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2011.10008">
+    <id>http://arxiv.org/abs/2011.10008v2</id>
+    <updated>2020-12-13T10:01:03Z</updated>
+    <published>2020-11-19T18:07:53Z</published>
+    <title>Subpath Queries on Compressed Graphs: a Survey</title>
+    <summary>  Text indexing is a classical algorithmic problem that has been studied for
+over four decades: given a text $T$, pre-process it off-line so that, later, we
+can quickly count and locate the occurrences of any string (the query pattern)
+in $T$ in time proportional to the query's length. The earliest optimal-time
+solution to the problem, the suffix tree, dates back to 1973 and requires up to
+two orders of magnitude more space than the plain text just to be stored. In
+the year 2000, two breakthrough works showed that efficient queries can be
+achieved without this space overhead: a fast index be stored in a space
+proportional to the text's entropy. These contributions had an enormous impact
+in bioinformatics: nowadays, virtually any DNA aligner employs compressed
+indexes. Recent trends considered more powerful compression schemes (dictionary
+compressors) and generalizations of the problem to labeled graphs: after all,
+texts can be viewed as labeled directed paths. In turn, since finite state
+automata can be considered as a particular case of labeled graphs, these
+findings created a bridge between the fields of compressed indexing and regular
+language theory, ultimately allowing to index regular languages and promising
+to shed new light on problems such as regular expression matching. This survey
+is a gentle introduction to the main landmarks of the fascinating journey that
+took us from suffix trees to today's compressed indexes for labeled graphs and
+regular languages.
+</summary>
+    <author>
+      <name>Nicola Prezza</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Fixed some typos and references to Boyer-Moore-Galil's and
+  Apostolico-Giancarlo's algorithms</arxiv:comment>
+    <link href="http://arxiv.org/abs/2011.10008v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2011.10008v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2011.08119">
+    <id>http://arxiv.org/abs/2011.08119v1</id>
+    <updated>2020-11-16T17:31:51Z</updated>
+    <published>2020-11-16T17:31:51Z</published>
+    <title>The Longest Run Subsequence Problem: Further Complexity Results</title>
+    <summary>  Longest Run Subsequence is a problem introduced recently in the context of
+the scaffolding phase of genome assembly (Schrinner et al.,WABI 2020). The
+problem asks for a maximum length subsequence of a given string that contains
+at most one run for each symbol (a run is a maximum substring of consecutive
+identical symbols). The problem has been shown to be NP-hard and to be
+fixed-parameter tractable when the parameter is the size of the alphabet on
+which the input string is defined. In this paper we further investigate the
+complexity of the problem and we show that it is fixed-parameter tractable when
+it is parameterized by the number of runs in a solution, a smaller parameter.
+Moreover, we investigate the kernelization complexity of Longest Run
+Subsequence and we prove that it does not admit a polynomial kernel when
+parameterized by the size of the alphabet or by the number of runs. Finally, we
+consider the restriction of Longest Run Subsequence when each symbol has at
+most two occurrences in the input string and we show that it is APX-hard.
+</summary>
+    <author>
+      <name>Riccardo Dondi</name>
+    </author>
+    <author>
+      <name>Florian Sikora</name>
+    </author>
+    <link href="http://arxiv.org/abs/2011.08119v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2011.08119v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.GN" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2011.07999">
+    <id>http://arxiv.org/abs/2011.07999v1</id>
+    <updated>2020-11-13T03:16:02Z</updated>
+    <published>2020-11-13T03:16:02Z</published>
+    <title>A grammar compressor for collections of reads with applications to the
+  construction of the BWT</title>
+    <summary>  We describe a grammar for DNA sequencing reads from which we can compute the
+BWT directly. Our motivation is to perform in succinct space genomic analyses
+that require complex string queries not yet supported by repetition-based
+self-indexes. Our approach is to store the set of reads as a grammar, but when
+required, compute its BWT to carry out the analysis by using self-indexes. Our
+experiments in real data showed that the space reduction we achieve with our
+compressor is competitive with LZ-based methods and better than entropy-based
+approaches. Compared to other popular grammars, in this kind of data, we
+achieve, on average, 12\% of extra compression and require less working space
+and time.
+</summary>
+    <author>
+      <name>Diego Díaz-Domínguez</name>
+    </author>
+    <author>
+      <name>Gonzalo Navarro</name>
+    </author>
+    <link href="http://arxiv.org/abs/2011.07999v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2011.07999v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2011.07143">
+    <id>http://arxiv.org/abs/2011.07143v1</id>
+    <updated>2020-11-13T21:57:18Z</updated>
+    <published>2020-11-13T21:57:18Z</published>
+    <title>Substring Query Complexity of String Reconstruction</title>
+    <summary>  Suppose an oracle knows a string $S$ that is unknown to us and we want to
+determine. The oracle can answer queries of the form "Is $s$ a substring of
+$S$?". The \emph{Substring Query Complexity} of a string $S$, denoted
+$\chi(S)$, is the minimum number of adaptive substring queries that are needed
+to exactly reconstruct (or learn) $S$. It has been introduced in 1995 by Skiena
+and Sundaram, who showed that $\chi(S) \geq \sigma n/4 -O(n)$ in the worst
+case, where $\sigma$ is the size of the alphabet of $S$ and $n$ its length, and
+gave an algorithm that spends $(\sigma-1)n+O(\sigma \sqrt{n})$ queries to
+reconstruct $S$. We show that for any binary string $S$, $\chi(S)$ is
+asymptotically equal to the Kolmogorov complexity of $S$ and therefore lower
+bounds any other measure of compressibility. However, since this result does
+not yield an efficient algorithm for the reconstruction, we present new
+algorithms to compute a set of substring queries whose size grows as a function
+of other known measures of complexity, e.g., the number {\sf rle} of runs in
+$S$, the size $g$ of the smallest grammar producing (only) $S$ or the size
+$z_{no}$ of the non-overlapping LZ77 factorization of $S$. We first show that
+any string of length $n$ over an integer alphabet of size $\sigma$ with {\sf
+rle} runs can be reconstructed with $q=O({\sf rle} (\sigma + \log \frac{n}{{\sf
+rle}}))$ substring queries in linear time and space. We then present an
+algorithm that spends $q \in O(\sigma g\log n) \subseteq O(\sigma z_{no}\log
+(n/z_{no})\log n)$ substring queries and runs in $O(n(\log n + \log \sigma)+
+q)$ time using linear space. This algorithm actually reconstructs the suffix
+tree of the string using a dynamic approach based on the centroid
+decomposition.
+</summary>
+    <author>
+      <name>Gabriele Fici</name>
+    </author>
+    <author>
+      <name>Nicola Prezza</name>
+    </author>
+    <author>
+      <name>Rossano Venturini</name>
+    </author>
+    <link href="http://arxiv.org/abs/2011.07143v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2011.07143v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2011.05610">
+    <id>http://arxiv.org/abs/2011.05610v2</id>
+    <updated>2021-02-11T06:56:52Z</updated>
+    <published>2020-11-11T07:50:10Z</published>
+    <title>PHONI: Streamed Matching Statistics with Multi-Genome References</title>
+    <summary>  Computing the matching statistics of patterns with respect to a text is a
+fundamental task in bioinformatics, but a formidable one when the text is a
+highly compressed genomic database. Bannai et al. gave an efficient solution
+for this case, which Rossi et al. recently implemented, but it uses two passes
+over the patterns and buffers a pointer for each character during the first
+pass. In this paper, we simplify their solution and make it streaming, at the
+cost of slowing it down slightly. This means that, first, we can compute the
+matching statistics of several long patterns (such as whole human chromosomes)
+in parallel while still using a reasonable amount of RAM; second, we can
+compute matching statistics online with low latency and thus quickly recognize
+when a pattern becomes incompressible relative to the database.
+</summary>
+    <author>
+      <name>Christina Boucher</name>
+    </author>
+    <author>
+      <name>Travis Gagie</name>
+    </author>
+    <author>
+      <name>Tomohiro I</name>
+    </author>
+    <author>
+      <name>Dominik Köppl</name>
+    </author>
+    <author>
+      <name>Ben Langmead</name>
+    </author>
+    <author>
+      <name>Giovanni Manzini</name>
+    </author>
+    <author>
+      <name>Gonzalo Navarro</name>
+    </author>
+    <author>
+      <name>Alejandro Pacheco</name>
+    </author>
+    <author>
+      <name>Massimiliano Rossi</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Our code is available at https://github.com/koeppl/phoni</arxiv:comment>
+    <link href="http://arxiv.org/abs/2011.05610v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2011.05610v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2011.04010">
+    <id>http://arxiv.org/abs/2011.04010v1</id>
+    <updated>2020-11-08T16:09:20Z</updated>
+    <published>2020-11-08T16:09:20Z</published>
+    <title>Scout Algorithm For Fast Substring Matching</title>
+    <summary>  Exact substring matching is a common task in many software applications.
+Despite the existence of several algorithms for finding whether or not a
+pattern string is present in a target string, the most common implementation is
+a na\"ive, brute force approach. Alternative approaches either do not provide
+enough of a benefit for the added complexity, or are impractical for modern
+character sets, e.g., Unicode. We present a new algorithm, Scout, that is
+straightforward, quick and appropriate for all applications. We also compare
+the performance characteristics of the Scout algorithm with several others.
+</summary>
+    <author>
+      <name>Anand Natrajan</name>
+    </author>
+    <author>
+      <name>Mallige Anand</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">26 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2011.04010v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2011.04010v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2012.08589">
+    <id>http://arxiv.org/abs/2012.08589v1</id>
+    <updated>2020-12-15T20:00:01Z</updated>
+    <published>2020-12-15T20:00:01Z</published>
+    <title>Sorting Lists with Equal Keys Using Mergesort in Linear Time</title>
+    <summary>  This article introduces a new optimization method to improve mergesort's
+runtime complexity, when sorting sequences that have equal keys to $O(n log_2
+k)$, where $k$ is the number of distinct keys in the sequence. When $k$ is
+constant, it is evident that mergesort is capable of achieving linear time by
+utilizing linked lists as its underlying data structure. Mergesort linked list
+implementations can be optimized by introducing a new mechanism to group
+elements with equal keys together, thus allowing merge algorithm to achieve
+linear time.
+</summary>
+    <author>
+      <name>Albert Tedja</name>
+    </author>
+    <link href="http://arxiv.org/abs/2012.08589v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2012.08589v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2012.08878">
+    <id>http://arxiv.org/abs/2012.08878v1</id>
+    <updated>2020-12-16T11:41:45Z</updated>
+    <published>2020-12-16T11:41:45Z</published>
+    <title>Greedy-reduction from Shortest Linear Superstring to Shortest Circular
+  Superstring</title>
+    <summary>  A superstring of a set of strings correspond to a string which contains all
+the other strings as substrings. The problem of finding the Shortest Linear
+Superstring is a well-know and well-studied problem in stringology. We present
+here a variant of this problem, the Shortest Circular Superstring problem where
+the sought superstring is a circular string. We show a strong link between
+these two problems and prove that the Shortest Circular Superstring problem is
+NP-complete. Moreover, we propose a new conjecture on the approximation ratio
+of the Shortest Circular Superstring problem.
+</summary>
+    <author>
+      <name>Bastien Cazaux</name>
+    </author>
+    <author>
+      <name>Eric Rivals</name>
+    </author>
+    <link href="http://arxiv.org/abs/2012.08878v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2012.08878v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2012.10092">
+    <id>http://arxiv.org/abs/2012.10092v2</id>
+    <updated>2021-02-04T03:26:22Z</updated>
+    <published>2020-12-18T07:53:48Z</published>
+    <title>The Parameterized Suffix Tray</title>
+    <summary>  Let $\Sigma$ and $\Pi$ be disjoint alphabets, respectively called the static
+alphabet and the parameterized alphabet. Two strings $x$ and $y$ over $\Sigma
+\cup \Pi$ of equal length are said to parameterized match (p-match) if there
+exists a renaming bijection $f$ on $\Sigma$ and $\Pi$ which is identity on
+$\Sigma$ and maps the characters of $x$ to those of $y$ so that the two strings
+become identical. The indexing version of the problem of finding p-matching
+occurrences of a given pattern in the text is a well-studied topic in string
+matching. In this paper, we present a state-of-the-art indexing structure for
+p-matching called the parameterized suffix tray of an input text $T$, denoted
+by $\mathsf{PSTray}(T)$. We show that $\mathsf{PSTray}(T)$ occupies $O(n)$
+space and supports pattern matching queries in $O(m + \log (\sigma+\pi) +
+\mathit{occ})$ time, where $n$ is the length of $T$, $m$ is the length of a
+query pattern $P$, $\pi$ is the number of distinct symbols of $|\Pi|$ in $T$,
+$\sigma$ is the number of distinct symbols of $|\Sigma|$ in $T$ and
+$\mathit{occ}$ is the number of p-matching occurrences of $P$ in $T$. We also
+present how to build $\mathsf{PSTray}(T)$ in $O(n)$ time from the parameterized
+suffix tree of $T$.
+</summary>
+    <author>
+      <name>Noriki Fujisato</name>
+    </author>
+    <author>
+      <name>Yuto Nakashima</name>
+    </author>
+    <author>
+      <name>Shunsuke Inenaga</name>
+    </author>
+    <author>
+      <name>Hideo Bannai</name>
+    </author>
+    <author>
+      <name>Masayuki Takeda</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for CIAC 2021</arxiv:comment>
+    <link href="http://arxiv.org/abs/2012.10092v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2012.10092v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2012.09376">
+    <id>http://arxiv.org/abs/2012.09376v2</id>
+    <updated>2020-12-25T12:45:42Z</updated>
+    <published>2020-12-17T03:13:45Z</published>
+    <title>Quantum Algorithm for Lexicographically Minimal String Rotation</title>
+    <summary>  Lexicographically minimal string rotation (LMSR) is a problem to find the
+minimal one among all rotations of a string in the lexicographical order, which
+is widely used in equality checking of graphs, polygons, automata and chemical
+structures.
+  In this paper, we propose an $O(n^{3/4})$ quantum query algorithm for LMSR.
+In particular, the algorithm has average-case query complexity $O(\sqrt n \log
+n)$, which is shown to be asymptotically optimal up to a polylogarithmic
+factor, compared with its $\Omega\left(\sqrt{n/\log n}\right)$ lower bound.
+Furthermore, we claim that our quantum algorithm outperforms any (classical)
+randomized algorithms in both worst-case and average-case query complexities by
+showing that every (classical) randomized algorithm for LMSR has worst-case
+query complexity $\Omega(n)$ and average-case query complexity $\Omega(n/\log
+n)$.
+  Our quantum algorithm for LMSR is developed in a framework of nested quantum
+algorithms, based on two new results: (i) an $O(\sqrt{n})$ (optimal) quantum
+minimum finding on bounded-error quantum oracles; and (ii) its $O\left(\sqrt{n
+\log(1/\varepsilon)}\right)$ (optimal) error reduction. As a byproduct, we
+obtain some better upper bounds of independent interest: (i) $O(\sqrt{N})$
+(optimal) for constant-depth MIN-MAX trees on $N$ variables; and (ii)
+$O(\sqrt{n \log m})$ for pattern matching which removes
+$\operatorname{polylog}(n)$ factors.
+</summary>
+    <author>
+      <name>Qisheng Wang</name>
+    </author>
+    <author>
+      <name>Mingsheng Ying</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">40 pages, 6 algorithms, minor corrections</arxiv:comment>
+    <link href="http://arxiv.org/abs/2012.09376v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2012.09376v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2012.07892">
+    <id>http://arxiv.org/abs/2012.07892v1</id>
+    <updated>2020-12-14T19:15:19Z</updated>
+    <published>2020-12-14T19:15:19Z</published>
+    <title>A New Approach to Regular &amp; Indeterminate Strings</title>
+    <summary>  In this paper we propose a new, more appropriate definition of regular and
+indeterminate strings. A regular string is one that is "isomorphic" to a string
+whose entries all consist of a single letter, but which nevertheless may itself
+include entries containing multiple letters. A string that is not regular is
+said to be indeterminate. We begin by proposing a new model for the
+representation of strings, regular or indeterminate, then go on to describe a
+linear time algorithm to determine whether or not a string $x = x[1..n]$ is
+regular and, if so, to replace it by a lexicographically least (lex-least)
+string $y$ whose entries are all single letters. Furthermore, we connect the
+regularity of a string to the transitive closure problem on a graph, which in
+our special case can be efficiently solved. We then introduce the idea of a
+feasible palindrome array MP of a string, and prove that every feasible MP
+corresponds to some (regular or indeterminate) string. We describe an algorithm
+that constructs a string $x$ corresponding to given feasible MP, while ensuring
+that whenever possible $x$ is regular and if so, then lex-least. A final
+section outlines new research directions suggested by this changed perspective
+on regular and indeterminate strings.
+</summary>
+    <author>
+      <name>Felipe A. Louza</name>
+    </author>
+    <author>
+      <name>Neerja Mhaskar</name>
+    </author>
+    <author>
+      <name>W. F. Smyth</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1016/j.tcs.2020.12.007</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1016/j.tcs.2020.12.007" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to TCS</arxiv:comment>
+    <link href="http://arxiv.org/abs/2012.07892v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2012.07892v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2012.03926">
+    <id>http://arxiv.org/abs/2012.03926v1</id>
+    <updated>2020-12-07T18:55:11Z</updated>
+    <published>2020-12-07T18:55:11Z</published>
+    <title>Counting ternary square-free words quickly</title>
+    <summary>  An efficient, when compared to exhaustive enumeration, algorithm for
+computing the number of square-free words of length $n$ over the alphabet $\{a,
+b, c\}$ is presented.
+</summary>
+    <author>
+      <name>Vladislav Makarov</name>
+    </author>
+    <link href="http://arxiv.org/abs/2012.03926v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2012.03926v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2012.03996">
+    <id>http://arxiv.org/abs/2012.03996v1</id>
+    <updated>2020-12-07T19:08:31Z</updated>
+    <published>2020-12-07T19:08:31Z</published>
+    <title>Galloping in natural merge sorts</title>
+    <summary>  We study the algorithm TimSort and the sub-routine it uses to merge monotonic
+(non-decreasing) sub-arrays, hereafter called runs. More precisely, we look at
+the impact on the number of element comparisons performed of using this
+sub-routine instead of a naive routine.
+  In this article, we introduce a new object for measuring the complexity of
+arrays. This notion dual to the notion of runs on which TimSort built its
+success so far, hence we call it dual runs. It induces complexity measures that
+are dual to those induced by runs. We prove, for this new complexity measure,
+results that are similar to those already known when considering standard
+run-induced measures. Although our new results do not lead to any improvement
+on the number of element moves performed, they may lead to dramatic
+improvements on the number of element comparisons performed by the algorithm.
+  In order to do so, we introduce new notions of fast- and middle-growth for
+natural merge sorts, which allow deriving the same upper bounds. After using
+these notions successfully on TimSort, we prove that they can be applied to a
+wealth of variants of TimSort and other natural merge sorts.
+</summary>
+    <author>
+      <name>Vincent Jugé</name>
+    </author>
+    <author>
+      <name>Ghazal Khalighinejad</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">18 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2012.03996v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2012.03996v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2012.00866">
+    <id>http://arxiv.org/abs/2012.00866v1</id>
+    <updated>2020-12-01T22:07:59Z</updated>
+    <published>2020-12-01T22:07:59Z</published>
+    <title>Huskysort</title>
+    <summary>  Much of the copious literature on the subject of sorting has concentrated on
+minimizing the number of comparisons and/or exchanges/copies. However, a more
+appropriate yardstick for the performance of sorting algorithms is based on the
+total number of array accesses that are required (the "work"). For a sort that
+is based on divide-and-conquer (including iterative variations on that theme),
+we can divide the work into linear, i.e. $\textbf{O}(N)$, work and
+linearithmic, i.e. $\textbf{O}(N log N)$, work. An algorithm that moves work
+from the linearithmic phase to the linear phase may be able to reduce the total
+number of array accesses and, indirectly, processing time. This paper describes
+an approach to sorting which reduces the number of expensive comparisons in the
+linearithmic phase as much as possible by substituting inexpensive comparisons.
+In Java, the two system sorts are dual-pivot quicksort (for primitives) and
+Timsort for objects. We demonstrate that a combination of these two algorithms
+can run significantly faster than either algorithm alone for the types of
+objects which are expensive to compare. We call this improved sorting algorithm
+Huskysort.
+</summary>
+    <author>
+      <name>R. C. Hillyard</name>
+    </author>
+    <author>
+      <name>Yunlu Liaozheng</name>
+    </author>
+    <author>
+      <name>Sai Vineeth K. R</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">9 pages, Github repo for the algorithm included</arxiv:comment>
+    <link href="http://arxiv.org/abs/2012.00866v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2012.00866v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2011.12742">
+    <id>http://arxiv.org/abs/2011.12742v1</id>
+    <updated>2020-11-25T13:52:42Z</updated>
+    <published>2020-11-25T13:52:42Z</published>
+    <title>Left Lyndon tree construction</title>
+    <summary>  We extend the left-to-right Lyndon factorisation of a word to the left Lyndon
+tree construction of a Lyndon word. It yields an algorithm to sort the prefixes
+of a Lyndon word according to the infinite ordering defined by Dolce et al.
+(2019). A straightforward variant computes the left Lyndon forest of a word.
+All algorithms run in linear time on a general alphabet, that is, in the
+letter-comparison model.
+</summary>
+    <author>
+      <name>Golnaz Badkobeh</name>
+    </author>
+    <author>
+      <name>Maxime Crochemore</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">18 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2011.12742v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2011.12742v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68W32, 68W27" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="F.2.2; E.1" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2011.12898">
+    <id>http://arxiv.org/abs/2011.12898v1</id>
+    <updated>2020-11-25T17:26:46Z</updated>
+    <published>2020-11-25T17:26:46Z</published>
+    <title>Grammar Compression By Induced Suffix Sorting</title>
+    <summary>  A grammar compression algorithm, called GCIS, is introduced in this work.
+GCIS is based on the induced suffix sorting algorithm SAIS, presented by Nong
+et al. in 2009. The proposed solution builds on the factorization performed by
+SAIS during suffix sorting. A context-free grammar is used to replace factors
+by non-terminals. The algorithm is then recursively applied on the shorter
+sequence of non-terminals. The resulting grammar is encoded by exploiting some
+redundancies, such as common prefixes between right-hands of rules, sorted
+according to SAIS. GCIS excels for its low space and time required for
+compression while obtaining competitive compression ratios. Our experiments on
+regular and repetitive, moderate and very large texts, show that GCIS stands as
+a very convenient choice compared to well-known compressors such as Gzip,
+7-Zip, and RePair, the gold standard in grammar compression. In exchange, GCIS
+is slow at decompressing. Yet, grammar compressors are more convenient than
+Lempel-Ziv compressors in that one can access text substrings directly in
+compressed form, without ever decompressing the text. We demonstrate that GCIS
+is an excellent candidate for this scenario because it shows to be competitive
+among its RePair based alternatives. We also show, how GCIS relation with SAIS
+makes it a good intermediate structure to build the suffix array and the LCP
+array during decompression of the text.
+</summary>
+    <author>
+      <name>Daniel S. N. Nunes</name>
+    </author>
+    <author>
+      <name>Felipe A. Louza</name>
+    </author>
+    <author>
+      <name>Simon Gog</name>
+    </author>
+    <author>
+      <name>Mauricio Ayala-Rincón</name>
+    </author>
+    <author>
+      <name>Gonzalo Navarro</name>
+    </author>
+    <link href="http://arxiv.org/abs/2011.12898v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2011.12898v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2101.05329">
+    <id>http://arxiv.org/abs/2101.05329v1</id>
+    <updated>2021-01-13T20:11:47Z</updated>
+    <published>2021-01-13T20:11:47Z</published>
+    <title>Improving Run Length Encoding by Preprocessing</title>
+    <summary>  The Run Length Encoding (RLE) compression method is a long standing simple
+lossless compression scheme which is easy to implement and achieves a good
+compression on input data which contains repeating consecutive symbols. In its
+pure form RLE is not applicable on natural text or other input data with short
+sequences of identical symbols. We present a combination of preprocessing steps
+that turn arbitrary input data in a byte-wise encoding into a bit-string which
+is highly suitable for RLE compression. The main idea is to first read all most
+significant bits of the input byte-string, followed by the second most
+significant bit, and so on. We combine this approach by a dynamic byte
+remapping as well as a Burrows-Wheeler-Scott transform on a byte level.
+Finally, we apply a Huffman Encoding on the output of the bit-wise RLE encoding
+to allow for more dynamic lengths of code words encoding runs of the RLE. With
+our technique we can achieve a lossless average compression which is better
+than the standard RLE compression by a factor of 8 on average.
+</summary>
+    <author>
+      <name>Sven Fiergolla</name>
+    </author>
+    <author>
+      <name>Petra Wolf</name>
+    </author>
+    <link href="http://arxiv.org/abs/2101.05329v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2101.05329v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68P30, 94A08" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2101.03978">
+    <id>http://arxiv.org/abs/2101.03978v1</id>
+    <updated>2021-01-11T15:36:35Z</updated>
+    <published>2021-01-11T15:36:35Z</published>
+    <title>Strictly In-Place Algorithms for Permuting and Inverting Permutations</title>
+    <summary>  We revisit the problem of permuting an array of length $n$ according to a
+given permutation in place, that is, using only a small number of bits of extra
+storage. Fich, Munro and Poblete [FOCS 1990, SICOMP 1995] obtained an elegant
+$\mathcal{O}(n\log n)$-time algorithm using only $\mathcal{O}(\log^{2}n)$ bits
+of extra space for this basic problem by designing a procedure that scans the
+permutation and outputs exactly one element from each of its cycles. However,
+in the strict sense in place should be understood as using only an
+asymptotically optimal $\mathcal{O}(\log n)$ bits of extra space, or storing a
+constant number of indices. The problem of permuting in this version is, in
+fact, a well-known interview question, with the expected solution being a
+quadratic-time algorithm. Surprisingly, no faster algorithm seems to be known
+in the literature.
+  Our first contribution is a strictly in-place generalisation of the method of
+Fich et al. that works in $\mathcal{O}_{\varepsilon}(n^{1+\varepsilon})$ time,
+for any $\varepsilon > 0$. Then, we build on this generalisation to obtain a
+strictly in-place algorithm for inverting a given permutation on $n$ elements
+working in the same complexity. This is a significant improvement on a recent
+result of Gu\'spiel [arXiv 2019], who designed an $\mathcal{O}(n^{1.5})$-time
+algorithm.
+</summary>
+    <author>
+      <name>Bartłomiej Dudek</name>
+    </author>
+    <author>
+      <name>Paweł Gawrychowski</name>
+    </author>
+    <author>
+      <name>Karol Pokorski</name>
+    </author>
+    <link href="http://arxiv.org/abs/2101.03978v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2101.03978v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2101.03165">
+    <id>http://arxiv.org/abs/2101.03165v1</id>
+    <updated>2021-01-08T18:50:28Z</updated>
+    <published>2021-01-08T18:50:28Z</published>
+    <title>Cantor Mapping Technique</title>
+    <summary>  A new technique specific to String ordering utilizing a method called "Cantor
+Mapping" is explained in this paper and used to perform string comparative sort
+in loglinear time while utilizing linear extra space.
+</summary>
+    <author>
+      <name>Kaustubh Joshi</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">3 pages, 2 figures, 2 algorithms</arxiv:comment>
+    <link href="http://arxiv.org/abs/2101.03165v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2101.03165v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2012.12369">
+    <id>http://arxiv.org/abs/2012.12369v1</id>
+    <updated>2020-12-22T21:44:42Z</updated>
+    <published>2020-12-22T21:44:42Z</published>
+    <title>Integer Division by Constants: Optimal Bounds</title>
+    <summary>  The integer division of a numerator n by a divisor d gives a quotient q and a
+remainder r. Optimizing compilers accelerate software by replacing the division
+of n by d with the division of c * n (or c * n + c) by m for convenient
+integers c and m chosen so that they approximate the reciprocal: c/m ~= 1/d.
+Such techniques are especially advantageous when m is chosen to be a power of
+two and when d is a constant so that c and m can be precomputed. The literature
+contains many bounds on the distance between c/m and the divisor d. Some of
+these bounds are optimally tight, while others are not. Using accessible
+mathematics, we present optimally tight bounds for quotient and remainder
+computations.
+</summary>
+    <author>
+      <name>Daniel Lemire</name>
+    </author>
+    <author>
+      <name>Colin Bartlett</name>
+    </author>
+    <author>
+      <name>Owen Kaser</name>
+    </author>
+    <link href="http://arxiv.org/abs/2012.12369v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2012.12369v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2101.00314">
+    <id>http://arxiv.org/abs/2101.00314v1</id>
+    <updated>2021-01-01T20:14:33Z</updated>
+    <published>2021-01-01T20:14:33Z</published>
+    <title>SetSketch: Filling the Gap between MinHash and HyperLogLog</title>
+    <summary>  MinHash and HyperLogLog are sketching algorithms that have become
+indispensable for set summaries in big data applications. While HyperLogLog
+allows counting different elements with very little space, MinHash is suitable
+for the fast comparison of sets as it allows estimating the Jaccard similarity
+and other joint quantities. This work presents a new data structure called
+SetSketch that is able to continuously fill the gap between both use cases. Its
+commutative and idempotent insert operation and its mergeable state make it
+suitable for distributed environments. Robust and easy-to-implement estimators
+for cardinality and joint quantities, as well as the ability to use SetSketch
+for similarity search, enable versatile applications. The developed methods can
+also be used for HyperLogLog sketches and allow estimation of joint quantities
+such as the intersection size with a smaller error compared to the common
+estimation approach based on the inclusion-exclusion principle.
+</summary>
+    <author>
+      <name>Otmar Ertl</name>
+    </author>
+    <link href="http://arxiv.org/abs/2101.00314v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2101.00314v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2101.00172">
+    <id>http://arxiv.org/abs/2101.00172v1</id>
+    <updated>2021-01-01T05:45:56Z</updated>
+    <published>2021-01-01T05:45:56Z</published>
+    <title>Chunk List: Concurrent Data Structures</title>
+    <summary>  Chunking data is obviously no new concept; however, I had never found any
+data structures that used chunking as the basis of their implementation. I
+figured that by using chunking alongside concurrency, I could create an
+extremely fast run-time in regards to particular methods as searching and/or
+sorting. By using chunking and concurrency to my advantage, I came up with the
+chunk list - a dynamic list-based data structure that would separate large
+amounts of data into specifically sized chunks, each of which should be able to
+be searched at the exact same time by searching each chunk on a separate
+thread. As a result of implementing this concept into its own class, I was able
+to create something that almost consistently gives around 20x-300x faster
+results than a regular ArrayList. However, should speed be a particular issue
+even after implementation, users can modify the size of the chunks and
+benchmark the speed of using smaller or larger chunks, depending on the amount
+of data being stored.
+</summary>
+    <author>
+      <name>Daniel Szelogowski</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">20 pages, 3 figures A full implementation can be found at
+  https://github.com/danielathome19/Chunk-List</arxiv:comment>
+    <link href="http://arxiv.org/abs/2101.00172v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2101.00172v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2101.00718">
+    <id>http://arxiv.org/abs/2101.00718v1</id>
+    <updated>2021-01-03T22:21:51Z</updated>
+    <published>2021-01-03T22:21:51Z</published>
+    <title>Text Searching Allowing for Non-Overlapping Adjacent Unbalanced
+  Translocations</title>
+    <summary>  In this paper we investigate the \emph{approximate string matching problem}
+when the allowed edit operations are \emph{non-overlapping unbalanced
+translocations of adjacent factors}. Such kind of edit operations take place
+when two adjacent sub-strings of the text swap, resulting in a modified string.
+The two involved substrings are allowed to be of different lengths.
+  Such large-scale modifications on strings have various applications. They are
+among the most frequent chromosomal alterations, accounted for 30\% of all
+losses of heterozygosity, a major genetic event causing inactivation of cancer
+suppressor genes. In addition, among other applications, they are frequent
+modifications accounted in musical or in natural language information
+retrieval. However, despite of their central role in so many fields of text
+processing, little attention has been devoted to the problem of matching
+strings allowing for this kind of edit operation.
+  In this paper we present three algorithms for solving the problem, all of
+them with a $\bigO(nm^3)$ worst-case and a $\bigO(m^2)$-space complexity, where
+$m$ and $n$ are the length of the pattern and of the text, respectively. % In
+particular, our first algorithm is based on the dynamic-programming approach.
+Our second solution improves the previous one by making use of the Directed
+Acyclic Word Graph of the pattern. Finally our third algorithm is based on an
+alignment procedure. We also show that under the assumptions of equiprobability
+and independence of characters, our second algorithm has a
+$\bigO(n\log^2_{\sigma} m)$ average time complexity, for an alphabet of size
+$\sigma \geq 4$.
+</summary>
+    <author>
+      <name>Domenico Cantone</name>
+    </author>
+    <author>
+      <name>Simone Faro</name>
+    </author>
+    <author>
+      <name>Arianna Pavone</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">arXiv admin note: substantial text overlap with arXiv:1812.00421</arxiv:comment>
+    <link href="http://arxiv.org/abs/2101.00718v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2101.00718v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2101.01108">
+    <id>http://arxiv.org/abs/2101.01108v1</id>
+    <updated>2021-01-04T17:32:47Z</updated>
+    <published>2021-01-04T17:32:47Z</published>
+    <title>Binary Dynamic Time Warping in Linear Time</title>
+    <summary>  Dynamic time warping distance (DTW) is a widely used distance measure between
+time series $x, y \in \Sigma^n$. It was shown by Abboud, Backurs, and Williams
+that in the \emph{binary case}, where $|\Sigma| = 2$, DTW can be computed in
+time $O(n^{1.87})$. We improve this running time $O(n)$.
+  Moreover, if $x$ and $y$ are run-length encoded, then there is an algorithm
+running in time $\tilde{O}(k + \ell)$, where $k$ and $\ell$ are the number of
+runs in $x$ and $y$, respectively. This improves on the previous best bound of
+$O(k\ell)$ due to Dupont and Marteau.
+</summary>
+    <author>
+      <name>William Kuszmaul</name>
+    </author>
+    <link href="http://arxiv.org/abs/2101.01108v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2101.01108v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2012.13698">
+    <id>http://arxiv.org/abs/2012.13698v1</id>
+    <updated>2020-12-26T08:08:46Z</updated>
+    <published>2020-12-26T08:08:46Z</published>
+    <title>Arithmetic Binary Search Trees: Static Optimality in the Matching Model</title>
+    <summary>  Motivated by recent developments in optical switching and reconfigurable
+network design, we study dynamic binary search trees (BSTs) in the matching
+model. In the classical dynamic BST model, the cost of both link traversal and
+basic reconfiguration (rotation) is $O(1)$. However, in the matching model, the
+BST is defined by two optical switches (that represent two matchings in an
+abstract way), and each switch (or matching) reconfiguration cost is $\alpha$
+while a link traversal cost is still $O(1)$. In this work, we propose
+Arithmetic BST (A-BST), a simple dynamic BST algorithm that is based on dynamic
+Shannon-Fano-Elias coding, and show that A-BST is statically optimal for
+sequences of length $\Omega(n \alpha \log \alpha)$ where $n$ is the number of
+nodes (keys) in the tree.
+</summary>
+    <author>
+      <name>Chen Avin</name>
+    </author>
+    <link href="http://arxiv.org/abs/2012.13698v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2012.13698v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="F.2.2" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2012.06840">
+    <id>http://arxiv.org/abs/2012.06840v5</id>
+    <updated>2021-01-07T21:42:26Z</updated>
+    <published>2020-12-12T15:34:12Z</published>
+    <title>String Attractors for Automatic Sequences</title>
+    <summary>  We show that it is decidable, given an automatic sequence $\bf s$ and a
+constant $c$, whether all prefixes of $\bf s$ have a string attractor of size
+$\leq c$. Using a decision procedure based on this result, we show that all
+prefixes of the period-doubling sequence of length $\geq 2$ have a string
+attractor of size $2$. We also prove analogous results for other sequences,
+including the Thue-Morse sequence and the Tribonacci sequence.
+  We also provide general upper and lower bounds on string attractor size for
+different kinds of sequences. For example, if $\bf s$ has a finite appearance
+constant, then there is a string attractor for ${\bf s}[0..n-1]$ of size
+$O(\log n)$. If further $\bf s$ is linearly recurrent, then there is a string
+attractor for ${\bf s}[0..n-1]$ of size $O(1)$. For automatic sequences, the
+size of the smallest string attractor for ${\bf s}[0..n-1]$ is either
+$\Theta(1)$ or $\Theta(\log n)$, and it is decidable which case occurs.
+Finally, we close with some remarks about greedy string attractors.
+</summary>
+    <author>
+      <name>Luke Schaeffer</name>
+    </author>
+    <author>
+      <name>Jeffrey Shallit</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">revision adding significant new results due to Luke Schaeffer</arxiv:comment>
+    <link href="http://arxiv.org/abs/2012.06840v5" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2012.06840v5" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2102.03961">
+    <id>http://arxiv.org/abs/2102.03961v1</id>
+    <updated>2021-02-08T02:10:34Z</updated>
+    <published>2021-02-08T02:10:34Z</published>
+    <title>Efficient construction of the extended BWT from grammar-compressed DNA
+  sequencing reads</title>
+    <summary>  We present an algorithm for building the extended BWT (eBWT) of a string
+collection from its grammar-compressed representation. Our technique exploits
+the string repetitions captured by the grammar to boost the computation of the
+eBWT. Thus, the more repetitive the collection is, the lower are the resources
+we use per input symbol. We rely on a new grammar recently proposed at DCC'21
+whose nonterminals serve as building blocks for inducing the eBWT. A relevant
+application for this idea is the construction of self-indexes for analyzing
+sequencing reads -- massive and repetitive string collections of raw genomic
+data. Self-indexes have become increasingly popular in Bioinformatics as they
+can encode more information in less space. Our efficient eBWT construction
+opens the door to perform accurate bioinformatic analyses on more massive
+sequence datasets, which are not tractable with current eBWT construction
+techniques.
+</summary>
+    <author>
+      <name>Diego Diaz-Dominguez annd Gonzalo Navarro</name>
+    </author>
+    <link href="http://arxiv.org/abs/2102.03961v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2102.03961v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="q-bio.GN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.GN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2102.02505">
+    <id>http://arxiv.org/abs/2102.02505v1</id>
+    <updated>2021-02-04T09:32:52Z</updated>
+    <published>2021-02-04T09:32:52Z</published>
+    <title>Gapped Indexing for Consecutive Occurrences</title>
+    <summary>  The classic string indexing problem is to preprocess a string S into a
+compact data structure that supports efficient pattern matching queries.
+Typical queries include existential queries (decide if the pattern occurs in
+S), reporting queries (return all positions where the pattern occurs), and
+counting queries (return the number of occurrences of the pattern). In this
+paper we consider a variant of string indexing, where the goal is to compactly
+represent the string such that given two patterns P1 and P2 and a gap range
+[\alpha,\beta] we can quickly find the consecutive occurrences of P1 and P2
+with distance in [\alpha,\beta], i.e., pairs of occurrences immediately
+following each other and with distance within the range. We present data
+structures that use \~O(n) space and query time \~O(|P1|+|P2|+n^(2/3)) for
+existence and counting and \~O(|P1|+|P2|+n^(2/3)*occ^(1/3)) for reporting. We
+complement this with a conditional lower bound based on the set intersection
+problem showing that any solution using \~O(n) space must use
+\tilde{\Omega}}(|P1|+|P2|+\sqrt{n}) query time. To obtain our results we
+develop new techniques and ideas of independent interest including a new suffix
+tree decomposition and hardness of a variant of the set intersection problem.
+</summary>
+    <author>
+      <name>Philip Bille</name>
+    </author>
+    <author>
+      <name>Inge Li Gørtz</name>
+    </author>
+    <author>
+      <name>Max Rishøj Pedersen</name>
+    </author>
+    <author>
+      <name>Teresa Anna Steiner</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">17 pages, 3 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2102.02505v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2102.02505v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2101.12341">
+    <id>http://arxiv.org/abs/2101.12341v1</id>
+    <updated>2021-01-29T01:12:29Z</updated>
+    <published>2021-01-29T01:12:29Z</published>
+    <title>$r$-indexing Wheeler graphs</title>
+    <summary>  Let $G$ be a Wheeler graph and $r$ be the number of runs in a Burrows-Wheeler
+Transform of $G$, and suppose $G$ can be decomposed into $\upsilon$
+edge-disjoint directed paths whose internal vertices each have in- and
+out-degree exactly 1. We show how to store $G$ in $O (r + \upsilon)$ space such
+that later, given a pattern $P$, in $O (|P| \log \log |G|)$ time we can count
+the vertices of $G$ reachable by directed paths labelled $P$, and then report
+those vertices in $O (\log \log |G|)$ time per vertex.
+</summary>
+    <author>
+      <name>Travis Gagie</name>
+    </author>
+    <link href="http://arxiv.org/abs/2101.12341v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2101.12341v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2101.11421">
+    <id>http://arxiv.org/abs/2101.11421v1</id>
+    <updated>2021-01-27T14:15:46Z</updated>
+    <published>2021-01-27T14:15:46Z</published>
+    <title>Deriving monadic quicksort (Declarative Pearl)</title>
+    <summary>  To demonstrate derivation of monadic programs, we present a specification of
+sorting using the non-determinism monad, and derive pure quicksort on lists and
+state-monadic quicksort on arrays. In the derivation one may switch between
+point-free and pointwise styles, and deploy techniques familiar to functional
+programmers such as pattern matching and induction on structures or on sizes.
+Derivation of stateful programs resembles reasoning backwards from the
+postcondition.
+</summary>
+    <author>
+      <name>Shin-Cheng Mu</name>
+    </author>
+    <author>
+      <name>Tsung-Ju Chiang</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1007/978-3-030-59025-3_8</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1007/978-3-030-59025-3_8" rel="related"/>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">In Nakano K., Sagonas K. (eds) Functional and Logic Programming
+  (FLOPS 2020). LNCS 12073. pp 124-138. 2020</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2101.11421v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2101.11421v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2101.11350">
+    <id>http://arxiv.org/abs/2101.11350v1</id>
+    <updated>2021-01-27T12:29:03Z</updated>
+    <published>2021-01-27T12:29:03Z</published>
+    <title>Entropy of Mersenne-Twisters</title>
+    <summary>  The Mersenne-Twister is one of the most popular generators of uniform
+pseudo-random numbers. It is used in many numerical libraries and software. In
+this paper, we look at the Komolgorov entropy of the original Mersenne-Twister,
+as well as of more modern variations such as the 64-bit Mersenne-Twisters, the
+Well generators, and the Melg generators.
+</summary>
+    <author>
+      <name>Fabien Le Floc'h</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2101.11350v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2101.11350v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2101.11408">
+    <id>http://arxiv.org/abs/2101.11408v4</id>
+    <updated>2021-03-23T00:52:54Z</updated>
+    <published>2021-01-11T20:31:27Z</published>
+    <title>Number Parsing at a Gigabyte per Second</title>
+    <summary>  With disks and networks providing gigabytes per second, parsing decimal
+numbers from strings becomes a bottleneck. We consider the problem of parsing
+decimal numbers to the nearest binary floating-point value. The general problem
+requires variable-precision arithmetic. However, we need at most 17 digits to
+represent 64-bit standard floating-point numbers (IEEE 754). Thus we can
+represent the decimal significand with a single 64-bit word. By combining the
+significand and precomputed tables, we can compute the nearest floating-point
+number using as few as one or two 64-bit multiplications. Our implementation
+can be several times faster than conventional functions present in standard C
+libraries on modern 64-bit systems (Intel, AMD, ARM and POWER9). Our work is
+available as open source software used by major systems such as Apache Arrow
+and Yandex ClickHouse. The Go standard library has adopted a version of our
+approach.
+</summary>
+    <author>
+      <name>Daniel Lemire</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Software at https://github.com/fastfloat/fast_float and
+  https://github.com/lemire/simple_fastfloat_benchmark/</arxiv:comment>
+    <link href="http://arxiv.org/abs/2101.11408v4" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2101.11408v4" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2101.10890">
+    <id>http://arxiv.org/abs/2101.10890v1</id>
+    <updated>2021-01-25T18:37:35Z</updated>
+    <published>2021-01-25T18:37:35Z</published>
+    <title>Spanner Evaluation over SLP-Compressed Documents</title>
+    <summary>  We consider the problem of evaluating regular spanners over compressed
+documents, i.e., we wish to solve evaluation tasks directly on the compressed
+data, without decompression. As compressed forms of the documents we use
+straight-line programs (SLPs) -- a lossless compression scheme for textual data
+widely used in different areas of theoretical computer science and particularly
+well-suited for algorithmics on compressed data. In terms of data complexity,
+our results are as follows. For a regular spanner M and an SLP S that
+represents a document D, we can solve the tasks of model checking and of
+checking non-emptiness in time O(size(S)). Computing the set M(D) of all
+span-tuples extracted from D can be done in time O(size(S) size(M(D))), and
+enumeration of M(D) can be done with linear preprocessing O(size(S)) and a
+delay of O(depth(S)), where depth(S) is the depth of S's derivation tree. Note
+that size(S) can be exponentially smaller than the document's size |D|; and,
+due to known balancing results for SLPs, we can always assume that depth(S) =
+O(log(|D|)) independent of D's compressibility. Hence, our enumeration
+algorithm has a delay logarithmic in the size of the non-compressed data and a
+preprocessing time that is at best (i.e., in the case of highly compressible
+documents) also logarithmic, but at worst still linear. Therefore, in a
+big-data perspective, our enumeration algorithm for SLP-compressed documents
+may nevertheless beat the known linear preprocessing and constant delay
+algorithms for non-compressed documents.
+</summary>
+    <author>
+      <name>Markus L. Schmid</name>
+    </author>
+    <author>
+      <name>Nicole Schweikardt</name>
+    </author>
+    <link href="http://arxiv.org/abs/2101.10890v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2101.10890v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2009.11514">
+    <id>http://arxiv.org/abs/2009.11514v1</id>
+    <updated>2020-09-24T06:50:27Z</updated>
+    <published>2020-09-24T06:50:27Z</published>
+    <title>On One-way Functions and Kolmogorov Complexity</title>
+    <summary>  We prove that the equivalence of two fundamental problems in the theory of
+computing. For every polynomial $t(n)\geq (1+\varepsilon)n, \varepsilon>0$, the
+following are equivalent:
+  - One-way functions exists (which in turn is equivalent to the existence of
+secure private-key encryption schemes, digital signatures, pseudorandom
+generators, pseudorandom functions, commitment schemes, and more);
+  - $t$-time bounded Kolmogorov Complexity, $K^t$, is mildly hard-on-average
+(i.e., there exists a polynomial $p(n)>0$ such that no PPT algorithm can
+compute $K^t$, for more than a $1-\frac{1}{p(n)}$ fraction of $n$-bit strings).
+  In doing so, we present the first natural, and well-studied, computational
+problem characterizing the feasibility of the central private-key primitives
+and protocols in Cryptography.
+</summary>
+    <author>
+      <name>Yanyi Liu</name>
+    </author>
+    <author>
+      <name>Rafael Pass</name>
+    </author>
+    <link href="http://arxiv.org/abs/2009.11514v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2009.11514v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2010.08840">
+    <id>http://arxiv.org/abs/2010.08840v1</id>
+    <updated>2020-10-17T18:24:08Z</updated>
+    <published>2020-10-17T18:24:08Z</published>
+    <title>Lazy Search Trees</title>
+    <summary>  We introduce the lazy search tree data structure. The lazy search tree is a
+comparison-based data structure on the pointer machine that supports
+order-based operations such as rank, select, membership, predecessor,
+successor, minimum, and maximum while providing dynamic operations insert,
+delete, change-key, split, and merge. We analyze the performance of our data
+structure based on a partition of current elements into a set of gaps
+$\{\Delta_i\}$ based on rank. A query falls into a particular gap and splits
+the gap into two new gaps at a rank $r$ associated with the query operation. If
+we define $B = \sum_i |\Delta_i| \log_2(n/|\Delta_i|)$, our performance over a
+sequence of $n$ insertions and $q$ distinct queries is $O(B + \min(n \log \log
+n, n \log q))$. We show $B$ is a lower bound.
+  Effectively, we reduce the insertion time of binary search trees from
+$\Theta(\log n)$ to $O(\min(\log(n/|\Delta_i|) + \log \log |\Delta_i|, \; \log
+q))$, where $\Delta_i$ is the gap in which the inserted element falls. Over a
+sequence of $n$ insertions and $q$ queries, a time bound of $O(n \log q + q
+\log n)$ holds; better bounds are possible when queries are non-uniformly
+distributed. As an extreme case of non-uniformity, if all queries are for the
+minimum element, the lazy search tree performs as a priority queue with $O(\log
+\log n)$ time insert and decrease-key operations. The same data structure
+supports queries for any rank, interpolating between binary search trees and
+efficient priority queues.
+  Lazy search trees can be implemented to operate mostly on arrays, requiring
+only $O(\min(q, n))$ pointers. Via direct reduction, our data structure also
+supports the efficient access theorems of the splay tree, providing a powerful
+data structure for non-uniform element access, both when the number of accesses
+is small and large.
+</summary>
+    <author>
+      <name>Bryce Sandlund</name>
+    </author>
+    <author>
+      <name>Sebastian Wild</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted for publication in FOCS 2020</arxiv:comment>
+    <link href="http://arxiv.org/abs/2010.08840v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2010.08840v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2101.07360">
+    <id>http://arxiv.org/abs/2101.07360v1</id>
+    <updated>2021-01-18T22:55:32Z</updated>
+    <published>2021-01-18T22:55:32Z</published>
+    <title>Dynamic Longest Increasing Subsequence and the Erdös-Szekeres
+  Partitioning Problem</title>
+    <summary>  In this paper, we provide new approximation algorithms for dynamic variations
+of the longest increasing subsequence (\textsf{LIS}) problem, and the
+complementary distance to monotonicity (\textsf{DTM}) problem. In this setting,
+operations of the following form arrive sequentially: (i) add an element, (ii)
+remove an element, or (iii) substitute an element for another. At every point
+in time, the algorithm has an approximation to the longest increasing
+subsequence (or distance to monotonicity). We present a
+$(1+\epsilon)$-approximation algorithm for \textsf{DTM} with polylogarithmic
+worst-case update time and a constant factor approximation algorithm for
+\textsf{LIS} with worst-case update time $\tilde O(n^\epsilon)$ for any
+constant $\epsilon > 0$.% $n$ in the runtime denotes the size of the array at
+the time the operation arrives.
+  Our dynamic algorithm for \textsf{LIS} leads to an almost optimal algorithm
+for the Erd\"{o}s-Szekeres partitioning problem. Erd\"{o}s-Szekeres
+partitioning problem was introduced by Erd\"{o}s and Szekeres in 1935 and was
+known to be solvable in time $O(n^{1.5}\log n)$. Subsequent work improve the
+runtime to $O(n^{1.5})$ only in 1998. Our dynamic \textsf{LIS} algorithm leads
+to a solution for Erd\"{o}s-Szekeres partitioning problem with runtime $\tilde
+O_{\epsilon}(n^{1+\epsilon})$ for any constant $\epsilon > 0$.
+</summary>
+    <author>
+      <name>Michael Mitzenmacher</name>
+    </author>
+    <author>
+      <name>Saeed Seddighin</name>
+    </author>
+    <link href="http://arxiv.org/abs/2101.07360v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2101.07360v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2103.00462">
+    <id>http://arxiv.org/abs/2103.00462v1</id>
+    <updated>2021-02-28T11:28:13Z</updated>
+    <published>2021-02-28T11:28:13Z</published>
+    <title>Weighted Ancestors in Suffix Trees Revisited</title>
+    <summary>  The weighted ancestor problem is a well-known generalization of the
+predecessor problem to trees. It is known that it requires $\Omega(\log\log n)$
+time for queries provided $O(n\mathop{\mathrm{polylog}} n)$ space is available
+and weights are from $[0..n]$, where $n$ is the number of tree nodes. However,
+when applied to suffix trees, the problem, surprisingly, admits an $O(n)$-space
+solution with constant query time as was shown by Gawrychowski, Lewenstein, and
+Nicholson. This variant of the problem can be reformulated as follows: given
+the suffix tree of a string $s$, we need a data structure that can locate in
+the tree any substring $s[p..q]$ of $s$ in $O(1)$ time (as if one descended
+from the root reading $s[p..q]$ along the way). Unfortunately, the data
+structure of Gawrychowski et al. has no efficient construction algorithm, which
+apparently prevents its wide usage. In this paper we resolve this issue
+describing a data structure for weighted ancestors in suffix trees with
+constant query time and a linear construction algorithm. Our solution is based
+on a novel approach using so-called irreducible LCP values.
+</summary>
+    <author>
+      <name>Djamal Belazzougui</name>
+    </author>
+    <author>
+      <name>Dmitry Kosolobov</name>
+    </author>
+    <author>
+      <name>Simon J. Puglisi</name>
+    </author>
+    <author>
+      <name>Rajeev Raman</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">15 pages, 5 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2103.00462v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2103.00462v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2103.00713">
+    <id>http://arxiv.org/abs/2103.00713v1</id>
+    <updated>2021-03-01T02:49:34Z</updated>
+    <published>2021-03-01T02:49:34Z</published>
+    <title>Lower Bounds and Improved Algorithms for Asymmetric Streaming Edit
+  Distance and Longest Common Subsequence</title>
+    <summary>  In this paper, we study edit distance (ED) and longest common subsequence
+(LCS) in the asymmetric streaming model, introduced by Saks and Seshadhri
+[SS13]. As an intermediate model between the random access model and the
+streaming model, this model allows one to have streaming access to one string
+and random access to the other string.
+  Our first main contribution is a systematic study of space lower bounds for
+ED and LCS in the asymmetric streaming model. Previously, there are no
+explicitly stated results in this context, although some lower bounds about LCS
+can be inferred from the lower bounds for longest increasing subsequence (LIS)
+in [SW07][GG10][EJ08]. Yet these bounds only work for large alphabet size. In
+this paper, we develop several new techniques to handle ED in general and LCS
+for small alphabet size, thus establishing strong lower bounds for both
+problems. In particular, our lower bound for ED provides an exponential
+separation between edit distance and Hamming distance in the asymmetric
+streaming model. Our lower bounds also extend to LIS and longest non-decreasing
+sequence (LNS) in the standard streaming model. Together with previous results,
+our bounds provide an almost complete picture for these two problems.
+  As our second main contribution, we give improved algorithms for ED and LCS
+in the asymmetric streaming model. For ED, we improve the space complexity of
+the constant factor approximation algorithms in [FHRS20][CJLZ20] from
+$\tilde{O}(\frac{n^\delta}{\delta})$ to
+$O(\frac{d^\delta}{\delta}\;\mathsf{polylog}(n))$, where $n$ is the length of
+each string and $d$ is the edit distance between the two strings. For LCS, we
+give the first $1/2+\epsilon$ approximation algorithm with space $n^{\delta}$
+for any constant $\delta>0$, over a binary alphabet.
+</summary>
+    <author>
+      <name>Xin Li</name>
+    </author>
+    <author>
+      <name>Yu Zheng</name>
+    </author>
+    <link href="http://arxiv.org/abs/2103.00713v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2103.00713v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2103.01052">
+    <id>http://arxiv.org/abs/2103.01052v2</id>
+    <updated>2021-03-09T14:45:51Z</updated>
+    <published>2021-03-01T14:50:29Z</published>
+    <title>On the Cost of Unsuccessful Searches in Search Trees with Two-way
+  Comparisons</title>
+    <summary>  Search trees are commonly used to implement access operations to a set of
+stored keys. If this set is static and the probabilities of membership queries
+are known in advance, then one can precompute an optimal search tree, namely
+one that minimizes the expected access cost. For a non-key query, a search tree
+can determine its approximate location by returning the inter-key interval
+containing the query. This is in contrast to other dictionary data structures,
+like hash tables, that only report a failed search. We address the question
+"what is the additional cost of determining approximate locations for non-key
+queries"? We prove that for two-way comparison trees this additional cost is at
+most 1. Our proof is based on a novel probabilistic argument that involves
+converting a search tree that does not identify non-key queries into a random
+tree that does.
+</summary>
+    <author>
+      <name>Marek Chrobak</name>
+    </author>
+    <author>
+      <name>Mordecai Golin</name>
+    </author>
+    <author>
+      <name>J. Ian Munro</name>
+    </author>
+    <author>
+      <name>Neal E. Young</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1016/j.ic.2021.104707</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1016/j.ic.2021.104707" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">v2 has updated bibliography</arxiv:comment>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">Information and Computation (2021)</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2103.01052v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2103.01052v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68P10, 68P30, 68W25, 94A45" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="E.4; G.1.6; G.2.2; H.3.1; I.4.2" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2103.01084">
+    <id>http://arxiv.org/abs/2103.01084v2</id>
+    <updated>2021-03-09T16:14:30Z</updated>
+    <published>2021-03-01T15:53:28Z</published>
+    <title>A Simple Algorithm for Optimal Search Trees with Two-Way Comparisons</title>
+    <summary>  We present a simple $O(n^4)$-time algorithm for computing optimal search
+trees with two-way comparisons. The only previous solution to this problem, by
+Anderson et al., has the same running time, but is significantly more
+complicated and is restricted to the variant where only successful queries are
+allowed. Our algorithm extends directly to solve the standard full variant of
+the problem, which also allows unsuccessful queries and for which no
+polynomial-time algorithm was previously known. The correctness proof of our
+algorithm relies on a new structural theorem for two-way-comparison search
+trees.
+</summary>
+    <author>
+      <name>Marek Chrobak</name>
+    </author>
+    <author>
+      <name>Mordecai Golin</name>
+    </author>
+    <author>
+      <name>J. Ian Munro</name>
+    </author>
+    <author>
+      <name>Neal E. Young</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">v2 has updated references</arxiv:comment>
+    <link href="http://arxiv.org/abs/2103.01084v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2103.01084v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68P10, 68P30, 68W25, 94A45" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="E.4; G.1.6; G.2.2; H.3.1; I.4.2" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2102.12824">
+    <id>http://arxiv.org/abs/2102.12824v2</id>
+    <updated>2021-02-27T07:28:28Z</updated>
+    <published>2021-02-25T12:51:33Z</published>
+    <title>A Linear Time Algorithm for Constructing Hierarchical Overlap Graphs</title>
+    <summary>  The hierarchical overlap graph (HOG) is a graph that encodes overlaps from a
+given set P of n strings, as the overlap graph does. A best known algorithm
+constructs HOG in O(||P|| log n) time and O(||P||) space, where ||P|| is the
+sum of lengths of the strings in P. In this paper we present a new algorithm to
+construct HOG in O(||P||) time and space. Hence, the construction time and
+space of HOG are better than those of the overlap graph, which are O(||P|| +
+n^2).
+</summary>
+    <author>
+      <name>Sangsoo Park</name>
+    </author>
+    <author>
+      <name>Sung Gwan Park</name>
+    </author>
+    <author>
+      <name>Bastien Cazaux</name>
+    </author>
+    <author>
+      <name>Kunsoo Park</name>
+    </author>
+    <author>
+      <name>Eric Rivals</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 2 figures, submitted to CPM 2021</arxiv:comment>
+    <link href="http://arxiv.org/abs/2102.12824v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2102.12824v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2102.12822">
+    <id>http://arxiv.org/abs/2102.12822v3</id>
+    <updated>2021-03-17T18:39:58Z</updated>
+    <published>2021-02-25T12:47:13Z</published>
+    <title>Algorithms and Complexity on Indexing Founder Graphs</title>
+    <summary>  We introduce a compact pangenome representation based on an optimal
+segmentation concept that aims to reconstruct founder sequences from a multiple
+sequence alignment (MSA). Such founder sequences have the feature that each row
+of the MSA is a recombination of the founders. Several linear time dynamic
+programming algorithms have been previously devised to optimize segmentations
+that induce founder blocks that then can be concatenated into a set of founder
+sequences. All possible concatenation orders can be expressed as a founder
+graph. We observe a key property of such graphs: if the node labels (founder
+segments) do not repeat in the paths of the graph, such graphs can be indexed
+for efficient string matching. We call such graphs repeat-free founder graphs
+when constructed from a gapless MSA and repeat-free elastic founder graphs when
+constructed from a general MSA with gaps. We give a linear time algorithm and a
+parameterized near linear time algorithm to construct a repeat-free founder
+graph and a repeat-free elastic founder graph, respectively. We derive a
+tailored succinct index structure to support queries of arbitrary length in the
+paths of a repeat-free (elastic) founder graph. In addition, we show how to
+turn a repeat-free (elastic) founder graph into a Wheeler graph in polynomial
+time. Furthermore, we show that a property such as repeat-freeness is essential
+for indexability. In particular, we show that unless the Strong Exponential
+Time Hypothesis (SETH) fails, one cannot build an index on an elastic founder
+graph in polynomial time to support fast queries.
+</summary>
+    <author>
+      <name>Massimo Equi</name>
+    </author>
+    <author>
+      <name>Tuukka Norri</name>
+    </author>
+    <author>
+      <name>Jarno Alanko</name>
+    </author>
+    <author>
+      <name>Bastien Cazaux</name>
+    </author>
+    <author>
+      <name>Alexandru I. Tomescu</name>
+    </author>
+    <author>
+      <name>Veli Mäkinen</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">This is an extended version of WABI 2020 paper
+  (https://doi.org/10.4230/LIPIcs.WABI.2020.7), whose preprint is in
+  arXiv:2005.09342</arxiv:comment>
+    <link href="http://arxiv.org/abs/2102.12822v3" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2102.12822v3" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="E.1; E.4; F.1.3; F.2.2" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2102.11797">
+    <id>http://arxiv.org/abs/2102.11797v1</id>
+    <updated>2021-02-23T17:04:25Z</updated>
+    <published>2021-02-23T17:04:25Z</published>
+    <title>Conditional Lower Bounds for Variants of Dynamic LIS</title>
+    <summary>  In this note, we consider the complexity of maintaining the longest
+increasing subsequence (LIS) of an array under (i) inserting an element, and
+(ii) deleting an element of an array. We show that no algorithm can support
+queries and updates in time $\mathcal{O}(n^{1/2-\epsilon})$ and
+$\mathcal{O}(n^{1/3-\epsilon})$ for the dynamic LIS problem, for any constant
+$\epsilon>0$, when the elements are weighted or the algorithm supports
+1D-queries (on subarrays), respectively, assuming the All-Pairs Shortest Paths
+(APSP) conjecture or the Online Boolean Matrix-Vector Multiplication (OMv)
+conjecture. The main idea in our construction comes from the work of Abboud and
+Dahlgaard [FOCS 2016], who proved conditional lower bounds for dynamic planar
+graph algorithm. However, this needs to be appropriately adjusted and
+translated to obtain an instance of the dynamic LIS problem.
+</summary>
+    <author>
+      <name>Paweł Gawrychowski</name>
+    </author>
+    <author>
+      <name>Wojciech Janczewski</name>
+    </author>
+    <link href="http://arxiv.org/abs/2102.11797v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2102.11797v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2102.09463">
+    <id>http://arxiv.org/abs/2102.09463v1</id>
+    <updated>2021-02-18T16:25:13Z</updated>
+    <published>2021-02-18T16:25:13Z</published>
+    <title>Range Minimum Queries in Minimal Space</title>
+    <summary>  We consider the problem of computing a sequence of range minimum queries. We
+assume a sequence of commands that contains values and queries. Our goal is to
+quickly determine the minimum value that exists between the current position
+and a previous position $i$. Range minimum queries are used as a sub-routine of
+several algorithms, namely related to string processing. We propose a data
+structure that can process these commands sequences. We obtain efficient
+results for several variations of the problem, in particular we obtain $O(1)$
+time per command for the offline version and $O(\alpha(n))$ amortized time for
+the online version, where $\alpha(n)$ is the inverse Ackermann function and $n$
+the number of values in the sequence. This data structure also has very small
+space requirements, namely $O(\ell)$ where $\ell$ is the maximum number active
+$i$ positions. We implemented our data structure and show that it is
+competitive against existing alternatives. We obtain comparable command
+processing time, in the nano second range, and much smaller space requirements.
+</summary>
+    <author>
+      <name>Luís M. S. Russo</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">29 pages, 3 figures, 3 tables, 6 algorithms</arxiv:comment>
+    <link href="http://arxiv.org/abs/2102.09463v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2102.09463v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2102.08670">
+    <id>http://arxiv.org/abs/2102.08670v1</id>
+    <updated>2021-02-17T10:25:06Z</updated>
+    <published>2021-02-17T10:25:06Z</published>
+    <title>Linear Time Runs over General Ordered Alphabets</title>
+    <summary>  A run in a string is a maximal periodic substring. For example, the string
+$\texttt{bananatree}$ contains the runs $\texttt{anana} = (\texttt{an})^{3/2}$
+and $\texttt{ee} = \texttt{e}^2$. There are less than $n$ runs in any
+length-$n$ string, and computing all runs for a string over a linearly-sortable
+alphabet takes $\mathcal{O}(n)$ time (Bannai et al., SODA 2015). Kosolobov
+conjectured that there also exists a linear time runs algorithm for general
+ordered alphabets (Inf. Process. Lett. 2016). The conjecture was almost proven
+by Crochemore et al., who presented an $\mathcal{O}(n\alpha(n))$ time algorithm
+(where $\alpha(n)$ is the extremely slowly growing inverse Ackermann function).
+We show how to achieve $\mathcal{O}(n)$ time by exploiting combinatorial
+properties of the Lyndon array, thus proving Kosolobov's conjecture.
+</summary>
+    <author>
+      <name>Jonas Ellert</name>
+    </author>
+    <author>
+      <name>Johannes Fischer</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">This work has been submitted to ICALP 2021</arxiv:comment>
+    <link href="http://arxiv.org/abs/2102.08670v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2102.08670v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2102.06798">
+    <id>http://arxiv.org/abs/2102.06798v1</id>
+    <updated>2021-02-12T22:25:30Z</updated>
+    <published>2021-02-12T22:25:30Z</published>
+    <title>Which Regular Languages can be Efficiently Indexed?</title>
+    <summary>  In the present work, we study the hierarchy of $p$-sortable languages:
+regular languages accepted by automata of width $p$. In this hierarchy, regular
+languages are sorted according to the new fundamental measure of NFA complexity
+$p$. Our main contributions are the following: (i) we show that the hierarchy
+is strict and does not collapse, (ii) we provide (exponential) upper and lower
+bounds relating the minimum widths of equivalent NFAs and DFAs, and (iii) we
+characterize DFAs of minimum $p$ for a given $\mathcal L$ via a
+co-lexicographic variant of the Myhill-Nerode theorem. Our findings imply that
+in polynomial time we can build an index breaking the worst-case conditional
+lower bound of $\Omega(\pi m)$, whenever the input NFA's width is at most
+$\epsilon \log_2 m$, for any constant $0 \leq \epsilon &lt; 1/2$.
+</summary>
+    <author>
+      <name>Nicola Cotumaccio</name>
+    </author>
+    <author>
+      <name>Giovanna D'Agostino</name>
+    </author>
+    <author>
+      <name>Alberto Policriti</name>
+    </author>
+    <author>
+      <name>Nicola Prezza</name>
+    </author>
+    <link href="http://arxiv.org/abs/2102.06798v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2102.06798v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2103.05460">
+    <id>http://arxiv.org/abs/2103.05460v1</id>
+    <updated>2021-03-09T14:50:49Z</updated>
+    <published>2021-03-09T14:50:49Z</published>
+    <title>Dynamic Range Mode Enumeration</title>
+    <summary>  The range mode problem is a fundamental problem and there is a lot of work
+about it. There is also some work for the dynamic version of it and the
+enumerating version of it, but there is no previous research about the dynamic
+and enumerating version of it. We found an efficient algorithm for it.
+</summary>
+    <author>
+      <name>Tetto Obata</name>
+    </author>
+    <link href="http://arxiv.org/abs/2103.05460v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2103.05460v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2103.03468">
+    <id>http://arxiv.org/abs/2103.03468v1</id>
+    <updated>2021-03-05T04:35:35Z</updated>
+    <published>2021-03-05T04:35:35Z</published>
+    <title>Compressed Communication Complexity of Hamming Distance</title>
+    <summary>  We consider the communication complexity of the Hamming distance of two
+strings. Bille et al. [SPIRE 2018] considered the communication complexity of
+the longest common prefix (LCP) problem in the setting where the two parties
+have their strings in a compressed form, i.e., represented by the Lempel-Ziv 77
+factorization (LZ77) with/without self-references. We present a randomized
+public-coin protocol for a joint computation of the Hamming distance of two
+strings represented by LZ77 without self-references. While our scheme is
+heavily based on Bille et al.'s LCP protocol, our complexity analysis is
+original which uses Crochemore's C-factorization and Rytter's AVL-grammar. As a
+byproduct, we also show that LZ77 with/without self-references are not
+monotonic in the sense that their sizes can increase by a factor of 4/3 when a
+prefix of the string is removed.
+</summary>
+    <author>
+      <name>Shiori Mitsuya</name>
+    </author>
+    <author>
+      <name>Yuto Nakashima</name>
+    </author>
+    <author>
+      <name>Shunsuke Inenaga</name>
+    </author>
+    <author>
+      <name>Hideo Bannai</name>
+    </author>
+    <author>
+      <name>Masayuki Takeda</name>
+    </author>
+    <link href="http://arxiv.org/abs/2103.03468v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2103.03468v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2103.03294">
+    <id>http://arxiv.org/abs/2103.03294v1</id>
+    <updated>2021-03-04T20:07:00Z</updated>
+    <published>2021-03-04T20:07:00Z</published>
+    <title>An Almost Optimal Edit Distance Oracle</title>
+    <summary>  We consider the problem of preprocessing two strings $S$ and $T$, of lengths
+$m$ and $n$, respectively, in order to be able to efficiently answer the
+following queries: Given positions $i,j$ in $S$ and positions $a,b$ in $T$,
+return the optimal alignment of $S[i \mathinner{.\,.} j]$ and $T[a
+\mathinner{.\,.} b]$. Let $N=mn$. We present an oracle with preprocessing time
+$N^{1+o(1)}$ and space $N^{1+o(1)}$ that answers queries in $\log^{2+o(1)}N$
+time. In other words, we show that we can query the alignment of every two
+substrings in almost the same time it takes to compute just the alignment of
+$S$ and $T$. Our oracle uses ideas from our distance oracle for planar graphs
+[STOC 2019] and exploits the special structure of the alignment graph.
+Conditioned on popular hardness conjectures, this result is optimal up to
+subpolynomial factors. Our results apply to both edit distance and longest
+common subsequence (LCS).
+  The best previously known oracle with construction time and size
+$\mathcal{O}(N)$ has slow $\Omega(\sqrt{N})$ query time [Sakai, TCS 2019], and
+the one with size $N^{1+o(1)}$ and query time $\log^{2+o(1)}N$ (using a planar
+graph distance oracle) has slow $\Omega(N^{3/2})$ construction time [Long &amp;
+Pettie, SODA 2021]. We improve both approaches by roughly a $\sqrt N$ factor.
+</summary>
+    <author>
+      <name>Panagiotis Charalampopoulos</name>
+    </author>
+    <author>
+      <name>Paweł Gawrychowski</name>
+    </author>
+    <author>
+      <name>Shay Mozes</name>
+    </author>
+    <author>
+      <name>Oren Weimann</name>
+    </author>
+    <link href="http://arxiv.org/abs/2103.03294v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2103.03294v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
   </entry></articles>

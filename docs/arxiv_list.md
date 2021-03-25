@@ -1,4 +1,93 @@
 # Arxiv Papers
+## 2021/3/
+- [Dynamic Range Mode Enumeration](https://arxiv.org/abs/2103.05460)
+- [Compressed Communication Complexity of Hamming Distance](https://arxiv.org/abs/2103.03468)
+- [An Almost Optimal Edit Distance Oracle](https://arxiv.org/abs/2103.03294)
+- [A Simple Algorithm for Optimal Search Trees with Two-Way Comparisons](https://arxiv.org/abs/2103.01084)
+- [On the Cost of Unsuccessful Searches in Search Trees with Two-way
+  Comparisons](https://arxiv.org/abs/2103.01052)
+- [Lower Bounds and Improved Algorithms for Asymmetric Streaming Edit
+  Distance and Longest Common Subsequence](https://arxiv.org/abs/2103.00713)
+## 2021/2/
+- [Weighted Ancestors in Suffix Trees Revisited](https://arxiv.org/abs/2103.00462)
+- [A Linear Time Algorithm for Constructing Hierarchical Overlap Graphs](https://arxiv.org/abs/2102.12824)
+- [Algorithms and Complexity on Indexing Founder Graphs](https://arxiv.org/abs/2102.12822)
+- [Conditional Lower Bounds for Variants of Dynamic LIS](https://arxiv.org/abs/2102.11797)
+- [Range Minimum Queries in Minimal Space](https://arxiv.org/abs/2102.09463)
+- [Linear Time Runs over General Ordered Alphabets](https://arxiv.org/abs/2102.08670)
+- [Which Regular Languages can be Efficiently Indexed?](https://arxiv.org/abs/2102.06798)
+- [Efficient construction of the extended BWT from grammar-compressed DNA
+  sequencing reads](https://arxiv.org/abs/2102.03961)
+- [Gapped Indexing for Consecutive Occurrences](https://arxiv.org/abs/2102.02505)
+## 2021/1/
+- [$r$-indexing Wheeler graphs](https://arxiv.org/abs/2101.12341)
+- [Deriving monadic quicksort (Declarative Pearl)](https://arxiv.org/abs/2101.11421)
+- [Entropy of Mersenne-Twisters](https://arxiv.org/abs/2101.11350)
+- [Spanner Evaluation over SLP-Compressed Documents](https://arxiv.org/abs/2101.10890)
+- [Dynamic Longest Increasing Subsequence and the Erdös-Szekeres
+  Partitioning Problem](https://arxiv.org/abs/2101.07360)
+- [Improving Run Length Encoding by Preprocessing](https://arxiv.org/abs/2101.05329)
+- [Number Parsing at a Gigabyte per Second](https://arxiv.org/abs/2101.11408)
+- [Strictly In-Place Algorithms for Permuting and Inverting Permutations](https://arxiv.org/abs/2101.03978)
+- [Cantor Mapping Technique](https://arxiv.org/abs/2101.03165)
+- [Binary Dynamic Time Warping in Linear Time](https://arxiv.org/abs/2101.01108)
+- [Text Searching Allowing for Non-Overlapping Adjacent Unbalanced
+  Translocations](https://arxiv.org/abs/2101.00718)
+- [SetSketch: Filling the Gap between MinHash and HyperLogLog](https://arxiv.org/abs/2101.00314)
+- [Chunk List: Concurrent Data Structures](https://arxiv.org/abs/2101.00172)
+## 2020/12/
+- [Arithmetic Binary Search Trees: Static Optimality in the Matching Model](https://arxiv.org/abs/2012.13698)
+- [Integer Division by Constants: Optimal Bounds](https://arxiv.org/abs/2012.12369)
+- [The Parameterized Suffix Tray](https://arxiv.org/abs/2012.10092)
+- [Quantum Algorithm for Lexicographically Minimal String Rotation](https://arxiv.org/abs/2012.09376)
+- [Greedy-reduction from Shortest Linear Superstring to Shortest Circular
+  Superstring](https://arxiv.org/abs/2012.08878)
+- [Sorting Lists with Equal Keys Using Mergesort in Linear Time](https://arxiv.org/abs/2012.08589)
+- [A New Approach to Regular & Indeterminate Strings](https://arxiv.org/abs/2012.07892)
+- [String Attractors for Automatic Sequences](https://arxiv.org/abs/2012.06840)
+- [Galloping in natural merge sorts](https://arxiv.org/abs/2012.03996)
+- [Counting ternary square-free words quickly](https://arxiv.org/abs/2012.03926)
+- [Huskysort](https://arxiv.org/abs/2012.00866)
+## 2020/11/
+- [Grammar Compression By Induced Suffix Sorting](https://arxiv.org/abs/2011.12898)
+- [Left Lyndon tree construction](https://arxiv.org/abs/2011.12742)
+- [Selectable Heaps and Optimal Lazy Search Trees](https://arxiv.org/abs/2011.11772)
+- [Improved Dynamic Algorithms for Longest Increasing Subsequence](https://arxiv.org/abs/2011.10874)
+- [Erdös-Szekeres Partitioning Problem](https://arxiv.org/abs/2011.10870)
+- [Subpath Queries on Compressed Graphs: a Survey](https://arxiv.org/abs/2011.10008)
+- [Fully Dynamic Approximation of LIS in Polylogarithmic Time](https://arxiv.org/abs/2011.09761)
+- [The Longest Run Subsequence Problem: Further Complexity Results](https://arxiv.org/abs/2011.08119)
+- [Substring Query Complexity of String Reconstruction](https://arxiv.org/abs/2011.07143)
+- [A grammar compressor for collections of reads with applications to the
+  construction of the BWT](https://arxiv.org/abs/2011.07999)
+- [PHONI: Streamed Matching Statistics with Multi-Genome References](https://arxiv.org/abs/2011.05610)
+- [Scout Algorithm For Fast Substring Matching](https://arxiv.org/abs/2011.04010)
+## 2020/10/
+- [Solving Shisen-Sho boards](https://arxiv.org/abs/2010.09014)
+- [Lazy Search Trees](https://arxiv.org/abs/2010.08840)
+- [Lazy Search Trees](https://arxiv.org/abs/2010.08840)
+- [Efficient constructions of the Prefer-same and Prefer-opposite de Bruijn
+  sequences](https://arxiv.org/abs/2010.07960)
+- [Contextual Pattern Matching](https://arxiv.org/abs/2010.07076)
+- [New Sublinear Algorithms and Lower Bounds for LIS Estimation](https://arxiv.org/abs/2010.05805)
+- [Decode efficient prefix codes](https://arxiv.org/abs/2010.05005)
+- [A Tale of Two Trees: New Analysis for AVL Tree and Binary Heap](https://arxiv.org/abs/2010.04752)
+## 2020/9/
+- [A Case for Partitioned Bloom Filters](https://arxiv.org/abs/2009.11789)
+- [Dynamic Similarity Search on Integer Sketches](https://arxiv.org/abs/2009.11559)
+- [On One-way Functions and Kolmogorov Complexity](https://arxiv.org/abs/2009.11514)
+- [Space/time-efficient RDF stores based on circular suffix sorting](https://arxiv.org/abs/2009.10045)
+- [TADOC: Text Analytics Directly on Compression](https://arxiv.org/abs/2009.09442)
+- [Longest Common Subsequence in Sublinear Space](https://arxiv.org/abs/2009.08588)
+- [A Normal Sequence Compressed by PPM$^*$ but not by Lempel-Ziv 78](https://arxiv.org/abs/2009.04827)
+- [Pushdown and Lempel-Ziv Depth](https://arxiv.org/abs/2009.04821)
+- [A Fast Randomized Algorithm for Finding the Maximal Common Subsequences](https://arxiv.org/abs/2009.03352)
+- [On prefix palindromic length of automatic words](https://arxiv.org/abs/2009.02934)
+- [Space efficient merging of de Bruijn graphs and Wheeler graphs](https://arxiv.org/abs/2009.03675)
+- [Access-Adaptive Priority Search Tree](https://arxiv.org/abs/2009.02233)
+- [Zuckerli: A New Compressed Representation for Graphs](https://arxiv.org/abs/2009.01353)
+## 2020/8/
+- [Tight Bound for the Number of Distinct Palindromes in a Tree](https://arxiv.org/abs/2008.13209)
 ## 2020/7/
 - [Optimal construction of a layer-ordered heap](https://arxiv.org/abs/2007.13356)
 - [Beyond the Worst-Case Analysis of Algorithms (Introduction)](https://arxiv.org/abs/2007.13241)
