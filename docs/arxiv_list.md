@@ -1,5 +1,41 @@
 # Arxiv Papers
+## 2021/5/
+- [A new distance based on minimal absent words and applications to
+  biological sequences](https://arxiv.org/abs/2105.14990)
+- [Lower Bounds for the Number of Repetitions in 2D Strings](https://arxiv.org/abs/2105.14903)
+- [Grammar Index By Induced Suffix Sorting](https://arxiv.org/abs/2105.13744)
+- [On Stricter Reachable Repetitiveness Measures*](https://arxiv.org/abs/2105.13595)
+- [Minimal unique palindromic substrings after single-character
+  substitution](https://arxiv.org/abs/2105.11693)
+- [Fast and Space-Efficient Construction of AVL Grammars from the LZ77
+  Parsing](https://arxiv.org/abs/2105.11052)
+- [Support Optimality and Adaptive Cuckoo Filters](https://arxiv.org/abs/2105.10622)
+- [Weighted Burrows-Wheeler Compression](https://arxiv.org/abs/2105.10327)
+- [Combinatorics of minimal absent words for a sliding window](https://arxiv.org/abs/2105.08496)
+- [N-ary Huffman Encoding Using High-Degree Trees -- A Performance
+  Comparison](https://arxiv.org/abs/2105.07073)
+- [The Dynamic k-Mismatch Problem](https://arxiv.org/abs/2105.06166)
+- [Compact Euler Tours of Trees with Small Maximum Degree](https://arxiv.org/abs/2105.04965)
+- [Tree Edit Distance with Variables. Measuring the Similarity between
+  Mathematical Formulas](https://arxiv.org/abs/2105.04802)
+- [Construction of Sparse Suffix Trees and LCE Indexes in Optimal Time and
+  Space](https://arxiv.org/abs/2105.03782)
+- [Faster Algorithms for Longest Common Substring](https://arxiv.org/abs/2105.03106)
+- [Improved Approximation for Longest Common Subsequence over Small
+  Alphabets](https://arxiv.org/abs/2105.03028)
+- [Faster Algorithms for Bounded Tree Edit Distance](https://arxiv.org/abs/2105.02428)
+## 2021/4/
+- [Hypersuccinct Trees -- New universal tree source codes for optimal
+  compressed tree data structures](https://arxiv.org/abs/2104.13457)
+- [HINT: A Hierarchical Index for Intervals in Main Memory](https://arxiv.org/abs/2104.10939)
+- [PTHash: Revisiting FCH Minimal Perfect Hashing](https://arxiv.org/abs/2104.10402)
+- [A Separation of $γ$ and $b$ via Thue--Morse Words](https://arxiv.org/abs/2104.09985)
+- [Load-Balancing Succinct B Trees](https://arxiv.org/abs/2104.08751)
+- [Engineering Predecessor Data Structures for Dynamic Integer Sets](https://arxiv.org/abs/2104.06740)
+- [Engineering Predecessor Data Structures for Dynamic Integer Sets](https://arxiv.org/abs/2104.06740)
+- [Sorted Range Reporting](https://arxiv.org/abs/2104.02461)
 ## 2021/3/
+- [A Fast and Small Subsampled R-index](https://arxiv.org/abs/2103.15329)
 - [Dynamic Range Mode Enumeration](https://arxiv.org/abs/2103.05460)
 - [Compressed Communication Complexity of Hamming Distance](https://arxiv.org/abs/2103.03468)
 - [An Almost Optimal Edit Distance Oracle](https://arxiv.org/abs/2103.03294)
@@ -13,6 +49,7 @@
 - [A Linear Time Algorithm for Constructing Hierarchical Overlap Graphs](https://arxiv.org/abs/2102.12824)
 - [Algorithms and Complexity on Indexing Founder Graphs](https://arxiv.org/abs/2102.12822)
 - [Conditional Lower Bounds for Variants of Dynamic LIS](https://arxiv.org/abs/2102.11797)
+- [Sorting Short Integers](https://arxiv.org/abs/2102.10027)
 - [Range Minimum Queries in Minimal Space](https://arxiv.org/abs/2102.09463)
 - [Linear Time Runs over General Ordered Alphabets](https://arxiv.org/abs/2102.08670)
 - [Which Regular Languages can be Efficiently Indexed?](https://arxiv.org/abs/2102.06798)
