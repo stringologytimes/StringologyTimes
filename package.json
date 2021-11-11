@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "sync-request": "^6.1.0",
-    "xmldom": "^0.3.0"
+    "xmldom": "^0.6.0"
   },
   "devDependencies": {},
   "scripts": {
