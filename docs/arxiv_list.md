@@ -20,11 +20,8 @@
 - [On Solving the Minimum Common String Partition Problem by Decision
   Diagrams](https://arxiv.org/abs/2110.05168)
 - [FM-Indexing Grammars Induced by Suffix Sorting for Long Patterns](https://arxiv.org/abs/2110.01181)
-- [FM-Indexing Grammars Induced by Suffix Sorting for Long Patterns](https://arxiv.org/abs/2110.01181)
 - [Is this the simplest (and most surprising) sorting algorithm ever?](https://arxiv.org/abs/2110.01111)
 ## 2021/9/
-- [Resilient Level Ancestor, Bottleneck, and Lowest Common Ancestor Queries
-  in Dynamic Trees](https://arxiv.org/abs/2109.09588)
 - [Resilient Level Ancestor, Bottleneck, and Lowest Common Ancestor Queries
   in Dynamic Trees](https://arxiv.org/abs/2109.09588)
 - [Abelian Repetition Threshold Revisited](https://arxiv.org/abs/2109.09306)
@@ -41,7 +38,6 @@
 - [Arbitrary-length analogs to de Bruijn sequences](https://arxiv.org/abs/2108.07759)
 - [Space-Efficient Huffman Codes Revisited](https://arxiv.org/abs/2108.05495)
 - [Practical evaluation of Lyndon factors via alphabet reordering](https://arxiv.org/abs/2108.04988)
-- [A Tight Analysis of Slim Heaps and Smooth Heaps](https://arxiv.org/abs/2108.04458)
 - [A Tight Analysis of Slim Heaps and Smooth Heaps](https://arxiv.org/abs/2108.04458)
 ## 2021/7/
 - [A New Lossless Data Compression Algorithm Exploiting Positional
@@ -60,16 +56,13 @@
   Transforms](https://arxiv.org/abs/2107.02503)
 - [Defeating duplicates: A re-design of the LearnedSort algorithm](https://arxiv.org/abs/2107.03290)
 - [Compression by Contracting Straight-Line Programs](https://arxiv.org/abs/2107.00446)
-- [Compression by Contracting Straight-Line Programs](https://arxiv.org/abs/2107.00446)
 - [String Comparison on a Quantum Computer Using Hamming Distance](https://arxiv.org/abs/2106.16173)
 ## 2021/6/
 - [Breaking the $O(n)$-Barrier in the Construction of Compressed Suffix
   Arrays](https://arxiv.org/abs/2106.12725)
 - [A Bloom Filter Survey: Variants for Different Domain Applications](https://arxiv.org/abs/2106.12189)
 - [Computing the original eBWT faster, simpler, and with less memory](https://arxiv.org/abs/2106.11191)
-- [Computing the original eBWT faster, simpler, and with less memory](https://arxiv.org/abs/2106.11191)
 - [Checking whether a word is Hamming-isometric in linear time](https://arxiv.org/abs/2106.10541)
-- [Matching Patterns with Variables under Hamming Distance](https://arxiv.org/abs/2106.06249)
 - [Matching Patterns with Variables under Hamming Distance](https://arxiv.org/abs/2106.06249)
 - [Small space and streaming pattern matching with k edits](https://arxiv.org/abs/2106.06037)
 - [Pattern-defeating Quicksort](https://arxiv.org/abs/2106.05123)
@@ -80,10 +73,7 @@
 - [Breaking the Cubic Barrier for (Unweighted) Tree Edit Distance](https://arxiv.org/abs/2106.02026)
 - [Internal Shortest Absent Word Queries in Constant Time and Linear Space](https://arxiv.org/abs/2106.01763)
 - [Position Heaps for Cartesian-tree Matching on Strings and Tries](https://arxiv.org/abs/2106.01595)
-- [Position Heaps for Cartesian-tree Matching on Strings and Tries](https://arxiv.org/abs/2106.01595)
 - [Counting Lyndon Subsequences](https://arxiv.org/abs/2106.01190)
-- [Counting Lyndon Subsequences](https://arxiv.org/abs/2106.01190)
-- [On the approximation ratio of LZ-End to LZ77](https://arxiv.org/abs/2106.01173)
 - [On the approximation ratio of LZ-End to LZ77](https://arxiv.org/abs/2106.01173)
 ## 2021/5/
 - [A new distance based on minimal absent words and applications to
@@ -117,7 +107,6 @@
 - [PTHash: Revisiting FCH Minimal Perfect Hashing](https://arxiv.org/abs/2104.10402)
 - [A Separation of $γ$ and $b$ via Thue--Morse Words](https://arxiv.org/abs/2104.09985)
 - [Load-Balancing Succinct B Trees](https://arxiv.org/abs/2104.08751)
-- [Engineering Predecessor Data Structures for Dynamic Integer Sets](https://arxiv.org/abs/2104.06740)
 - [Engineering Predecessor Data Structures for Dynamic Integer Sets](https://arxiv.org/abs/2104.06740)
 - [Sorted Range Reporting](https://arxiv.org/abs/2104.02461)
 ## 2021/3/
@@ -189,7 +178,6 @@
 - [Scout Algorithm For Fast Substring Matching](https://arxiv.org/abs/2011.04010)
 ## 2020/10/
 - [Solving Shisen-Sho boards](https://arxiv.org/abs/2010.09014)
-- [Lazy Search Trees](https://arxiv.org/abs/2010.08840)
 - [Lazy Search Trees](https://arxiv.org/abs/2010.08840)
 - [Efficient constructions of the Prefer-same and Prefer-opposite de Bruijn
   sequences](https://arxiv.org/abs/2010.07960)
@@ -557,8 +545,6 @@
 - [The power word problem](https://arxiv.org/abs/1904.08343)
 - [Compressed Indexes for Fast Search of Semantic Data](https://arxiv.org/abs/1904.07619)
 - [Dynamic Packed Compact Tries Revisited](https://arxiv.org/abs/1904.07467)
-- [Constant factor approximations to edit distance on far input pairs in
-  nearly linear time](https://arxiv.org/abs/1904.05459)
 - [Constant factor approximations to edit distance on far input pairs in
   nearly linear time](https://arxiv.org/abs/1904.05459)
 - [What Storage Access Privacy is Achievable with Small Overhead?](https://arxiv.org/abs/1904.05452)
