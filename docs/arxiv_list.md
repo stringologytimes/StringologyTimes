@@ -1,7 +1,7 @@
 # Arxiv Papers
 ## 2021/11/
 - [Pattern Matching on Grammar-Compressed Strings in Linear Time](https://arxiv.org/abs/2111.05016)
-- [Graphs can be succinctly indexed for pattern matching in $ O(|E|^2 +  |V|^{5 / 2}) $ time](https://arxiv.org/abs/2111.04595)
+- [Graphs can be succinctly indexed for pattern matching in $ O(|E|2 +  |V|{5 / 2}) $ time](https://arxiv.org/abs/2111.04595)
 - [Succinct Data Structure for Path Graphs](https://arxiv.org/abs/2111.04332)
 - [Improved Approximation Guarantees for Shortest Superstrings using Cycle  Classification by Overlap to Length Ratios](https://arxiv.org/abs/2111.03968)
 - [HOLZ: High-Order Entropy Encoding of Lempel-Ziv Factor Distances](https://arxiv.org/abs/2111.02478)
@@ -163,7 +163,7 @@
 - [Space/time-efficient RDF stores based on circular suffix sorting](https://arxiv.org/abs/2009.10045)
 - [TADOC: Text Analytics Directly on Compression](https://arxiv.org/abs/2009.09442)
 - [Longest Common Subsequence in Sublinear Space](https://arxiv.org/abs/2009.08588)
-- [A Normal Sequence Compressed by PPM$^*$ but not by Lempel-Ziv 78](https://arxiv.org/abs/2009.04827)
+- [A Normal Sequence Compressed by PPM$*$ but not by Lempel-Ziv 78](https://arxiv.org/abs/2009.04827)
 - [Pushdown and Lempel-Ziv Depth](https://arxiv.org/abs/2009.04821)
 - [A Fast Randomized Algorithm for Finding the Maximal Common Subsequences](https://arxiv.org/abs/2009.03352)
 - [On prefix palindromic length of automatic words](https://arxiv.org/abs/2009.02934)

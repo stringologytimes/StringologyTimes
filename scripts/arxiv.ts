@@ -126,7 +126,9 @@ function createPaperHTML(arxivInfo: ArxivXMLInfo): string {
 
   outputArr.push("# Arxiv Papers");
   arr.forEach((v, i) => {
-    const title = v.title.replace(/\r?\n/g, '');
+    let title = v.title.replace(/\r?\n/g, '');
+    title = title.replace(/\^/g, '');
+    
     if (i == 0 || arr[i - 1].date.getMonth() != arr[i].date.getMonth()) {
       outputArr.push(`## ${v.date.getFullYear()}/${v.date.getMonth() + 1}/`)
 
