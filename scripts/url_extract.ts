@@ -7,7 +7,6 @@ const text = fs.readFileSync("data/test.txt", 'utf8');
 
 //console.log(text);
 
-var users = 'user-0, user1, users-d, myuser'; 
 var regexp = new RegExp(/http(s)?:\/\/([\S])+/, 'g'); 
 var result : any[] = text.match(regexp);
 
