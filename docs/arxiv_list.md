@@ -12,7 +12,6 @@
 - [Improved Approximation Algorithms for Dyck Edit Distance and RNA Folding](https://arxiv.org/abs/2112.05866)
 - [How Compression and Approximation Affect Efficiency in String Distance  Measures](https://arxiv.org/abs/2112.05836)
 - [Beyond the Longest Letter-duplicated Subsequence Problem](https://arxiv.org/abs/2112.05725)
-- [Beyond the Longest Letter-duplicated Subsequence Problem](https://arxiv.org/abs/2112.05725)
 - [Estimating the Longest Increasing Subsequence in Nearly Optimal Time](https://arxiv.org/abs/2112.05106)
 - [RLBWT Tricks](https://arxiv.org/abs/2112.04271)
 ## 2021/11/

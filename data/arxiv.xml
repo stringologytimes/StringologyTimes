@@ -26048,55 +26048,6 @@ Block-LIS problem directly.
     <link title="pdf" href="http://arxiv.org/pdf/2112.08454v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
-  </entry><entry id="2112.05725">
-    <id>http://arxiv.org/abs/2112.05725v2</id>
-    <updated>2022-01-04T17:43:50Z</updated>
-    <published>2021-12-10T18:28:33Z</published>
-    <title>Beyond the Longest Letter-duplicated Subsequence Problem</title>
-    <summary>  Given a sequence $S$ of length $n$, a letter-duplicated subsequence is a
-subsequence of $S$ in the form of $x_1^{d_1}x_2^{d_2}\cdots x_k^{d_k}$ with
-$x_i\in\Sigma$, $x_j\neq x_{j+1}$ and $d_i\geq 2$ for all $i$ in $[k]$ and $j$
-in $[k-1]$. A linear time algorithm for computing the longest letter-duplicated
-subsequence (LLDS) of $S$ can be easily obtained. In this paper, we focus on
-two variants of this problem. We first consider the constrained version when
-$\Sigma$ is unbounded, each letter appears in $S$ at least 6 times and all the
-letters in $\Sigma$ must appear in the solution. We show that the problem is
-NP-hard (a further twist indicates that the problem does not admit any
-polynomial time approximation). The reduction is from possibly the simplest
-version of SAT that is NP-complete, $(\leq 2,1,\leq 3)$-SAT, where each
-variable appears at most twice positively and exact once negatively, and each
-clause contains at most three literals and some clauses must contain exactly
-two literals. (We hope that this technique will serve as a general tool to help
-us proving the NP-hardness for some more tricky sequence problems involving
-only one sequence -- much harder than with at least two input sequences, which
-we apply successfully at the end of the paper on some extra variations of the
-LLDS problem.) We then show that when each letter appears in $S$ at most 3
-times, then the problem admits a factor $1.5-O(\frac{1}{n})$ approximation.
-Finally, we consider the weighted version, where the weight of a block
-$x_i^{d_i} (d_i\geq 2)$ could be any positive function which might not grow
-with $d_i$. We give a non-trivial $O(n^2)$ time dynamic programming algorithm
-for this version, i.e., computing an LD-subsequence of $S$ whose weight is
-maximized.
-</summary>
-    <author>
-      <name>Wenfeng Lai</name>
-    </author>
-    <author>
-      <name>Adiesha Liyanage</name>
-    </author>
-    <author>
-      <name>Binhai Zhu</name>
-    </author>
-    <author>
-      <name>Peng Zou</name>
-    </author>
-    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">18 pages</arxiv:comment>
-    <link href="http://arxiv.org/abs/2112.05725v2" rel="alternate" type="text/html"/>
-    <link title="pdf" href="http://arxiv.org/pdf/2112.05725v2" rel="related" type="application/pdf"/>
-    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="68W01, 68W32" scheme="http://arxiv.org/schemas/atom"/>
   </entry><entry id="2112.05106">
     <id>http://arxiv.org/abs/2112.05106v1</id>
     <updated>2021-12-09T18:45:13Z</updated>
