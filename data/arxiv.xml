@@ -25675,4 +25675,733 @@ hash tables succinct.
     <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
     <category term="68W40" scheme="http://arxiv.org/schemas/atom"/>
     <category term="E.2" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2111.12706">
+    <id>http://arxiv.org/abs/2111.12706v1</id>
+    <updated>2021-11-24T18:58:49Z</updated>
+    <published>2021-11-24T18:58:49Z</published>
+    <title>Gap Edit Distance via Non-Adaptive Queries: Simple and Optimal</title>
+    <summary>  We study the problem of approximating edit distance in sublinear time. This
+is formalized as a promise problem $(k,k^c)$-Gap Edit Distance, where the input
+is a pair of strings $X,Y$ and parameters $k,c>1$, and the goal is to return
+YES if $ED(X,Y)\leq k$ and NO if $ED(X,Y)> k^c$. Recent years have witnessed
+significant interest in designing sublinear-time algorithms for Gap Edit
+Distance.
+  We resolve the non-adaptive query complexity of Gap Edit Distance, improving
+over several previous results. Specifically, we design a non-adaptive algorithm
+with query complexity $\tilde{O}(\frac{n}{k^{c-0.5}})$, and further prove that
+this bound is optimal up to polylogarithmic factors.
+  Our algorithm also achieves optimal time complexity
+$\tilde{O}(\frac{n}{k^{c-0.5}})$ whenever $c\geq 1.5$. For $1&lt;c&lt;1.5$, the
+running time of our algorithm is $\tilde{O}(\frac{n}{k^{2c-1}})$. For the
+restricted case of $k^c=\Omega(n)$, this matches a known result [Batu, Erg\"un,
+Kilian, Magen, Raskhodnikova, Rubinfeld, and Sami, STOC 2003], and in all other
+(nontrivial) cases, our running time is strictly better than all previous
+algorithms, including the adaptive ones.
+</summary>
+    <author>
+      <name>Elazar Goldenberg</name>
+    </author>
+    <author>
+      <name>Tomasz Kociumaka</name>
+    </author>
+    <author>
+      <name>Robert Krauthgamer</name>
+    </author>
+    <author>
+      <name>Barna Saha</name>
+    </author>
+    <link href="http://arxiv.org/abs/2111.12706v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2111.12706v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2111.10538">
+    <id>http://arxiv.org/abs/2111.10538v1</id>
+    <updated>2021-11-20T08:12:16Z</updated>
+    <published>2021-11-20T08:12:16Z</published>
+    <title>Approximation Algorithms for LCS and LIS with Truly Improved Running
+  Times</title>
+    <summary>  Longest common subsequence ($\mathsf{LCS}$) is a classic and central problem
+in combinatorial optimization. While $\mathsf{LCS}$ admits a quadratic time
+solution, recent evidence suggests that solving the problem may be impossible
+in truly subquadratic time. A special case of $\mathsf{LCS}$ wherein each
+character appears at most once in every string is equivalent to the longest
+increasing subsequence problem ($\mathsf{LIS}$) which can be solved in
+quasilinear time. In this work, we present novel algorithms for approximating
+$\mathsf{LCS}$ in truly subquadratic time and $\mathsf{LIS}$ in truly sublinear
+time. Our approximation factors depend on the ratio of the optimal solution
+size over the input size. We denote this ratio by $\lambda$ and obtain the
+following results for $\mathsf{LCS}$ and $\mathsf{LIS}$ without any prior
+knowledge of $\lambda$.
+  $\bullet$ A truly subquadratic time algorithm for $\mathsf{LCS}$ with
+approximation factor $\Omega(\lambda^3)$.
+  $\bullet$A truly sublinear time algorithm for $\mathsf{LIS}$ with
+approximation factor $\Omega(\lambda^3)$.
+  Triangle inequality was recently used by [Boroujeni, Ehsani, Ghodsi,
+HajiAghayi and Seddighin SODA 2018] and [Charkraborty, Das, Goldenberg, Koucky
+and Saks FOCS 2018] to present new approximation algorithms for edit distance.
+Our techniques for $\mathsf{LCS}$ extend the notion of triangle inequality to
+non-metric settings.
+</summary>
+    <author>
+      <name>Aviad Rubinstein</name>
+    </author>
+    <author>
+      <name>Saeed Seddighin</name>
+    </author>
+    <author>
+      <name>Zhao Song</name>
+    </author>
+    <author>
+      <name>Xiaorui Sun</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">FOCS 2019</arxiv:comment>
+    <link href="http://arxiv.org/abs/2111.10538v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2111.10538v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2111.09253">
+    <id>http://arxiv.org/abs/2111.09253v2</id>
+    <updated>2021-11-21T15:30:30Z</updated>
+    <published>2021-11-17T17:34:11Z</published>
+    <title>Prefixes of the Fibonacci word that end with a cube</title>
+    <summary>  We study the prefixes of the Fibonacci word that end with a cube. Using
+Walnut we obtain an exact description of the positions of the Fibonacci word at
+which a cube ends.
+</summary>
+    <author>
+      <name>Narad Rampersad</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">7 pages, minor edits to "motivation" of the problem</arxiv:comment>
+    <link href="http://arxiv.org/abs/2111.09253v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2111.09253v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68R15" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2112.10376">
+    <id>http://arxiv.org/abs/2112.10376v1</id>
+    <updated>2021-12-20T07:56:31Z</updated>
+    <published>2021-12-20T07:56:31Z</published>
+    <title>String Sampling with Bidirectional String Anchors</title>
+    <summary>  The minimizers sampling mechanism is a popular mechanism for string sampling
+introduced independently by Schleimer et al. [SIGMOD 2003] and by Roberts et
+al. [Bioinf. 2004]. Given two positive integers $w$ and $k$, it selects the
+lexicographically smallest length-$k$ substring in every fragment of $w$
+consecutive length-$k$ substrings (in every sliding window of length $w + k -
+1$). Minimizers samples are approximately uniform, locally consistent, and
+computable in linear time. Two main disadvantages of minimizers sampling
+mechanisms are: first, they do not have good guarantees on the expected size of
+their samples for every combination of $w$ and $k$; and, second, indexes that
+are constructed over their samples do not have good worst-case guarantees for
+on-line pattern searches.
+  We introduce bidirectional string anchors (bd-anchors), a new string sampling
+mechanism. Given a positive integer $\ell$, our mechanism selects the
+lexicographically smallest rotation in every length-$\ell$ fragment (in every
+sliding window of length $\ell$). We show that bd-anchors samples are also
+approximately uniform, locally consistent, and computable in linear time. In
+addition, our experiments using several datasets demonstrate that the
+bd-anchors sample sizes decrease proportionally to $\ell$; and that these sizes
+are competitive to or smaller than the minimizers sample sizes using the
+analogous sampling parameters. We provide theoretical justification for these
+results by analyzing the expected size of bd-anchors samples. As a negative
+result, we show that computing a total order $\leq$ on the input alphabet,
+which minimizes the bd-anchors sample size, is NP-hard. We also show that by
+using any bd-anchors sample, we can construct, in near-linear time, an index
+which requires linear (extra) space in the size of the sample and answers
+on-line pattern searches in near-optimal time.
+</summary>
+    <author>
+      <name>Grigorios Loukides</name>
+    </author>
+    <author>
+      <name>Solon P. Pissis</name>
+    </author>
+    <author>
+      <name>Michelle Sweering</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Extended version of an ESA 2021 paper; it includes proofs omitted
+  from the conference version and new results obtained by Michelle Sweering</arxiv:comment>
+    <link href="http://arxiv.org/abs/2112.10376v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2112.10376v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2112.09971">
+    <id>http://arxiv.org/abs/2112.09971v1</id>
+    <updated>2021-12-18T17:10:10Z</updated>
+    <published>2021-12-18T17:10:10Z</published>
+    <title>Beyond Single-Deletion Correcting Codes: Substitutions and
+  Transpositions</title>
+    <summary>  We consider the problem of designing low-redundancy codes in settings where
+one must correct deletions in conjunction with substitutions or adjacent
+transpositions; a combination of errors that is usually observed in DNA-based
+data storage. One of the most basic versions of this problem was settled more
+than 50 years ago by Levenshtein, or one substitution, with nearly optimal
+redundancy. However, this approach fails to extend to many simple and natural
+variations of the binary single-edit error setting. In this work, we make
+progress on the code design problem above in three such variations:
+  We construct linear-time encodable and decodable length-$n$ non-binary codes
+correcting a single edit error with nearly optimal redundancy $\log
+n+O(\log\log n)$, providing an alternative simpler proof of a result by Cai,
+Chee, Gabrys, Kiah, and Nguyen (IEEE Trans. Inf. Theory 2021). This is achieved
+by employing what we call weighted VT sketches, a notion that may be of
+independent interest.
+  We construct linear-time encodable and list-decodable binary codes with
+list-size $2$ for one deletion and one substitution with redundancy $4\log
+n+O(\log\log n)$. This matches the existential bound up to an $O(\log\log n)$
+additive term.
+  We show the existence of a binary code correcting one deletion or one
+adjacent transposition with nearly optimal redundancy $\log n+O(\log\log n)$.
+</summary>
+    <author>
+      <name>Ryan Gabrys</name>
+    </author>
+    <author>
+      <name>Venkatesan Guruswami</name>
+    </author>
+    <author>
+      <name>João Ribeiro</name>
+    </author>
+    <author>
+      <name>Ke Wu</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">33 pages, 7 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2112.09971v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2112.09971v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.IT" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2112.05836">
+    <id>http://arxiv.org/abs/2112.05836v1</id>
+    <updated>2021-12-10T21:27:22Z</updated>
+    <published>2021-12-10T21:27:22Z</published>
+    <title>How Compression and Approximation Affect Efficiency in String Distance
+  Measures</title>
+    <summary>  Real-world data often comes in compressed form. Analyzing compressed data
+directly (without decompressing it) can save space and time by orders of
+magnitude. In this work, we focus on fundamental sequence comparison problems
+and try to quantify the gain in time complexity when the underlying data is
+highly compressible. We consider grammar compression, which unifies many
+practically relevant compression schemes. For two strings of total length $N$
+and total compressed size $n$, it is known that the edit distance and a longest
+common subsequence (LCS) can be computed exactly in time $\tilde{O}(nN)$, as
+opposed to $O(N^2)$ for the uncompressed setting. Many applications need to
+align multiple sequences simultaneously, and the fastest known exact algorithms
+for median edit distance and LCS of $k$ strings run in $O(N^k)$ time. This
+naturally raises the question of whether compression can help to reduce the
+running time significantly for $k \geq 3$, perhaps to $O(N^{k/2}n^{k/2})$ or
+$O(Nn^{k-1})$. Unfortunately, we show lower bounds that rule out any
+improvement beyond $\Omega(N^{k-1}n)$ time for any of these problems assuming
+the Strong Exponential Time Hypothesis.
+  At the same time, we show that approximation and compression together can be
+surprisingly effective. We develop an $\tilde{O}(N^{k/2}n^{k/2})$-time FPTAS
+for the median edit distance of $k$ sequences. In comparison, no
+$O(N^{k-\Omega(1)})$-time PTAS is known for the median edit distance problem in
+the uncompressed setting. For two strings, we get an
+$\tilde{O}(N^{2/3}n^{4/3})$-time FPTAS for both edit distance and LCS. In
+contrast, for uncompressed strings, there is not even a subquadratic algorithm
+for LCS that has less than a polynomial gap in the approximation factor.
+Building on the insight from our approximation algorithms, we also obtain
+results for many distance measures including the edit, Hamming, and shift
+distances.
+</summary>
+    <author>
+      <name>Arun Ganesh</name>
+    </author>
+    <author>
+      <name>Tomasz Kociumaka</name>
+    </author>
+    <author>
+      <name>Andrea Lincoln</name>
+    </author>
+    <author>
+      <name>Barna Saha</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">accepted to SODA 2022</arxiv:comment>
+    <link href="http://arxiv.org/abs/2112.05836v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2112.05836v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2112.05866">
+    <id>http://arxiv.org/abs/2112.05866v1</id>
+    <updated>2021-12-10T23:24:37Z</updated>
+    <published>2021-12-10T23:24:37Z</published>
+    <title>Improved Approximation Algorithms for Dyck Edit Distance and RNA Folding</title>
+    <summary>  The Dyck language, which consists of well-balanced sequences of parentheses,
+is one of the most fundamental context-free languages. The Dyck edit distance
+quantifies the number of edits (character insertions, deletions, and
+substitutions) required to make a given parenthesis sequence well-balanced. RNA
+Folding involves a similar problem, where a closing parenthesis can match an
+opening parenthesis of the same type irrespective of their ordering. For
+example, in RNA Folding, both $\tt{()}$ and $\tt{)(}$ are valid matches,
+whereas the Dyck language only allows $\tt{()}$ as a match. Using fast matrix
+multiplication, it is possible to compute their exact solutions of both
+problems in time $O(n^{2.824})$. Whereas combinatorial algorithms would be more
+desirable, the two problems are known to be at least as hard as Boolean matrix
+multiplication. In terms of fast approximation algorithms that are
+combinatorial in nature, both problems admit an $\epsilon n$-additive
+approximation in $\tilde{O}(\frac{n^2}{\epsilon})$ time. Further, there is a
+$O(\log n)$-factor approximation algorithm for Dyck edit distance in
+near-linear time.
+  In this paper, we design a constant-factor approximation algorithm for Dyck
+edit distance that runs in $O(n^{1.971})$ time. Moreover, we develop a
+$(1+\epsilon)$-factor approximation algorithm running in
+$\tilde{O}(\frac{n^2}{\epsilon})$ time, which improves upon the earlier
+additive approximation. Finally, we design a $(3+\epsilon)$-approximation that
+takes $\tilde{O}(\frac{nd}{\epsilon})$ time, where $d\ge 1$ is an upper bound
+on the sought distance. As for RNA folding, for any $s\ge1$, we design a
+factor-$s$ approximation algorithm that runs in $O(n+(\frac{n}{s})^3)$ time. To
+the best of our knowledge, this is the first nontrivial approximation algorithm
+for RNA Folding that can go below the $n^2$ barrier. All our algorithms are
+combinatorial.
+</summary>
+    <author>
+      <name>Debarati Das</name>
+    </author>
+    <author>
+      <name>Tomasz Kociumaka</name>
+    </author>
+    <author>
+      <name>Barna Saha</name>
+    </author>
+    <link href="http://arxiv.org/abs/2112.05866v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2112.05866v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2112.05725">
+    <id>http://arxiv.org/abs/2112.05725v2</id>
+    <updated>2022-01-04T17:43:50Z</updated>
+    <published>2021-12-10T18:28:33Z</published>
+    <title>Beyond the Longest Letter-duplicated Subsequence Problem</title>
+    <summary>  Given a sequence $S$ of length $n$, a letter-duplicated subsequence is a
+subsequence of $S$ in the form of $x_1^{d_1}x_2^{d_2}\cdots x_k^{d_k}$ with
+$x_i\in\Sigma$, $x_j\neq x_{j+1}$ and $d_i\geq 2$ for all $i$ in $[k]$ and $j$
+in $[k-1]$. A linear time algorithm for computing the longest letter-duplicated
+subsequence (LLDS) of $S$ can be easily obtained. In this paper, we focus on
+two variants of this problem. We first consider the constrained version when
+$\Sigma$ is unbounded, each letter appears in $S$ at least 6 times and all the
+letters in $\Sigma$ must appear in the solution. We show that the problem is
+NP-hard (a further twist indicates that the problem does not admit any
+polynomial time approximation). The reduction is from possibly the simplest
+version of SAT that is NP-complete, $(\leq 2,1,\leq 3)$-SAT, where each
+variable appears at most twice positively and exact once negatively, and each
+clause contains at most three literals and some clauses must contain exactly
+two literals. (We hope that this technique will serve as a general tool to help
+us proving the NP-hardness for some more tricky sequence problems involving
+only one sequence -- much harder than with at least two input sequences, which
+we apply successfully at the end of the paper on some extra variations of the
+LLDS problem.) We then show that when each letter appears in $S$ at most 3
+times, then the problem admits a factor $1.5-O(\frac{1}{n})$ approximation.
+Finally, we consider the weighted version, where the weight of a block
+$x_i^{d_i} (d_i\geq 2)$ could be any positive function which might not grow
+with $d_i$. We give a non-trivial $O(n^2)$ time dynamic programming algorithm
+for this version, i.e., computing an LD-subsequence of $S$ whose weight is
+maximized.
+</summary>
+    <author>
+      <name>Wenfeng Lai</name>
+    </author>
+    <author>
+      <name>Adiesha Liyanage</name>
+    </author>
+    <author>
+      <name>Binhai Zhu</name>
+    </author>
+    <author>
+      <name>Peng Zou</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">18 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2112.05725v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2112.05725v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68W01, 68W32" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2112.08454">
+    <id>http://arxiv.org/abs/2112.08454v1</id>
+    <updated>2021-12-15T20:03:06Z</updated>
+    <published>2021-12-15T20:03:06Z</published>
+    <title>Approximating the Longest Common Subsequence problem within a
+  sub-polynomial factor in linear time</title>
+    <summary>  The Longest Common Subsequence (LCS) of two strings is a fundamental string
+similarity measure with a classical dynamic programming solution taking
+quadratic time. Despite significant efforts, little progress was made in
+improving the runtime. Even in the realm of approximation, not much was known
+for linear time algorithms beyond the trivial $\sqrt{n}$-approximation. Recent
+breakthrough result provided a $n^{0.497}$-factor approximation algorithm
+[HSSS19], which was more recently improved to a $n^{0.4}$-factor one [BCD21].
+The latter paper also showed a $n^{2-2.5\alpha}$ time algorithm which outputs a
+$n^{\alpha}$ approximation to the LCS, but so far no sub-polynomial
+approximation is known in truly subquadratic time.
+  In this work, we show an algorithm which runs in $O(n)$ time, and outputs a
+$n^{o(1)}$-factor approximation to LCS$(x,y)$, with high probability, for any
+pair of length $n$ input strings.
+  Our entire algorithm is merely an efficient black-box reduction to the
+Block-LIS problem, introduced very recently in [ANSS21], and solving the
+Block-LIS problem directly.
+</summary>
+    <author>
+      <name>Negev Shekel Nosatzki</name>
+    </author>
+    <link href="http://arxiv.org/abs/2112.08454v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2112.08454v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2112.05725">
+    <id>http://arxiv.org/abs/2112.05725v2</id>
+    <updated>2022-01-04T17:43:50Z</updated>
+    <published>2021-12-10T18:28:33Z</published>
+    <title>Beyond the Longest Letter-duplicated Subsequence Problem</title>
+    <summary>  Given a sequence $S$ of length $n$, a letter-duplicated subsequence is a
+subsequence of $S$ in the form of $x_1^{d_1}x_2^{d_2}\cdots x_k^{d_k}$ with
+$x_i\in\Sigma$, $x_j\neq x_{j+1}$ and $d_i\geq 2$ for all $i$ in $[k]$ and $j$
+in $[k-1]$. A linear time algorithm for computing the longest letter-duplicated
+subsequence (LLDS) of $S$ can be easily obtained. In this paper, we focus on
+two variants of this problem. We first consider the constrained version when
+$\Sigma$ is unbounded, each letter appears in $S$ at least 6 times and all the
+letters in $\Sigma$ must appear in the solution. We show that the problem is
+NP-hard (a further twist indicates that the problem does not admit any
+polynomial time approximation). The reduction is from possibly the simplest
+version of SAT that is NP-complete, $(\leq 2,1,\leq 3)$-SAT, where each
+variable appears at most twice positively and exact once negatively, and each
+clause contains at most three literals and some clauses must contain exactly
+two literals. (We hope that this technique will serve as a general tool to help
+us proving the NP-hardness for some more tricky sequence problems involving
+only one sequence -- much harder than with at least two input sequences, which
+we apply successfully at the end of the paper on some extra variations of the
+LLDS problem.) We then show that when each letter appears in $S$ at most 3
+times, then the problem admits a factor $1.5-O(\frac{1}{n})$ approximation.
+Finally, we consider the weighted version, where the weight of a block
+$x_i^{d_i} (d_i\geq 2)$ could be any positive function which might not grow
+with $d_i$. We give a non-trivial $O(n^2)$ time dynamic programming algorithm
+for this version, i.e., computing an LD-subsequence of $S$ whose weight is
+maximized.
+</summary>
+    <author>
+      <name>Wenfeng Lai</name>
+    </author>
+    <author>
+      <name>Adiesha Liyanage</name>
+    </author>
+    <author>
+      <name>Binhai Zhu</name>
+    </author>
+    <author>
+      <name>Peng Zou</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">18 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2112.05725v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2112.05725v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68W01, 68W32" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2112.05106">
+    <id>http://arxiv.org/abs/2112.05106v1</id>
+    <updated>2021-12-09T18:45:13Z</updated>
+    <published>2021-12-09T18:45:13Z</published>
+    <title>Estimating the Longest Increasing Subsequence in Nearly Optimal Time</title>
+    <summary>  Longest Increasing Subsequence (LIS) is a fundamental statistic of a
+sequence, and has been studied for decades. While the LIS of a sequence of
+length $n$ can be computed exactly in time $O(n\log n)$, the complexity of
+estimating the (length of the) LIS in sublinear time, especially when LIS $\ll
+n$, is still open.
+  We show that for any integer $n$ and any $\lambda = o(1)$, there exists a
+(randomized) non-adaptive algorithm that, given a sequence of length $n$ with
+LIS $\ge \lambda n$, approximates the LIS up to a factor of $1/\lambda^{o(1)}$
+in $n^{o(1)} / \lambda$ time.
+  Our algorithm improves upon prior work substantially in terms of both
+approximation and run-time: (i) we provide the first sub-polynomial
+approximation for LIS in sub-linear time; and (ii) our run-time complexity
+essentially matches the trivial sample complexity lower bound of
+$\Omega(1/\lambda)$, which is required to obtain any non-trivial approximation
+of the LIS.
+  As part of our solution, we develop two novel ideas which may be of
+independent interest: First, we define a new Genuine-LIS problem, where each
+sequence element may either be genuine or corrupted. In this model, the user
+receives unrestricted access to actual sequence, but does not know apriori
+which elements are genuine. The goal is to estimate the LIS using genuine
+elements only, with the minimal number of "genuiness tests". The second idea,
+Precision Forest, enables accurate estimations for composition of general
+functions from "coarse" (sub-)estimates. Precision Forest essentially
+generalizes classical precision sampling, which works only for summations. As a
+central tool, the Precision Forest is initially pre-processed on a set of
+samples, which thereafter is repeatedly reused by multiple sub-parts of the
+algorithm, improving their amortized complexity.
+</summary>
+    <author>
+      <name>Alexandr Andoni</name>
+    </author>
+    <author>
+      <name>Negev Shekel Nosatzki</name>
+    </author>
+    <author>
+      <name>Sandip Sinha</name>
+    </author>
+    <author>
+      <name>Clifford Stein</name>
+    </author>
+    <link href="http://arxiv.org/abs/2112.05106v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2112.05106v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2112.04271">
+    <id>http://arxiv.org/abs/2112.04271v1</id>
+    <updated>2021-12-08T13:05:32Z</updated>
+    <published>2021-12-08T13:05:32Z</published>
+    <title>RLBWT Tricks</title>
+    <summary>  Experts would probably have guessed that compressed sparse bitvectors were an
+essential component of pan-genomic indexes based on the run-length compressed
+Burrows-Wheeler Transform -- until Nishimoto and Tabei (2021) recently showed
+how to replace them. In this paper we experimentally demonstrate the
+practicality of part of their result and adapt fractional cascading to obtain a
+similar result for the positional Burrows-Wheeler Transform.
+</summary>
+    <author>
+      <name>Nathaniel K. Brown</name>
+    </author>
+    <author>
+      <name>Travis Gagie</name>
+    </author>
+    <author>
+      <name>Massimiliano Rossi</name>
+    </author>
+    <link href="http://arxiv.org/abs/2112.04271v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2112.04271v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2111.12800">
+    <id>http://arxiv.org/abs/2111.12800v1</id>
+    <updated>2021-11-24T21:14:33Z</updated>
+    <published>2021-11-24T21:14:33Z</published>
+    <title>Tiny Pointers</title>
+    <summary>  This paper introduces a new data-structural object that we call the tiny
+pointer. In many applications, traditional $\log n $-bit pointers can be
+replaced with $o (\log n )$-bit tiny pointers at the cost of only a
+constant-factor time overhead. We develop a comprehensive theory of tiny
+pointers, and give optimal constructions for both fixed-size tiny pointers
+(i.e., settings in which all of the tiny pointers must be the same size) and
+variable-size tiny pointers (i.e., settings in which the average tiny-pointer
+size must be small, but some tiny pointers can be larger). If a tiny pointer
+references an element in an array filled to load factor $1 - 1 / k$, then the
+optimal tiny-pointer size is $\Theta(\log \log \log n + \log k) $ bits in the
+fixed-size case, and $ \Theta (\log k) $ expected bits in the variable-size
+case. Our tiny-pointer constructions also require us to revisit several classic
+problems having to do with balls and bins; these results may be of independent
+interest.
+  Using tiny pointers, we revisit five classic data-structure problems: the
+data-retrieval problem, succinct dynamic binary search trees, space-efficient
+stable dictionaries, space-efficient dictionaries with variable-size keys, and
+the internal-memory stash problem. These are all well-studied problems, and in
+each case tiny pointers allow for us to take a natural space-inefficient
+solution that uses pointers and make it space-efficient for free.
+</summary>
+    <author>
+      <name>Michael A. Bender</name>
+    </author>
+    <author>
+      <name>Alex Conway</name>
+    </author>
+    <author>
+      <name>Martín Farach-Colton</name>
+    </author>
+    <author>
+      <name>William Kuszmaul</name>
+    </author>
+    <author>
+      <name>Guido Tagliavini</name>
+    </author>
+    <link href="http://arxiv.org/abs/2111.12800v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2111.12800v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2201.01727">
+    <id>http://arxiv.org/abs/2201.01727v1</id>
+    <updated>2022-01-01T13:26:04Z</updated>
+    <published>2022-01-01T13:26:04Z</published>
+    <title>X3: Lossless Data Compressor</title>
+    <summary>  X3 is a lossless optimizing dictionary-based data compressor. The algorithm
+uses a combination of a dictionary, context modeling, and arithmetic coding.
+Optimization adds the ability to find the most appropriate parameters for each
+file. Even without optimization, x3 can compress data with a compression ratio
+comparable to the best dictionary compression methods like LZMA, zstd, or
+Brotli.
+</summary>
+    <author>
+      <name>David Barina</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">accepted as a poster on the DCC 2022</arxiv:comment>
+    <link href="http://arxiv.org/abs/2201.01727v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2201.01727v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.IT" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2201.01554">
+    <id>http://arxiv.org/abs/2201.01554v1</id>
+    <updated>2022-01-05T11:46:16Z</updated>
+    <published>2022-01-05T11:46:16Z</published>
+    <title>Standard Vs Uniform Binary Search and Their Variants in Learned Static
+  Indexing: The Case of the Searching on Sorted Data Benchmarking Software
+  Platform</title>
+    <summary>  The Searching on Sorted Data ({\bf SOSD}, in short) is a highly engineered
+software platform for benchmarking Learned Indexes, those latter being a novel
+and quite effective proposal of how to search in a sorted table by combining
+Machine Learning techniques with classic Algorithms. In such a platform and in
+the related benchmarking experiments, following a natural and intuitive choice,
+the final search stage is performed via the Standard (textbook) Binary Search
+procedure. However, recent studies, that do not use Machine Learning
+predictions, indicate that Uniform Binary Search, streamlined to avoid
+\vir{branching} in the main loop, is superior in performance to its Standard
+counterpart when the table to be searched into is relatively small, e.g.,
+fitting in L1 or L2 cache. Analogous results hold for k-ary Search, even on
+large tables. One would expect an analogous behaviour within Learned Indexes.
+Via a set of extensive experiments, coherent with the State of the Art, we show
+that for Learned Indexes, and as far as the {\bf SOSD} software is concerned,
+the use of the Standard routine (either Binary or k-ary Search) is superior to
+the Uniform one, across all the internal memory levels. This fact provides a
+quantitative justification of the natural choice made so far. Our experiments
+also indicate that Uniform Binary and k-ary Search can be advantageous to use
+in order to save space in Learned Indexes, while granting a good performance in
+time. Our findings are of methodological relevance for this novel and
+fast-growing area and informative to practitioners interested in using Learned
+Indexes in application domains, e.g., Data Bases and Search Engines.
+</summary>
+    <author>
+      <name>Domenico Amato</name>
+    </author>
+    <author>
+      <name>Giosuè Lo Bosco</name>
+    </author>
+    <author>
+      <name>Raffaele Giancarlo</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">arXiv admin note: substantial text overlap with arXiv:2107.09480</arxiv:comment>
+    <link href="http://arxiv.org/abs/2201.01554v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2201.01554v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="E.1; I.2; H.2" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2201.01742">
+    <id>http://arxiv.org/abs/2201.01742v1</id>
+    <updated>2022-01-05T18:05:41Z</updated>
+    <published>2022-01-05T18:05:41Z</published>
+    <title>What Does Dynamic Optimality Mean in External Memory?</title>
+    <summary>  In this paper, we revisit the question of how the dynamic optimality of
+search trees should be defined in external memory. A defining characteristic of
+external-memory data structures is that there is a stark asymmetry between
+queries and inserts/updates/deletes: by making the former slightly
+asymptotically slower, one can make the latter significantly asymptotically
+faster (even allowing for operations with sub-constant amortized I/Os). This
+asymmetry makes it so that rotation-based search trees are not optimal (or even
+close to optimal) in insert/update/delete-heavy external-memory workloads. To
+study dynamic optimality for such workloads, one must consider a different
+class of data structures.
+  The natural class of data structures to consider are what we call
+buffered-propagation trees. Such trees can adapt dynamically to the locality
+properties of an input sequence in order to optimize the interactions between
+different inserts/updates/deletes and queries. We also present a new form of
+beyond-worst-case analysis that allows for us to formally study a continuum
+between static and dynamic optimality. Finally, we give a novel data structure,
+called the \jellotree, that is statically optimal and that achieves dynamic
+optimality for a large natural class of inputs defined by our beyond-worst-case
+analysis.
+</summary>
+    <author>
+      <name>Micael A. Bender</name>
+    </author>
+    <author>
+      <name>Martín Farach-Colton</name>
+    </author>
+    <author>
+      <name>William Kuszmaul</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">20 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2201.01742v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2201.01742v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2201.01285">
+    <id>http://arxiv.org/abs/2201.01285v1</id>
+    <updated>2022-01-04T18:28:45Z</updated>
+    <published>2022-01-04T18:28:45Z</published>
+    <title>Dynamic Suffix Array with Polylogarithmic Queries and Updates</title>
+    <summary>  The suffix array $SA[1..n]$ of a text $T$ of length $n$ is a permutation of
+$\{1,\ldots,n\}$ describing the lexicographical ordering of suffixes of $T$,
+and it is considered to be among of the most important data structures in
+string algorithms, with dozens of applications in data compression,
+bioinformatics, and information retrieval. One of the biggest drawbacks of the
+suffix array is that it is very difficult to maintain under text updates: even
+a single character substitution can completely change the contents of the
+suffix array. Thus, the suffix array of a dynamic text is modelled using suffix
+array queries, which return the value $SA[i]$ given any $i\in[1..n]$.
+  Prior to this work, the fastest dynamic suffix array implementations were by
+Amir and Boneh. At ISAAC 2020, they showed how to answer suffix array queries
+in $\tilde{O}(k)$ time, where $k\in[1..n]$ is a trade-off parameter, with
+$\tilde{O}(\frac{n}{k})$-time text updates. In a very recent preprint [2021],
+they also provided a solution with $O(\log^5 n)$-time queries and
+$\tilde{O}(n^{2/3})$-time updates.
+  We propose the first data structure that supports both suffix array queries
+and text updates in $O({\rm polylog}\,n)$ time (achieving $O(\log^4 n)$ and
+$O(\log^{3+o(1)} n)$ time, respectively). Our data structure is deterministic
+and the running times for all operations are worst-case. In addition to the
+standard single-character edits (character insertions, deletions, and
+substitutions), we support (also in $O(\log^{3+o(1)} n)$ time) the "cut-paste"
+operation that moves any (arbitrarily long) substring of $T$ to any place in
+$T$. We complement our structure by a hardness result: unless the Online
+Matrix-Vector Multiplication (OMv) Conjecture fails, no data structure with
+$O({\rm polylog}\,n)$-time suffix array queries can support the "copy-paste"
+operation in $O(n^{1-\epsilon})$ time for any $\epsilon>0$.
+</summary>
+    <author>
+      <name>Dominik Kempa</name>
+    </author>
+    <author>
+      <name>Tomasz Kociumaka</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">83 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2201.01285v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2201.01285v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2112.12678">
+    <id>http://arxiv.org/abs/2112.12678v1</id>
+    <updated>2021-12-23T16:14:35Z</updated>
+    <published>2021-12-23T16:14:35Z</published>
+    <title>Dynamic Suffix Array with Sub-linear update time and Poly-logarithmic
+  Lookup Time</title>
+    <summary>  The Suffix Array $SA_S[1\ldots n]$ of an $n$-length string $S$ is a
+lexicographically sorted array of the suffixes of $S$. The suffix array is one
+of the most well known and widely used data structures in string algorithms. We
+present a data structure for maintaining a representation of the suffix array
+of a dynamic string which undergoes symbol substitutions, deletions, and
+insertions.
+  For every string manipulation, our data structure can be updated in
+$O(n^{\frac{2}{3}})$ time (ignoring multiplicative polylogarithmic factors)
+with $n$ being the current length of the string. For an input query $i\in
+[1\ldots n]$, our data structure reports $SA_S[i]$ in $O(\log^5(n))$ time.
+  We also present a faster data structure, with $O(\sqrt{n})$ update time
+(ignoring multiplicative polylogarithmic factors), for maintaining the Inverted
+Suffix Array of a dynamic string undergoing symbol substitutions updates. For
+an input query $i\in [1\ldots n]$, our data structure reports the $i$'th entry
+in the inverted suffix array in $O(\log^4(n))$ time.
+  Our data structures can be used to obtain sub-linear dynamic algorithms for
+several classical string problems for which efficient dynamic solutions were
+not previously known.
+</summary>
+    <author>
+      <name>Amihood Amir</name>
+    </author>
+    <author>
+      <name>Itai Boneh</name>
+    </author>
+    <link href="http://arxiv.org/abs/2112.12678v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2112.12678v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
   </entry></articles>

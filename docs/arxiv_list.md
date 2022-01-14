@@ -1,5 +1,25 @@
 # Arxiv Papers
+## 2022/1/
+- [What Does Dynamic Optimality Mean in External Memory?](https://arxiv.org/abs/2201.01742)
+- [Standard Vs Uniform Binary Search and Their Variants in Learned Static  Indexing: The Case of the Searching on Sorted Data Benchmarking Software  Platform](https://arxiv.org/abs/2201.01554)
+- [Dynamic Suffix Array with Polylogarithmic Queries and Updates](https://arxiv.org/abs/2201.01285)
+- [X3: Lossless Data Compressor](https://arxiv.org/abs/2201.01727)
+## 2021/12/
+- [Dynamic Suffix Array with Sub-linear update time and Poly-logarithmic  Lookup Time](https://arxiv.org/abs/2112.12678)
+- [String Sampling with Bidirectional String Anchors](https://arxiv.org/abs/2112.10376)
+- [Beyond Single-Deletion Correcting Codes: Substitutions and  Transpositions](https://arxiv.org/abs/2112.09971)
+- [Approximating the Longest Common Subsequence problem within a  sub-polynomial factor in linear time](https://arxiv.org/abs/2112.08454)
+- [Improved Approximation Algorithms for Dyck Edit Distance and RNA Folding](https://arxiv.org/abs/2112.05866)
+- [How Compression and Approximation Affect Efficiency in String Distance  Measures](https://arxiv.org/abs/2112.05836)
+- [Beyond the Longest Letter-duplicated Subsequence Problem](https://arxiv.org/abs/2112.05725)
+- [Beyond the Longest Letter-duplicated Subsequence Problem](https://arxiv.org/abs/2112.05725)
+- [Estimating the Longest Increasing Subsequence in Nearly Optimal Time](https://arxiv.org/abs/2112.05106)
+- [RLBWT Tricks](https://arxiv.org/abs/2112.04271)
 ## 2021/11/
+- [Tiny Pointers](https://arxiv.org/abs/2111.12800)
+- [Gap Edit Distance via Non-Adaptive Queries: Simple and Optimal](https://arxiv.org/abs/2111.12706)
+- [Approximation Algorithms for LCS and LIS with Truly Improved Running  Times](https://arxiv.org/abs/2111.10538)
+- [Prefixes of the Fibonacci word that end with a cube](https://arxiv.org/abs/2111.09253)
 - [Pattern Matching on Grammar-Compressed Strings in Linear Time](https://arxiv.org/abs/2111.05016)
 - [Graphs can be succinctly indexed for pattern matching in $ O(│E│^2 +  │V│^{5 / 2}) $ time](https://arxiv.org/abs/2111.04595)
 - [Succinct Data Structure for Path Graphs](https://arxiv.org/abs/2111.04332)
