@@ -39,18 +39,18 @@ Year	Conference	Title	Authors	Conference Paper	On-line repository	Video	Slides
 2021	IWOCA	The Tandem Duplication Distance Problem is hard over bounded alphabets	Ferdinando Cicalese, Nicolò Pilati	https://link.springer.com/chapter/10.1007/978-3-030-79987-8_13	https://arxiv.org/abs/2004.02338	https://www.youtube.com/watch?v=2gThthvOuPE	
 2021	SEA	Document Listing Hacks	Simon Puglisi, Bella Zhukova	https://drops.dagstuhl.de/opus/volltexte/2021/13784/			
 2021	SEA	Engineering Predecessor Data Structures for Dynamic Integer Sets	Patrick Dinklage, Johannes Fischer, Alexander Herlez	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=13779	https://arxiv.org/abs/2104.06740		http://sci.pdinklag.de/slides/conferences/SEA21%20-%20Engineering%20Predecessor%20Data%20Structures%20for%20Dynamic%20Integer%20Sets.pdf
-2021	ICALP	Improved Approximation for Longest Common Subsequence over Small Alphabets	Shyan Akmal, Virginia Williams.	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14082			
-2021	ICALP	New Sublinear Algorithms and Lower Bounds for LIS Estimation	Ilan Newman, Nithin Varma.	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14169	https://arxiv.org/abs/2010.05805		
-2021	ICALP	A Near-Linear-Time n^0.4-Approximation for Longest Common Subsequence	Karl Bringmann, Debarati Das.	https://drops.dagstuhl.de/opus/volltexte/2021/14108/			
-2021	ICALP	Linear Time Runs over General Ordered Alphabets	Jonas Ellert, Johannes Fischer.	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14132	https://arxiv.org/abs/2102.08670		
-2021	ICALP	Fine-Grained Hardness for Edit Distance to a Fixed Sequence	Amir Abboud, Virginia Vassilevska Williams.	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14076			
-2021	ICALP	Sorting Short Integers	Michal Koucký, Karel Král.	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14157			
-2021	ICALP	An Almost Optimal Edit Distance Oracle	Panagiotis Charalampopoulos, Shay Mozes, Pawel Gawrychowski, Oren Weimann.	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14117	https://arxiv.org/abs/2103.03294		
-2021	ICALP	Faster Algorithms for Bounded Tree Edit Distance	Shyan Akmal, Ce Jin.	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14081			
-2021	ICALP	Analysis of Smooth Heaps and Slim Heaps	Maria Hartmann, László Kozma, Corwin Sinnamon, Robert Tarjan.	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14148			
+2021	ICALP	Improved Approximation for Longest Common Subsequence over Small Alphabets	Shyan Akmal, Virginia Williams	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14082			
+2021	ICALP	New Sublinear Algorithms and Lower Bounds for LIS Estimation	Ilan Newman, Nithin Varma	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14169	https://arxiv.org/abs/2010.05805		
+2021	ICALP	A Near-Linear-Time n^0.4-Approximation for Longest Common Subsequence	Karl Bringmann, Debarati Das	https://drops.dagstuhl.de/opus/volltexte/2021/14108/			
+2021	ICALP	Linear Time Runs over General Ordered Alphabets	Jonas Ellert, Johannes Fischer	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14132	https://arxiv.org/abs/2102.08670		
+2021	ICALP	Fine-Grained Hardness for Edit Distance to a Fixed Sequence	Amir Abboud, Virginia Vassilevska Williams	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14076			
+2021	ICALP	Sorting Short Integers	Michal Koucký, Karel Král	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14157			
+2021	ICALP	An Almost Optimal Edit Distance Oracle	Panagiotis Charalampopoulos, Shay Mozes, Pawel Gawrychowski, Oren Weimann	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14117	https://arxiv.org/abs/2103.03294		
+2021	ICALP	Faster Algorithms for Bounded Tree Edit Distance	Shyan Akmal, Ce Jin	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14081			
+2021	ICALP	Analysis of Smooth Heaps and Slim Heaps	Maria Hartmann, László Kozma, Corwin Sinnamon, Robert Tarjan	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14148			
 2021	ICALP	Streaming and Small Space Approximation Algorithms for Edit Distance and Longest Common Subsequence	Kuan Cheng, Alireza Farhadi, Mohammadtaghi Hajiaghayi, Zhengzhong Jin, Xin Li, Aviad Rubinstein, Saeed Seddighin, Yu Zheng. S	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14123			
-2021	ICALP	LF Successor: Compact Space Indexing for Order-Isomorphic Pattern Matching	Arnab Ganguly, Dhrumil Patel, Rahul Shah, Sharma Thankachan.	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14140			
-2021	ICALP	Optimal-Time Queries on BWT-runs Compressed Indexes	Takaaki Nishimoto, Yasuo Tabei.	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14170	https://arxiv.org/abs/2006.05104		
+2021	ICALP	LF Successor: Compact Space Indexing for Order-Isomorphic Pattern Matching	Arnab Ganguly, Dhrumil Patel, Rahul Shah, Sharma Thankachan	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14140			
+2021	ICALP	Optimal-Time Queries on BWT-runs Compressed Indexes	Takaaki Nishimoto, Yasuo Tabei	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14170	https://arxiv.org/abs/2006.05104		
 2021	CPM	Efficient algorithms for counting gapped palindromes	Andrei Popa, Alexandru Popa	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=13974			
 2021	CPM	String Sanitization Under Edit Distance: Improved and Generalized	Takuya Mieno, Solon Pissis, Michelle Sweering, Leen Stougie	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=13970	https://arxiv.org/abs/2007.08179		
 2021	CPM	An invertible transform for efficient string matching in labeled digraphs	Abhinav Nellore, Austin Nguyen, Reid Thompson	https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=13971	https://arxiv.org/abs/1905.03424		
@@ -248,3 +248,15 @@ Year	Conference	Title	Authors	Conference Paper	On-line repository	Video	Slides
 2020	ISAAC	Enumerating Range Modes	Kentaro Sumigawa, Sankardeep Chakraborty, Kunihiko Sadakane, Srinivasa Rao Satti	https://drops.dagstuhl.de/opus/volltexte/2020/13373/	https://arxiv.org/abs/1907.10984		
 2020	ISAAC	Distance Oracles for Interval Graphs via Breadth-First Rank/Select in Succinct Trees	Meng He, J. Ian Munro, Yakov Nekrich, Sebastian Wild, Kaiyu Wu	https://drops.dagstuhl.de/opus/volltexte/2020/13369/	https://arxiv.org/abs/2005.07644		
 2020	ISAAC	A Faster Subquadratic Algorithm for the Longest Common Increasing Subsequence Problem	Anadi Agrawal, Pawel Gawrychowski	https://drops.dagstuhl.de/opus/volltexte/2020/13348/	https://arxiv.org/abs/2003.13589		
+2022	SODA	Pattern Matching on Grammar-Compressed Strings in Linear Time	Moses Ganardi, Paweł Gawrychowski	https://epubs.siam.org/doi/abs/10.1137/1.9781611977073.110	https://arxiv.org/abs/2111.05016		
+2022	SODA	The Upper Bound and Optimal-Space Queries on the LZ-End Parsing	Dominik Kempa, Barna Saha	https://epubs.siam.org/doi/abs/10.1137/1.9781611977073.111			
+2022	SODA	How Compression and Approximation Affect Efficiency in String Distance Measures	Arun Ganesh, Tomasz Kociumaka, Andrea Lincoln, Barna Saha	https://epubs.siam.org/doi/abs/10.1137/1.9781611977073.112	https://arxiv.org/abs/2112.05836		
+2022	SODA	Average Sensitivity of Dynamic Programming	Soh Kumabe, Yuichi Yoshida	https://epubs.siam.org/doi/abs/10.1137/1.9781611977073.77	https://arxiv.org/abs/2111.02657		
+2022	SODA	Enumerating k-SAT functions	Dingding Dong, Nitya Mani, Yufei Zhao	https://epubs.siam.org/doi/abs/10.1137/1.9781611977073.85			
+2022	SODA	A Lower Bound for the n-queens Problem	Michael Simkin, Zur Luria	https://epubs.siam.org/doi/abs/10.1137/1.9781611977073.86			
+2022	SODA	How many Clusters? - An algorithmic answer	Chiranjib Bhattacharyya, Ravindran Kannan, Amit Kumar	https://epubs.siam.org/doi/abs/10.1137/1.9781611977073.102			
+2022	SODA	Splay trees on trees	Benjamin Aram Berendsohn, László Kozma	https://epubs.siam.org/doi/abs/10.1137/1.9781611977073.75			
+2022	SODA	Simulating a stack using queues	Haim Kaplan, Robert E. Tarjan, Or Zamir, Uri Zwick	https://epubs.siam.org/doi/abs/10.1137/1.9781611977073.76			
+2022	SODA	A Tight Analysis of Slim Heaps and Smooth Heaps	Corwin Sinnamon, Robert E. Tarjan		https://arxiv.org/abs/2108.04458		
+2022	SODA	An Improved Algorithm for The k-Dyck Edit Distance Problem	Dvir Fried, Shay Golan, Tomasz Kociumaka, Tsvi Kopelowitz, Ely Porat, Tatiana Starikovskaya	https://epubs.siam.org/doi/abs/10.1137/1.9781611977073.144	https://arxiv.org/abs/2111.02336		
+2022	SODA	Selectable Heaps and Optimal Lazy Search Trees	Bryce Sandlund, Lingyi Zhang	https://epubs.siam.org/doi/abs/10.1137/1.9781611977073.78	https://arxiv.org/abs/2011.11772		

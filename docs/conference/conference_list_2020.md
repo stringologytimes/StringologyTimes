@@ -1,26 +1,47 @@
 # Conference List for Stringologist (2020)
-+ [19/08/05][SOFSEM 2020](https://cyprusconferences.org/sofsem2020/)[[Accepted Papers](https://cyprusconferences.org/sofsem2020/accepted/)]
-+ [19/08/09][ALENEX 2020](https://www.siam.org/Conferences/CM/Conference/alenex20)[[Accepted Papers](https://www.siam.org/conferences/cm/program/accepted-papers/alenex20-accepted-papers)]
-+ [19/09/15][WALCOM 2020](https://www.comp.nus.edu.sg/~walcom20)[[Accepted Papers](https://www.siam.org/conferences/cm/program/accepted-papers/alenex20-accepted-paperss)]
-+ [19/09/30][STACS 2020](https://stacs2020.sciencesconf.org/)[[Accepted Papers](https://stacs2020.sciencesconf.org/resource/page/id/8)]
-+ [19/10/26][LATA 2020](https://lata2020.irdta.eu/)[[Accepted Papers](https://lata2020.irdta.eu/acceptedpapers/)]
-+ [19/11/01][DCC 2020](https://www.cs.brandeis.edu/~dcc/index.html)[[Accepted Papers](https://www.cs.brandeis.edu/~dcc/Program.html)]
-+ [19/11/04][STOC 2020](http://acm-stoc.org/stoc2020/)[[Accepted Papers](http://acm-stoc.org/stoc2020/accepted-papers.html)]
-+ [19/11/17][LATIN 2020](https://latin2020.ime.usp.br/)[[Accepted Papers](https://latin2020.ime.usp.br/)]
-+ [20/01/10][DLT 2020](https://www.usf.edu/arts-sciences/conferences/dlt2020/index.aspx)[[Accepted Papers](https://www.usf.edu/arts-sciences/conferences/dlt2020/accepted_papers.aspx)]
-+ [20/01/17][SEA 2020](http://www.sea2020.dmi.unict.it/)[[Accepted Papers](http://www.sea2020.dmi.unict.it/)]
-+ [20/02/01][IWOCA 2020](https://iwoca2020.labri.fr/)[[Accepted Papers](https://iwoca2020.labri.fr/accepted-papers/)]
-+ [20/02/09][CPM 2020](http://www.imm.dtu.dk/~inge/CPM/)[[Accepted Papers](http://cpm2020.compute.dtu.dk/accepted.html)]
-+ [20/02/12][ICALP 2020](https://econcs.pku.edu.cn/icalp2020/)[[Accepted Papers](https://icalp2020.saarland-informatics-campus.de/programme/)]
-+ [20/02/14][SWAT 2020](https://www.setur.fo/en/education/swat-2020/)[[Accepted Papers](https://www.setur.fo/en/education/swat-2020/accepted-papers/)]
-+ [20/04/09][FOCS 2020](https://focs2020.cs.duke.edu/)[[Accepted Papers](https://focs2020.cs.duke.edu/accepted-papers/)]
-+ [20/04/20][MFCS 2020](http://mfcs.mff.cuni.cz/2020/)[[Accepted Papers](https://www.setur.fo/en/education/swat-2020/accepted-papers//)]
-+ [20/04/24][ESA 2020](http://algo2020.di.unipi.it/index.html)[[Accepted Papers](http://algo2020.di.unipi.it/programme.html#esa)]
-+ [20/05/20][SPIRE 2020](https://www.cs.ucf.edu/spire2020/)[[Accepted Papers](https://www.cs.ucf.edu/spire2020/index.php/accepted-papers/)]
-+ [20/05/26][PSC 2020](http://www.stringology.org/event/)[[Accepted Papers](http://www.stringology.org/event/2020/index.html)]
-+ [20/06/29][ISAAC 2020](https://algo2020.comp.polyu.edu.hk/isaac-accepted.html)[[Accepted Papers](https://algo2020.comp.polyu.edu.hk/isaac-accepted.html)]
-+ [2019/07/05][SODA 2020](https://www.siam.org/Conferences/CM/Conference/soda20)[[Accepted Papers](https://www.siam.org/conferences/cm/program/accepted-papers/soda20-accepted-papers)]
++ 2019/07/05: [SODA 2020](https://www.siam.org/Conferences/CM/Conference/soda20) [Accepted Papers](https://www.siam.org/conferences/cm/program/accepted-papers/soda20-accepted-papers)
++ 2019/08/05: [SOFSEM 2020](https://cyprusconferences.org/sofsem2020/) [Accepted Papers](https://cyprusconferences.org/sofsem2020/accepted/)
++ 2019/08/09: [ALENEX 2020](https://www.siam.org/Conferences/CM/Conference/alenex20) [Accepted Papers](https://www.siam.org/conferences/cm/program/accepted-papers/alenex20-accepted-papers)
++ 2019/09/15: [WALCOM 2020](https://www.comp.nus.edu.sg/~walcom20) [Accepted Papers](https://www.siam.org/conferences/cm/program/accepted-papers/alenex20-accepted-paperss)
++ 2019/09/30: [STACS 2020](https://stacs2020.sciencesconf.org/) [Accepted Papers](https://stacs2020.sciencesconf.org/resource/page/id/8)
++ 2019/10/26: [LATA 2020](https://lata2020.irdta.eu/) [Accepted Papers](https://lata2020.irdta.eu/acceptedpapers/)
++ 2019/11/01: [DCC 2020](https://www.cs.brandeis.edu/~dcc/index.html) [Accepted Papers](https://www.cs.brandeis.edu/~dcc/Program.html)
++ 2019/11/04: [STOC 2020](http://acm-stoc.org/stoc2020/) [Accepted Papers](http://acm-stoc.org/stoc2020/accepted-papers.html)
++ 2019/11/17: [LATIN 2020](https://latin2020.ime.usp.br/) [Accepted Papers](https://latin2020.ime.usp.br/)
++ 2020/01/10: [DLT 2020](https://www.usf.edu/arts-sciences/conferences/dlt2020/index.aspx) [Accepted Papers](https://www.usf.edu/arts-sciences/conferences/dlt2020/accepted_papers.aspx)
++ 2020/01/17: [SEA 2020](http://www.sea2020.dmi.unict.it/) [Accepted Papers](http://www.sea2020.dmi.unict.it/)
++ 2020/02/01: [IWOCA 2020](https://iwoca2020.labri.fr/) [Accepted Papers](https://iwoca2020.labri.fr/accepted-papers/)
++ 2020/02/09: [CPM 2020](http://www.imm.dtu.dk/~inge/CPM/) [Accepted Papers](http://cpm2020.compute.dtu.dk/accepted.html)
++ 2020/02/12: [ICALP 2020](https://econcs.pku.edu.cn/icalp2020/) [Accepted Papers](https://icalp2020.saarland-informatics-campus.de/programme/)
++ 2020/02/14: [SWAT 2020](https://www.setur.fo/en/education/swat-2020/) [Accepted Papers](https://www.setur.fo/en/education/swat-2020/accepted-papers/)
++ 2020/04/09: [FOCS 2020](https://focs2020.cs.duke.edu/) [Accepted Papers](https://focs2020.cs.duke.edu/accepted-papers/)
++ 2020/04/20: [MFCS 2020](http://mfcs.mff.cuni.cz/2020/) [Accepted Papers](https://www.setur.fo/en/education/swat-2020/accepted-papers//)
++ 2020/04/24: [ESA 2020](http://algo2020.di.unipi.it/index.html) [Accepted Papers](http://algo2020.di.unipi.it/programme.html#esa)
++ 2020/05/20: [SPIRE 2020](https://www.cs.ucf.edu/spire2020/) [Accepted Papers](https://www.cs.ucf.edu/spire2020/index.php/accepted-papers/)
++ 2020/05/26: [PSC 2020](http://www.stringology.org/event/) [Accepted Papers](http://www.stringology.org/event/2020/index.html)
++ 2020/06/29: [ISAAC 2020](https://algo2020.comp.polyu.edu.hk/isaac-accepted.html) [Accepted Papers](https://algo2020.comp.polyu.edu.hk/isaac-accepted.html)
 # Conference Paper List for Stringologist
+## SODA
++ [A Lower Bound for Jumbled Indexing](https://epubs.siam.org/doi/abs/10.1137/1.9781611975994.36?mobileUi=0)  
+Rasmus Killmann, Peyman Afshani, Ingo van Duijn, Jesper Sindahl Nielsen  
++ [Combinatorial Generation via Permutation Languages](https://epubs.siam.org/doi/10.1137/1.9781611975994.74)  
+Elizabeth Hartung, Hung P. Hoang, Torsten Mütze, Aaron Williams  
+[Online Repository](https://arxiv.org/abs/1906.06069)  
++ [Competitive Online Search Trees on Trees](https://epubs.siam.org/doi/10.1137/1.9781611975994.115)  
+Prosenjit Bose, Jean Cardinal, John Iacono, Grigorios Koumoutsos, Stefan Langerman  
+[Online Repository](https://arxiv.org/abs/1908.00848)  
++ [Improved Algorithms for Edit Distance and LCS: Beyond Worst Case](https://epubs.siam.org/doi/abs/10.1137/1.9781611975994.99)  
+Mahdi Boroujeni, Masoud Seddighin, Saeed Seddighin  
++ [Locally Consistent Parsing for Text Indexing in Small Space](https://epubs.siam.org/doi/abs/10.1137/1.9781611975994.37)  
+Or Birenzwige, Shay Golan, Ely Porat  
+[Online Repository](https://arxiv.org/abs/1812.00359)  
+[Video](https://www.youtube.com/watch?v=SfOjH6mx23I)  
++ [Reducing approximate Longest Common Subsequence to approximate Edit Distance](https://epubs.siam.org/doi/abs/10.1137/1.9781611975994.98?mobileUi=0)  
+Zhao Song, Aviad Rubinstein  
+[Online Repository](https://arxiv.org/abs/1904.05451)  
++ [Regular Languages meet Prefix Sorting](https://epubs.siam.org/doi/10.1137/1.9781611975994.55)  
+Jarno Alanko, Giovanna D'Agostino, Alberto Policriti, Nicola Prezza  
+[Online Repository](https://arxiv.org/abs/1902.01088)  
 ## SOFSEM
 + [AOBA: An Online Benchmark tool for Algorithms in stringology](http://ceur-ws.org/Vol-2568/paper1.pdf)  
 Ryu Wakimoto, Satoshi Kobayashi, Yuki Igarashi, Davaajav Jargalsaikhan, Diptarama Hendrian, Ryo Yoshinaka, Ayumi Shinohara  
@@ -373,7 +394,7 @@ Panagiotis Charalampopoulos, Jakub Radoszewski, Wojciech Rytter, Tomasz Walen, W
 Danny Hucke, Markus Lohrey, Louisa Seelbach Benkner  
 [Online Repository](https://arxiv.org/abs/2006.01695)  
 [Slides](https://www.cs.ucf.edu/spire2020/wp-content/uploads/2020/10/SPIRE.pdf)  
-+ [A Comparison of Pre-indexing Document Pruning Strategies]()  
++ A Comparison of Pre-indexing Document Pruning Strategies  
 Soner Sukru Altin, Ricardo Baeza-Yates, B. Barla Cambazoglu  
 [Online Repository](https://repositori.upf.edu/bitstream/handle/10230/47646/altin_spire_prein.pdf?sequence=1&isAllowed=y)  
 [Slides](https://www.cs.ucf.edu/spire2020/wp-content/uploads/2020/10/Pre-indexing-pruning-strategies.pdf)  
@@ -482,24 +503,3 @@ Philip Bille, Inge Li Gørtz
 + [Update Query Time Trade-off for Dynamic Suffix Arrays](https://drops.dagstuhl.de/opus/volltexte/2020/13407/)  
 Itai Boneh, Amihood Amir  
 [Online Repository](https://arxiv.org/abs/2007.06604)  
-## SODA
-+ [A Lower Bound for Jumbled Indexing](https://epubs.siam.org/doi/abs/10.1137/1.9781611975994.36?mobileUi=0)  
-Rasmus Killmann, Peyman Afshani, Ingo van Duijn, Jesper Sindahl Nielsen  
-+ [Combinatorial Generation via Permutation Languages](https://epubs.siam.org/doi/10.1137/1.9781611975994.74)  
-Elizabeth Hartung, Hung P. Hoang, Torsten Mütze, Aaron Williams  
-[Online Repository](https://arxiv.org/abs/1906.06069)  
-+ [Competitive Online Search Trees on Trees](https://epubs.siam.org/doi/10.1137/1.9781611975994.115)  
-Prosenjit Bose, Jean Cardinal, John Iacono, Grigorios Koumoutsos, Stefan Langerman  
-[Online Repository](https://arxiv.org/abs/1908.00848)  
-+ [Improved Algorithms for Edit Distance and LCS: Beyond Worst Case](https://epubs.siam.org/doi/abs/10.1137/1.9781611975994.99)  
-Mahdi Boroujeni, Masoud Seddighin, Saeed Seddighin  
-+ [Locally Consistent Parsing for Text Indexing in Small Space](https://epubs.siam.org/doi/abs/10.1137/1.9781611975994.37)  
-Or Birenzwige, Shay Golan, Ely Porat  
-[Online Repository](https://arxiv.org/abs/1812.00359)  
-[Video](https://www.youtube.com/watch?v=SfOjH6mx23I)  
-+ [Reducing approximate Longest Common Subsequence to approximate Edit Distance](https://epubs.siam.org/doi/abs/10.1137/1.9781611975994.98?mobileUi=0)  
-Zhao Song, Aviad Rubinstein  
-[Online Repository](https://arxiv.org/abs/1904.05451)  
-+ [Regular Languages meet Prefix Sorting](https://epubs.siam.org/doi/10.1137/1.9781611975994.55)  
-Jarno Alanko, Giovanna D'Agostino, Alberto Policriti, Nicola Prezza  
-[Online Repository](https://arxiv.org/abs/1902.01088)  

@@ -16,7 +16,17 @@ function createMD(_papers: PaperArticle[], _conferences: ConferenceArticle[], ye
     const lines: string[] = new Array();
     lines.push(`# Conference List for Stringologist (${year})`);
     thisYearConferences.forEach((v) => {
-        lines.push(`+ [${v.getDeadlineString()}][${v.conference} ${v.year}](${v.conferenceURL})[[Accepted Papers](${v.acceptedPaperURL})]`)
+        let s = "";
+        if(v.conferenceURL.length > 0){
+            s += `+ ${v.getDeadlineString()}: [${v.conference} ${v.year}](${v.conferenceURL})`;
+        }else{
+            s += `+ ${v.getDeadlineString()}: ${v.conference} ${v.year}`;
+        }
+
+        if(v.acceptedPaperURL.length > 0){
+            s += ` [Accepted Papers](${v.acceptedPaperURL})`;
+        }
+        lines.push(s)
     })
 
 
@@ -36,7 +46,11 @@ function createMD(_papers: PaperArticle[], _conferences: ConferenceArticle[], ye
             }
         })
         paperList.forEach((v) => {
-            lines.push(`+ [${v.title}](${v.conferencePaperURL})  `);
+            if(v.conferencePaperURL.length > 0){
+                lines.push(`+ [${v.title}](${v.conferencePaperURL})  `);
+            }else{
+                lines.push(`+ ${v.title}  `);
+            }
             lines.push(`${v.authors.join(", ")}  `);
             if (v.arxivURL.length > 0) {
                 lines.push(`[Online Repository](${v.arxivURL})  `);

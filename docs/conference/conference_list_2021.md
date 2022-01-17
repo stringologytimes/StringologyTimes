@@ -1,23 +1,23 @@
 # Conference List for Stringologist (2021)
-+ [2020/07/20][SOFSEM 2021](https://sofsem2021.inf.unibz.it/)[[Accepted Papers](https://sofsem2021.inf.unibz.it/accepted-papers.html)]
-+ [2020/07/20][SODA 2021](https://www.siam.org/conferences/cm/conference/soda21)[[Accepted Papers](https://www.siam.org/conferences/cm/program/accepted-papers/soda21-accepted-papers)]
-+ [2020/08/19][ALENEX 2021](https://www.siam.org/conferences/cm/submissions-and-deadlines/alenex21-submissions-deadlines)[[Accepted Papers](https://www.siam.org/conferences/cm/program/accepted-papers/alenex21-accepted-papers)]
-+ [2020/10/02][WALCOM 2021](https://www.uit.edu.mm/walcom-2021/)[[Accepted Papers](https://www.uit.edu.mm/walcom-2021/)]
-+ [2020/10/05][STACS 2021](https://stacs2021.saarland-informatics-campus.de/)[[Accepted Papers](https://stacs2021.saarland-informatics-campus.de/accepted-papers/)]
-+ [2020/10/19][LATA 2021](https://irdta.eu/lata2020-2021/)[[Accepted Papers](https://irdta.eu/lata2020-2021//acceptedpapers/)]
-+ [2020/11/01][DCC 2021](https://www.cs.brandeis.edu/~dcc/)[[Accepted Papers](https://www.cs.brandeis.edu/~dcc/Programs/Program2021.pdf)]
-+ [2020/11/06][STOC 2021](http://acm-stoc.org/stoc2021/index.html)[[Accepted Papers](http://acm-stoc.org/stoc2021/accepted-papers.html)]
-+ [2021/02/01][CPM 2021](https://cpm2021.ii.uni.wroc.pl/)[[Accepted Papers](https://cpm2021.ii.uni.wroc.pl/accepted.shtml)]
-+ [2021/02/03][SEA 2021](https://sea2021.i3s.unice.fr/)[[Accepted Papers](https://sea2021.i3s.unice.fr/node/21.html)]
-+ [2021/02/12][ICALP 2021](http://easyconferences.eu/icalp2021/)[[Accepted Papers](http://easyconferences.eu/icalp2021/accepted/)]
-+ [2021/03/14][IWOCA 2021](https://iwoca2021.eecs.uottawa.ca/)[[Accepted Papers](https://iwoca2021.eecs.uottawa.ca/Accepted_papers.html)]
-+ [2021/04/20][MFCS 2021](https://compose.ioc.ee/mfcs/)[[Accepted Papers](https://compose.ioc.ee/mfcs/accepted.php)]
-+ [2021/04/23][DLT 2021](https://dlt2021.dcc.fc.up.pt/)[[Accepted Papers](https://dlt2021.dcc.fc.up.pt/AcceptedPapers/)]
-+ [2021/05/03][ESA 2021](http://algo2021.tecnico.ulisboa.pt/ESA2021/)[[Accepted Papers](http://algo2021.tecnico.ulisboa.pt/ESA2021/accepted.html)]
-+ [2021/05/20][SPIRE 2021](https://www.cristal.univ-lille.fr/spire2021)[[Accepted Papers](https://www.cristal.univ-lille.fr/spire2021/#accepted_papers)]
-+ [2021/05/26][PSC 2021](http://www.stringology.org/event/2021/index.html)[[Accepted Papers](http://www.stringology.org/event/2021/index.html)]
-+ [2021/06/01][FOCS 2021](https://focs2021.cs.colorado.edu/)[[Accepted Papers](https://focs2021.cs.colorado.edu/focs-2021-accepted-papers/)]
-+ [2021/07/05][ISAAC 2021](https://tcs.inf.kyushu-u.ac.jp/isaac2021/index.html)[[Accepted Papers](https://tcs.inf.kyushu-u.ac.jp/isaac2021/apl.html)]
++ 2020/07/20: [SOFSEM 2021](https://sofsem2021.inf.unibz.it/) [Accepted Papers](https://sofsem2021.inf.unibz.it/accepted-papers.html)
++ 2020/07/20: [SODA 2021](https://www.siam.org/conferences/cm/conference/soda21) [Accepted Papers](https://www.siam.org/conferences/cm/program/accepted-papers/soda21-accepted-papers)
++ 2020/08/19: [ALENEX 2021](https://www.siam.org/conferences/cm/submissions-and-deadlines/alenex21-submissions-deadlines) [Accepted Papers](https://www.siam.org/conferences/cm/program/accepted-papers/alenex21-accepted-papers)
++ 2020/10/02: [WALCOM 2021](https://www.uit.edu.mm/walcom-2021/) [Accepted Papers](https://www.uit.edu.mm/walcom-2021/)
++ 2020/10/05: [STACS 2021](https://stacs2021.saarland-informatics-campus.de/) [Accepted Papers](https://stacs2021.saarland-informatics-campus.de/accepted-papers/)
++ 2020/10/19: [LATA 2021](https://irdta.eu/lata2020-2021/) [Accepted Papers](https://irdta.eu/lata2020-2021//acceptedpapers/)
++ 2020/11/01: [DCC 2021](https://www.cs.brandeis.edu/~dcc/) [Accepted Papers](https://www.cs.brandeis.edu/~dcc/Programs/Program2021.pdf)
++ 2020/11/06: [STOC 2021](http://acm-stoc.org/stoc2021/index.html) [Accepted Papers](http://acm-stoc.org/stoc2021/accepted-papers.html)
++ 2021/02/01: [CPM 2021](https://cpm2021.ii.uni.wroc.pl/) [Accepted Papers](https://cpm2021.ii.uni.wroc.pl/accepted.shtml)
++ 2021/02/03: [SEA 2021](https://sea2021.i3s.unice.fr/) [Accepted Papers](https://sea2021.i3s.unice.fr/node/21.html)
++ 2021/02/12: [ICALP 2021](http://easyconferences.eu/icalp2021/) [Accepted Papers](http://easyconferences.eu/icalp2021/accepted/)
++ 2021/03/14: [IWOCA 2021](https://iwoca2021.eecs.uottawa.ca/) [Accepted Papers](https://iwoca2021.eecs.uottawa.ca/Accepted_papers.html)
++ 2021/04/20: [MFCS 2021](https://compose.ioc.ee/mfcs/) [Accepted Papers](https://compose.ioc.ee/mfcs/accepted.php)
++ 2021/04/23: [DLT 2021](https://dlt2021.dcc.fc.up.pt/) [Accepted Papers](https://dlt2021.dcc.fc.up.pt/AcceptedPapers/)
++ 2021/05/03: [ESA 2021](http://algo2021.tecnico.ulisboa.pt/ESA2021/) [Accepted Papers](http://algo2021.tecnico.ulisboa.pt/ESA2021/accepted.html)
++ 2021/05/20: [SPIRE 2021](https://www.cristal.univ-lille.fr/spire2021) [Accepted Papers](https://www.cristal.univ-lille.fr/spire2021/#accepted_papers)
++ 2021/05/26: [PSC 2021](http://www.stringology.org/event/2021/index.html) [Accepted Papers](http://www.stringology.org/event/2021/index.html)
++ 2021/06/01: [FOCS 2021](https://focs2021.cs.colorado.edu/) [Accepted Papers](https://focs2021.cs.colorado.edu/focs-2021-accepted-papers/)
++ 2021/07/05: [ISAAC 2021](https://tcs.inf.kyushu-u.ac.jp/isaac2021/index.html) [Accepted Papers](https://tcs.inf.kyushu-u.ac.jp/isaac2021/apl.html)
 # Conference Paper List for Stringologist
 ## SOFSEM
 + [A Normal Sequence Compressed by PPM* but not by Lempel-Ziv 78](https://link.springer.com/chapter/10.1007/978-3-030-67731-2_28)  
@@ -198,31 +198,31 @@ Patrick Dinklage, Johannes Fischer, Alexander Herlez
 [Slides](http://sci.pdinklag.de/slides/conferences/SEA21%20-%20Engineering%20Predecessor%20Data%20Structures%20for%20Dynamic%20Integer%20Sets.pdf)  
 ## ICALP
 + [A Near-Linear-Time n^0.4-Approximation for Longest Common Subsequence](https://drops.dagstuhl.de/opus/volltexte/2021/14108/)  
-Karl Bringmann, Debarati Das.  
+Karl Bringmann, Debarati Das  
 + [An Almost Optimal Edit Distance Oracle](https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14117)  
-Panagiotis Charalampopoulos, Shay Mozes, Pawel Gawrychowski, Oren Weimann.  
+Panagiotis Charalampopoulos, Shay Mozes, Pawel Gawrychowski, Oren Weimann  
 [Online Repository](https://arxiv.org/abs/2103.03294)  
 + [Analysis of Smooth Heaps and Slim Heaps](https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14148)  
-Maria Hartmann, László Kozma, Corwin Sinnamon, Robert Tarjan.  
+Maria Hartmann, László Kozma, Corwin Sinnamon, Robert Tarjan  
 + [Faster Algorithms for Bounded Tree Edit Distance](https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14081)  
-Shyan Akmal, Ce Jin.  
+Shyan Akmal, Ce Jin  
 + [Fine-Grained Hardness for Edit Distance to a Fixed Sequence](https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14076)  
-Amir Abboud, Virginia Vassilevska Williams.  
+Amir Abboud, Virginia Vassilevska Williams  
 + [Improved Approximation for Longest Common Subsequence over Small Alphabets](https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14082)  
-Shyan Akmal, Virginia Williams.  
+Shyan Akmal, Virginia Williams  
 + [LF Successor: Compact Space Indexing for Order-Isomorphic Pattern Matching](https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14140)  
-Arnab Ganguly, Dhrumil Patel, Rahul Shah, Sharma Thankachan.  
+Arnab Ganguly, Dhrumil Patel, Rahul Shah, Sharma Thankachan  
 + [Linear Time Runs over General Ordered Alphabets](https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14132)  
-Jonas Ellert, Johannes Fischer.  
+Jonas Ellert, Johannes Fischer  
 [Online Repository](https://arxiv.org/abs/2102.08670)  
 + [New Sublinear Algorithms and Lower Bounds for LIS Estimation](https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14169)  
-Ilan Newman, Nithin Varma.  
+Ilan Newman, Nithin Varma  
 [Online Repository](https://arxiv.org/abs/2010.05805)  
 + [Optimal-Time Queries on BWT-runs Compressed Indexes](https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14170)  
-Takaaki Nishimoto, Yasuo Tabei.  
+Takaaki Nishimoto, Yasuo Tabei  
 [Online Repository](https://arxiv.org/abs/2006.05104)  
 + [Sorting Short Integers](https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14157)  
-Michal Koucký, Karel Král.  
+Michal Koucký, Karel Král  
 + [Streaming and Small Space Approximation Algorithms for Edit Distance and Longest Common Subsequence](https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=14123)  
 Kuan Cheng, Alireza Farhadi, Mohammadtaghi Hajiaghayi, Zhengzhong Jin, Xin Li, Aviad Rubinstein, Saeed Seddighin, Yu Zheng. S  
 ## IWOCA
@@ -331,10 +331,10 @@ Stefan Hoffmann
 + [Towards an Efficient Text Sampling Approach for Exact and Approximate Matching](http://www.stringology.org/event/2021/p07.html)  
 Simone Faro, Francesco Pio Marino, Arianna Pavone, Antonio Scardace  
 ## FOCS
-+ [Breaking the Cubic Barrier for (Unweighted) Tree Edit Distance]()  
++ Breaking the Cubic Barrier for (Unweighted) Tree Edit Distance  
 Xiao Mao  
 [Online Repository](https://arxiv.org/abs/2106.02026)  
-+ [Small space and streaming pattern matching with k edits]()  
++ Small space and streaming pattern matching with k edits  
 Tomasz Kociumaka, Ely Porat, Tatiana Starikovskaya.  
 [Online Repository](https://arxiv.org/abs/2106.06037)  
 ## ISAAC
