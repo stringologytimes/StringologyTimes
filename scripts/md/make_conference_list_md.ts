@@ -1,7 +1,21 @@
 
 import { ConferenceArticle, PaperArticle } from "./article"
 
-var request = require('sync-request');
+//const request = require('sync-request');
+const fs = require('fs');
+
+let conferenceUrl = "";
+let paperUrl = "";
+let outputFolder = "";
+
+if(process.argv.length != 5){
+    throw new Error("Arguments Error");
+}
+conferenceUrl = process.argv[2];
+paperUrl = process.argv[3];
+outputFolder = process.argv[4];
+
+
 
 function createMD(_papers: PaperArticle[], _conferences: ConferenceArticle[], year: number) {
     const thisYearConferences = _conferences.filter((v) => v.year == year);
@@ -70,12 +84,13 @@ function createMD(_papers: PaperArticle[], _conferences: ConferenceArticle[], ye
 }
 
 
-const paperUrl = `data/spreadsheets/Stringology Conference - Papers.tsv`;
-const conferenceUrl = `data/spreadsheets/Stringology Conference - Conference Site.tsv`;
-const outputFolder = `docs/conference`;
+
+//console.log(`${conferenceUrl}`)
+//console.log(`${paperUrl}`)
 
 
-const fs = require('fs');
+
+
 const paperInfoRawText: string = fs.readFileSync(paperUrl, 'utf8');
 const papers = PaperArticle.parseList(paperInfoRawText);
 

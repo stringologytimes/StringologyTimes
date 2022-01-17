@@ -1,12 +1,25 @@
 import { type } from "os";
-
 //import xmldom from "xmldom";
 //var sleep = require('sleep');
 //var request = require('request');
-var request = require('sync-request');
-var xmldom = require('xmldom');
-
+const request = require('sync-request');
+const xmldom = require('xmldom');
 const fs = require('fs');
+
+let arxivURLPath = ""; // data/arxiv_url.txt
+let arxivXMLPath = ""; // data/arxiv.xml
+let arxivListMDPath = ""; // docs/arxiv_list.md
+
+if(process.argv.length != 5){
+  throw new Error("Arguments Error");
+}
+
+arxivURLPath = process.argv[2];
+arxivXMLPath = process.argv[3];
+arxivListMDPath = process.argv[4];
+
+
+
 
 function sleep(time) {
   return new Promise((resolve, reject) => {
@@ -21,8 +34,11 @@ type ArxivXMLInfo = {
   dic: Set<string>
 }
 
+
+
+
 function loadArxivXML(): ArxivXMLInfo {
-  const xml = fs.readFileSync("data/arxiv.xml", 'utf8');
+  const xml = fs.readFileSync(arxivXMLPath, 'utf8');
   const document = new xmldom.DOMParser().parseFromString(xml);
   const dic = new Set<string>();
   const info: ArxivXMLInfo = { document: document, dic: dic };
@@ -143,17 +159,18 @@ function createPaperHTML(arxivInfo: ArxivXMLInfo): string {
 
 const arxivXMLInfo = loadArxivXML();
 
-const text = fs.readFileSync("data/arxiv_url.txt", 'utf8');
-const lines = text.toString().split('\n');
+const text = fs.readFileSync(arxivURLPath, 'utf8');
+const lines = text.toString().split(/\r\n|\n/);
 const id_arr: string[] = new Array(0);
 for (let line of lines) {
   const subs = line.split("/");
   const id: string = subs[subs.length - 1];
   if (!arxivXMLInfo.dic.has(id)) {
     console.log(`new ID = ${id}`)
-    if (id.indexOf('\r') != -1) {
-      throw new Error("The arXiv URL contains \\r character! Please remove the character from the URL.");
-    }
+    //if (id.indexOf('\r') != -1) {
+    //  throw new Error("The arXiv URL contains \\r character! Please remove the character from the URL.");
+    //}
+
     id_arr.push(id);
   }
 }
@@ -166,8 +183,8 @@ if (id_arr.length > 0) {
 }
 
 try {
-  fs.writeFileSync("data/arxiv.xml", arxivXMLInfo.document.toString());
-  console.log("Write data/arxiv.xml");
+  fs.writeFileSync(arxivXMLPath, arxivXMLInfo.document.toString());
+  console.log(`Write ${arxivXMLPath}`);
 
 } catch (e) {
   console.log(e);
@@ -177,8 +194,8 @@ try {
 const paperHTML = createPaperHTML(arxivXMLInfo);
 
 try {
-  fs.writeFileSync("docs/arxiv_list.md", paperHTML);
-  console.log("Write: docs/arxiv_list.md");
+  fs.writeFileSync(arxivListMDPath, paperHTML);
+  console.log(`Write: ${arxivListMDPath}`);
 
 } catch (e) {
   console.log(e);

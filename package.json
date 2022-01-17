@@ -1,25 +1,26 @@
 {
-  "name": "stringologytimes",
-  "version": "1.0.0",
-  "description": "アルゴリズムやデータ構造に関係していると思われる論文がIssueページでタグ付けされています。",
-  "main": "index.js",
-  "dependencies": {
-    "sync-request": "^6.1.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stringologytimes/StringologyTimes.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/stringologytimes/StringologyTimes/issues"
-  },
-  "homepage": "https://github.com/stringologytimes/StringologyTimes#readme",
-  "devDependencies": {
-    "@xmldom/xmldom": "^0.7.5"
-  }
+    "name": "stringologytimes",
+    "version": "1.0.0",
+    "description": "アルゴリズムやデータ構造に関係していると思われる論文がIssueページでタグ付けされています。",
+    "main": "index.js",
+    "dependencies": {
+        "sync-request": "^6.1.0"
+    },
+    "scripts": {
+        "conference": "ts-node scripts/md/make_conference_list_md.ts 'data/spreadsheets/Stringology Conference - Conference Site.tsv' 'data/spreadsheets/Stringology Conference - Papers.tsv' 'docs/conference'",
+        "arxiv": "ts-node scripts/md/arxiv.ts 'data/arxiv_url.txt' 'data/arxiv.xml' 'docs/arxiv_list.md'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stringologytimes/StringologyTimes.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/stringologytimes/StringologyTimes/issues"
+    },
+    "homepage": "https://github.com/stringologytimes/StringologyTimes#readme",
+    "devDependencies": {
+        "@xmldom/xmldom": "^0.7.5"
+    }
 }
