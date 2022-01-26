@@ -1,0 +1,195 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/cpm/cpm2021.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"114.53"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"27",
+"@dc":"27",
+"@oc":"27",
+"@id":"35338752",
+"text":":facetid:toc:db/conf/cpm/cpm2021.bht"
+}
+},
+"hits":{
+"@total":"27",
+"@computed":"27",
+"@sent":"27",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"228968",
+"info":{"authors":{"author":{"@pid":"14/1317-1","text":"Michal Koucký 0001"}},"title":"Computing Edit Distance (Invited Talk).","venue":"CPM","pages":"2:1-2:1","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/000121","doi":"10.4230/LIPICS.CPM.2021.2","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.2","url":"https://dblp.org/rec/conf/cpm/000121"},
+"url":"URL#228968"
+},
+{
+"@score":"1",
+"@id":"228969",
+"info":{"authors":{"author":[{"@pid":"14/1268","text":"Meng He 0001"},{"@pid":"249/9354","text":"Serikzhan Kazi"}]},"title":"Data Structures for Categorical Path Counting Queries.","venue":"CPM","pages":"15:1-15:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/0001K21","doi":"10.4230/LIPICS.CPM.2021.15","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.15","url":"https://dblp.org/rec/conf/cpm/0001K21"},
+"url":"URL#228969"
+},
+{
+"@score":"1",
+"@id":"228970",
+"info":{"authors":{"author":[{"@pid":"11/495-1","text":"Giulia Bernardini 0001"},{"@pid":"m/AlbertoMarchettiSpaccamela","text":"Alberto Marchetti-Spaccamela"},{"@pid":"89/7966","text":"Solon P. Pissis"},{"@pid":"05/1060","text":"Leen Stougie"},{"@pid":"266/9278","text":"Michelle Sweering"}]},"title":"Constructing Strings Avoiding Forbidden Substrings.","venue":"CPM","pages":"9:1-9:18","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/0001MPSS21","doi":"10.4230/LIPICS.CPM.2021.9","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.9","url":"https://dblp.org/rec/conf/cpm/0001MPSS21"},
+"url":"URL#228970"
+},
+{
+"@score":"1",
+"@id":"228971",
+"info":{"authors":{"author":{"@pid":"93/6119-4","text":"Shahbaz Khan 0004"}},"title":"Optimal Construction of Hierarchical Overlap Graphs.","venue":"CPM","pages":"17:1-17:11","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/000421","doi":"10.4230/LIPICS.CPM.2021.17","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.17","url":"https://dblp.org/rec/conf/cpm/000421"},
+"url":"URL#228971"
+},
+{
+"@score":"1",
+"@id":"228972",
+"info":{"authors":{"author":[{"@pid":"251/8661","text":"Duncan Adamson"},{"@pid":"86/8147","text":"Vladimir V. Gusev"},{"@pid":"p/IgorPotapov","text":"Igor Potapov"},{"@pid":"126/4788","text":"Argyrios Deligkas"}]},"title":"Ranking Bracelets in Polynomial Time.","venue":"CPM","pages":"4:1-4:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/AdamsonGPD21","doi":"10.4230/LIPICS.CPM.2021.4","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.4","url":"https://dblp.org/rec/conf/cpm/AdamsonGPD21"},
+"url":"URL#228972"
+},
+{
+"@score":"1",
+"@id":"228973",
+"info":{"authors":{"author":[{"@pid":"a/AAmir","text":"Amihood Amir"},{"@pid":"219/5886","text":"Itai Boneh"},{"@pid":"227/1404","text":"Eitan Kondratovsky"}]},"title":"The k-Mappability Problem Revisited.","venue":"CPM","pages":"5:1-5:20","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/AmirBK21","doi":"10.4230/LIPICS.CPM.2021.5","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.5","url":"https://dblp.org/rec/conf/cpm/AmirBK21"},
+"url":"URL#228973"
+},
+{
+"@score":"1",
+"@id":"228974",
+"info":{"authors":{"author":[{"@pid":"77/9958","text":"Golnaz Badkobeh"},{"@pid":"184/0588","text":"Panagiotis Charalampopoulos"},{"@pid":"89/7966","text":"Solon P. Pissis"}]},"title":"Internal Shortest Absent Word Queries.","venue":"CPM","pages":"6:1-6:18","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/BadkobehCP21","doi":"10.4230/LIPICS.CPM.2021.6","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.6","url":"https://dblp.org/rec/conf/cpm/BadkobehCP21"},
+"url":"URL#228974"
+},
+{
+"@score":"1",
+"@id":"228975",
+"info":{"authors":{"author":{"@pid":"44/2355","text":"Hideo Bannai"}},"title":"Repetitions in Strings - A &quot;Constant&quot; Problem (Invited Talk).","venue":"CPM","pages":"1:1-1:1","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/Bannai21","doi":"10.4230/LIPICS.CPM.2021.1","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.1","url":"https://dblp.org/rec/conf/cpm/Bannai21"},
+"url":"URL#228975"
+},
+{
+"@score":"1",
+"@id":"228976",
+"info":{"authors":{"author":[{"@pid":"44/2355","text":"Hideo Bannai"},{"@pid":"k/JKarkkainen","text":"Juha Kärkkäinen"},{"@pid":"129/9119","text":"Dominik Köppl"},{"@pid":"71/2618","text":"Marcin Piatkowski"}]},"title":"Constructing the Bijective and the Extended Burrows-Wheeler Transform in Linear Time.","venue":"CPM","pages":"7:1-7:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/BannaiKKP21","doi":"10.4230/LIPICS.CPM.2021.7","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.7","url":"https://dblp.org/rec/conf/cpm/BannaiKKP21"},
+"url":"URL#228976"
+},
+{
+"@score":"1",
+"@id":"228977",
+"info":{"authors":{"author":[{"@pid":"70/4285","text":"Djamal Belazzougui"},{"@pid":"130/4038","text":"Dmitry Kosolobov"},{"@pid":"p/SimonJPuglisi","text":"Simon J. Puglisi"},{"@pid":"26/680","text":"Rajeev Raman"}]},"title":"Weighted Ancestors in Suffix Trees Revisited.","venue":"CPM","pages":"8:1-8:15","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/BelazzouguiKPR21","doi":"10.4230/LIPICS.CPM.2021.8","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.8","url":"https://dblp.org/rec/conf/cpm/BelazzouguiKPR21"},
+"url":"URL#228977"
+},
+{
+"@score":"1",
+"@id":"228978",
+"info":{"authors":{"author":[{"@pid":"32/3463","text":"Philip Bille"},{"@pid":"96/705","text":"Inge Li Gørtz"},{"@pid":"270/0160","text":"Max Rishøj Pedersen"},{"@pid":"235/2633","text":"Teresa Anna Steiner"}]},"title":"Gapped Indexing for Consecutive Occurrences.","venue":"CPM","pages":"10:1-10:19","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/BilleGPS21","doi":"10.4230/LIPICS.CPM.2021.10","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.10","url":"https://dblp.org/rec/conf/cpm/BilleGPS21"},
+"url":"URL#228978"
+},
+{
+"@score":"1",
+"@id":"228979",
+"info":{"authors":{"author":[{"@pid":"29/7591","text":"Laurent Bulteau"},{"@pid":"57/11201","text":"Samuele Giraudo"},{"@pid":"42/3622","text":"Stéphane Vialette"}]},"title":"Disorders and Permutations.","venue":"CPM","pages":"11:1-11:15","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/BulteauGV21","doi":"10.4230/LIPICS.CPM.2021.11","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.11","url":"https://dblp.org/rec/conf/cpm/BulteauGV21"},
+"url":"URL#228979"
+},
+{
+"@score":"1",
+"@id":"228980",
+"info":{"authors":{"author":[{"@pid":"184/0588","text":"Panagiotis Charalampopoulos"},{"@pid":"83/7216","text":"Jakub Radoszewski"},{"@pid":"r/WojciechRytter","text":"Wojciech Rytter"},{"@pid":"80/5679","text":"Tomasz Walen"},{"@pid":"223/9846","text":"Wiktor Zuba"}]},"title":"Computing Covers of 2D-Strings.","venue":"CPM","pages":"12:1-12:20","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/Charalampopoulos21","doi":"10.4230/LIPICS.CPM.2021.12","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.12","url":"https://dblp.org/rec/conf/cpm/Charalampopoulos21"},
+"url":"URL#228980"
+},
+{
+"@score":"1",
+"@id":"228981",
+"info":{"authors":{"author":[{"@pid":"236/5210","text":"Dustin Cobas"},{"@pid":"00/3487","text":"Travis Gagie"},{"@pid":"n/GonzaloNavarro","text":"Gonzalo Navarro"}]},"title":"A Fast and Small Subsampled R-Index.","venue":"CPM","pages":"13:1-13:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/CobasGN21","doi":"10.4230/LIPICS.CPM.2021.13","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.13","url":"https://dblp.org/rec/conf/cpm/CobasGN21"},
+"url":"URL#228981"
+},
+{
+"@score":"1",
+"@id":"228982",
+"info":{"authors":{"author":[{"@pid":"59/1669","text":"Riccardo Dondi"},{"@pid":"32/6121","text":"Florian Sikora"}]},"title":"The Longest Run Subsequence Problem - Further Complexity Results.","venue":"CPM","pages":"14:1-14:15","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/DondiS21","doi":"10.4230/LIPICS.CPM.2021.14","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.14","url":"https://dblp.org/rec/conf/cpm/DondiS21"},
+"url":"URL#228982"
+},
+{
+"@score":"1",
+"@id":"228983",
+"info":{"authors":{"author":[{"@pid":"i/GiuseppeFItaliano","text":"Giuseppe F. Italiano"},{"@pid":"121/1143","text":"Nicola Prezza"},{"@pid":"23/2283","text":"Blerina Sinaimeri"},{"@pid":"44/5068","text":"Rossano Venturini"}]},"title":"Compressed Weighted de Bruijn Graphs.","venue":"CPM","pages":"16:1-16:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/ItalianoPSV21","doi":"10.4230/LIPICS.CPM.2021.16","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.16","url":"https://dblp.org/rec/conf/cpm/ItalianoPSV21"},
+"url":"URL#228983"
+},
+{
+"@score":"1",
+"@id":"228984",
+"info":{"authors":{"author":[{"@pid":"59/1402","text":"Sung-Hwan Kim"},{"@pid":"70/484","text":"Hwan-Gue Cho"}]},"title":"A Compact Index for Cartesian Tree Matching.","venue":"CPM","pages":"18:1-18:19","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/KimC21","doi":"10.4230/LIPICS.CPM.2021.18","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.18","url":"https://dblp.org/rec/conf/cpm/KimC21"},
+"url":"URL#228984"
+},
+{
+"@score":"1",
+"@id":"228985",
+"info":{"authors":{"author":[{"@pid":"184/8452","text":"Takuya Mieno"},{"@pid":"89/7966","text":"Solon P. Pissis"},{"@pid":"05/1060","text":"Leen Stougie"},{"@pid":"266/9278","text":"Michelle Sweering"}]},"title":"String Sanitization Under Edit Distance - Improved and Generalized.","venue":"CPM","pages":"19:1-19:18","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/MienoPSS21","doi":"10.4230/LIPICS.CPM.2021.19","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.19","url":"https://dblp.org/rec/conf/cpm/MienoPSS21"},
+"url":"URL#228985"
+},
+{
+"@score":"1",
+"@id":"228986",
+"info":{"authors":{"author":[{"@pid":"135/6253","text":"Abhinav Nellore"},{"@pid":"241/5091","text":"Austin Nguyen"},{"@pid":"90/559","text":"Reid F. Thompson"}]},"title":"An Invertible Transform for Efficient String Matching in Labeled Digraphs.","venue":"CPM","pages":"20:1-20:14","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/NelloreNT21","doi":"10.4230/LIPICS.CPM.2021.20","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.20","url":"https://dblp.org/rec/conf/cpm/NelloreNT21"},
+"url":"URL#228986"
+},
+{
+"@score":"1",
+"@id":"228987",
+"info":{"authors":{"author":[{"@pid":"132/1960","text":"Takaaki Nishimoto"},{"@pid":"38/1958","text":"Yasuo Tabei"}]},"title":"R-enum - Enumeration of Characteristic Substrings in BWT-runs Bounded Space.","venue":"CPM","pages":"21:1-21:21","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/NishimotoT21","doi":"10.4230/LIPICS.CPM.2021.21","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.21","url":"https://dblp.org/rec/conf/cpm/NishimotoT21"},
+"url":"URL#228987"
+},
+{
+"@score":"1",
+"@id":"228988",
+"info":{"authors":{"author":[{"@pid":"41/2400","text":"Sangsoo Park"},{"@pid":"09/11054","text":"Sung Gwan Park"},{"@pid":"146/7608","text":"Bastien Cazaux"},{"@pid":"p/KunsooPark","text":"Kunsoo Park"},{"@pid":"07/3055","text":"Eric Rivals"}]},"title":"A Linear Time Algorithm for Constructing Hierarchical Overlap Graphs.","venue":"CPM","pages":"22:1-22:9","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/ParkPCPR21","doi":"10.4230/LIPICS.CPM.2021.22","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.22","url":"https://dblp.org/rec/conf/cpm/ParkPCPR21"},
+"url":"URL#228988"
+},
+{
+"@score":"1",
+"@id":"228989",
+"info":{"authors":{"author":{"@pid":"p/NadiaPisanti","text":"Nadia Pisanti"}},"title":"On-Line Pattern Matching on D-Texts (Invited Talk).","venue":"CPM","pages":"3:1-3:2","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/Pisanti21","doi":"10.4230/LIPICS.CPM.2021.3","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.3","url":"https://dblp.org/rec/conf/cpm/Pisanti21"},
+"url":"URL#228989"
+},
+{
+"@score":"1",
+"@id":"228990",
+"info":{"authors":{"author":[{"@pid":"246/6806","text":"Andrei Popa"},{"@pid":"08/3356","text":"Alexandru Popa 0001"}]},"title":"Efficient Algorithms for Counting Gapped Palindromes.","venue":"CPM","pages":"23:1-23:13","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/Popa021","doi":"10.4230/LIPICS.CPM.2021.23","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.23","url":"https://dblp.org/rec/conf/cpm/Popa021"},
+"url":"URL#228990"
+},
+{
+"@score":"1",
+"@id":"228991",
+"info":{"authors":{"author":[{"@pid":"279/6374","text":"Joshua Sobel"},{"@pid":"279/6212","text":"Noah Bertram"},{"@pid":"83/2822-1","text":"Chen Ding 0001"},{"@pid":"23/7274","text":"Fatemeh Nargesian"},{"@pid":"51/844","text":"Daniel Gildea"}]},"title":"AWLCO - All-Window Length Co-Occurrence.","venue":"CPM","pages":"24:1-24:21","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/SobelB0NG21","doi":"10.4230/LIPICS.CPM.2021.24","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.24","url":"https://dblp.org/rec/conf/cpm/SobelB0NG21"},
+"url":"URL#228991"
+},
+{
+"@score":"1",
+"@id":"228992",
+"info":{"title":"Front Matter, Table of Contents, Preface, Conference Organization.","venue":"CPM","pages":"0:1-0:14","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/X21","doi":"10.4230/LIPICS.CPM.2021.0","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.0","url":"https://dblp.org/rec/conf/cpm/X21"},
+"url":"URL#228992"
+},
+{
+"@score":"1",
+"@id":"228993",
+"info":{"authors":{"author":[{"@pid":"296/1841","text":"Keegan Yao"},{"@pid":"42/1668","text":"Mukul S. Bansal"}]},"title":"Optimal Completion and Comparison of Incomplete Phylogenetic Trees Under Robinson-Foulds Distance.","venue":"CPM","pages":"25:1-25:23","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/YaoB21","doi":"10.4230/LIPICS.CPM.2021.25","ee":"https://doi.org/10.4230/LIPIcs.CPM.2021.25","url":"https://dblp.org/rec/conf/cpm/YaoB21"},
+"url":"URL#228993"
+},
+{
+"@score":"1",
+"@id":"335436",
+"info":{"authors":{"author":[{"@pid":"49/3088","text":"Pawel Gawrychowski"},{"@pid":"99/3746","text":"Tatiana Starikovskaya"}]},"title":"32nd Annual Symposium on Combinatorial Pattern Matching, CPM 2021, July 5-7, 2021, Wrocław, Poland.","venue":["CPM","LIPIcs"],"volume":"191","publisher":"Schloss Dagstuhl - Leibniz-Zentrum für Informatik","year":"2021","type":"Editorship","key":"conf/cpm/2021","ee":"https://www.dagstuhl.de/dagpub/978-3-95977-186-3","url":"https://dblp.org/rec/conf/cpm/2021"},
+"url":"URL#335436"
+}
+]
+}
+}
+}
