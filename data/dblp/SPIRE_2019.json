@@ -1,0 +1,255 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/spire/spire2019.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"134.41"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"37",
+"@dc":"37",
+"@oc":"37",
+"@id":"35373670",
+"text":":facetid:toc:db/conf/spire/spire2019.bht"
+}
+},
+"hits":{
+"@total":"37",
+"@computed":"37",
+"@sent":"37",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"1166534",
+"info":{"authors":{"author":[{"@pid":"174/4856","text":"Arezoo Abdollahi"},{"@pid":"00/5848","text":"Neil D. B. Bruce"},{"@pid":"59/577","text":"Shahin Kamali"},{"@pid":"84/400","text":"Rezaul Karim"}]},"title":"Lossless Image Compression Using List Update Algorithms.","venue":"SPIRE","pages":"16-34","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/AbdollahiBKK19","doi":"10.1007/978-3-030-32686-9_2","ee":"https://doi.org/10.1007/978-3-030-32686-9_2","url":"https://dblp.org/rec/conf/spire/AbdollahiBKK19"},
+"url":"URL#1166534"
+},
+{
+"@score":"1",
+"@id":"1166535",
+"info":{"authors":{"author":[{"@pid":"175/1498","text":"Paniz Abedin"},{"@pid":"116/4616-2","text":"Arnab Ganguly 0002"},{"@pid":"89/7966","text":"Solon P. Pissis"},{"@pid":"99/7237","text":"Sharma V. Thankachan"}]},"title":"Range Shortest Unique Substring Queries.","venue":"SPIRE","pages":"258-266","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/Abedin0PT19","doi":"10.1007/978-3-030-32686-9_18","ee":"https://doi.org/10.1007/978-3-030-32686-9_18","url":"https://dblp.org/rec/conf/spire/Abedin0PT19"},
+"url":"URL#1166535"
+},
+{
+"@score":"1",
+"@id":"1166536",
+"info":{"authors":{"author":[{"@pid":"240/8663","text":"Billel Aklouche"},{"@pid":"27/7872","text":"Ibrahim Bounhas"},{"@pid":"81/5328","text":"Yahya Slimani"}]},"title":"BM25 Beyond Query-Document Similarity.","venue":"SPIRE","pages":"65-79","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/AkloucheBS19","doi":"10.1007/978-3-030-32686-9_5","ee":"https://doi.org/10.1007/978-3-030-32686-9_5","url":"https://dblp.org/rec/conf/spire/AkloucheBS19"},
+"url":"URL#1166536"
+},
+{
+"@score":"1",
+"@id":"1166537",
+"info":{"authors":{"author":[{"@pid":"198/1439","text":"Mai Alzamel"},{"@pid":"164/5849","text":"Alessio Conte"},{"@pid":"249/9867","text":"Daniele Greco"},{"@pid":"150/4999","text":"Veronica Guerrini"},{"@pid":"i/CSIliopoulos","text":"Costas S. Iliopoulos"},{"@pid":"p/NadiaPisanti","text":"Nadia Pisanti"},{"@pid":"121/1143","text":"Nicola Prezza"},{"@pid":"249/9878","text":"Giulia Punzi"},{"@pid":"14/4683","text":"Giovanna Rosone"}]},"title":"Online Algorithms on Antipowers and Antiperiods.","venue":"SPIRE","pages":"175-188","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/AlzamelCGGIPPPR19","doi":"10.1007/978-3-030-32686-9_13","ee":"https://doi.org/10.1007/978-3-030-32686-9_13","url":"https://dblp.org/rec/conf/spire/AlzamelCGGIPPPR19"},
+"url":"URL#1166537"
+},
+{
+"@score":"1",
+"@id":"1166538",
+"info":{"authors":{"author":[{"@pid":"47/901","text":"Diego Arroyuelo"},{"@pid":"66/1310","text":"Guillermo de Bernardo"},{"@pid":"00/3487","text":"Travis Gagie"},{"@pid":"n/GonzaloNavarro","text":"Gonzalo Navarro"}]},"title":"Faster Dynamic Compressed d-ary Relations.","venue":"SPIRE","pages":"419-433","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/ArroyueloBGN19","doi":"10.1007/978-3-030-32686-9_30","ee":"https://doi.org/10.1007/978-3-030-32686-9_30","url":"https://dblp.org/rec/conf/spire/ArroyueloBGN19"},
+"url":"URL#1166538"
+},
+{
+"@score":"1",
+"@id":"1166539",
+"info":{"authors":{"author":[{"@pid":"47/901","text":"Diego Arroyuelo"},{"@pid":"26/680","text":"Rajeev Raman"}]},"title":"Adaptive Succinctness.","venue":"SPIRE","pages":"467-481","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/ArroyueloR19","doi":"10.1007/978-3-030-32686-9_33","ee":"https://doi.org/10.1007/978-3-030-32686-9_33","url":"https://dblp.org/rec/conf/spire/ArroyueloR19"},
+"url":"URL#1166539"
+},
+{
+"@score":"1",
+"@id":"1166540",
+"info":{"authors":{"author":[{"@pid":"47/901","text":"Diego Arroyuelo"},{"@pid":"249/9924","text":"Erick Sepúlveda"}]},"title":"A Practical Alphabet-Partitioning Rank/Select Data Structure.","venue":"SPIRE","pages":"452-466","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/ArroyueloS19","doi":"10.1007/978-3-030-32686-9_32","ee":"https://doi.org/10.1007/978-3-030-32686-9_32","url":"https://dblp.org/rec/conf/spire/ArroyueloS19"},
+"url":"URL#1166540"
+},
+{
+"@score":"1",
+"@id":"1166541",
+"info":{"authors":{"author":[{"@pid":"154/0489","text":"Grigor Aslanyan"},{"@pid":"12/11339","text":"Utkarsh Porwal"}]},"title":"Position Bias Estimation for Unbiased Learning-to-Rank in eCommerce Search.","venue":"SPIRE","pages":"47-64","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/AslanyanP19","doi":"10.1007/978-3-030-32686-9_4","ee":"https://doi.org/10.1007/978-3-030-32686-9_4","url":"https://dblp.org/rec/conf/spire/AslanyanP19"},
+"url":"URL#1166541"
+},
+{
+"@score":"1",
+"@id":"1166542",
+"info":{"authors":{"author":[{"@pid":"249/9930","text":"Johannes Bahne"},{"@pid":"249/9894","text":"Nico Bertram"},{"@pid":"249/9915","text":"Marvin Böcker"},{"@pid":"249/9841","text":"Jonas Bode"},{"@pid":"90/834-1","text":"Johannes Fischer 0001"},{"@pid":"249/9921","text":"Hermann Foot"},{"@pid":"249/9977","text":"Florian Grieskamp"},{"@pid":"163/4161","text":"Florian Kurpicz"},{"@pid":"195/5836","text":"Marvin Löbel"},{"@pid":"250/0009","text":"Oliver Magiera"},{"@pid":"195/7227","text":"Rosa Pink"},{"@pid":"87/1387","text":"David Piper"},{"@pid":"249/9871","text":"Christopher Poeplau"}]},"title":"SACABench - Benchmarking Suffix Array Construction.","venue":"SPIRE","pages":"407-416","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/BahneBBB0FGKLMP19","doi":"10.1007/978-3-030-32686-9_29","ee":"https://doi.org/10.1007/978-3-030-32686-9_29","url":"https://dblp.org/rec/conf/spire/BahneBBB0FGKLMP19"},
+"url":"URL#1166542"
+},
+{
+"@score":"1",
+"@id":"1166543",
+"info":{"authors":{"author":[{"@pid":"34/8239-1","text":"Lorenzo Beretta 0001"},{"@pid":"56/1965","text":"Franco Maria Nardini"},{"@pid":"155/5063","text":"Roberto Trani"},{"@pid":"44/5068","text":"Rossano Venturini"}]},"title":"An Optimal Algorithm to Find Champions of Tournament Graphs.","venue":"SPIRE","pages":"267-273","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/BerettaNTV19","doi":"10.1007/978-3-030-32686-9_19","ee":"https://doi.org/10.1007/978-3-030-32686-9_19","url":"https://dblp.org/rec/conf/spire/BerettaNTV19"},
+"url":"URL#1166543"
+},
+{
+"@score":"1",
+"@id":"1166544",
+"info":{"authors":{"author":[{"@pid":"129/6546","text":"Timo Bingmann"},{"@pid":"241/7194","text":"Phelim Bradley"},{"@pid":"241/7004","text":"Florian Gauger"},{"@pid":"124/9343","text":"Zamin Iqbal"}]},"title":"COBS - A Compact Bit-Sliced Signature Index.","venue":"SPIRE","pages":"285-303","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/BingmannBGI19","doi":"10.1007/978-3-030-32686-9_21","ee":"https://doi.org/10.1007/978-3-030-32686-9_21","url":"https://dblp.org/rec/conf/spire/BingmannBGI19"},
+"url":"URL#1166544"
+},
+{
+"@score":"1",
+"@id":"1166545",
+"info":{"authors":{"author":[{"@pid":"236/4276","text":"Manuel Cáceres"},{"@pid":"n/GonzaloNavarro","text":"Gonzalo Navarro"}]},"title":"Faster Repetition-Aware Compressed Suffix Trees Based on Block Trees.","venue":"SPIRE","pages":"434-451","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/CaceresN19","doi":"10.1007/978-3-030-32686-9_31","ee":"https://doi.org/10.1007/978-3-030-32686-9_31","url":"https://dblp.org/rec/conf/spire/CaceresN19"},
+"url":"URL#1166545"
+},
+{
+"@score":"1",
+"@id":"1166546",
+"info":{"authors":{"author":[{"@pid":"146/7608","text":"Bastien Cazaux"},{"@pid":"130/4038","text":"Dmitry Kosolobov"},{"@pid":"77/2752","text":"Veli Mäkinen"},{"@pid":"203/8944","text":"Tuukka Norri"}]},"title":"Linear Time Maximum Segmentation Problems in Column Stream Model.","venue":"SPIRE","pages":"322-336","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/CazauxKMN19","doi":"10.1007/978-3-030-32686-9_23","ee":"https://doi.org/10.1007/978-3-030-32686-9_23","url":"https://dblp.org/rec/conf/spire/CazauxKMN19"},
+"url":"URL#1166546"
+},
+{
+"@score":"1",
+"@id":"1166547",
+"info":{"authors":{"author":[{"@pid":"184/0588","text":"Panagiotis Charalampopoulos"},{"@pid":"38/9892","text":"Tomasz Kociumaka"},{"@pid":"89/7966","text":"Solon P. Pissis"},{"@pid":"83/7216","text":"Jakub Radoszewski"},{"@pid":"r/WojciechRytter","text":"Wojciech Rytter"},{"@pid":"223/9993","text":"Juliusz Straszynski"},{"@pid":"80/5679","text":"Tomasz Walen"},{"@pid":"223/9846","text":"Wiktor Zuba"}]},"title":"Weighted Shortest Common Supersequence Problem Revisited.","venue":"SPIRE","pages":"221-238","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/Charalampopoulos19","doi":"10.1007/978-3-030-32686-9_16","ee":"https://doi.org/10.1007/978-3-030-32686-9_16","url":"https://dblp.org/rec/conf/spire/Charalampopoulos19"},
+"url":"URL#1166547"
+},
+{
+"@score":"1",
+"@id":"1166548",
+"info":{"authors":{"author":[{"@pid":"236/5210","text":"Dustin Cobas"},{"@pid":"n/GonzaloNavarro","text":"Gonzalo Navarro"}]},"title":"Fast, Small, and Simple Document Listing on Repetitive Text Collections.","venue":"SPIRE","pages":"482-498","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/CobasN19","doi":"10.1007/978-3-030-32686-9_34","ee":"https://doi.org/10.1007/978-3-030-32686-9_34","url":"https://dblp.org/rec/conf/spire/CobasN19"},
+"url":"URL#1166548"
+},
+{
+"@score":"1",
+"@id":"1166549",
+"info":{"authors":{"author":[{"@pid":"164/5849","text":"Alessio Conte"},{"@pid":"g/RobertoGrossi","text":"Roberto Grossi"},{"@pid":"249/9878","text":"Giulia Punzi"},{"@pid":"72/3856","text":"Takeaki Uno"}]},"title":"Polynomial-Delay Enumeration of Maximal Common Subsequences.","venue":"SPIRE","pages":"189-202","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/ConteGPU19","doi":"10.1007/978-3-030-32686-9_14","ee":"https://doi.org/10.1007/978-3-030-32686-9_14","url":"https://dblp.org/rec/conf/spire/ConteGPU19"},
+"url":"URL#1166549"
+},
+{
+"@score":"1",
+"@id":"1166550",
+"info":{"authors":{"author":{"@pid":"220/4069","text":"Diego Díaz-Domínguez"}},"title":"An Index for Sequencing Reads Based on the Colored de Bruijn Graph.","venue":"SPIRE","pages":"304-321","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/Diaz-Dominguez19","doi":"10.1007/978-3-030-32686-9_22","ee":"https://doi.org/10.1007/978-3-030-32686-9_22","url":"https://dblp.org/rec/conf/spire/Diaz-Dominguez19"},
+"url":"URL#1166550"
+},
+{
+"@score":"1",
+"@id":"1166551",
+"info":{"authors":{"author":[{"@pid":"50/63","text":"Lavinia Egidi"},{"@pid":"30/9961","text":"Felipe A. Louza"},{"@pid":"63/1086","text":"Giovanni Manzini"}]},"title":"Space-Efficient Merging of Succinct de Bruijn Graphs.","venue":"SPIRE","pages":"337-351","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/EgidiLM19","doi":"10.1007/978-3-030-32686-9_24","ee":"https://doi.org/10.1007/978-3-030-32686-9_24","url":"https://dblp.org/rec/conf/spire/EgidiLM19"},
+"url":"URL#1166551"
+},
+{
+"@score":"1",
+"@id":"1166552",
+"info":{"authors":{"author":[{"@pid":"244/9653","text":"Jonas Ellert"},{"@pid":"163/4161","text":"Florian Kurpicz"}]},"title":"Parallel External Memory Wavelet Tree and Wavelet Matrix Construction.","venue":"SPIRE","pages":"392-406","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/EllertK19","doi":"10.1007/978-3-030-32686-9_28","ee":"https://doi.org/10.1007/978-3-030-32686-9_28","url":"https://dblp.org/rec/conf/spire/EllertK19"},
+"url":"URL#1166552"
+},
+{
+"@score":"1",
+"@id":"1166553",
+"info":{"authors":{"author":[{"@pid":"81/6991","text":"Gabriele Fici"},{"@pid":"49/3088","text":"Pawel Gawrychowski"}]},"title":"Minimal Absent Words in Rooted and Unrooted Trees.","venue":"SPIRE","pages":"152-161","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/FiciG19","doi":"10.1007/978-3-030-32686-9_11","ee":"https://doi.org/10.1007/978-3-030-32686-9_11","url":"https://dblp.org/rec/conf/spire/FiciG19"},
+"url":"URL#1166553"
+},
+{
+"@score":"1",
+"@id":"1166554",
+"info":{"authors":{"author":[{"@pid":"225/4714","text":"Noriki Fujisato"},{"@pid":"118/6656","text":"Yuto Nakashima"},{"@pid":"88/1129","text":"Shunsuke Inenaga"},{"@pid":"44/2355","text":"Hideo Bannai"},{"@pid":"35/1544","text":"Masayuki Takeda"}]},"title":"Direct Linear Time Construction of Parameterized Suffix and LCP Arrays for Constant Alphabets.","venue":"SPIRE","pages":"382-391","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/FujisatoNIBT19","doi":"10.1007/978-3-030-32686-9_27","ee":"https://doi.org/10.1007/978-3-030-32686-9_27","url":"https://dblp.org/rec/conf/spire/FujisatoNIBT19"},
+"url":"URL#1166554"
+},
+{
+"@score":"1",
+"@id":"1166555",
+"info":{"authors":{"author":[{"@pid":"00/3487","text":"Travis Gagie"},{"@pid":"95/2224","text":"Tomohiro I"},{"@pid":"63/1086","text":"Giovanni Manzini"},{"@pid":"n/GonzaloNavarro","text":"Gonzalo Navarro"},{"@pid":"26/5309","text":"Hiroshi Sakamoto"},{"@pid":"118/6638","text":"Yoshimasa Takabatake"}]},"title":"Rpair - Rescaling RePair with Rsync.","venue":"SPIRE","pages":"35-44","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/GagieIMNST19","doi":"10.1007/978-3-030-32686-9_3","ee":"https://doi.org/10.1007/978-3-030-32686-9_3","url":"https://dblp.org/rec/conf/spire/GagieIMNST19"},
+"url":"URL#1166555"
+},
+{
+"@score":"1",
+"@id":"1166556",
+"info":{"authors":{"author":[{"@pid":"133/7161","text":"Davide Della Giustina"},{"@pid":"121/1143","text":"Nicola Prezza"},{"@pid":"44/5068","text":"Rossano Venturini"}]},"title":"A New Linear-Time Algorithm for Centroid Decomposition.","venue":"SPIRE","pages":"274-282","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/GiustinaPV19","doi":"10.1007/978-3-030-32686-9_20","ee":"https://doi.org/10.1007/978-3-030-32686-9_20","url":"https://dblp.org/rec/conf/spire/GiustinaPV19"},
+"url":"URL#1166556"
+},
+{
+"@score":"1",
+"@id":"1166557",
+"info":{"authors":{"author":{"@pid":"149/2662","text":"Danny Hucke"}},"title":"Approximation Ratios of RePair, LongestMatch and Greedy on Unary Strings.","venue":"SPIRE","pages":"3-15","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/Hucke19","doi":"10.1007/978-3-030-32686-9_1","ee":"https://doi.org/10.1007/978-3-030-32686-9_1","url":"https://dblp.org/rec/conf/spire/Hucke19"},
+"url":"URL#1166557"
+},
+{
+"@score":"1",
+"@id":"1166558",
+"info":{"authors":{"author":[{"@pid":"155/6917","text":"Kazuki Kai"},{"@pid":"118/6656","text":"Yuto Nakashima"},{"@pid":"88/1129","text":"Shunsuke Inenaga"},{"@pid":"44/2355","text":"Hideo Bannai"},{"@pid":"35/1544","text":"Masayuki Takeda"},{"@pid":"38/9892","text":"Tomasz Kociumaka"}]},"title":"On Longest Common Property Preserved Substring Queries.","venue":"SPIRE","pages":"162-174","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/KaiNIBTK19","doi":"10.1007/978-3-030-32686-9_12","ee":"https://doi.org/10.1007/978-3-030-32686-9_12","url":"https://dblp.org/rec/conf/spire/KaiNIBTK19"},
+"url":"URL#1166558"
+},
+{
+"@score":"1",
+"@id":"1166559",
+"info":{"authors":{"author":[{"@pid":"89/8611","text":"Yusaku Kaneta"},{"@pid":"72/3856","text":"Takeaki Uno"},{"@pid":"07/5414","text":"Hiroki Arimura"}]},"title":"Fast Identification of Heavy Hitters by Cached and Packed Group Testing.","venue":"SPIRE","pages":"241-257","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/KanetaUA19","doi":"10.1007/978-3-030-32686-9_17","ee":"https://doi.org/10.1007/978-3-030-32686-9_17","url":"https://dblp.org/rec/conf/spire/KanetaUA19"},
+"url":"URL#1166559"
+},
+{
+"@score":"1",
+"@id":"1166560",
+"info":{"authors":{"author":[{"@pid":"04/3672","text":"Susana Ladra"},{"@pid":"92/3841","text":"Miguel R. Luaces"},{"@pid":"22/5490","text":"José R. Paramá"},{"@pid":"186/0925","text":"Fernando Silva-Coira"}]},"title":"Space- and Time-Efficient Storage of LiDAR Point Clouds.","venue":"SPIRE","pages":"513-527","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/LadraLPS19","doi":"10.1007/978-3-030-32686-9_36","ee":"https://doi.org/10.1007/978-3-030-32686-9_36","url":"https://dblp.org/rec/conf/spire/LadraLPS19"},
+"url":"URL#1166560"
+},
+{
+"@score":"1",
+"@id":"1166561",
+"info":{"authors":{"author":{"@pid":"l/NJLarsson","text":"N. Jesper Larsson"}},"title":"Run-Length Encoding in a Finite Universe.","venue":"SPIRE","pages":"355-371","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/Larsson19","doi":"10.1007/978-3-030-32686-9_25","ee":"https://doi.org/10.1007/978-3-030-32686-9_25","url":"https://dblp.org/rec/conf/spire/Larsson19"},
+"url":"URL#1166561"
+},
+{
+"@score":"1",
+"@id":"1166562",
+"info":{"authors":{"author":[{"@pid":"30/9961","text":"Felipe A. Louza"},{"@pid":"22/337","text":"Sabrina Mantaci"},{"@pid":"63/1086","text":"Giovanni Manzini"},{"@pid":"86/6093","text":"Marinella Sciortino"},{"@pid":"71/2226","text":"Guilherme P. Telles"}]},"title":"Inducing the Lyndon Array.","venue":"SPIRE","pages":"138-151","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/LouzaMMST19","doi":"10.1007/978-3-030-32686-9_10","ee":"https://doi.org/10.1007/978-3-030-32686-9_10","url":"https://dblp.org/rec/conf/spire/LouzaMMST19"},
+"url":"URL#1166562"
+},
+{
+"@score":"1",
+"@id":"1166563",
+"info":{"authors":{"author":[{"@pid":"181/9550","text":"Oleg Merkurev"},{"@pid":"05/3762","text":"Arseny M. Shur"}]},"title":"Searching Runs in Streams.","venue":"SPIRE","pages":"203-220","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/MerkurevS19","doi":"10.1007/978-3-030-32686-9_15","ee":"https://doi.org/10.1007/978-3-030-32686-9_15","url":"https://dblp.org/rec/conf/spire/MerkurevS19"},
+"url":"URL#1166563"
+},
+{
+"@score":"1",
+"@id":"1166564",
+"info":{"authors":{"author":[{"@pid":"184/8452","text":"Takuya Mieno"},{"@pid":"129/9119","text":"Dominik Köppl"},{"@pid":"118/6656","text":"Yuto Nakashima"},{"@pid":"88/1129","text":"Shunsuke Inenaga"},{"@pid":"44/2355","text":"Hideo Bannai"},{"@pid":"35/1544","text":"Masayuki Takeda"}]},"title":"Compact Data Structures for Shortest Unique Substring Queries.","venue":"SPIRE","pages":"107-123","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/MienoKNIBT19","doi":"10.1007/978-3-030-32686-9_8","ee":"https://doi.org/10.1007/978-3-030-32686-9_8","url":"https://dblp.org/rec/conf/spire/MienoKNIBT19"},
+"url":"URL#1166564"
+},
+{
+"@score":"1",
+"@id":"1166565",
+"info":{"authors":{"author":[{"@pid":"o/EnnoOhlebusch","text":"Enno Ohlebusch"},{"@pid":"201/4581","text":"Pascal Weber"}]},"title":"On the Computation of Longest Previous Non-overlapping Factors.","venue":"SPIRE","pages":"372-381","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/OhlebuschW19","doi":"10.1007/978-3-030-32686-9_26","ee":"https://doi.org/10.1007/978-3-030-32686-9_26","url":"https://dblp.org/rec/conf/spire/OhlebuschW19"},
+"url":"URL#1166565"
+},
+{
+"@score":"1",
+"@id":"1166566",
+"info":{"authors":{"author":[{"@pid":"150/5190","text":"Anaïs Ollagnier"},{"@pid":"86/5703","text":"Hywel T. P. Williams"}]},"title":"Network-Based Pooling for Topic Modeling on Microblog Content.","venue":"SPIRE","pages":"80-87","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/OllagnierW19","doi":"10.1007/978-3-030-32686-9_6","ee":"https://doi.org/10.1007/978-3-030-32686-9_6","url":"https://dblp.org/rec/conf/spire/OllagnierW19"},
+"url":"URL#1166566"
+},
+{
+"@score":"1",
+"@id":"1166567",
+"info":{"authors":{"author":[{"@pid":"150/3763","text":"Michele Schimd"},{"@pid":"36/1036","text":"Gianfranco Bilardi"}]},"title":"Bounds and Estimates on the Average Edit Distance.","venue":"SPIRE","pages":"91-106","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/SchimdB19","doi":"10.1007/978-3-030-32686-9_7","ee":"https://doi.org/10.1007/978-3-030-32686-9_7","url":"https://dblp.org/rec/conf/spire/SchimdB19"},
+"url":"URL#1166567"
+},
+{
+"@score":"1",
+"@id":"1166568",
+"info":{"authors":{"author":[{"@pid":"163/9785","text":"José Fuentes-Sepúlveda"},{"@pid":"n/GonzaloNavarro","text":"Gonzalo Navarro"},{"@pid":"68/2814","text":"Diego Seco"}]},"title":"Implementing the Topological Model Succinctly.","venue":"SPIRE","pages":"499-512","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/SepulvedaNS19","doi":"10.1007/978-3-030-32686-9_35","ee":"https://doi.org/10.1007/978-3-030-32686-9_35","url":"https://dblp.org/rec/conf/spire/SepulvedaNS19"},
+"url":"URL#1166568"
+},
+{
+"@score":"1",
+"@id":"1166569",
+"info":{"authors":{"author":[{"@pid":"247/1263","text":"Siwoo Song"},{"@pid":"149/5913","text":"Cheol Ryu"},{"@pid":"92/5606","text":"Simone Faro"},{"@pid":"l/ThierryLecroq","text":"Thierry Lecroq"},{"@pid":"p/KunsooPark","text":"Kunsoo Park"}]},"title":"Fast Cartesian Tree Matching.","venue":"SPIRE","pages":"124-137","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/spire/SongRFLP19","doi":"10.1007/978-3-030-32686-9_9","ee":"https://doi.org/10.1007/978-3-030-32686-9_9","url":"https://dblp.org/rec/conf/spire/SongRFLP19"},
+"url":"URL#1166569"
+},
+{
+"@score":"1",
+"@id":"1186451",
+"info":{"authors":{"author":[{"@pid":"b/NievesRBrisaboa","text":"Nieves R. Brisaboa"},{"@pid":"p/SimonJPuglisi","text":"Simon J. Puglisi"}]},"title":"String Processing and Information Retrieval - 26th International Symposium, SPIRE 2019, Segovia, Spain, October 7-9, 2019, Proceedings","venue":["SPIRE","Lecture Notes in Computer Science"],"volume":"11811","publisher":"Springer","year":"2019","type":"Editorship","key":"conf/spire/2019","doi":"10.1007/978-3-030-32686-9","ee":"https://doi.org/10.1007/978-3-030-32686-9","url":"https://dblp.org/rec/conf/spire/2019"},
+"url":"URL#1186451"
+}
+]
+}
+}
+}

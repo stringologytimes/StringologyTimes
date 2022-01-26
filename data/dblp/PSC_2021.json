@@ -1,0 +1,87 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/stringology/stringology2021.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"122.16"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"9",
+"@dc":"9",
+"@oc":"9",
+"@id":"35374264",
+"text":":facetid:toc:db/conf/stringology/stringology2021.bht"
+}
+},
+"hits":{
+"@total":"9",
+"@computed":"9",
+"@sent":"9",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"324963",
+"info":{"authors":{"author":{"@pid":"73/962-1","text":"Stefan Hoffmann 0001"}},"title":"The n-ary Initial Literal and Literal Shuffle.","venue":"Stringology","pages":"61-74","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/stringology/000121","ee":"http://www.stringology.org/event/2021/p06.html","url":"https://dblp.org/rec/conf/stringology/000121"},
+"url":"URL#324963"
+},
+{
+"@score":"1",
+"@id":"324964",
+"info":{"authors":{"author":[{"@pid":"52/3751","text":"Cédric Chauve"},{"@pid":"07/733","text":"Marni Mishna"},{"@pid":"310/1883","text":"France Paquet-Nadeau"}]},"title":"Refined Upper Bounds on the Size of the Condensed Neighbourhood of Sequences.","venue":"Stringology","pages":"30-40","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/stringology/ChauveMP21","ee":"http://www.stringology.org/event/2021/p03.html","url":"https://dblp.org/rec/conf/stringology/ChauveMP21"},
+"url":"URL#324964"
+},
+{
+"@score":"1",
+"@id":"324965",
+"info":{"authors":{"author":[{"@pid":"92/5606","text":"Simone Faro"},{"@pid":"247/1174","text":"Francesco Pio Marino"},{"@pid":"148/4868","text":"Arianna Pavone"},{"@pid":"310/1761","text":"Antonio Scardace"}]},"title":"Towards an Efficient Text Sampling Approach for Exact and Approximate Matching.","venue":"Stringology","pages":"75-89","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/stringology/FaroMPS21","ee":"http://www.stringology.org/event/2021/p07.html","url":"https://dblp.org/rec/conf/stringology/FaroMPS21"},
+"url":"URL#324965"
+},
+{
+"@score":"1",
+"@id":"324966",
+"info":{"authors":{"author":[{"@pid":"10/2943","text":"Frantisek Franek"},{"@pid":"252/0972","text":"Michael Liut"}]},"title":"Computational Substantiation of the d-step Conjecture for Distinct Squares Revisited.","venue":"Stringology","pages":"41-52","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/stringology/FranekL21","ee":"http://www.stringology.org/event/2021/p04.html","url":"https://dblp.org/rec/conf/stringology/FranekL21"},
+"url":"URL#324966"
+},
+{
+"@score":"1",
+"@id":"324967",
+"info":{"authors":{"author":[{"@pid":"294/7029","text":"Ryo Hirakawa"},{"@pid":"118/6656","text":"Yuto Nakashima"},{"@pid":"88/1129","text":"Shunsuke Inenaga"},{"@pid":"35/1544","text":"Masayuki Takeda"}]},"title":"Counting Lyndon Subsequences.","venue":"Stringology","pages":"53-60","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/stringology/HirakawaNIT21","ee":"http://www.stringology.org/event/2021/p05.html","url":"https://dblp.org/rec/conf/stringology/HirakawaNIT21"},
+"url":"URL#324967"
+},
+{
+"@score":"1",
+"@id":"324968",
+"info":{"authors":{"author":[{"@pid":"210/5839","text":"Waltteri Pakalén"},{"@pid":"69/340","text":"Hannu Peltola"},{"@pid":"t/JormaTarhio","text":"Jorma Tarhio"},{"@pid":"w/BruceWWatson","text":"Bruce W. Watson"}]},"title":"Pitfalls of Algorithm Comparison.","venue":"Stringology","pages":"16-29","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/stringology/PakalenPTW21","ee":"http://www.stringology.org/event/2021/p02.html","url":"https://dblp.org/rec/conf/stringology/PakalenPTW21"},
+"url":"URL#324968"
+},
+{
+"@score":"1",
+"@id":"324969",
+"info":{"authors":{"author":[{"@pid":"210/5839","text":"Waltteri Pakalén"},{"@pid":"t/JormaTarhio","text":"Jorma Tarhio"},{"@pid":"w/BruceWWatson","text":"Bruce W. Watson"}]},"title":"Searching with Extended Guard and Pivot Loop.","venue":"Stringology","pages":"90-102","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/stringology/PakalenTW21","ee":"http://www.stringology.org/event/2021/p08.html","url":"https://dblp.org/rec/conf/stringology/PakalenTW21"},
+"url":"URL#324969"
+},
+{
+"@score":"1",
+"@id":"324970",
+"info":{"authors":{"author":[{"@pid":"178/8288","text":"Eliska Sestáková"},{"@pid":"18/9961","text":"Ondrej Guth"},{"@pid":"21/1027","text":"Jan Janousek"}]},"title":"Automata Approach to Inexact Tree Pattern Matching Using 1-degree Edit Distance.","venue":"Stringology","pages":"1-15","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/stringology/SestakovaGJ21","ee":"http://www.stringology.org/event/2021/p01.html","url":"https://dblp.org/rec/conf/stringology/SestakovaGJ21"},
+"url":"URL#324970"
+},
+{
+"@score":"1",
+"@id":"337025",
+"info":{"authors":{"author":[{"@pid":"h/JHolub","text":"Jan Holub 0001"},{"@pid":"z/JanZdarek","text":"Jan Zdárek"}]},"title":"Prague Stringology Conference 2021, Prague, Czech Republic, August 30-31, 2021.","venue":"Stringology","publisher":"Czech Technical University in Prague, Faculty of Information Technology, Department of Theoretical Computer Science","year":"2021","type":"Editorship","access":"unavailable","key":"conf/stringology/2021","url":"https://dblp.org/rec/conf/stringology/2021"},
+"url":"URL#337025"
+}
+]
+}
+}
+}

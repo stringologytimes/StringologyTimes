@@ -1,0 +1,237 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/cpm/cpm2019.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"125.21"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"34",
+"@dc":"34",
+"@oc":"34",
+"@id":"35338750",
+"text":":facetid:toc:db/conf/cpm/cpm2019.bht"
+}
+},
+"hits":{
+"@total":"34",
+"@computed":"34",
+"@sent":"34",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"1037902",
+"info":{"authors":{"author":[{"@pid":"11/495-1","text":"Giulia Bernardini 0001"},{"@pid":"80/4509","text":"Paola Bonizzoni"},{"@pid":"03/5602","text":"Gianluca Della Vedova"},{"@pid":"33/387","text":"Murray Patterson"}]},"title":"A Rearrangement Distance for Fully-Labelled Trees.","venue":"CPM","pages":"28:1-28:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/0001BVP19","doi":"10.4230/LIPICS.CPM.2019.28","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.28","url":"https://dblp.org/rec/conf/cpm/0001BVP19"},
+"url":"URL#1037902"
+},
+{
+"@score":"1",
+"@id":"1037903",
+"info":{"authors":{"author":[{"@pid":"92/3957","text":"Ali Akhavi"},{"@pid":"86/4216-1","text":"Julien Clément 0001"},{"@pid":"242/3233","text":"Dimitri Darthenay"},{"@pid":"88/4600","text":"Loïck Lhote"},{"@pid":"50/4436","text":"Brigitte Vallée"}]},"title":"Dichotomic Selection on Words - A Probabilistic Analysis.","venue":"CPM","pages":"19:1-19:19","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/Akhavi0DLV19","doi":"10.4230/LIPICS.CPM.2019.19","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.19","url":"https://dblp.org/rec/conf/cpm/Akhavi0DLV19"},
+"url":"URL#1037903"
+},
+{
+"@score":"1",
+"@id":"1037904",
+"info":{"authors":{"author":[{"@pid":"204/8417","text":"Hayam Alamro"},{"@pid":"77/9958","text":"Golnaz Badkobeh"},{"@pid":"70/4285","text":"Djamal Belazzougui"},{"@pid":"i/CSIliopoulos","text":"Costas S. Iliopoulos"},{"@pid":"p/SimonJPuglisi","text":"Simon J. Puglisi"}]},"title":"Computing the Antiperiod(s) of a String.","venue":"CPM","pages":"32:1-32:11","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/AlamroBBIP19","doi":"10.4230/LIPICS.CPM.2019.32","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.32","url":"https://dblp.org/rec/conf/cpm/AlamroBBIP19"},
+"url":"URL#1037904"
+},
+{
+"@score":"1",
+"@id":"1037905",
+"info":{"authors":{"author":[{"@pid":"198/1439","text":"Mai Alzamel"},{"@pid":"c/MCrochemore","text":"Maxime Crochemore"},{"@pid":"i/CSIliopoulos","text":"Costas S. Iliopoulos"},{"@pid":"38/9892","text":"Tomasz Kociumaka"},{"@pid":"83/7216","text":"Jakub Radoszewski"},{"@pid":"r/WojciechRytter","text":"Wojciech Rytter"},{"@pid":"223/9993","text":"Juliusz Straszynski"},{"@pid":"80/5679","text":"Tomasz Walen"},{"@pid":"223/9846","text":"Wiktor Zuba"}]},"title":"Quasi-Linear-Time Algorithm for Longest Common Circular Factor.","venue":"CPM","pages":"25:1-25:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/AlzamelCIKRRSWZ19","doi":"10.4230/LIPICS.CPM.2019.25","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.25","url":"https://dblp.org/rec/conf/cpm/AlzamelCIKRRSWZ19"},
+"url":"URL#1037905"
+},
+{
+"@score":"1",
+"@id":"1037906",
+"info":{"authors":{"author":[{"@pid":"a/AAmir","text":"Amihood Amir"},{"@pid":"227/1404","text":"Eitan Kondratovsky"}]},"title":"Sufficient Conditions for Efficient Indexing Under Different Matchings.","venue":"CPM","pages":"6:1-6:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/AmirK19","doi":"10.4230/LIPICS.CPM.2019.6","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.6","url":"https://dblp.org/rec/conf/cpm/AmirK19"},
+"url":"URL#1037906"
+},
+{
+"@score":"1",
+"@id":"1037907",
+"info":{"authors":{"author":[{"@pid":"44/2355","text":"Hideo Bannai"},{"@pid":"k/JKarkkainen","text":"Juha Kärkkäinen"},{"@pid":"129/9119","text":"Dominik Köppl"},{"@pid":"71/2618","text":"Marcin Piatkowski"}]},"title":"Indexing the Bijective BWT.","venue":"CPM","pages":"17:1-17:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/BannaiKKP19","doi":"10.4230/LIPICS.CPM.2019.17","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.17","url":"https://dblp.org/rec/conf/cpm/BannaiKKP19"},
+"url":"URL#1037907"
+},
+{
+"@score":"1",
+"@id":"1037908",
+"info":{"authors":{"author":[{"@pid":"70/4285","text":"Djamal Belazzougui"},{"@pid":"40/5550","text":"Fabio Cunial"}]},"title":"Fully-Functional Bidirectional Burrows-Wheeler Indexes and Infinite-Order De Bruijn Graphs.","venue":"CPM","pages":"10:1-10:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/BelazzouguiC19","doi":"10.4230/LIPICS.CPM.2019.10","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.10","url":"https://dblp.org/rec/conf/cpm/BelazzouguiC19"},
+"url":"URL#1037908"
+},
+{
+"@score":"1",
+"@id":"1037909",
+"info":{"authors":{"author":[{"@pid":"29/7591","text":"Laurent Bulteau"},{"@pid":"71/8725","text":"Konrad K. Dabrowski"},{"@pid":"14/796","text":"Guillaume Fertin"},{"@pid":"j/MatthewJohnson2","text":"Matthew Johnson 0002"},{"@pid":"18/5531","text":"Daniël Paulusma"},{"@pid":"42/3622","text":"Stéphane Vialette"}]},"title":"Finding a Small Number of Colourful Components.","venue":"CPM","pages":"20:1-20:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/BulteauDF0PV19","doi":"10.4230/LIPICS.CPM.2019.20","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.20","url":"https://dblp.org/rec/conf/cpm/BulteauDF0PV19"},
+"url":"URL#1037909"
+},
+{
+"@score":"1",
+"@id":"1037910",
+"info":{"authors":{"author":[{"@pid":"146/7608","text":"Bastien Cazaux"},{"@pid":"07/3055","text":"Eric Rivals"}]},"title":"Linking BWT and XBW via Aho-Corasick Automaton - Applications to Run-Length Encoding.","venue":"CPM","pages":"24:1-24:20","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/CazauxR19","doi":"10.4230/LIPICS.CPM.2019.24","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.24","url":"https://dblp.org/rec/conf/cpm/CazauxR19"},
+"url":"URL#1037910"
+},
+{
+"@score":"1",
+"@id":"1037911",
+"info":{"authors":{"author":[{"@pid":"220/4069","text":"Diego Díaz-Domínguez"},{"@pid":"00/3487","text":"Travis Gagie"},{"@pid":"n/GonzaloNavarro","text":"Gonzalo Navarro"}]},"title":"Simulating the DNA Overlap Graph in Succinct Space.","venue":"CPM","pages":"26:1-26:20","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/Diaz-DominguezG19","doi":"10.4230/LIPICS.CPM.2019.26","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.26","url":"https://dblp.org/rec/conf/cpm/Diaz-DominguezG19"},
+"url":"URL#1037911"
+},
+{
+"@score":"1",
+"@id":"1037912",
+"info":{"authors":{"author":[{"@pid":"130/3914","text":"Francesco Dolce"},{"@pid":"05/2717","text":"Antonio Restivo"},{"@pid":"13/6960","text":"Christophe Reutenauer"}]},"title":"Some Variations on Lyndon Words (Invited Talk).","venue":"CPM","pages":"2:1-2:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/DolceRR19","doi":"10.4230/LIPICS.CPM.2019.2","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.2","url":"https://dblp.org/rec/conf/cpm/DolceRR19"},
+"url":"URL#1037912"
+},
+{
+"@score":"1",
+"@id":"1037913",
+"info":{"authors":{"author":[{"@pid":"219/5876","text":"Mitsuru Funakoshi"},{"@pid":"118/6656","text":"Yuto Nakashima"},{"@pid":"88/1129","text":"Shunsuke Inenaga"},{"@pid":"44/2355","text":"Hideo Bannai"},{"@pid":"35/1544","text":"Masayuki Takeda"}]},"title":"Faster Queries for Longest Substring Palindrome After Block Edit.","venue":"CPM","pages":"27:1-27:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/FunakoshiNIBT19","doi":"10.4230/LIPICS.CPM.2019.27","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.27","url":"https://dblp.org/rec/conf/cpm/FunakoshiNIBT19"},
+"url":"URL#1037913"
+},
+{
+"@score":"1",
+"@id":"1037914",
+"info":{"authors":{"author":{"@pid":"199/8371","text":"Michal Ganczorz"}},"title":"Entropy Lower Bounds for Dictionary Compression.","venue":"CPM","pages":"11:1-11:18","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/Ganczorz19","doi":"10.4230/LIPICS.CPM.2019.11","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.11","url":"https://dblp.org/rec/conf/cpm/Ganczorz19"},
+"url":"URL#1037914"
+},
+{
+"@score":"1",
+"@id":"1037915",
+"info":{"authors":{"author":{"@pid":"49/3088","text":"Pawel Gawrychowski"}},"title":"How to Exploit Periodicity (Invited Talk).","venue":"CPM","pages":"1:1-1:1","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/Gawrychowski19","doi":"10.4230/LIPICS.CPM.2019.1","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.1","url":"https://dblp.org/rec/conf/cpm/Gawrychowski19"},
+"url":"URL#1037915"
+},
+{
+"@score":"1",
+"@id":"1037916",
+"info":{"authors":{"author":[{"@pid":"49/3088","text":"Pawel Gawrychowski"},{"@pid":"83/7216","text":"Jakub Radoszewski"},{"@pid":"99/3746","text":"Tatiana Starikovskaya"}]},"title":"Quasi-Periodicity in Streams.","venue":"CPM","pages":"22:1-22:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/GawrychowskiRS19","doi":"10.4230/LIPICS.CPM.2019.22","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.22","url":"https://dblp.org/rec/conf/cpm/GawrychowskiRS19"},
+"url":"URL#1037916"
+},
+{
+"@score":"1",
+"@id":"1037917",
+"info":{"authors":{"author":[{"@pid":"49/3088","text":"Pawel Gawrychowski"},{"@pid":"99/3746","text":"Tatiana Starikovskaya"}]},"title":"Streaming Dictionary Matching with Mismatches.","venue":"CPM","pages":"21:1-21:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/GawrychowskiS19","doi":"10.4230/LIPICS.CPM.2019.21","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.21","url":"https://dblp.org/rec/conf/cpm/GawrychowskiS19"},
+"url":"URL#1037917"
+},
+{
+"@score":"1",
+"@id":"1037918",
+"info":{"authors":{"author":[{"@pid":"g/RaffaeleGiancarlo","text":"Raffaele Giancarlo"},{"@pid":"63/1086","text":"Giovanni Manzini"},{"@pid":"14/4683","text":"Giovanna Rosone"},{"@pid":"86/6093","text":"Marinella Sciortino"}]},"title":"A New Class of Searchable and Provably Highly Compressible String Transformations.","venue":"CPM","pages":"12:1-12:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/GiancarloMRS19","doi":"10.4230/LIPICS.CPM.2019.12","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.12","url":"https://dblp.org/rec/conf/cpm/GiancarloMRS19"},
+"url":"URL#1037918"
+},
+{
+"@score":"1",
+"@id":"1037919",
+"info":{"authors":{"author":[{"@pid":"176/8779","text":"Diptarama Hendrian"},{"@pid":"161/9026","text":"Takuya Takagi"},{"@pid":"88/1129","text":"Shunsuke Inenaga"}]},"title":"Online Algorithms for Constructing Linear-Size Suffix Trie.","venue":"CPM","pages":"30:1-30:19","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/HendrianTI19","doi":"10.4230/LIPICS.CPM.2019.30","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.30","url":"https://dblp.org/rec/conf/cpm/HendrianTI19"},
+"url":"URL#1037919"
+},
+{
+"@score":"1",
+"@id":"1037920",
+"info":{"authors":{"author":[{"@pid":"13/762","text":"Haitao Jiang"},{"@pid":"g/JiongGuo","text":"Jiong Guo"},{"@pid":"91/681","text":"Daming Zhu"},{"@pid":"z/BinhaiZhu","text":"Binhai Zhu"}]},"title":"A 2-Approximation Algorithm for the Complementary Maximal Strip Recovery Problem.","venue":"CPM","pages":"5:1-5:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/JiangGZZ19","doi":"10.4230/LIPICS.CPM.2019.5","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.5","url":"https://dblp.org/rec/conf/cpm/JiangGZZ19"},
+"url":"URL#1037920"
+},
+{
+"@score":"1",
+"@id":"1037921",
+"info":{"authors":{"author":[{"@pid":"242/3087","text":"Niko Kiirala"},{"@pid":"57/4404","text":"Leena Salmela"},{"@pid":"98/3921","text":"Alexandru I. Tomescu"}]},"title":"Safe and Complete Algorithms for Dynamic Programming Problems, with an Application to RNA Folding.","venue":"CPM","pages":"8:1-8:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/KiiralaST19","doi":"10.4230/LIPICS.CPM.2019.8","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.8","url":"https://dblp.org/rec/conf/cpm/KiiralaST19"},
+"url":"URL#1037921"
+},
+{
+"@score":"1",
+"@id":"1037922",
+"info":{"authors":{"author":[{"@pid":"130/4038","text":"Dmitry Kosolobov"},{"@pid":"230/3646","text":"Nikita Sivukhin"}]},"title":"Compressed Multiple Pattern Matching.","venue":"CPM","pages":"13:1-13:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/KosolobovS19","doi":"10.4230/LIPICS.CPM.2019.13","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.13","url":"https://dblp.org/rec/conf/cpm/KosolobovS19"},
+"url":"URL#1037922"
+},
+{
+"@score":"1",
+"@id":"1037923",
+"info":{"authors":{"author":[{"@pid":"209/9808","text":"Karim Labib"},{"@pid":"78/11210","text":"Przemyslaw Uznanski"},{"@pid":"134/6400","text":"Daniel Wolleb-Graf"}]},"title":"Hamming Distance Completeness.","venue":"CPM","pages":"14:1-14:17","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/LabibUW19","doi":"10.4230/LIPICS.CPM.2019.14","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.14","url":"https://dblp.org/rec/conf/cpm/LabibUW19"},
+"url":"URL#1037923"
+},
+{
+"@score":"1",
+"@id":"1037924",
+"info":{"authors":{"author":[{"@pid":"181/9550","text":"Oleg Merkurev"},{"@pid":"05/3762","text":"Arseny M. Shur"}]},"title":"Searching Long Repeats in Streams.","venue":"CPM","pages":"31:1-31:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/MerkurevS19","doi":"10.4230/LIPICS.CPM.2019.31","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.31","url":"https://dblp.org/rec/conf/cpm/MerkurevS19"},
+"url":"URL#1037924"
+},
+{
+"@score":"1",
+"@id":"1037925",
+"info":{"authors":{"author":[{"@pid":"132/1960","text":"Takaaki Nishimoto"},{"@pid":"38/1958","text":"Yasuo Tabei"}]},"title":"Conversion from RLBWT to LZ77.","venue":"CPM","pages":"9:1-9:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/NishimotoT19","doi":"10.4230/LIPICS.CPM.2019.9","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.9","url":"https://dblp.org/rec/conf/cpm/NishimotoT19"},
+"url":"URL#1037925"
+},
+{
+"@score":"1",
+"@id":"1037926",
+"info":{"authors":{"author":{"@pid":"242/3319","text":"Julian Pape-Lange"}},"title":"On Maximal Repeats in Compressed Strings.","venue":"CPM","pages":"18:1-18:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/Pape-Lange19","doi":"10.4230/LIPICS.CPM.2019.18","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.18","url":"https://dblp.org/rec/conf/cpm/Pape-Lange19"},
+"url":"URL#1037926"
+},
+{
+"@score":"1",
+"@id":"1037927",
+"info":{"authors":{"author":[{"@pid":"09/11054","text":"Sung Gwan Park"},{"@pid":"a/AAmir","text":"Amihood Amir"},{"@pid":"l/GadMLandau","text":"Gad M. Landau"},{"@pid":"p/KunsooPark","text":"Kunsoo Park"}]},"title":"Cartesian Tree Matching and Indexing.","venue":"CPM","pages":"16:1-16:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/ParkALP19","doi":"10.4230/LIPICS.CPM.2019.16","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.16","url":"https://dblp.org/rec/conf/cpm/ParkALP19"},
+"url":"URL#1037927"
+},
+{
+"@score":"1",
+"@id":"1037928",
+"info":{"authors":{"author":{"@pid":"121/1143","text":"Nicola Prezza"}},"title":"Optimal Rank and Select Queries on Dictionary-Compressed Text.","venue":"CPM","pages":"4:1-4:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/Prezza19","doi":"10.4230/LIPICS.CPM.2019.4","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.4","url":"https://dblp.org/rec/conf/cpm/Prezza19"},
+"url":"URL#1037928"
+},
+{
+"@score":"1",
+"@id":"1037929",
+"info":{"authors":{"author":[{"@pid":"121/1143","text":"Nicola Prezza"},{"@pid":"14/4683","text":"Giovanna Rosone"}]},"title":"Space-Efficient Computation of the LCP Array from the Burrows-Wheeler Transform.","venue":"CPM","pages":"7:1-7:18","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/PrezzaR19","doi":"10.4230/LIPICS.CPM.2019.7","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.7","url":"https://dblp.org/rec/conf/cpm/PrezzaR19"},
+"url":"URL#1037929"
+},
+{
+"@score":"1",
+"@id":"1037930",
+"info":{"authors":{"author":[{"@pid":"228/6934","text":"Jan Studený"},{"@pid":"78/11210","text":"Przemyslaw Uznanski"}]},"title":"Approximating Approximate Pattern Matching.","venue":"CPM","pages":"15:1-15:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/StudenyU19","doi":"10.4230/LIPICS.CPM.2019.15","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.15","url":"https://dblp.org/rec/conf/cpm/StudenyU19"},
+"url":"URL#1037930"
+},
+{
+"@score":"1",
+"@id":"1037931",
+"info":{"authors":{"author":[{"@pid":"234/8944","text":"Ryo Sugahara"},{"@pid":"118/6656","text":"Yuto Nakashima"},{"@pid":"88/1129","text":"Shunsuke Inenaga"},{"@pid":"44/2355","text":"Hideo Bannai"},{"@pid":"35/1544","text":"Masayuki Takeda"}]},"title":"Computing Runs on a Trie.","venue":"CPM","pages":"23:1-23:11","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/SugaharaNIBT19","doi":"10.4230/LIPICS.CPM.2019.23","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.23","url":"https://dblp.org/rec/conf/cpm/SugaharaNIBT19"},
+"url":"URL#1037931"
+},
+{
+"@score":"1",
+"@id":"1037932",
+"info":{"authors":{"author":[{"@pid":"139/2345","text":"Yuki Urabe"},{"@pid":"118/6656","text":"Yuto Nakashima"},{"@pid":"88/1129","text":"Shunsuke Inenaga"},{"@pid":"44/2355","text":"Hideo Bannai"},{"@pid":"35/1544","text":"Masayuki Takeda"}]},"title":"On the Size of Overlapping Lempel-Ziv and Lyndon Factorizations.","venue":"CPM","pages":"29:1-29:11","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/UrabeNIBT19","doi":"10.4230/LIPICS.CPM.2019.29","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.29","url":"https://dblp.org/rec/conf/cpm/UrabeNIBT19"},
+"url":"URL#1037932"
+},
+{
+"@score":"1",
+"@id":"1037933",
+"info":{"title":"Front Matter, Table of Contents, Preface, Conference Organization.","venue":"CPM","pages":"0:1-0:18","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/X19","doi":"10.4230/LIPICS.CPM.2019.0","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.0","url":"https://dblp.org/rec/conf/cpm/X19"},
+"url":"URL#1037933"
+},
+{
+"@score":"1",
+"@id":"1037934",
+"info":{"authors":{"author":{"@pid":"88/982","text":"Michal Ziv-Ukelson"}},"title":"Stringology Combats Microbiological Threats (Invited Talk).","venue":"CPM","pages":"3:1-3:1","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/cpm/Ziv-Ukelson19","doi":"10.4230/LIPICS.CPM.2019.3","ee":"https://doi.org/10.4230/LIPIcs.CPM.2019.3","url":"https://dblp.org/rec/conf/cpm/Ziv-Ukelson19"},
+"url":"URL#1037934"
+},
+{
+"@score":"1",
+"@id":"1184413",
+"info":{"authors":{"author":[{"@pid":"p/NadiaPisanti","text":"Nadia Pisanti"},{"@pid":"89/7966","text":"Solon P. Pissis"}]},"title":"30th Annual Symposium on Combinatorial Pattern Matching, CPM 2019, June 18-20, 2019, Pisa, Italy.","venue":["CPM","LIPIcs"],"volume":"128","publisher":"Schloss Dagstuhl - Leibniz-Zentrum für Informatik","year":"2019","type":"Editorship","key":"conf/cpm/2019","ee":"http://www.dagstuhl.de/dagpub/978-3-95977-103-0","url":"https://dblp.org/rec/conf/cpm/2019"},
+"url":"URL#1184413"
+}
+]
+}
+}
+}

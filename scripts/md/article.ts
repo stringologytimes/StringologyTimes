@@ -84,6 +84,7 @@ export class ConferenceArticle{
     public conferenceURL : string;
     public acceptedPaperURL : string;
     public deadline : Date = new Date();
+    public dblpName : string | null;
 
     public static parseList(list : string) : ConferenceArticle[] {
         const lines = list.split("\r\n");
@@ -108,6 +109,9 @@ export class ConferenceArticle{
                 date.setMonth(Number.parseInt(time[1]));
                 date.setDate(Number.parseInt(time[2]));
                 r.deadline = date;
+            }
+            if(p.length > 5){
+                r.dblpName = p[5];                
             }
             if(isNaN(r.year)){
                 console.log(`Skip: ${line}`);
