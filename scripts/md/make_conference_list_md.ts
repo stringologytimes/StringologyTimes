@@ -1,5 +1,5 @@
 
-import { ConferenceArticle, PaperArticle } from "./article"
+import { ConferenceArticle, PaperArticle } from "../article"
 
 //const request = require('sync-request');
 const fs = require('fs');

@@ -33,6 +33,9 @@ export class PaperArticle {
     public isEmpty(){
         return this.title == null;
     }
+    public uniqueName() : string {
+        return `${this.conference}_${this.year}_${this.title}`
+    }
     public static parseList(list : string) : PaperArticle[] {
         const lines = list.split("\r\n");
         const r : PaperArticle[] = <PaperArticle[]>(lines.map((v) => PaperArticle.parse(v)).filter((v) => v != null));

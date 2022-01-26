@@ -1,4 +1,4 @@
-import { ConferenceArticle } from "../md/article"
+import { ConferenceArticle } from "../article"
 
 var request = require('sync-request');
 const fs = require('fs');
