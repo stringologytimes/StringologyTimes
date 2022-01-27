@@ -1,0 +1,591 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/focs/focs2019.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"124.36"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"93",
+"@dc":"93",
+"@oc":"93",
+"@id":"35346093",
+"text":":facetid:toc:db/conf/focs/focs2019.bht"
+}
+},
+"hits":{
+"@total":"93",
+"@computed":"93",
+"@sent":"93",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"1059830",
+"info":{"authors":{"author":[{"@pid":"135/6379-1","text":"Jingcheng Liu 0001"},{"@pid":"s/AlistairSinclair","text":"Alistair Sinclair"},{"@pid":"27/9075","text":"Piyush Srivastava"}]},"title":"A Deterministic Algorithm for Counting Colorings with 2-Delta Colors.","venue":"FOCS","pages":"1380-1404","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/0001SS19","doi":"10.1109/FOCS.2019.00085","ee":"https://doi.org/10.1109/FOCS.2019.00085","url":"https://dblp.org/rec/conf/focs/0001SS19"},
+"url":"URL#1059830"
+},
+{
+"@score":"1",
+"@id":"1059831",
+"info":{"authors":{"author":[{"@pid":"74/8558-2","text":"Ashutosh Kumar 0002"},{"@pid":"76/1906","text":"Raghu Meka"},{"@pid":"s/AmitSahai","text":"Amit Sahai"}]},"title":"Leakage-Resilient Secret Sharing Against Colluding Parties.","venue":"FOCS","pages":"636-660","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/0002MS19","doi":"10.1109/FOCS.2019.00045","ee":"https://doi.org/10.1109/FOCS.2019.00045","url":"https://dblp.org/rec/conf/focs/0002MS19"},
+"url":"URL#1059831"
+},
+{
+"@score":"1",
+"@id":"1059832",
+"info":{"authors":{"author":[{"@pid":"56/1358","text":"Scott Aaronson"},{"@pid":"119/5097","text":"Daniel Grier"},{"@pid":"18/9367","text":"Luke Schaeffer"}]},"title":"A Quantum Query Complexity Trichotomy for Regular Languages.","venue":"FOCS","pages":"942-965","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AaronsonGS19","doi":"10.1109/FOCS.2019.00061","ee":"https://doi.org/10.1109/FOCS.2019.00061","url":"https://dblp.org/rec/conf/focs/AaronsonGS19"},
+"url":"URL#1059832"
+},
+{
+"@score":"1",
+"@id":"1059833",
+"info":{"authors":{"author":[{"@pid":"84/5016","text":"Emmanuel Abbe"},{"@pid":"89/10527-5","text":"Min Ye 0005"}]},"title":"Reed-Muller Codes Polarize.","venue":"FOCS","pages":"273-286","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AbbeY19","doi":"10.1109/FOCS.2019.00026","ee":"https://doi.org/10.1109/FOCS.2019.00026","url":"https://dblp.org/rec/conf/focs/AbbeY19"},
+"url":"URL#1059833"
+},
+{
+"@score":"1",
+"@id":"1059834",
+"info":{"authors":{"author":[{"@pid":"34/4066","text":"Dimitris Achlioptas"},{"@pid":"147/4790","text":"Fotis Iliopoulos"},{"@pid":"s/AlistairSinclair","text":"Alistair Sinclair"}]},"title":"Beyond the Lovász Local Lemma - Point to Set Correlations and Their Algorithmic Applications.","venue":"FOCS","pages":"725-744","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AchlioptasIS19","doi":"10.1109/FOCS.2019.00049","ee":"https://doi.org/10.1109/FOCS.2019.00049","url":"https://dblp.org/rec/conf/focs/AchlioptasIS19"},
+"url":"URL#1059834"
+},
+{
+"@score":"1",
+"@id":"1059835",
+"info":{"authors":{"author":[{"@pid":"42/5385","text":"Dorit Aharonov"},{"@pid":"153/2241","text":"Alex Bredariol Grilo"}]},"title":"Stoquastic PCP vs. Randomness.","venue":"FOCS","pages":"1000-1023","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AharonovG19","doi":"10.1109/FOCS.2019.00065","ee":"https://doi.org/10.1109/FOCS.2019.00065","url":"https://dblp.org/rec/conf/focs/AharonovG19"},
+"url":"URL#1059835"
+},
+{
+"@score":"1",
+"@id":"1059836",
+"info":{"authors":{"author":[{"@pid":"195/5833","text":"Vedat Levi Alev"},{"@pid":"245/2645","text":"Fernando Granha Jeronimo"},{"@pid":"63/5004","text":"Madhur Tulsiani"}]},"title":"Approximating Constraint Satisfaction Problems on High-Dimensional Expanders.","venue":"FOCS","pages":"180-201","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AlevJT19","doi":"10.1109/FOCS.2019.00021","ee":"https://doi.org/10.1109/FOCS.2019.00021","url":"https://dblp.org/rec/conf/focs/AlevJT19"},
+"url":"URL#1059836"
+},
+{
+"@score":"1",
+"@id":"1059837",
+"info":{"authors":{"author":[{"@pid":"166/1624","text":"Josh Alman"},{"@pid":"116/0948-1","text":"Lijie Chen 0001"}]},"title":"Efficient Construction of Rigid Matrices Using an NP Oracle.","venue":"FOCS","pages":"1034-1055","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AlmanC19","doi":"10.1109/FOCS.2019.00067","ee":"https://doi.org/10.1109/FOCS.2019.00067","url":"https://dblp.org/rec/conf/focs/AlmanC19"},
+"url":"URL#1059837"
+},
+{
+"@score":"1",
+"@id":"1059838",
+"info":{"authors":{"author":[{"@pid":"60/8821","text":"Nima Anari"},{"@pid":"172/1280","text":"Alireza Rezaei"}]},"title":"A Tight Analysis of Bethe Approximation for Permanent.","venue":"FOCS","pages":"1434-1445","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AnariR19","doi":"10.1109/FOCS.2019.000-3","ee":"https://doi.org/10.1109/FOCS.2019.000-3","url":"https://dblp.org/rec/conf/focs/AnariR19"},
+"url":"URL#1059838"
+},
+{
+"@score":"1",
+"@id":"1059839",
+"info":{"authors":{"author":[{"@pid":"137/6679","text":"Anurag Anshu"},{"@pid":"230/8355","text":"Naresh Goud Boddu"},{"@pid":"40/7802","text":"Dave Touchette"}]},"title":"Quantum Log-Approximate-Rank Conjecture is Also False.","venue":"FOCS","pages":"982-994","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AnshuBT19","doi":"10.1109/FOCS.2019.00063","ee":"https://doi.org/10.1109/FOCS.2019.00063","url":"https://dblp.org/rec/conf/focs/AnshuBT19"},
+"url":"URL#1059839"
+},
+{
+"@score":"1",
+"@id":"1059840",
+"info":{"authors":{"author":[{"@pid":"46/1698","text":"Benny Applebaum"},{"@pid":"234/9410","text":"Eliran Kachlon"}]},"title":"Sampling Graphs without Forbidden Subgraphs and Unbalanced Expanders with Negligible Error.","venue":"FOCS","pages":"171-179","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ApplebaumK19","doi":"10.1109/FOCS.2019.00020","ee":"https://doi.org/10.1109/FOCS.2019.00020","url":"https://dblp.org/rec/conf/focs/ApplebaumK19"},
+"url":"URL#1059840"
+},
+{
+"@score":"1",
+"@id":"1059841",
+"info":{"authors":{"author":[{"@pid":"170/8135","text":"Andrii Arman"},{"@pid":"54/3104","text":"Pu Gao"},{"@pid":"w/NicholasCWormald","text":"Nicholas C. Wormald"}]},"title":"Fast Uniform Generation of Random Graphs with Given Degree Sequences.","venue":"FOCS","pages":"1371-1379","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ArmanGW19","doi":"10.1109/FOCS.2019.00084","ee":"https://doi.org/10.1109/FOCS.2019.00084","url":"https://dblp.org/rec/conf/focs/ArmanGW19"},
+"url":"URL#1059841"
+},
+{
+"@score":"1",
+"@id":"1059842",
+"info":{"authors":{"author":[{"@pid":"125/2903","text":"Sepehr Assadi"},{"@pid":"55/8911","text":"Sahil Singla 0001"}]},"title":"Improved Truthful Mechanisms for Combinatorial Auctions with Submodular Bidders.","venue":"FOCS","pages":"233-248","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Assadi019","doi":"10.1109/FOCS.2019.00024","ee":"https://doi.org/10.1109/FOCS.2019.00024","url":"https://dblp.org/rec/conf/focs/Assadi019"},
+"url":"URL#1059842"
+},
+{
+"@score":"1",
+"@id":"1059843",
+"info":{"authors":{"author":[{"@pid":"66/5890","text":"Albert Atserias"},{"@pid":"12/303","text":"Moritz Müller"}]},"title":"Automating Resolution is NP-Hard.","venue":"FOCS","pages":"498-509","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AtseriasM19","doi":"10.1109/FOCS.2019.00038","ee":"https://doi.org/10.1109/FOCS.2019.00038","url":"https://dblp.org/rec/conf/focs/AtseriasM19"},
+"url":"URL#1059843"
+},
+{
+"@score":"1",
+"@id":"1059844",
+"info":{"authors":{"author":[{"@pid":"a/YAzar","text":"Yossi Azar"},{"@pid":"211/8092","text":"Noam Touitou"}]},"title":"General Framework for Metric Optimization Problems with Delay or with Deadlines.","venue":"FOCS","pages":"60-71","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AzarT19","doi":"10.1109/FOCS.2019.00013","ee":"https://doi.org/10.1109/FOCS.2019.00013","url":"https://dblp.org/rec/conf/focs/AzarT19"},
+"url":"URL#1059844"
+},
+{
+"@score":"1",
+"@id":"1059845",
+"info":{"authors":{"author":[{"@pid":"153/1197","text":"Alkida Balliu"},{"@pid":"46/950-2","text":"Sebastian Brandt 0002"},{"@pid":"78/10358","text":"Juho Hirvonen"},{"@pid":"153/1117","text":"Dennis Olivetti"},{"@pid":"08/9698","text":"Mikaël Rabie"},{"@pid":"80/1772","text":"Jukka Suomela"}]},"title":"Lower Bounds for Maximal Matchings and Maximal Independent Sets.","venue":"FOCS","pages":"481-497","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Balliu0HORS19","doi":"10.1109/FOCS.2019.00037","ee":"https://doi.org/10.1109/FOCS.2019.00037","url":"https://dblp.org/rec/conf/focs/Balliu0HORS19"},
+"url":"URL#1059845"
+},
+{
+"@score":"1",
+"@id":"1059846",
+"info":{"authors":{"author":[{"@pid":"223/5818","text":"Frank Ban"},{"@pid":"16/3283-1","text":"Xi Chen 0001"},{"@pid":"142/2771","text":"Adam Freilich"},{"@pid":"s/RAServedio","text":"Rocco A. Servedio"},{"@pid":"225/4844","text":"Sandip Sinha"}]},"title":"Beyond Trace Reconstruction - Population Recovery from the Deletion Channel.","venue":"FOCS","pages":"745-768","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Ban0FSS19","doi":"10.1109/FOCS.2019.00050","ee":"https://doi.org/10.1109/FOCS.2019.00050","url":"https://dblp.org/rec/conf/focs/Ban0FSS19"},
+"url":"URL#1059846"
+},
+{
+"@score":"1",
+"@id":"1059847",
+"info":{"authors":{"author":[{"@pid":"69/5601","text":"Nikhil Bansal"},{"@pid":"11/6945","text":"Ola Svensson"},{"@pid":"t/LucaTrevisan","text":"Luca Trevisan"}]},"title":"New Notions and Constructions of Sparsification for Graphs and Hypergraphs.","venue":"FOCS","pages":"910-928","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BansalST19","doi":"10.1109/FOCS.2019.00059","ee":"https://doi.org/10.1109/FOCS.2019.00059","url":"https://dblp.org/rec/conf/focs/BansalST19"},
+"url":"URL#1059847"
+},
+{
+"@score":"1",
+"@id":"1059848",
+"info":{"authors":{"author":[{"@pid":"255/7518","text":"Zsolt Bartha"},{"@pid":"14/10358","text":"Nike Sun"},{"@pid":"26/4355","text":"Yumeng Zhang"}]},"title":"Breaking of 1RSB in Random Regular MAX-NAE-SAT.","venue":"FOCS","pages":"1405-1416","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BarthaSZ19","doi":"10.1109/FOCS.2019.00086","ee":"https://doi.org/10.1109/FOCS.2019.00086","url":"https://dblp.org/rec/conf/focs/BarthaSZ19"},
+"url":"URL#1059848"
+},
+{
+"@score":"1",
+"@id":"1059849",
+"info":{"authors":{"author":[{"@pid":"192/1220","text":"Soheil Behnezhad"},{"@pid":"147/3439","text":"Laxman Dhulipala"},{"@pid":"146/7746","text":"Hossein Esfandiari"},{"@pid":"63/9513","text":"Jakub Lacki"},{"@pid":"m/VahabSMirrokni","text":"Vahab S. Mirrokni"}]},"title":"Near-Optimal Massively Parallel Graph Connectivity.","venue":"FOCS","pages":"1615-1636","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BehnezhadDELM19","doi":"10.1109/FOCS.2019.00095","ee":"https://doi.org/10.1109/FOCS.2019.00095","url":"https://dblp.org/rec/conf/focs/BehnezhadDELM19"},
+"url":"URL#1059849"
+},
+{
+"@score":"1",
+"@id":"1059850",
+"info":{"authors":{"author":[{"@pid":"192/1220","text":"Soheil Behnezhad"},{"@pid":"192/1807","text":"Mahsa Derakhshan"},{"@pid":"h/MohammadTaghiHajiaghayi","text":"MohammadTaghi Hajiaghayi"},{"@pid":"s/CliffordStein","text":"Cliff Stein 0001"},{"@pid":"s/MadhuSudan","text":"Madhu Sudan"}]},"title":"Fully Dynamic Maximal Independent Set with Polylogarithmic Update Time.","venue":"FOCS","pages":"382-405","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BehnezhadDHSS19","doi":"10.1109/FOCS.2019.00032","ee":"https://doi.org/10.1109/FOCS.2019.00032","url":"https://dblp.org/rec/conf/focs/BehnezhadDHSS19"},
+"url":"URL#1059850"
+},
+{
+"@score":"1",
+"@id":"1059851",
+"info":{"authors":{"author":[{"@pid":"192/1220","text":"Soheil Behnezhad"},{"@pid":"h/MohammadTaghiHajiaghayi","text":"MohammadTaghi Hajiaghayi"},{"@pid":"22/9452","text":"David G. Harris"}]},"title":"Exponentially Faster Massively Parallel Maximal Matching.","venue":"FOCS","pages":"1637-1649","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BehnezhadHH19","doi":"10.1109/FOCS.2019.00096","ee":"https://doi.org/10.1109/FOCS.2019.00096","url":"https://dblp.org/rec/conf/focs/BehnezhadHH19"},
+"url":"URL#1059851"
+},
+{
+"@score":"1",
+"@id":"1059852",
+"info":{"authors":{"author":[{"@pid":"170/8023","text":"Omri Ben-Eliezer"},{"@pid":"28/9840L","text":"Clément L. Canonne"},{"@pid":"130/5168","text":"Shoham Letzter"},{"@pid":"146/0153","text":"Erik Waingarten"}]},"title":"Finding Monotone Patterns in Sublinear Time.","venue":"FOCS","pages":"1469-1494","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Ben-EliezerCLW19","doi":"10.1109/FOCS.2019.000-1","ee":"https://doi.org/10.1109/FOCS.2019.000-1","url":"https://dblp.org/rec/conf/focs/Ben-EliezerCLW19"},
+"url":"URL#1059852"
+},
+{
+"@score":"1",
+"@id":"1059853",
+"info":{"authors":{"author":[{"@pid":"47/7801","text":"Aditya Bhaskara"},{"@pid":"230/8111","text":"Aidao Chen"},{"@pid":"230/7966","text":"Aidan Perreault"},{"@pid":"84/7804","text":"Aravindan Vijayaraghavan"}]},"title":"Smoothed Analysis in Unsupervised Learning via Decoupling.","venue":"FOCS","pages":"582-610","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BhaskaraCPV19","doi":"10.1109/FOCS.2019.00043","ee":"https://doi.org/10.1109/FOCS.2019.00043","url":"https://dblp.org/rec/conf/focs/BhaskaraCPV19"},
+"url":"URL#1059853"
+},
+{
+"@score":"1",
+"@id":"1059854",
+"info":{"authors":{"author":[{"@pid":"47/7801","text":"Aditya Bhaskara"},{"@pid":"46/6611","text":"Silvio Lattanzi"},{"@pid":"31/6854","text":"Sergei Vassilvitskii"},{"@pid":"05/3431","text":"Morteza Zadimoghaddam"}]},"title":"Residual Based Sampling for Online Low Rank Approximation.","venue":"FOCS","pages":"1596-1614","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BhaskaraLVZ19","doi":"10.1109/FOCS.2019.00094","ee":"https://doi.org/10.1109/FOCS.2019.00094","url":"https://dblp.org/rec/conf/focs/BhaskaraLVZ19"},
+"url":"URL#1059854"
+},
+{
+"@score":"1",
+"@id":"1059855",
+"info":{"authors":{"author":[{"@pid":"57/3907","text":"Sayan Bhattacharya"},{"@pid":"h/MonikaRauchHenzinger","text":"Monika Henzinger"},{"@pid":"61/2421","text":"Danupon Nanongkai"}]},"title":"A New Deterministic Algorithm for Dynamic Set Cover.","venue":"FOCS","pages":"406-423","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BhattacharyaHN19","doi":"10.1109/FOCS.2019.00033","ee":"https://doi.org/10.1109/FOCS.2019.00033","url":"https://dblp.org/rec/conf/focs/BhattacharyaHN19"},
+"url":"URL#1059855"
+},
+{
+"@score":"1",
+"@id":"1059856",
+"info":{"authors":{"author":[{"@pid":"129/1698","text":"Jaroslaw Blasiok"},{"@pid":"238/1298","text":"Patrick Lopatto"},{"@pid":"116/2971","text":"Kyle Luh"},{"@pid":"238/1477","text":"Jake Marcinek"},{"@pid":"117/9393","text":"Shravas Rao"}]},"title":"An Improved Lower Bound for Sparse Reconstruction from Subsampled Hadamard Matrices.","venue":"FOCS","pages":"1564-1567","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BlasiokLLMR19","doi":"10.1109/FOCS.2019.00091","ee":"https://doi.org/10.1109/FOCS.2019.00091","url":"https://dblp.org/rec/conf/focs/BlasiokLLMR19"},
+"url":"URL#1059856"
+},
+{
+"@score":"1",
+"@id":"1059857",
+"info":{"authors":{"author":[{"@pid":"238/0265","text":"Enric Boix-Adserà"},{"@pid":"299/5790","text":"Matthew S. Brennan"},{"@pid":"71/3436","text":"Guy Bresler"}]},"title":"The Average-Case Complexity of Counting Cliques in Erdős-Rényi Hypergraphs.","venue":"FOCS","pages":"1256-1280","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Boix-AdseraBB19","doi":"10.1109/FOCS.2019.00078","ee":"https://doi.org/10.1109/FOCS.2019.00078","url":"https://dblp.org/rec/conf/focs/Boix-AdseraBB19"},
+"url":"URL#1059857"
+},
+{
+"@score":"1",
+"@id":"1059858",
+"info":{"authors":{"author":[{"@pid":"196/3762","text":"Jan van den Brand"},{"@pid":"61/2421","text":"Danupon Nanongkai"}]},"title":"Dynamic Approximate Shortest Paths and Beyond - Subquadratic and Worst-Case Update Time.","venue":"FOCS","pages":"436-455","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BrandN19","doi":"10.1109/FOCS.2019.00035","ee":"https://doi.org/10.1109/FOCS.2019.00035","url":"https://dblp.org/rec/conf/focs/BrandN19"},
+"url":"URL#1059858"
+},
+{
+"@score":"1",
+"@id":"1059859",
+"info":{"authors":{"author":[{"@pid":"196/3762","text":"Jan van den Brand"},{"@pid":"61/2421","text":"Danupon Nanongkai"},{"@pid":"123/4694","text":"Thatchaphol Saranurak"}]},"title":"Dynamic Matrix Inverse - Improved Algorithms and Matching Conditional Lower Bounds.","venue":"FOCS","pages":"456-480","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BrandNS19","doi":"10.1109/FOCS.2019.00036","ee":"https://doi.org/10.1109/FOCS.2019.00036","url":"https://dblp.org/rec/conf/focs/BrandNS19"},
+"url":"URL#1059859"
+},
+{
+"@score":"1",
+"@id":"1059860",
+"info":{"authors":{"author":[{"@pid":"196/3762","text":"Jan van den Brand"},{"@pid":"123/4694","text":"Thatchaphol Saranurak"}]},"title":"Sensitive Distance and Reachability Oracles for Large Batch Updates.","venue":"FOCS","pages":"424-435","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BrandS19","doi":"10.1109/FOCS.2019.00034","ee":"https://doi.org/10.1109/FOCS.2019.00034","url":"https://dblp.org/rec/conf/focs/BrandS19"},
+"url":"URL#1059860"
+},
+{
+"@score":"1",
+"@id":"1059861",
+"info":{"authors":{"author":[{"@pid":"69/3230","text":"Sergey Bravyi"},{"@pid":"48/7411","text":"David Gosset"},{"@pid":"93/4951","text":"Robert König"},{"@pid":"29/8860","text":"Marco Tomamichel"}]},"title":"Quantum Advantage with Noisy Shallow Circuits in 3D.","venue":"FOCS","pages":"995-999","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BravyiGKT19","doi":"10.1109/FOCS.2019.00064","ee":"https://doi.org/10.1109/FOCS.2019.00064","url":"https://dblp.org/rec/conf/focs/BravyiGKT19"},
+"url":"URL#1059861"
+},
+{
+"@score":"1",
+"@id":"1059862",
+"info":{"authors":{"author":[{"@pid":"52/1065","text":"Peter Bürgisser"},{"@pid":"213/7938","text":"Cole Franks"},{"@pid":"98/516","text":"Ankit Garg"},{"@pid":"141/7747","text":"Rafael Mendes de Oliveira"},{"@pid":"66/2288","text":"Michael Walter"},{"@pid":"w/AviWigderson","text":"Avi Wigderson"}]},"title":"Towards a Theory of Non-Commutative Optimization - Geodesic 1st and 2nd Order Methods for Moment Maps and Polytopes.","venue":"FOCS","pages":"845-861","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BurgisserFGOWW19","doi":"10.1109/FOCS.2019.00055","ee":"https://doi.org/10.1109/FOCS.2019.00055","url":"https://dblp.org/rec/conf/focs/BurgisserFGOWW19"},
+"url":"URL#1059862"
+},
+{
+"@score":"1",
+"@id":"1059863",
+"info":{"authors":{"author":[{"@pid":"80/5358","text":"Deeparnab Chakrabarty"},{"@pid":"125/2145","text":"Yin Tat Lee"},{"@pid":"125/2326","text":"Aaron Sidford"},{"@pid":"55/8911","text":"Sahil Singla 0001"},{"@pid":"130/4064","text":"Sam Chiu-wai Wong"}]},"title":"Faster Matroid Intersection.","venue":"FOCS","pages":"1146-1168","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChakrabartyLS0W19","doi":"10.1109/FOCS.2019.00072","ee":"https://doi.org/10.1109/FOCS.2019.00072","url":"https://dblp.org/rec/conf/focs/ChakrabartyLS0W19"},
+"url":"URL#1059863"
+},
+{
+"@score":"1",
+"@id":"1059864",
+"info":{"authors":{"author":[{"@pid":"35/6352","text":"Michael Chapman"},{"@pid":"l/NathanLinial","text":"Nati Linial"},{"@pid":"145/7663","text":"Yuval Peled"}]},"title":"Expander Graphs - Both Local and Global.","venue":"FOCS","pages":"158-170","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChapmanLP19","doi":"10.1109/FOCS.2019.00019","ee":"https://doi.org/10.1109/FOCS.2019.00019","url":"https://dblp.org/rec/conf/focs/ChapmanLP19"},
+"url":"URL#1059864"
+},
+{
+"@score":"1",
+"@id":"1059865",
+"info":{"authors":{"author":[{"@pid":"c/MosesCharikar","text":"Moses Charikar"},{"@pid":"64/10357","text":"Paris Siminelakis"}]},"title":"Multi-resolution Hashing for Fast Pairwise Summations.","venue":"FOCS","pages":"769-792","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/CharikarS19","doi":"10.1109/FOCS.2019.00051","ee":"https://doi.org/10.1109/FOCS.2019.00051","url":"https://dblp.org/rec/conf/focs/CharikarS19"},
+"url":"URL#1059865"
+},
+{
+"@score":"1",
+"@id":"1059866",
+"info":{"authors":{"author":[{"@pid":"38/2434","text":"Shiri Chechik"},{"@pid":"17/322","text":"Tianyi Zhang"}]},"title":"Fully Dynamic Maximal Independent Set in Expected Poly-Log Update Time.","venue":"FOCS","pages":"370-381","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChechikZ19","doi":"10.1109/FOCS.2019.00031","ee":"https://doi.org/10.1109/FOCS.2019.00031","url":"https://dblp.org/rec/conf/focs/ChechikZ19"},
+"url":"URL#1059866"
+},
+{
+"@score":"1",
+"@id":"1059867",
+"info":{"authors":{"author":{"@pid":"116/0948-1","text":"Lijie Chen 0001"}},"title":"Non-deterministic Quasi-Polynomial Time is Average-Case Hard for ACC Circuits.","venue":"FOCS","pages":"1281-1304","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Chen19","doi":"10.1109/FOCS.2019.00079","ee":"https://doi.org/10.1109/FOCS.2019.00079","url":"https://dblp.org/rec/conf/focs/Chen19"},
+"url":"URL#1059867"
+},
+{
+"@score":"1",
+"@id":"1059868",
+"info":{"authors":{"author":[{"@pid":"116/0948-1","text":"Lijie Chen 0001"},{"@pid":"224/0281","text":"Ce Jin"},{"@pid":"w/RyanWilliams","text":"R. Ryan Williams"}]},"title":"Hardness Magnification for all Sparse NP Languages.","venue":"FOCS","pages":"1240-1255","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChenJW19","doi":"10.1109/FOCS.2019.00077","ee":"https://doi.org/10.1109/FOCS.2019.00077","url":"https://dblp.org/rec/conf/focs/ChenJW19"},
+"url":"URL#1059868"
+},
+{
+"@score":"1",
+"@id":"1059869",
+"info":{"authors":{"author":[{"@pid":"136/5814","text":"Vincent Cohen-Addad"},{"@pid":"61/8036","text":"Michal Pilipczuk"},{"@pid":"09/4636","text":"Marcin Pilipczuk"}]},"title":"A Polynomial-Time Approximation Scheme for Facility Location on Planar Graphs.","venue":"FOCS","pages":"560-581","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Cohen-AddadPP19","doi":"10.1109/FOCS.2019.00042","ee":"https://doi.org/10.1109/FOCS.2019.00042","url":"https://dblp.org/rec/conf/focs/Cohen-AddadPP19"},
+"url":"URL#1059869"
+},
+{
+"@score":"1",
+"@id":"1059870",
+"info":{"authors":{"author":[{"@pid":"136/5814","text":"Vincent Cohen-Addad"},{"@pid":"70/9222","text":"Karthik C. S."}]},"title":"Inapproximability of Clustering in Lp Metrics.","venue":"FOCS","pages":"519-539","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Cohen-AddadS19","doi":"10.1109/FOCS.2019.00040","ee":"https://doi.org/10.1109/FOCS.2019.00040","url":"https://dblp.org/rec/conf/focs/Cohen-AddadS19"},
+"url":"URL#1059870"
+},
+{
+"@score":"1",
+"@id":"1059871",
+"info":{"authors":{"author":[{"@pid":"130/0602","text":"Ilan Reuven Cohen"},{"@pid":"210/2619","text":"Binghui Peng"},{"@pid":"92/10524","text":"David Wajc"}]},"title":"Tight Bounds for Online Edge Coloring.","venue":"FOCS","pages":"1-25","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/CohenPW19","doi":"10.1109/FOCS.2019.00010","ee":"https://doi.org/10.1109/FOCS.2019.00010","url":"https://dblp.org/rec/conf/focs/CohenPW19"},
+"url":"URL#1059871"
+},
+{
+"@score":"1",
+"@id":"1059872",
+"info":{"authors":{"author":[{"@pid":"65/6330","text":"Mary Cryan"},{"@pid":"22/7361-1","text":"Heng Guo 0001"},{"@pid":"238/1530","text":"Giorgos Mousa"}]},"title":"Modified log-Sobolev Inequalities for Strongly Log-Concave Distributions.","venue":"FOCS","pages":"1358-1370","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Cryan0M19","doi":"10.1109/FOCS.2019.00083","ee":"https://doi.org/10.1109/FOCS.2019.00083","url":"https://dblp.org/rec/conf/focs/Cryan0M19"},
+"url":"URL#1059872"
+},
+{
+"@score":"1",
+"@id":"1059873",
+"info":{"authors":{"author":[{"@pid":"c/ArturCzumaj","text":"Artur Czumaj"},{"@pid":"47/2482","text":"Christian Sohler"}]},"title":"A Characterization of Graph Properties Testable for General Planar Graphs with one-Sided Error (It&apos;s all About Forbidden Subgraphs).","venue":"FOCS","pages":"1525-1548","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/CzumajS19","doi":"10.1109/FOCS.2019.00089","ee":"https://doi.org/10.1109/FOCS.2019.00089","url":"https://dblp.org/rec/conf/focs/CzumajS19"},
+"url":"URL#1059873"
+},
+{
+"@score":"1",
+"@id":"1059874",
+"info":{"authors":{"author":[{"@pid":"49/2398","text":"Anindya De"},{"@pid":"m/EMossel","text":"Elchanan Mossel"},{"@pid":"79/9829","text":"Joe Neeman"}]},"title":"Junta Correlation is Testable.","venue":"FOCS","pages":"1549-1563","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/DeMN19","doi":"10.1109/FOCS.2019.00090","ee":"https://doi.org/10.1109/FOCS.2019.00090","url":"https://dblp.org/rec/conf/focs/DeMN19"},
+"url":"URL#1059874"
+},
+{
+"@score":"1",
+"@id":"1059875",
+"info":{"authors":{"author":[{"@pid":"218/5681","text":"Yotam Dikstein"},{"@pid":"18/3891","text":"Irit Dinur"}]},"title":"Agreement Testing Theorems on Layered Set Systems.","venue":"FOCS","pages":"1495-1524","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/DiksteinD19","doi":"10.1109/FOCS.2019.00088","ee":"https://doi.org/10.1109/FOCS.2019.00088","url":"https://dblp.org/rec/conf/focs/DiksteinD19"},
+"url":"URL#1059875"
+},
+{
+"@score":"1",
+"@id":"1059876",
+"info":{"authors":{"author":[{"@pid":"95/9050","text":"Nico Döttling"},{"@pid":"33/5817","text":"Sanjam Garg"},{"@pid":"38/303","text":"Vipul Goyal"},{"@pid":"148/1304","text":"Giulio Malavolta"}]},"title":"Laconic Conditional Disclosure of Secrets and Applications.","venue":"FOCS","pages":"661-685","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/DottlingGGM19","doi":"10.1109/FOCS.2019.00046","ee":"https://doi.org/10.1109/FOCS.2019.00046","url":"https://dblp.org/rec/conf/focs/DottlingGGM19"},
+"url":"URL#1059876"
+},
+{
+"@score":"1",
+"@id":"1059877",
+"info":{"authors":{"author":[{"@pid":"87/1621","text":"Vida Dujmovic"},{"@pid":"95/6753","text":"Gwenaël Joret"},{"@pid":"49/1309","text":"Piotr Micek"},{"@pid":"24/1769","text":"Pat Morin"},{"@pid":"87/2203","text":"Torsten Ueckerdt"},{"@pid":"w/DavidRWood","text":"David R. Wood"}]},"title":"Planar Graphs have Bounded Queue-Number.","venue":"FOCS","pages":"862-875","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/DujmovicJMMUW19","doi":"10.1109/FOCS.2019.00056","ee":"https://doi.org/10.1109/FOCS.2019.00056","url":"https://dblp.org/rec/conf/focs/DujmovicJMMUW19"},
+"url":"URL#1059877"
+},
+{
+"@score":"1",
+"@id":"1059878",
+"info":{"authors":{"author":[{"@pid":"83/6616","text":"Cynthia Dwork"},{"@pid":"165/2964","text":"Michael P. Kim"},{"@pid":"r/OmerReingold","text":"Omer Reingold"},{"@pid":"00/6232","text":"Guy N. Rothblum"},{"@pid":"217/1712","text":"Gal Yona"}]},"title":"Learning from Outcomes - Evidence-Based Rankings.","venue":"FOCS","pages":"106-125","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/DworkKRRY19","doi":"10.1109/FOCS.2019.00016","ee":"https://doi.org/10.1109/FOCS.2019.00016","url":"https://dblp.org/rec/conf/focs/DworkKRRY19"},
+"url":"URL#1059878"
+},
+{
+"@score":"1",
+"@id":"1059879",
+"info":{"authors":{"author":[{"@pid":"80/3623","text":"Klim Efremenko"},{"@pid":"39/4172","text":"Gillat Kol"},{"@pid":"209/9985","text":"Raghuvansh Saxena"}]},"title":"Radio Network Coding Requires Logarithmic Overhead.","venue":"FOCS","pages":"348-369","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/EfremenkoKS19","doi":"10.1109/FOCS.2019.00030","ee":"https://doi.org/10.1109/FOCS.2019.00030","url":"https://dblp.org/rec/conf/focs/EfremenkoKS19"},
+"url":"URL#1059879"
+},
+{
+"@score":"1",
+"@id":"1059880",
+"info":{"authors":{"author":[{"@pid":"60/3710","text":"Matthias Englert"},{"@pid":"09/1911","text":"Harald Räcke"},{"@pid":"176/1116","text":"Richard Stotz"}]},"title":"Polylogarithmic Guarantees for Generalized Reordering Buffer Management.","venue":"FOCS","pages":"38-59","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/EnglertRS19","doi":"10.1109/FOCS.2019.00012","ee":"https://doi.org/10.1109/FOCS.2019.00012","url":"https://dblp.org/rec/conf/focs/EnglertRS19"},
+"url":"URL#1059880"
+},
+{
+"@score":"1",
+"@id":"1059881",
+"info":{"authors":{"author":[{"@pid":"200/8166","text":"Tomer Ezra"},{"@pid":"43/1464","text":"Michal Feldman"},{"@pid":"230/7993","text":"Eric Neyman"},{"@pid":"07/8319","text":"Inbal Talgam-Cohen"},{"@pid":"52/2474","text":"S. Matthew Weinberg"}]},"title":"Settling the Communication Complexity of Combinatorial Auctions with Two Subadditive Buyers.","venue":"FOCS","pages":"249-272","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/EzraFNTW19","doi":"10.1109/FOCS.2019.00025","ee":"https://doi.org/10.1109/FOCS.2019.00025","url":"https://dblp.org/rec/conf/focs/EzraFNTW19"},
+"url":"URL#1059881"
+},
+{
+"@score":"1",
+"@id":"1059882",
+"info":{"authors":{"author":[{"@pid":"205/2712","text":"Kshitij Gajjar"},{"@pid":"89/5476","text":"Jaikumar Radhakrishnan"}]},"title":"Parametric Shortest Paths in Planar Graphs.","venue":"FOCS","pages":"876-895","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GajjarR19","doi":"10.1109/FOCS.2019.00057","ee":"https://doi.org/10.1109/FOCS.2019.00057","url":"https://dblp.org/rec/conf/focs/GajjarR19"},
+"url":"URL#1059882"
+},
+{
+"@score":"1",
+"@id":"1059883",
+"info":{"authors":{"author":[{"@pid":"06/2434","text":"Nicola Galesi"},{"@pid":"48/6869","text":"Leszek Aleksander Kolodziejczyk"},{"@pid":"44/1612","text":"Neil Thapen"}]},"title":"Polynomial Calculus Space and Resolution Width.","venue":"FOCS","pages":"1325-1337","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GalesiKT19","doi":"10.1109/FOCS.2019.00081","ee":"https://doi.org/10.1109/FOCS.2019.00081","url":"https://dblp.org/rec/conf/focs/GalesiKT19"},
+"url":"URL#1059883"
+},
+{
+"@score":"1",
+"@id":"1059884",
+"info":{"authors":{"author":[{"@pid":"217/1606","text":"Buddhima Gamlath"},{"@pid":"76/6407","text":"Michael Kapralov"},{"@pid":"239/5932","text":"Andreas Maggiori"},{"@pid":"11/6945","text":"Ola Svensson"},{"@pid":"92/10524","text":"David Wajc"}]},"title":"Online Matching with General Arrivals.","venue":"FOCS","pages":"26-37","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GamlathKMSW19","doi":"10.1109/FOCS.2019.00011","ee":"https://doi.org/10.1109/FOCS.2019.00011","url":"https://dblp.org/rec/conf/focs/GamlathKMSW19"},
+"url":"URL#1059884"
+},
+{
+"@score":"1",
+"@id":"1059885",
+"info":{"authors":{"author":[{"@pid":"160/7709","text":"Moses Ganardi"},{"@pid":"74/6087","text":"Artur Jez"},{"@pid":"76/1674","text":"Markus Lohrey"}]},"title":"Balancing Straight-Line Programs.","venue":"FOCS","pages":"1169-1183","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GanardiJL19","doi":"10.1109/FOCS.2019.00073","ee":"https://doi.org/10.1109/FOCS.2019.00073","url":"https://dblp.org/rec/conf/focs/GanardiJL19"},
+"url":"URL#1059885"
+},
+{
+"@score":"1",
+"@id":"1059886",
+"info":{"authors":{"author":[{"@pid":"98/516","text":"Ankit Garg"},{"@pid":"173/5242","text":"Visu Makam"},{"@pid":"141/7747","text":"Rafael Mendes de Oliveira"},{"@pid":"w/AviWigderson","text":"Avi Wigderson"}]},"title":"More Barriers for Rank Methods, via a &quot;numeric to Symbolic&quot; Transfer.","venue":"FOCS","pages":"824-844","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GargMOW19","doi":"10.1109/FOCS.2019.00054","ee":"https://doi.org/10.1109/FOCS.2019.00054","url":"https://dblp.org/rec/conf/focs/GargMOW19"},
+"url":"URL#1059886"
+},
+{
+"@score":"1",
+"@id":"1059887",
+"info":{"authors":{"author":[{"@pid":"33/5673","text":"Mohsen Ghaffari"},{"@pid":"26/5426","text":"Fabian Kuhn"},{"@pid":"40/7401","text":"Jara Uitto"}]},"title":"Conditional Hardness Results for Massively Parallel Computation from Distributed Lower Bounds.","venue":"FOCS","pages":"1650-1663","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GhaffariKU19","doi":"10.1109/FOCS.2019.00097","ee":"https://doi.org/10.1109/FOCS.2019.00097","url":"https://dblp.org/rec/conf/focs/GhaffariKU19"},
+"url":"URL#1059887"
+},
+{
+"@score":"1",
+"@id":"1059888",
+"info":{"authors":{"author":[{"@pid":"199/1819","text":"Alexandru Gheorghiu"},{"@pid":"94/6173","text":"Thomas Vidick"}]},"title":"Computationally-Secure and Composable Remote State Preparation.","venue":"FOCS","pages":"1024-1033","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GheorghiuV19","doi":"10.1109/FOCS.2019.00066","ee":"https://doi.org/10.1109/FOCS.2019.00066","url":"https://dblp.org/rec/conf/focs/GheorghiuV19"},
+"url":"URL#1059888"
+},
+{
+"@score":"1",
+"@id":"1059889",
+"info":{"authors":{"author":[{"@pid":"72/1836","text":"Elazar Goldenberg"},{"@pid":"k/RobertKrauthgamer","text":"Robert Krauthgamer"},{"@pid":"66/3027","text":"Barna Saha"}]},"title":"Sublinear Algorithms for Gap Edit Distance.","venue":"FOCS","pages":"1101-1120","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GoldenbergKS19","doi":"10.1109/FOCS.2019.00070","ee":"https://doi.org/10.1109/FOCS.2019.00070","url":"https://dblp.org/rec/conf/focs/GoldenbergKS19"},
+"url":"URL#1059889"
+},
+{
+"@score":"1",
+"@id":"1059890",
+"info":{"authors":{"author":[{"@pid":"38/303","text":"Vipul Goyal"},{"@pid":"07/11488","text":"Silas Richelson"}]},"title":"Non-Malleable Commitments using Goldreich-Levin List Decoding.","venue":"FOCS","pages":"686-699","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GoyalR19","doi":"10.1109/FOCS.2019.00047","ee":"https://doi.org/10.1109/FOCS.2019.00047","url":"https://dblp.org/rec/conf/focs/GoyalR19"},
+"url":"URL#1059890"
+},
+{
+"@score":"1",
+"@id":"1059891",
+"info":{"authors":{"author":[{"@pid":"153/2241","text":"Alex Bredariol Grilo"},{"@pid":"85/1808","text":"William Slofstra"},{"@pid":"17/8909","text":"Henry Yuen"}]},"title":"Perfect Zero Knowledge for Quantum Multiprover Interactive Proofs.","venue":"FOCS","pages":"611-635","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GriloSY19","doi":"10.1109/FOCS.2019.00044","ee":"https://doi.org/10.1109/FOCS.2019.00044","url":"https://dblp.org/rec/conf/focs/GriloSY19"},
+"url":"URL#1059891"
+},
+{
+"@score":"1",
+"@id":"1059892",
+"info":{"authors":{"author":[{"@pid":"33/5780","text":"Zeyu Guo"},{"@pid":"40/9185-1","text":"Mrinal Kumar 0001"},{"@pid":"38/3658","text":"Ramprasad Saptharishi"},{"@pid":"45/1996","text":"Noam Solomon"}]},"title":"Derandomization from Algebraic Hardness - Treading the Borders.","venue":"FOCS","pages":"147-157","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Guo0SS19","doi":"10.1109/FOCS.2019.00018","ee":"https://doi.org/10.1109/FOCS.2019.00018","url":"https://dblp.org/rec/conf/focs/Guo0SS19"},
+"url":"URL#1059892"
+},
+{
+"@score":"1",
+"@id":"1059893",
+"info":{"authors":{"author":{"@pid":"39/1043","text":"Bernhard Haeupler"}},"title":"Optimal Document Exchange and New Codes for Insertions and Deletions.","venue":"FOCS","pages":"334-347","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Haeupler19","doi":"10.1109/FOCS.2019.00029","ee":"https://doi.org/10.1109/FOCS.2019.00029","url":"https://dblp.org/rec/conf/focs/Haeupler19"},
+"url":"URL#1059893"
+},
+{
+"@score":"1",
+"@id":"1059894",
+"info":{"authors":{"author":{"@pid":"22/9452","text":"David G. Harris"}},"title":"Distributed Local Approximation Algorithms for Maximum Matching in Graphs and Hypergraphs.","venue":"FOCS","pages":"700-724","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Harris19","doi":"10.1109/FOCS.2019.00048","ee":"https://doi.org/10.1109/FOCS.2019.00048","url":"https://dblp.org/rec/conf/focs/Harris19"},
+"url":"URL#1059894"
+},
+{
+"@score":"1",
+"@id":"1059895",
+"info":{"authors":{"author":[{"@pid":"03/5844","text":"Jacob Holm"},{"@pid":"k/ValerieKing","text":"Valerie King"},{"@pid":"t/MikkelThorup","text":"Mikkel Thorup"},{"@pid":"157/6049","text":"Or Zamir"},{"@pid":"z/UriZwick","text":"Uri Zwick"}]},"title":"Random k-out Subgraph Leaves only O(n/k) Inter-Component Edges.","venue":"FOCS","pages":"896-909","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/HolmKTZZ19","doi":"10.1109/FOCS.2019.00058","ee":"https://doi.org/10.1109/FOCS.2019.00058","url":"https://dblp.org/rec/conf/focs/HolmKTZZ19"},
+"url":"URL#1059895"
+},
+{
+"@score":"1",
+"@id":"1059896",
+"info":{"authors":{"author":[{"@pid":"43/3631","text":"Nicole Immorlica"},{"@pid":"154/4666","text":"Karthik Abinav Sankararaman"},{"@pid":"s/RobertESchapire","text":"Robert E. Schapire"},{"@pid":"91/4014","text":"Aleksandrs Slivkins"}]},"title":"Adversarial Bandits with Knapsacks.","venue":"FOCS","pages":"202-219","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ImmorlicaSSS19","doi":"10.1109/FOCS.2019.00022","ee":"https://doi.org/10.1109/FOCS.2019.00022","url":"https://dblp.org/rec/conf/focs/ImmorlicaSSS19"},
+"url":"URL#1059896"
+},
+{
+"@score":"1",
+"@id":"1059897",
+"info":{"authors":{"author":[{"@pid":"180/5618","text":"Matthew Joseph"},{"@pid":"123/4948","text":"Jieming Mao"},{"@pid":"188/6406","text":"Seth Neel"},{"@pid":"80/3311","text":"Aaron Roth 0001"}]},"title":"The Role of Interactivity in Local Differential Privacy.","venue":"FOCS","pages":"94-105","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/JosephMN019","doi":"10.1109/FOCS.2019.00015","ee":"https://doi.org/10.1109/FOCS.2019.00015","url":"https://dblp.org/rec/conf/focs/JosephMN019"},
+"url":"URL#1059897"
+},
+{
+"@score":"1",
+"@id":"1059898",
+"info":{"authors":{"author":[{"@pid":"203/8777","text":"Vasilis Kontonis"},{"@pid":"79/8819","text":"Christos Tzamos"},{"@pid":"138/8059","text":"Manolis Zampetakis"}]},"title":"Efficient Truncated Statistics with Unknown Truncation.","venue":"FOCS","pages":"1578-1595","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/KontonisTZ19","doi":"10.1109/FOCS.2019.00093","ee":"https://doi.org/10.1109/FOCS.2019.00093","url":"https://dblp.org/rec/conf/focs/KontonisTZ19"},
+"url":"URL#1059898"
+},
+{
+"@score":"1",
+"@id":"1059899",
+"info":{"authors":{"author":[{"@pid":"47/7934","text":"Pravesh Kothari"},{"@pid":"55/8911","text":"Sahil Singla 0001"},{"@pid":"206/3417","text":"Divyarthi Mohan"},{"@pid":"180/5546","text":"Ariel Schvartzman"},{"@pid":"52/2474","text":"S. Matthew Weinberg"}]},"title":"Approximation Schemes for a Unit-Demand Buyer with Independent Items via Symmetries.","venue":"FOCS","pages":"220-232","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Kothari0MSW19","doi":"10.1109/FOCS.2019.00023","ee":"https://doi.org/10.1109/FOCS.2019.00023","url":"https://dblp.org/rec/conf/focs/Kothari0MSW19"},
+"url":"URL#1059899"
+},
+{
+"@score":"1",
+"@id":"1059900",
+"info":{"authors":{"author":[{"@pid":"k/AAKrokhin","text":"Andrei A. Krokhin"},{"@pid":"147/4916","text":"Jakub Oprsal"}]},"title":"The Complexity of 3-Colouring H-Colourable Graphs.","venue":"FOCS","pages":"1227-1239","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/KrokhinO19","doi":"10.1109/FOCS.2019.00076","ee":"https://doi.org/10.1109/FOCS.2019.00076","url":"https://dblp.org/rec/conf/focs/KrokhinO19"},
+"url":"URL#1059900"
+},
+{
+"@score":"1",
+"@id":"1059901",
+"info":{"authors":{"author":[{"@pid":"58/11142","text":"Tsz Chiu Kwok"},{"@pid":"l/LapChiLau","text":"Lap Chi Lau"},{"@pid":"193/9656","text":"Akshay Ramachandran"}]},"title":"Spectral Analysis of Matrix Scaling and Operator Scaling.","venue":"FOCS","pages":"1184-1204","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/KwokLR19","doi":"10.1109/FOCS.2019.00074","ee":"https://doi.org/10.1109/FOCS.2019.00074","url":"https://dblp.org/rec/conf/focs/KwokLR19"},
+"url":"URL#1059901"
+},
+{
+"@score":"1",
+"@id":"1059902",
+"info":{"authors":{"author":[{"@pid":"45/466","text":"Hung Le"},{"@pid":"s/ShaySolomon","text":"Shay Solomon"}]},"title":"Truly Optimal Euclidean Spanners.","venue":"FOCS","pages":"1078-1100","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/LeS19","doi":"10.1109/FOCS.2019.00069","ee":"https://doi.org/10.1109/FOCS.2019.00069","url":"https://dblp.org/rec/conf/focs/LeS19"},
+"url":"URL#1059902"
+},
+{
+"@score":"1",
+"@id":"1059903",
+"info":{"authors":{"author":{"@pid":"12/975-6","text":"Jason Li 0006"}},"title":"Faster Minimum k-cut of a Simple Graph.","venue":"FOCS","pages":"1056-1077","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Li19","doi":"10.1109/FOCS.2019.00068","ee":"https://doi.org/10.1109/FOCS.2019.00068","url":"https://dblp.org/rec/conf/focs/Li19"},
+"url":"URL#1059903"
+},
+{
+"@score":"1",
+"@id":"1059904",
+"info":{"authors":{"author":[{"@pid":"145/1628","text":"Noam Lifshitz"},{"@pid":"161/4102","text":"Dor Minzer"}]},"title":"Noise Sensitivity on the p -Biased Hypercube.","venue":"FOCS","pages":"1205-1226","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/LifshitzM19","doi":"10.1109/FOCS.2019.00075","ee":"https://doi.org/10.1109/FOCS.2019.00075","url":"https://dblp.org/rec/conf/focs/LifshitzM19"},
+"url":"URL#1059904"
+},
+{
+"@score":"1",
+"@id":"1059905",
+"info":{"authors":{"author":[{"@pid":"217/1820","text":"Yang P. Liu"},{"@pid":"209/9910","text":"Arun Jambulapati"},{"@pid":"125/2326","text":"Aaron Sidford"}]},"title":"Parallel Reachability in Almost Linear Work and Square Root Depth.","venue":"FOCS","pages":"1664-1686","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/LiuJS19","doi":"10.1109/FOCS.2019.00098","ee":"https://doi.org/10.1109/FOCS.2019.00098","url":"https://dblp.org/rec/conf/focs/LiuJS19"},
+"url":"URL#1059905"
+},
+{
+"@score":"1",
+"@id":"1059906",
+"info":{"authors":{"author":[{"@pid":"158/6707","text":"Oren Mangoubi"},{"@pid":"02/2229","text":"Nisheeth K. Vishnoi"}]},"title":"Faster Polytope Rounding, Sampling, and Volume Computation via a Sub-Linear Ball Walk.","venue":"FOCS","pages":"1338-1357","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/MangoubiV19","doi":"10.1109/FOCS.2019.00082","ee":"https://doi.org/10.1109/FOCS.2019.00082","url":"https://dblp.org/rec/conf/focs/MangoubiV19"},
+"url":"URL#1059906"
+},
+{
+"@score":"1",
+"@id":"1059907",
+"info":{"authors":{"author":{"@pid":"83/5094","text":"Andrea Montanari"}},"title":"Optimization of the Sherrington-Kirkpatrick Hamiltonian.","venue":"FOCS","pages":"1417-1433","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Montanari19","doi":"10.1109/FOCS.2019.00087","ee":"https://doi.org/10.1109/FOCS.2019.00087","url":"https://dblp.org/rec/conf/focs/Montanari19"},
+"url":"URL#1059907"
+},
+{
+"@score":"1",
+"@id":"1059908",
+"info":{"authors":{"author":[{"@pid":"151/0349","text":"Vasileios Nakos"},{"@pid":"76/4051-2","text":"Zhao Song 0002"},{"@pid":"64/2310","text":"Zhengyu Wang"}]},"title":"(Nearly) Sample-Optimal Sparse Fourier Transform in Any Dimension; RIPless and Filterless.","venue":"FOCS","pages":"1568-1577","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/NakosSW19","doi":"10.1109/FOCS.2019.00092","ee":"https://doi.org/10.1109/FOCS.2019.00092","url":"https://dblp.org/rec/conf/focs/NakosSW19"},
+"url":"URL#1059908"
+},
+{
+"@score":"1",
+"@id":"1059909",
+"info":{"authors":{"author":[{"@pid":"27/4274","text":"Anand Natarajan"},{"@pid":"10/3047-4","text":"John Wright 0004"}]},"title":"NEEXP is Contained in MIP.","venue":"FOCS","pages":"510-518","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Natarajan019","doi":"10.1109/FOCS.2019.00039","ee":"https://doi.org/10.1109/FOCS.2019.00039","url":"https://dblp.org/rec/conf/focs/Natarajan019"},
+"url":"URL#1059909"
+},
+{
+"@score":"1",
+"@id":"1059910",
+"info":{"authors":{"author":[{"@pid":"188/6406","text":"Seth Neel"},{"@pid":"80/3311","text":"Aaron Roth 0001"},{"@pid":"137/8350","text":"Zhiwei Steven Wu"}]},"title":"How to Use Heuristics for Differential Privacy.","venue":"FOCS","pages":"72-93","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Neel0W19","doi":"10.1109/FOCS.2019.00014","ee":"https://doi.org/10.1109/FOCS.2019.00014","url":"https://dblp.org/rec/conf/focs/Neel0W19"},
+"url":"URL#1059910"
+},
+{
+"@score":"1",
+"@id":"1059911",
+"info":{"authors":{"author":[{"@pid":"67/8727","text":"Ján Pich"},{"@pid":"84/1179","text":"Rahul Santhanam"}]},"title":"Why are Proof Complexity Lower Bounds Hard?","venue":"FOCS","pages":"1305-1324","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/PichS19","doi":"10.1109/FOCS.2019.00080","ee":"https://doi.org/10.1109/FOCS.2019.00080","url":"https://dblp.org/rec/conf/focs/PichS19"},
+"url":"URL#1059911"
+},
+{
+"@score":"1",
+"@id":"1059912",
+"info":{"authors":{"author":{"@pid":"37/6709","text":"Luke Postle"}},"title":"Linear-Time and Efficient Distributed Algorithms for List Coloring Graphs on Surfaces.","venue":"FOCS","pages":"929-941","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Postle19","doi":"10.1109/FOCS.2019.00060","ee":"https://doi.org/10.1109/FOCS.2019.00060","url":"https://dblp.org/rec/conf/focs/Postle19"},
+"url":"URL#1059912"
+},
+{
+"@score":"1",
+"@id":"1059913",
+"info":{"authors":{"author":{"@pid":"08/3583","text":"Kevin Pratt"}},"title":"Waring Rank, Parameterized and Exact Algorithms.","venue":"FOCS","pages":"806-823","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Pratt19","doi":"10.1109/FOCS.2019.00053","ee":"https://doi.org/10.1109/FOCS.2019.00053","url":"https://dblp.org/rec/conf/focs/Pratt19"},
+"url":"URL#1059913"
+},
+{
+"@score":"1",
+"@id":"1059914",
+"info":{"authors":{"author":[{"@pid":"11/10308","text":"Aviad Rubinstein"},{"@pid":"144/2949","text":"Saeed Seddighin"},{"@pid":"76/4051-2","text":"Zhao Song 0002"},{"@pid":"70/7506","text":"Xiaorui Sun"}]},"title":"Approximation Algorithms for LCS and LIS with Truly Improved Running Times.","venue":"FOCS","pages":"1121-1145","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/RubinsteinSSS19","doi":"10.1109/FOCS.2019.00071","ee":"https://doi.org/10.1109/FOCS.2019.00071","url":"https://dblp.org/rec/conf/focs/RubinsteinSSS19"},
+"url":"URL#1059914"
+},
+{
+"@score":"1",
+"@id":"1059915",
+"info":{"authors":{"author":[{"@pid":"203/8484","text":"David Saulpic"},{"@pid":"136/5814","text":"Vincent Cohen-Addad"},{"@pid":"06/4695","text":"Andreas Emil Feldmann"}]},"title":"Near-Linear Time Approximations Schemes for Clustering in Doubling Metrics.","venue":"FOCS","pages":"540-559","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/SaulpicCF19","doi":"10.1109/FOCS.2019.00041","ee":"https://doi.org/10.1109/FOCS.2019.00041","url":"https://dblp.org/rec/conf/focs/SaulpicCF19"},
+"url":"URL#1059915"
+},
+{
+"@score":"1",
+"@id":"1059916",
+"info":{"authors":{"author":[{"@pid":"185/5939","text":"Jad Silbak"},{"@pid":"80/4866","text":"Swastik Kopparty"},{"@pid":"s/RonenShaltiel","text":"Ronen Shaltiel"}]},"title":"Quasilinear Time List-Decodable Codes for Space Bounded Channels.","venue":"FOCS","pages":"302-333","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/SilbakKS19","doi":"10.1109/FOCS.2019.00028","ee":"https://doi.org/10.1109/FOCS.2019.00028","url":"https://dblp.org/rec/conf/focs/SilbakKS19"},
+"url":"URL#1059916"
+},
+{
+"@score":"1",
+"@id":"1059917",
+"info":{"authors":{"author":[{"@pid":"17/8045","text":"Makrand Sinha"},{"@pid":"w/RonalddeWolf","text":"Ronald de Wolf"}]},"title":"Exponential Separation between Quantum Communication and Logarithm of Approximate Rank.","venue":"FOCS","pages":"966-981","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/SinhaW19","doi":"10.1109/FOCS.2019.00062","ee":"https://doi.org/10.1109/FOCS.2019.00062","url":"https://dblp.org/rec/conf/focs/SinhaW19"},
+"url":"URL#1059917"
+},
+{
+"@score":"1",
+"@id":"1059918",
+"info":{"authors":{"author":[{"@pid":"143/4482","text":"Noah Stephens-Davidowitz"},{"@pid":"v/VinodVaikuntanathan","text":"Vinod Vaikuntanathan"}]},"title":"SETH-Hardness of Coding Problems.","venue":"FOCS","pages":"287-301","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Stephens-Davidowitz19","doi":"10.1109/FOCS.2019.00027","ee":"https://doi.org/10.1109/FOCS.2019.00027","url":"https://dblp.org/rec/conf/focs/Stephens-Davidowitz19"},
+"url":"URL#1059918"
+},
+{
+"@score":"1",
+"@id":"1059919",
+"info":{"authors":{"author":[{"@pid":"08/3778-3","text":"Chao Tao 0003"},{"@pid":"45/47-1","text":"Qin Zhang 0001"},{"@pid":"40/7018-7","text":"Yuan Zhou 0007"}]},"title":"Collaborative Learning with Limited Interaction - Tight Bounds for Distributed Exploration in Multi-armed Bandits.","venue":"FOCS","pages":"126-146","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Tao0019","doi":"10.1109/FOCS.2019.00017","ee":"https://doi.org/10.1109/FOCS.2019.00017","url":"https://dblp.org/rec/conf/focs/Tao0019"},
+"url":"URL#1059919"
+},
+{
+"@score":"1",
+"@id":"1059920",
+"info":{"authors":{"author":{"@pid":"u/ChristopherUmans","text":"Chris Umans"}},"title":"Fast Generalized DFTs for all Finite Groups.","venue":"FOCS","pages":"793-805","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Umans19","doi":"10.1109/FOCS.2019.00052","ee":"https://doi.org/10.1109/FOCS.2019.00052","url":"https://dblp.org/rec/conf/focs/Umans19"},
+"url":"URL#1059920"
+},
+{
+"@score":"1",
+"@id":"1059921",
+"info":{"authors":{"author":[{"@pid":"166/1517","text":"Alexander S. Wein"},{"@pid":"150/6206","text":"Ahmed El Alaoui"},{"@pid":"m/CristopherMoore","text":"Cristopher Moore"}]},"title":"The Kikuchi Hierarchy and Tensor PCA.","venue":"FOCS","pages":"1446-1468","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/WeinAM19","doi":"10.1109/FOCS.2019.000-2","ee":"https://doi.org/10.1109/FOCS.2019.000-2","url":"https://dblp.org/rec/conf/focs/WeinAM19"},
+"url":"URL#1059921"
+},
+{
+"@score":"1",
+"@id":"1184781",
+"info":{"authors":{"author":{"@pid":"z/DZuckerman","text":"David Zuckerman"}},"title":"60th IEEE Annual Symposium on Foundations of Computer Science, FOCS 2019, Baltimore, Maryland, USA, November 9-12, 2019","venue":"FOCS","publisher":"IEEE Computer Society","year":"2019","type":"Editorship","key":"conf/focs/2019","ee":"https://ieeexplore.ieee.org/xpl/conhome/8936052/proceeding","url":"https://dblp.org/rec/conf/focs/2019"},
+"url":"URL#1184781"
+}
+]
+}
+}
+}

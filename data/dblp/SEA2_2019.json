@@ -1,0 +1,249 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/sea2/sea2019.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"122.75"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"36",
+"@dc":"36",
+"@oc":"36",
+"@id":"35370311",
+"text":":facetid:toc:db/conf/sea2/sea2019.bht"
+}
+},
+"hits":{
+"@total":"36",
+"@computed":"36",
+"@sent":"36",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"1158250",
+"info":{"authors":{"author":[{"@pid":"198/1092","text":"Abu Reyan Ahmed"},{"@pid":"154/5820","text":"Keaton Hamm"},{"@pid":"239/4261","text":"Mohammad Javad Latifi Jebelli"},{"@pid":"98/2841","text":"Stephen G. Kobourov"},{"@pid":"05/9890","text":"Faryad Darabi Sahneh"},{"@pid":"218/5431","text":"Richard Spence"}]},"title":"Approximation Algorithms and an Integer Program for Multi-level Graph Spanners.","venue":"SEA²","pages":"541-562","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/AhmedHJKSS19","doi":"10.1007/978-3-030-34029-2_35","ee":"https://doi.org/10.1007/978-3-030-34029-2_35","url":"https://dblp.org/rec/conf/sea2/AhmedHJKSS19"},
+"url":"URL#1158250"
+},
+{
+"@score":"1",
+"@id":"1158251",
+"info":{"authors":{"author":[{"@pid":"252/9946","text":"Konstantinos Ameranis"},{"@pid":"139/9384","text":"Nikolaos Vathis"},{"@pid":"95/4731","text":"Dimitris Fotakis"}]},"title":"Minimum and Maximum Category Constraints in the Orienteering Problem with Time Windows.","venue":"SEA²","pages":"343-358","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/AmeranisVF19","doi":"10.1007/978-3-030-34029-2_23","ee":"https://doi.org/10.1007/978-3-030-34029-2_23","url":"https://dblp.org/rec/conf/sea2/AmeranisVF19"},
+"url":"URL#1158251"
+},
+{
+"@score":"1",
+"@id":"1158252",
+"info":{"authors":{"author":[{"@pid":"131/6607","text":"Édouard Bonnet"},{"@pid":"247/9674","text":"Diana-Elena Falamas"},{"@pid":"116/7602","text":"Rémi Watrigant"}]},"title":"Constraint Generation Algorithm for the Minimum Connectivity Inference Problem.","venue":"SEA²","pages":"167-183","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/BonnetFW19","doi":"10.1007/978-3-030-34029-2_12","ee":"https://doi.org/10.1007/978-3-030-34029-2_12","url":"https://dblp.org/rec/conf/sea2/BonnetFW19"},
+"url":"URL#1158252"
+},
+{
+"@score":"1",
+"@id":"1158253",
+"info":{"authors":{"author":[{"@pid":"27/1509","text":"Glencora Borradaile"},{"@pid":"45/466","text":"Hung Le"},{"@pid":"122/2999","text":"Baigong Zheng"}]},"title":"Engineering a PTAS for Minimum Feedback Vertex Set in Planar Graphs.","venue":"SEA²","pages":"98-113","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/BorradaileLZ19","doi":"10.1007/978-3-030-34029-2_7","ee":"https://doi.org/10.1007/978-3-030-34029-2_7","url":"https://dblp.org/rec/conf/sea2/BorradaileLZ19"},
+"url":"URL#1158253"
+},
+{
+"@score":"1",
+"@id":"1158254",
+"info":{"authors":{"author":[{"@pid":"27/1075","text":"Çagdas Çalik"},{"@pid":"51/5039","text":"Morris Dworkin"},{"@pid":"253/0007","text":"Nathan Dykas"},{"@pid":"98/2222","text":"René Peralta"}]},"title":"Searching for Best Karatsuba Recurrences.","venue":"SEA²","pages":"332-342","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/CalikDDP19","doi":"10.1007/978-3-030-34029-2_22","ee":"https://doi.org/10.1007/978-3-030-34029-2_22","url":"https://dblp.org/rec/conf/sea2/CalikDDP19"},
+"url":"URL#1158254"
+},
+{
+"@score":"1",
+"@id":"1158255",
+"info":{"authors":{"author":[{"@pid":"211/7750","text":"Jonas Cleve"},{"@pid":"m/WolfgangMulzer","text":"Wolfgang Mulzer"}]},"title":"An Experimental Study of Algorithms for Geodesic Shortest Paths in the Constant-Workspace Model.","venue":"SEA²","pages":"317-331","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/CleveM19","doi":"10.1007/978-3-030-34029-2_21","ee":"https://doi.org/10.1007/978-3-030-34029-2_21","url":"https://dblp.org/rec/conf/sea2/CleveM19"},
+"url":"URL#1158255"
+},
+{
+"@score":"1",
+"@id":"1158256",
+"info":{"authors":{"author":[{"@pid":"62/5844","text":"Ovidiu Daescu"},{"@pid":"209/8586","text":"Hemant Malik"}]},"title":"k-Maximum Subarrays for Small k - Divide-and-Conquer Made Simpler.","venue":"SEA²","pages":"454-472","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/DaescuM19","doi":"10.1007/978-3-030-34029-2_29","ee":"https://doi.org/10.1007/978-3-030-34029-2_29","url":"https://dblp.org/rec/conf/sea2/DaescuM19"},
+"url":"URL#1158256"
+},
+{
+"@score":"1",
+"@id":"1158257",
+"info":{"authors":{"author":[{"@pid":"35/7215","text":"Fanny Dufossé"},{"@pid":"53/6185","text":"Kamer Kaya"},{"@pid":"251/6605","text":"Ioannis Panagiotas"},{"@pid":"54/6400","text":"Bora Uçar"}]},"title":"Effective Heuristics for Matchings in Hypergraphs.","venue":"SEA²","pages":"248-264","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/DufosseKPU19","doi":"10.1007/978-3-030-34029-2_17","ee":"https://doi.org/10.1007/978-3-030-34029-2_17","url":"https://dblp.org/rec/conf/sea2/DufosseKPU19"},
+"url":"URL#1158257"
+},
+{
+"@score":"1",
+"@id":"1158258",
+"info":{"authors":{"author":[{"@pid":"75/6024","text":"Tínaz Ekim"},{"@pid":"84/1877","text":"Mordechai Shalom"},{"@pid":"199/6199","text":"Oylum Seker"}]},"title":"The Complexity of Subtree Intersection Representation of Chordal Graphs and Linear Time Chordal Graph Generation.","venue":"SEA²","pages":"21-34","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/EkimSS19","doi":"10.1007/978-3-030-34029-2_2","ee":"https://doi.org/10.1007/978-3-030-34029-2_2","url":"https://dblp.org/rec/conf/sea2/EkimSS19"},
+"url":"URL#1158258"
+},
+{
+"@score":"1",
+"@id":"1158259",
+"info":{"authors":{"author":[{"@pid":"e/IZEmiris","text":"Ioannis Z. Emiris"},{"@pid":"241/6877","text":"Christina Katsamaki"}]},"title":"Voronoi Diagram of Orthogonal Polyhedra in Two and Three Dimensions.","venue":"SEA²","pages":"1-20","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/EmirisK19","doi":"10.1007/978-3-030-34029-2_1","ee":"https://doi.org/10.1007/978-3-030-34029-2_1","url":"https://dblp.org/rec/conf/sea2/EmirisK19"},
+"url":"URL#1158259"
+},
+{
+"@score":"1",
+"@id":"1158260",
+"info":{"authors":{"author":[{"@pid":"56/5109","text":"Marcel Fernandez"},{"@pid":"190/7464","text":"John Livieratos"}]},"title":"Algorithmic Aspects on the Construction of Separating Codes.","venue":"SEA²","pages":"513-526","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/FernandezL19","doi":"10.1007/978-3-030-34029-2_33","ee":"https://doi.org/10.1007/978-3-030-34029-2_33","url":"https://dblp.org/rec/conf/sea2/FernandezL19"},
+"url":"URL#1158260"
+},
+{
+"@score":"1",
+"@id":"1158261",
+"info":{"authors":{"author":[{"@pid":"f/StefanFunke","text":"Stefan Funke"},{"@pid":"18/9940","text":"Thomas Mendel"}]},"title":"Improved Contraction Hierarchy Queries via Perfect Stalling.","venue":"SEA²","pages":"158-166","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/FunkeM19","doi":"10.1007/978-3-030-34029-2_11","ee":"https://doi.org/10.1007/978-3-030-34029-2_11","url":"https://dblp.org/rec/conf/sea2/FunkeM19"},
+"url":"URL#1158261"
+},
+{
+"@score":"1",
+"@id":"1158262",
+"info":{"authors":{"author":[{"@pid":"233/9740","text":"Ask Neve Gamby"},{"@pid":"90/1764","text":"Jyrki Katajainen"}]},"title":"A Faster Convex-Hull Algorithm via Bucketing.","venue":"SEA²","pages":"473-489","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/GambyK19","doi":"10.1007/978-3-030-34029-2_30","ee":"https://doi.org/10.1007/978-3-030-34029-2_30","url":"https://dblp.org/rec/conf/sea2/GambyK19"},
+"url":"URL#1158262"
+},
+{
+"@score":"1",
+"@id":"1158263",
+"info":{"authors":{"author":[{"@pid":"163/2627","text":"Koba Gelashvili"},{"@pid":"252/9979","text":"Nikoloz Grdzelidze"},{"@pid":"252/9956","text":"Mikheil Tutberidze"}]},"title":"On New Rebalancing Algorithm.","venue":"SEA²","pages":"114-124","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/GelashviliGT19","doi":"10.1007/978-3-030-34029-2_8","ee":"https://doi.org/10.1007/978-3-030-34029-2_8","url":"https://dblp.org/rec/conf/sea2/GelashviliGT19"},
+"url":"URL#1158263"
+},
+{
+"@score":"1",
+"@id":"1158264",
+"info":{"authors":{"author":[{"@pid":"140/9800","text":"Hanna Geppert"},{"@pid":"90/3144","text":"Martin Wilhelm"}]},"title":"Internal Versus External Balancing in the Evaluation of Graph-Based Number Types.","venue":"SEA²","pages":"359-375","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/GeppertW19","doi":"10.1007/978-3-030-34029-2_24","ee":"https://doi.org/10.1007/978-3-030-34029-2_24","url":"https://dblp.org/rec/conf/sea2/GeppertW19"},
+"url":"URL#1158264"
+},
+{
+"@score":"1",
+"@id":"1158265",
+"info":{"authors":{"author":[{"@pid":"46/2078","text":"Anirban Ghosh"},{"@pid":"253/0031","text":"Brian Hicks"},{"@pid":"252/9997","text":"Ronald Shevchenko"}]},"title":"Unit Disk Cover for Massive Point Sets.","venue":"SEA²","pages":"142-157","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/GhoshHS19","doi":"10.1007/978-3-030-34029-2_10","ee":"https://doi.org/10.1007/978-3-030-34029-2_10","url":"https://dblp.org/rec/conf/sea2/GhoshHS19"},
+"url":"URL#1158265"
+},
+{
+"@score":"1",
+"@id":"1158266",
+"info":{"authors":{"author":[{"@pid":"253/0005","text":"Noé Godinho"},{"@pid":"96/7060","text":"Luís Paquete"}]},"title":"A Combinatorial Branch and Bound for the Min-Max Regret Spanning Tree Problem.","venue":"SEA²","pages":"69-81","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/GodinhoP19","doi":"10.1007/978-3-030-34029-2_5","ee":"https://doi.org/10.1007/978-3-030-34029-2_5","url":"https://dblp.org/rec/conf/sea2/GodinhoP19"},
+"url":"URL#1158266"
+},
+{
+"@score":"1",
+"@id":"1158267",
+"info":{"authors":{"author":[{"@pid":"252/9965","text":"Alessio Greco"},{"@pid":"252/9985","text":"Salvatore Danilo Riccio"},{"@pid":"t/JonathanTimmis","text":"Jon Timmis"},{"@pid":"28/6928","text":"Giuseppe Nicosia"}]},"title":"Assessing Algorithm Parameter Importance Using Global Sensitivity Analysis.","venue":"SEA²","pages":"392-407","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/GrecoRTN19","doi":"10.1007/978-3-030-34029-2_26","ee":"https://doi.org/10.1007/978-3-030-34029-2_26","url":"https://dblp.org/rec/conf/sea2/GrecoRTN19"},
+"url":"URL#1158267"
+},
+{
+"@score":"1",
+"@id":"1158268",
+"info":{"authors":{"author":[{"@pid":"85/787","text":"Hanyu Gu"},{"@pid":"150/0008","text":"Yefei Zhang"},{"@pid":"51/2939","text":"Yakov Zinder"}]},"title":"Lagrangian Relaxation in Iterated Local Search for the Workforce Scheduling and Routing Problem.","venue":"SEA²","pages":"527-540","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/GuZZ19","doi":"10.1007/978-3-030-34029-2_34","ee":"https://doi.org/10.1007/978-3-030-34029-2_34","url":"https://dblp.org/rec/conf/sea2/GuZZ19"},
+"url":"URL#1158268"
+},
+{
+"@score":"1",
+"@id":"1158269",
+"info":{"authors":{"author":[{"@pid":"35/10683","text":"Raka Jovanovic"},{"@pid":"65/2312","text":"Stefan Voß"}]},"title":"Fixed Set Search Applied to the Minimum Weighted Vertex Cover Problem.","venue":"SEA²","pages":"490-504","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/JovanovicV19","doi":"10.1007/978-3-030-34029-2_31","ee":"https://doi.org/10.1007/978-3-030-34029-2_31","url":"https://dblp.org/rec/conf/sea2/JovanovicV19"},
+"url":"URL#1158269"
+},
+{
+"@score":"1",
+"@id":"1158270",
+"info":{"authors":{"author":{"@pid":"90/1764","text":"Jyrki Katajainen"}},"title":"Hacker&apos;s Multiple-Precision Integer-Division Program in Close Scrutiny.","venue":"SEA²","pages":"376-391","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/Katajainen19","doi":"10.1007/978-3-030-34029-2_25","ee":"https://doi.org/10.1007/978-3-030-34029-2_25","url":"https://dblp.org/rec/conf/sea2/Katajainen19"},
+"url":"URL#1158270"
+},
+{
+"@score":"1",
+"@id":"1158271",
+"info":{"authors":{"author":[{"@pid":"04/7","text":"Jun Kawahara"},{"@pid":"04/6930","text":"Toshiki Saitoh"},{"@pid":"12/1368","text":"Hirofumi Suzuki"},{"@pid":"62/4416","text":"Ryo Yoshinaka"}]},"title":"Colorful Frontier-Based Search - Implicit Enumeration of Chordal and Interval Subgraphs.","venue":"SEA²","pages":"125-141","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/KawaharaSSY19","doi":"10.1007/978-3-030-34029-2_9","ee":"https://doi.org/10.1007/978-3-030-34029-2_9","url":"https://dblp.org/rec/conf/sea2/KawaharaSSY19"},
+"url":"URL#1158271"
+},
+{
+"@score":"1",
+"@id":"1158272",
+"info":{"authors":{"author":{"@pid":"04/8395-4","text":"Neeraj Kumar 0004"}},"title":"Computing a Minimum Color Path in Edge-Colored Graphs.","venue":"SEA²","pages":"35-50","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/Kumar19","doi":"10.1007/978-3-030-34029-2_3","ee":"https://doi.org/10.1007/978-3-030-34029-2_3","url":"https://dblp.org/rec/conf/sea2/Kumar19"},
+"url":"URL#1158272"
+},
+{
+"@score":"1",
+"@id":"1158273",
+"info":{"authors":{"author":[{"@pid":"95/3736","text":"Jun Liu"},{"@pid":"14/721","text":"Yicheng Pan"},{"@pid":"247/6489","text":"Qifu Hu"},{"@pid":"66/4917","text":"Angsheng Li"}]},"title":"Navigating a Shortest Path with High Probability in Massive Complex Networks.","venue":"SEA²","pages":"82-97","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/LiuPHL19","doi":"10.1007/978-3-030-34029-2_6","ee":"https://doi.org/10.1007/978-3-030-34029-2_6","url":"https://dblp.org/rec/conf/sea2/LiuPHL19"},
+"url":"URL#1158273"
+},
+{
+"@score":"1",
+"@id":"1158274",
+"info":{"authors":{"author":[{"@pid":"218/5781","text":"Josef Malík"},{"@pid":"57/1414","text":"Ondrej Suchý"},{"@pid":"91/8602","text":"Tomás Valla"}]},"title":"Efficient Implementation of Color Coding Algorithm for Subgraph Isomorphism Problem.","venue":"SEA²","pages":"283-299","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/sea2/MalikSV19","doi":"10.1007/978-3-030-34029-2_19","ee":"https://doi.org/10.1007/978-3-030-34029-2_19","url":"https://dblp.org/rec/conf/sea2/MalikSV19"},
+"url":"URL#1158274"
+},
+{
+"@score":"1",
+"@id":"1158275",
+"info":{"authors":{"author":[{"@pid":"250/2110","text":"Kotaro Matsuda"},{"@pid":"97/10871","text":"Shuhei Denzumi"},{"@pid":"158/3521","text":"Kengo Nakamura"},{"@pid":"90/1078","text":"Masaaki Nishino"},{"@pid":"41/2921","text":"Norihito Yasuda"}]},"title":"Approximated ZDD Construction Considering Inclusion Relations of Models.","venue":"SEA²","pages":"265-282","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/MatsudaDNNY19","doi":"10.1007/978-3-030-34029-2_18","ee":"https://doi.org/10.1007/978-3-030-34029-2_18","url":"https://dblp.org/rec/conf/sea2/MatsudaDNNY19"},
+"url":"URL#1158275"
+},
+{
+"@score":"1",
+"@id":"1158276",
+"info":{"authors":{"author":[{"@pid":"252/9977","text":"Umutcan Önal"},{"@pid":"88/9788","text":"Zafeirakis Zafeirakopoulos"}]},"title":"A Machine Learning Framework for Volume Prediction.","venue":"SEA²","pages":"408-423","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/OnalZ19","doi":"10.1007/978-3-030-34029-2_27","ee":"https://doi.org/10.1007/978-3-030-34029-2_27","url":"https://dblp.org/rec/conf/sea2/OnalZ19"},
+"url":"URL#1158276"
+},
+{
+"@score":"1",
+"@id":"1158277",
+"info":{"authors":{"author":[{"@pid":"140/7610","text":"Sirani M. Perera"},{"@pid":"253/0002","text":"Daniel Silverio"},{"@pid":"253/0015","text":"Austin Ogle"}]},"title":"Efficient Split-Radix and Radix-4 DCT Algorithms and Applications.","venue":"SEA²","pages":"184-201","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/PereraSO19","doi":"10.1007/978-3-030-34029-2_13","ee":"https://doi.org/10.1007/978-3-030-34029-2_13","url":"https://dblp.org/rec/conf/sea2/PereraSO19"},
+"url":"URL#1158277"
+},
+{
+"@score":"1",
+"@id":"1158278",
+"info":{"authors":{"author":[{"@pid":"179/8605","text":"Alessio Petrozziello"},{"@pid":"85/1316","text":"Ivan Jordanov"}]},"title":"Automated Deep Learning for Threat Detection in Luggage from X-Ray Images.","venue":"SEA²","pages":"505-512","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/PetrozzielloJ19","doi":"10.1007/978-3-030-34029-2_32","ee":"https://doi.org/10.1007/978-3-030-34029-2_32","url":"https://dblp.org/rec/conf/sea2/PetrozzielloJ19"},
+"url":"URL#1158278"
+},
+{
+"@score":"1",
+"@id":"1158279",
+"info":{"authors":{"author":[{"@pid":"243/2981","text":"Duc-Minh Phan"},{"@pid":"v/LaurentViennot","text":"Laurent Viennot"}]},"title":"Fast Public Transit Routing with Unrestricted Walking Through Hub Labeling.","venue":"SEA²","pages":"237-247","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/PhanV19","doi":"10.1007/978-3-030-34029-2_16","ee":"https://doi.org/10.1007/978-3-030-34029-2_16","url":"https://dblp.org/rec/conf/sea2/PhanV19"},
+"url":"URL#1158279"
+},
+{
+"@score":"1",
+"@id":"1158280",
+"info":{"authors":{"author":[{"@pid":"233/5413","text":"João Pedro Schmitt"},{"@pid":"34/5395","text":"Rafael S. Parpinelli"},{"@pid":"63/1308","text":"Fabiano Baldo"}]},"title":"Analysis of Max-Min Ant System with Local Search Applied to the Asymmetric and Dynamic Travelling Salesman Problem with Moving Vehicle.","venue":"SEA²","pages":"202-218","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/SchmittPB19","doi":"10.1007/978-3-030-34029-2_14","ee":"https://doi.org/10.1007/978-3-030-34029-2_14","url":"https://dblp.org/rec/conf/sea2/SchmittPB19"},
+"url":"URL#1158280"
+},
+{
+"@score":"1",
+"@id":"1158281",
+"info":{"authors":{"author":[{"@pid":"21/10630","text":"Blair D. Sullivan"},{"@pid":"177/9216","text":"Andrew van der Poel"},{"@pid":"237/9492","text":"Trey Woodlief"}]},"title":"Faster Biclique Mining in Near-Bipartite Graphs.","venue":"SEA²","pages":"424-453","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/SullivanPW19","doi":"10.1007/978-3-030-34029-2_28","ee":"https://doi.org/10.1007/978-3-030-34029-2_28","url":"https://dblp.org/rec/conf/sea2/SullivanPW19"},
+"url":"URL#1158281"
+},
+{
+"@score":"1",
+"@id":"1158282",
+"info":{"authors":{"author":{"@pid":"29/4584","text":"Hisao Tamaki"}},"title":"Computing Treewidth via Exact and Heuristic Lists of Minimal Separators.","venue":"SEA²","pages":"219-236","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/Tamaki19","doi":"10.1007/978-3-030-34029-2_15","ee":"https://doi.org/10.1007/978-3-030-34029-2_15","url":"https://dblp.org/rec/conf/sea2/Tamaki19"},
+"url":"URL#1158282"
+},
+{
+"@score":"1",
+"@id":"1158283",
+"info":{"authors":{"author":[{"@pid":"248/4089","text":"Akshay Utture"},{"@pid":"220/4209","text":"Vedant Somani"},{"@pid":"251/3043","text":"Prem Krishnaa"},{"@pid":"21/4227","text":"Meghana Nasre"}]},"title":"Student Course Allocation with Constraints.","venue":"SEA²","pages":"51-68","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/UttureSKN19","doi":"10.1007/978-3-030-34029-2_4","ee":"https://doi.org/10.1007/978-3-030-34029-2_4","url":"https://dblp.org/rec/conf/sea2/UttureSKN19"},
+"url":"URL#1158283"
+},
+{
+"@score":"1",
+"@id":"1158284",
+"info":{"authors":{"author":[{"@pid":"98/1236-26","text":"Michael Wagner 0026"},{"@pid":"187/2686","text":"Ludwig Kampel"},{"@pid":"30/520","text":"Dimitris E. Simos"}]},"title":"Quantum-Inspired Evolutionary Algorithms for Covering Arrays of Arbitrary Strength.","venue":"SEA²","pages":"300-316","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/sea2/WagnerKS19","doi":"10.1007/978-3-030-34029-2_20","ee":"https://doi.org/10.1007/978-3-030-34029-2_20","url":"https://dblp.org/rec/conf/sea2/WagnerKS19"},
+"url":"URL#1158284"
+},
+{
+"@score":"1",
+"@id":"1186274",
+"info":{"authors":{"author":[{"@pid":"77/1965","text":"Ilias S. Kotsireas"},{"@pid":"04/1137","text":"Panos M. Pardalos"},{"@pid":"49/3802","text":"Konstantinos E. Parsopoulos"},{"@pid":"86/8707","text":"Dimitris Souravlias"},{"@pid":"252/9988","text":"Arsenis Tsokas"}]},"title":"Analysis of Experimental Algorithms - Special Event, SEA² 2019, Kalamata, Greece, June 24-29, 2019, Revised Selected Papers","venue":["SEA²","Lecture Notes in Computer Science"],"volume":"11544","publisher":"Springer","year":"2019","type":"Editorship","key":"conf/sea2/2019","doi":"10.1007/978-3-030-34029-2","ee":"https://doi.org/10.1007/978-3-030-34029-2","url":"https://dblp.org/rec/conf/sea2/2019"},
+"url":"URL#1186274"
+}
+]
+}
+}
+}

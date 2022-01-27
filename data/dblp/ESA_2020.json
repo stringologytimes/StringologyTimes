@@ -1,0 +1,543 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/esa/esa2020.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"118.43"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"85",
+"@dc":"85",
+"@oc":"85",
+"@id":"35343946",
+"text":":facetid:toc:db/conf/esa/esa2020.bht"
+}
+},
+"hits":{
+"@total":"85",
+"@computed":"85",
+"@sent":"85",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"646071",
+"info":{"authors":{"author":[{"@pid":"42/6468","text":"Rajiv Raman 0001"},{"@pid":"61/921","text":"Saurabh Ray"}]},"title":"Improved Approximation Algorithm for Set Multicover with Non-Piercing Regions.","venue":"ESA","pages":"78:1-78:16","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/0001R20","doi":"10.4230/LIPICS.ESA.2020.78","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.78","url":"https://dblp.org/rec/conf/esa/0001R20"},
+"url":"URL#646071"
+},
+{
+"@score":"1",
+"@id":"646072",
+"info":{"authors":{"author":[{"@pid":"176/4279-1","text":"Johannes Blum 0001"},{"@pid":"74/9877","text":"Sabine Storandt"}]},"title":"Lower Bounds and Approximation Algorithms for Search Space Sizes in Contraction Hierarchies.","venue":"ESA","pages":"20:1-20:14","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/0001S20","doi":"10.4230/LIPICS.ESA.2020.20","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.20","url":"https://dblp.org/rec/conf/esa/0001S20"},
+"url":"URL#646072"
+},
+{
+"@score":"1",
+"@id":"646073",
+"info":{"authors":{"author":[{"@pid":"176/5261-2","text":"Tanmay Inamdar 0002"},{"@pid":"v/KasturiRVaradarajan","text":"Kasturi R. Varadarajan"}]},"title":"Capacitated Sum-Of-Radii Clustering - An FPT Approximation.","venue":"ESA","pages":"62:1-62:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/0002V20","doi":"10.4230/LIPICS.ESA.2020.62","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.62","url":"https://dblp.org/rec/conf/esa/0002V20"},
+"url":"URL#646073"
+},
+{
+"@score":"1",
+"@id":"646074",
+"info":{"authors":{"author":[{"@pid":"13/3479-9","text":"Lin Chen 0009"},{"@pid":"159/1762","text":"Martin Koutecký"},{"@pid":"19/360-12","text":"Lei Xu 0012"},{"@pid":"73/5220","text":"Weidong Shi"}]},"title":"New Bounds on Augmenting Steps of Block-Structured Integer Programs.","venue":"ESA","pages":"33:1-33:19","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/0009K0S20","doi":"10.4230/LIPICS.ESA.2020.33","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.33","url":"https://dblp.org/rec/conf/esa/0009K0S20"},
+"url":"URL#646074"
+},
+{
+"@score":"1",
+"@id":"646075",
+"info":{"authors":{"author":[{"@pid":"65/1105","text":"A. Karim Abu-Affash"},{"@pid":"157/6058","text":"Sujoy Bhore"},{"@pid":"37/4802","text":"Paz Carmi"},{"@pid":"m/JosephSBMitchell","text":"Joseph S. B. Mitchell"}]},"title":"Planar Bichromatic Bottleneck Spanning Trees.","venue":"ESA","pages":"1:1-1:16","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Abu-AffashBCM20","doi":"10.4230/LIPICS.ESA.2020.1","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.1","url":"https://dblp.org/rec/conf/esa/Abu-AffashBCM20"},
+"url":"URL#646075"
+},
+{
+"@score":"1",
+"@id":"646076",
+"info":{"authors":{"author":[{"@pid":"44/3421","text":"Umut A. Acar"},{"@pid":"200/7858","text":"Daniel Anderson"},{"@pid":"b/GEBlelloch","text":"Guy E. Blelloch"},{"@pid":"147/3439","text":"Laxman Dhulipala"},{"@pid":"203/3288","text":"Sam Westrick"}]},"title":"Parallel Batch-Dynamic Trees via Change Propagation.","venue":"ESA","pages":"2:1-2:23","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AcarABDW20","doi":"10.4230/LIPICS.ESA.2020.2","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.2","url":"https://dblp.org/rec/conf/esa/AcarABDW20"},
+"url":"URL#646076"
+},
+{
+"@score":"1",
+"@id":"646077",
+"info":{"authors":{"author":[{"@pid":"268/5371","text":"Ramtin Afshar"},{"@pid":"g/MichaelTGoodrich","text":"Michael T. Goodrich"},{"@pid":"128/7477","text":"Pedro Matias"},{"@pid":"239/4103","text":"Martha C. Osegueda"}]},"title":"Reconstructing Biological and Digital Phylogenetic Trees in Parallel.","venue":"ESA","pages":"3:1-3:24","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AfsharGMO20","doi":"10.4230/LIPICS.ESA.2020.3","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.3","url":"https://dblp.org/rec/conf/esa/AfsharGMO20"},
+"url":"URL#646077"
+},
+{
+"@score":"1",
+"@id":"646078",
+"info":{"authors":{"author":[{"@pid":"198/1092","text":"Abu Reyan Ahmed"},{"@pid":"05/9890","text":"Faryad Darabi Sahneh"},{"@pid":"154/5820","text":"Keaton Hamm"},{"@pid":"98/2841","text":"Stephen G. Kobourov"},{"@pid":"218/5431","text":"Richard Spence"}]},"title":"Kruskal-Based Approximation Algorithm for the Multi-Level Steiner Tree Problem.","venue":"ESA","pages":"4:1-4:21","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AhmedSHKS20","doi":"10.4230/LIPICS.ESA.2020.4","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.4","url":"https://dblp.org/rec/conf/esa/AhmedSHKS20"},
+"url":"URL#646078"
+},
+{
+"@score":"1",
+"@id":"646079",
+"info":{"authors":{"author":[{"@pid":"a/AAmir","text":"Amihood Amir"},{"@pid":"219/5886","text":"Itai Boneh"},{"@pid":"273/1961","text":"Michael Itzhaki"},{"@pid":"227/1404","text":"Eitan Kondratovsky"}]},"title":"Analysis of the Period Recovery Error Bound.","venue":"ESA","pages":"5:1-5:21","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AmirBIK20","doi":"10.4230/LIPICS.ESA.2020.5","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.5","url":"https://dblp.org/rec/conf/esa/AmirBIK20"},
+"url":"URL#646079"
+},
+{
+"@score":"1",
+"@id":"646080",
+"info":{"authors":{"author":[{"@pid":"207/7791","text":"Eugenio Angriman"},{"@pid":"116/1684","text":"Maria Predari"},{"@pid":"136/6023","text":"Alexander van der Grinten"},{"@pid":"55/3065","text":"Henning Meyerhenke"}]},"title":"Approximation of the Diagonal of a Laplacian&apos;s Pseudoinverse for Complex Network Analysis.","venue":"ESA","pages":"6:1-6:24","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AngrimanPGM20","doi":"10.4230/LIPICS.ESA.2020.6","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.6","url":"https://dblp.org/rec/conf/esa/AngrimanPGM20"},
+"url":"URL#646080"
+},
+{
+"@score":"1",
+"@id":"646081",
+"info":{"authors":{"author":[{"@pid":"46/5034","text":"Esther M. Arkin"},{"@pid":"235/2471","text":"Rathish Das"},{"@pid":"g/JieGao","text":"Jie Gao 0001"},{"@pid":"90/9661","text":"Mayank Goswami 0001"},{"@pid":"m/JosephSBMitchell","text":"Joseph S. B. Mitchell"},{"@pid":"52/2297","text":"Valentin Polishchuk"},{"@pid":"t/CsabaDToth","text":"Csaba D. Tóth"}]},"title":"Cutting Polygons into Small Pieces with Chords - Laser-Based Localization.","venue":"ESA","pages":"7:1-7:23","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/ArkinD0GMPT20","doi":"10.4230/LIPICS.ESA.2020.7","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.7","url":"https://dblp.org/rec/conf/esa/ArkinD0GMPT20"},
+"url":"URL#646081"
+},
+{
+"@score":"1",
+"@id":"646082",
+"info":{"authors":{"author":[{"@pid":"a/YAzar","text":"Yossi Azar"},{"@pid":"83/7271","text":"Ashish Chiplunkar"},{"@pid":"k/ShayKutten","text":"Shay Kutten"},{"@pid":"211/8092","text":"Noam Touitou"}]},"title":"Set Cover with Delay - Clairvoyance Is Not Required.","venue":"ESA","pages":"8:1-8:21","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AzarCKT20","doi":"10.4230/LIPICS.ESA.2020.8","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.8","url":"https://dblp.org/rec/conf/esa/AzarCKT20"},
+"url":"URL#646082"
+},
+{
+"@score":"1",
+"@id":"646083",
+"info":{"authors":{"author":{"@pid":"124/9336","text":"Sayan Bandyapadhyay"}},"title":"Improved Bounds for Metric Capacitated Covering Problems.","venue":"ESA","pages":"9:1-9:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Bandyapadhyay20","doi":"10.4230/LIPICS.ESA.2020.9","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.9","url":"https://dblp.org/rec/conf/esa/Bandyapadhyay20"},
+"url":"URL#646083"
+},
+{
+"@score":"1",
+"@id":"646084",
+"info":{"authors":{"author":[{"@pid":"b/AmotzBarNoy","text":"Amotz Bar-Noy"},{"@pid":"159/2125","text":"Keerti Choudhary"},{"@pid":"83/6824","text":"Avi Cohen"},{"@pid":"p/DavidPeleg","text":"David Peleg"},{"@pid":"41/1597","text":"Dror Rawitz"}]},"title":"Minimum Neighboring Degree Realization in Graphs and Trees.","venue":"ESA","pages":"10:1-10:15","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Bar-NoyCCPR20","doi":"10.4230/LIPICS.ESA.2020.10","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.10","url":"https://dblp.org/rec/conf/esa/Bar-NoyCCPR20"},
+"url":"URL#646084"
+},
+{
+"@score":"1",
+"@id":"646085",
+"info":{"authors":{"author":[{"@pid":"63/478","text":"Siddharth Barman"},{"@pid":"98/4060","text":"Umang Bhaskar"},{"@pid":"265/6115","text":"Anand Krishna"},{"@pid":"264/5077","text":"Ranjani G. Sundaram"}]},"title":"Tight Approximation Algorithms for p-Mean Welfare Under Subadditive Valuations.","venue":"ESA","pages":"11:1-11:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BarmanBKS20","doi":"10.4230/LIPICS.ESA.2020.11","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.11","url":"https://dblp.org/rec/conf/esa/BarmanBKS20"},
+"url":"URL#646085"
+},
+{
+"@score":"1",
+"@id":"646086",
+"info":{"authors":{"author":[{"@pid":"00/1481","text":"Surender Baswana"},{"@pid":"228/6631","text":"Shiv Kumar Gupta"},{"@pid":"202/2392","text":"Till Knollmann"}]},"title":"Mincut Sensitivity Data Structures for the Insertion of an Edge.","venue":"ESA","pages":"12:1-12:14","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BaswanaGK20","doi":"10.4230/LIPICS.ESA.2020.12","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.12","url":"https://dblp.org/rec/conf/esa/BaswanaGK20"},
+"url":"URL#646086"
+},
+{
+"@score":"1",
+"@id":"646087",
+"info":{"authors":{"author":[{"@pid":"223/4704","text":"Jesse Beisegel"},{"@pid":"k/EkkehardKohler","text":"Ekkehard Köhler"},{"@pid":"183/9440","text":"Robert Scheffler"},{"@pid":"08/8082","text":"Martin Strehler 0001"}]},"title":"Linear Time LexDFS on Chordal Graphs.","venue":"ESA","pages":"13:1-13:13","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BeisegelKSS20","doi":"10.4230/LIPICS.ESA.2020.13","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.13","url":"https://dblp.org/rec/conf/esa/BeisegelKSS20"},
+"url":"URL#646087"
+},
+{
+"@score":"1",
+"@id":"646088",
+"info":{"authors":{"author":[{"@pid":"72/8575","text":"Rémy Belmonte"},{"@pid":"87/5080-2","text":"Eun Jung Kim 0002"},{"@pid":"88/6157","text":"Michael Lampis"},{"@pid":"08/879","text":"Valia Mitsou"},{"@pid":"41/4592","text":"Yota Otachi"}]},"title":"Grundy Distinguishes Treewidth from Pathwidth.","venue":"ESA","pages":"14:1-14:19","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Belmonte0LMO20","doi":"10.4230/LIPICS.ESA.2020.14","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.14","url":"https://dblp.org/rec/conf/esa/Belmonte0LMO20"},
+"url":"URL#646088"
+},
+{
+"@score":"1",
+"@id":"646089",
+"info":{"authors":{"author":[{"@pid":"252/5103","text":"Jason W. Bentley"},{"@pid":"225/3576","text":"Daniel Gibney"},{"@pid":"99/7237","text":"Sharma V. Thankachan"}]},"title":"On the Complexity of BWT-Runs Minimization via Alphabet Reordering.","venue":"ESA","pages":"15:1-15:13","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BentleyGT20","doi":"10.4230/LIPICS.ESA.2020.15","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.15","url":"https://dblp.org/rec/conf/esa/BentleyGT20"},
+"url":"URL#646089"
+},
+{
+"@score":"1",
+"@id":"646090",
+"info":{"authors":{"author":[{"@pid":"b/PetraBerenbrink","text":"Petra Berenbrink"},{"@pid":"50/10633","text":"David Hammer"},{"@pid":"46/8192","text":"Dominik Kaaser"},{"@pid":"m/UlrichMeyer-1","text":"Ulrich Meyer 0001"},{"@pid":"173/4727","text":"Manuel Penschuck"},{"@pid":"52/5916","text":"Hung Tran"}]},"title":"Simulating Population Protocols in Sub-Constant Time per Interaction.","venue":"ESA","pages":"16:1-16:22","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BerenbrinkHK0PT20","doi":"10.4230/LIPICS.ESA.2020.16","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.16","url":"https://dblp.org/rec/conf/esa/BerenbrinkHK0PT20"},
+"url":"URL#646090"
+},
+{
+"@score":"1",
+"@id":"646091",
+"info":{"authors":{"author":[{"@pid":"258/5126","text":"Daniel Bertschinger"},{"@pid":"42/4603","text":"Johannes Lengler"},{"@pid":"126/1709","text":"Anders Martinsson"},{"@pid":"237/7185","text":"Robert Meier"},{"@pid":"s/AngelikaSteger","text":"Angelika Steger"},{"@pid":"230/0469","text":"Milos Trujic"},{"@pid":"w/EmoWelzl","text":"Emo Welzl"}]},"title":"An Optimal Decentralized (Δ + 1)-Coloring Algorithm.","venue":"ESA","pages":"17:1-17:12","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BertschingerLMM20","doi":"10.4230/LIPICS.ESA.2020.17","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.17","url":"https://dblp.org/rec/conf/esa/BertschingerLMM20"},
+"url":"URL#646091"
+},
+{
+"@score":"1",
+"@id":"646092",
+"info":{"authors":{"author":[{"@pid":"129/2787","text":"Anup Bhattacharya"},{"@pid":"234/1069","text":"Jan Eube"},{"@pid":"59/3127","text":"Heiko Röglin"},{"@pid":"67/7224-1","text":"Melanie Schmidt 0001"}]},"title":"Noisy, Greedy and Not so Greedy k-Means++.","venue":"ESA","pages":"18:1-18:21","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BhattacharyaER020","doi":"10.4230/LIPICS.ESA.2020.18","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.18","url":"https://dblp.org/rec/conf/esa/BhattacharyaER020"},
+"url":"URL#646092"
+},
+{
+"@score":"1",
+"@id":"646093",
+"info":{"authors":{"author":[{"@pid":"157/6058","text":"Sujoy Bhore"},{"@pid":"48/9245-1","text":"Guangping Li 0001"},{"@pid":"41/4420","text":"Martin Nöllenburg"}]},"title":"An Algorithmic Study of Fully Dynamic Independent Sets for Map Labeling.","venue":"ESA","pages":"19:1-19:24","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Bhore0N20","doi":"10.4230/LIPICS.ESA.2020.19","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.19","url":"https://dblp.org/rec/conf/esa/Bhore0N20"},
+"url":"URL#646093"
+},
+{
+"@score":"1",
+"@id":"646094",
+"info":{"authors":{"author":[{"@pid":"74/9125","text":"Thomas Bläsius"},{"@pid":"181/2310-1","text":"Tobias Friedrich 0001"},{"@pid":"176/1130","text":"Martin Schirneck"}]},"title":"The Minimization of Random Hypergraphs.","venue":"ESA","pages":"21:1-21:15","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Blasius0S20","doi":"10.4230/LIPICS.ESA.2020.21","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.21","url":"https://dblp.org/rec/conf/esa/Blasius0S20"},
+"url":"URL#646094"
+},
+{
+"@score":"1",
+"@id":"646095",
+"info":{"authors":{"author":[{"@pid":"153/1964","text":"Jan Bok"},{"@pid":"218/5709","text":"Nikola Jedlicková"},{"@pid":"00/757","text":"Barnaby Martin"},{"@pid":"18/5531","text":"Daniël Paulusma"},{"@pid":"247/7164","text":"Siani Smith"}]},"title":"Acyclic, Star and Injective Colouring - A Complexity Picture for H-Free Graphs.","venue":"ESA","pages":"22:1-22:22","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BokJMPS20","doi":"10.4230/LIPICS.ESA.2020.22","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.22","url":"https://dblp.org/rec/conf/esa/BokJMPS20"},
+"url":"URL#646095"
+},
+{
+"@score":"1",
+"@id":"646096",
+"info":{"authors":{"author":[{"@pid":"131/6607","text":"Édouard Bonnet"},{"@pid":"78/5708","text":"Stéphan Thomassé"},{"@pid":"263/7202","text":"Xuan Thang Tran"},{"@pid":"116/7602","text":"Rémi Watrigant"}]},"title":"An Algorithmic Weakening of the Erdős-Hajnal Conjecture.","venue":"ESA","pages":"23:1-23:18","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BonnetTTW20","doi":"10.4230/LIPICS.ESA.2020.23","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.23","url":"https://dblp.org/rec/conf/esa/BonnetTTW20"},
+"url":"URL#646096"
+},
+{
+"@score":"1",
+"@id":"646097",
+"info":{"authors":{"author":[{"@pid":"10/1734","text":"Nicolas Bousquet"},{"@pid":"25/1135","text":"Takehiro Ito"},{"@pid":"45/1736-1","text":"Yusuke Kobayashi 0001"},{"@pid":"184/0425","text":"Haruka Mizuta"},{"@pid":"215/4391","text":"Paul Ouvrard"},{"@pid":"28/6655","text":"Akira Suzuki"},{"@pid":"117/5870","text":"Kunihiro Wasa"}]},"title":"Reconfiguration of Spanning Trees with Many or Few Leaves.","venue":"ESA","pages":"24:1-24:15","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BousquetI0MOSW20","doi":"10.4230/LIPICS.ESA.2020.24","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.24","url":"https://dblp.org/rec/conf/esa/BousquetI0MOSW20"},
+"url":"URL#646097"
+},
+{
+"@score":"1",
+"@id":"646098",
+"info":{"authors":{"author":[{"@pid":"96/2643","text":"Karl Bringmann"},{"@pid":"52/735","text":"Marvin Künnemann"},{"@pid":"146/9680","text":"André Nusser"}]},"title":"When Lipschitz Walks Your Dog - Algorithm Engineering of the Discrete Fréchet Distance Under Translation.","venue":"ESA","pages":"25:1-25:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BringmannKN20","doi":"10.4230/LIPICS.ESA.2020.25","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.25","url":"https://dblp.org/rec/conf/esa/BringmannKN20"},
+"url":"URL#646098"
+},
+{
+"@score":"1",
+"@id":"646099",
+"info":{"authors":{"author":[{"@pid":"45/4653","text":"Peter A. Brooksbank"},{"@pid":"49/612","text":"Yinan Li"},{"@pid":"91/312","text":"Youming Qiao"},{"@pid":"68/5859","text":"James B. Wilson"}]},"title":"Improved Algorithms for Alternating Matrix Space Isometry - From Theory to Practice.","venue":"ESA","pages":"26:1-26:15","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BrooksbankLQW20","doi":"10.4230/LIPICS.ESA.2020.26","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.26","url":"https://dblp.org/rec/conf/esa/BrooksbankLQW20"},
+"url":"URL#646099"
+},
+{
+"@score":"1",
+"@id":"646100",
+"info":{"authors":{"author":[{"@pid":"50/165","text":"Kevin Buchin"},{"@pid":"h/SarielHarPeled","text":"Sariel Har-Peled"},{"@pid":"217/2109","text":"Dániel Oláh"}]},"title":"Sometimes Reliable Spanners of Almost Linear Size.","venue":"ESA","pages":"27:1-27:15","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BuchinHO20","doi":"10.4230/LIPICS.ESA.2020.27","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.27","url":"https://dblp.org/rec/conf/esa/BuchinHO20"},
+"url":"URL#646100"
+},
+{
+"@score":"1",
+"@id":"646101",
+"info":{"authors":{"author":[{"@pid":"50/1947","text":"Parinya Chalermsook"},{"@pid":"204/8899","text":"Wanchote Po Jiamjitrak"}]},"title":"New Binary Search Tree Bounds via Geometric Inversions.","venue":"ESA","pages":"28:1-28:16","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/ChalermsookJ20","doi":"10.4230/LIPICS.ESA.2020.28","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.28","url":"https://dblp.org/rec/conf/esa/ChalermsookJ20"},
+"url":"URL#646101"
+},
+{
+"@score":"1",
+"@id":"646102",
+"info":{"authors":{"author":[{"@pid":"60/3556","text":"Timothy M. Chan"},{"@pid":"205/3189","text":"Qizheng He"}]},"title":"More on Change-Making and Related Problems.","venue":"ESA","pages":"29:1-29:14","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/ChanH20","doi":"10.4230/LIPICS.ESA.2020.29","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.29","url":"https://dblp.org/rec/conf/esa/ChanH20"},
+"url":"URL#646102"
+},
+{
+"@score":"1",
+"@id":"646103",
+"info":{"authors":{"author":[{"@pid":"83/1935","text":"Karthekeyan Chandrasekaran"},{"@pid":"07/1562","text":"Elena Grigorescu"},{"@pid":"35/5367","text":"Gabriel Istrate"},{"@pid":"249/2905","text":"Shubhang Kulkarni"},{"@pid":"156/3435","text":"Young-San Lin"},{"@pid":"190/7732","text":"Minshen Zhu"}]},"title":"The Maximum Binary Tree Problem.","venue":"ESA","pages":"30:1-30:22","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/ChandrasekaranG20","doi":"10.4230/LIPICS.ESA.2020.30","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.30","url":"https://dblp.org/rec/conf/esa/ChandrasekaranG20"},
+"url":"URL#646103"
+},
+{
+"@score":"1",
+"@id":"646104",
+"info":{"authors":{"author":[{"@pid":"184/0588","text":"Panagiotis Charalampopoulos"},{"@pid":"164/5852","text":"Adam Karczmarz"}]},"title":"Single-Source Shortest Paths and Strong Connectivity in Dynamic Planar Graphs.","venue":"ESA","pages":"31:1-31:23","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Charalampopoulos20","doi":"10.4230/LIPICS.ESA.2020.31","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.31","url":"https://dblp.org/rec/conf/esa/Charalampopoulos20"},
+"url":"URL#646104"
+},
+{
+"@score":"1",
+"@id":"646105",
+"info":{"authors":{"author":[{"@pid":"184/0588","text":"Panagiotis Charalampopoulos"},{"@pid":"83/7216","text":"Jakub Radoszewski"},{"@pid":"r/WojciechRytter","text":"Wojciech Rytter"},{"@pid":"80/5679","text":"Tomasz Walen"},{"@pid":"223/9846","text":"Wiktor Zuba"}]},"title":"The Number of Repetitions in 2D-Strings.","venue":"ESA","pages":"32:1-32:18","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Charalampopoulos20a","doi":"10.4230/LIPICS.ESA.2020.32","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.32","url":"https://dblp.org/rec/conf/esa/Charalampopoulos20a"},
+"url":"URL#646105"
+},
+{
+"@score":"1",
+"@id":"646106",
+"info":{"authors":{"author":[{"@pid":"71/3446","text":"Man-Kwun Chiu"},{"@pid":"57/6389","text":"Matias Korman"},{"@pid":"199/6505","text":"Martin Suderland"},{"@pid":"89/1729","text":"Takeshi Tokuyama"}]},"title":"Distance Bounds for High Dimensional Consistent Digital Rays and 2-D Partially-Consistent Digital Rays.","venue":"ESA","pages":"34:1-34:22","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/ChiuKST20","doi":"10.4230/LIPICS.ESA.2020.34","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.34","url":"https://dblp.org/rec/conf/esa/ChiuKST20"},
+"url":"URL#646106"
+},
+{
+"@score":"1",
+"@id":"646107",
+"info":{"authors":{"author":[{"@pid":"70/4508","text":"Maria Chudnovsky"},{"@pid":"129/8255","text":"Jason King"},{"@pid":"61/8036","text":"Michal Pilipczuk"},{"@pid":"63/9303","text":"Pawel Rzazewski"},{"@pid":"139/0817","text":"Sophie Spirkl"}]},"title":"Finding Large H-Colorable Subgraphs in Hereditary Graph Classes.","venue":"ESA","pages":"35:1-35:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/ChudnovskyKPRS20","doi":"10.4230/LIPICS.ESA.2020.35","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.35","url":"https://dblp.org/rec/conf/esa/ChudnovskyKPRS20"},
+"url":"URL#646107"
+},
+{
+"@score":"1",
+"@id":"646108",
+"info":{"authors":{"author":[{"@pid":"214/1788","text":"Philipp Czerner"},{"@pid":"09/1911","text":"Harald Räcke"}]},"title":"Compact Oblivious Routing in Weighted Graphs.","venue":"ESA","pages":"36:1-36:23","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/CzernerR20","doi":"10.4230/LIPICS.ESA.2020.36","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.36","url":"https://dblp.org/rec/conf/esa/CzernerR20"},
+"url":"URL#646108"
+},
+{
+"@score":"1",
+"@id":"646109",
+"info":{"authors":{"author":[{"@pid":"207/8376","text":"Shichuan Deng"},{"@pid":"33/5448-15","text":"Jian Li 0015"},{"@pid":"r/YRabani","text":"Yuval Rabani"}]},"title":"Approximation Algorithms for Clustering with Dynamic Points.","venue":"ESA","pages":"37:1-37:15","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Deng0R20","doi":"10.4230/LIPICS.ESA.2020.37","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.37","url":"https://dblp.org/rec/conf/esa/Deng0R20"},
+"url":"URL#646109"
+},
+{
+"@score":"1",
+"@id":"646110",
+"info":{"authors":{"author":{"@pid":"74/9794","text":"Hu Ding"}},"title":"A Sub-Linear Time Framework for Geometric Optimization with Outliers in High Dimensions.","venue":"ESA","pages":"38:1-38:21","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Ding20","doi":"10.4230/LIPICS.ESA.2020.38","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.38","url":"https://dblp.org/rec/conf/esa/Ding20"},
+"url":"URL#646110"
+},
+{
+"@score":"1",
+"@id":"646111",
+"info":{"authors":{"author":[{"@pid":"195/6001","text":"Patrick Dinklage"},{"@pid":"90/834-1","text":"Johannes Fischer 0001"},{"@pid":"273/2043","text":"Alexander Herlez"},{"@pid":"38/9892","text":"Tomasz Kociumaka"},{"@pid":"163/4161","text":"Florian Kurpicz"}]},"title":"Practical Performance of Space Efficient Data Structures for Longest Common Extensions.","venue":"ESA","pages":"39:1-39:20","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Dinklage0HKK20","doi":"10.4230/LIPICS.ESA.2020.39","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.39","url":"https://dblp.org/rec/conf/esa/Dinklage0HKK20"},
+"url":"URL#646111"
+},
+{
+"@score":"1",
+"@id":"646112",
+"info":{"authors":{"author":[{"@pid":"151/6308","text":"Jan Dreier"},{"@pid":"155/9886","text":"Philipp Kuinke"},{"@pid":"r/PeterRossmanith","text":"Peter Rossmanith"}]},"title":"First-Order Model-Checking in Random Graphs and Complex Networks.","venue":"ESA","pages":"40:1-40:23","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/DreierKR20","doi":"10.4230/LIPICS.ESA.2020.40","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.40","url":"https://dblp.org/rec/conf/esa/DreierKR20"},
+"url":"URL#646112"
+},
+{
+"@score":"1",
+"@id":"646113",
+"info":{"authors":{"author":[{"@pid":"230/4560","text":"Franziska Eberle"},{"@pid":"40/6185","text":"Nicole Megow"},{"@pid":"133/8330","text":"Kevin Schewior"}]},"title":"Optimally Handling Commitment Issues in Online Throughput Maximization.","venue":"ESA","pages":"41:1-41:15","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/EberleMS20","doi":"10.4230/LIPICS.ESA.2020.41","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.41","url":"https://dblp.org/rec/conf/esa/EberleMS20"},
+"url":"URL#646113"
+},
+{
+"@score":"1",
+"@id":"646114",
+"info":{"authors":{"author":[{"@pid":"165/8476","text":"Eduard Eiben"},{"@pid":"191/1802","text":"William Lochet"}]},"title":"A Polynomial Kernel for Line Graph Deletion.","venue":"ESA","pages":"42:1-42:15","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/EibenL20","doi":"10.4230/LIPICS.ESA.2020.42","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.42","url":"https://dblp.org/rec/conf/esa/EibenL20"},
+"url":"URL#646114"
+},
+{
+"@score":"1",
+"@id":"646115",
+"info":{"authors":{"author":[{"@pid":"e/FEisenbrand","text":"Friedrich Eisenbrand"},{"@pid":"247/5713","text":"Moritz Venzin"}]},"title":"Approximate CVPp in Time 20.802 n.","venue":"ESA","pages":"43:1-43:15","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/EisenbrandV20","doi":"10.4230/LIPICS.ESA.2020.43","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.43","url":"https://dblp.org/rec/conf/esa/EisenbrandV20"},
+"url":"URL#646115"
+},
+{
+"@score":"1",
+"@id":"646116",
+"info":{"authors":{"author":[{"@pid":"230/8587","text":"Yaron Fairstein"},{"@pid":"08/5247","text":"Ariel Kulik"},{"@pid":"n/JosephNaor","text":"Joseph (Seffi) Naor"},{"@pid":"r/DannyRaz","text":"Danny Raz"},{"@pid":"32/897","text":"Hadas Shachnai"}]},"title":"A (1-e-1-ε)-Approximation for the Monotone Submodular Multiple Knapsack Problem.","venue":"ESA","pages":"44:1-44:19","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/FairsteinKNRS20","doi":"10.4230/LIPICS.ESA.2020.44","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.44","url":"https://dblp.org/rec/conf/esa/FairsteinKNRS20"},
+"url":"URL#646116"
+},
+{
+"@score":"1",
+"@id":"646117",
+"info":{"authors":{"author":[{"@pid":"76/8243","text":"Chenglin Fan"},{"@pid":"96/9733","text":"Benjamin Raichel"}]},"title":"Linear Expected Complexity for Directional and Multiplicative Voronoi Diagrams.","venue":"ESA","pages":"45:1-45:18","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/FanR20","doi":"10.4230/LIPICS.ESA.2020.45","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.45","url":"https://dblp.org/rec/conf/esa/FanR20"},
+"url":"URL#646117"
+},
+{
+"@score":"1",
+"@id":"646118",
+"info":{"authors":{"author":[{"@pid":"06/4695","text":"Andreas Emil Feldmann"},{"@pid":"203/8484","text":"David Saulpic"}]},"title":"Polynomial Time Approximation Schemes for Clustering in Low Highway Dimension Graphs.","venue":"ESA","pages":"46:1-46:22","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/FeldmannS20","doi":"10.4230/LIPICS.ESA.2020.46","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.46","url":"https://dblp.org/rec/conf/esa/FeldmannS20"},
+"url":"URL#646118"
+},
+{
+"@score":"1",
+"@id":"646119",
+"info":{"authors":{"author":[{"@pid":"52/11490","text":"Alejandro Flores-Velazco"},{"@pid":"m/DavidMMount","text":"David M. Mount"}]},"title":"Coresets for the Nearest-Neighbor Rule.","venue":"ESA","pages":"47:1-47:19","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Flores-VelazcoM20","doi":"10.4230/LIPICS.ESA.2020.47","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.47","url":"https://dblp.org/rec/conf/esa/Flores-VelazcoM20"},
+"url":"URL#646119"
+},
+{
+"@score":"1",
+"@id":"646120",
+"info":{"authors":{"author":[{"@pid":"f/FedorVFomin","text":"Fedor V. Fomin"},{"@pid":"06/6306","text":"Petr A. Golovach"}]},"title":"Kernelization of Whitney Switches.","venue":"ESA","pages":"48:1-48:19","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/FominG20","doi":"10.4230/LIPICS.ESA.2020.48","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.48","url":"https://dblp.org/rec/conf/esa/FominG20"},
+"url":"URL#646120"
+},
+{
+"@score":"1",
+"@id":"646121",
+"info":{"authors":{"author":[{"@pid":"f/FedorVFomin","text":"Fedor V. Fomin"},{"@pid":"06/6306","text":"Petr A. Golovach"}]},"title":"Subexponential Parameterized Algorithms and Kernelization on Almost Chordal Graphs.","venue":"ESA","pages":"49:1-49:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/FominG20a","doi":"10.4230/LIPICS.ESA.2020.49","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.49","url":"https://dblp.org/rec/conf/esa/FominG20a"},
+"url":"URL#646121"
+},
+{
+"@score":"1",
+"@id":"646122",
+"info":{"authors":{"author":[{"@pid":"f/FedorVFomin","text":"Fedor V. Fomin"},{"@pid":"06/6306","text":"Petr A. Golovach"},{"@pid":"10/10553","text":"Pranabendu Misra"},{"@pid":"04/9023","text":"M. S. Ramanujan 0001"}]},"title":"On the Complexity of Recovering Incidence Matrices.","venue":"ESA","pages":"50:1-50:13","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/FominGMR20","doi":"10.4230/LIPICS.ESA.2020.50","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.50","url":"https://dblp.org/rec/conf/esa/FominGMR20"},
+"url":"URL#646122"
+},
+{
+"@score":"1",
+"@id":"646123",
+"info":{"authors":{"author":[{"@pid":"f/FedorVFomin","text":"Fedor V. Fomin"},{"@pid":"06/6306","text":"Petr A. Golovach"},{"@pid":"244/2361","text":"Giannos Stamoulis"},{"@pid":"t/DimitriosMThilikos","text":"Dimitrios M. Thilikos"}]},"title":"An Algorithmic Meta-Theorem for Graph Modification to Planarity and FOL.","venue":"ESA","pages":"51:1-51:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/FominGST20","doi":"10.4230/LIPICS.ESA.2020.51","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.51","url":"https://dblp.org/rec/conf/esa/FominGST20"},
+"url":"URL#646123"
+},
+{
+"@score":"1",
+"@id":"646124",
+"info":{"authors":{"author":[{"@pid":"180/6420","text":"Henry Förster"},{"@pid":"k/MichaelKaufmann1","text":"Michael Kaufmann 0001"}]},"title":"On Compact RAC Drawings.","venue":"ESA","pages":"53:1-53:21","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Forster020","doi":"10.4230/LIPICS.ESA.2020.53","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.53","url":"https://dblp.org/rec/conf/esa/Forster020"},
+"url":"URL#646124"
+},
+{
+"@score":"1",
+"@id":"646125",
+"info":{"authors":{"author":[{"@pid":"27/5737","text":"Zachary Friggstad"},{"@pid":"99/662","text":"Chaitanya Swamy"}]},"title":"A Constant-Factor Approximation for Directed Latency in Quasi-Polynomial Time.","venue":"ESA","pages":"52:1-52:20","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/FriggstadS20","doi":"10.4230/LIPICS.ESA.2020.52","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.52","url":"https://dblp.org/rec/conf/esa/FriggstadS20"},
+"url":"URL#646125"
+},
+{
+"@score":"1",
+"@id":"646126",
+"info":{"authors":{"author":[{"@pid":"267/9703","text":"Younan Gao"},{"@pid":"14/1268","text":"Meng He 0001"},{"@pid":"n/YakovNekrich","text":"Yakov Nekrich"}]},"title":"Fast Preprocessing for Optimal Orthogonal Range Reporting and Range Successor with Applications to Text Indexing.","venue":"ESA","pages":"54:1-54:18","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Gao0N20","doi":"10.4230/LIPICS.ESA.2020.54","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.54","url":"https://dblp.org/rec/conf/esa/Gao0N20"},
+"url":"URL#646126"
+},
+{
+"@score":"1",
+"@id":"646127",
+"info":{"authors":{"author":[{"@pid":"g/NaveenGarg","text":"Naveen Garg 0001"},{"@pid":"85/4186-1","text":"Nikhil Kumar 0001"}]},"title":"Dual Half-Integrality for Uncrossable Cut Cover and Its Application to Maximum Half-Integral Flow.","venue":"ESA","pages":"55:1-55:13","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/GargK20","doi":"10.4230/LIPICS.ESA.2020.55","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.55","url":"https://dblp.org/rec/conf/esa/GargK20"},
+"url":"URL#646127"
+},
+{
+"@score":"1",
+"@id":"646128",
+"info":{"authors":{"author":[{"@pid":"06/1785","text":"Martin Held"},{"@pid":"222/3923","text":"Stefan de Lorenzo"}]},"title":"An Efficient, Practical Algorithm and Implementation for Computing Multiplicatively Weighted Voronoi Diagrams.","venue":"ESA","pages":"56:1-56:15","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/HeldL20","doi":"10.4230/LIPICS.ESA.2020.56","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.56","url":"https://dblp.org/rec/conf/esa/HeldL20"},
+"url":"URL#646128"
+},
+{
+"@score":"1",
+"@id":"646129",
+"info":{"authors":{"author":[{"@pid":"h/MonikaRauchHenzinger","text":"Monika Henzinger"},{"@pid":"93/6119-4","text":"Shahbaz Khan 0004"},{"@pid":"38/4267","text":"Richard Paul"},{"@pid":"10/1388-3","text":"Christian Schulz 0003"}]},"title":"Dynamic Matching Algorithms in Practice.","venue":"ESA","pages":"58:1-58:20","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Henzinger0P020","doi":"10.4230/LIPICS.ESA.2020.58","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.58","url":"https://dblp.org/rec/conf/esa/Henzinger0P020"},
+"url":"URL#646129"
+},
+{
+"@score":"1",
+"@id":"646130",
+"info":{"authors":{"author":[{"@pid":"h/MonikaRauchHenzinger","text":"Monika Henzinger"},{"@pid":"123/4488","text":"Sagar Kale"}]},"title":"Fully-Dynamic Coresets.","venue":"ESA","pages":"57:1-57:21","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/HenzingerK20","doi":"10.4230/LIPICS.ESA.2020.57","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.57","url":"https://dblp.org/rec/conf/esa/HenzingerK20"},
+"url":"URL#646130"
+},
+{
+"@score":"1",
+"@id":"646131",
+"info":{"authors":{"author":[{"@pid":"h/MonikaRauchHenzinger","text":"Monika Henzinger"},{"@pid":"154/6650","text":"Alexander Noe"},{"@pid":"10/1388-3","text":"Christian Schulz 0003"},{"@pid":"18/3295","text":"Darren Strash"}]},"title":"Finding All Global Minimum Cuts in Practice.","venue":"ESA","pages":"59:1-59:20","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/HenzingerN0S20","doi":"10.4230/LIPICS.ESA.2020.59","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.59","url":"https://dblp.org/rec/conf/esa/HenzingerN0S20"},
+"url":"URL#646131"
+},
+{
+"@score":"1",
+"@id":"646132",
+"info":{"authors":{"author":[{"@pid":"173/5037","text":"Eva-Maria C. Hols"},{"@pid":"93/5872","text":"Stefan Kratsch"},{"@pid":"167/0915","text":"Astrid Pieterse"}]},"title":"Approximate Turing Kernelization for Problems Parameterized by Treewidth.","venue":"ESA","pages":"60:1-60:23","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/HolsKP20","doi":"10.4230/LIPICS.ESA.2020.60","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.60","url":"https://dblp.org/rec/conf/esa/HolsKP20"},
+"url":"URL#646132"
+},
+{
+"@score":"1",
+"@id":"646133",
+"info":{"authors":{"author":[{"@pid":"273/1793","text":"Gary Hoppenworth"},{"@pid":"252/5103","text":"Jason W. Bentley"},{"@pid":"225/3576","text":"Daniel Gibney"},{"@pid":"99/7237","text":"Sharma V. Thankachan"}]},"title":"The Fine-Grained Complexity of Median and Center String Problems Under Edit Distance.","venue":"ESA","pages":"61:1-61:19","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/HoppenworthBGT20","doi":"10.4230/LIPICS.ESA.2020.61","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.61","url":"https://dblp.org/rec/conf/esa/HoppenworthBGT20"},
+"url":"URL#646133"
+},
+{
+"@score":"1",
+"@id":"646134",
+"info":{"authors":{"author":[{"@pid":"58/8776","text":"Bart M. P. Jansen"},{"@pid":"146/0687","text":"Michal Wlodarczyk 0001"}]},"title":"Optimal Polynomial-Time Compression for Boolean Max CSP.","venue":"ESA","pages":"63:1-63:19","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Jansen020","doi":"10.4230/LIPICS.ESA.2020.63","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.63","url":"https://dblp.org/rec/conf/esa/Jansen020"},
+"url":"URL#646134"
+},
+{
+"@score":"1",
+"@id":"646135",
+"info":{"authors":{"author":[{"@pid":"95/5094","text":"Mamadou Moustapha Kanté"},{"@pid":"51/6396","text":"Christophe Paul"},{"@pid":"t/DimitriosMThilikos","text":"Dimitrios M. Thilikos"}]},"title":"A Linear Fixed Parameter Tractable Algorithm for Connected Pathwidth.","venue":"ESA","pages":"64:1-64:16","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/KantePT20","doi":"10.4230/LIPICS.ESA.2020.64","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.64","url":"https://dblp.org/rec/conf/esa/KantePT20"},
+"url":"URL#646135"
+},
+{
+"@score":"1",
+"@id":"646136",
+"info":{"authors":{"author":[{"@pid":"244/8353","text":"Tomohiro Koana"},{"@pid":"69/1771","text":"Christian Komusiewicz"},{"@pid":"223/1925","text":"Frank Sommer"}]},"title":"Exploiting c-Closure in Kernelization Algorithms for Graph Problems.","venue":"ESA","pages":"65:1-65:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/KoanaKS20","doi":"10.4230/LIPICS.ESA.2020.65","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.65","url":"https://dblp.org/rec/conf/esa/KoanaKS20"},
+"url":"URL#646136"
+},
+{
+"@score":"1",
+"@id":"646137",
+"info":{"authors":{"author":[{"@pid":"k/LukaszKowalik","text":"Lukasz Kowalik"},{"@pid":"83/1926","text":"Shaohua Li"},{"@pid":"215/5006","text":"Wojciech Nadara"},{"@pid":"249/5537","text":"Marcin Smulewicz"},{"@pid":"42/318","text":"Magnus Wahlström"}]},"title":"Many Visits TSP Revisited.","venue":"ESA","pages":"66:1-66:22","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/KowalikLNSW20","doi":"10.4230/LIPICS.ESA.2020.66","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.66","url":"https://dblp.org/rec/conf/esa/KowalikLNSW20"},
+"url":"URL#646137"
+},
+{
+"@score":"1",
+"@id":"646138",
+"info":{"authors":{"author":[{"@pid":"45/466","text":"Hung Le"},{"@pid":"s/ShaySolomon","text":"Shay Solomon"}]},"title":"Light Euclidean Spanners with Steiner Points.","venue":"ESA","pages":"67:1-67:22","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/LeS20","doi":"10.4230/LIPICS.ESA.2020.67","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.67","url":"https://dblp.org/rec/conf/esa/LeS20"},
+"url":"URL#646138"
+},
+{
+"@score":"1",
+"@id":"646139",
+"info":{"authors":{"author":[{"@pid":"179/7412","text":"Victor Lecomte"},{"@pid":"85/9060","text":"Omri Weinstein"}]},"title":"Settling the Relationship Between Wilber&apos;s Bounds for Dynamic Optimality.","venue":"ESA","pages":"68:1-68:21","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/LecomteW20","doi":"10.4230/LIPICS.ESA.2020.68","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.68","url":"https://dblp.org/rec/conf/esa/LecomteW20"},
+"url":"URL#646139"
+},
+{
+"@score":"1",
+"@id":"646140",
+"info":{"authors":{"author":[{"@pid":"93/3617","text":"Lily Li"},{"@pid":"24/7867","text":"Aleksandar Nikolov"}]},"title":"On the Computational Complexity of Linear Discrepancy.","venue":"ESA","pages":"69:1-69:16","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/LiN20","doi":"10.4230/LIPICS.ESA.2020.69","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.69","url":"https://dblp.org/rec/conf/esa/LiN20"},
+"url":"URL#646140"
+},
+{
+"@score":"1",
+"@id":"646141",
+"info":{"authors":{"author":[{"@pid":"268/6007","text":"Bogdan-Adrian Manghiuc"},{"@pid":"08/9919-1","text":"Pan Peng 0001"},{"@pid":"93/2604-1","text":"He Sun 0001"}]},"title":"Augmenting the Algebraic Connectivity of Graphs.","venue":"ESA","pages":"70:1-70:22","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Manghiuc0S20","doi":"10.4230/LIPICS.ESA.2020.70","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.70","url":"https://dblp.org/rec/conf/esa/Manghiuc0S20"},
+"url":"URL#646141"
+},
+{
+"@score":"1",
+"@id":"646142",
+"info":{"authors":{"author":{"@pid":"95/1832","text":"Dániel Marx"}},"title":"Chordless Cycle Packing Is Fixed-Parameter Tractable.","venue":"ESA","pages":"71:1-71:19","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Marx20","doi":"10.4230/LIPICS.ESA.2020.71","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.71","url":"https://dblp.org/rec/conf/esa/Marx20"},
+"url":"URL#646142"
+},
+{
+"@score":"1",
+"@id":"646143",
+"info":{"authors":{"author":[{"@pid":"95/1832","text":"Dániel Marx"},{"@pid":"37/9923","text":"R. B. Sandeep"}]},"title":"Incompressibility of H-Free Edge Modification Problems - Towards a Dichotomy.","venue":"ESA","pages":"72:1-72:25","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/MarxS20","doi":"10.4230/LIPICS.ESA.2020.72","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.72","url":"https://dblp.org/rec/conf/esa/MarxS20"},
+"url":"URL#646143"
+},
+{
+"@score":"1",
+"@id":"646144",
+"info":{"authors":{"author":{"@pid":"49/3848","text":"Zeev Nutov"}},"title":"Approximating k-Connected m-Dominating Sets.","venue":"ESA","pages":"73:1-73:14","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Nutov20","doi":"10.4230/LIPICS.ESA.2020.73","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.73","url":"https://dblp.org/rec/conf/esa/Nutov20"},
+"url":"URL#646144"
+},
+{
+"@score":"1",
+"@id":"646145",
+"info":{"authors":{"author":[{"@pid":"218/6674","text":"Karolina Okrasa"},{"@pid":"267/9560","text":"Marta Piecyk"},{"@pid":"63/9303","text":"Pawel Rzazewski"}]},"title":"Full Complexity Classification of the List Homomorphism Problem for Bounded-Treewidth Graphs.","venue":"ESA","pages":"74:1-74:24","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/OkrasaPR20","doi":"10.4230/LIPICS.ESA.2020.74","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.74","url":"https://dblp.org/rec/conf/esa/OkrasaPR20"},
+"url":"URL#646145"
+},
+{
+"@score":"1",
+"@id":"646146",
+"info":{"authors":{"author":[{"@pid":"73/10826","text":"Georg Osang"},{"@pid":"193/0183","text":"Mael Rouxel-Labbé"},{"@pid":"24/2749","text":"Monique Teillaud"}]},"title":"Generalizing CGAL Periodic Delaunay Triangulations.","venue":"ESA","pages":"75:1-75:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/OsangRT20","doi":"10.4230/LIPICS.ESA.2020.75","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.75","url":"https://dblp.org/rec/conf/esa/OsangRT20"},
+"url":"URL#646146"
+},
+{
+"@score":"1",
+"@id":"646147",
+"info":{"authors":{"author":[{"@pid":"251/6605","text":"Ioannis Panagiotas"},{"@pid":"54/6400","text":"Bora Uçar"}]},"title":"Engineering Fast Almost Optimal Algorithms for Bipartite Graph Matching.","venue":"ESA","pages":"76:1-76:23","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/PanagiotasU20","doi":"10.4230/LIPICS.ESA.2020.76","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.76","url":"https://dblp.org/rec/conf/esa/PanagiotasU20"},
+"url":"URL#646147"
+},
+{
+"@score":"1",
+"@id":"646148",
+"info":{"authors":{"author":[{"@pid":"83/7216","text":"Jakub Radoszewski"},{"@pid":"223/9993","text":"Juliusz Straszynski"}]},"title":"Efficient Computation of 2-Covers of a String.","venue":"ESA","pages":"77:1-77:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/RadoszewskiS20","doi":"10.4230/LIPICS.ESA.2020.77","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.77","url":"https://dblp.org/rec/conf/esa/RadoszewskiS20"},
+"url":"URL#646148"
+},
+{
+"@score":"1",
+"@id":"646149",
+"info":{"authors":{"author":{"@pid":"222/3116","text":"Hanlin Ren"}},"title":"Improved Distance Sensitivity Oracles with Subcubic Preprocessing Time.","venue":"ESA","pages":"79:1-79:13","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Ren20","doi":"10.4230/LIPICS.ESA.2020.79","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.79","url":"https://dblp.org/rec/conf/esa/Ren20"},
+"url":"URL#646149"
+},
+{
+"@score":"1",
+"@id":"646150",
+"info":{"authors":{"author":{"@pid":"271/8024","text":"Philipp Schepper"}},"title":"Fine-Grained Complexity of Regular Expression Pattern Matching and Membership.","venue":"ESA","pages":"80:1-80:20","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Schepper20","doi":"10.4230/LIPICS.ESA.2020.80","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.80","url":"https://dblp.org/rec/conf/esa/Schepper20"},
+"url":"URL#646150"
+},
+{
+"@score":"1",
+"@id":"646151",
+"info":{"authors":{"author":[{"@pid":"18/9558","text":"Ben Strasser"},{"@pid":"w/DorotheaWagner","text":"Dorothea Wagner"},{"@pid":"207/8249","text":"Tim Zeitz"}]},"title":"Space-Efficient, Fast and Exact Routing in Time-Dependent Road Networks.","venue":"ESA","pages":"81:1-81:14","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/StrasserWZ20","doi":"10.4230/LIPICS.ESA.2020.81","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.81","url":"https://dblp.org/rec/conf/esa/StrasserWZ20"},
+"url":"URL#646151"
+},
+{
+"@score":"1",
+"@id":"646152",
+"info":{"title":"Front Matter, Table of Contents, Preface, Conference Organization.","venue":"ESA","pages":"0:1-0:20","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/X20","doi":"10.4230/LIPICS.ESA.2020.0","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.0","url":"https://dblp.org/rec/conf/esa/X20"},
+"url":"URL#646152"
+},
+{
+"@score":"1",
+"@id":"646153",
+"info":{"authors":{"author":{"@pid":"168/8847","text":"Hanrui Zhang"}},"title":"Improved Prophet Inequalities for Combinatorial Welfare Maximization with (Approximately) Subadditive Agents.","venue":"ESA","pages":"82:1-82:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Zhang20","doi":"10.4230/LIPICS.ESA.2020.82","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.82","url":"https://dblp.org/rec/conf/esa/Zhang20"},
+"url":"URL#646153"
+},
+{
+"@score":"1",
+"@id":"646154",
+"info":{"authors":{"author":{"@pid":"225/4494","text":"Xianghui Zhong"}},"title":"On the Approximation Ratio of the k-Opt and Lin-Kernighan Algorithm for Metric and Graph TSP.","venue":"ESA","pages":"83:1-83:13","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Zhong20","doi":"10.4230/LIPICS.ESA.2020.83","ee":"https://doi.org/10.4230/LIPIcs.ESA.2020.83","url":"https://dblp.org/rec/conf/esa/Zhong20"},
+"url":"URL#646154"
+},
+{
+"@score":"1",
+"@id":"761434",
+"info":{"authors":{"author":[{"@pid":"g/FGrandoni","text":"Fabrizio Grandoni 0001"},{"@pid":"76/1969","text":"Grzegorz Herman"},{"@pid":"s/PeterSanders","text":"Peter Sanders 0001"}]},"title":"28th Annual European Symposium on Algorithms, ESA 2020, September 7-9, 2020, Pisa, Italy (Virtual Conference).","venue":["ESA","LIPIcs"],"volume":"173","publisher":"Schloss Dagstuhl - Leibniz-Zentrum für Informatik","year":"2020","type":"Editorship","key":"conf/esa/2020","ee":"https://www.dagstuhl.de/dagpub/978-3-95977-162-7","url":"https://dblp.org/rec/conf/esa/2020"},
+"url":"URL#761434"
+}
+]
+}
+}
+}

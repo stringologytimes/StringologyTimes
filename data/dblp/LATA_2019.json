@@ -1,0 +1,243 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/lata/lata2019.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"432.54"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"35",
+"@dc":"35",
+"@oc":"35",
+"@id":"35360842",
+"text":":facetid:toc:db/conf/lata/lata2019.bht"
+}
+},
+"hits":{
+"@total":"35",
+"@computed":"35",
+"@sent":"35",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"1132044",
+"info":{"authors":{"author":[{"@pid":"h/MarkusHolzer1","text":"Markus Holzer 0001"},{"@pid":"182/6122","text":"Michal Hospodár"}]},"title":"The Range of State Complexities of Languages Resulting from the Cut Operation.","venue":"LATA","pages":"190-202","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/0001H19","doi":"10.1007/978-3-030-13435-8_14","ee":"https://doi.org/10.1007/978-3-030-13435-8_14","url":"https://dblp.org/rec/conf/lata/0001H19"},
+"url":"URL#1132044"
+},
+{
+"@score":"1",
+"@id":"1132045",
+"info":{"authors":{"author":[{"@pid":"186/0114","text":"Ondrej Klíma 0001"},{"@pid":"73/3073","text":"Libor Polák"}]},"title":"On Varieties of Ordered Automata.","venue":"LATA","pages":"108-120","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/0001P19","doi":"10.1007/978-3-030-13435-8_8","ee":"https://doi.org/10.1007/978-3-030-13435-8_8","url":"https://dblp.org/rec/conf/lata/0001P19"},
+"url":"URL#1132045"
+},
+{
+"@score":"1",
+"@id":"1132046",
+"info":{"authors":{"author":[{"@pid":"209/9535","text":"Jackson Abascal"},{"@pid":"h/LaneAHemaspaandra","text":"Lane A. Hemaspaandra"},{"@pid":"209/9584","text":"Shir Maimon"},{"@pid":"188/5891","text":"Daniel Rubery"}]},"title":"Closure and Nonclosure Properties of the Compressible and Rankable Sets.","venue":"LATA","pages":"177-189","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/AbascalHMR19","doi":"10.1007/978-3-030-13435-8_13","ee":"https://doi.org/10.1007/978-3-030-13435-8_13","url":"https://dblp.org/rec/conf/lata/AbascalHMR19"},
+"url":"URL#1132046"
+},
+{
+"@score":"1",
+"@id":"1132047",
+"info":{"authors":{"author":[{"@pid":"237/1676","text":"Amazigh Amrane"},{"@pid":"20/5954","text":"Nicolas Bedon"}]},"title":"Logic and Rational Languages of Scattered and Countable Series-Parallel Posets.","venue":"LATA","pages":"275-287","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/AmraneB19","doi":"10.1007/978-3-030-13435-8_20","ee":"https://doi.org/10.1007/978-3-030-13435-8_20","url":"https://dblp.org/rec/conf/lata/AmraneB19"},
+"url":"URL#1132047"
+},
+{
+"@score":"1",
+"@id":"1132048",
+"info":{"authors":{"author":[{"@pid":"93/5307","text":"M. Anabtawi"},{"@pid":"75/4946","text":"S. Hassan"},{"@pid":"71/6552","text":"Christos A. Kapoutsis"},{"@pid":"237/1675","text":"Mohammad Zakzok"}]},"title":"An Oracle Hierarchy for Small One-Way Finite Automata.","venue":"LATA","pages":"57-69","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/AnabtawiHKZ19","doi":"10.1007/978-3-030-13435-8_4","ee":"https://doi.org/10.1007/978-3-030-13435-8_4","url":"https://dblp.org/rec/conf/lata/AnabtawiHKZ19"},
+"url":"URL#1132048"
+},
+{
+"@score":"1",
+"@id":"1132049",
+"info":{"authors":{"author":[{"@pid":"91/3140","text":"Marcella Anselmo"},{"@pid":"74/2120","text":"Maria Madonia"},{"@pid":"s/CSelmi","text":"Carla Selmi"}]},"title":"Toroidal Codes and Conjugate Pictures.","venue":"LATA","pages":"288-301","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/AnselmoMS19","doi":"10.1007/978-3-030-13435-8_21","ee":"https://doi.org/10.1007/978-3-030-13435-8_21","url":"https://dblp.org/rec/conf/lata/AnselmoMS19"},
+"url":"URL#1132049"
+},
+{
+"@score":"1",
+"@id":"1132050",
+"info":{"authors":{"author":[{"@pid":"06/4327","text":"Tim Becker"},{"@pid":"48/2296","text":"Klaus Sutner"}]},"title":"Orbits of Abelian Automaton Groups.","venue":"LATA","pages":"70-81","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/BeckerS19","doi":"10.1007/978-3-030-13435-8_5","ee":"https://doi.org/10.1007/978-3-030-13435-8_5","url":"https://dblp.org/rec/conf/lata/BeckerS19"},
+"url":"URL#1132050"
+},
+{
+"@score":"1",
+"@id":"1132051",
+"info":{"authors":{"author":[{"@pid":"230/8374","text":"Alex Bishop"},{"@pid":"66/4371","text":"Murray Elder"}]},"title":"Bounded Automata Groups are co-ET0L.","venue":"LATA","pages":"82-94","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/BishopE19","doi":"10.1007/978-3-030-13435-8_6","ee":"https://doi.org/10.1007/978-3-030-13435-8_6","url":"https://dblp.org/rec/conf/lata/BishopE19"},
+"url":"URL#1132051"
+},
+{
+"@score":"1",
+"@id":"1132052",
+"info":{"authors":{"author":[{"@pid":"01/465","text":"Iovka Boneva"},{"@pid":"n/JNiehren","text":"Joachim Niehren"},{"@pid":"226/3509","text":"Momar Sakho"}]},"title":"Regular Matching and Inclusion on Compressed Tree Patterns with Context Variables.","venue":"LATA","pages":"343-355","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/BonevaNS19","doi":"10.1007/978-3-030-13435-8_25","ee":"https://doi.org/10.1007/978-3-030-13435-8_25","url":"https://dblp.org/rec/conf/lata/BonevaNS19"},
+"url":"URL#1132052"
+},
+{
+"@score":"1",
+"@id":"1132053",
+"info":{"authors":{"author":[{"@pid":"77/94","text":"Émilie Charlier"},{"@pid":"07/4444","text":"Svetlana Puzynina"},{"@pid":"68/9687","text":"Élise Vandomme"}]},"title":"Recurrence in Multidimensional Words.","venue":"LATA","pages":"397-408","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/CharlierPV19","doi":"10.1007/978-3-030-13435-8_29","ee":"https://doi.org/10.1007/978-3-030-13435-8_29","url":"https://dblp.org/rec/conf/lata/CharlierPV19"},
+"url":"URL#1132053"
+},
+{
+"@score":"1",
+"@id":"1132054",
+"info":{"authors":{"author":{"@pid":"237/1673","text":"Christophe Cordero"}},"title":"A Note with Computer Exploration on the Triangle Conjecture.","venue":"LATA","pages":"409-420","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Cordero19","doi":"10.1007/978-3-030-13435-8_30","ee":"https://doi.org/10.1007/978-3-030-13435-8_30","url":"https://dblp.org/rec/conf/lata/Cordero19"},
+"url":"URL#1132054"
+},
+{
+"@score":"1",
+"@id":"1132055",
+"info":{"authors":{"author":[{"@pid":"57/142","text":"Alberto Dennunzio"},{"@pid":"98/3810","text":"Enrico Formenti"},{"@pid":"49/8284","text":"Luca Manzoni"},{"@pid":"m/LMargara","text":"Luciano Margara"},{"@pid":"70/7551","text":"Antonio E. Porreca"}]},"title":"Decidability of Sensitivity and Equicontinuity for Linear Higher-Order Cellular Automata.","venue":"LATA","pages":"95-107","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/DennunzioFMMP19","doi":"10.1007/978-3-030-13435-8_7","ee":"https://doi.org/10.1007/978-3-030-13435-8_7","url":"https://dblp.org/rec/conf/lata/DennunzioFMMP19"},
+"url":"URL#1132055"
+},
+{
+"@score":"1",
+"@id":"1132056",
+"info":{"authors":{"author":[{"@pid":"86/106","text":"Jean-Philippe Dubernard"},{"@pid":"g/GiovannaGuaiana","text":"Giovanna Guaiana"},{"@pid":"06/761","text":"Ludovic Mignot"}]},"title":"Geometrical Closure of Binary V_3/2 Languages.","venue":"LATA","pages":"302-314","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/DubernardGM19","doi":"10.1007/978-3-030-13435-8_22","ee":"https://doi.org/10.1007/978-3-030-13435-8_22","url":"https://dblp.org/rec/conf/lata/DubernardGM19"},
+"url":"URL#1132056"
+},
+{
+"@score":"1",
+"@id":"1132057",
+"info":{"authors":{"author":[{"@pid":"222/6705","text":"Ajay Kumar Eeralla"},{"@pid":"116/4886","text":"Serdar Erbatur"},{"@pid":"76/8965","text":"Andrew M. Marshall"},{"@pid":"r/CRingeissen","text":"Christophe Ringeissen"}]},"title":"Rule-Based Unification in Combined Theories and the Finite Variant Property.","venue":"LATA","pages":"356-367","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/EerallaEMR19","doi":"10.1007/978-3-030-13435-8_26","ee":"https://doi.org/10.1007/978-3-030-13435-8_26","url":"https://dblp.org/rec/conf/lata/EerallaEMR19"},
+"url":"URL#1132057"
+},
+{
+"@score":"1",
+"@id":"1132058",
+"info":{"authors":{"author":[{"@pid":"f/SAFenner","text":"Stephen A. Fenner"},{"@pid":"237/1674","text":"Daniel Padé"}]},"title":"Complexity of Regex Crosswords.","venue":"LATA","pages":"215-230","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/FennerP19","doi":"10.1007/978-3-030-13435-8_16","ee":"https://doi.org/10.1007/978-3-030-13435-8_16","url":"https://dblp.org/rec/conf/lata/FennerP19"},
+"url":"URL#1132058"
+},
+{
+"@score":"1",
+"@id":"1132059",
+"info":{"authors":{"author":{"@pid":"f/HenningFernau","text":"Henning Fernau"}},"title":"Modern Aspects of Complexity Within Formal Languages.","venue":"LATA","pages":"3-30","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Fernau19","doi":"10.1007/978-3-030-13435-8_1","ee":"https://doi.org/10.1007/978-3-030-13435-8_1","url":"https://dblp.org/rec/conf/lata/Fernau19"},
+"url":"URL#1132059"
+},
+{
+"@score":"1",
+"@id":"1132060",
+"info":{"authors":{"author":[{"@pid":"95/3187","text":"Berthold Hoffmann"},{"@pid":"32/5917","text":"Mark Minas"}]},"title":"Generalized Predictive Shift-Reduce Parsing for Hyperedge Replacement Graph Grammars.","venue":"LATA","pages":"233-245","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/HoffmannM19","doi":"10.1007/978-3-030-13435-8_17","ee":"https://doi.org/10.1007/978-3-030-13435-8_17","url":"https://dblp.org/rec/conf/lata/HoffmannM19"},
+"url":"URL#1132060"
+},
+{
+"@score":"1",
+"@id":"1132061",
+"info":{"authors":{"author":[{"@pid":"j/GJiraskova","text":"Galina Jirásková"},{"@pid":"186/0114","text":"Ondrej Klíma 0001"}]},"title":"Deterministic Biautomata and Subclasses of Deterministic Linear Languages.","venue":"LATA","pages":"315-327","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Jiraskova019","doi":"10.1007/978-3-030-13435-8_23","ee":"https://doi.org/10.1007/978-3-030-13435-8_23","url":"https://dblp.org/rec/conf/lata/Jiraskova019"},
+"url":"URL#1132061"
+},
+{
+"@score":"1",
+"@id":"1132062",
+"info":{"authors":{"author":[{"@pid":"k/LilaKari","text":"Lila Kari"},{"@pid":"157/6118-1","text":"Timothy Ng 0001"}]},"title":"State Complexity of Pseudocatenation.","venue":"LATA","pages":"203-214","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Kari019","doi":"10.1007/978-3-030-13435-8_15","ee":"https://doi.org/10.1007/978-3-030-13435-8_15","url":"https://dblp.org/rec/conf/lata/Kari019"},
+"url":"URL#1132062"
+},
+{
+"@score":"1",
+"@id":"1132063",
+"info":{"authors":{"author":[{"@pid":"38/9892","text":"Tomasz Kociumaka"},{"@pid":"83/7216","text":"Jakub Radoszewski"},{"@pid":"r/WojciechRytter","text":"Wojciech Rytter"},{"@pid":"223/9993","text":"Juliusz Straszynski"},{"@pid":"80/5679","text":"Tomasz Walen"},{"@pid":"223/9846","text":"Wiktor Zuba"}]},"title":"Efficient Representation and Counting of Antipower Factors in Words.","venue":"LATA","pages":"421-433","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/KociumakaRRSWZ19","doi":"10.1007/978-3-030-13435-8_31","ee":"https://doi.org/10.1007/978-3-030-13435-8_31","url":"https://dblp.org/rec/conf/lata/KociumakaRRSWZ19"},
+"url":"URL#1132063"
+},
+{
+"@score":"1",
+"@id":"1132064",
+"info":{"authors":{"author":[{"@pid":"k/JHKreowski","text":"Hans-Jörg Kreowski"},{"@pid":"52/1371","text":"Sabine Kuske"},{"@pid":"142/0341","text":"Aaron Lye"}]},"title":"Transformation of Petri Nets into Context-Dependent Fusion Grammars.","venue":"LATA","pages":"246-258","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/KreowskiKL19","doi":"10.1007/978-3-030-13435-8_18","ee":"https://doi.org/10.1007/978-3-030-13435-8_18","url":"https://dblp.org/rec/conf/lata/KreowskiKL19"},
+"url":"URL#1132064"
+},
+{
+"@score":"1",
+"@id":"1132065",
+"info":{"authors":{"author":{"@pid":"83/846","text":"Edward A. Lee"}},"title":"Observation and Interaction - Invited Paper.","venue":"LATA","pages":"31-42","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Lee19","doi":"10.1007/978-3-030-13435-8_2","ee":"https://doi.org/10.1007/978-3-030-13435-8_2","url":"https://dblp.org/rec/conf/lata/Lee19"},
+"url":"URL#1132065"
+},
+{
+"@score":"1",
+"@id":"1132066",
+"info":{"authors":{"author":[{"@pid":"184/4572","text":"Alexis Linard"},{"@pid":"h/CdlHiguera","text":"Colin de la Higuera"},{"@pid":"v/FritsWVaandrager","text":"Frits W. Vaandrager"}]},"title":"Learning Unions of k-Testable Languages.","venue":"LATA","pages":"328-339","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/LinardHV19","doi":"10.1007/978-3-030-13435-8_24","ee":"https://doi.org/10.1007/978-3-030-13435-8_24","url":"https://dblp.org/rec/conf/lata/LinardHV19"},
+"url":"URL#1132066"
+},
+{
+"@score":"1",
+"@id":"1132067",
+"info":{"authors":{"author":{"@pid":"43/5092","text":"Vadim V. Lozin"}},"title":"From Words to Graphs, and Back.","venue":"LATA","pages":"43-54","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Lozin19","doi":"10.1007/978-3-030-13435-8_3","ee":"https://doi.org/10.1007/978-3-030-13435-8_3","url":"https://dblp.org/rec/conf/lata/Lozin19"},
+"url":"URL#1132067"
+},
+{
+"@score":"1",
+"@id":"1132068",
+"info":{"authors":{"author":[{"@pid":"96/4543","text":"Kalpana Mahalingam"},{"@pid":"237/1672","text":"Palak Pandoh"}]},"title":"On the Maximum Number of Distinct Palindromic Sub-arrays.","venue":"LATA","pages":"434-446","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/MahalingamP19","doi":"10.1007/978-3-030-13435-8_32","ee":"https://doi.org/10.1007/978-3-030-13435-8_32","url":"https://dblp.org/rec/conf/lata/MahalingamP19"},
+"url":"URL#1132068"
+},
+{
+"@score":"1",
+"@id":"1132069",
+"info":{"authors":{"author":[{"@pid":"m/KlausMeer","text":"Klaus Meer"},{"@pid":"143/7969","text":"Ameen Naif"}]},"title":"Automata over Infinite Sequences of Reals.","venue":"LATA","pages":"121-133","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/MeerN19","doi":"10.1007/978-3-030-13435-8_9","ee":"https://doi.org/10.1007/978-3-030-13435-8_9","url":"https://dblp.org/rec/conf/lata/MeerN19"},
+"url":"URL#1132069"
+},
+{
+"@score":"1",
+"@id":"1132070",
+"info":{"authors":{"author":[{"@pid":"234/8676","text":"Clemens Müllner"},{"@pid":"176/5082","text":"Andrew Ryzhikov"}]},"title":"Palindromic Subsequences in Finite Words.","venue":"LATA","pages":"460-468","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/MullnerR19","doi":"10.1007/978-3-030-13435-8_34","ee":"https://doi.org/10.1007/978-3-030-13435-8_34","url":"https://dblp.org/rec/conf/lata/MullnerR19"},
+"url":"URL#1132070"
+},
+{
+"@score":"1",
+"@id":"1132071",
+"info":{"authors":{"author":{"@pid":"36/5522","text":"Pawel Parys"}},"title":"Extensions of the Caucal Hierarchy?","venue":"LATA","pages":"368-380","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Parys19","doi":"10.1007/978-3-030-13435-8_27","ee":"https://doi.org/10.1007/978-3-030-13435-8_27","url":"https://dblp.org/rec/conf/lata/Parys19"},
+"url":"URL#1132071"
+},
+{
+"@score":"1",
+"@id":"1132072",
+"info":{"authors":{"author":[{"@pid":"r/WojciechRytter","text":"Wojciech Rytter"},{"@pid":"223/9846","text":"Wiktor Zuba"}]},"title":"Syntactic View of Sigma-Tau Generation of Permutations.","venue":"LATA","pages":"447-459","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/RytterZ19","doi":"10.1007/978-3-030-13435-8_33","ee":"https://doi.org/10.1007/978-3-030-13435-8_33","url":"https://dblp.org/rec/conf/lata/RytterZ19"},
+"url":"URL#1132072"
+},
+{
+"@score":"1",
+"@id":"1132073",
+"info":{"authors":{"author":[{"@pid":"227/8495","text":"Ryoma Senda"},{"@pid":"93/5663","text":"Yoshiaki Takata"},{"@pid":"09/4711","text":"Hiroyuki Seki"}]},"title":"Generalized Register Context-Free Grammars.","venue":"LATA","pages":"259-271","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/SendaTS19","doi":"10.1007/978-3-030-13435-8_19","ee":"https://doi.org/10.1007/978-3-030-13435-8_19","url":"https://dblp.org/rec/conf/lata/SendaTS19"},
+"url":"URL#1132073"
+},
+{
+"@score":"1",
+"@id":"1132074",
+"info":{"authors":{"author":{"@pid":"13/3203","text":"Tomoyuki Yamakami"}},"title":"Nonuniform Families of Polynomial-Size Quantum Finite Automata and Quantum Logarithmic-Space Computation with Polynomial-Size Advice.","venue":"LATA","pages":"134-145","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Yamakami19","doi":"10.1007/978-3-030-13435-8_10","ee":"https://doi.org/10.1007/978-3-030-13435-8_10","url":"https://dblp.org/rec/conf/lata/Yamakami19"},
+"url":"URL#1132074"
+},
+{
+"@score":"1",
+"@id":"1132075",
+"info":{"authors":{"author":{"@pid":"84/5934","text":"Vladimir A. Zakharov"}},"title":"Equivalence Checking of Prefix-Free Transducers and Deterministic Two-Tape Automata.","venue":"LATA","pages":"146-158","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Zakharov19","doi":"10.1007/978-3-030-13435-8_11","ee":"https://doi.org/10.1007/978-3-030-13435-8_11","url":"https://dblp.org/rec/conf/lata/Zakharov19"},
+"url":"URL#1132075"
+},
+{
+"@score":"1",
+"@id":"1132076",
+"info":{"authors":{"author":[{"@pid":"158/8472","text":"Ilya Zakirzyanov"},{"@pid":"23/4454","text":"António Morgado"},{"@pid":"26/9729","text":"Alexey Ignatiev"},{"@pid":"116/9925","text":"Vladimir Ulyantsev"},{"@pid":"s/JoaoPMarquesSilva","text":"João Marques-Silva 0001"}]},"title":"Efficient Symmetry Breaking for SAT-Based Minimum DFA Inference.","venue":"LATA","pages":"159-173","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/ZakirzyanovMIUM19","doi":"10.1007/978-3-030-13435-8_12","ee":"https://doi.org/10.1007/978-3-030-13435-8_12","url":"https://dblp.org/rec/conf/lata/ZakirzyanovMIUM19"},
+"url":"URL#1132076"
+},
+{
+"@score":"1",
+"@id":"1132077",
+"info":{"authors":{"author":{"@pid":"167/4131","text":"Ahad N. Zehmakan"}},"title":"Tight Bounds on the Minimum Size of a Dynamic Monopoly.","venue":"LATA","pages":"381-393","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Zehmakan19","doi":"10.1007/978-3-030-13435-8_28","ee":"https://doi.org/10.1007/978-3-030-13435-8_28","url":"https://dblp.org/rec/conf/lata/Zehmakan19"},
+"url":"URL#1132077"
+},
+{
+"@score":"1",
+"@id":"1185719",
+"info":{"authors":{"author":[{"@pid":"45/476","text":"Carlos Martín-Vide"},{"@pid":"o/AOkhotin","text":"Alexander Okhotin"},{"@pid":"02/222","text":"Dana Shapira"}]},"title":"Language and Automata Theory and Applications - 13th International Conference, LATA 2019, St. Petersburg, Russia, March 26-29, 2019, Proceedings","venue":["LATA","Lecture Notes in Computer Science"],"volume":"11417","publisher":"Springer","year":"2019","type":"Editorship","key":"conf/lata/2019","doi":"10.1007/978-3-030-13435-8","ee":"https://doi.org/10.1007/978-3-030-13435-8","url":"https://dblp.org/rec/conf/lata/2019"},
+"url":"URL#1185719"
+}
+]
+}
+}
+}

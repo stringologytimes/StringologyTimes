@@ -24,27 +24,31 @@ function loadJson(conference : string, year : number) : PaperArticle[]{
     const outputArticles : PaperArticle[] = [];
     
     const collection : any[] = document["result"]["hits"]["hit"];
-    collection.forEach((v) =>{
-        const p = new PaperArticle();
-        const info = v["info"];
-        p.title = TrimRightmostDot(info["title"]);
-        p.conferencePaperURL = info["ee"];
-        p.conference = conference;
-        p.year = year;
-        if(info["authors"] != undefined){
-            const authorsInfo : any = info["authors"]["author"]; 
-    
-            if(Array.isArray(authorsInfo)){
-                p.authors = authorsInfo.map((inf) => inf["text"]);    
-            }else{
-                p.authors = [authorsInfo["text"]];
-            }
-            outputArticles.push(p);
-            //console.log(p.toString());
+    if(collection != undefined){
+        collection.forEach((v) =>{
+            const p = new PaperArticle();
+            const info = v["info"];
+            p.title = TrimRightmostDot(info["title"]);
+            p.conferencePaperURL = info["ee"];
+            p.conference = conference;
+            p.year = year;
+            if(info["authors"] != undefined){
+                const authorsInfo : any = info["authors"]["author"]; 
         
-        }
-    
-    })
+                if(Array.isArray(authorsInfo)){
+                    p.authors = authorsInfo.map((inf) => inf["text"]);    
+                }else{
+                    p.authors = [authorsInfo["text"]];
+                }
+                outputArticles.push(p);
+                //console.log(p.toString());
+            
+            }
+        
+        })    
+    }else{
+        console.log(`Skip: ${conference} ${year}`)
+    }
     return outputArticles;
     
 }
@@ -68,10 +72,29 @@ jsonList.forEach(([conf, year]) =>{
         hList.push(v);
     })
 })
-hList.forEach((v) =>{
-    console.log(v.toCSSString());
+
+const logTxt = hList.map((v) => v.uniqueName()).join("\n");
+fs.writeFile("./data/hList.log", logTxt, (err, data) => {
+    if (err) console.log(err);
+    else console.log(`Wrote: ./data/hList.log`);
+});
+
+const hListMap : Map<string, number> = new Map();
+hList.forEach((v, i) =>{
+    hListMap.set(v.uniqueName(), i);
 })
 
+const paperUrl = "./data/spreadsheets/Stringology Conference - Papers.tsv";
+const paperInfoRawText: string = fs.readFileSync(paperUrl, 'utf8');
+const papers = PaperArticle.parseList(paperInfoRawText);
+
+papers.forEach((v) =>{
+    if(hListMap.has(v.uniqueName())){
+
+    }else{
+        console.log("Unhit: " + v.uniqueName());
+    }
+})
 
 /*
 //console.log(document);

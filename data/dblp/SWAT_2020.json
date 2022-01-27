@@ -1,0 +1,261 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/swat/swat2020.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"119.07"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"38",
+"@dc":"38",
+"@oc":"38",
+"@id":"35374377",
+"text":":facetid:toc:db/conf/swat/swat2020.bht"
+}
+},
+"hits":{
+"@total":"38",
+"@computed":"38",
+"@sent":"38",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"747717",
+"info":{"authors":{"author":[{"@pid":"11/5491","text":"Saket Saurabh 0001"},{"@pid":"48/11143","text":"Uéverton dos Santos Souza"},{"@pid":"186/2898","text":"Prafullkumar Tale"}]},"title":"On the Parameterized Complexity of Grid Contraction.","venue":"SWAT","pages":"34:1-34:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/0001ST20","doi":"10.4230/LIPICS.SWAT.2020.34","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.34","url":"https://dblp.org/rec/conf/swat/0001ST20"},
+"url":"URL#747717"
+},
+{
+"@score":"1",
+"@id":"747718",
+"info":{"authors":{"author":{"@pid":"85/2288-2","text":"László Kozma 0002"}},"title":"Exact Exponential Algorithms for Two Poset Problems.","venue":"SWAT","pages":"30:1-30:15","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/000220","doi":"10.4230/LIPICS.SWAT.2020.30","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.30","url":"https://dblp.org/rec/conf/swat/000220"},
+"url":"URL#747718"
+},
+{
+"@score":"1",
+"@id":"747719",
+"info":{"authors":{"author":[{"@pid":"a/MohammadAliAbam","text":"Mohammad Ali Abam"},{"@pid":"b/MarkdeBerg","text":"Mark de Berg"},{"@pid":"267/2142","text":"Sina Farahzad"},{"@pid":"267/2174","text":"Mir Omid Haji Mirsadeghi"},{"@pid":"67/9002","text":"Morteza Saghafian"}]},"title":"Preclustering Algorithms for Imprecise Points.","venue":"SWAT","pages":"3:1-3:12","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/AbamBFMS20","doi":"10.4230/LIPICS.SWAT.2020.3","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.3","url":"https://dblp.org/rec/conf/swat/AbamBFMS20"},
+"url":"URL#747719"
+},
+{
+"@score":"1",
+"@id":"747720",
+"info":{"authors":{"author":[{"@pid":"144/7801","text":"Akanksha Agrawal"},{"@pid":"75/11145","text":"Sudeshna Kolay"},{"@pid":"133/1023","text":"Meirav Zehavi"}]},"title":"Parameter Analysis for Guarding Terrains.","venue":"SWAT","pages":"4:1-4:18","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/AgrawalKZ20","doi":"10.4230/LIPICS.SWAT.2020.4","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.4","url":"https://dblp.org/rec/conf/swat/AgrawalKZ20"},
+"url":"URL#747720"
+},
+{
+"@score":"1",
+"@id":"747721",
+"info":{"authors":{"author":[{"@pid":"59/5699","text":"Hassene Aissi"},{"@pid":"254/2167","text":"Da Qi Chen"},{"@pid":"r/RRavi-1","text":"R. Ravi 0001"}]},"title":"Vertex Downgrading to Minimize Connectivity.","venue":"SWAT","pages":"5:1-5:15","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/AissiC020","doi":"10.4230/LIPICS.SWAT.2020.5","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.5","url":"https://dblp.org/rec/conf/swat/AissiC020"},
+"url":"URL#747721"
+},
+{
+"@score":"1",
+"@id":"747722",
+"info":{"authors":{"author":[{"@pid":"a/LArge","text":"Lars Arge"},{"@pid":"193/9790","text":"Mathias Rav"},{"@pid":"27/7591","text":"Morten Revsbæk"},{"@pid":"211/8120","text":"Yujin Shin"},{"@pid":"117/0016","text":"Jungwoo Yang"}]},"title":"Sea-Rise Flooding on Massive Dynamic Terrains.","venue":"SWAT","pages":"6:1-6:19","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/ArgeRRSY20","doi":"10.4230/LIPICS.SWAT.2020.6","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.6","url":"https://dblp.org/rec/conf/swat/ArgeRRSY20"},
+"url":"URL#747722"
+},
+{
+"@score":"1",
+"@id":"747723",
+"info":{"authors":{"author":[{"@pid":"46/5034","text":"Esther M. Arkin"},{"@pid":"05/9890","text":"Faryad Darabi Sahneh"},{"@pid":"e/AlonEfrat","text":"Alon Efrat"},{"@pid":"267/2124","text":"Fabian Frank"},{"@pid":"63/2965","text":"Radoslav Fulek"},{"@pid":"98/2841","text":"Stephen G. Kobourov"},{"@pid":"m/JosephSBMitchell","text":"Joseph S. B. Mitchell"}]},"title":"Computing β-Stretch Paths in Drawings of Graphs.","venue":"SWAT","pages":"7:1-7:20","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/ArkinSEFFKM20","doi":"10.4230/LIPICS.SWAT.2020.7","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.7","url":"https://dblp.org/rec/conf/swat/ArkinSEFFKM20"},
+"url":"URL#747723"
+},
+{
+"@score":"1",
+"@id":"747724",
+"info":{"authors":{"author":[{"@pid":"74/10669","text":"Arturs Backurs"},{"@pid":"h/SarielHarPeled","text":"Sariel Har-Peled"}]},"title":"Submodular Clustering in Low Dimensions.","venue":"SWAT","pages":"8:1-8:14","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/BackursH20","doi":"10.4230/LIPICS.SWAT.2020.8","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.8","url":"https://dblp.org/rec/conf/swat/BackursH20"},
+"url":"URL#747724"
+},
+{
+"@score":"1",
+"@id":"747725",
+"info":{"authors":{"author":[{"@pid":"168/8786","text":"Max Bannach"},{"@pid":"185/0881","text":"Malte Skambath"},{"@pid":"41/1415","text":"Till Tantau"}]},"title":"Kernelizing the Hitting Set Problem in Linear Sequential and Constant Parallel Time.","venue":"SWAT","pages":"9:1-9:16","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/BannachST20","doi":"10.4230/LIPICS.SWAT.2020.9","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.9","url":"https://dblp.org/rec/conf/swat/BannachST20"},
+"url":"URL#747725"
+},
+{
+"@score":"1",
+"@id":"747726",
+"info":{"authors":{"author":[{"@pid":"b/AmotzBarNoy","text":"Amotz Bar-Noy"},{"@pid":"159/2125","text":"Keerti Choudhary"},{"@pid":"p/DavidPeleg","text":"David Peleg"},{"@pid":"41/1597","text":"Dror Rawitz"}]},"title":"Graph Realizations - Maximum Degree in Vertex Neighborhoods.","venue":"SWAT","pages":"10:1-10:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/Bar-NoyCPR20","doi":"10.4230/LIPICS.SWAT.2020.10","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.10","url":"https://dblp.org/rec/conf/swat/Bar-NoyCPR20"},
+"url":"URL#747726"
+},
+{
+"@score":"1",
+"@id":"747727",
+"info":{"authors":{"author":[{"@pid":"231/6342","text":"Ioana O. Bercea"},{"@pid":"45/1790","text":"Guy Even"}]},"title":"A Dynamic Space-Efficient Filter with Constant Time Operations.","venue":"SWAT","pages":"11:1-11:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/BerceaE20","doi":"10.4230/LIPICS.SWAT.2020.11","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.11","url":"https://dblp.org/rec/conf/swat/BerceaE20"},
+"url":"URL#747727"
+},
+{
+"@score":"1",
+"@id":"747728",
+"info":{"authors":{"author":[{"@pid":"267/2163","text":"Nalin Bhardwaj"},{"@pid":"232/1903","text":"Antonio Molina Lovett"},{"@pid":"147/8522","text":"Bryce Sandlund"}]},"title":"A Simple Algorithm for Minimum Cuts in Near-Linear Time.","venue":"SWAT","pages":"12:1-12:18","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/BhardwajLS20","doi":"10.4230/LIPICS.SWAT.2020.12","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.12","url":"https://dblp.org/rec/conf/swat/BhardwajLS20"},
+"url":"URL#747728"
+},
+{
+"@score":"1",
+"@id":"747729",
+"info":{"authors":{"author":[{"@pid":"157/6058","text":"Sujoy Bhore"},{"@pid":"37/4802","text":"Paz Carmi"},{"@pid":"75/11145","text":"Sudeshna Kolay"},{"@pid":"133/1023","text":"Meirav Zehavi"}]},"title":"Parameterized Study of Steiner Tree on Unit Disk Graphs.","venue":"SWAT","pages":"13:1-13:18","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/BhoreCKZ20","doi":"10.4230/LIPICS.SWAT.2020.13","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.13","url":"https://dblp.org/rec/conf/swat/BhoreCKZ20"},
+"url":"URL#747729"
+},
+{
+"@score":"1",
+"@id":"747730",
+"info":{"authors":{"author":[{"@pid":"41/8409","text":"Ahmad Biniaz"},{"@pid":"b/PBose","text":"Prosenjit Bose"},{"@pid":"34/4423","text":"Anna Lubiw"},{"@pid":"m/AnilMaheshwari","text":"Anil Maheshwari"}]},"title":"Bounded-Angle Minimum Spanning Trees.","venue":"SWAT","pages":"14:1-14:22","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/BiniazBLM20","doi":"10.4230/LIPICS.SWAT.2020.14","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.14","url":"https://dblp.org/rec/conf/swat/BiniazBLM20"},
+"url":"URL#747730"
+},
+{
+"@score":"1",
+"@id":"747731",
+"info":{"authors":{"author":[{"@pid":"27/1509","text":"Glencora Borradaile"},{"@pid":"06/3707","text":"Erin Wolf Chambers"},{"@pid":"e/DEppstein","text":"David Eppstein"},{"@pid":"223/2693","text":"William Maxwell"},{"@pid":"98/6971","text":"Amir Nayyeri"}]},"title":"Low-Stretch Spanning Trees of Graphs with Bounded Width.","venue":"SWAT","pages":"15:1-15:19","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/BorradaileCEMN20","doi":"10.4230/LIPICS.SWAT.2020.15","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.15","url":"https://dblp.org/rec/conf/swat/BorradaileCEMN20"},
+"url":"URL#747731"
+},
+{
+"@score":"1",
+"@id":"747732",
+"info":{"authors":{"author":[{"@pid":"b/PBose","text":"Prosenjit Bose"},{"@pid":"15/7354-1","text":"Saeed Mehrabi 0001"},{"@pid":"90/8236","text":"Debajyoti Mondal"}]},"title":"Parameterized Complexity of Two-Interval Pattern Problem.","venue":"SWAT","pages":"16:1-16:10","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/Bose0M20","doi":"10.4230/LIPICS.SWAT.2020.16","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.16","url":"https://dblp.org/rec/conf/swat/Bose0M20"},
+"url":"URL#747732"
+},
+{
+"@score":"1",
+"@id":"747733",
+"info":{"authors":{"author":[{"@pid":"19/4585","text":"Bartlomiej Bosek"},{"@pid":"22/687","text":"Yann Disser"},{"@pid":"06/4695","text":"Andreas Emil Feldmann"},{"@pid":"37/400","text":"Jakub Pawlewicz"},{"@pid":"33/6470","text":"Anna Zych-Pawlewicz"}]},"title":"Recoloring Interval Graphs with Limited Recourse Budget.","venue":"SWAT","pages":"17:1-17:23","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/BosekDFPZ20","doi":"10.4230/LIPICS.SWAT.2020.17","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.17","url":"https://dblp.org/rec/conf/swat/BosekDFPZ20"},
+"url":"URL#747733"
+},
+{
+"@score":"1",
+"@id":"747734",
+"info":{"authors":{"author":[{"@pid":"b/NaderHBshouty","text":"Nader H. Bshouty"},{"@pid":"187/4507","text":"Catherine A. Haddad-Zaknoon"},{"@pid":"256/1021","text":"Raghd Boulos"},{"@pid":"256/1137","text":"Foad Moalem"},{"@pid":"256/1015","text":"Jalal Nada"},{"@pid":"256/0966","text":"Elias Noufi"},{"@pid":"256/0923","text":"Yara Zaknoon"}]},"title":"Optimal Randomized Group Testing Algorithm to Determine the Number of Defectives.","venue":"SWAT","pages":"18:1-18:12","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/BshoutyHBMNNZ20","doi":"10.4230/LIPICS.SWAT.2020.18","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.18","url":"https://dblp.org/rec/conf/swat/BshoutyHBMNNZ20"},
+"url":"URL#747734"
+},
+{
+"@score":"1",
+"@id":"747735",
+"info":{"authors":{"author":[{"@pid":"50/165","text":"Kevin Buchin"},{"@pid":"39/8000","text":"Anne Driemel"},{"@pid":"232/9078","text":"Martijn Struijs"}]},"title":"On the Hardness of Computing an Average Curve.","venue":"SWAT","pages":"19:1-19:19","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/BuchinDS20","doi":"10.4230/LIPICS.SWAT.2020.19","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.19","url":"https://dblp.org/rec/conf/swat/BuchinDS20"},
+"url":"URL#747735"
+},
+{
+"@score":"1",
+"@id":"747736",
+"info":{"authors":{"author":[{"@pid":"85/4356","text":"Jean Cardinal"},{"@pid":"173/5081","text":"Aurélien Ooms"}]},"title":"Sparse Regression via Range Counting.","venue":"SWAT","pages":"20:1-20:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/CardinalO20","doi":"10.4230/LIPICS.SWAT.2020.20","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.20","url":"https://dblp.org/rec/conf/swat/CardinalO20"},
+"url":"URL#747736"
+},
+{
+"@score":"1",
+"@id":"747737",
+"info":{"authors":{"author":[{"@pid":"68/8725","text":"Steven Chaplick"},{"@pid":"180/6420","text":"Henry Förster"},{"@pid":"205/2872","text":"Myroslav Kryven"},{"@pid":"w/AlexanderWolff","text":"Alexander Wolff 0001"}]},"title":"Drawing Graphs with Circular Arcs and Right-Angle Crossings.","venue":"SWAT","pages":"21:1-21:14","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/ChaplickFK020","doi":"10.4230/LIPICS.SWAT.2020.21","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.21","url":"https://dblp.org/rec/conf/swat/ChaplickFK020"},
+"url":"URL#747737"
+},
+{
+"@score":"1",
+"@id":"747738",
+"info":{"authors":{"author":[{"@pid":"24/3961","text":"Stephane Durocher"},{"@pid":"203/2922","text":"Md Yeakub Hassan"}]},"title":"Clustering Moving Entities in Euclidean Space.","venue":"SWAT","pages":"22:1-22:14","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/DurocherH20","doi":"10.4230/LIPICS.SWAT.2020.22","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.22","url":"https://dblp.org/rec/conf/swat/DurocherH20"},
+"url":"URL#747738"
+},
+{
+"@score":"1",
+"@id":"747739",
+"info":{"authors":{"author":[{"@pid":"267/2109","text":"Patrick Eades"},{"@pid":"200/8577","text":"Ivor van der Hoog"},{"@pid":"46/6428","text":"Maarten Löffler"},{"@pid":"41/10735","text":"Frank Staals"}]},"title":"Trajectory Visibility.","venue":"SWAT","pages":"23:1-23:22","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/EadesHLS20","doi":"10.4230/LIPICS.SWAT.2020.23","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.23","url":"https://dblp.org/rec/conf/swat/EadesHLS20"},
+"url":"URL#747739"
+},
+{
+"@score":"1",
+"@id":"747740",
+"info":{"authors":{"author":[{"@pid":"e/DEppstein","text":"David Eppstein"},{"@pid":"236/5198","text":"Daniel Frishberg"},{"@pid":"228/6621","text":"Elham Havvaei"}]},"title":"Simplifying Activity-On-Edge Graphs.","venue":"SWAT","pages":"24:1-24:14","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/EppsteinFH20","doi":"10.4230/LIPICS.SWAT.2020.24","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.24","url":"https://dblp.org/rec/conf/swat/EppsteinFH20"},
+"url":"URL#747740"
+},
+{
+"@score":"1",
+"@id":"747741",
+"info":{"authors":{"author":[{"@pid":"76/8243","text":"Chenglin Fan"},{"@pid":"01/5657","text":"Anna C. Gilbert"},{"@pid":"96/9733","text":"Benjamin Raichel"},{"@pid":"223/5758","text":"Rishi Sonthalia"},{"@pid":"209/4888","text":"Gregory Van Buskirk"}]},"title":"Generalized Metric Repair on Graphs.","venue":"SWAT","pages":"25:1-25:22","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/FanGRSB20","doi":"10.4230/LIPICS.SWAT.2020.25","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.25","url":"https://dblp.org/rec/conf/swat/FanGRSB20"},
+"url":"URL#747741"
+},
+{
+"@score":"1",
+"@id":"747742",
+"info":{"authors":{"author":[{"@pid":"f/FedorVFomin","text":"Fedor V. Fomin"},{"@pid":"06/6306","text":"Petr A. Golovach"},{"@pid":"236/6131","text":"Kirill Simonov"}]},"title":"Parameterized Complexity of PCA (Invited Talk).","venue":"SWAT","pages":"1:1-1:5","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/FominGS20","doi":"10.4230/LIPICS.SWAT.2020.1","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.1","url":"https://dblp.org/rec/conf/swat/FominGS20"},
+"url":"URL#747742"
+},
+{
+"@score":"1",
+"@id":"747743",
+"info":{"authors":{"author":[{"@pid":"217/1728","text":"Niels Grüttemeier"},{"@pid":"69/1771","text":"Christian Komusiewicz"},{"@pid":"256/7583","text":"Nils Morawietz"}]},"title":"Maximum Edge-Colorable Subgraph and Strong Triadic Closure Parameterized by Distance to Low-Degree Graphs.","venue":"SWAT","pages":"26:1-26:17","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/GruttemeierKM20","doi":"10.4230/LIPICS.SWAT.2020.26","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.26","url":"https://dblp.org/rec/conf/swat/GruttemeierKM20"},
+"url":"URL#747743"
+},
+{
+"@score":"1",
+"@id":"747744",
+"info":{"authors":{"author":[{"@pid":"58/8776","text":"Bart M. P. Jansen"},{"@pid":"263/3109","text":"Jari J. H. de Kroon"}]},"title":"Preprocessing Vertex-Deletion Problems - Characterizing Graph Properties by Low-Rank Adjacencies.","venue":"SWAT","pages":"27:1-27:15","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/JansenK20","doi":"10.4230/LIPICS.SWAT.2020.27","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.27","url":"https://dblp.org/rec/conf/swat/JansenK20"},
+"url":"URL#747744"
+},
+{
+"@score":"1",
+"@id":"747745",
+"info":{"authors":{"author":[{"@pid":"48/3950","text":"Haim Kaplan"},{"@pid":"263/1858","text":"Jay Tenenbaum"}]},"title":"Locality Sensitive Hashing for Set-Queries, Motivated by Group Recommendations.","venue":"SWAT","pages":"28:1-28:18","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/KaplanT20","doi":"10.4230/LIPICS.SWAT.2020.28","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.28","url":"https://dblp.org/rec/conf/swat/KaplanT20"},
+"url":"URL#747745"
+},
+{
+"@score":"1",
+"@id":"747746",
+"info":{"authors":{"author":[{"@pid":"k/MikkoKoivisto","text":"Mikko Koivisto"},{"@pid":"258/8220","text":"Antti Röyskö"}]},"title":"Fast Multi-Subset Transform and Weighted Sums over Acyclic Digraphs.","venue":"SWAT","pages":"29:1-29:12","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/KoivistoR20","doi":"10.4230/LIPICS.SWAT.2020.29","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.29","url":"https://dblp.org/rec/conf/swat/KoivistoR20"},
+"url":"URL#747746"
+},
+{
+"@score":"1",
+"@id":"747747",
+"info":{"authors":{"author":[{"@pid":"m/JIanMunro","text":"J. Ian Munro"},{"@pid":"147/8522","text":"Bryce Sandlund"},{"@pid":"180/5480","text":"Corwin Sinnamon"}]},"title":"Space-Efficient Data Structures for Lattices.","venue":"SWAT","pages":"31:1-31:22","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/MunroSS20","doi":"10.4230/LIPICS.SWAT.2020.31","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.31","url":"https://dblp.org/rec/conf/swat/MunroSS20"},
+"url":"URL#747747"
+},
+{
+"@score":"1",
+"@id":"747748",
+"info":{"authors":{"author":[{"@pid":"n/IlanNewman","text":"Ilan Newman"},{"@pid":"86/5109","text":"Yuri Rabinovich"}]},"title":"Online Embedding of Metrics.","venue":"SWAT","pages":"32:1-32:13","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/NewmanR20","doi":"10.4230/LIPICS.SWAT.2020.32","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.32","url":"https://dblp.org/rec/conf/swat/NewmanR20"},
+"url":"URL#747748"
+},
+{
+"@score":"1",
+"@id":"747749",
+"info":{"authors":{"author":[{"@pid":"35/4326","text":"Sivakumar Rathinam"},{"@pid":"r/RRavi-1","text":"R. Ravi 0001"},{"@pid":"267/2144","text":"J. Bae"},{"@pid":"129/1386","text":"Kaarthik Sundar"}]},"title":"Primal-Dual 2-Approximation Algorithm for the Monotonic Multiple Depot Heterogeneous Traveling Salesman Problem.","venue":"SWAT","pages":"33:1-33:13","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/Rathinam0BS20","doi":"10.4230/LIPICS.SWAT.2020.33","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.33","url":"https://dblp.org/rec/conf/swat/Rathinam0BS20"},
+"url":"URL#747749"
+},
+{
+"@score":"1",
+"@id":"747750",
+"info":{"authors":{"author":[{"@pid":"26/4384","text":"Joachim Spoerhase"},{"@pid":"74/9877","text":"Sabine Storandt"},{"@pid":"172/8905","text":"Johannes Zink"}]},"title":"Simplification of Polyline Bundles.","venue":"SWAT","pages":"35:1-35:20","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/SpoerhaseSZ20","doi":"10.4230/LIPICS.SWAT.2020.35","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.35","url":"https://dblp.org/rec/conf/swat/SpoerhaseSZ20"},
+"url":"URL#747750"
+},
+{
+"@score":"1",
+"@id":"747751",
+"info":{"authors":{"author":{"@pid":"80/1772","text":"Jukka Suomela"}},"title":"Landscape of Locality (Invited Talk).","venue":"SWAT","pages":"2:1-2:1","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/Suomela20","doi":"10.4230/LIPICS.SWAT.2020.2","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.2","url":"https://dblp.org/rec/conf/swat/Suomela20"},
+"url":"URL#747751"
+},
+{
+"@score":"1",
+"@id":"747752",
+"info":{"authors":{"author":{"@pid":"42/1198","text":"Seiichiro Tani"}},"title":"Quantum Algorithm for Finding the Optimal Variable Ordering for Binary Decision Diagrams.","venue":"SWAT","pages":"36:1-36:19","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/Tani20","doi":"10.4230/LIPICS.SWAT.2020.36","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.36","url":"https://dblp.org/rec/conf/swat/Tani20"},
+"url":"URL#747752"
+},
+{
+"@score":"1",
+"@id":"747753",
+"info":{"title":"Front Matter, Table of Contents, Preface, Conference Organization.","venue":"SWAT","pages":"0:1-0:10","year":"2020","type":"Conference and Workshop Papers","access":"open","key":"conf/swat/X20","doi":"10.4230/LIPICS.SWAT.2020.0","ee":"https://doi.org/10.4230/LIPIcs.SWAT.2020.0","url":"https://dblp.org/rec/conf/swat/X20"},
+"url":"URL#747753"
+},
+{
+"@score":"1",
+"@id":"763047",
+"info":{"authors":{"author":{"@pid":"a/SusanneAlbers","text":"Susanne Albers"}},"title":"17th Scandinavian Symposium and Workshops on Algorithm Theory, SWAT 2020, June 22-24, 2020, Tórshavn, Faroe Islands.","venue":["SWAT","LIPIcs"],"volume":"162","publisher":"Schloss Dagstuhl - Leibniz-Zentrum für Informatik","year":"2020","type":"Editorship","key":"conf/swat/2020","ee":"https://www.dagstuhl.de/dagpub/978-3-95977-150-4","url":"https://dblp.org/rec/conf/swat/2020"},
+"url":"URL#763047"
+}
+]
+}
+}
+}

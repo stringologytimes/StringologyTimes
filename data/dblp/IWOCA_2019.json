@@ -1,0 +1,255 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/iwoca/iwoca2019.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"125.05"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"37",
+"@dc":"37",
+"@oc":"37",
+"@id":"35359660",
+"text":":facetid:toc:db/conf/iwoca/iwoca2019.bht"
+}
+},
+"hits":{
+"@total":"37",
+"@computed":"37",
+"@sent":"37",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"1129285",
+"info":{"authors":{"author":[{"@pid":"16/4689-1","text":"Sandip Das 0001"},{"@pid":"213/9090","text":"Harmender Gahlawat"},{"@pid":"134/1390","text":"Uma Kant Sahoo"},{"@pid":"117/6032-1","text":"Sagnik Sen 0001"}]},"title":"Cops and Robber on Some Families of Oriented Graphs.","venue":"IWOCA","pages":"188-200","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/0001GSS19","doi":"10.1007/978-3-030-25005-8_16","ee":"https://doi.org/10.1007/978-3-030-25005-8_16","url":"https://dblp.org/rec/conf/iwoca/0001GSS19"},
+"url":"URL#1129285"
+},
+{
+"@score":"1",
+"@id":"1129286",
+"info":{"authors":{"author":[{"@pid":"172/9067","text":"Yeganeh Bahoo"},{"@pid":"b/PBose","text":"Prosenjit Bose"},{"@pid":"24/3961","text":"Stephane Durocher"},{"@pid":"s/ThomasCShermer","text":"Thomas C. Shermer"}]},"title":"Computing the k-Crossing Visibility Region of a Point in a Polygon.","venue":"IWOCA","pages":"10-21","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/BahooBDS19","doi":"10.1007/978-3-030-25005-8_2","ee":"https://doi.org/10.1007/978-3-030-25005-8_2","url":"https://dblp.org/rec/conf/iwoca/BahooBDS19"},
+"url":"URL#1129286"
+},
+{
+"@score":"1",
+"@id":"1129287",
+"info":{"authors":{"author":[{"@pid":"214/8654","text":"Mirza Galib Anwarul Husain Baig"},{"@pid":"52/25","text":"Deepanjan Kesh"},{"@pid":"229/4328","text":"Chirag Sodani"}]},"title":"An Improved Scheme in the Two Query Adaptive Bitprobe Model.","venue":"IWOCA","pages":"22-34","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/BaigKS19","doi":"10.1007/978-3-030-25005-8_3","ee":"https://doi.org/10.1007/978-3-030-25005-8_3","url":"https://dblp.org/rec/conf/iwoca/BaigKS19"},
+"url":"URL#1129287"
+},
+{
+"@score":"1",
+"@id":"1129288",
+"info":{"authors":{"author":[{"@pid":"125/8673","text":"Martin Balko"},{"@pid":"157/6058","text":"Sujoy Bhore"},{"@pid":"169/9754","text":"Leonardo Martínez-Sandoval"},{"@pid":"08/4029","text":"Pavel Valtr"}]},"title":"On Erdős-Szekeres-Type Problems for k-convex Point Sets.","venue":"IWOCA","pages":"35-47","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/BalkoBMV19","doi":"10.1007/978-3-030-25005-8_4","ee":"https://doi.org/10.1007/978-3-030-25005-8_4","url":"https://dblp.org/rec/conf/iwoca/BalkoBMV19"},
+"url":"URL#1129288"
+},
+{
+"@score":"1",
+"@id":"1129289",
+"info":{"authors":{"author":[{"@pid":"65/6262","text":"Sandip Banerjee"},{"@pid":"157/6058","text":"Sujoy Bhore"}]},"title":"Algorithm and Hardness Results on Liar&apos;s Dominating Set and \\varveck -tuple Dominating Set.","venue":"IWOCA","pages":"48-60","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/BanerjeeB19","doi":"10.1007/978-3-030-25005-8_5","ee":"https://doi.org/10.1007/978-3-030-25005-8_5","url":"https://dblp.org/rec/conf/iwoca/BanerjeeB19"},
+"url":"URL#1129289"
+},
+{
+"@score":"1",
+"@id":"1129290",
+"info":{"authors":{"author":[{"@pid":"59/3927","text":"Aritra Banik"},{"@pid":"219/8268","text":"Ashwin Jacob"},{"@pid":"218/6895","text":"Vijay Kumar Paliwal"},{"@pid":"25/2134","text":"Venkatesh Raman 0001"}]},"title":"Fixed-Parameter Tractability of (n-k) List Coloring.","venue":"IWOCA","pages":"61-69","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/BanikJP019","doi":"10.1007/978-3-030-25005-8_6","ee":"https://doi.org/10.1007/978-3-030-25005-8_6","url":"https://dblp.org/rec/conf/iwoca/BanikJP019"},
+"url":"URL#1129290"
+},
+{
+"@score":"1",
+"@id":"1129291",
+"info":{"authors":{"author":[{"@pid":"244/8363","text":"Magsarjav Bataa"},{"@pid":"09/11054","text":"Sung Gwan Park"},{"@pid":"a/AAmir","text":"Amihood Amir"},{"@pid":"l/GadMLandau","text":"Gad M. Landau"},{"@pid":"p/KunsooPark","text":"Kunsoo Park"}]},"title":"Finding Periods in Cartesian Tree Matching.","venue":"IWOCA","pages":"70-84","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/BataaPALP19","doi":"10.1007/978-3-030-25005-8_7","ee":"https://doi.org/10.1007/978-3-030-25005-8_7","url":"https://dblp.org/rec/conf/iwoca/BataaPALP19"},
+"url":"URL#1129291"
+},
+{
+"@score":"1",
+"@id":"1129292",
+"info":{"authors":{"author":[{"@pid":"195/5656","text":"Matthias Bentert"},{"@pid":"124/3125","text":"Roman Haag"},{"@pid":"14/1132","text":"Christian Hofer"},{"@pid":"244/8353","text":"Tomohiro Koana"},{"@pid":"32/8821","text":"André Nichterlein"}]},"title":"Parameterized Complexity of Min-Power Asymmetric Connectivity.","venue":"IWOCA","pages":"85-96","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/BentertHHKN19","doi":"10.1007/978-3-030-25005-8_8","ee":"https://doi.org/10.1007/978-3-030-25005-8_8","url":"https://dblp.org/rec/conf/iwoca/BentertHHKN19"},
+"url":"URL#1129292"
+},
+{
+"@score":"1",
+"@id":"1129293",
+"info":{"authors":{"author":[{"@pid":"82/2478-1","text":"Arindam Biswas 0001"},{"@pid":"25/2134","text":"Venkatesh Raman 0001"},{"@pid":"11/5491","text":"Saket Saurabh 0001"}]},"title":"Solving Group Interval Scheduling Efficiently.","venue":"IWOCA","pages":"97-107","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/Biswas0S19","doi":"10.1007/978-3-030-25005-8_9","ee":"https://doi.org/10.1007/978-3-030-25005-8_9","url":"https://dblp.org/rec/conf/iwoca/Biswas0S19"},
+"url":"URL#1129293"
+},
+{
+"@score":"1",
+"@id":"1129294",
+"info":{"authors":{"author":[{"@pid":"29/2559","text":"Hans-Joachim Böckenhauer"},{"@pid":"244/8378","text":"Nina Corvelo Benz"},{"@pid":"92/6305","text":"Dennis Komm"}]},"title":"Call Admission Problems on Trees with Advice - (Extended Abstract).","venue":"IWOCA","pages":"108-121","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/BockenhauerBK19","doi":"10.1007/978-3-030-25005-8_10","ee":"https://doi.org/10.1007/978-3-030-25005-8_10","url":"https://dblp.org/rec/conf/iwoca/BockenhauerBK19"},
+"url":"URL#1129294"
+},
+{
+"@score":"1",
+"@id":"1129295",
+"info":{"authors":{"author":[{"@pid":"b/SBrlek","text":"Srecko Brlek"},{"@pid":"31/3654","text":"Andrea Frosini"},{"@pid":"13/10495","text":"Ilaria Mancini"},{"@pid":"27/5292","text":"Elisa Pergola"},{"@pid":"69/5799","text":"Simone Rinaldi"}]},"title":"Burrows-Wheeler Transform of Words Defined by Morphisms.","venue":"IWOCA","pages":"393-404","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/BrlekFMPR19","doi":"10.1007/978-3-030-25005-8_32","ee":"https://doi.org/10.1007/978-3-030-25005-8_32","url":"https://dblp.org/rec/conf/iwoca/BrlekFMPR19"},
+"url":"URL#1129295"
+},
+{
+"@score":"1",
+"@id":"1129296",
+"info":{"authors":{"author":[{"@pid":"244/8386","text":"Pierre Cazals"},{"@pid":"84/1464","text":"Benoît Darties"},{"@pid":"92/6470","text":"Annie Chateau"},{"@pid":"16/4193","text":"Rodolphe Giroudeau"},{"@pid":"64/7186","text":"Mathias Weller"}]},"title":"Power Edge Set and Zero Forcing Set Remain Difficult in Cubic Graphs.","venue":"IWOCA","pages":"122-135","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/CazalsDCGW19","doi":"10.1007/978-3-030-25005-8_11","ee":"https://doi.org/10.1007/978-3-030-25005-8_11","url":"https://dblp.org/rec/conf/iwoca/CazalsDCGW19"},
+"url":"URL#1129296"
+},
+{
+"@score":"1",
+"@id":"1129297",
+"info":{"authors":{"author":[{"@pid":"c/JChlebikova","text":"Janka Chlebíková"},{"@pid":"190/5713","text":"Clément Dallard"}]},"title":"Towards a Complexity Dichotomy for Colourful Components Problems on k-caterpillars and Small-Degree Planar Graphs.","venue":"IWOCA","pages":"136-147","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/ChlebikovaD19","doi":"10.1007/978-3-030-25005-8_12","ee":"https://doi.org/10.1007/978-3-030-25005-8_12","url":"https://dblp.org/rec/conf/iwoca/ChlebikovaD19"},
+"url":"URL#1129297"
+},
+{
+"@score":"1",
+"@id":"1129298",
+"info":{"authors":{"author":[{"@pid":"164/5849","text":"Alessio Conte"},{"@pid":"95/5094","text":"Mamadou Moustapha Kanté"},{"@pid":"57/7900","text":"Andrea Marino"},{"@pid":"72/3856","text":"Takeaki Uno"}]},"title":"Maximal Irredundant Set Enumeration in Bounded-Degeneracy and Bounded-Degree Hypergraphs.","venue":"IWOCA","pages":"148-159","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/ConteKMU19","doi":"10.1007/978-3-030-25005-8_13","ee":"https://doi.org/10.1007/978-3-030-25005-8_13","url":"https://dblp.org/rec/conf/iwoca/ConteKMU19"},
+"url":"URL#1129298"
+},
+{
+"@score":"1",
+"@id":"1129299",
+"info":{"authors":{"author":[{"@pid":"26/4019","text":"Gennaro Cordasco"},{"@pid":"28/5375","text":"Luisa Gargano"},{"@pid":"r/AdeleARescigno","text":"Adele Anna Rescigno"}]},"title":"Dual Domination.","venue":"IWOCA","pages":"160-174","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/CordascoGR19","doi":"10.1007/978-3-030-25005-8_14","ee":"https://doi.org/10.1007/978-3-030-25005-8_14","url":"https://dblp.org/rec/conf/iwoca/CordascoGR19"},
+"url":"URL#1129299"
+},
+{
+"@score":"1",
+"@id":"1129300",
+"info":{"authors":{"author":[{"@pid":"155/9857","text":"Zola Donovan"},{"@pid":"s/KSubramani","text":"K. Subramani"},{"@pid":"90/5823","text":"Vahan Mkrtchyan"}]},"title":"Disjoint Clustering in Combinatorial Circuits.","venue":"IWOCA","pages":"201-213","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/DonovanSM19","doi":"10.1007/978-3-030-25005-8_17","ee":"https://doi.org/10.1007/978-3-030-25005-8_17","url":"https://dblp.org/rec/conf/iwoca/DonovanSM19"},
+"url":"URL#1129300"
+},
+{
+"@score":"1",
+"@id":"1129301",
+"info":{"authors":{"author":[{"@pid":"51/4736","text":"Mitre Costa Dourado"},{"@pid":"p/LuciaDPenso","text":"Lucia Draque Penso"},{"@pid":"61/1118","text":"Dieter Rautenbach"}]},"title":"The Hull Number in the Convexity of Induced Paths of Order 3.","venue":"IWOCA","pages":"214-228","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/DouradoPR19","doi":"10.1007/978-3-030-25005-8_18","ee":"https://doi.org/10.1007/978-3-030-25005-8_18","url":"https://dblp.org/rec/conf/iwoca/DouradoPR19"},
+"url":"URL#1129301"
+},
+{
+"@score":"1",
+"@id":"1129302",
+"info":{"authors":{"author":[{"@pid":"31/273","text":"Dalibor Froncek"},{"@pid":"244/8365","text":"Jiangyi Qiu"}]},"title":"Supermagic Graphs with Many Odd Degrees.","venue":"IWOCA","pages":"229-236","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/FroncekQ19","doi":"10.1007/978-3-030-25005-8_19","ee":"https://doi.org/10.1007/978-3-030-25005-8_19","url":"https://dblp.org/rec/conf/iwoca/FroncekQ19"},
+"url":"URL#1129302"
+},
+{
+"@score":"1",
+"@id":"1129303",
+"info":{"authors":{"author":[{"@pid":"210/3512","text":"Mehdi Khosravian Ghadikolaei"},{"@pid":"217/2941","text":"Nikolaos Melissinos"},{"@pid":"77/4959","text":"Jérôme Monnot"},{"@pid":"78/5067","text":"Aris Pagourtzis"}]},"title":"Extension and Its Price for the Connected Vertex Cover Problem.","venue":"IWOCA","pages":"315-326","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/GhadikolaeiMMP19","doi":"10.1007/978-3-030-25005-8_26","ee":"https://doi.org/10.1007/978-3-030-25005-8_26","url":"https://dblp.org/rec/conf/iwoca/GhadikolaeiMMP19"},
+"url":"URL#1129303"
+},
+{
+"@score":"1",
+"@id":"1129304",
+"info":{"authors":{"author":[{"@pid":"237/7838","text":"Rahul Raj Gupta"},{"@pid":"26/3091","text":"Sushanta Karmakar"}]},"title":"Incremental Algorithm for Minimum Cut and Edge Connectivity in Hypergraph.","venue":"IWOCA","pages":"237-250","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/GuptaK19","doi":"10.1007/978-3-030-25005-8_20","ee":"https://doi.org/10.1007/978-3-030-25005-8_20","url":"https://dblp.org/rec/conf/iwoca/GuptaK19"},
+"url":"URL#1129304"
+},
+{
+"@score":"1",
+"@id":"1129305",
+"info":{"authors":{"author":[{"@pid":"55/6705","text":"Michel Habib"},{"@pid":"57/6313","text":"Fabien de Montgolfier"},{"@pid":"144/7410","text":"Lalla Mouatadid"},{"@pid":"150/0799","text":"Mengchuan Zou"}]},"title":"A General Algorithmic Scheme for Modular Decompositions of Hypergraphs and Applications.","venue":"IWOCA","pages":"251-264","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/HabibMMZ19","doi":"10.1007/978-3-030-25005-8_21","ee":"https://doi.org/10.1007/978-3-030-25005-8_21","url":"https://dblp.org/rec/conf/iwoca/HabibMMZ19"},
+"url":"URL#1129305"
+},
+{
+"@score":"1",
+"@id":"1129306",
+"info":{"authors":{"author":[{"@pid":"h/HermanJHaverkort","text":"Herman J. Haverkort"},{"@pid":"179/2344","text":"David Kübel"},{"@pid":"76/5590","text":"Elmar Langetepe"}]},"title":"Shortest-Path-Preserving Rounding.","venue":"IWOCA","pages":"265-277","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/HaverkortKL19","doi":"10.1007/978-3-030-25005-8_22","ee":"https://doi.org/10.1007/978-3-030-25005-8_22","url":"https://dblp.org/rec/conf/iwoca/HaverkortKL19"},
+"url":"URL#1129306"
+},
+{
+"@score":"1",
+"@id":"1129307",
+"info":{"authors":{"author":[{"@pid":"73/5158","text":"Michael A. Henning"},{"@pid":"139/8220","text":"Arti Pandey"},{"@pid":"239/4070","text":"Vikash Tripathi"}]},"title":"Complexity and Algorithms for Semipaired Domination in Graphs.","venue":"IWOCA","pages":"278-289","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/HenningPT19","doi":"10.1007/978-3-030-25005-8_23","ee":"https://doi.org/10.1007/978-3-030-25005-8_23","url":"https://dblp.org/rec/conf/iwoca/HenningPT19"},
+"url":"URL#1129307"
+},
+{
+"@score":"1",
+"@id":"1129308",
+"info":{"authors":{"author":[{"@pid":"j/JesperJansson","text":"Jesper Jansson"},{"@pid":"202/9529","text":"Konstantinos Mampentzidis"},{"@pid":"165/8666","text":"Ramesh Rajaby"},{"@pid":"s/WingKinSung","text":"Wing-Kin Sung"}]},"title":"Computing the Rooted Triplet Distance Between Phylogenetic Networks.","venue":"IWOCA","pages":"290-303","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/JanssonMRS19","doi":"10.1007/978-3-030-25005-8_24","ee":"https://doi.org/10.1007/978-3-030-25005-8_24","url":"https://dblp.org/rec/conf/iwoca/JanssonMRS19"},
+"url":"URL#1129308"
+},
+{
+"@score":"1",
+"@id":"1129309",
+"info":{"authors":{"author":[{"@pid":"138/0168","text":"Anjeneya Swami Kare"},{"@pid":"158/8471","text":"I. Vinod Reddy"}]},"title":"Parameterized Algorithms for Graph Burning Problem.","venue":"IWOCA","pages":"304-314","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/KareR19","doi":"10.1007/978-3-030-25005-8_25","ee":"https://doi.org/10.1007/978-3-030-25005-8_25","url":"https://dblp.org/rec/conf/iwoca/KareR19"},
+"url":"URL#1129309"
+},
+{
+"@score":"1",
+"@id":"1129310",
+"info":{"authors":{"author":[{"@pid":"58/8821","text":"Yasuaki Kobayashi"},{"@pid":"45/1736-1","text":"Yusuke Kobayashi 0001"},{"@pid":"m/ShuichiMiyazaki","text":"Shuichi Miyazaki"},{"@pid":"01/3717","text":"Suguru Tamaki"}]},"title":"An Improved Fixed-Parameter Algorithm for Max-Cut Parameterized by Crossing Number.","venue":"IWOCA","pages":"327-338","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/KobayashiKMT19","doi":"10.1007/978-3-030-25005-8_27","ee":"https://doi.org/10.1007/978-3-030-25005-8_27","url":"https://dblp.org/rec/conf/iwoca/KobayashiKMT19"},
+"url":"URL#1129310"
+},
+{
+"@score":"1",
+"@id":"1129311",
+"info":{"authors":{"author":[{"@pid":"203/8082","text":"Kazuhiro Kurita"},{"@pid":"117/5870","text":"Kunihiro Wasa"},{"@pid":"72/3856","text":"Takeaki Uno"},{"@pid":"07/5414","text":"Hiroki Arimura"}]},"title":"An Efficient Algorithm for Enumerating Chordal Bipartite Induced Subgraphs in Sparse Graphs.","venue":"IWOCA","pages":"339-351","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/KuritaWUA19","doi":"10.1007/978-3-030-25005-8_28","ee":"https://doi.org/10.1007/978-3-030-25005-8_28","url":"https://dblp.org/rec/conf/iwoca/KuritaWUA19"},
+"url":"URL#1129311"
+},
+{
+"@score":"1",
+"@id":"1129312",
+"info":{"authors":{"author":[{"@pid":"144/7820","text":"Juho Lauri"},{"@pid":"241/6004","text":"Christodoulos Mitillos"}]},"title":"Complexity of Fall Coloring for Restricted Graph Classes.","venue":"IWOCA","pages":"352-364","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/LauriM19","doi":"10.1007/978-3-030-25005-8_29","ee":"https://doi.org/10.1007/978-3-030-25005-8_29","url":"https://dblp.org/rec/conf/iwoca/LauriM19"},
+"url":"URL#1129312"
+},
+{
+"@score":"1",
+"@id":"1129313",
+"info":{"authors":{"author":[{"@pid":"32/9126","text":"Giordano Da Lozzo"},{"@pid":"99/44","text":"Ignaz Rutter"}]},"title":"Reaching 3-Connectivity via Edge-Edge Additions.","venue":"IWOCA","pages":"175-187","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/LozzoR19","doi":"10.1007/978-3-030-25005-8_15","ee":"https://doi.org/10.1007/978-3-030-25005-8_15","url":"https://dblp.org/rec/conf/iwoca/LozzoR19"},
+"url":"URL#1129313"
+},
+{
+"@score":"1",
+"@id":"1129314",
+"info":{"authors":{"author":[{"@pid":"244/8359","text":"Fumito Miyake"},{"@pid":"36/5061","text":"Eiji Takimoto"},{"@pid":"11/5748","text":"Kohei Hatano"}]},"title":"Succinct Representation of Linear Extensions via MDDs and Its Application to Scheduling Under Precedence Constraints.","venue":"IWOCA","pages":"365-377","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/MiyakeTH19","doi":"10.1007/978-3-030-25005-8_30","ee":"https://doi.org/10.1007/978-3-030-25005-8_30","url":"https://dblp.org/rec/conf/iwoca/MiyakeTH19"},
+"url":"URL#1129314"
+},
+{
+"@score":"1",
+"@id":"1129315",
+"info":{"authors":{"author":[{"@pid":"244/8350","text":"Lachlan Plant"},{"@pid":"30/6066","text":"Lucia Moura"}]},"title":"Maximum Clique Exhaustive Search in Circulant k-Hypergraphs.","venue":"IWOCA","pages":"378-392","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/PlantM19","doi":"10.1007/978-3-030-25005-8_31","ee":"https://doi.org/10.1007/978-3-030-25005-8_31","url":"https://dblp.org/rec/conf/iwoca/PlantM19"},
+"url":"URL#1129315"
+},
+{
+"@score":"1",
+"@id":"1129316",
+"info":{"authors":{"author":[{"@pid":"244/8372","text":"Appattu Vallapil Prajeesh"},{"@pid":"244/8374","text":"Krishnan Paramasivam"},{"@pid":"244/8344","text":"Nainarraj Kamatchi"}]},"title":"A Note on Handicap Incomplete Tournaments.","venue":"IWOCA","pages":"1-9","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/PrajeeshPK19","doi":"10.1007/978-3-030-25005-8_1","ee":"https://doi.org/10.1007/978-3-030-25005-8_1","url":"https://dblp.org/rec/conf/iwoca/PrajeeshPK19"},
+"url":"URL#1129316"
+},
+{
+"@score":"1",
+"@id":"1129317",
+"info":{"authors":{"author":[{"@pid":"153/2170","text":"Suthee Ruangwises"},{"@pid":"94/802","text":"Toshiya Itoh"}]},"title":"Stable Noncrossing Matchings.","venue":"IWOCA","pages":"405-416","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/RuangwisesI19","doi":"10.1007/978-3-030-25005-8_33","ee":"https://doi.org/10.1007/978-3-030-25005-8_33","url":"https://dblp.org/rec/conf/iwoca/RuangwisesI19"},
+"url":"URL#1129317"
+},
+{
+"@score":"1",
+"@id":"1129318",
+"info":{"authors":{"author":[{"@pid":"241/7021","text":"Florian Stober"},{"@pid":"119/4910","text":"Armin Weiß"}]},"title":"On the Average Case of MergeInsertion.","venue":"IWOCA","pages":"417-429","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/StoberW19","doi":"10.1007/978-3-030-25005-8_34","ee":"https://doi.org/10.1007/978-3-030-25005-8_34","url":"https://dblp.org/rec/conf/iwoca/StoberW19"},
+"url":"URL#1129318"
+},
+{
+"@score":"1",
+"@id":"1129319",
+"info":{"authors":{"author":[{"@pid":"238/0109","text":"Kiichi Watanabe"},{"@pid":"118/6656","text":"Yuto Nakashima"},{"@pid":"88/1129","text":"Shunsuke Inenaga"},{"@pid":"44/2355","text":"Hideo Bannai"},{"@pid":"35/1544","text":"Masayuki Takeda"}]},"title":"Shortest Unique Palindromic Substring Queries on Run-Length Encoded Strings.","venue":"IWOCA","pages":"430-441","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/WatanabeNIBT19","doi":"10.1007/978-3-030-25005-8_35","ee":"https://doi.org/10.1007/978-3-030-25005-8_35","url":"https://dblp.org/rec/conf/iwoca/WatanabeNIBT19"},
+"url":"URL#1129319"
+},
+{
+"@score":"1",
+"@id":"1129320",
+"info":{"authors":{"author":[{"@pid":"41/5526","text":"Yuan Xue"},{"@pid":"y/BotingYang","text":"Boting Yang"},{"@pid":"30/289","text":"Farong Zhong"},{"@pid":"z/SandraZilles","text":"Sandra Zilles"}]},"title":"A Partition Approach to Lower Bounds for Zero-Visibility Cops and Robber.","venue":"IWOCA","pages":"442-454","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/iwoca/XueYZZ19","doi":"10.1007/978-3-030-25005-8_36","ee":"https://doi.org/10.1007/978-3-030-25005-8_36","url":"https://dblp.org/rec/conf/iwoca/XueYZZ19"},
+"url":"URL#1129320"
+},
+{
+"@score":"1",
+"@id":"1185651",
+"info":{"authors":{"author":[{"@pid":"21/3607","text":"Charles J. Colbourn"},{"@pid":"g/RobertoGrossi","text":"Roberto Grossi"},{"@pid":"p/NadiaPisanti","text":"Nadia Pisanti"}]},"title":"Combinatorial Algorithms - 30th International Workshop, IWOCA 2019, Pisa, Italy, July 23-25, 2019, Proceedings","venue":["IWOCA","Lecture Notes in Computer Science"],"volume":"11638","publisher":"Springer","year":"2019","type":"Editorship","key":"conf/iwoca/2019","doi":"10.1007/978-3-030-25005-8","ee":"https://doi.org/10.1007/978-3-030-25005-8","url":"https://dblp.org/rec/conf/iwoca/2019"},
+"url":"URL#1185651"
+}
+]
+}
+}
+}

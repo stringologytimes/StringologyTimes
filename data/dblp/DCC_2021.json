@@ -1,0 +1,531 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/dcc/dcc2021.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"575.73"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"83",
+"@dc":"83",
+"@oc":"83",
+"@id":"35340694",
+"text":":facetid:toc:db/conf/dcc/dcc2021.bht"
+}
+},
+"hits":{
+"@total":"83",
+"@computed":"83",
+"@sent":"83",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"234279",
+"info":{"authors":{"author":[{"@pid":"35/7092-250","text":"Wei Wang 0250"},{"@pid":"94/7727","text":"Baohua Zhang"},{"@pid":"58/2994","text":"Tao Cui"},{"@pid":"277/5313","text":"Yimeng Chai"},{"@pid":"61/500-13","text":"Yue Li 0013"}]},"title":"Research on Knowledge Distillation of Generative Adversarial Networks.","venue":"DCC","pages":"376","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/00250ZCC021","doi":"10.1109/DCC50243.2021.00045","ee":"https://doi.org/10.1109/DCC50243.2021.00045","url":"https://dblp.org/rec/conf/dcc/00250ZCC021"},
+"url":"URL#234279"
+},
+{
+"@score":"1",
+"@id":"234280",
+"info":{"authors":{"author":[{"@pid":"52/761","text":"Hüseyin Acan"},{"@pid":"164/1759","text":"Sankardeep Chakraborty"},{"@pid":"133/2068","text":"Seungbum Jo"},{"@pid":"13/9523","text":"Kei Nakashima"},{"@pid":"74/5752","text":"Kunihiko Sadakane"},{"@pid":"r/SSrinivasaRao","text":"Srinivasa Rao Satti"}]},"title":"Succinct representations of Intersection Graphs on a Circle.","venue":"DCC","pages":"123-132","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/AcanCJNSS21","doi":"10.1109/DCC50243.2021.00020","ee":"https://doi.org/10.1109/DCC50243.2021.00020","url":"https://dblp.org/rec/conf/dcc/AcanCJNSS21"},
+"url":"URL#234280"
+},
+{
+"@score":"1",
+"@id":"234281",
+"info":{"authors":{"author":[{"@pid":"137/2372","text":"Ashek Ahmmed"},{"@pid":"99/774","text":"Manoranjan Paul"},{"@pid":"75/4744","text":"Mark Pickering"}]},"title":"Dynamic Point Cloud Texture Video Compression using the Edge Position Difference Oriented Motion Model.","venue":"DCC","pages":"335","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/AhmmedPP21","doi":"10.1109/DCC50243.2021.00075","ee":"https://doi.org/10.1109/DCC50243.2021.00075","url":"https://dblp.org/rec/conf/dcc/AhmmedPP21"},
+"url":"URL#234281"
+},
+{
+"@score":"1",
+"@id":"234282",
+"info":{"authors":{"author":[{"@pid":"a/LAllison","text":"Lloyd Allison"},{"@pid":"31/2518","text":"Arun Siddharth Konagurthu"},{"@pid":"48/4653","text":"Daniel F. Schmidt"}]},"title":"On Universal Codes for Integers - Wallace Tree, Elias Omega and Beyond.","venue":"DCC","pages":"313-322","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/AllisonKS21","doi":"10.1109/DCC50243.2021.00039","ee":"https://doi.org/10.1109/DCC50243.2021.00039","url":"https://dblp.org/rec/conf/dcc/AllisonKS21"},
+"url":"URL#234282"
+},
+{
+"@score":"1",
+"@id":"234283",
+"info":{"authors":{"author":[{"@pid":"186/1301","text":"Hadi Amirpour"},{"@pid":"81/5358","text":"Christian Timmerer"},{"@pid":"g/MohammedGhanbari","text":"Mohammad Ghanbari 0001"}]},"title":"SLFC - Scalable Light Field Coding.","venue":"DCC","pages":"43-52","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/AmirpourT021","doi":"10.1109/DCC50243.2021.00012","ee":"https://doi.org/10.1109/DCC50243.2021.00012","url":"https://dblp.org/rec/conf/dcc/AmirpourT021"},
+"url":"URL#234283"
+},
+{
+"@score":"1",
+"@id":"234284",
+"info":{"authors":{"author":[{"@pid":"292/6337","text":"Guy Arbitman"},{"@pid":"k/ShmuelTomiKlein","text":"Shmuel T. Klein"},{"@pid":"99/1614","text":"Pierre Peterlongo"},{"@pid":"02/222","text":"Dana Shapira"}]},"title":"Approximate Hashing for Bioinformatics.","venue":"DCC","pages":"337","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/ArbitmanKPS21","doi":"10.1109/DCC50243.2021.00072","ee":"https://doi.org/10.1109/DCC50243.2021.00072","url":"https://dblp.org/rec/conf/dcc/ArbitmanKPS21"},
+"url":"URL#234284"
+},
+{
+"@score":"1",
+"@id":"234285",
+"info":{"authors":{"author":[{"@pid":"266/6274","text":"Shashwat Banchhor"},{"@pid":"266/6291","text":"Rishikesh R. Gajjala"},{"@pid":"57/3685","text":"Yogish Sabharwal"},{"@pid":"s/SandeepSen","text":"Sandeep Sen"}]},"title":"Efficient algorithms for decode efficient prefix codes.","venue":"DCC","pages":"338","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/BanchhorGSS21","doi":"10.1109/DCC50243.2021.00080","ee":"https://doi.org/10.1109/DCC50243.2021.00080","url":"https://dblp.org/rec/conf/dcc/BanchhorGSS21"},
+"url":"URL#234285"
+},
+{
+"@score":"1",
+"@id":"234286",
+"info":{"authors":{"author":[{"@pid":"186/0436","text":"Gilad Baruch"},{"@pid":"k/ShmuelTomiKlein","text":"Shmuel T. Klein"},{"@pid":"02/222","text":"Dana Shapira"}]},"title":"Guided Blocks WOM codes.","venue":"DCC","pages":"339","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/BaruchKS21","doi":"10.1109/DCC50243.2021.00059","ee":"https://doi.org/10.1109/DCC50243.2021.00059","url":"https://dblp.org/rec/conf/dcc/BaruchKS21"},
+"url":"URL#234286"
+},
+{
+"@score":"1",
+"@id":"234287",
+"info":{"authors":{"author":[{"@pid":"04/4610","text":"Christina Boucher"},{"@pid":"00/3487","text":"Travis Gagie"},{"@pid":"95/2224","text":"Tomohiro I"},{"@pid":"129/9119","text":"Dominik Köppl"},{"@pid":"42/10531","text":"Ben Langmead"},{"@pid":"63/1086","text":"Giovanni Manzini"},{"@pid":"n/GonzaloNavarro","text":"Gonzalo Navarro"},{"@pid":"262/3308","text":"Alejandro Pacheco"},{"@pid":"173/8030-1","text":"Massimiliano Rossi 0001"}]},"title":"PHONI - Streamed Matching Statistics with Multi-Genome References.","venue":"DCC","pages":"193-202","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/BoucherGIKLMNP021","doi":"10.1109/DCC50243.2021.00027","ee":"https://doi.org/10.1109/DCC50243.2021.00027","url":"https://dblp.org/rec/conf/dcc/BoucherGIKLMNP021"},
+"url":"URL#234287"
+},
+{
+"@score":"1",
+"@id":"234288",
+"info":{"authors":{"author":[{"@pid":"292/5386","text":"Daniela Campos"},{"@pid":"186/0914","text":"Adrián Gómez-Brandón"},{"@pid":"n/GonzaloNavarro","text":"Gonzalo Navarro"}]},"title":"A Disk-Based Index for Trajectories with an In-Memory Compressed Cache.","venue":"DCC","pages":"340","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/CamposGN21","doi":"10.1109/DCC50243.2021.00047","ee":"https://doi.org/10.1109/DCC50243.2021.00047","url":"https://dblp.org/rec/conf/dcc/CamposGN21"},
+"url":"URL#234288"
+},
+{
+"@score":"1",
+"@id":"234289",
+"info":{"authors":{"author":[{"@pid":"164/1759","text":"Sankardeep Chakraborty"},{"@pid":"133/2068","text":"Seungbum Jo"},{"@pid":"74/5752","text":"Kunihiko Sadakane"},{"@pid":"r/SSrinivasaRao","text":"Srinivasa Rao Satti"}]},"title":"Succinct Data Structures for Small Clique-Width Graphs.","venue":"DCC","pages":"133-142","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/ChakrabortyJSS21","doi":"10.1109/DCC50243.2021.00021","ee":"https://doi.org/10.1109/DCC50243.2021.00021","url":"https://dblp.org/rec/conf/dcc/ChakrabortyJSS21"},
+"url":"URL#234289"
+},
+{
+"@score":"1",
+"@id":"234290",
+"info":{"authors":{"author":[{"@pid":"234/8643","text":"Lahiru D. Chamain"},{"@pid":"17/10700","text":"Fabien Racapé"},{"@pid":"232/9845","text":"Jean Bégaint"},{"@pid":"220/8356","text":"Akshay Pushparaja"},{"@pid":"277/9701","text":"Simon Feltman"}]},"title":"End-to-End optimized image compression for machines, a study.","venue":"DCC","pages":"163-172","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/ChamainRBPF21","doi":"10.1109/DCC50243.2021.00024","ee":"https://doi.org/10.1109/DCC50243.2021.00024","url":"https://dblp.org/rec/conf/dcc/ChamainRBPF21"},
+"url":"URL#234290"
+},
+{
+"@score":"1",
+"@id":"234291",
+"info":{"authors":{"author":[{"@pid":"220/4069","text":"Diego Díaz-Domínguez"},{"@pid":"n/GonzaloNavarro","text":"Gonzalo Navarro"}]},"title":"A grammar compressor for collections of reads with applications to the construction of the BWT.","venue":"DCC","pages":"83-92","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/Diaz-DominguezN21","doi":"10.1109/DCC50243.2021.00016","ee":"https://doi.org/10.1109/DCC50243.2021.00016","url":"https://dblp.org/rec/conf/dcc/Diaz-DominguezN21"},
+"url":"URL#234291"
+},
+{
+"@score":"1",
+"@id":"234292",
+"info":{"authors":{"author":[{"@pid":"283/5663","text":"Sven Fiergolla"},{"@pid":"47/6732-2","text":"Petra Wolf 0002"}]},"title":"Improving Run Length Encoding by Preprocessing.","venue":"DCC","pages":"341","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/Fiergolla021","doi":"10.1109/DCC50243.2021.00051","ee":"https://doi.org/10.1109/DCC50243.2021.00051","url":"https://dblp.org/rec/conf/dcc/Fiergolla021"},
+"url":"URL#234292"
+},
+{
+"@score":"1",
+"@id":"234293",
+"info":{"authors":{"author":[{"@pid":"276/3132","text":"Andrew C. Freeman"},{"@pid":"m/KetanMayerPatel","text":"Ketan Mayer-Patel"}]},"title":"Lossy Compression for Integrating Event Cameras.","venue":"DCC","pages":"53-62","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/FreemanM21","doi":"10.1109/DCC50243.2021.00013","ee":"https://doi.org/10.1109/DCC50243.2021.00013","url":"https://dblp.org/rec/conf/dcc/FreemanM21"},
+"url":"URL#234293"
+},
+{
+"@score":"1",
+"@id":"234294",
+"info":{"authors":{"author":[{"@pid":"252/0987","text":"Aharon Fruchtman"},{"@pid":"265/5942","text":"Yoav Gross"},{"@pid":"k/ShmuelTomiKlein","text":"Shmuel T. Klein"},{"@pid":"02/222","text":"Dana Shapira"}]},"title":"Backward Weighted Coding.","venue":"DCC","pages":"93-102","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/FruchtmanGKS21","doi":"10.1109/DCC50243.2021.00017","ee":"https://doi.org/10.1109/DCC50243.2021.00017","url":"https://dblp.org/rec/conf/dcc/FruchtmanGKS21"},
+"url":"URL#234294"
+},
+{
+"@score":"1",
+"@id":"234295",
+"info":{"authors":{"author":[{"@pid":"163/9785","text":"José Fuentes-Sepúlveda"},{"@pid":"191/1362","text":"Diego Gatica"},{"@pid":"n/GonzaloNavarro","text":"Gonzalo Navarro"},{"@pid":"83/6294","text":"M. Andrea Rodríguez"},{"@pid":"68/2814","text":"Diego Seco"}]},"title":"Compact Representation of Spatial Hierarchies and Topological Relationships.","venue":"DCC","pages":"113-122","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/Fuentes-Sepulveda21","doi":"10.1109/DCC50243.2021.00019","ee":"https://doi.org/10.1109/DCC50243.2021.00019","url":"https://dblp.org/rec/conf/dcc/Fuentes-Sepulveda21"},
+"url":"URL#234295"
+},
+{
+"@score":"1",
+"@id":"234296",
+"info":{"authors":{"author":[{"@pid":"95/8557","text":"Mohit Goyal"},{"@pid":"185/8102","text":"Kedar Tatwawadi"},{"@pid":"196/1863","text":"Shubham Chandak"},{"@pid":"21/8853","text":"Idoia Ochoa"}]},"title":"DZip - improved general-purpose loss less compression based on novel neural network modeling.","venue":"DCC","pages":"153-162","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/GoyalTCO21","doi":"10.1109/DCC50243.2021.00023","ee":"https://doi.org/10.1109/DCC50243.2021.00023","url":"https://dblp.org/rec/conf/dcc/GoyalTCO21"},
+"url":"URL#234296"
+},
+{
+"@score":"1",
+"@id":"234297",
+"info":{"authors":{"author":[{"@pid":"223/7818","text":"Yichen Guo"},{"@pid":"20/5353","text":"Mai Xu"},{"@pid":"09/3925","text":"Li Yang"},{"@pid":"55/5564","text":"Rui Ding"}]},"title":"A Viewport-Adaptive Rate Control Approach for Omnidirectional Video Coding.","venue":"DCC","pages":"342","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/GuoXYD21","doi":"10.1109/DCC50243.2021.00056","ee":"https://doi.org/10.1109/DCC50243.2021.00056","url":"https://dblp.org/rec/conf/dcc/GuoXYD21"},
+"url":"URL#234297"
+},
+{
+"@score":"1",
+"@id":"234298",
+"info":{"authors":{"author":[{"@pid":"19/3011","text":"Xu Han"},{"@pid":"126/4540","text":"Shanshe Wang"},{"@pid":"67/6351","text":"Yong Chen"},{"@pid":"40/5402","text":"Siwei Ma"},{"@pid":"g/WenGao","text":"Wen Gao 0001"}]},"title":"Intra Block Partition Structure Prediction via Convolutional Neural Network.","venue":"DCC","pages":"343","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/HanWCM021","doi":"10.1109/DCC50243.2021.00078","ee":"https://doi.org/10.1109/DCC50243.2021.00078","url":"https://dblp.org/rec/conf/dcc/HanWCM021"},
+"url":"URL#234298"
+},
+{
+"@score":"1",
+"@id":"234299",
+"info":{"authors":{"author":[{"@pid":"254/8229","text":"Yung-Han Ho"},{"@pid":"259/5125","text":"Guo-Lun Jin"},{"@pid":"289/5953","text":"Yun Liang 0015"},{"@pid":"62/2384","text":"Wen-Hsiao Peng"},{"@pid":"181/2841","text":"Xiaobo Li"}]},"title":"A Dual-Critic Reinforcement Learning Framework for Frame-Level Bit Allocation in HEVC/H.265.","venue":"DCC","pages":"13-22","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/HoJ0PL21","doi":"10.1109/DCC50243.2021.00009","ee":"https://doi.org/10.1109/DCC50243.2021.00009","url":"https://dblp.org/rec/conf/dcc/HoJ0PL21"},
+"url":"URL#234299"
+},
+{
+"@score":"1",
+"@id":"234300",
+"info":{"authors":{"author":[{"@pid":"02/18","text":"Zhijie Huang"},{"@pid":"131/9316","text":"Xiaopeng Guo"},{"@pid":"265/6502","text":"Mingyu Shang"},{"@pid":"181/2794","text":"Jie Gao"},{"@pid":"s/JunSun12","text":"Jun Sun 0012"}]},"title":"An Efficient QP Variable Convolutional Neural Network Based In-loop Filter for Intra Coding.","venue":"DCC","pages":"33-42","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/HuangGSGS21","doi":"10.1109/DCC50243.2021.00011","ee":"https://doi.org/10.1109/DCC50243.2021.00011","url":"https://dblp.org/rec/conf/dcc/HuangGSGS21"},
+"url":"URL#234300"
+},
+{
+"@score":"1",
+"@id":"234301",
+"info":{"authors":{"author":[{"@pid":"78/4354","text":"Chen-Hsiu Huang"},{"@pid":"51/2694","text":"Ja-Ling Wu"}]},"title":"JQF - Optimal JPEG Quantization Table Fusion by Simulated Annealing on Texture Images and Predicting Textures.","venue":"DCC","pages":"344","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/HuangW21","doi":"10.1109/DCC50243.2021.00041","ee":"https://doi.org/10.1109/DCC50243.2021.00041","url":"https://dblp.org/rec/conf/dcc/HuangW21"},
+"url":"URL#234301"
+},
+{
+"@score":"1",
+"@id":"234302",
+"info":{"authors":{"author":[{"@pid":"203/8094","text":"Yerlan Idelbayev"},{"@pid":"23/5257","text":"Miguel Á. Carreira-Perpiñán"}]},"title":"Neural Network Compression via Additive Combination of Reshaped, Low-Rank Matrices.","venue":"DCC","pages":"243-252","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/IdelbayevC21","doi":"10.1109/DCC50243.2021.00032","ee":"https://doi.org/10.1109/DCC50243.2021.00032","url":"https://dblp.org/rec/conf/dcc/IdelbayevC21"},
+"url":"URL#234302"
+},
+{
+"@score":"1",
+"@id":"234303",
+"info":{"authors":{"author":[{"@pid":"137/7861","text":"Swayambhoo Jain"},{"@pid":"201/7463","text":"Shahab Hamidi-Rad"},{"@pid":"17/10700","text":"Fabien Racapé"}]},"title":"Low Rank Based End-to-End Deep Neural Network Compression.","venue":"DCC","pages":"233-242","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/JainHR21","doi":"10.1109/DCC50243.2021.00031","ee":"https://doi.org/10.1109/DCC50243.2021.00031","url":"https://dblp.org/rec/conf/dcc/JainHR21"},
+"url":"URL#234303"
+},
+{
+"@score":"1",
+"@id":"234304",
+"info":{"authors":{"author":[{"@pid":"292/5553","text":"Yunrui Jian"},{"@pid":"58/3021","text":"Jiaqi Zhang"},{"@pid":"177/8156","text":"Chuanmin Jia"},{"@pid":"19/6246","text":"Suhong Wang"},{"@pid":"126/4540","text":"Shanshe Wang"},{"@pid":"40/5402","text":"Siwei Ma"}]},"title":"Quad-Treea Based Sample Refinement Filter for Video Coding.","venue":"DCC","pages":"345","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/JianZJWWM21","doi":"10.1109/DCC50243.2021.00087","ee":"https://doi.org/10.1109/DCC50243.2021.00087","url":"https://dblp.org/rec/conf/dcc/JianZJWWM21"},
+"url":"URL#234304"
+},
+{
+"@score":"1",
+"@id":"234305",
+"info":{"authors":{"author":{"@pid":"59/577","text":"Shahin Kamali"}},"title":"Compact Polyominoes.","venue":"DCC","pages":"346","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/Kamali21","doi":"10.1109/DCC50243.2021.00088","ee":"https://doi.org/10.1109/DCC50243.2021.00088","url":"https://dblp.org/rec/conf/dcc/Kamali21"},
+"url":"URL#234305"
+},
+{
+"@score":"1",
+"@id":"234306",
+"info":{"authors":{"author":[{"@pid":"266/6459","text":"Roman Kazantsev"},{"@pid":"292/6287","text":"Vladimir Yanushkovsky"},{"@pid":"60/2567","text":"Dmitriy S. Vatolin"}]},"title":"Video-Decoder Power Consumption on Android Devices - Power-Estimation Method, Dataset Creation, and Analysis Results.","venue":"DCC","pages":"347","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/KazantsevYV21","doi":"10.1109/DCC50243.2021.00084","ee":"https://doi.org/10.1109/DCC50243.2021.00084","url":"https://dblp.org/rec/conf/dcc/KazantsevYV21"},
+"url":"URL#234306"
+},
+{
+"@score":"1",
+"@id":"234307",
+"info":{"authors":{"author":[{"@pid":"283/4869","text":"Taekyung Ki"},{"@pid":"38/208","text":"Youngmi Hur"}]},"title":"Deep Scattering Network with Max-Pooling.","venue":"DCC","pages":"348","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/KiH21","doi":"10.1109/DCC50243.2021.00052","ee":"https://doi.org/10.1109/DCC50243.2021.00052","url":"https://dblp.org/rec/conf/dcc/KiH21"},
+"url":"URL#234307"
+},
+{
+"@score":"1",
+"@id":"234308",
+"info":{"authors":{"author":[{"@pid":"277/9750","text":"Fabian Knorr"},{"@pid":"44/7010","text":"Peter Thoman"},{"@pid":"31/5444","text":"Thomas Fahringer"}]},"title":"ndzip - A High-Throughput Parallel Lossless Compressor for Scientific Data.","venue":"DCC","pages":"103-112","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/KnorrTF21","doi":"10.1109/DCC50243.2021.00018","ee":"https://doi.org/10.1109/DCC50243.2021.00018","url":"https://dblp.org/rec/conf/dcc/KnorrTF21"},
+"url":"URL#234308"
+},
+{
+"@score":"1",
+"@id":"234309",
+"info":{"authors":{"author":[{"@pid":"91/1888","text":"Xiaobin Li"},{"@pid":"85/8167","text":"Hongxu Jiang"},{"@pid":"73/5864","text":"Shuangxi Huang"},{"@pid":"277/0798","text":"Fangzheng Tian"},{"@pid":"249/7886","text":"Runhua Zhang"},{"@pid":"46/4155","text":"Dong Dong"}]},"title":"SRQ - Self-Reference quantization scheme for lightweight neural network.","venue":"DCC","pages":"349","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/LiJHTZD21","doi":"10.1109/DCC50243.2021.00046","ee":"https://doi.org/10.1109/DCC50243.2021.00046","url":"https://dblp.org/rec/conf/dcc/LiJHTZD21"},
+"url":"URL#234309"
+},
+{
+"@score":"1",
+"@id":"234310",
+"info":{"authors":{"author":[{"@pid":"61/500","text":"Yue Li"},{"@pid":"89/5992","text":"Li Zhang"},{"@pid":"34/886","text":"Jizheng Xu"}]},"title":"Convolutional Neural Network-based Split Prediction for VVC Intra Speedup.","venue":"DCC","pages":"350","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/LiZX21","doi":"10.1109/DCC50243.2021.00063","ee":"https://doi.org/10.1109/DCC50243.2021.00063","url":"https://dblp.org/rec/conf/dcc/LiZX21"},
+"url":"URL#234310"
+},
+{
+"@score":"1",
+"@id":"234311",
+"info":{"authors":{"author":[{"@pid":"48/7088","text":"Jianping Lin"},{"@pid":"98/1737-2","text":"Dong Liu 0002"},{"@pid":"51/239-1","text":"Jie Liang 0001"},{"@pid":"59/7017","text":"Houqiang Li"},{"@pid":"25/3972","text":"Feng Wu"}]},"title":"Modulated Variable-Rate Deep Video Compression.","venue":"DCC","pages":"351","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/LinL0LW21","doi":"10.1109/DCC50243.2021.00058","ee":"https://doi.org/10.1109/DCC50243.2021.00058","url":"https://dblp.org/rec/conf/dcc/LinL0LW21"},
+"url":"URL#234311"
+},
+{
+"@score":"1",
+"@id":"234312",
+"info":{"authors":{"author":[{"@pid":"06/3580","text":"Zheng Liu"},{"@pid":"67/2976","text":"Yu Han"},{"@pid":"48/4237","text":"Honggang Qi"},{"@pid":"47/6177","text":"Jinwen Zan"},{"@pid":"06/4335","text":"Qixiang Ye"},{"@pid":"63/6387","text":"Guoqin Cui"},{"@pid":"155/3184","text":"Yundong Zhang"}]},"title":"Video Enhancement Network Based on Max-Pooling and Hierarchical Feature Fusion.","venue":"DCC","pages":"352","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/LiuHQZYCZ21","doi":"10.1109/DCC50243.2021.00067","ee":"https://doi.org/10.1109/DCC50243.2021.00067","url":"https://dblp.org/rec/conf/dcc/LiuHQZYCZ21"},
+"url":"URL#234312"
+},
+{
+"@score":"1",
+"@id":"234313",
+"info":{"authors":{"author":[{"@pid":"266/6392","text":"Jixiang Luo"},{"@pid":"55/2211","text":"Shaohui Li"},{"@pid":"16/5135","text":"Wenrui Dai"},{"@pid":"154/1991","text":"De Cheng"},{"@pid":"62/2655","text":"Gang Li"},{"@pid":"07/7910","text":"Chenglin Li"},{"@pid":"91/4613","text":"Junni Zou"},{"@pid":"21/3569","text":"Hongkai Xiong"}]},"title":"Lossless Compression for Video Streams with Frequency Prediction and Macro Block Merging.","venue":"DCC","pages":"353","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/LuoLDCLLZX21","doi":"10.1109/DCC50243.2021.00086","ee":"https://doi.org/10.1109/DCC50243.2021.00086","url":"https://dblp.org/rec/conf/dcc/LuoLDCLLZX21"},
+"url":"URL#234313"
+},
+{
+"@score":"1",
+"@id":"234314",
+"info":{"authors":{"author":[{"@pid":"179/3414","text":"Xiyang Luo"},{"@pid":"145/0046","text":"Hossein Talebi"},{"@pid":"22/4613","text":"Feng Yang"},{"@pid":"e/MichaelElad","text":"Michael Elad"},{"@pid":"48/6882","text":"Peyman Milanfar"}]},"title":"The Rate-Distortion-Accuracy Tradeoff - JPEG Case Study.","venue":"DCC","pages":"354","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/LuoTYEM21","doi":"10.1109/DCC50243.2021.00049","ee":"https://doi.org/10.1109/DCC50243.2021.00049","url":"https://dblp.org/rec/conf/dcc/LuoTYEM21"},
+"url":"URL#234314"
+},
+{
+"@score":"1",
+"@id":"234315",
+"info":{"authors":{"author":[{"@pid":"288/0850","text":"Danyang Ma"},{"@pid":"p/SimonJPuglisi","text":"Simon J. Puglisi"},{"@pid":"26/680","text":"Rajeev Raman"},{"@pid":"193/9794","text":"Bella Zhukova"}]},"title":"On Elias-Fano for Rank Queries in FM-Indexes.","venue":"DCC","pages":"223-232","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/MaPRZ21","doi":"10.1109/DCC50243.2021.00030","ee":"https://doi.org/10.1109/DCC50243.2021.00030","url":"https://dblp.org/rec/conf/dcc/MaPRZ21"},
+"url":"URL#234315"
+},
+{
+"@score":"1",
+"@id":"234316",
+"info":{"authors":{"author":[{"@pid":"95/2106","text":"Li Ma"},{"@pid":"119/8511","text":"Peixi Peng"},{"@pid":"139/6969","text":"Peiyin Xing"},{"@pid":"68/2992","text":"Yaowei Wang"},{"@pid":"86/5857","text":"Yonghong Tian 0001"}]},"title":"Reducing Image Compression Artifacts for Deep Neural Networks.","venue":"DCC","pages":"355","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/MaPXW021","doi":"10.1109/DCC50243.2021.00044","ee":"https://doi.org/10.1109/DCC50243.2021.00044","url":"https://dblp.org/rec/conf/dcc/MaPXW021"},
+"url":"URL#234316"
+},
+{
+"@score":"1",
+"@id":"234317",
+"info":{"authors":{"author":[{"@pid":"217/1587","text":"Ankur Arjun Mali"},{"@pid":"160/1683","text":"Alexander G. Ororbia II"},{"@pid":"84/114","text":"Dan Kifer"},{"@pid":"g/CLeeGiles","text":"C. Lee Giles"}]},"title":"An Empirical Analysis of Recurrent Learning Algorithms in Neural Lossy Image Compression Systems.","venue":"DCC","pages":"356","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/MaliOKG21","doi":"10.1109/DCC50243.2021.00073","ee":"https://doi.org/10.1109/DCC50243.2021.00073","url":"https://dblp.org/rec/conf/dcc/MaliOKG21"},
+"url":"URL#234317"
+},
+{
+"@score":"1",
+"@id":"234318",
+"info":{"authors":{"author":[{"@pid":"292/5634","text":"Kumar Manas"},{"@pid":"292/5619","text":"Mohit Jindal"},{"@pid":"61/9728","text":"Preety Singh"}]},"title":"Low Complexity Video Compression for Fixed Focus Cameras.","venue":"DCC","pages":"357","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/ManasJS21","doi":"10.1109/DCC50243.2021.00055","ee":"https://doi.org/10.1109/DCC50243.2021.00055","url":"https://dblp.org/rec/conf/dcc/ManasJS21"},
+"url":"URL#234318"
+},
+{
+"@score":"1",
+"@id":"234319",
+"info":{"authors":{"author":[{"@pid":"292/5673","text":"Masaki Matsushita"},{"@pid":"64/4762","text":"Yasushi Inoguchi"}]},"title":"Parallel Processing of Grammar Compression.","venue":"DCC","pages":"358","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/MatsushitaI21","doi":"10.1109/DCC50243.2021.00068","ee":"https://doi.org/10.1109/DCC50243.2021.00068","url":"https://dblp.org/rec/conf/dcc/MatsushitaI21"},
+"url":"URL#234319"
+},
+{
+"@score":"1",
+"@id":"234320",
+"info":{"authors":{"author":[{"@pid":"226/0982","text":"Xuewei Meng"},{"@pid":"58/3021","text":"Jiaqi Zhang"},{"@pid":"177/8156","text":"Chuanmin Jia"},{"@pid":"12/7627","text":"Xinfeng Zhang"},{"@pid":"126/4540","text":"Shanshe Wang"},{"@pid":"40/5402","text":"Siwei Ma"}]},"title":"Optimized Adaptive Loop Filter in Versatile Video Coding.","venue":"DCC","pages":"359","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/MengZJZWM21","doi":"10.1109/DCC50243.2021.00082","ee":"https://doi.org/10.1109/DCC50243.2021.00082","url":"https://dblp.org/rec/conf/dcc/MengZJZWM21"},
+"url":"URL#234320"
+},
+{
+"@score":"1",
+"@id":"234321",
+"info":{"authors":{"author":[{"@pid":"225/2102","text":"Marco Oliva"},{"@pid":"173/8030-1","text":"Massimiliano Rossi 0001"},{"@pid":"46/6977","text":"Jouni Sirén"},{"@pid":"63/1086","text":"Giovanni Manzini"},{"@pid":"k/TamerKahveci","text":"Tamer Kahveci"},{"@pid":"00/3487","text":"Travis Gagie"},{"@pid":"04/4610","text":"Christina Boucher"}]},"title":"Efficiently Merging r-indexes.","venue":"DCC","pages":"203-212","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/Oliva0SMKGB21","doi":"10.1109/DCC50243.2021.00028","ee":"https://doi.org/10.1109/DCC50243.2021.00028","url":"https://dblp.org/rec/conf/dcc/Oliva0SMKGB21"},
+"url":"URL#234321"
+},
+{
+"@score":"1",
+"@id":"234322",
+"info":{"authors":{"author":{"@pid":"48/2543","text":"Jan Østergaard"}},"title":"Low Delay Robust Audio Coding by Noise Shaping, Fractional Sampling, and Source Prediction.","venue":"DCC","pages":"273-282","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/Ostergaard21","doi":"10.1109/DCC50243.2021.00035","ee":"https://doi.org/10.1109/DCC50243.2021.00035","url":"https://dblp.org/rec/conf/dcc/Ostergaard21"},
+"url":"URL#234322"
+},
+{
+"@score":"1",
+"@id":"234323",
+"info":{"authors":{"author":{"@pid":"204/0111","text":"Giulio Ermanno Pibiri"}},"title":"Fast and Compact Set Intersection through Recursive Universe Partitioning.","venue":"DCC","pages":"293-302","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/Pibiri21","doi":"10.1109/DCC50243.2021.00037","ee":"https://doi.org/10.1109/DCC50243.2021.00037","url":"https://dblp.org/rec/conf/dcc/Pibiri21"},
+"url":"URL#234323"
+},
+{
+"@score":"1",
+"@id":"234324",
+"info":{"authors":{"author":[{"@pid":"292/5388","text":"Roshan Prabhakar"},{"@pid":"196/1863","text":"Shubham Chandak"},{"@pid":"292/5748","text":"Carina Chiu"},{"@pid":"292/5504","text":"Renee Liang"},{"@pid":"86/8278","text":"Huong Nguyen"},{"@pid":"185/8102","text":"Kedar Tatwawadi"},{"@pid":"34/2720","text":"Tsachy Weissman"}]},"title":"Reducing latency and bandwidth for video streaming using keypoint extraction and digital puppetry.","venue":"DCC","pages":"360","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/PrabhakarCCLNTW21","doi":"10.1109/DCC50243.2021.00057","ee":"https://doi.org/10.1109/DCC50243.2021.00057","url":"https://dblp.org/rec/conf/dcc/PrabhakarCCLNTW21"},
+"url":"URL#234324"
+},
+{
+"@score":"1",
+"@id":"234325",
+"info":{"authors":{"author":[{"@pid":"09/3911","text":"Dariusz Puchala"},{"@pid":"99/6492","text":"Kamil Stokfiszewski"}]},"title":"Convolutional Neural Network for Image Compression with Application to JPEG Standard.","venue":"DCC","pages":"361","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/PuchalaS21","doi":"10.1109/DCC50243.2021.00048","ee":"https://doi.org/10.1109/DCC50243.2021.00048","url":"https://dblp.org/rec/conf/dcc/PuchalaS21"},
+"url":"URL#234325"
+},
+{
+"@score":"1",
+"@id":"234326",
+"info":{"authors":{"author":[{"@pid":"p/SimonJPuglisi","text":"Simon J. Puglisi"},{"@pid":"193/9794","text":"Bella Zhukova"}]},"title":"Smaller RLZ-Compressed Suffix Arrays.","venue":"DCC","pages":"213-222","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/PuglisiZ21","doi":"10.1109/DCC50243.2021.00029","ee":"https://doi.org/10.1109/DCC50243.2021.00029","url":"https://dblp.org/rec/conf/dcc/PuglisiZ21"},
+"url":"URL#234326"
+},
+{
+"@score":"1",
+"@id":"234327",
+"info":{"authors":{"author":[{"@pid":"254/9556","text":"Taha Ameen ur Rahman"},{"@pid":"278/3176","text":"Alton S. Barbehenn"},{"@pid":"224/5013","text":"Xinan Chen"},{"@pid":"188/1178","text":"Hassan Dbouk"},{"@pid":"278/2768","text":"James A. Douglas"},{"@pid":"278/2431","text":"Yuncong Geng"},{"@pid":"278/2627","text":"Ian George"},{"@pid":"278/2872","text":"John B. Harvill"},{"@pid":"278/3175","text":"Sung Woo Jeon"},{"@pid":"278/3146","text":"Kartik K. Kansal"},{"@pid":"278/3139","text":"Kiwook Lee"},{"@pid":"278/2783","text":"Kelly A. Levick"},{"@pid":"156/1167","text":"Bochao Li"},{"@pid":"189/5871","text":"Ziyue Li"},{"@pid":"230/4629","text":"Yashaswini Murthy"},{"@pid":"278/2583","text":"Adarsh Muthuveeru-Subramaniam"},{"@pid":"275/9927","text":"S. Yagiz Olmez"},{"@pid":"278/2784","text":"Matthew J. Tomei"},{"@pid":"227/2748","text":"Tanya Veeravalli"},{"@pid":"223/8062","text":"Xuechao Wang"},{"@pid":"278/3346","text":"Eric A. Wayman"},{"@pid":"07/6378-11","text":"Fan Wu 0011"},{"@pid":"84/586","text":"Peng Xu"},{"@pid":"51/8939","text":"Shen Yan"},{"@pid":"232/2092","text":"Heling Zhang"},{"@pid":"95/2419","text":"Yibo Zhang"},{"@pid":"57/4707","text":"Yifan Zhang"},{"@pid":"54/10290","text":"Yibo Zhao"},{"@pid":"199/8366","text":"Sourya Basu"},{"@pid":"36/4028","text":"Lav R. Varshney"}]},"title":"The Twelvefold Way of Non-Sequential Lossless Compression.","venue":"DCC","pages":"336","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/RahmanBCDDGGHJK21","doi":"10.1109/DCC50243.2021.00061","ee":"https://doi.org/10.1109/DCC50243.2021.00061","url":"https://dblp.org/rec/conf/dcc/RahmanBCDDGGHJK21"},
+"url":"URL#234327"
+},
+{
+"@score":"1",
+"@id":"234328",
+"info":{"authors":{"author":[{"@pid":"245/9228","text":"Bulla Rajesh"},{"@pid":"292/5691","text":"Priyanshu Jain"},{"@pid":"142/2980","text":"Mohammed Javed"},{"@pid":"88/6921","text":"David S. Doermann"}]},"title":"HH-CompWordNet - Holistic Handwritten Word Recognition in the Compressed Domain.","venue":"DCC","pages":"362","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/RajeshJJD21","doi":"10.1109/DCC50243.2021.00081","ee":"https://doi.org/10.1109/DCC50243.2021.00081","url":"https://dblp.org/rec/conf/dcc/RajeshJJD21"},
+"url":"URL#234328"
+},
+{
+"@score":"1",
+"@id":"234329",
+"info":{"authors":{"author":[{"@pid":"239/5902","text":"Sriram Ravula"},{"@pid":"137/7861","text":"Swayambhoo Jain"}]},"title":"A Comparison of Classical and Deep Learning-based Techniques for Compressing Signals in a Union of Subspaces.","venue":"DCC","pages":"363","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/RavulaJ21","doi":"10.1109/DCC50243.2021.00076","ee":"https://doi.org/10.1109/DCC50243.2021.00076","url":"https://dblp.org/rec/conf/dcc/RavulaJ21"},
+"url":"URL#234329"
+},
+{
+"@score":"1",
+"@id":"234330",
+"info":{"authors":{"author":[{"@pid":"161/6672","text":"Jessica Ray"},{"@pid":"194/7051","text":"Ajay Brahmakshatriya"},{"@pid":"29/4046","text":"Richard Wang"},{"@pid":"57/3523","text":"Shoaib Kamil"},{"@pid":"76/7586","text":"Albert Reuther"},{"@pid":"49/3209","text":"Vivienne Sze"},{"@pid":"a/SPAmarasinghe","text":"Saman P. Amarasinghe"}]},"title":"Domain-Specific Language Abstractions for Compression.","venue":"DCC","pages":"364","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/RayBWKRSA21","doi":"10.1109/DCC50243.2021.00077","ee":"https://doi.org/10.1109/DCC50243.2021.00077","url":"https://dblp.org/rec/conf/dcc/RayBWKRSA21"},
+"url":"URL#234330"
+},
+{
+"@score":"1",
+"@id":"234331",
+"info":{"authors":{"author":{"@pid":"33/2757","text":"Yuriy A. Reznik"}},"title":"Average Performance of Adaptive Streaming.","venue":"DCC","pages":"263-272","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/Reznik21","doi":"10.1109/DCC50243.2021.00034","ee":"https://doi.org/10.1109/DCC50243.2021.00034","url":"https://dblp.org/rec/conf/dcc/Reznik21"},
+"url":"URL#234331"
+},
+{
+"@score":"1",
+"@id":"234332",
+"info":{"authors":{"author":[{"@pid":"183/6201","text":"Anthony D. Rhodes"},{"@pid":"18/4625","text":"Bin Jiang"}]},"title":"Regularized Semi-Nonnegative Matrix Factorization Using L2, 1-Norm for Data Compression.","venue":"DCC","pages":"365","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/RhodesJ21","doi":"10.1109/DCC50243.2021.00042","ee":"https://doi.org/10.1109/DCC50243.2021.00042","url":"https://dblp.org/rec/conf/dcc/RhodesJ21"},
+"url":"URL#234332"
+},
+{
+"@score":"1",
+"@id":"234333",
+"info":{"authors":{"author":[{"@pid":"270/1502","text":"Daniel Roodt"},{"@pid":"47/3886","text":"Ulrich Speidel"},{"@pid":"04/2536-1","text":"Vimal Kumar 0001"},{"@pid":"75/11480","text":"Ryan K. L. Ko"}]},"title":"On Random Editing in LZ-End.","venue":"DCC","pages":"366","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/RoodtSKK21","doi":"10.1109/DCC50243.2021.00074","ee":"https://doi.org/10.1109/DCC50243.2021.00074","url":"https://dblp.org/rec/conf/dcc/RoodtSKK21"},
+"url":"URL#234333"
+},
+{
+"@score":"1",
+"@id":"234334",
+"info":{"authors":{"author":[{"@pid":"223/6806","text":"Debaleena Roy"},{"@pid":"00/8763","text":"Tanaya Guha"},{"@pid":"96/2574","text":"Victor Sanchez"}]},"title":"Graph Based Transforms based on Graph Neural Networks for Predictive Transform Coding.","venue":"DCC","pages":"367","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/RoyGS21","doi":"10.1109/DCC50243.2021.00079","ee":"https://doi.org/10.1109/DCC50243.2021.00079","url":"https://dblp.org/rec/conf/dcc/RoyGS21"},
+"url":"URL#234334"
+},
+{
+"@score":"1",
+"@id":"234335",
+"info":{"authors":{"author":[{"@pid":"233/0701","text":"Joose Sainio"},{"@pid":"149/4675","text":"Alexandre Mercat"},{"@pid":"03/16","text":"Jarno Vanne"}]},"title":"Parallel Implementations of Lambda Domain and R-Lambda Model Rate Control Schemes in a Practical HEVC Encoder.","venue":"DCC","pages":"368","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/SainioMV21","doi":"10.1109/DCC50243.2021.00089","ee":"https://doi.org/10.1109/DCC50243.2021.00089","url":"https://dblp.org/rec/conf/dcc/SainioMV21"},
+"url":"URL#234335"
+},
+{
+"@score":"1",
+"@id":"234336",
+"info":{"authors":{"author":[{"@pid":"96/2574","text":"Victor Sanchez"},{"@pid":"55/10436","text":"Miguel Hernández-Cabronero"},{"@pid":"03/2217","text":"Joan Serra-Sagristà"}]},"title":"Hybrid Intra-Prediction in Lossless Video Coding using Overfitted Neural Networks.","venue":"DCC","pages":"369","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/SanchezHS21","doi":"10.1109/DCC50243.2021.00053","ee":"https://doi.org/10.1109/DCC50243.2021.00053","url":"https://dblp.org/rec/conf/dcc/SanchezHS21"},
+"url":"URL#234336"
+},
+{
+"@score":"1",
+"@id":"234337",
+"info":{"authors":{"author":[{"@pid":"66/3337","text":"Stefan Schwarz"},{"@pid":"66/6059","text":"Markus Rupp"}]},"title":"Tree-Structured Quantization on Grassmann and Stiefel Manifolds.","venue":"DCC","pages":"303-312","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/SchwarzR21","doi":"10.1109/DCC50243.2021.00038","ee":"https://doi.org/10.1109/DCC50243.2021.00038","url":"https://dblp.org/rec/conf/dcc/SchwarzR21"},
+"url":"URL#234337"
+},
+{
+"@score":"1",
+"@id":"234338",
+"info":{"authors":{"author":[{"@pid":"292/5455","text":"Esteban Selva"},{"@pid":"35/4979","text":"Apostolos A. Kountouris"},{"@pid":"20/6466","text":"Yves Louët"}]},"title":"On the Choice of Sampling Rates in Multi-Rate Sampling.","venue":"DCC","pages":"370","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/SelvaKL21","doi":"10.1109/DCC50243.2021.00071","ee":"https://doi.org/10.1109/DCC50243.2021.00071","url":"https://dblp.org/rec/conf/dcc/SelvaKL21"},
+"url":"URL#234338"
+},
+{
+"@score":"1",
+"@id":"234339",
+"info":{"authors":{"author":[{"@pid":"150/5633","text":"Mohammadreza Soltani"},{"@pid":"251/5558","text":"Suya Wu"},{"@pid":"254/8599","text":"Yuerong Li"},{"@pid":"232/3180","text":"Robert J. Ravier"},{"@pid":"94/1825-2","text":"Jie Ding 0002"},{"@pid":"15/2026","text":"Vahid Tarokh"}]},"title":"Compressing Deep Networks Using Fisher Score of Feature Maps.","venue":"DCC","pages":"371","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/SoltaniWLR0T21","doi":"10.1109/DCC50243.2021.00083","ee":"https://doi.org/10.1109/DCC50243.2021.00083","url":"https://dblp.org/rec/conf/dcc/SoltaniWLR0T21"},
+"url":"URL#234339"
+},
+{
+"@score":"1",
+"@id":"234340",
+"info":{"authors":{"author":[{"@pid":"131/4754","text":"Jiaqi Sun"},{"@pid":"16/5135","text":"Wenrui Dai"},{"@pid":"07/7910","text":"Chenglin Li"},{"@pid":"91/4613","text":"Junni Zou"},{"@pid":"21/3569","text":"Hongkai Xiong"}]},"title":"Compressive Sensing via Unfolded 𝓁1-constrained Convolutional Sparse Coding.","venue":"DCC","pages":"183-192","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/SunDLZX21","doi":"10.1109/DCC50243.2021.00026","ee":"https://doi.org/10.1109/DCC50243.2021.00026","url":"https://dblp.org/rec/conf/dcc/SunDLZX21"},
+"url":"URL#234340"
+},
+{
+"@score":"1",
+"@id":"234341",
+"info":{"authors":{"author":[{"@pid":"117/5602","text":"Xuan Sun"},{"@pid":"73/7783-1","text":"Pengyu Liu 0001"},{"@pid":"61/5185","text":"Kebin Jia"},{"@pid":"120/5872","text":"Congcong Wang"}]},"title":"3D-CVQE - An Effective 3D-CNN Quality Enhancement for Compressed Video Using Limited Coding Information.","venue":"DCC","pages":"373","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/SunLJW21","doi":"10.1109/DCC50243.2021.00050","ee":"https://doi.org/10.1109/DCC50243.2021.00050","url":"https://dblp.org/rec/conf/dcc/SunLJW21"},
+"url":"URL#234341"
+},
+{
+"@score":"1",
+"@id":"234342",
+"info":{"authors":{"author":[{"@pid":"149/0556","text":"Xiuwen Sun"},{"@pid":"52/328","text":"Di Wu"},{"@pid":"292/6070","text":"Da Mo"},{"@pid":"55/3002-4","text":"Jie Cui 0004"},{"@pid":"12/2179-1","text":"Hong Zhong 0001"}]},"title":"Accelerating Knuth-Morris-Pratt String Matching over LZ77 Compressed Text.","venue":"DCC","pages":"372","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/SunWM0021","doi":"10.1109/DCC50243.2021.00070","ee":"https://doi.org/10.1109/DCC50243.2021.00070","url":"https://dblp.org/rec/conf/dcc/SunWM0021"},
+"url":"URL#234342"
+},
+{
+"@score":"1",
+"@id":"234343",
+"info":{"authors":{"author":[{"@pid":"97/1143","text":"Hao Tao"},{"@pid":"232/2479","text":"Jian Qian"},{"@pid":"70/5913-3","text":"Li Yu 0003"},{"@pid":"190/4395","text":"Hongkui Wang"}]},"title":"Bi-Prediction Enhancement with Deep Frame Prediction Network for Versatile Video Coding.","venue":"DCC","pages":"374","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/TaoQ0W21","doi":"10.1109/DCC50243.2021.00054","ee":"https://doi.org/10.1109/DCC50243.2021.00054","url":"https://dblp.org/rec/conf/dcc/TaoQ0W21"},
+"url":"URL#234343"
+},
+{
+"@score":"1",
+"@id":"234344",
+"info":{"authors":{"author":[{"@pid":"10/8844","text":"Gerhard Tech"},{"@pid":"226/1006","text":"Jonathan Pfaff"},{"@pid":"91/3474","text":"Heiko Schwarz"},{"@pid":"17/8933","text":"Philipp Helle"},{"@pid":"152/9173","text":"Adam Wieckowski"},{"@pid":"34/499","text":"Detlev Marpe"},{"@pid":"w/ThomasWiegand","text":"Thomas Wiegand"}]},"title":"Fast Partitioning for VVC Intra-Picture Encoding with a CNN Minimizing the Rate-Distortion-Time Cost.","venue":"DCC","pages":"3-12","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/TechPSHWMW21","doi":"10.1109/DCC50243.2021.00008","ee":"https://doi.org/10.1109/DCC50243.2021.00008","url":"https://dblp.org/rec/conf/dcc/TechPSHWMW21"},
+"url":"URL#234344"
+},
+{
+"@score":"1",
+"@id":"234345",
+"info":{"authors":{"author":[{"@pid":"231/2466","text":"Dion Eustathios Olivier Tzamarias"},{"@pid":"190/3045","text":"Kevin Chow"},{"@pid":"32/378","text":"Ian Blanes"},{"@pid":"03/2217","text":"Joan Serra-Sagristà"}]},"title":"Compression of point cloud geometry through a single projection.","venue":"DCC","pages":"63-72","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/TzamariasCBS21","doi":"10.1109/DCC50243.2021.00014","ee":"https://doi.org/10.1109/DCC50243.2021.00014","url":"https://dblp.org/rec/conf/dcc/TzamariasCBS21"},
+"url":"URL#234345"
+},
+{
+"@score":"1",
+"@id":"234346",
+"info":{"authors":{"author":[{"@pid":"29/4282","text":"Aaron B. Wagner"},{"@pid":"84/4973","text":"Johannes Ballé"}]},"title":"Neural Networks Optimally Compress the Sawbridge.","venue":"DCC","pages":"143-152","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/WagnerB21","doi":"10.1109/DCC50243.2021.00022","ee":"https://doi.org/10.1109/DCC50243.2021.00022","url":"https://dblp.org/rec/conf/dcc/WagnerB21"},
+"url":"URL#234346"
+},
+{
+"@score":"1",
+"@id":"234347",
+"info":{"authors":{"author":[{"@pid":"24/4505","text":"Jianqiang Wang"},{"@pid":"71/7248","text":"Dandan Ding"},{"@pid":"13/5830-1","text":"Zhu Li 0001"},{"@pid":"09/2949","text":"Zhan Ma"}]},"title":"Multiscale Point Cloud Geometry Compression.","venue":"DCC","pages":"73-82","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/WangD0M21","doi":"10.1109/DCC50243.2021.00015","ee":"https://doi.org/10.1109/DCC50243.2021.00015","url":"https://dblp.org/rec/conf/dcc/WangD0M21"},
+"url":"URL#234347"
+},
+{
+"@score":"1",
+"@id":"234348",
+"info":{"authors":{"author":[{"@pid":"86/981","text":"Zhao Wang"},{"@pid":"214/9131","text":"Changyue Ma"},{"@pid":"150/6747","text":"Ru-Ling Liao"},{"@pid":"44/5380","text":"Yan Ye"}]},"title":"Multi-Density Convolutional Neural Network for In-Loop Filter in Video Coding.","venue":"DCC","pages":"23-32","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/WangMLY21","doi":"10.1109/DCC50243.2021.00010","ee":"https://doi.org/10.1109/DCC50243.2021.00010","url":"https://dblp.org/rec/conf/dcc/WangMLY21"},
+"url":"URL#234348"
+},
+{
+"@score":"1",
+"@id":"234349",
+"info":{"authors":{"author":[{"@pid":"93/6765-17","text":"Meng Wang 0017"},{"@pid":"34/886","text":"Jizheng Xu"},{"@pid":"89/5992-6","text":"Li Zhang 0006"},{"@pid":"202/6826","text":"Junru Li"},{"@pid":"58/9145-1","text":"Shiqi Wang 0001"}]},"title":"Super Resolution for Compressed Screen Content Video.","venue":"DCC","pages":"173-182","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/WangXZL021","doi":"10.1109/DCC50243.2021.00025","ee":"https://doi.org/10.1109/DCC50243.2021.00025","url":"https://dblp.org/rec/conf/dcc/WangXZL021"},
+"url":"URL#234349"
+},
+{
+"@score":"1",
+"@id":"234350",
+"info":{"authors":{"author":[{"@pid":"19/6246","text":"Suhong Wang"},{"@pid":"12/7627","text":"Xinfeng Zhang"},{"@pid":"126/4540","text":"Shanshe Wang"},{"@pid":"40/5402","text":"Siwei Ma"},{"@pid":"g/WenGao","text":"Wen Gao 0001"}]},"title":"Flow-Grounded Dynamic Texture Synthesis for Video Compression.","venue":"DCC","pages":"375","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/WangZWM021","doi":"10.1109/DCC50243.2021.00062","ee":"https://doi.org/10.1109/DCC50243.2021.00062","url":"https://dblp.org/rec/conf/dcc/WangZWM021"},
+"url":"URL#234350"
+},
+{
+"@score":"1",
+"@id":"234351",
+"info":{"authors":{"author":{"@pid":"292/5484","text":"Cody Yingquan Wu"}},"title":"Improved LZ77 Compression.","venue":"DCC","pages":"377","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/Wu21","doi":"10.1109/DCC50243.2021.00066","ee":"https://doi.org/10.1109/DCC50243.2021.00066","url":"https://dblp.org/rec/conf/dcc/Wu21"},
+"url":"URL#234351"
+},
+{
+"@score":"1",
+"@id":"234352",
+"info":{"authors":{"author":[{"@pid":"139/6969","text":"Peiyin Xing"},{"@pid":"138/4251","text":"Yangang Cai"},{"@pid":"157/9958","text":"Xufeng Li"},{"@pid":"218/5465","text":"Yonghong Tian"}]},"title":"Short Video Performance Evaluation of AV1 Coding Tools.","venue":"DCC","pages":"378","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/XingCLT21","doi":"10.1109/DCC50243.2021.00043","ee":"https://doi.org/10.1109/DCC50243.2021.00043","url":"https://dblp.org/rec/conf/dcc/XingCLT21"},
+"url":"URL#234352"
+},
+{
+"@score":"1",
+"@id":"234353",
+"info":{"authors":{"author":[{"@pid":"188/6025","text":"Jiacheng Xu"},{"@pid":"21/4944","text":"Zhijun Fang"},{"@pid":"166/2757","text":"Yongbin Gao"},{"@pid":"40/5402","text":"Siwei Ma"},{"@pid":"j/YaochuJin","text":"Yaochu Jin"},{"@pid":"19/225","text":"Heng Zhou"},{"@pid":"221/9646","text":"Anjie Wang"}]},"title":"Point AE-DCGAN - A deep learning model for 3D point cloud lossy geometry compression.","venue":"DCC","pages":"379","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/XuFGMJZW21","doi":"10.1109/DCC50243.2021.00085","ee":"https://doi.org/10.1109/DCC50243.2021.00085","url":"https://dblp.org/rec/conf/dcc/XuFGMJZW21"},
+"url":"URL#234353"
+},
+{
+"@score":"1",
+"@id":"234354",
+"info":{"authors":{"author":[{"@pid":"292/5863","text":"Youmin Xu"},{"@pid":"07/314","text":"Jian Zhang"}]},"title":"Invertible Resampling-Based Layered Image Compression.","venue":"DCC","pages":"380","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/XuZ21","doi":"10.1109/DCC50243.2021.00064","ee":"https://doi.org/10.1109/DCC50243.2021.00064","url":"https://dblp.org/rec/conf/dcc/XuZ21"},
+"url":"URL#234354"
+},
+{
+"@score":"1",
+"@id":"234355",
+"info":{"authors":{"author":[{"@pid":"292/6391","text":"Zongmiao Ye"},{"@pid":"38/8987","text":"Ziwei Li"},{"@pid":"10/2354","text":"Xiaofeng Huang"},{"@pid":"31/8547","text":"Haibing Yin"}]},"title":"Joint Asymmetric Convolution Block and Local/Global Context Optimization for Learned Image Compression.","venue":"DCC","pages":"381","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/YeLHY21","doi":"10.1109/DCC50243.2021.00065","ee":"https://doi.org/10.1109/DCC50243.2021.00065","url":"https://dblp.org/rec/conf/dcc/YeLHY21"},
+"url":"URL#234355"
+},
+{
+"@score":"1",
+"@id":"234356",
+"info":{"authors":{"author":[{"@pid":"13/8730","text":"Huanchen Zhang"},{"@pid":"70/5913-3","text":"Li Yu 0003"},{"@pid":"129/1049","text":"Tiansong Li"},{"@pid":"190/4395","text":"Hongkui Wang"}]},"title":"Fast GLCM-based Intra Block Partition for VVC.","venue":"DCC","pages":"382","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/Zhang0LW21","doi":"10.1109/DCC50243.2021.00060","ee":"https://doi.org/10.1109/DCC50243.2021.00060","url":"https://dblp.org/rec/conf/dcc/Zhang0LW21"},
+"url":"URL#234356"
+},
+{
+"@score":"1",
+"@id":"234357",
+"info":{"authors":{"author":[{"@pid":"277/4550","text":"Qiuyang Zhang"},{"@pid":"10/2354","text":"Xiaofeng Huang"},{"@pid":"31/8547","text":"Haibing Yin"},{"@pid":"55/3127","text":"Weihong Niu"}]},"title":"Deformable Convolution Network based Invertibility-Driven Interpolation Filter for HEVC.","venue":"DCC","pages":"383","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/ZhangHYN21","doi":"10.1109/DCC50243.2021.00069","ee":"https://doi.org/10.1109/DCC50243.2021.00069","url":"https://dblp.org/rec/conf/dcc/ZhangHYN21"},
+"url":"URL#234357"
+},
+{
+"@score":"1",
+"@id":"234358",
+"info":{"authors":{"author":[{"@pid":"36/2259","text":"Bo Zhang"},{"@pid":"43/5467","text":"Di Xiao"},{"@pid":"64/10471","text":"Mengdi Wang"},{"@pid":"32/4953","text":"Jia Liang"}]},"title":"Privacy-Preserving Compressed Sensing for Image Simultaneous Compression-Encryption Applications.","venue":"DCC","pages":"283-292","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/ZhangXWL21","doi":"10.1109/DCC50243.2021.00036","ee":"https://doi.org/10.1109/DCC50243.2021.00036","url":"https://dblp.org/rec/conf/dcc/ZhangXWL21"},
+"url":"URL#234358"
+},
+{
+"@score":"1",
+"@id":"234359",
+"info":{"authors":{"author":[{"@pid":"49/825","text":"Wang Zhe"},{"@pid":"88/6731-1","text":"Jie Lin 0001"},{"@pid":"74/5309","text":"Mohamed M. Sabry Aly"},{"@pid":"142/0275","text":"Sean I. Young"},{"@pid":"49/5139","text":"Vijay Chandrasekhar 0001"},{"@pid":"g/BerndGirod","text":"Bernd Girod"}]},"title":"Rate-Distortion Optimized Coding for Efficient CNN Compression.","venue":"DCC","pages":"253-262","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/Zhe0AY0G21","doi":"10.1109/DCC50243.2021.00033","ee":"https://doi.org/10.1109/DCC50243.2021.00033","url":"https://dblp.org/rec/conf/dcc/Zhe0AY0G21"},
+"url":"URL#234359"
+},
+{
+"@score":"1",
+"@id":"234360",
+"info":{"authors":{"author":[{"@pid":"29/7666","text":"Tingting Zhu"},{"@pid":"35/573","text":"Xiao Ma"}]},"title":"Near-Lossless Compression for Sparse Source Using Convolutional Low Density Generator Matrix Codes.","venue":"DCC","pages":"323-332","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dcc/ZhuM21","doi":"10.1109/DCC50243.2021.00040","ee":"https://doi.org/10.1109/DCC50243.2021.00040","url":"https://dblp.org/rec/conf/dcc/ZhuM21"},
+"url":"URL#234360"
+},
+{
+"@score":"1",
+"@id":"335509",
+"info":{"authors":{"author":[{"@pid":"67/4056","text":"Ali Bilgin"},{"@pid":"34/6388","text":"Michael W. Marcellin"},{"@pid":"03/2217","text":"Joan Serra-Sagristà"},{"@pid":"s/JamesAStorer","text":"James A. Storer"}]},"title":"31st Data Compression Conference, DCC 2021, Snowbird, UT, USA, March 23-26, 2021","venue":"DCC","publisher":"IEEE","year":"2021","type":"Editorship","key":"conf/dcc/2021","doi":"10.1109/DCC50243.2021","ee":"https://doi.org/10.1109/DCC50243.2021","url":"https://dblp.org/rec/conf/dcc/2021"},
+"url":"URL#335509"
+}
+]
+}
+}
+}

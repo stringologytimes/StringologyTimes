@@ -1,0 +1,339 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/latin/latin2020.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"122.59"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"51",
+"@dc":"51",
+"@oc":"51",
+"@id":"35360872",
+"text":":facetid:toc:db/conf/latin/latin2020.bht"
+}
+},
+"hits":{
+"@total":"51",
+"@computed":"51",
+"@sent":"51",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"715221",
+"info":{"authors":{"author":[{"@pid":"86/4216-1","text":"Julien Clément 0001"},{"@pid":"17/133","text":"Antoine Genitrini"}]},"title":"Binary Decision Diagrams - From Tree Compaction to Sampling.","venue":"LATIN","pages":"571-583","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/0001G20","doi":"10.1007/978-3-030-61792-9_45","ee":"https://doi.org/10.1007/978-3-030-61792-9_45","url":"https://dblp.org/rec/conf/latin/0001G20"},
+"url":"URL#715221"
+},
+{
+"@score":"1",
+"@id":"715222",
+"info":{"authors":{"author":[{"@pid":"190/5664","text":"Sancrey Rodrigues Alves"},{"@pid":"129/7097","text":"Fernanda Couto"},{"@pid":"62/1933","text":"Luérbio Faria"},{"@pid":"69/3063","text":"Sylvain Gravier"},{"@pid":"79/3504","text":"Sulamita Klein"},{"@pid":"48/11143","text":"Uéverton S. Souza"}]},"title":"Graph Sandwich Problem for the Property of Being Well-Covered and Partitionable into k Independent Sets and ℓ Cliques.","venue":"LATIN","pages":"587-599","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/AlvesCFGKS20","doi":"10.1007/978-3-030-61792-9_46","ee":"https://doi.org/10.1007/978-3-030-61792-9_46","url":"https://dblp.org/rec/conf/latin/AlvesCFGKS20"},
+"url":"URL#715222"
+},
+{
+"@score":"1",
+"@id":"715223",
+"info":{"authors":{"author":[{"@pid":"230/8539","text":"Bertie Ancona"},{"@pid":"222/1644","text":"Ayesha Bajwa"},{"@pid":"l/NancyALynch","text":"Nancy A. Lynch"},{"@pid":"119/4801","text":"Frederik Mallmann-Trenn"}]},"title":"How to Color a French Flag - Biologically Inspired Algorithms for Scale-Invariant Patterning.","venue":"LATIN","pages":"413-424","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/AnconaBLM20","doi":"10.1007/978-3-030-61792-9_33","ee":"https://doi.org/10.1007/978-3-030-61792-9_33","url":"https://dblp.org/rec/conf/latin/AnconaBLM20"},
+"url":"URL#715223"
+},
+{
+"@score":"1",
+"@id":"715224",
+"info":{"authors":{"author":[{"@pid":"249/5002","text":"Ny Aina Andriambolamalala"},{"@pid":"90/2326","text":"Vlady Ravelomanana"}]},"title":"Transmitting once to Elect a Leader on Wireless Networks.","venue":"LATIN","pages":"439-450","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/Andriambolamalala20","doi":"10.1007/978-3-030-61792-9_35","ee":"https://doi.org/10.1007/978-3-030-61792-9_35","url":"https://dblp.org/rec/conf/latin/Andriambolamalala20"},
+"url":"URL#715224"
+},
+{
+"@score":"1",
+"@id":"715225",
+"info":{"authors":{"author":[{"@pid":"131/6702","text":"Elena Arseneva"},{"@pid":"b/PBose","text":"Prosenjit Bose"},{"@pid":"41/11336","text":"Pilar Cano"},{"@pid":"77/3314","text":"Rodrigo I. Silveira"}]},"title":"Flips in Higher Order Delaunay Triangulations.","venue":"LATIN","pages":"223-234","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/ArsenevaBCS20","doi":"10.1007/978-3-030-61792-9_18","ee":"https://doi.org/10.1007/978-3-030-61792-9_18","url":"https://dblp.org/rec/conf/latin/ArsenevaBCS20"},
+"url":"URL#715225"
+},
+{
+"@score":"1",
+"@id":"715226",
+"info":{"authors":{"author":[{"@pid":"04/5911","text":"Chen Avin"},{"@pid":"62/11365","text":"Kaushik Mondal 0001"},{"@pid":"58/3289-1","text":"Stefan Schmid 0001"}]},"title":"Dynamically Optimal Self-adjusting Single-Source Tree Networks.","venue":"LATIN","pages":"143-154","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/Avin0020","doi":"10.1007/978-3-030-61792-9_12","ee":"https://doi.org/10.1007/978-3-030-61792-9_12","url":"https://dblp.org/rec/conf/latin/Avin0020"},
+"url":"URL#715226"
+},
+{
+"@score":"1",
+"@id":"715227",
+"info":{"authors":{"author":[{"@pid":"172/0877","text":"Costin Badescu"},{"@pid":"34/5965","text":"Ryan O&apos;Donnell"}]},"title":"Lower Bounds for Testing Complete Positivity and Quantum Separability.","venue":"LATIN","pages":"375-386","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/BadescuO20","doi":"10.1007/978-3-030-61792-9_30","ee":"https://doi.org/10.1007/978-3-030-61792-9_30","url":"https://dblp.org/rec/conf/latin/BadescuO20"},
+"url":"URL#715227"
+},
+{
+"@score":"1",
+"@id":"715228",
+"info":{"authors":{"author":[{"@pid":"56/4190","text":"Gill Barequet"},{"@pid":"222/0317","text":"Gil Ben-Shachar"}]},"title":"On Minimal-Perimeter Lattice Animals.","venue":"LATIN","pages":"519-531","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/BarequetB20","doi":"10.1007/978-3-030-61792-9_41","ee":"https://doi.org/10.1007/978-3-030-61792-9_41","url":"https://dblp.org/rec/conf/latin/BarequetB20"},
+"url":"URL#715228"
+},
+{
+"@score":"1",
+"@id":"715229",
+"info":{"authors":{"author":[{"@pid":"56/4190","text":"Gill Barequet"},{"@pid":"142/9866","text":"Mira Shalah"}]},"title":"Improved Upper Bounds on the Growth Constants of Polyominoes and Polycubes.","venue":"LATIN","pages":"532-545","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/BarequetS20","doi":"10.1007/978-3-030-61792-9_42","ee":"https://doi.org/10.1007/978-3-030-61792-9_42","url":"https://dblp.org/rec/conf/latin/BarequetS20"},
+"url":"URL#715229"
+},
+{
+"@score":"1",
+"@id":"715230",
+"info":{"authors":{"author":[{"@pid":"53/4062","text":"Frank Bauernöppel"},{"@pid":"m/AnilMaheshwari","text":"Anil Maheshwari"},{"@pid":"s/JRSack","text":"Jörg-Rüdiger Sack"}]},"title":"An $\\varOmega (n3)$ Lower Bound on the Number of Cell Crossings for Weighted Shortest Paths in 3-Dimensional Polyhedral Structures.","venue":"LATIN","pages":"235-246","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/BauernoppelMS20","doi":"10.1007/978-3-030-61792-9_19","ee":"https://doi.org/10.1007/978-3-030-61792-9_19","url":"https://dblp.org/rec/conf/latin/BauernoppelMS20"},
+"url":"URL#715230"
+},
+{
+"@score":"1",
+"@id":"715231",
+"info":{"authors":{"author":[{"@pid":"b/MichaelABender","text":"Michael A. Bender"},{"@pid":"90/9661","text":"Mayank Goswami 0001"},{"@pid":"117/4909","text":"Dzejla Medjedovic"},{"@pid":"10/8240","text":"Pablo Montes"},{"@pid":"87/172","text":"Kostas Tsichlas"}]},"title":"Batched Predecessor and Sorting with Size-Priced Information in External Memory.","venue":"LATIN","pages":"155-167","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/Bender0MMT20","doi":"10.1007/978-3-030-61792-9_13","ee":"https://doi.org/10.1007/978-3-030-61792-9_13","url":"https://dblp.org/rec/conf/latin/Bender0MMT20"},
+"url":"URL#715231"
+},
+{
+"@score":"1",
+"@id":"715232",
+"info":{"authors":{"author":[{"@pid":"218/6332","text":"Louisa Seelbach Benkner"},{"@pid":"76/3818","text":"Stephan G. Wagner"}]},"title":"On the Collection of Fringe Subtrees in Random Binary Trees.","venue":"LATIN","pages":"546-558","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/BenknerW20","doi":"10.1007/978-3-030-61792-9_43","ee":"https://doi.org/10.1007/978-3-030-61792-9_43","url":"https://dblp.org/rec/conf/latin/BenknerW20"},
+"url":"URL#715232"
+},
+{
+"@score":"1",
+"@id":"715233",
+"info":{"authors":{"author":{"@pid":"b/SergeyBereg","text":"Sergey Bereg"}},"title":"Computing Balanced Convex Partitions of Lines.","venue":"LATIN","pages":"247-257","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/Bereg20","doi":"10.1007/978-3-030-61792-9_20","ee":"https://doi.org/10.1007/978-3-030-61792-9_20","url":"https://dblp.org/rec/conf/latin/Bereg20"},
+"url":"URL#715233"
+},
+{
+"@score":"1",
+"@id":"715234",
+"info":{"authors":{"author":[{"@pid":"98/281","text":"Jean R. S. Blair"},{"@pid":"96/4012","text":"Pinar Heggernes"},{"@pid":"198/0891","text":"Paloma T. Lima"},{"@pid":"78/67","text":"Daniel Lokshtanov"}]},"title":"On the Maximum Number of Edges in Chordal Graphs of Bounded Degree and Matching Number.","venue":"LATIN","pages":"600-612","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/BlairHLL20","doi":"10.1007/978-3-030-61792-9_47","ee":"https://doi.org/10.1007/978-3-030-61792-9_47","url":"https://dblp.org/rec/conf/latin/BlairHLL20"},
+"url":"URL#715234"
+},
+{
+"@score":"1",
+"@id":"715235",
+"info":{"authors":{"author":[{"@pid":"118/7155","text":"Ivan Bliznets"},{"@pid":"224/0154","text":"Danil Sagunov"}]},"title":"Maximizing Happiness in Graphs of Bounded Clique-Width.","venue":"LATIN","pages":"91-103","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/BliznetsS20","doi":"10.1007/978-3-030-61792-9_8","ee":"https://doi.org/10.1007/978-3-030-61792-9_8","url":"https://dblp.org/rec/conf/latin/BliznetsS20"},
+"url":"URL#715235"
+},
+{
+"@score":"1",
+"@id":"715236",
+"info":{"authors":{"author":[{"@pid":"b/HLBodlaender","text":"Hans L. Bodlaender"},{"@pid":"163/1776","text":"Nick Brettell"},{"@pid":"j/MatthewJohnson2","text":"Matthew Johnson 0002"},{"@pid":"211/7917","text":"Giacomo Paesani"},{"@pid":"18/5531","text":"Daniël Paulusma"},{"@pid":"52/269","text":"Erik Jan van Leeuwen"}]},"title":"Steiner Trees for Hereditary Graph Classes.","venue":"LATIN","pages":"613-624","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/BodlaenderB0PPL20","doi":"10.1007/978-3-030-61792-9_48","ee":"https://doi.org/10.1007/978-3-030-61792-9_48","url":"https://dblp.org/rec/conf/latin/BodlaenderB0PPL20"},
+"url":"URL#715236"
+},
+{
+"@score":"1",
+"@id":"715237",
+"info":{"authors":{"author":{"@pid":"97/6852","text":"Miklós Bóna"}},"title":"A Method to Prove the Nonrationality of Some Combinatorial Generating Functions.","venue":"LATIN","pages":"559-570","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/Bona20","doi":"10.1007/978-3-030-61792-9_44","ee":"https://doi.org/10.1007/978-3-030-61792-9_44","url":"https://dblp.org/rec/conf/latin/Bona20"},
+"url":"URL#715237"
+},
+{
+"@score":"1",
+"@id":"715238",
+"info":{"authors":{"author":[{"@pid":"16/2406","text":"Anthony Bonato"},{"@pid":"77/4787","text":"Konstantinos Georgiou"},{"@pid":"172/5055","text":"Calum MacRury"},{"@pid":"p/PawelPralat","text":"Pawel Pralat"}]},"title":"Probabilistically Faulty Searching on a Half-Line - (Extended Abstract).","venue":"LATIN","pages":"168-180","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/BonatoGMP20","doi":"10.1007/978-3-030-61792-9_14","ee":"https://doi.org/10.1007/978-3-030-61792-9_14","url":"https://dblp.org/rec/conf/latin/BonatoGMP20"},
+"url":"URL#715238"
+},
+{
+"@score":"1",
+"@id":"715239",
+"info":{"authors":{"author":[{"@pid":"50/165","text":"Kevin Buchin"},{"@pid":"279/9441","text":"D. Kosolobov"},{"@pid":"167/0776","text":"Willem Sonke"},{"@pid":"s/BettinaSpeckmann","text":"Bettina Speckmann"},{"@pid":"79/4748","text":"Kevin Verbeek"}]},"title":"Ordered Strip Packing.","venue":"LATIN","pages":"258-270","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/BuchinKSSV20","doi":"10.1007/978-3-030-61792-9_21","ee":"https://doi.org/10.1007/978-3-030-61792-9_21","url":"https://dblp.org/rec/conf/latin/BuchinKSSV20"},
+"url":"URL#715239"
+},
+{
+"@score":"1",
+"@id":"715240",
+"info":{"authors":{"author":[{"@pid":"10/6734","text":"Jaroslaw Byrka"},{"@pid":"175/1166","text":"Mateusz Lewandowski"},{"@pid":"164/1698","text":"Syed Mohammad Meesum"},{"@pid":"26/4384","text":"Joachim Spoerhase"},{"@pid":"172/0912","text":"Sumedha Uniyal"}]},"title":"PTAS for Steiner Tree on Map Graphs.","venue":"LATIN","pages":"3-14","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/ByrkaLMSU20","doi":"10.1007/978-3-030-61792-9_1","ee":"https://doi.org/10.1007/978-3-030-61792-9_1","url":"https://dblp.org/rec/conf/latin/ByrkaLMSU20"},
+"url":"URL#715240"
+},
+{
+"@score":"1",
+"@id":"715241",
+"info":{"authors":{"author":[{"@pid":"188/3019","text":"Charles Carlson"},{"@pid":"42/3927","text":"Alexandra Kolla"},{"@pid":"121/3676","text":"Ray Li"},{"@pid":"279/9791","text":"Nitya Mani"},{"@pid":"77/4142","text":"Benny Sudakov"},{"@pid":"t/LucaTrevisan","text":"Luca Trevisan"}]},"title":"Lower Bounds for Max-Cut via Semidefinite Programming.","venue":"LATIN","pages":"479-490","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/CarlsonKLMST20","doi":"10.1007/978-3-030-61792-9_38","ee":"https://doi.org/10.1007/978-3-030-61792-9_38","url":"https://dblp.org/rec/conf/latin/CarlsonKLMST20"},
+"url":"URL#715241"
+},
+{
+"@score":"1",
+"@id":"715242",
+"info":{"authors":{"author":[{"@pid":"279/9299","text":"Bruno Pasqualotto Cavalar"},{"@pid":"40/9185-1","text":"Mrinal Kumar 0001"},{"@pid":"18/3810","text":"Benjamin Rossman"}]},"title":"Monotone Circuit Lower Bounds from Robust Sunflowers.","venue":"LATIN","pages":"311-322","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/CavalarKR20","doi":"10.1007/978-3-030-61792-9_25","ee":"https://doi.org/10.1007/978-3-030-61792-9_25","url":"https://dblp.org/rec/conf/latin/CavalarKR20"},
+"url":"URL#715242"
+},
+{
+"@score":"1",
+"@id":"715243",
+"info":{"authors":{"author":[{"@pid":"68/8725","text":"Steven Chaplick"},{"@pid":"h/MMHalldorsson","text":"Magnús M. Halldórsson"},{"@pid":"49/11524","text":"Murilo Santos de Lima"},{"@pid":"22/8658","text":"Tigran Tonoyan"}]},"title":"Query Minimization Under Stochastic Uncertainty.","venue":"LATIN","pages":"181-193","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/ChaplickHLT20","doi":"10.1007/978-3-030-61792-9_15","ee":"https://doi.org/10.1007/978-3-030-61792-9_15","url":"https://dblp.org/rec/conf/latin/ChaplickHLT20"},
+"url":"URL#715243"
+},
+{
+"@score":"1",
+"@id":"715244",
+"info":{"authors":{"author":[{"@pid":"09/10825","text":"Siddhesh Chaubal"},{"@pid":"80/4859","text":"Anna Gál"}]},"title":"Tight Bounds on Sensitivity and Block Sensitivity of Some Classes of Transitive Functions.","venue":"LATIN","pages":"323-335","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/ChaubalG20","doi":"10.1007/978-3-030-61792-9_26","ee":"https://doi.org/10.1007/978-3-030-61792-9_26","url":"https://dblp.org/rec/conf/latin/ChaubalG20"},
+"url":"URL#715244"
+},
+{
+"@score":"1",
+"@id":"715245",
+"info":{"authors":{"author":[{"@pid":"200/8545","text":"Rami Daknama"},{"@pid":"00/149","text":"Konstantinos Panagiotou"},{"@pid":"236/6259","text":"Simon Reisser"}]},"title":"Asymptotics for Push on the Complete Graph.","venue":"LATIN","pages":"451-463","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/DaknamaPR20","doi":"10.1007/978-3-030-61792-9_36","ee":"https://doi.org/10.1007/978-3-030-61792-9_36","url":"https://dblp.org/rec/conf/latin/DaknamaPR20"},
+"url":"URL#715245"
+},
+{
+"@score":"1",
+"@id":"715246",
+"info":{"authors":{"author":[{"@pid":"70/3113","text":"Stefan S. Dantchev"},{"@pid":"07/11187","text":"Abdul Ghani"},{"@pid":"00/757","text":"Barnaby Martin"}]},"title":"Sherali-Adams and the Binary Encoding of Combinatorial Principles.","venue":"LATIN","pages":"336-347","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/DantchevGM20","doi":"10.1007/978-3-030-61792-9_27","ee":"https://doi.org/10.1007/978-3-030-61792-9_27","url":"https://dblp.org/rec/conf/latin/DantchevGM20"},
+"url":"URL#715246"
+},
+{
+"@score":"1",
+"@id":"715247",
+"info":{"authors":{"author":[{"@pid":"160/0923","text":"Zakir Deniz"},{"@pid":"217/2625","text":"Simon Nivelle"},{"@pid":"10/6376","text":"Bernard Ries"},{"@pid":"00/4453","text":"David Schindl"}]},"title":"On Some Subclasses of Split B1-EPG Graphs.","venue":"LATIN","pages":"625-636","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/DenizNRS20","doi":"10.1007/978-3-030-61792-9_49","ee":"https://doi.org/10.1007/978-3-030-61792-9_49","url":"https://dblp.org/rec/conf/latin/DenizNRS20"},
+"url":"URL#715247"
+},
+{
+"@score":"1",
+"@id":"715248",
+"info":{"authors":{"author":[{"@pid":"90/5794","text":"Ran Duan"},{"@pid":"124/2515","text":"Haoqing He"},{"@pid":"17/322-8","text":"Tianyi Zhang 0008"}]},"title":"Near-Linear Time Algorithm for Approximate Minimum Degree Spanning Trees.","venue":"LATIN","pages":"15-26","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/DuanH020","doi":"10.1007/978-3-030-61792-9_2","ee":"https://doi.org/10.1007/978-3-030-61792-9_2","url":"https://dblp.org/rec/conf/latin/DuanH020"},
+"url":"URL#715248"
+},
+{
+"@score":"1",
+"@id":"715249",
+"info":{"authors":{"author":{"@pid":"82/4645","text":"Khaled M. Elbassioni"}},"title":"Approximation Algorithms for Cost-Robust Discrete Minimization Problems Based on Their LP-Relaxations.","venue":"LATIN","pages":"27-37","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/Elbassioni20","doi":"10.1007/978-3-030-61792-9_3","ee":"https://doi.org/10.1007/978-3-030-61792-9_3","url":"https://dblp.org/rec/conf/latin/Elbassioni20"},
+"url":"URL#715249"
+},
+{
+"@score":"1",
+"@id":"715250",
+"info":{"authors":{"author":[{"@pid":"255/5386","text":"Vincent Fagnon"},{"@pid":"38/84","text":"Imed Kacem"},{"@pid":"44/6299","text":"Giorgio Lucarelli"},{"@pid":"153/2020","text":"Bertrand Simon"}]},"title":"Scheduling on Hybrid Platforms - Improved Approximability Window.","venue":"LATIN","pages":"38-49","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/FagnonKLS20","doi":"10.1007/978-3-030-61792-9_4","ee":"https://doi.org/10.1007/978-3-030-61792-9_4","url":"https://dblp.org/rec/conf/latin/FagnonKLS20"},
+"url":"URL#715250"
+},
+{
+"@score":"1",
+"@id":"715251",
+"info":{"authors":{"author":[{"@pid":"58/4840","text":"Cristina G. Fernandes"},{"@pid":"125/1597","text":"Carla Negri Lintzmayer"}]},"title":"Leafy Spanning Arborescences in DAGs.","venue":"LATIN","pages":"50-62","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/FernandesL20","doi":"10.1007/978-3-030-61792-9_5","ee":"https://doi.org/10.1007/978-3-030-61792-9_5","url":"https://dblp.org/rec/conf/latin/FernandesL20"},
+"url":"URL#715251"
+},
+{
+"@score":"1",
+"@id":"715252",
+"info":{"authors":{"author":[{"@pid":"06/6306","text":"Petr A. Golovach"},{"@pid":"67/10948","text":"R. Krithika 0001"},{"@pid":"194/6649","text":"Abhishek Sahu"},{"@pid":"11/5491","text":"Saket Saurabh 0001"},{"@pid":"133/1023","text":"Meirav Zehavi"}]},"title":"Graph Hamiltonicity Parameterized by Proper Interval Deletion Set.","venue":"LATIN","pages":"104-115","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/Golovach0S0Z20","doi":"10.1007/978-3-030-61792-9_9","ee":"https://doi.org/10.1007/978-3-030-61792-9_9","url":"https://dblp.org/rec/conf/latin/Golovach0S0Z20"},
+"url":"URL#715252"
+},
+{
+"@score":"1",
+"@id":"715253",
+"info":{"authors":{"author":[{"@pid":"06/6306","text":"Petr A. Golovach"},{"@pid":"198/0891","text":"Paloma T. Lima"},{"@pid":"12/6398","text":"Charis Papadopoulos"}]},"title":"Graph Square Roots of Small Distance from Degree One Graphs.","venue":"LATIN","pages":"116-128","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/GolovachLP20","doi":"10.1007/978-3-030-61792-9_10","ee":"https://doi.org/10.1007/978-3-030-61792-9_10","url":"https://dblp.org/rec/conf/latin/GolovachLP20"},
+"url":"URL#715253"
+},
+{
+"@score":"1",
+"@id":"715254",
+"info":{"authors":{"author":[{"@pid":"121/4247","text":"Guilherme de C. M. Gomes"},{"@pid":"252/5402","text":"Matheus R. Guedes"},{"@pid":"244/2005","text":"Vinícius Fernandes dos Santos"}]},"title":"Structural Parameterizations for Equitable Coloring.","venue":"LATIN","pages":"129-140","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/GomesGS20","doi":"10.1007/978-3-030-61792-9_11","ee":"https://doi.org/10.1007/978-3-030-61792-9_11","url":"https://dblp.org/rec/conf/latin/GomesGS20"},
+"url":"URL#715254"
+},
+{
+"@score":"1",
+"@id":"715255",
+"info":{"authors":{"author":[{"@pid":"61/3357","text":"Marina Groshaus"},{"@pid":"88/5206","text":"André Luiz Pires Guedes"},{"@pid":"250/6012","text":"Fabricio Schiavon Kolberg"}]},"title":"On the Helly Subclasses of Interval Bigraphs and Circular Arc Bigraphs.","venue":"LATIN","pages":"637-648","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/GroshausGK20","doi":"10.1007/978-3-030-61792-9_50","ee":"https://doi.org/10.1007/978-3-030-61792-9_50","url":"https://dblp.org/rec/conf/latin/GroshausGK20"},
+"url":"URL#715255"
+},
+{
+"@score":"1",
+"@id":"715256",
+"info":{"authors":{"author":[{"@pid":"65/2736","text":"Hiêp Hàn"},{"@pid":"k/MarcosAKiwi","text":"Marcos Kiwi"},{"@pid":"239/9067","text":"Matías Pavez-Signé"}]},"title":"Quasi-Random Words and Limits of Word Sequences.","venue":"LATIN","pages":"491-503","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/HanKP20","doi":"10.1007/978-3-030-61792-9_39","ee":"https://doi.org/10.1007/978-3-030-61792-9_39","url":"https://dblp.org/rec/conf/latin/HanKP20"},
+"url":"URL#715256"
+},
+{
+"@score":"1",
+"@id":"715257",
+"info":{"authors":{"author":{"@pid":"88/1129","text":"Shunsuke Inenaga"}},"title":"Suffix Trees, DAWGs and CDAWGs for Forward and Backward Tries.","venue":"LATIN","pages":"194-206","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/Inenaga20","doi":"10.1007/978-3-030-61792-9_16","ee":"https://doi.org/10.1007/978-3-030-61792-9_16","url":"https://dblp.org/rec/conf/latin/Inenaga20"},
+"url":"URL#715257"
+},
+{
+"@score":"1",
+"@id":"715258",
+"info":{"authors":{"author":[{"@pid":"37/3411","text":"Mincheol Kim"},{"@pid":"129/8969","text":"Sang Duk Yoon"},{"@pid":"65/358","text":"Hee-Kap Ahn"}]},"title":"Shortest Rectilinear Path Queries to Rectangles in a Rectangular Domain.","venue":"LATIN","pages":"271-282","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/KimYA20","doi":"10.1007/978-3-030-61792-9_22","ee":"https://doi.org/10.1007/978-3-030-61792-9_22","url":"https://dblp.org/rec/conf/latin/KimYA20"},
+"url":"URL#715258"
+},
+{
+"@score":"1",
+"@id":"715259",
+"info":{"authors":{"author":[{"@pid":"38/9892","text":"Tomasz Kociumaka"},{"@pid":"n/GonzaloNavarro","text":"Gonzalo Navarro"},{"@pid":"121/1143","text":"Nicola Prezza"}]},"title":"Towards a Definitive Measure of Repetitiveness.","venue":"LATIN","pages":"207-219","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/KociumakaNP20","doi":"10.1007/978-3-030-61792-9_17","ee":"https://doi.org/10.1007/978-3-030-61792-9_17","url":"https://dblp.org/rec/conf/latin/KociumakaNP20"},
+"url":"URL#715259"
+},
+{
+"@score":"1",
+"@id":"715260",
+"info":{"authors":{"author":[{"@pid":"202/7859","text":"Ioannis Mantas"},{"@pid":"93/4868","text":"Evanthia Papadopoulou"},{"@pid":"s/VeraSacristan","text":"Vera Sacristán"},{"@pid":"77/3314","text":"Rodrigo I. Silveira"}]},"title":"Farthest Color Voronoi Diagrams - Complexity and Algorithms.","venue":"LATIN","pages":"283-295","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/MantasPSS20","doi":"10.1007/978-3-030-61792-9_23","ee":"https://doi.org/10.1007/978-3-030-61792-9_23","url":"https://dblp.org/rec/conf/latin/MantasPSS20"},
+"url":"URL#715260"
+},
+{
+"@score":"1",
+"@id":"715261",
+"info":{"authors":{"author":[{"@pid":"254/2091","text":"Thiago Marcilon"},{"@pid":"137/5079","text":"Nicolas Almeida Martins"},{"@pid":"39/1114","text":"Rudini Menezes Sampaio"}]},"title":"Hardness of Variants of the Graph Coloring Game.","venue":"LATIN","pages":"348-359","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/MarcilonMS20","doi":"10.1007/978-3-030-61792-9_28","ee":"https://doi.org/10.1007/978-3-030-61792-9_28","url":"https://dblp.org/rec/conf/latin/MarcilonMS20"},
+"url":"URL#715261"
+},
+{
+"@score":"1",
+"@id":"715262",
+"info":{"authors":{"author":[{"@pid":"207/7979","text":"Ido Nachum"},{"@pid":"77/5599","text":"Amir Yehudayoff"}]},"title":"On Symmetry and Initialization for Neural Networks.","venue":"LATIN","pages":"401-412","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/NachumY20","doi":"10.1007/978-3-030-61792-9_32","ee":"https://doi.org/10.1007/978-3-030-61792-9_32","url":"https://dblp.org/rec/conf/latin/NachumY20"},
+"url":"URL#715262"
+},
+{
+"@score":"1",
+"@id":"715263",
+"info":{"authors":{"author":[{"@pid":"279/9800","text":"Daria Pchelina"},{"@pid":"41/3248","text":"Nicolas Schabanel"},{"@pid":"70/1118","text":"Shinnosuke Seki"},{"@pid":"223/4899","text":"Yuki Ubukata"}]},"title":"Simple Intrinsic Simulation of Cellular Automata in Oritatami Molecular Folding Model.","venue":"LATIN","pages":"425-436","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/PchelinaSSU20","doi":"10.1007/978-3-030-61792-9_34","ee":"https://doi.org/10.1007/978-3-030-61792-9_34","url":"https://dblp.org/rec/conf/latin/PchelinaSSU20"},
+"url":"URL#715263"
+},
+{
+"@score":"1",
+"@id":"715264",
+"info":{"authors":{"author":[{"@pid":"117/0708","text":"Lehilton L. C. Pedrosa"},{"@pid":"202/8266","text":"Greis Y. O. Quesquén"}]},"title":"Approximating Routing and Connectivity Problems with Multiple Distances.","venue":"LATIN","pages":"63-75","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/PedrosaQ20","doi":"10.1007/978-3-030-61792-9_6","ee":"https://doi.org/10.1007/978-3-030-61792-9_6","url":"https://dblp.org/rec/conf/latin/PedrosaQ20"},
+"url":"URL#715264"
+},
+{
+"@score":"1",
+"@id":"715265",
+"info":{"authors":{"author":[{"@pid":"117/0708","text":"Lehilton L. C. Pedrosa"},{"@pid":"254/2037","text":"Hugo Kooki Kasuya Rosado"}]},"title":"A 2-Approximation for the k-Prize-Collecting Steiner Tree Problem.","venue":"LATIN","pages":"76-88","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/PedrosaR20","doi":"10.1007/978-3-030-61792-9_7","ee":"https://doi.org/10.1007/978-3-030-61792-9_7","url":"https://dblp.org/rec/conf/latin/PedrosaR20"},
+"url":"URL#715265"
+},
+{
+"@score":"1",
+"@id":"715266",
+"info":{"authors":{"author":[{"@pid":"78/7298","text":"Pablo Pérez-Lantero"},{"@pid":"88/3711","text":"Carlos Seara"},{"@pid":"u/JorgeUrrutia","text":"Jorge Urrutia"}]},"title":"Rectilinear Convex Hull of Points in 3D.","venue":"LATIN","pages":"296-307","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/Perez-LanteroSU20","doi":"10.1007/978-3-030-61792-9_24","ee":"https://doi.org/10.1007/978-3-030-61792-9_24","url":"https://dblp.org/rec/conf/latin/Perez-LanteroSU20"},
+"url":"URL#715266"
+},
+{
+"@score":"1",
+"@id":"715267",
+"info":{"authors":{"author":[{"@pid":"214/3039","text":"Md Lutfar Rahman"},{"@pid":"27/5091-1","text":"Thomas Watson 0001"}]},"title":"Tractable Unordered 3-CNF Games.","venue":"LATIN","pages":"360-372","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/Rahman020","doi":"10.1007/978-3-030-61792-9_29","ee":"https://doi.org/10.1007/978-3-030-61792-9_29","url":"https://dblp.org/rec/conf/latin/Rahman020"},
+"url":"URL#715267"
+},
+{
+"@score":"1",
+"@id":"715268",
+"info":{"authors":{"author":[{"@pid":"279/9123","text":"Andrew Read-McFarland"},{"@pid":"00/3605","text":"Daniel Stefankovic"}]},"title":"The Hardness of Sampling Connected Subgraphs.","venue":"LATIN","pages":"464-475","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/Read-McFarlandS20","doi":"10.1007/978-3-030-61792-9_37","ee":"https://doi.org/10.1007/978-3-030-61792-9_37","url":"https://dblp.org/rec/conf/latin/Read-McFarlandS20"},
+"url":"URL#715268"
+},
+{
+"@score":"1",
+"@id":"715269",
+"info":{"authors":{"author":{"@pid":"18/3810","text":"Benjamin Rossman"}},"title":"Thresholds in the Lattice of Subspaces of $\\mathbb {F}_qn$.","venue":"LATIN","pages":"504-515","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/Rossman20","doi":"10.1007/978-3-030-61792-9_40","ee":"https://doi.org/10.1007/978-3-030-61792-9_40","url":"https://dblp.org/rec/conf/latin/Rossman20"},
+"url":"URL#715269"
+},
+{
+"@score":"1",
+"@id":"715270",
+"info":{"authors":{"author":[{"@pid":"17/1972","text":"Kazuya Shimizu"},{"@pid":"29/5791","text":"Ryuhei Mori"}]},"title":"Exponential-Time Quantum Algorithms for Graph Coloring Problems.","venue":"LATIN","pages":"387-398","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/latin/ShimizuM20","doi":"10.1007/978-3-030-61792-9_31","ee":"https://doi.org/10.1007/978-3-030-61792-9_31","url":"https://dblp.org/rec/conf/latin/ShimizuM20"},
+"url":"URL#715270"
+},
+{
+"@score":"1",
+"@id":"762342",
+"info":{"authors":{"author":[{"@pid":"48/5131","text":"Yoshiharu Kohayakawa"},{"@pid":"m/FlavioKeidiMiyazawa","text":"Flávio Keidi Miyazawa"}]},"title":"LATIN 2020 - Theoretical Informatics - 14th Latin American Symposium, São Paulo, Brazil, January 5-8, 2021, Proceedings","venue":["LATIN","Lecture Notes in Computer Science"],"volume":"12118","publisher":"Springer","year":"2020","type":"Editorship","key":"conf/latin/2020","doi":"10.1007/978-3-030-61792-9","ee":"https://doi.org/10.1007/978-3-030-61792-9","url":"https://dblp.org/rec/conf/latin/2020"},
+"url":"URL#762342"
+}
+]
+}
+}
+}

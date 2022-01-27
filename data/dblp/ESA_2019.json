@@ -1,0 +1,543 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/esa/esa2019.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"121.18"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"85",
+"@dc":"85",
+"@oc":"85",
+"@id":"35343945",
+"text":":facetid:toc:db/conf/esa/esa2019.bht"
+}
+},
+"hits":{
+"@total":"85",
+"@computed":"85",
+"@sent":"85",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"1053600",
+"info":{"authors":{"author":[{"@pid":"26/2051","text":"Martin Aumüller 0001"},{"@pid":"150/6192","text":"Tobias Christiani"},{"@pid":"p/RasmusPagh","text":"Rasmus Pagh"},{"@pid":"243/7223","text":"Michael Vesterli"}]},"title":"PUFFINN - Parameterless and Universally Fast FInding of Nearest Neighbors.","venue":"ESA","pages":"10:1-10:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/0001CPV19","doi":"10.4230/LIPICS.ESA.2019.10","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.10","url":"https://dblp.org/rec/conf/esa/0001CPV19"},
+"url":"URL#1053600"
+},
+{
+"@score":"1",
+"@id":"1053601",
+"info":{"authors":{"author":[{"@pid":"h/MichaelHoffmann","text":"Michael Hoffmann 0001"},{"@pid":"147/3314","text":"Boris Klemz"}]},"title":"Triconnected Planar Graphs of Maximum Degree Five are Subhamiltonian.","venue":"ESA","pages":"58:1-58:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/0001K19","doi":"10.4230/LIPICS.ESA.2019.58","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.58","url":"https://dblp.org/rec/conf/esa/0001K19"},
+"url":"URL#1053601"
+},
+{
+"@score":"1",
+"@id":"1053602",
+"info":{"authors":{"author":[{"@pid":"g/FGrandoni","text":"Fabrizio Grandoni 0001"},{"@pid":"93/5872","text":"Stefan Kratsch"},{"@pid":"92/715","text":"Andreas Wiese"}]},"title":"Parameterized Approximation Schemes for Independent Set of Rectangles and Geometric Knapsack.","venue":"ESA","pages":"53:1-53:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/0001KW19","doi":"10.4230/LIPICS.ESA.2019.53","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.53","url":"https://dblp.org/rec/conf/esa/0001KW19"},
+"url":"URL#1053602"
+},
+{
+"@score":"1",
+"@id":"1053603",
+"info":{"authors":{"author":[{"@pid":"37/8821","text":"Stefano Leucci 0001"},{"@pid":"82/1212","text":"Chih-Hung Liu 0001"},{"@pid":"220/3828","text":"Simon Meierhans"}]},"title":"Resilient Dictionaries for Randomly Unreliable Memory.","venue":"ESA","pages":"70:1-70:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/0001LM19","doi":"10.4230/LIPICS.ESA.2019.70","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.70","url":"https://dblp.org/rec/conf/esa/0001LM19"},
+"url":"URL#1053603"
+},
+{
+"@score":"1",
+"@id":"1053604",
+"info":{"authors":{"author":[{"@pid":"r/RRavi-1","text":"R. Ravi 0001"},{"@pid":"248/4457","text":"Oleksandr Rudenko"}]},"title":"Multicommodity Multicast, Wireless and Fast.","venue":"ESA","pages":"78:1-78:20","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/0001R19","doi":"10.4230/LIPICS.ESA.2019.78","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.78","url":"https://dblp.org/rec/conf/esa/0001R19"},
+"url":"URL#1053604"
+},
+{
+"@score":"1",
+"@id":"1053605",
+"info":{"authors":{"author":[{"@pid":"g/FGrandoni","text":"Fabrizio Grandoni 0001"},{"@pid":"92/715","text":"Andreas Wiese"}]},"title":"Packing Cars into Narrow Roads - PTASs for Limited Supply Highway.","venue":"ESA","pages":"54:1-54:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/0001W19","doi":"10.4230/LIPICS.ESA.2019.54","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.54","url":"https://dblp.org/rec/conf/esa/0001W19"},
+"url":"URL#1053605"
+},
+{
+"@score":"1",
+"@id":"1053606",
+"info":{"authors":{"author":[{"@pid":"27/4364-17","text":"Jing Chen 0017"},{"@pid":"09/11461","text":"Samuel McCauley"},{"@pid":"124/3768-2","text":"Shikha Singh 0002"}]},"title":"Non-Cooperative Rational Interactive Proofs.","venue":"ESA","pages":"29:1-29:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/0017M019","doi":"10.4230/LIPICS.ESA.2019.29","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.29","url":"https://dblp.org/rec/conf/esa/0017M019"},
+"url":"URL#1053606"
+},
+{
+"@score":"1",
+"@id":"1053607",
+"info":{"authors":{"author":[{"@pid":"55/8317","text":"Marek Adamczyk"},{"@pid":"10/6734","text":"Jaroslaw Byrka"},{"@pid":"165/2455","text":"Jan Marcinkowski"},{"@pid":"164/1698","text":"Syed Mohammad Meesum"},{"@pid":"146/0687","text":"Michal Wlodarczyk 0001"}]},"title":"Constant-Factor FPT Approximation for Capacitated k-Median.","venue":"ESA","pages":"1:1-1:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AdamczykBMM019","doi":"10.4230/LIPICS.ESA.2019.1","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.1","url":"https://dblp.org/rec/conf/esa/AdamczykBMM019"},
+"url":"URL#1053607"
+},
+{
+"@score":"1",
+"@id":"1053608",
+"info":{"authors":{"author":[{"@pid":"91/6116","text":"Peyman Afshani"},{"@pid":"f/RolfFagerberg","text":"Rolf Fagerberg"},{"@pid":"50/10633","text":"David Hammer"},{"@pid":"27/2539","text":"Riko Jacob"},{"@pid":"46/5483","text":"Irina Kostitsyna"},{"@pid":"m/UlrichMeyer-1","text":"Ulrich Meyer 0001"},{"@pid":"173/4727","text":"Manuel Penschuck"},{"@pid":"51/947","text":"Nodari Sitchinava"}]},"title":"Fragile Complexity of Comparison-Based Algorithms.","venue":"ESA","pages":"2:1-2:19","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AfshaniFHJK0PS19","doi":"10.4230/LIPICS.ESA.2019.2","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.2","url":"https://dblp.org/rec/conf/esa/AfshaniFHJK0PS19"},
+"url":"URL#1053608"
+},
+{
+"@score":"1",
+"@id":"1053609",
+"info":{"authors":{"author":[{"@pid":"172/9148","text":"Hugo A. Akitaya"},{"@pid":"46/5034","text":"Esther M. Arkin"},{"@pid":"d/MirelaDamian","text":"Mirela Damian"},{"@pid":"d/ErikDDemaine","text":"Erik D. Demaine"},{"@pid":"87/1621","text":"Vida Dujmovic"},{"@pid":"12/3538","text":"Robin Y. Flatland"},{"@pid":"57/6389","text":"Matias Korman"},{"@pid":"72/7026","text":"Belén Palop"},{"@pid":"181/3984","text":"Irene Parada"},{"@pid":"21/8434","text":"André van Renssen"},{"@pid":"s/VeraSacristan","text":"Vera Sacristán"}]},"title":"Universal Reconfiguration of Facet-Connected Modular Robots by Pivots - The O(1) Musketeers.","venue":"ESA","pages":"3:1-3:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AkitayaADDDFKPP19","doi":"10.4230/LIPICS.ESA.2019.3","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.3","url":"https://dblp.org/rec/conf/esa/AkitayaADDDFKPP19"},
+"url":"URL#1053609"
+},
+{
+"@score":"1",
+"@id":"1053610",
+"info":{"authors":{"author":[{"@pid":"49/4269","text":"Stephen Alstrup"},{"@pid":"139/4227","text":"Søren Dahlgaard"},{"@pid":"135/4993","text":"Arnold Filtser"},{"@pid":"29/11004","text":"Morten Stöckel"},{"@pid":"79/1632","text":"Christian Wulff-Nilsen"}]},"title":"Constructing Light Spanners Deterministically in Near-Linear Time.","venue":"ESA","pages":"4:1-4:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AlstrupDFSW19","doi":"10.4230/LIPICS.ESA.2019.4","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.4","url":"https://dblp.org/rec/conf/esa/AlstrupDFSW19"},
+"url":"URL#1053610"
+},
+{
+"@score":"1",
+"@id":"1053611",
+"info":{"authors":{"author":[{"@pid":"a/AAmir","text":"Amihood Amir"},{"@pid":"219/5886","text":"Itai Boneh"},{"@pid":"184/0588","text":"Panagiotis Charalampopoulos"},{"@pid":"227/1404","text":"Eitan Kondratovsky"}]},"title":"Repetition Detection in a Dynamic String.","venue":"ESA","pages":"5:1-5:18","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AmirBCK19","doi":"10.4230/LIPICS.ESA.2019.5","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.5","url":"https://dblp.org/rec/conf/esa/AmirBCK19"},
+"url":"URL#1053611"
+},
+{
+"@score":"1",
+"@id":"1053612",
+"info":{"authors":{"author":[{"@pid":"a/AAmir","text":"Amihood Amir"},{"@pid":"184/0588","text":"Panagiotis Charalampopoulos"},{"@pid":"89/7966","text":"Solon P. Pissis"},{"@pid":"83/7216","text":"Jakub Radoszewski"}]},"title":"Longest Common Substring Made Fully Dynamic.","venue":"ESA","pages":"6:1-6:17","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AmirCPR19","doi":"10.4230/LIPICS.ESA.2019.6","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.6","url":"https://dblp.org/rec/conf/esa/AmirCPR19"},
+"url":"URL#1053612"
+},
+{
+"@score":"1",
+"@id":"1053613",
+"info":{"authors":{"author":[{"@pid":"136/7215","text":"Haris Angelidakis"},{"@pid":"57/679","text":"Pranjal Awasthi"},{"@pid":"b/AvrimBlum","text":"Avrim Blum"},{"@pid":"193/9727","text":"Vaggos Chatziafratis"},{"@pid":"156/6710","text":"Chen Dan 0001"}]},"title":"Bilu-Linial Stability, Certified Algorithms and the Independent Set Problem.","venue":"ESA","pages":"7:1-7:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AngelidakisABCD19","doi":"10.4230/LIPICS.ESA.2019.7","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.7","url":"https://dblp.org/rec/conf/esa/AngelidakisABCD19"},
+"url":"URL#1053613"
+},
+{
+"@score":"1",
+"@id":"1053614",
+"info":{"authors":{"author":[{"@pid":"91/7609","text":"Antonios Antoniadis"},{"@pid":"202/1913","text":"Felix Biermeier"},{"@pid":"220/3316","text":"Andrés Cristi"},{"@pid":"248/4460","text":"Christoph Damerius"},{"@pid":"78/11131","text":"Ruben Hoeksma"},{"@pid":"46/8192","text":"Dominik Kaaser"},{"@pid":"98/8192","text":"Peter Kling"},{"@pid":"248/4459","text":"Lukas Nölke"}]},"title":"On the Complexity of Anchored Rectangle Packing.","venue":"ESA","pages":"8:1-8:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/AntoniadisBCDHK19","doi":"10.4230/LIPICS.ESA.2019.8","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.8","url":"https://dblp.org/rec/conf/esa/AntoniadisBCDHK19"},
+"url":"URL#1053614"
+},
+{
+"@score":"1",
+"@id":"1053615",
+"info":{"authors":{"author":{"@pid":"160/8742","text":"Simon Apers"}},"title":"Quantum Walk Sampling by Growing Seed Sets.","venue":"ESA","pages":"9:1-9:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Apers19","doi":"10.4230/LIPICS.ESA.2019.9","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.9","url":"https://dblp.org/rec/conf/esa/Apers19"},
+"url":"URL#1053615"
+},
+{
+"@score":"1",
+"@id":"1053616",
+"info":{"authors":{"author":[{"@pid":"07/3300","text":"Evripidis Bampis"},{"@pid":"96/3761","text":"Bruno Escoffier"},{"@pid":"133/8330","text":"Kevin Schewior"},{"@pid":"234/9141","text":"Alexandre Teiller"}]},"title":"Online Multistage Subset Maximization Problems.","venue":"ESA","pages":"11:1-11:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BampisEST19","doi":"10.4230/LIPICS.ESA.2019.11","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.11","url":"https://dblp.org/rec/conf/esa/BampisEST19"},
+"url":"URL#1053616"
+},
+{
+"@score":"1",
+"@id":"1053617",
+"info":{"authors":{"author":[{"@pid":"124/9336","text":"Sayan Bandyapadhyay"},{"@pid":"176/5261-2","text":"Tanmay Inamdar 0002"},{"@pid":"200/7900","text":"Shreyas Pai"},{"@pid":"v/KasturiRVaradarajan","text":"Kasturi R. Varadarajan"}]},"title":"A Constant Approximation for Colorful k-Center.","venue":"ESA","pages":"12:1-12:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Bandyapadhyay0P19","doi":"10.4230/LIPICS.ESA.2019.12","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.12","url":"https://dblp.org/rec/conf/esa/Bandyapadhyay0P19"},
+"url":"URL#1053617"
+},
+{
+"@score":"1",
+"@id":"1053618",
+"info":{"authors":{"author":[{"@pid":"30/1815","text":"Ulrich Bauer"},{"@pid":"179/2487","text":"Abhishek Rathod"},{"@pid":"49/8037","text":"Jonathan Spreer"}]},"title":"Parametrized Complexity of Expansion Height.","venue":"ESA","pages":"13:1-13:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BauerRS19","doi":"10.4230/LIPICS.ESA.2019.13","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.13","url":"https://dblp.org/rec/conf/esa/BauerRS19"},
+"url":"URL#1053618"
+},
+{
+"@score":"1",
+"@id":"1053619",
+"info":{"authors":{"author":[{"@pid":"118/6034","text":"Moritz Baum"},{"@pid":"173/5447","text":"Valentin Buchhold"},{"@pid":"204/1698","text":"Jonas Sauer"},{"@pid":"w/DorotheaWagner","text":"Dorothea Wagner"},{"@pid":"129/9097","text":"Tobias Zündorf"}]},"title":"UnLimited TRAnsfers for Multi-Modal Route Planning - An Efficient Solution.","venue":"ESA","pages":"14:1-14:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BaumBSWZ19","doi":"10.4230/LIPICS.ESA.2019.14","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.14","url":"https://dblp.org/rec/conf/esa/BaumBSWZ19"},
+"url":"URL#1053619"
+},
+{
+"@score":"1",
+"@id":"1053620",
+"info":{"authors":{"author":[{"@pid":"192/1220","text":"Soheil Behnezhad"},{"@pid":"192/1807","text":"Mahsa Derakhshan"},{"@pid":"h/MohammadTaghiHajiaghayi","text":"MohammadTaghi Hajiaghayi"},{"@pid":"245/0342","text":"Marina Knittel"},{"@pid":"220/4173","text":"Hamed Saleh"}]},"title":"Streaming and Massively Parallel Algorithms for Edge Coloring.","venue":"ESA","pages":"15:1-15:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BehnezhadDHKS19","doi":"10.4230/LIPICS.ESA.2019.15","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.15","url":"https://dblp.org/rec/conf/esa/BehnezhadDHKS19"},
+"url":"URL#1053620"
+},
+{
+"@score":"1",
+"@id":"1053621",
+"info":{"authors":{"author":{"@pid":"24/4309","text":"Aleksandrs Belovs"}},"title":"Quantum Algorithms for Classical Probability Distributions.","venue":"ESA","pages":"16:1-16:11","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Belovs19","doi":"10.4230/LIPICS.ESA.2019.16","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.16","url":"https://dblp.org/rec/conf/esa/Belovs19"},
+"url":"URL#1053621"
+},
+{
+"@score":"1",
+"@id":"1053622",
+"info":{"authors":{"author":[{"@pid":"195/6279","text":"Benjamin Bergougnoux"},{"@pid":"95/5094","text":"Mamadou Moustapha Kanté"}]},"title":"More Applications of the d-Neighbor Equivalence - Connectivity and Acyclicity Constraints.","venue":"ESA","pages":"17:1-17:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BergougnouxK19","doi":"10.4230/LIPICS.ESA.2019.17","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.17","url":"https://dblp.org/rec/conf/esa/BergougnouxK19"},
+"url":"URL#1053622"
+},
+{
+"@score":"1",
+"@id":"1053623",
+"info":{"authors":{"author":[{"@pid":"154/6431","text":"Sebastian Berndt"},{"@pid":"e/LeahEpstein","text":"Leah Epstein"},{"@pid":"j/KlausJansen","text":"Klaus Jansen"},{"@pid":"28/6051","text":"Asaf Levin"},{"@pid":"173/4588","text":"Marten Maack"},{"@pid":"190/7543","text":"Lars Rohwedder"}]},"title":"Online Bin Covering with Limited Migration.","venue":"ESA","pages":"18:1-18:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BerndtEJLMR19","doi":"10.4230/LIPICS.ESA.2019.18","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.18","url":"https://dblp.org/rec/conf/esa/BerndtEJLMR19"},
+"url":"URL#1053623"
+},
+{
+"@score":"1",
+"@id":"1053624",
+"info":{"authors":{"author":[{"@pid":"168/4757","text":"Georgios Birmpas"},{"@pid":"m/EvangelosMarkakis","text":"Evangelos Markakis"},{"@pid":"s/GuidoSchafer","text":"Guido Schäfer"}]},"title":"Cost Sharing over Combinatorial Domains - Complement-Free Cost Functions and Beyond.","venue":"ESA","pages":"20:1-20:17","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BirmpasMS19","doi":"10.4230/LIPICS.ESA.2019.20","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.20","url":"https://dblp.org/rec/conf/esa/BirmpasMS19"},
+"url":"URL#1053624"
+},
+{
+"@score":"1",
+"@id":"1053625",
+"info":{"authors":{"author":[{"@pid":"74/9125","text":"Thomas Bläsius"},{"@pid":"181/2310-1","text":"Tobias Friedrich 0001"},{"@pid":"172/3865","text":"Maximilian Katzmann"},{"@pid":"m/UlrichMeyer-1","text":"Ulrich Meyer 0001"},{"@pid":"173/4727","text":"Manuel Penschuck"},{"@pid":"216/8408","text":"Christopher Weyand"}]},"title":"Efficiently Generating Geometric Inhomogeneous and Hyperbolic Random Graphs.","venue":"ESA","pages":"21:1-21:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Blasius0K0PW19","doi":"10.4230/LIPICS.ESA.2019.21","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.21","url":"https://dblp.org/rec/conf/esa/Blasius0K0PW19"},
+"url":"URL#1053625"
+},
+{
+"@score":"1",
+"@id":"1053626",
+"info":{"authors":{"author":[{"@pid":"13/2718","text":"Jean-Daniel Boissonnat"},{"@pid":"57/6159","text":"Olivier Devillers"},{"@pid":"64/8015","text":"Kunal Dutta"},{"@pid":"90/1249","text":"Marc Glisse"}]},"title":"Randomized Incremental Construction of Delaunay Triangulations of Nice Point Sets.","venue":"ESA","pages":"22:1-22:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BoissonnatDDG19","doi":"10.4230/LIPICS.ESA.2019.22","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.22","url":"https://dblp.org/rec/conf/esa/BoissonnatDDG19"},
+"url":"URL#1053626"
+},
+{
+"@score":"1",
+"@id":"1053627",
+"info":{"authors":{"author":[{"@pid":"131/6607","text":"Édouard Bonnet"},{"@pid":"61/11063","text":"Yoichi Iwata"},{"@pid":"58/8776","text":"Bart M. P. Jansen"},{"@pid":"k/LukaszKowalik","text":"Lukasz Kowalik"}]},"title":"Fine-Grained Complexity of k-OPT in Bounded-Degree Graphs for Solving TSP.","venue":"ESA","pages":"23:1-23:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BonnetIJK19","doi":"10.4230/LIPICS.ESA.2019.23","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.23","url":"https://dblp.org/rec/conf/esa/BonnetIJK19"},
+"url":"URL#1053627"
+},
+{
+"@score":"1",
+"@id":"1053628",
+"info":{"authors":{"author":[{"@pid":"10/1734","text":"Nicolas Bousquet"},{"@pid":"244/2376","text":"Valentin Bartier"}]},"title":"Linear Transformations Between Colorings in Chordal Graphs.","venue":"ESA","pages":"24:1-24:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BousquetB19","doi":"10.4230/LIPICS.ESA.2019.24","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.24","url":"https://dblp.org/rec/conf/esa/BousquetB19"},
+"url":"URL#1053628"
+},
+{
+"@score":"1",
+"@id":"1053629",
+"info":{"authors":{"author":{"@pid":"182/2067","text":"Cornelius Brand"}},"title":"Patching Colors with Tensors.","venue":"ESA","pages":"25:1-25:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Brand19","doi":"10.4230/LIPICS.ESA.2019.25","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.25","url":"https://dblp.org/rec/conf/esa/Brand19"},
+"url":"URL#1053629"
+},
+{
+"@score":"1",
+"@id":"1053630",
+"info":{"authors":{"author":[{"@pid":"96/2643","text":"Karl Bringmann"},{"@pid":"153/1825","text":"Sándor Kisfaludi-Bak"},{"@pid":"61/8036","text":"Michal Pilipczuk"},{"@pid":"52/269","text":"Erik Jan van Leeuwen"}]},"title":"On Geometric Set Cover for Orthants.","venue":"ESA","pages":"26:1-26:18","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/BringmannKPL19","doi":"10.4230/LIPICS.ESA.2019.26","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.26","url":"https://dblp.org/rec/conf/esa/BringmannKPL19"},
+"url":"URL#1053630"
+},
+{
+"@score":"1",
+"@id":"1053631",
+"info":{"authors":{"author":[{"@pid":"80/5358","text":"Deeparnab Chakrabarty"},{"@pid":"99/662","text":"Chaitanya Swamy"}]},"title":"Simpler and Better Algorithms for Minimum-Norm Load Balancing.","venue":"ESA","pages":"27:1-27:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/ChakrabartyS19","doi":"10.4230/LIPICS.ESA.2019.27","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.27","url":"https://dblp.org/rec/conf/esa/ChakrabartyS19"},
+"url":"URL#1053631"
+},
+{
+"@score":"1",
+"@id":"1053632",
+"info":{"authors":{"author":[{"@pid":"72/4415-1","text":"Jiehua Chen 0001"},{"@pid":"59/6411","text":"Danny Hermelin"},{"@pid":"54/3371","text":"Manuel Sorge"}]},"title":"On Computing Centroids According to the p-Norms of Hamming Distance Vectors.","venue":"ESA","pages":"28:1-28:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/ChenHS19","doi":"10.4230/LIPICS.ESA.2019.28","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.28","url":"https://dblp.org/rec/conf/esa/ChenHS19"},
+"url":"URL#1053632"
+},
+{
+"@score":"1",
+"@id":"1053633",
+"info":{"authors":{"author":[{"@pid":"92/3643","text":"Markus Chimani"},{"@pid":"184/0212","text":"Tilo Wiedera"}]},"title":"Stronger ILPs for the Graph Genus Problem.","venue":"ESA","pages":"30:1-30:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/ChimaniW19","doi":"10.4230/LIPICS.ESA.2019.30","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.30","url":"https://dblp.org/rec/conf/esa/ChimaniW19"},
+"url":"URL#1053633"
+},
+{
+"@score":"1",
+"@id":"1053634",
+"info":{"authors":{"author":[{"@pid":"70/4508","text":"Maria Chudnovsky"},{"@pid":"32/9213","text":"Shenwei Huang"},{"@pid":"63/9303","text":"Pawel Rzazewski"},{"@pid":"139/0817","text":"Sophie Spirkl"},{"@pid":"149/2398","text":"Mingxian Zhong"}]},"title":"Complexity of Ck-Coloring in Hereditary Classes of Graphs.","venue":"ESA","pages":"31:1-31:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/ChudnovskyHRSZ19","doi":"10.4230/LIPICS.ESA.2019.31","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.31","url":"https://dblp.org/rec/conf/esa/ChudnovskyHRSZ19"},
+"url":"URL#1053634"
+},
+{
+"@score":"1",
+"@id":"1053635",
+"info":{"authors":{"author":[{"@pid":"17/5050","text":"Jinhee Chun"},{"@pid":"248/4455","text":"Kenya Kikuchi"},{"@pid":"89/1729","text":"Takeshi Tokuyama"}]},"title":"Consistent Digital Curved Rays and Pseudoline Arrangements.","venue":"ESA","pages":"32:1-32:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/ChunKT19","doi":"10.4230/LIPICS.ESA.2019.32","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.32","url":"https://dblp.org/rec/conf/esa/ChunKT19"},
+"url":"URL#1053635"
+},
+{
+"@score":"1",
+"@id":"1053636",
+"info":{"authors":{"author":[{"@pid":"136/5814","text":"Vincent Cohen-Addad"},{"@pid":"09/4636","text":"Marcin Pilipczuk"},{"@pid":"61/8036","text":"Michal Pilipczuk"}]},"title":"Efficient Approximation Schemes for Uniform-Cost Clustering Problems in Planar Graphs.","venue":"ESA","pages":"33:1-33:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Cohen-AddadPP19","doi":"10.4230/LIPICS.ESA.2019.33","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.33","url":"https://dblp.org/rec/conf/esa/Cohen-AddadPP19"},
+"url":"URL#1053636"
+},
+{
+"@score":"1",
+"@id":"1053637",
+"info":{"authors":{"author":[{"@pid":"56/7270","text":"Wojciech Czerwinski"},{"@pid":"215/5006","text":"Wojciech Nadara"},{"@pid":"09/4636","text":"Marcin Pilipczuk"}]},"title":"Improved Bounds for the Excluded-Minor Approximation of Treedepth.","venue":"ESA","pages":"34:1-34:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/CzerwinskiNP19","doi":"10.4230/LIPICS.ESA.2019.34","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.34","url":"https://dblp.org/rec/conf/esa/CzerwinskiNP19"},
+"url":"URL#1053637"
+},
+{
+"@score":"1",
+"@id":"1053638",
+"info":{"authors":{"author":[{"@pid":"23/584","text":"Jurek Czyzowicz"},{"@pid":"d/DDereniowski","text":"Dariusz Dereniowski"},{"@pid":"p/AndrzejPelc","text":"Andrzej Pelc"}]},"title":"Building a Nest by an Automaton.","venue":"ESA","pages":"35:1-35:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/CzyzowiczDP19","doi":"10.4230/LIPICS.ESA.2019.35","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.35","url":"https://dblp.org/rec/conf/esa/CzyzowiczDP19"},
+"url":"URL#1053638"
+},
+{
+"@score":"1",
+"@id":"1053639",
+"info":{"authors":{"author":[{"@pid":"200/8545","text":"Rami Daknama"},{"@pid":"00/149","text":"Konstantinos Panagiotou"},{"@pid":"236/6259","text":"Simon Reisser"}]},"title":"Robustness of Randomized Rumour Spreading.","venue":"ESA","pages":"36:1-36:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/DaknamaPR19","doi":"10.4230/LIPICS.ESA.2019.36","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.36","url":"https://dblp.org/rec/conf/esa/DaknamaPR19"},
+"url":"URL#1053639"
+},
+{
+"@score":"1",
+"@id":"1053640",
+"info":{"authors":{"author":[{"@pid":"d/ErikDDemaine","text":"Erik D. Demaine"},{"@pid":"151/6299","text":"Timothy D. Goodrich"},{"@pid":"136/6013","text":"Kyle Kloster"},{"@pid":"222/1858","text":"Brian Lavallee"},{"@pid":"203/2800","text":"Quanquan C. Liu"},{"@pid":"21/10630","text":"Blair D. Sullivan"},{"@pid":"116/4679","text":"Ali Vakilian"},{"@pid":"177/9216","text":"Andrew van der Poel"}]},"title":"Structural Rounding - Approximation Algorithms for Graphs Near an Algorithmically Tractable Class.","venue":"ESA","pages":"37:1-37:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/DemaineGKLLSVP19","doi":"10.4230/LIPICS.ESA.2019.37","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.37","url":"https://dblp.org/rec/conf/esa/DemaineGKLLSVP19"},
+"url":"URL#1053640"
+},
+{
+"@score":"1",
+"@id":"1053641",
+"info":{"authors":{"author":[{"@pid":"d/MartinDietzfelbinger","text":"Martin Dietzfelbinger"},{"@pid":"139/7331","text":"Stefan Walzer"}]},"title":"Dense Peelable Random Uniform Hypergraphs.","venue":"ESA","pages":"38:1-38:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/DietzfelbingerW19","doi":"10.4230/LIPICS.ESA.2019.38","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.38","url":"https://dblp.org/rec/conf/esa/DietzfelbingerW19"},
+"url":"URL#1053641"
+},
+{
+"@score":"1",
+"@id":"1053642",
+"info":{"authors":{"author":[{"@pid":"d/MartinDietzfelbinger","text":"Martin Dietzfelbinger"},{"@pid":"139/7331","text":"Stefan Walzer"}]},"title":"Efficient Gauss Elimination for Near-Quadratic Matrices with One Short Random Block per Row, with Applications.","venue":"ESA","pages":"39:1-39:18","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/DietzfelbingerW19a","doi":"10.4230/LIPICS.ESA.2019.39","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.39","url":"https://dblp.org/rec/conf/esa/DietzfelbingerW19a"},
+"url":"URL#1053642"
+},
+{
+"@score":"1",
+"@id":"1053643",
+"info":{"authors":{"author":[{"@pid":"74/9794","text":"Hu Ding"},{"@pid":"241/7280","text":"Haikuo Yu"},{"@pid":"248/4461","text":"Zixiu Wang"}]},"title":"Greedy Strategy Works for k-Center Clustering with Outliers and Coreset Construction.","venue":"ESA","pages":"40:1-40:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/DingYW19","doi":"10.4230/LIPICS.ESA.2019.40","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.40","url":"https://dblp.org/rec/conf/esa/DingYW19"},
+"url":"URL#1053643"
+},
+{
+"@score":"1",
+"@id":"1053644",
+"info":{"authors":{"author":[{"@pid":"195/6001","text":"Patrick Dinklage"},{"@pid":"244/9653","text":"Jonas Ellert"},{"@pid":"90/834-1","text":"Johannes Fischer 0001"},{"@pid":"129/9119","text":"Dominik Köppl"},{"@pid":"173/4727","text":"Manuel Penschuck"}]},"title":"Bidirectional Text Compression in External Memory.","venue":"ESA","pages":"41:1-41:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/DinklageE0KP19","doi":"10.4230/LIPICS.ESA.2019.41","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.41","url":"https://dblp.org/rec/conf/esa/DinklageE0KP19"},
+"url":"URL#1053644"
+},
+{
+"@score":"1",
+"@id":"1053645",
+"info":{"authors":{"author":[{"@pid":"165/8476","text":"Eduard Eiben"},{"@pid":"78/67","text":"Daniel Lokshtanov"},{"@pid":"74/8082","text":"Amer E. Mouawad"}]},"title":"Bisection of Bounded Treewidth Graphs by Convolutions.","venue":"ESA","pages":"42:1-42:11","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/EibenLM19","doi":"10.4230/LIPICS.ESA.2019.42","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.42","url":"https://dblp.org/rec/conf/esa/EibenLM19"},
+"url":"URL#1053645"
+},
+{
+"@score":"1",
+"@id":"1053646",
+"info":{"authors":{"author":[{"@pid":"82/4645","text":"Khaled M. Elbassioni"},{"@pid":"04/3674","text":"Kazuhisa Makino"}]},"title":"Oracle-Based Primal-Dual Algorithms for Packing and Covering Semidefinite Programs.","venue":"ESA","pages":"43:1-43:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/ElbassioniM19","doi":"10.4230/LIPICS.ESA.2019.43","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.43","url":"https://dblp.org/rec/conf/esa/ElbassioniM19"},
+"url":"URL#1053646"
+},
+{
+"@score":"1",
+"@id":"1053647",
+"info":{"authors":{"author":[{"@pid":"80/4824","text":"Yuval Emek"},{"@pid":"248/4458","text":"Adam Goldbraikh"},{"@pid":"92/6079","text":"Erez Kantor"}]},"title":"Online Disjoint Set Cover Without Prior Knowledge.","venue":"ESA","pages":"44:1-44:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/EmekGK19","doi":"10.4230/LIPICS.ESA.2019.44","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.44","url":"https://dblp.org/rec/conf/esa/EmekGK19"},
+"url":"URL#1053647"
+},
+{
+"@score":"1",
+"@id":"1053648",
+"info":{"authors":{"author":[{"@pid":"80/4824","text":"Yuval Emek"},{"@pid":"k/ShayKutten","text":"Shay Kutten"},{"@pid":"16/1346","text":"Ron Lavi"},{"@pid":"135/8716","text":"Yangguang Shi"}]},"title":"Bayesian Generalized Network Design.","venue":"ESA","pages":"45:1-45:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/EmekKLS19","doi":"10.4230/LIPICS.ESA.2019.45","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.45","url":"https://dblp.org/rec/conf/esa/EmekKLS19"},
+"url":"URL#1053648"
+},
+{
+"@score":"1",
+"@id":"1053649",
+"info":{"authors":{"author":[{"@pid":"18/7864","text":"Diodato Ferraioli"},{"@pid":"187/3623","text":"Adrian Meier"},{"@pid":"32/3168","text":"Paolo Penna"},{"@pid":"30/6089","text":"Carmine Ventre"}]},"title":"Obviously Strategyproof Mechanisms for Machine Scheduling.","venue":"ESA","pages":"46:1-46:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/FerraioliMPV19","doi":"10.4230/LIPICS.ESA.2019.46","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.46","url":"https://dblp.org/rec/conf/esa/FerraioliMPV19"},
+"url":"URL#1053649"
+},
+{
+"@score":"1",
+"@id":"1053650",
+"info":{"authors":{"author":[{"@pid":"f/FedorVFomin","text":"Fedor V. Fomin"},{"@pid":"06/6306","text":"Petr A. Golovach"},{"@pid":"78/67","text":"Daniel Lokshtanov"},{"@pid":"60/11535","text":"Fahad Panolan"},{"@pid":"11/5491","text":"Saket Saurabh 0001"},{"@pid":"133/1023","text":"Meirav Zehavi"}]},"title":"Going Far From Degeneracy.","venue":"ESA","pages":"47:1-47:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/FominGLP0Z19","doi":"10.4230/LIPICS.ESA.2019.47","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.47","url":"https://dblp.org/rec/conf/esa/FominGLP0Z19"},
+"url":"URL#1053650"
+},
+{
+"@score":"1",
+"@id":"1053651",
+"info":{"authors":{"author":[{"@pid":"80/7529","text":"Robert Ganian"},{"@pid":"88/3220","text":"Sebastian Ordyniak"},{"@pid":"136/5838","text":"C. S. Rahul"}]},"title":"Group Activity Selection with Few Agent Types.","venue":"ESA","pages":"48:1-48:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/GanianOR19","doi":"10.4230/LIPICS.ESA.2019.48","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.48","url":"https://dblp.org/rec/conf/esa/GanianOR19"},
+"url":"URL#1053651"
+},
+{
+"@score":"1",
+"@id":"1053652",
+"info":{"authors":{"author":[{"@pid":"129/1518","text":"Barbara Geissmann"},{"@pid":"37/8821","text":"Stefano Leucci 0001"},{"@pid":"82/1212","text":"Chih-Hung Liu 0001"},{"@pid":"32/3168","text":"Paolo Penna"}]},"title":"Optimal Sorting with Persistent Comparison Errors.","venue":"ESA","pages":"49:1-49:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Geissmann0LP19","doi":"10.4230/LIPICS.ESA.2019.49","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.49","url":"https://dblp.org/rec/conf/esa/Geissmann0LP19"},
+"url":"URL#1053652"
+},
+{
+"@score":"1",
+"@id":"1053653",
+"info":{"authors":{"author":[{"@pid":"42/6005","text":"Loukas Georgiadis"},{"@pid":"185/0557","text":"Konstantinos Giannis"},{"@pid":"i/GiuseppeFItaliano","text":"Giuseppe F. Italiano"},{"@pid":"173/3026","text":"Aikaterini Karanasiou"},{"@pid":"l/LuigiLaura","text":"Luigi Laura"}]},"title":"Dynamic Dominators and Low-High Orders in DAGs.","venue":"ESA","pages":"50:1-50:18","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/GeorgiadisGIKL19","doi":"10.4230/LIPICS.ESA.2019.50","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.50","url":"https://dblp.org/rec/conf/esa/GeorgiadisGIKL19"},
+"url":"URL#1053653"
+},
+{
+"@score":"1",
+"@id":"1053654",
+"info":{"authors":{"author":[{"@pid":"225/3576","text":"Daniel Gibney"},{"@pid":"99/7237","text":"Sharma V. Thankachan"}]},"title":"On the Hardness and Inapproximability of Recognizing Wheeler Graphs.","venue":"ESA","pages":"51:1-51:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/GibneyT19","doi":"10.4230/LIPICS.ESA.2019.51","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.51","url":"https://dblp.org/rec/conf/esa/GibneyT19"},
+"url":"URL#1053654"
+},
+{
+"@score":"1",
+"@id":"1053655",
+"info":{"authors":{"author":[{"@pid":"243/6884","text":"Lars Gottesbüren"},{"@pid":"128/3534","text":"Michael Hamann"},{"@pid":"w/DorotheaWagner","text":"Dorothea Wagner"}]},"title":"Evaluation of a Flow-Based Hypergraph Bipartitioning Algorithm.","venue":"ESA","pages":"52:1-52:17","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/GottesburenHW19","doi":"10.4230/LIPICS.ESA.2019.52","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.52","url":"https://dblp.org/rec/conf/esa/GottesburenHW19"},
+"url":"URL#1053655"
+},
+{
+"@score":"1",
+"@id":"1053656",
+"info":{"authors":{"author":[{"@pid":"246/4619","text":"Sascha Gritzbach"},{"@pid":"87/2203","text":"Torsten Ueckerdt"},{"@pid":"w/DorotheaWagner","text":"Dorothea Wagner"},{"@pid":"163/1869","text":"Franziska Wegner"},{"@pid":"85/5569-4","text":"Matthias Wolf 0004"}]},"title":"Engineering Negative Cycle Canceling for Wind Farm Cabling.","venue":"ESA","pages":"55:1-55:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/GritzbachUWW019","doi":"10.4230/LIPICS.ESA.2019.55","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.55","url":"https://dblp.org/rec/conf/esa/GritzbachUWW019"},
+"url":"URL#1053656"
+},
+{
+"@score":"1",
+"@id":"1053657",
+"info":{"authors":{"author":[{"@pid":"160/8397","text":"Arash Haddadan"},{"@pid":"n/AlanthaNewman","text":"Alantha Newman"}]},"title":"Towards Improving Christofides Algorithm for Half-Integer TSP.","venue":"ESA","pages":"56:1-56:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/HaddadanN19","doi":"10.4230/LIPICS.ESA.2019.56","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.56","url":"https://dblp.org/rec/conf/esa/HaddadanN19"},
+"url":"URL#1053657"
+},
+{
+"@score":"1",
+"@id":"1053658",
+"info":{"authors":{"author":[{"@pid":"220/2348","text":"Yael Hitron"},{"@pid":"16/9365","text":"Merav Parter"}]},"title":"Counting to Ten with Two Fingers - Compressed Counting with Spiking Neurons.","venue":"ESA","pages":"57:1-57:17","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/HitronP19","doi":"10.4230/LIPICS.ESA.2019.57","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.57","url":"https://dblp.org/rec/conf/esa/HitronP19"},
+"url":"URL#1053658"
+},
+{
+"@score":"1",
+"@id":"1053659",
+"info":{"authors":{"author":[{"@pid":"151/1543","text":"Lorenz Hübschle-Schneider"},{"@pid":"s/PeterSanders","text":"Peter Sanders 0001"}]},"title":"Parallel Weighted Random Sampling.","venue":"ESA","pages":"59:1-59:24","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Hubschle-Schneider19","doi":"10.4230/LIPICS.ESA.2019.59","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.59","url":"https://dblp.org/rec/conf/esa/Hubschle-Schneider19"},
+"url":"URL#1053659"
+},
+{
+"@score":"1",
+"@id":"1053660",
+"info":{"authors":{"author":[{"@pid":"96/2606","text":"John Iacono"},{"@pid":"27/2539","text":"Riko Jacob"},{"@pid":"20/271","text":"Konstantinos Tsakalidis"}]},"title":"External Memory Priority Queues with Decrease-Key and Applications to Graph Algorithms.","venue":"ESA","pages":"60:1-60:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/IaconoJT19","doi":"10.4230/LIPICS.ESA.2019.60","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.60","url":"https://dblp.org/rec/conf/esa/IaconoJT19"},
+"url":"URL#1053660"
+},
+{
+"@score":"1",
+"@id":"1053661",
+"info":{"authors":{"author":[{"@pid":"25/1135","text":"Takehiro Ito"},{"@pid":"45/4449","text":"Naonori Kakimura"},{"@pid":"69/2057","text":"Naoyuki Kamiyama"},{"@pid":"45/1736-1","text":"Yusuke Kobayashi 0001"},{"@pid":"14/837","text":"Yoshio Okamoto"}]},"title":"Shortest Reconfiguration of Perfect Matchings via Alternating Cycles.","venue":"ESA","pages":"61:1-61:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/ItoKK0O19","doi":"10.4230/LIPICS.ESA.2019.61","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.61","url":"https://dblp.org/rec/conf/esa/ItoKK0O19"},
+"url":"URL#1053661"
+},
+{
+"@score":"1",
+"@id":"1053662",
+"info":{"authors":{"author":[{"@pid":"j/KlausJansen","text":"Klaus Jansen"},{"@pid":"173/4586","text":"Malin Rau"}]},"title":"Closing the Gap for Pseudo-Polynomial Strip Packing.","venue":"ESA","pages":"62:1-62:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/JansenR19","doi":"10.4230/LIPICS.ESA.2019.62","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.62","url":"https://dblp.org/rec/conf/esa/JansenR19"},
+"url":"URL#1053662"
+},
+{
+"@score":"1",
+"@id":"1053663",
+"info":{"authors":{"author":[{"@pid":"j/MichaelJunger","text":"Michael Jünger"},{"@pid":"19/3792","text":"Sven Mallach"}]},"title":"Odd-Cycle Separation for Maximum Cut and Binary Quadratic Optimization.","venue":"ESA","pages":"63:1-63:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/JungerM19","doi":"10.4230/LIPICS.ESA.2019.63","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.63","url":"https://dblp.org/rec/conf/esa/JungerM19"},
+"url":"URL#1053663"
+},
+{
+"@score":"1",
+"@id":"1053664",
+"info":{"authors":{"author":[{"@pid":"48/3950","text":"Haim Kaplan"},{"@pid":"211/8025","text":"Katharina Klost"},{"@pid":"m/WolfgangMulzer","text":"Wolfgang Mulzer"},{"@pid":"93/5413","text":"Liam Roditty"},{"@pid":"126/4856","text":"Paul Seiferth"},{"@pid":"s/MichaSharir","text":"Micha Sharir"}]},"title":"Triangles and Girth in Disk Graphs and Transmission Graphs.","venue":"ESA","pages":"64:1-64:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/KaplanKMRSS19","doi":"10.4230/LIPICS.ESA.2019.64","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.64","url":"https://dblp.org/rec/conf/esa/KaplanKMRSS19"},
+"url":"URL#1053664"
+},
+{
+"@score":"1",
+"@id":"1053665",
+"info":{"authors":{"author":[{"@pid":"164/5852","text":"Adam Karczmarz"},{"@pid":"63/9513","text":"Jakub Lacki"}]},"title":"Reliable Hubs for Partially-Dynamic All-Pairs Shortest Paths in Directed Graphs.","venue":"ESA","pages":"65:1-65:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/KarczmarzL19","doi":"10.4230/LIPICS.ESA.2019.65","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.65","url":"https://dblp.org/rec/conf/esa/KarczmarzL19"},
+"url":"URL#1053665"
+},
+{
+"@score":"1",
+"@id":"1053666",
+"info":{"authors":{"author":[{"@pid":"164/5852","text":"Adam Karczmarz"},{"@pid":"80/4282","text":"Piotr Sankowski"}]},"title":"Min-Cost Flow in Unit-Capacity Planar Graphs.","venue":"ESA","pages":"66:1-66:17","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/KarczmarzS19","doi":"10.4230/LIPICS.ESA.2019.66","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.66","url":"https://dblp.org/rec/conf/esa/KarczmarzS19"},
+"url":"URL#1053666"
+},
+{
+"@score":"1",
+"@id":"1053667",
+"info":{"authors":{"author":[{"@pid":"227/3111","text":"Mees van de Kerkhof"},{"@pid":"46/5483","text":"Irina Kostitsyna"},{"@pid":"46/6428","text":"Maarten Löffler"},{"@pid":"207/8568","text":"Majid Mirzanezhad"},{"@pid":"44/3065","text":"Carola Wenk"}]},"title":"Global Curve Simplification.","venue":"ESA","pages":"67:1-67:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/KerkhofKLMW19","doi":"10.4230/LIPICS.ESA.2019.67","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.67","url":"https://dblp.org/rec/conf/esa/KerkhofKLMW19"},
+"url":"URL#1053667"
+},
+{
+"@score":"1",
+"@id":"1053668",
+"info":{"authors":{"author":[{"@pid":"85/8024","text":"Akshay Krishnamurthy"},{"@pid":"77/6050","text":"Arya Mazumdar"},{"@pid":"51/1169","text":"Andrew McGregor 0001"},{"@pid":"206/6371","text":"Soumyabrata Pal"}]},"title":"Trace Reconstruction - Generalized and Parameterized.","venue":"ESA","pages":"68:1-68:25","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/KrishnamurthyM019","doi":"10.4230/LIPICS.ESA.2019.68","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.68","url":"https://dblp.org/rec/conf/esa/KrishnamurthyM019"},
+"url":"URL#1053668"
+},
+{
+"@score":"1",
+"@id":"1053669",
+"info":{"authors":{"author":[{"@pid":"08/5247","text":"Ariel Kulik"},{"@pid":"13/9673","text":"Kanthi K. Sarpatwar"},{"@pid":"s/BaruchSchieber","text":"Baruch Schieber"},{"@pid":"32/897","text":"Hadas Shachnai"}]},"title":"Generalized Assignment via Submodular Optimization with Reserved Capacity.","venue":"ESA","pages":"69:1-69:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/KulikSSS19","doi":"10.4230/LIPICS.ESA.2019.69","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.69","url":"https://dblp.org/rec/conf/esa/KulikSSS19"},
+"url":"URL#1053669"
+},
+{
+"@score":"1",
+"@id":"1053670",
+"info":{"authors":{"author":[{"@pid":"55/2893","text":"Huan Li"},{"@pid":"93/2604-1","text":"He Sun 0001"},{"@pid":"52/9867","text":"Luca Zanetti"}]},"title":"Hermitian Laplacians and a Cheeger Inequality for the Max-2-Lin Problem.","venue":"ESA","pages":"71:1-71:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Li0Z19","doi":"10.4230/LIPICS.ESA.2019.71","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.71","url":"https://dblp.org/rec/conf/esa/Li0Z19"},
+"url":"URL#1053670"
+},
+{
+"@score":"1",
+"@id":"1053671",
+"info":{"authors":{"author":[{"@pid":"167/4065","text":"Tomás Masarík"},{"@pid":"117/9448","text":"Irene Muzi"},{"@pid":"09/4636","text":"Marcin Pilipczuk"},{"@pid":"63/9303","text":"Pawel Rzazewski"},{"@pid":"54/3371","text":"Manuel Sorge"}]},"title":"Packing Directed Circuits Quarter-Integrally.","venue":"ESA","pages":"72:1-72:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/MasarikMPRS19","doi":"10.4230/LIPICS.ESA.2019.72","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.72","url":"https://dblp.org/rec/conf/esa/MasarikMPRS19"},
+"url":"URL#1053671"
+},
+{
+"@score":"1",
+"@id":"1053672",
+"info":{"authors":{"author":[{"@pid":"m/MarcinMucha","text":"Marcin Mucha"},{"@pid":"33/7187","text":"Jesper Nederlof"},{"@pid":"37/400","text":"Jakub Pawlewicz"},{"@pid":"182/6949","text":"Karol Wegrzycki"}]},"title":"Equal-Subset-Sum Faster Than the Meet-in-the-Middle.","venue":"ESA","pages":"73:1-73:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/MuchaNPW19","doi":"10.4230/LIPICS.ESA.2019.73","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.73","url":"https://dblp.org/rec/conf/esa/MuchaNPW19"},
+"url":"URL#1053672"
+},
+{
+"@score":"1",
+"@id":"1053673",
+"info":{"authors":{"author":[{"@pid":"p/RasmusPagh","text":"Rasmus Pagh"},{"@pid":"244/2259","text":"Nina Mesing Stausholm"},{"@pid":"t/MikkelThorup","text":"Mikkel Thorup"}]},"title":"Hardness of Bichromatic Closest Pair with Jaccard Similarity.","venue":"ESA","pages":"74:1-74:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/PaghST19","doi":"10.4230/LIPICS.ESA.2019.74","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.74","url":"https://dblp.org/rec/conf/esa/PaghST19"},
+"url":"URL#1053673"
+},
+{
+"@score":"1",
+"@id":"1053674",
+"info":{"authors":{"author":[{"@pid":"09/1911","text":"Harald Räcke"},{"@pid":"58/3289-1","text":"Stefan Schmid 0001"}]},"title":"Compact Oblivious Routing.","venue":"ESA","pages":"75:1-75:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Racke019","doi":"10.4230/LIPICS.ESA.2019.75","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.75","url":"https://dblp.org/rec/conf/esa/Racke019"},
+"url":"URL#1053674"
+},
+{
+"@score":"1",
+"@id":"1053675",
+"info":{"authors":{"author":[{"@pid":"134/0602","text":"Marcel Radermacher"},{"@pid":"99/44","text":"Ignaz Rutter"}]},"title":"Geometric Crossing-Minimization - A Scalable Randomized Approach.","venue":"ESA","pages":"76:1-76:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/RadermacherR19","doi":"10.4230/LIPICS.ESA.2019.76","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.76","url":"https://dblp.org/rec/conf/esa/RadermacherR19"},
+"url":"URL#1053675"
+},
+{
+"@score":"1",
+"@id":"1053676",
+"info":{"authors":{"author":{"@pid":"04/9023","text":"M. S. Ramanujan 0001"}},"title":"An Approximate Kernel for Connected Feedback Vertex Set.","venue":"ESA","pages":"77:1-77:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/Ramanujan19","doi":"10.4230/LIPICS.ESA.2019.77","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.77","url":"https://dblp.org/rec/conf/esa/Ramanujan19"},
+"url":"URL#1053676"
+},
+{
+"@score":"1",
+"@id":"1053677",
+"info":{"authors":{"author":[{"@pid":"119/4963","text":"Jonathan Rollin"},{"@pid":"39/8820","text":"Lena Schlipf"},{"@pid":"80/1348-1","text":"André Schulz 0001"}]},"title":"Recognizing Planar Laman Graphs.","venue":"ESA","pages":"79:1-79:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/RollinS019","doi":"10.4230/LIPICS.ESA.2019.79","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.79","url":"https://dblp.org/rec/conf/esa/RollinS019"},
+"url":"URL#1053677"
+},
+{
+"@score":"1",
+"@id":"1053678",
+"info":{"authors":{"author":[{"@pid":"99/44","text":"Ignaz Rutter"},{"@pid":"18/3295","text":"Darren Strash"},{"@pid":"122/6810","text":"Peter Stumpf"},{"@pid":"89/5323-1","text":"Michael Vollmer 0001"}]},"title":"Simultaneous Representation of Proper and Unit Interval Graphs.","venue":"ESA","pages":"80:1-80:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/RutterSSV19","doi":"10.4230/LIPICS.ESA.2019.80","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.80","url":"https://dblp.org/rec/conf/esa/RutterSSV19"},
+"url":"URL#1053678"
+},
+{
+"@score":"1",
+"@id":"1053679",
+"info":{"authors":{"author":[{"@pid":"66/3027","text":"Barna Saha"},{"@pid":"228/8258","text":"Sanjay Subramanian"}]},"title":"Correlation Clustering with Same-Cluster Queries Bounded by Optimal Cost.","venue":"ESA","pages":"81:1-81:17","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/SahaS19","doi":"10.4230/LIPICS.ESA.2019.81","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.81","url":"https://dblp.org/rec/conf/esa/SahaS19"},
+"url":"URL#1053679"
+},
+{
+"@score":"1",
+"@id":"1053680",
+"info":{"authors":{"author":[{"@pid":"19/376-2","text":"Roy Schwartz 0002"},{"@pid":"248/4456","text":"Ran Yeheskel"}]},"title":"Graph Balancing with Orientation Costs.","venue":"ESA","pages":"82:1-82:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/SchwartzY19","doi":"10.4230/LIPICS.ESA.2019.82","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.82","url":"https://dblp.org/rec/conf/esa/SchwartzY19"},
+"url":"URL#1053680"
+},
+{
+"@score":"1",
+"@id":"1053681",
+"info":{"authors":{"author":[{"@pid":"230/3710","text":"Elena Farahbakhsh Touli"},{"@pid":"28/5745","text":"Yusu Wang"}]},"title":"FPT-Algorithms for Computing Gromov-Hausdorff and Interleaving Distances Between Trees.","venue":"ESA","pages":"83:1-83:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/TouliW19","doi":"10.4230/LIPICS.ESA.2019.83","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.83","url":"https://dblp.org/rec/conf/esa/TouliW19"},
+"url":"URL#1053681"
+},
+{
+"@score":"1",
+"@id":"1053682",
+"info":{"authors":{"author":[{"@pid":"185/5970","text":"Juan José Besa Vial"},{"@pid":"32/9126","text":"Giordano Da Lozzo"},{"@pid":"g/MichaelTGoodrich","text":"Michael T. Goodrich"}]},"title":"Computing k-Modal Embeddings of Planar Digraphs.","venue":"ESA","pages":"19:1-19:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/VialLG19","doi":"10.4230/LIPICS.ESA.2019.19","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.19","url":"https://dblp.org/rec/conf/esa/VialLG19"},
+"url":"URL#1053682"
+},
+{
+"@score":"1",
+"@id":"1053683",
+"info":{"title":"Front Matter, Table of Contents, Preface, Conference Organization.","venue":"ESA","pages":"0:1-0:20","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/esa/X19","doi":"10.4230/LIPICS.ESA.2019.0","ee":"https://doi.org/10.4230/LIPIcs.ESA.2019.0","url":"https://dblp.org/rec/conf/esa/X19"},
+"url":"URL#1053683"
+},
+{
+"@score":"1",
+"@id":"1184673",
+"info":{"authors":{"author":[{"@pid":"b/MichaelABender","text":"Michael A. Bender"},{"@pid":"11/6945","text":"Ola Svensson"},{"@pid":"76/1969","text":"Grzegorz Herman"}]},"title":"27th Annual European Symposium on Algorithms, ESA 2019, September 9-11, 2019, Munich/Garching, Germany.","venue":["ESA","LIPIcs"],"volume":"144","publisher":"Schloss Dagstuhl - Leibniz-Zentrum für Informatik","year":"2019","type":"Editorship","key":"conf/esa/2019","ee":"http://www.dagstuhl.de/dagpub/978-3-95977-124-5","url":"https://dblp.org/rec/conf/esa/2019"},
+"url":"URL#1184673"
+}
+]
+}
+}
+}

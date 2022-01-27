@@ -1,0 +1,135 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/alenex/alenex2021.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"123.19"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"17",
+"@dc":"17",
+"@oc":"17",
+"@id":"35332015",
+"text":":facetid:toc:db/conf/alenex/alenex2021.bht"
+}
+},
+"hits":{
+"@total":"17",
+"@computed":"17",
+"@sent":"17",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"210719",
+"info":{"authors":{"author":[{"@pid":"230/6832","text":"Markus Anders"},{"@pid":"02/4742","text":"Pascal Schweitzer"}]},"title":"Engineering a Fast Probabilistic Isomorphism Test.","venue":"ALENEX","pages":"73-84","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/AndersS21","doi":"10.1137/1.9781611976472.6","ee":"https://doi.org/10.1137/1.9781611976472.6","url":"https://dblp.org/rec/conf/alenex/AndersS21"},
+"url":"URL#210719"
+},
+{
+"@score":"1",
+"@id":"210720",
+"info":{"authors":{"author":[{"@pid":"207/7791","text":"Eugenio Angriman"},{"@pid":"139/0760","text":"Ruben Becker"},{"@pid":"66/465","text":"Gianlorenzo D&apos;Angelo"},{"@pid":"154/7716","text":"Hugo Gilbert"},{"@pid":"136/6023","text":"Alexander van der Grinten"},{"@pid":"55/3065","text":"Henning Meyerhenke"}]},"title":"Group-Harmonic and Group-Closeness Maximization - Approximation and Engineering.","venue":"ALENEX","pages":"154-168","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/AngrimanBDGGM21","doi":"10.1137/1.9781611976472.12","ee":"https://doi.org/10.1137/1.9781611976472.12","url":"https://dblp.org/rec/conf/alenex/AngrimanBDGGM21"},
+"url":"URL#210720"
+},
+{
+"@score":"1",
+"@id":"210721",
+"info":{"authors":{"author":[{"@pid":"05/5528","text":"Michael Barlow"},{"@pid":"15/8910","text":"Christian Konrad"},{"@pid":"287/6026","text":"Charana Nandasena"}]},"title":"Streaming Set Cover in Practice.","venue":"ALENEX","pages":"181-192","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/BarlowKN21","doi":"10.1137/1.9781611976472.14","ee":"https://doi.org/10.1137/1.9781611976472.14","url":"https://dblp.org/rec/conf/alenex/BarlowKN21"},
+"url":"URL#210721"
+},
+{
+"@score":"1",
+"@id":"210722",
+"info":{"authors":{"author":[{"@pid":"236/3051","text":"Antonio Boffa"},{"@pid":"f/PaoloFerragina","text":"Paolo Ferragina"},{"@pid":"237/9641","text":"Giorgio Vinciguerra"}]},"title":"A &quot;Learned&quot; Approach to Quicken and Compress Rank/Select Dictionaries.","venue":"ALENEX","pages":"46-59","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/BoffaFV21","doi":"10.1137/1.9781611976472.4","ee":"https://doi.org/10.1137/1.9781611976472.4","url":"https://dblp.org/rec/conf/alenex/BoffaFV21"},
+"url":"URL#210722"
+},
+{
+"@score":"1",
+"@id":"210723",
+"info":{"authors":{"author":[{"@pid":"04/4610","text":"Christina Boucher"},{"@pid":"223/6744","text":"Ondrej Cvacho"},{"@pid":"00/3487","text":"Travis Gagie"},{"@pid":"h/JHolub","text":"Jan Holub 0001"},{"@pid":"63/1086","text":"Giovanni Manzini"},{"@pid":"n/GonzaloNavarro","text":"Gonzalo Navarro"},{"@pid":"173/8030-1","text":"Massimiliano Rossi 0001"}]},"title":"PFP Compressed Suffix Trees.","venue":"ALENEX","pages":"60-72","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/BoucherCGHMNR21","doi":"10.1137/1.9781611976472.5","ee":"https://doi.org/10.1137/1.9781611976472.5","url":"https://dblp.org/rec/conf/alenex/BoucherCGHMNR21"},
+"url":"URL#210723"
+},
+{
+"@score":"1",
+"@id":"210724",
+"info":{"authors":{"author":[{"@pid":"173/5447","text":"Valentin Buchhold"},{"@pid":"s/PeterSanders","text":"Peter Sanders 0001"},{"@pid":"w/DorotheaWagner","text":"Dorothea Wagner"}]},"title":"Fast, Exact and Scalable Dynamic Ridesharing.","venue":"ALENEX","pages":"98-112","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/BuchholdSW21","doi":"10.1137/1.9781611976472.8","ee":"https://doi.org/10.1137/1.9781611976472.8","url":"https://dblp.org/rec/conf/alenex/BuchholdSW21"},
+"url":"URL#210724"
+},
+{
+"@score":"1",
+"@id":"210725",
+"info":{"authors":{"author":[{"@pid":"272/5264","text":"Alexander Gellner"},{"@pid":"159/1660","text":"Sebastian Lamm"},{"@pid":"10/1388-3","text":"Christian Schulz 0003"},{"@pid":"18/3295","text":"Darren Strash"},{"@pid":"172/0231","text":"Bogdán Zaválnij"}]},"title":"Boosting Data Reduction for the Maximum Weight Independent Set Problem Using Increasing Transformations.","venue":"ALENEX","pages":"128-142","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/GellnerLSSZ21","doi":"10.1137/1.9781611976472.10","ee":"https://doi.org/10.1137/1.9781611976472.10","url":"https://dblp.org/rec/conf/alenex/GellnerLSSZ21"},
+"url":"URL#210725"
+},
+{
+"@score":"1",
+"@id":"210726",
+"info":{"authors":{"author":[{"@pid":"42/6005","text":"Loukas Georgiadis"},{"@pid":"287/5974","text":"Dionysios Kefallinos"},{"@pid":"l/LuigiLaura","text":"Luigi Laura"},{"@pid":"129/9110","text":"Nikos Parotsidis"}]},"title":"An Experimental Study of Algorithms for Computing the Edge Connectivity of a Directed Graph.","venue":"ALENEX","pages":"85-97","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/GeorgiadisKLP21","doi":"10.1137/1.9781611976472.7","ee":"https://doi.org/10.1137/1.9781611976472.7","url":"https://dblp.org/rec/conf/alenex/GeorgiadisKLP21"},
+"url":"URL#210726"
+},
+{
+"@score":"1",
+"@id":"210727",
+"info":{"authors":{"author":[{"@pid":"179/2404","text":"Gramoz Goranci"},{"@pid":"h/MonikaRauchHenzinger","text":"Monika Henzinger"},{"@pid":"83/9661","text":"Dariusz Leniowski"},{"@pid":"10/1388-3","text":"Christian Schulz 0003"},{"@pid":"202/2327","text":"Alexander Svozil"}]},"title":"Fully Dynamic k-Center Clustering in Low Dimensional Metrics.","venue":"ALENEX","pages":"143-153","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/GoranciHLSS21","doi":"10.1137/1.9781611976472.11","ee":"https://doi.org/10.1137/1.9781611976472.11","url":"https://dblp.org/rec/conf/alenex/GoranciHLSS21"},
+"url":"URL#210727"
+},
+{
+"@score":"1",
+"@id":"210728",
+"info":{"authors":{"author":[{"@pid":"243/6884","text":"Lars Gottesbüren"},{"@pid":"172/1146","text":"Tobias Heuer"},{"@pid":"s/PeterSanders","text":"Peter Sanders 0001"},{"@pid":"139/4269","text":"Sebastian Schlag"}]},"title":"Scalable Shared-Memory Hypergraph Partitioning.","venue":"ALENEX","pages":"16-30","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/GottesburenHSS21","doi":"10.1137/1.9781611976472.2","ee":"https://doi.org/10.1137/1.9781611976472.2","url":"https://dblp.org/rec/conf/alenex/GottesburenHSS21"},
+"url":"URL#210728"
+},
+{
+"@score":"1",
+"@id":"210729",
+"info":{"authors":{"author":[{"@pid":"76/4651","text":"Michael Kerber"},{"@pid":"236/6022","text":"Alexander Rolle"}]},"title":"Fast Minimal Presentations of Bi-graded Persistence Modules.","venue":"ALENEX","pages":"207-220","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/KerberR21","doi":"10.1137/1.9781611976472.16","ee":"https://doi.org/10.1137/1.9781611976472.16","url":"https://dblp.org/rec/conf/alenex/KerberR21"},
+"url":"URL#210729"
+},
+{
+"@score":"1",
+"@id":"210730",
+"info":{"authors":{"author":[{"@pid":"117/7920","text":"Clément Maria"},{"@pid":"218/6634","text":"Owen Rouillé"}]},"title":"Computation of Large Asymptotics of 3-Manifold Quantum Invariants.","venue":"ALENEX","pages":"193-206","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/MariaR21","doi":"10.1137/1.9781611976472.15","ee":"https://doi.org/10.1137/1.9781611976472.15","url":"https://dblp.org/rec/conf/alenex/MariaR21"},
+"url":"URL#210730"
+},
+{
+"@score":"1",
+"@id":"210731",
+"info":{"authors":{"author":[{"@pid":"263/6882","text":"Wolfgang Ost"},{"@pid":"10/1388-3","text":"Christian Schulz 0003"},{"@pid":"18/3295","text":"Darren Strash"}]},"title":"Engineering Data Reduction for Nested Dissection.","venue":"ALENEX","pages":"113-127","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/OstSS21","doi":"10.1137/1.9781611976472.9","ee":"https://doi.org/10.1137/1.9781611976472.9","url":"https://dblp.org/rec/conf/alenex/OstSS21"},
+"url":"URL#210731"
+},
+{
+"@score":"1",
+"@id":"210732",
+"info":{"authors":{"author":[{"@pid":"287/6011","text":"Rick Plachetta"},{"@pid":"136/6023","text":"Alexander van der Grinten"}]},"title":"SAT-and-Reduce for Vertex Cover - Accelerating Branch-and-Reduce by SAT Solving.","venue":"ALENEX","pages":"169-180","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/PlachettaG21","doi":"10.1137/1.9781611976472.13","ee":"https://doi.org/10.1137/1.9781611976472.13","url":"https://dblp.org/rec/conf/alenex/PlachettaG21"},
+"url":"URL#210732"
+},
+{
+"@score":"1",
+"@id":"210733",
+"info":{"authors":{"author":[{"@pid":"188/1299","text":"Merten Popp"},{"@pid":"139/4269","text":"Sebastian Schlag"},{"@pid":"10/1388-3","text":"Christian Schulz 0003"},{"@pid":"225/5422","text":"Daniel Seemaier"}]},"title":"Multilevel Acyclic Hypergraph Partitioning.","venue":"ALENEX","pages":"1-15","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/PoppSSS21","doi":"10.1137/1.9781611976472.1","ee":"https://doi.org/10.1137/1.9781611976472.1","url":"https://dblp.org/rec/conf/alenex/PoppSSS21"},
+"url":"URL#210733"
+},
+{
+"@score":"1",
+"@id":"210734",
+"info":{"authors":{"author":[{"@pid":"189/4998","text":"Brian Wheatman"},{"@pid":"60/8527","text":"Helen Xu"}]},"title":"A Parallel Packed Memory Array to Store Dynamic Graphs.","venue":"ALENEX","pages":"31-45","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/alenex/WheatmanX21","doi":"10.1137/1.9781611976472.3","ee":"https://doi.org/10.1137/1.9781611976472.3","url":"https://dblp.org/rec/conf/alenex/WheatmanX21"},
+"url":"URL#210734"
+},
+{
+"@score":"1",
+"@id":"335111",
+"info":{"authors":{"author":[{"@pid":"f/MartinFarachColton","text":"Martin Farach-Colton"},{"@pid":"74/9877","text":"Sabine Storandt"}]},"title":"Proceedings of the Symposium on Algorithm Engineering and Experiments, ALENEX 2021, Virtual Conference, January 10-11, 2021","venue":"ALENEX","publisher":"SIAM","year":"2021","type":"Editorship","key":"conf/alenex/2021","doi":"10.1137/1.9781611976472","ee":"https://doi.org/10.1137/1.9781611976472","url":"https://dblp.org/rec/conf/alenex/2021"},
+"url":"URL#335111"
+}
+]
+}
+}
+}

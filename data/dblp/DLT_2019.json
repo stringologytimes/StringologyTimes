@@ -1,0 +1,177 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/dlt/dlt2019.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"286.61"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"24",
+"@dc":"24",
+"@oc":"24",
+"@id":"35341468",
+"text":":facetid:toc:db/conf/dlt/dlt2019.bht"
+}
+},
+"hits":{
+"@total":"24",
+"@computed":"24",
+"@sent":"24",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"1046039",
+"info":{"authors":{"author":[{"@pid":"18/1897","text":"Petr Ambroz"},{"@pid":"72/2018","text":"Edita Pelantová"}]},"title":"On Palindromic Length of Sturmian Sequences.","venue":"DLT","pages":"244-250","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/AmbrozP19","doi":"10.1007/978-3-030-24886-4_18","ee":"https://doi.org/10.1007/978-3-030-24886-4_18","url":"https://dblp.org/rec/conf/dlt/AmbrozP19"},
+"url":"URL#1046039"
+},
+{
+"@score":"1",
+"@id":"1046040",
+"info":{"authors":{"author":[{"@pid":"238/0158","text":"Umer Azfar"},{"@pid":"220/3775","text":"Costanza Catalano"},{"@pid":"238/0333","text":"Ludovic Charlier"},{"@pid":"37/2816","text":"Raphaël M. Jungers"}]},"title":"A Linear Bound on the K-Rendezvous Time for Primitive Sets of NZ Matrices.","venue":"DLT","pages":"59-73","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/AzfarCCJ19","doi":"10.1007/978-3-030-24886-4_4","ee":"https://doi.org/10.1007/978-3-030-24886-4_4","url":"https://dblp.org/rec/conf/dlt/AzfarCCJ19"},
+"url":"URL#1046040"
+},
+{
+"@score":"1",
+"@id":"1046041",
+"info":{"authors":{"author":[{"@pid":"155/9910","text":"Devendra Bhave"},{"@pid":"k/SNKrishna","text":"Shankara Narayanan Krishna"},{"@pid":"73/9959","text":"Ramchandra Phawade"},{"@pid":"06/5756","text":"Ashutosh Trivedi 0001"}]},"title":"On Timed Scope-Bounded Context-Sensitive Languages.","venue":"DLT","pages":"168-181","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/BhaveKPT19","doi":"10.1007/978-3-030-24886-4_12","ee":"https://doi.org/10.1007/978-3-030-24886-4_12","url":"https://dblp.org/rec/conf/dlt/BhaveKPT19"},
+"url":"URL#1046041"
+},
+{
+"@score":"1",
+"@id":"1046042",
+"info":{"authors":{"author":{"@pid":"46/5900","text":"Udi Boker"}},"title":"Inherent Size Blowup in ω-Automata.","venue":"DLT","pages":"3-17","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Boker19","doi":"10.1007/978-3-030-24886-4_1","ee":"https://doi.org/10.1007/978-3-030-24886-4_1","url":"https://dblp.org/rec/conf/dlt/Boker19"},
+"url":"URL#1046042"
+},
+{
+"@score":"1",
+"@id":"1046043",
+"info":{"authors":{"author":[{"@pid":"90/9508","text":"Tara Brough"},{"@pid":"26/3553","text":"Alan J. Cain"},{"@pid":"116/2763","text":"Markus Pfeiffer"}]},"title":"Context-Free Word Problem Semigroups.","venue":"DLT","pages":"292-305","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/BroughCP19","doi":"10.1007/978-3-030-24886-4_22","ee":"https://doi.org/10.1007/978-3-030-24886-4_22","url":"https://dblp.org/rec/conf/dlt/BroughCP19"},
+"url":"URL#1046043"
+},
+{
+"@score":"1",
+"@id":"1046044",
+"info":{"authors":{"author":[{"@pid":"228/6835","text":"Hyunjoon Cheon"},{"@pid":"h/YoSubHan","text":"Yo-Sub Han"},{"@pid":"71/9491","text":"Sang-Ki Ko"},{"@pid":"02/6009","text":"Kai Salomaa"}]},"title":"The Relative Edit-Distance Between Two Input-Driven Languages.","venue":"DLT","pages":"127-139","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/CheonHKS19","doi":"10.1007/978-3-030-24886-4_9","ee":"https://doi.org/10.1007/978-3-030-24886-4_9","url":"https://dblp.org/rec/conf/dlt/CheonHKS19"},
+"url":"URL#1046044"
+},
+{
+"@score":"1",
+"@id":"1046045",
+"info":{"authors":{"author":[{"@pid":"130/7599","text":"Joel D. Day"},{"@pid":"204/7523","text":"Pamela Fleischmann"},{"@pid":"67/4899","text":"Florin Manea"},{"@pid":"91/2495","text":"Dirk Nowotka"}]},"title":"k-Spectra of Weakly-c-Balanced Words.","venue":"DLT","pages":"265-277","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/DayFMN19","doi":"10.1007/978-3-030-24886-4_20","ee":"https://doi.org/10.1007/978-3-030-24886-4_20","url":"https://dblp.org/rec/conf/dlt/DayFMN19"},
+"url":"URL#1046045"
+},
+{
+"@score":"1",
+"@id":"1046046",
+"info":{"authors":{"author":[{"@pid":"245/4068","text":"Egor Dobronravov"},{"@pid":"245/4091","text":"Nikita Dobronravov"},{"@pid":"o/AOkhotin","text":"Alexander Okhotin"}]},"title":"On the Length of Shortest Strings Accepted by Two-Way Finite Automata.","venue":"DLT","pages":"88-99","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/DobronravovDO19","doi":"10.1007/978-3-030-24886-4_6","ee":"https://doi.org/10.1007/978-3-030-24886-4_6","url":"https://dblp.org/rec/conf/dlt/DobronravovDO19"},
+"url":"URL#1046046"
+},
+{
+"@score":"1",
+"@id":"1046047",
+"info":{"authors":{"author":{"@pid":"95/2744","text":"Anna E. Frid"}},"title":"First Lower Bounds for Palindromic Length.","venue":"DLT","pages":"234-243","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Frid19","doi":"10.1007/978-3-030-24886-4_17","ee":"https://doi.org/10.1007/978-3-030-24886-4_17","url":"https://dblp.org/rec/conf/dlt/Frid19"},
+"url":"URL#1046047"
+},
+{
+"@score":"1",
+"@id":"1046048",
+"info":{"authors":{"author":{"@pid":"04/10938","text":"Ziyuan Gao"}},"title":"The Teaching Complexity of Erasing Pattern Languages with Bounded Variable Frequency.","venue":"DLT","pages":"154-167","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Gao19","doi":"10.1007/978-3-030-24886-4_11","ee":"https://doi.org/10.1007/978-3-030-24886-4_11","url":"https://dblp.org/rec/conf/dlt/Gao19"},
+"url":"URL#1046048"
+},
+{
+"@score":"1",
+"@id":"1046049",
+"info":{"authors":{"author":[{"@pid":"g/PaulGastin","text":"Paul Gastin"},{"@pid":"38/7255","text":"Amaldev Manuel"},{"@pid":"213/4710-1","text":"R. Govind 0001"}]},"title":"Logics for Reversible Regular Languages and Semigroups with Involution.","venue":"DLT","pages":"182-191","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/GastinMG19","doi":"10.1007/978-3-030-24886-4_13","ee":"https://doi.org/10.1007/978-3-030-24886-4_13","url":"https://dblp.org/rec/conf/dlt/GastinMG19"},
+"url":"URL#1046049"
+},
+{
+"@score":"1",
+"@id":"1046050",
+"info":{"authors":{"author":[{"@pid":"54/3483","text":"Viliam Geffert"},{"@pid":"44/9959","text":"Zuzana Bednárová"},{"@pid":"01/880","text":"Alexander Szabari"}]},"title":"Input-Driven Pushdown Automata for Edit Distance Neighborhood.","venue":"DLT","pages":"113-126","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/GeffertBS19","doi":"10.1007/978-3-030-24886-4_8","ee":"https://doi.org/10.1007/978-3-030-24886-4_8","url":"https://dblp.org/rec/conf/dlt/GeffertBS19"},
+"url":"URL#1046050"
+},
+{
+"@score":"1",
+"@id":"1046051",
+"info":{"authors":{"author":[{"@pid":"69/1383","text":"Massimiliano Goldwurm"},{"@pid":"98/4569","text":"Jianyi Lin"},{"@pid":"223/1277","text":"Marco Vignati"}]},"title":"Analysis of Symbol Statistics in Bicomponent Rational Models.","venue":"DLT","pages":"306-318","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/GoldwurmLV19","doi":"10.1007/978-3-030-24886-4_23","ee":"https://doi.org/10.1007/978-3-030-24886-4_23","url":"https://dblp.org/rec/conf/dlt/GoldwurmLV19"},
+"url":"URL#1046051"
+},
+{
+"@score":"1",
+"@id":"1046052",
+"info":{"authors":{"author":[{"@pid":"228/8650","text":"Simon Iosti"},{"@pid":"21/8279","text":"Denis Kuperberg"}]},"title":"Eventually Safe Languages.","venue":"DLT","pages":"192-205","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/IostiK19","doi":"10.1007/978-3-030-24886-4_14","ee":"https://doi.org/10.1007/978-3-030-24886-4_14","url":"https://dblp.org/rec/conf/dlt/IostiK19"},
+"url":"URL#1046052"
+},
+{
+"@score":"1",
+"@id":"1046053",
+"info":{"authors":{"author":{"@pid":"74/6087","text":"Artur Jez"}},"title":"Deciding Context Unification (with Regular Constraints).","venue":"DLT","pages":"18-40","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Jez19","doi":"10.1007/978-3-030-24886-4_2","ee":"https://doi.org/10.1007/978-3-030-24886-4_2","url":"https://dblp.org/rec/conf/dlt/Jez19"},
+"url":"URL#1046053"
+},
+{
+"@score":"1",
+"@id":"1046054",
+"info":{"authors":{"author":[{"@pid":"k/JarkkoKari","text":"Jarkko Kari"},{"@pid":"176/5082","text":"Andrew Ryzhikov"},{"@pid":"245/4089","text":"Anton Varonka"}]},"title":"Words of Minimum Rank in Deterministic Finite Automata.","venue":"DLT","pages":"74-87","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/KariRV19","doi":"10.1007/978-3-030-24886-4_5","ee":"https://doi.org/10.1007/978-3-030-24886-4_5","url":"https://dblp.org/rec/conf/dlt/KariRV19"},
+"url":"URL#1046054"
+},
+{
+"@score":"1",
+"@id":"1046055",
+"info":{"authors":{"author":[{"@pid":"21/8279","text":"Denis Kuperberg"},{"@pid":"234/8043","text":"Laureline Pinault"},{"@pid":"47/1298","text":"Damien Pous"}]},"title":"Coinductive Algorithms for Büchi Automata.","venue":"DLT","pages":"206-220","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/KuperbergPP19","doi":"10.1007/978-3-030-24886-4_15","ee":"https://doi.org/10.1007/978-3-030-24886-4_15","url":"https://dblp.org/rec/conf/dlt/KuperbergPP19"},
+"url":"URL#1046055"
+},
+{
+"@score":"1",
+"@id":"1046056",
+"info":{"authors":{"author":[{"@pid":"232/1833","text":"Marie Lejeune"},{"@pid":"47/10698-2","text":"Julien Leroy 0002"},{"@pid":"30/1875","text":"Michel Rigo"}]},"title":"Computing the k-binomial Complexity of the Thue-Morse Word.","venue":"DLT","pages":"278-291","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Lejeune0R19","doi":"10.1007/978-3-030-24886-4_21","ee":"https://doi.org/10.1007/978-3-030-24886-4_21","url":"https://dblp.org/rec/conf/dlt/Lejeune0R19"},
+"url":"URL#1046056"
+},
+{
+"@score":"1",
+"@id":"1046057",
+"info":{"authors":{"author":{"@pid":"43/4982","text":"Paolo Massazza"}},"title":"Hole-Free Partially Directed Animals.","venue":"DLT","pages":"221-233","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Massazza19","doi":"10.1007/978-3-030-24886-4_16","ee":"https://doi.org/10.1007/978-3-030-24886-4_16","url":"https://dblp.org/rec/conf/dlt/Massazza19"},
+"url":"URL#1046057"
+},
+{
+"@score":"1",
+"@id":"1046058",
+"info":{"authors":{"author":[{"@pid":"38/5599","text":"Frantisek Mráz"},{"@pid":"03/67","text":"Friedrich Otto"}]},"title":"On Shrinking Restarting Automata of Window Size One and Two.","venue":"DLT","pages":"140-153","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/MrazO19","doi":"10.1007/978-3-030-24886-4_10","ee":"https://doi.org/10.1007/978-3-030-24886-4_10","url":"https://dblp.org/rec/conf/dlt/MrazO19"},
+"url":"URL#1046058"
+},
+{
+"@score":"1",
+"@id":"1046059",
+"info":{"authors":{"author":{"@pid":"76/1604","text":"Aleksi Saarela"}},"title":"Separating Many Words by Counting Occurrences of Factors.","venue":"DLT","pages":"251-264","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Saarela19","doi":"10.1007/978-3-030-24886-4_19","ee":"https://doi.org/10.1007/978-3-030-24886-4_19","url":"https://dblp.org/rec/conf/dlt/Saarela19"},
+"url":"URL#1046059"
+},
+{
+"@score":"1",
+"@id":"1046060",
+"info":{"authors":{"author":{"@pid":"70/1118","text":"Shinnosuke Seki"}},"title":"Single-Stranded Architectures for Computing.","venue":"DLT","pages":"41-56","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Seki19","doi":"10.1007/978-3-030-24886-4_3","ee":"https://doi.org/10.1007/978-3-030-24886-4_3","url":"https://dblp.org/rec/conf/dlt/Seki19"},
+"url":"URL#1046060"
+},
+{
+"@score":"1",
+"@id":"1046061",
+"info":{"authors":{"author":[{"@pid":"142/2911","text":"Di-De Yen"},{"@pid":"y/HsuChunYen","text":"Hsu-Chun Yen"}]},"title":"Characterizing the Valuedness of Two-Way Finite Transducers.","venue":"DLT","pages":"100-112","year":"2019","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/YenY19","doi":"10.1007/978-3-030-24886-4_7","ee":"https://doi.org/10.1007/978-3-030-24886-4_7","url":"https://dblp.org/rec/conf/dlt/YenY19"},
+"url":"URL#1046061"
+},
+{
+"@score":"1",
+"@id":"1184548",
+"info":{"authors":{"author":[{"@pid":"34/8773","text":"Piotrek Hofman"},{"@pid":"61/8075","text":"Michal Skrzypczak"}]},"title":"Developments in Language Theory - 23rd International Conference, DLT 2019, Warsaw, Poland, August 5-9, 2019, Proceedings","venue":["DLT","Lecture Notes in Computer Science"],"volume":"11647","publisher":"Springer","year":"2019","type":"Editorship","key":"conf/dlt/2019","doi":"10.1007/978-3-030-24886-4","ee":"https://doi.org/10.1007/978-3-030-24886-4","url":"https://dblp.org/rec/conf/dlt/2019"},
+"url":"URL#1184548"
+}
+]
+}
+}
+}

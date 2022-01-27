@@ -34,7 +34,7 @@ export class PaperArticle {
         return this.title == null;
     }
     public uniqueName() : string {
-        return `${this.conference}_${this.year}_${this.title}`
+        return `${this.conference}_${this.year}_${this.title.toLowerCase()}`
     }
     public static parseList(list : string) : PaperArticle[] {
         const lines = list.split("\r\n");
@@ -88,6 +88,7 @@ export class ConferenceArticle{
     public acceptedPaperURL : string;
     public deadline : Date = new Date();
     public dblpName : string | null;
+    public dblpSubname : string = "";
 
     public static parseList(list : string) : ConferenceArticle[] {
         const lines = list.split("\r\n");
@@ -116,6 +117,10 @@ export class ConferenceArticle{
             if(p.length > 5){
                 r.dblpName = p[5];                
             }
+            if(p.length > 6){
+                r.dblpSubname = p[6];                
+            }
+
             if(isNaN(r.year)){
                 console.log(`Skip: ${line}`);
                 return null;

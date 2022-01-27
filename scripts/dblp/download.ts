@@ -22,8 +22,8 @@ conferences.forEach((v) => {
     if (v.dblpName != null && v.dblpName!.length > 0) {
         const outputFileName = outputFolder + "/" + v.conference + "_" + v.year + ".json";
         if (!fs.existsSync(outputFileName)) {
-            const smallConferenceName = v.conference.toLowerCase();
-            const pURL = `https://dblp.org/search/publ/api?q=toc%3Adb/conf/${v.dblpName}/${v.dblpName}${v.year}.bht%3A&h=1000&format=jsonp`
+            const subname = v.dblpSubname.length > 0 ? v.dblpSubname : v.dblpName;
+            const pURL = `https://dblp.org/search/publ/api?q=toc%3Adb/conf/${subname}/${v.dblpName}${v.year}.bht%3A&h=1000&format=jsonp`
 
             //console.log("Download " + pURL);
             const response = request('GET', pURL);

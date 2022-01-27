@@ -1,0 +1,489 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/isaac/isaac2021.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"612.52"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"76",
+"@dc":"76",
+"@oc":"76",
+"@id":"35357254",
+"text":":facetid:toc:db/conf/isaac/isaac2021.bht"
+}
+},
+"hits":{
+"@total":"76",
+"@computed":"76",
+"@sent":"76",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"288757",
+"info":{"authors":{"author":[{"@pid":"45/7178-2","text":"Siddharth Gupta 0002"},{"@pid":"237/9762","text":"Guy Sa&apos;ar"},{"@pid":"133/1023","text":"Meirav Zehavi"}]},"title":"Grid Recognition - Classical and Parameterized Computational Perspectives.","venue":"ISAAC","pages":"37:1-37:15","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/0002SZ21","doi":"10.4230/LIPICS.ISAAC.2021.37","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.37","url":"https://dblp.org/rec/conf/isaac/0002SZ21"},
+"url":"URL#288757"
+},
+{
+"@score":"1",
+"@id":"288758",
+"info":{"authors":{"author":[{"@pid":"a/SusanneAlbers","text":"Susanne Albers"},{"@pid":"191/8331","text":"Waldo Gálvez"},{"@pid":"259/4993","text":"Maximilian Janke"}]},"title":"Machine Covering in the Random-Order Model.","venue":"ISAAC","pages":"52:1-52:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/AlbersGJ21","doi":"10.4230/LIPICS.ISAAC.2021.52","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.52","url":"https://dblp.org/rec/conf/isaac/AlbersGJ21"},
+"url":"URL#288758"
+},
+{
+"@score":"1",
+"@id":"288759",
+"info":{"authors":{"author":[{"@pid":"a/EAllender","text":"Eric Allender"},{"@pid":"252/8096","text":"John Gouwar"},{"@pid":"150/4919","text":"Shuichi Hirahara"},{"@pid":"259/2552","text":"Caleb Robelle"}]},"title":"Cryptographic Hardness Under Projections for Time-Bounded Kolmogorov Complexity.","venue":"ISAAC","pages":"54:1-54:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/AllenderGHR21","doi":"10.4230/LIPICS.ISAAC.2021.54","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.54","url":"https://dblp.org/rec/conf/isaac/AllenderGHR21"},
+"url":"URL#288759"
+},
+{
+"@score":"1",
+"@id":"288760",
+"info":{"authors":{"author":[{"@pid":"294/8352","text":"Shinwoo An"},{"@pid":"157/8129","text":"Eunjin Oh 0001"}]},"title":"Feedback Vertex Set on Geometric Intersection Graphs.","venue":"ISAAC","pages":"47:1-47:12","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/An021","doi":"10.4230/LIPICS.ISAAC.2021.47","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.47","url":"https://dblp.org/rec/conf/isaac/An021"},
+"url":"URL#288760"
+},
+{
+"@score":"1",
+"@id":"288761",
+"info":{"authors":{"author":[{"@pid":"230/6832","text":"Markus Anders"},{"@pid":"262/0240","text":"Jendrik Brachter"},{"@pid":"02/4742","text":"Pascal Schweitzer"}]},"title":"A Characterization of Individualization-Refinement Trees.","venue":"ISAAC","pages":"24:1-24:14","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/AndersBS21","doi":"10.4230/LIPICS.ISAAC.2021.24","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.24","url":"https://dblp.org/rec/conf/isaac/AndersBS21"},
+"url":"URL#288761"
+},
+{
+"@score":"1",
+"@id":"288762",
+"info":{"authors":{"author":[{"@pid":"91/7609","text":"Antonios Antoniadis"},{"@pid":"127/7421","text":"Gunjan Kumar"},{"@pid":"85/4186-1","text":"Nikhil Kumar 0001"}]},"title":"Skeletons and Minimum Energy Scheduling.","venue":"ISAAC","pages":"51:1-51:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/AntoniadisK021","doi":"10.4230/LIPICS.ISAAC.2021.51","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.51","url":"https://dblp.org/rec/conf/isaac/AntoniadisK021"},
+"url":"URL#288762"
+},
+{
+"@score":"1",
+"@id":"288763",
+"info":{"authors":{"author":[{"@pid":"139/5711","text":"Eloi Araujo"},{"@pid":"50/5026","text":"Luiz C. S. Rozante"},{"@pid":"173/8640","text":"Diego P. Rubert"},{"@pid":"80/3126","text":"Fábio Viduani Martinez"}]},"title":"Algorithms for Normalized Multiple Sequence Alignments.","venue":"ISAAC","pages":"40:1-40:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/AraujoRRM21","doi":"10.4230/LIPICS.ISAAC.2021.40","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.40","url":"https://dblp.org/rec/conf/isaac/AraujoRRM21"},
+"url":"URL#288763"
+},
+{
+"@score":"1",
+"@id":"288764",
+"info":{"authors":{"author":[{"@pid":"a/BAronov","text":"Boris Aronov"},{"@pid":"b/MarkdeBerg","text":"Mark de Berg"},{"@pid":"85/4356","text":"Jean Cardinal"},{"@pid":"11/3230","text":"Esther Ezra"},{"@pid":"96/2606","text":"John Iacono"},{"@pid":"s/MichaSharir","text":"Micha Sharir"}]},"title":"Subquadratic Algorithms for Some 3Sum-Hard Geometric Problems in the Algebraic Decision Tree Model.","venue":"ISAAC","pages":"3:1-3:15","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/AronovBCEIS21","doi":"10.4230/LIPICS.ISAAC.2021.3","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.3","url":"https://dblp.org/rec/conf/isaac/AronovBCEIS21"},
+"url":"URL#288764"
+},
+{
+"@score":"1",
+"@id":"288765",
+"info":{"authors":{"author":{"@pid":"21/1336","text":"Takao Asano"}},"title":"Simple Envy-Free and Truthful Mechanisms for Cake Cutting with a Small Number of Cuts.","venue":"ISAAC","pages":"68:1-68:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Asano21","doi":"10.4230/LIPICS.ISAAC.2021.68","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.68","url":"https://dblp.org/rec/conf/isaac/Asano21"},
+"url":"URL#288765"
+},
+{
+"@score":"1",
+"@id":"288766",
+"info":{"authors":{"author":[{"@pid":"27/2235","text":"Franz Aurenhammer"},{"@pid":"93/4868","text":"Evanthia Papadopoulou"},{"@pid":"199/6505","text":"Martin Suderland"}]},"title":"Piecewise-Linear Farthest-Site Voronoi Diagrams.","venue":"ISAAC","pages":"30:1-30:11","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/AurenhammerPS21","doi":"10.4230/LIPICS.ISAAC.2021.30","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.30","url":"https://dblp.org/rec/conf/isaac/AurenhammerPS21"},
+"url":"URL#288766"
+},
+{
+"@score":"1",
+"@id":"288767",
+"info":{"authors":{"author":[{"@pid":"305/0358","text":"Joyce Bacic"},{"@pid":"15/7354-1","text":"Saeed Mehrabi 0001"},{"@pid":"35/6715","text":"Michiel Smid"}]},"title":"Shortest Beer Path Queries in Outerplanar Graphs.","venue":"ISAAC","pages":"62:1-62:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Bacic0S21","doi":"10.4230/LIPICS.ISAAC.2021.62","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.62","url":"https://dblp.org/rec/conf/isaac/Bacic0S21"},
+"url":"URL#288767"
+},
+{
+"@score":"1",
+"@id":"288768",
+"info":{"authors":{"author":[{"@pid":"124/9336","text":"Sayan Bandyapadhyay"},{"@pid":"m/AnilMaheshwari","text":"Anil Maheshwari"},{"@pid":"35/6715","text":"Michiel Smid"}]},"title":"Exact and Approximation Algorithms for Many-To-Many Point Matching in the Plane.","venue":"ISAAC","pages":"44:1-44:14","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/BandyapadhyayMS21","doi":"10.4230/LIPICS.ISAAC.2021.44","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.44","url":"https://dblp.org/rec/conf/isaac/BandyapadhyayMS21"},
+"url":"URL#288768"
+},
+{
+"@score":"1",
+"@id":"288769",
+"info":{"authors":{"author":[{"@pid":"59/3927","text":"Aritra Banik"},{"@pid":"42/6468","text":"Rajiv Raman 0001"},{"@pid":"61/921","text":"Saurabh Ray"}]},"title":"On Geometric Priority Set Cover Problems.","venue":"ISAAC","pages":"12:1-12:14","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Banik0R21","doi":"10.4230/LIPICS.ISAAC.2021.12","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.12","url":"https://dblp.org/rec/conf/isaac/Banik0R21"},
+"url":"URL#288769"
+},
+{
+"@score":"1",
+"@id":"288770",
+"info":{"authors":{"author":[{"@pid":"b/AmotzBarNoy","text":"Amotz Bar-Noy"},{"@pid":"p/DavidPeleg","text":"David Peleg"},{"@pid":"41/1597","text":"Dror Rawitz"},{"@pid":"307/4128","text":"Elad Yehezkel"}]},"title":"Selected Neighbor Degree Forest Realization.","venue":"ISAAC","pages":"27:1-27:15","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Bar-NoyPRY21","doi":"10.4230/LIPICS.ISAAC.2021.27","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.27","url":"https://dblp.org/rec/conf/isaac/Bar-NoyPRY21"},
+"url":"URL#288770"
+},
+{
+"@score":"1",
+"@id":"288771",
+"info":{"authors":{"author":[{"@pid":"284/9279","text":"Sam Barr"},{"@pid":"23/2860","text":"Therese C. Biedl"}]},"title":"Efficiently Partitioning the Edges of a 1-Planar Graph into a Planar Graph and a Forest.","venue":"ISAAC","pages":"16:1-16:15","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/BarrB21","doi":"10.4230/LIPICS.ISAAC.2021.16","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.16","url":"https://dblp.org/rec/conf/isaac/BarrB21"},
+"url":"URL#288771"
+},
+{
+"@score":"1",
+"@id":"288772",
+"info":{"authors":{"author":[{"@pid":"49/9612","text":"Florian Barth"},{"@pid":"f/StefanFunke","text":"Stefan Funke"},{"@pid":"217/2102","text":"Claudius Proissl"}]},"title":"Preference-Based Trajectory Clustering - An Application of Geometric Hitting Sets.","venue":"ISAAC","pages":"15:1-15:14","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/BarthFP21","doi":"10.4230/LIPICS.ISAAC.2021.15","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.15","url":"https://dblp.org/rec/conf/isaac/BarthFP21"},
+"url":"URL#288772"
+},
+{
+"@score":"1",
+"@id":"288773",
+"info":{"authors":{"author":[{"@pid":"b/MarkdeBerg","text":"Mark de Berg"},{"@pid":"153/1825","text":"Sándor Kisfaludi-Bak"},{"@pid":"11/4322","text":"Morteza Monemizadeh"},{"@pid":"264/5214","text":"Leonidas Theocharous"}]},"title":"Clique-Based Separators for Geometric Intersection Graphs.","venue":"ISAAC","pages":"22:1-22:15","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/BergKMT21","doi":"10.4230/LIPICS.ISAAC.2021.22","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.22","url":"https://dblp.org/rec/conf/isaac/BergKMT21"},
+"url":"URL#288773"
+},
+{
+"@score":"1",
+"@id":"288774",
+"info":{"authors":{"author":[{"@pid":"302/4665","text":"Sarita de Berg"},{"@pid":"41/10735","text":"Frank Staals"}]},"title":"Dynamic Data Structures for k-Nearest Neighbor Queries.","venue":"ISAAC","pages":"14:1-14:14","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/BergS21","doi":"10.4230/LIPICS.ISAAC.2021.14","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.14","url":"https://dblp.org/rec/conf/isaac/BergS21"},
+"url":"URL#288774"
+},
+{
+"@score":"1",
+"@id":"288775",
+"info":{"authors":{"author":[{"@pid":"157/6058","text":"Sujoy Bhore"},{"@pid":"42/4430-15","text":"Rahul Jain 0015"}]},"title":"Space-Efficient Algorithms for Reachability in Directed Geometric Graphs.","venue":"ISAAC","pages":"63:1-63:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Bhore021","doi":"10.4230/LIPICS.ISAAC.2021.63","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.63","url":"https://dblp.org/rec/conf/isaac/Bhore021"},
+"url":"URL#288775"
+},
+{
+"@score":"1",
+"@id":"288776",
+"info":{"authors":{"author":[{"@pid":"157/6058","text":"Sujoy Bhore"},{"@pid":"48/9245-1","text":"Guangping Li 0001"},{"@pid":"41/4420","text":"Martin Nöllenburg"},{"@pid":"99/44","text":"Ignaz Rutter"},{"@pid":"11/7258","text":"Hsiang-Yun Wu"}]},"title":"Untangling Circular Drawings - Algorithms and Complexity.","venue":"ISAAC","pages":"19:1-19:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Bhore0NRW21","doi":"10.4230/LIPICS.ISAAC.2021.19","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.19","url":"https://dblp.org/rec/conf/isaac/Bhore0NRW21"},
+"url":"URL#288776"
+},
+{
+"@score":"1",
+"@id":"288777",
+"info":{"authors":{"author":[{"@pid":"307/4466","text":"Leyla Biabani"},{"@pid":"b/MarkdeBerg","text":"Mark de Berg"},{"@pid":"11/4322","text":"Morteza Monemizadeh"}]},"title":"Maximum-Weight Matching in Sliding Windows and Beyond.","venue":"ISAAC","pages":"73:1-73:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/BiabaniBM21","doi":"10.4230/LIPICS.ISAAC.2021.73","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.73","url":"https://dblp.org/rec/conf/isaac/BiabaniBM21"},
+"url":"URL#288777"
+},
+{
+"@score":"1",
+"@id":"288778",
+"info":{"authors":{"author":{"@pid":"41/8409","text":"Ahmad Biniaz"}},"title":"Approximating Longest Spanning Tree with Neighborhoods.","venue":"ISAAC","pages":"7:1-7:11","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Biniaz21","doi":"10.4230/LIPICS.ISAAC.2021.7","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.7","url":"https://dblp.org/rec/conf/isaac/Biniaz21"},
+"url":"URL#288778"
+},
+{
+"@score":"1",
+"@id":"288779",
+"info":{"authors":{"author":[{"@pid":"262/3347","text":"Mitchell Black"},{"@pid":"223/2693","text":"William Maxwell"}]},"title":"Effective Resistance and Capacitance in Simplicial Complexes and a Quantum Algorithm.","venue":"ISAAC","pages":"31:1-31:27","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/BlackM21","doi":"10.4230/LIPICS.ISAAC.2021.31","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.31","url":"https://dblp.org/rec/conf/isaac/BlackM21"},
+"url":"URL#288779"
+},
+{
+"@score":"1",
+"@id":"288780",
+"info":{"authors":{"author":[{"@pid":"74/9125","text":"Thomas Bläsius"},{"@pid":"181/2310-1","text":"Tobias Friedrich 0001"},{"@pid":"159/2025","text":"Martin S. Krejca"},{"@pid":"202/9543","text":"Louise Molitor"}]},"title":"The Impact of Geometry on Monochrome Regions in the Flip Schelling Process.","venue":"ISAAC","pages":"29:1-29:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Blasius0KM21","doi":"10.4230/LIPICS.ISAAC.2021.29","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.29","url":"https://dblp.org/rec/conf/isaac/Blasius0KM21"},
+"url":"URL#288780"
+},
+{
+"@score":"1",
+"@id":"288781",
+"info":{"authors":{"author":{"@pid":"b/PBose","text":"Prosenjit Bose"}},"title":"Spanning Properties of Variants of the Delaunay Graph (Invited Talk).","venue":"ISAAC","pages":"2:1-2:1","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Bose21","doi":"10.4230/LIPICS.ISAAC.2021.2","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.2","url":"https://dblp.org/rec/conf/isaac/Bose21"},
+"url":"URL#288781"
+},
+{
+"@score":"1",
+"@id":"288782",
+"info":{"authors":{"author":[{"@pid":"161/7532","text":"Christoph Brause"},{"@pid":"06/6306","text":"Petr A. Golovach"},{"@pid":"00/757","text":"Barnaby Martin"},{"@pid":"18/5531","text":"Daniël Paulusma"},{"@pid":"247/7164","text":"Siani Smith"}]},"title":"Partitioning H-Free Graphs of Bounded Diameter.","venue":"ISAAC","pages":"21:1-21:14","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/BrauseGMPS21","doi":"10.4230/LIPICS.ISAAC.2021.21","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.21","url":"https://dblp.org/rec/conf/isaac/BrauseGMPS21"},
+"url":"URL#288782"
+},
+{
+"@score":"1",
+"@id":"288783",
+"info":{"authors":{"author":[{"@pid":"28/9840L","text":"Clément L. Canonne"},{"@pid":"84/6371","text":"Karl Wimmer"}]},"title":"Identity Testing Under Label Mismatch.","venue":"ISAAC","pages":"55:1-55:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/CanonneW21","doi":"10.4230/LIPICS.ISAAC.2021.55","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.55","url":"https://dblp.org/rec/conf/isaac/CanonneW21"},
+"url":"URL#288783"
+},
+{
+"@score":"1",
+"@id":"288784",
+"info":{"authors":{"author":[{"@pid":"184/0588","text":"Panagiotis Charalampopoulos"},{"@pid":"23/2916","text":"Huiping Chen"},{"@pid":"c/PeterChristen","text":"Peter Christen"},{"@pid":"96/4724","text":"Grigorios Loukides"},{"@pid":"p/NadiaPisanti","text":"Nadia Pisanti"},{"@pid":"89/7966","text":"Solon P. Pissis"},{"@pid":"83/7216","text":"Jakub Radoszewski"}]},"title":"Pattern Masking for Dictionary Matching.","venue":"ISAAC","pages":"65:1-65:19","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Charalampopoulos21","doi":"10.4230/LIPICS.ISAAC.2021.65","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.65","url":"https://dblp.org/rec/conf/isaac/Charalampopoulos21"},
+"url":"URL#288784"
+},
+{
+"@score":"1",
+"@id":"288785",
+"info":{"authors":{"author":[{"@pid":"c/JianerChen","text":"Jianer Chen"},{"@pid":"46/4826","text":"Qin Huang"},{"@pid":"93/86","text":"Iyad Kanj"},{"@pid":"69/5902-12","text":"Qian Li 0012"},{"@pid":"74/3428","text":"Ge Xia"}]},"title":"Streaming Algorithms for Graph k-Matching with Optimal or Near-Optimal Update Time.","venue":"ISAAC","pages":"48:1-48:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/ChenHK0X21","doi":"10.4230/LIPICS.ISAAC.2021.48","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.48","url":"https://dblp.org/rec/conf/isaac/ChenHK0X21"},
+"url":"URL#288785"
+},
+{
+"@score":"1",
+"@id":"288786",
+"info":{"authors":{"author":[{"@pid":"c/SiuWingCheng","text":"Siu-Wing Cheng"},{"@pid":"261/3112","text":"Man Ting Wong"}]},"title":"Self-Improving Voronoi Construction for a Hidden Mixture of Product Distributions.","venue":"ISAAC","pages":"8:1-8:13","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/ChengW21","doi":"10.4230/LIPICS.ISAAC.2021.8","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.8","url":"https://dblp.org/rec/conf/isaac/ChengW21"},
+"url":"URL#288786"
+},
+{
+"@score":"1",
+"@id":"288787",
+"info":{"authors":{"author":[{"@pid":"87/5654","text":"Joseph Cheriyan"},{"@pid":"184/2770","text":"Robert Cummings"},{"@pid":"228/7828","text":"Jack Dippel"},{"@pid":"307/4524","text":"Jasper Zhu"}]},"title":"An Improved Approximation Algorithm for the Matching Augmentation Problem.","venue":"ISAAC","pages":"38:1-38:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/CheriyanCDZ21","doi":"10.4230/LIPICS.ISAAC.2021.38","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.38","url":"https://dblp.org/rec/conf/isaac/CheriyanCDZ21"},
+"url":"URL#288787"
+},
+{
+"@score":"1",
+"@id":"288788",
+"info":{"authors":{"author":[{"@pid":"270/8365","text":"Kyungjin Cho"},{"@pid":"157/8129","text":"Eunjin Oh 0001"}]},"title":"Linear-Time Approximation Scheme for k-Means Clustering of Axis-Parallel Affine Subspaces.","venue":"ISAAC","pages":"46:1-46:13","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Cho021","doi":"10.4230/LIPICS.ISAAC.2021.46","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.46","url":"https://dblp.org/rec/conf/isaac/Cho021"},
+"url":"URL#288788"
+},
+{
+"@score":"1",
+"@id":"288789",
+"info":{"authors":{"author":[{"@pid":"61/3492","text":"Andrzej Czygrinow"},{"@pid":"16/3111","text":"Michal Hanckowiak"},{"@pid":"33/9224","text":"Marcin Witkowski"}]},"title":"Distributed Approximations of f-Matchings and b-Matchings in Graphs of Sub-Logarithmic Expansion.","venue":"ISAAC","pages":"59:1-59:13","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/CzygrinowHW21","doi":"10.4230/LIPICS.ISAAC.2021.59","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.59","url":"https://dblp.org/rec/conf/isaac/CzygrinowHW21"},
+"url":"URL#288789"
+},
+{
+"@score":"1",
+"@id":"288790",
+"info":{"authors":{"author":[{"@pid":"23/584","text":"Jurek Czyzowicz"},{"@pid":"211/7025","text":"Ryan Killick"},{"@pid":"k/EvangelosKranakis","text":"Evangelos Kranakis"},{"@pid":"k/DannyKrizanc","text":"Danny Krizanc"},{"@pid":"n/LataNarayanan","text":"Lata Narayanan"},{"@pid":"o/JaroslavOpatrny","text":"Jaroslav Opatrny"},{"@pid":"33/2732","text":"Denis Pankratov"},{"@pid":"s/SunilMShende","text":"Sunil M. Shende"}]},"title":"Group Evacuation on a Line by Agents with Different Communication Abilities.","venue":"ISAAC","pages":"57:1-57:24","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/CzyzowiczKKKNOP21","doi":"10.4230/LIPICS.ISAAC.2021.57","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.57","url":"https://dblp.org/rec/conf/isaac/CzyzowiczKKKNOP21"},
+"url":"URL#288790"
+},
+{
+"@score":"1",
+"@id":"288791",
+"info":{"authors":{"author":[{"@pid":"235/2471","text":"Rathish Das"},{"@pid":"59/9032","text":"Andrea Lincoln"},{"@pid":"00/10553","text":"Jayson Lynch"},{"@pid":"m/JIanMunro","text":"J. Ian Munro"}]},"title":"Dynamic Boolean Formula Evaluation.","venue":"ISAAC","pages":"61:1-61:19","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/DasLLM21","doi":"10.4230/LIPICS.ISAAC.2021.61","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.61","url":"https://dblp.org/rec/conf/isaac/DasLLM21"},
+"url":"URL#288791"
+},
+{
+"@score":"1",
+"@id":"288792",
+"info":{"authors":{"author":[{"@pid":"215/0051","text":"Julian Enoch"},{"@pid":"11/8774","text":"Kyle Fox"},{"@pid":"284/1090","text":"Dor Mesica"},{"@pid":"35/6579","text":"Shay Mozes"}]},"title":"A Faster Algorithm for Maximum Flow in Directed Planar Graphs with Vertex Capacities.","venue":"ISAAC","pages":"72:1-72:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/EnochFMM21","doi":"10.4230/LIPICS.ISAAC.2021.72","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.72","url":"https://dblp.org/rec/conf/isaac/EnochFMM21"},
+"url":"URL#288792"
+},
+{
+"@score":"1",
+"@id":"288793",
+"info":{"authors":{"author":[{"@pid":"234/7533","text":"Massimo Equi"},{"@pid":"203/8944","text":"Tuukka Norri"},{"@pid":"196/9332","text":"Jarno Alanko"},{"@pid":"146/7608","text":"Bastien Cazaux"},{"@pid":"98/3921","text":"Alexandru I. Tomescu"},{"@pid":"77/2752","text":"Veli Mäkinen"}]},"title":"Algorithms and Complexity on Indexing Elastic Founder Graphs.","venue":"ISAAC","pages":"20:1-20:18","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/EquiNACTM21","doi":"10.4230/LIPICS.ISAAC.2021.20","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.20","url":"https://dblp.org/rec/conf/isaac/EquiNACTM21"},
+"url":"URL#288793"
+},
+{
+"@score":"1",
+"@id":"288794",
+"info":{"authors":{"author":[{"@pid":"56/10870","text":"Marzieh Eskandari"},{"@pid":"297/4525","text":"Bhavika B. Khare"},{"@pid":"82/814","text":"Nirman Kumar"}]},"title":"Separated Red Blue Center Clustering.","venue":"ISAAC","pages":"41:1-41:13","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/EskandariKK21","doi":"10.4230/LIPICS.ISAAC.2021.41","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.41","url":"https://dblp.org/rec/conf/isaac/EskandariKK21"},
+"url":"URL#288794"
+},
+{
+"@score":"1",
+"@id":"288795",
+"info":{"authors":{"author":[{"@pid":"186/7864","text":"Jacob Evald"},{"@pid":"275/8913","text":"Viktor Fredslund-Hansen"},{"@pid":"79/1632","text":"Christian Wulff-Nilsen"}]},"title":"Near-Optimal Distance Oracles for Vertex-Labeled Planar Graphs.","venue":"ISAAC","pages":"23:1-23:14","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/EvaldFW21","doi":"10.4230/LIPICS.ISAAC.2021.23","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.23","url":"https://dblp.org/rec/conf/isaac/EvaldFW21"},
+"url":"URL#288795"
+},
+{
+"@score":"1",
+"@id":"288796",
+"info":{"authors":{"author":[{"@pid":"f/SandorPFekete","text":"Sándor P. Fekete"},{"@pid":"193/9782","text":"Phillip Keldenich"},{"@pid":"303/1167","text":"Ramin Kosfeld"},{"@pid":"206/6818","text":"Christian Rieck"},{"@pid":"08/10870","text":"Christian Scheffer"}]},"title":"Connected Coordinated Motion Planning with Bounded Stretch.","venue":"ISAAC","pages":"9:1-9:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/FeketeKKRS21","doi":"10.4230/LIPICS.ISAAC.2021.9","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.9","url":"https://dblp.org/rec/conf/isaac/FeketeKKRS21"},
+"url":"URL#288796"
+},
+{
+"@score":"1",
+"@id":"288797",
+"info":{"authors":{"author":[{"@pid":"f/PaoloFerragina","text":"Paolo Ferragina"},{"@pid":"63/1086","text":"Giovanni Manzini"},{"@pid":"237/9641","text":"Giorgio Vinciguerra"}]},"title":"Repetition- and Linearity-Aware Rank/Select Dictionaries.","venue":"ISAAC","pages":"64:1-64:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/FerraginaMV21","doi":"10.4230/LIPICS.ISAAC.2021.64","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.64","url":"https://dblp.org/rec/conf/isaac/FerraginaMV21"},
+"url":"URL#288797"
+},
+{
+"@score":"1",
+"@id":"288798",
+"info":{"authors":{"author":[{"@pid":"26/3744","text":"Mathew C. Francis"},{"@pid":"h/PavolHell","text":"Pavol Hell"},{"@pid":"179/2124","text":"Dalu Jacob"}]},"title":"On the Kernel and Related Problems in Interval Digraphs.","venue":"ISAAC","pages":"17:1-17:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/FrancisHJ21","doi":"10.4230/LIPICS.ISAAC.2021.17","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.17","url":"https://dblp.org/rec/conf/isaac/FrancisHJ21"},
+"url":"URL#288798"
+},
+{
+"@score":"1",
+"@id":"288799",
+"info":{"authors":{"author":[{"@pid":"275/8913","text":"Viktor Fredslund-Hansen"},{"@pid":"35/6579","text":"Shay Mozes"},{"@pid":"79/1632","text":"Christian Wulff-Nilsen"}]},"title":"Truly Subquadratic Exact Distance Oracles with Constant Query Time for Planar Graphs.","venue":"ISAAC","pages":"25:1-25:12","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Fredslund-Hansen21","doi":"10.4230/LIPICS.ISAAC.2021.25","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.25","url":"https://dblp.org/rec/conf/isaac/Fredslund-Hansen21"},
+"url":"URL#288799"
+},
+{
+"@score":"1",
+"@id":"288800",
+"info":{"authors":{"author":[{"@pid":"10/5740","text":"François Le Gall"},{"@pid":"78/2086","text":"Masayuki Miyamoto"}]},"title":"Lower Bounds for Induced Cycle Detection in Distributed Computing.","venue":"ISAAC","pages":"58:1-58:19","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/GallM21","doi":"10.4230/LIPICS.ISAAC.2021.58","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.58","url":"https://dblp.org/rec/conf/isaac/GallM21"},
+"url":"URL#288800"
+},
+{
+"@score":"1",
+"@id":"288801",
+"info":{"authors":{"author":[{"@pid":"20/292","text":"Matt Gibson-Lopez"},{"@pid":"82/318","text":"Zhongxiu Yang"}]},"title":"The VC-Dimension of Limited Visibility Terrains.","venue":"ISAAC","pages":"5:1-5:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Gibson-LopezY21","doi":"10.4230/LIPICS.ISAAC.2021.5","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.5","url":"https://dblp.org/rec/conf/isaac/Gibson-LopezY21"},
+"url":"URL#288801"
+},
+{
+"@score":"1",
+"@id":"288802",
+"info":{"authors":{"author":[{"@pid":"04/6964","text":"Laurent Gourvès"},{"@pid":"62/8685","text":"Ararat Harutyunyan"},{"@pid":"88/6157","text":"Michael Lampis"},{"@pid":"217/2941","text":"Nikolaos Melissinos"}]},"title":"Filling Crosswords Is Very Hard.","venue":"ISAAC","pages":"36:1-36:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/GourvesHLM21","doi":"10.4230/LIPICS.ISAAC.2021.36","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.36","url":"https://dblp.org/rec/conf/isaac/GourvesHLM21"},
+"url":"URL#288802"
+},
+{
+"@score":"1",
+"@id":"288803",
+"info":{"authors":{"author":[{"@pid":"g/QianPingGu","text":"Qian-Ping Gu"},{"@pid":"190/5702","text":"Jiajian Leo Liang"}]},"title":"Multimodal Transportation with Ridesharing of Personal Vehicles.","venue":"ISAAC","pages":"39:1-39:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/GuL21","doi":"10.4230/LIPICS.ISAAC.2021.39","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.39","url":"https://dblp.org/rec/conf/isaac/GuL21"},
+"url":"URL#288803"
+},
+{
+"@score":"1",
+"@id":"288804",
+"info":{"authors":{"author":[{"@pid":"26/1384","text":"Luciano Gualà"},{"@pid":"37/8821","text":"Stefano Leucci 0001"},{"@pid":"266/3160","text":"Isabella Ziccardi"}]},"title":"Resilient Level Ancestor, Bottleneck, and Lowest Common Ancestor Queries in Dynamic Trees.","venue":"ISAAC","pages":"66:1-66:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Guala0Z21","doi":"10.4230/LIPICS.ISAAC.2021.66","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.66","url":"https://dblp.org/rec/conf/isaac/Guala0Z21"},
+"url":"URL#288804"
+},
+{
+"@score":"1",
+"@id":"288805",
+"info":{"authors":{"author":[{"@pid":"55/5525","text":"Joachim Gudmundsson"},{"@pid":"174/3933","text":"Yuan Sha"},{"@pid":"139/7075","text":"Fan Yao"}]},"title":"Augmenting Graphs to Minimize the Radius.","venue":"ISAAC","pages":"45:1-45:20","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/GudmundssonSY21","doi":"10.4230/LIPICS.ISAAC.2021.45","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.45","url":"https://dblp.org/rec/conf/isaac/GudmundssonSY21"},
+"url":"URL#288805"
+},
+{
+"@score":"1",
+"@id":"288806",
+"info":{"authors":{"author":[{"@pid":"292/3708","text":"Atsuya Hasegawa"},{"@pid":"10/5740","text":"François Le Gall"}]},"title":"Quantum Advantage with Shallow Circuits Under Arbitrary Corruption.","venue":"ISAAC","pages":"74:1-74:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/HasegawaG21","doi":"10.4230/LIPICS.ISAAC.2021.74","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.74","url":"https://dblp.org/rec/conf/isaac/HasegawaG21"},
+"url":"URL#288806"
+},
+{
+"@score":"1",
+"@id":"288807",
+"info":{"authors":{"author":[{"@pid":"210/1024","text":"Úrsula Hébert-Johnson"},{"@pid":"207/0890","text":"Chinmay Sonar"},{"@pid":"s/SubhashSuri","text":"Subhash Suri"},{"@pid":"264/4810","text":"Vaishali Surianarayanan"}]},"title":"Anonymity-Preserving Space Partitions.","venue":"ISAAC","pages":"32:1-32:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Hebert-JohnsonS21","doi":"10.4230/LIPICS.ISAAC.2021.32","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.32","url":"https://dblp.org/rec/conf/isaac/Hebert-JohnsonS21"},
+"url":"URL#288807"
+},
+{
+"@score":"1",
+"@id":"288808",
+"info":{"authors":{"author":[{"@pid":"241/4968","text":"Hongyao Huang"},{"@pid":"291/3828","text":"Georgiy Klimenko"},{"@pid":"96/9733","text":"Benjamin Raichel"}]},"title":"Clustering with Neighborhoods.","venue":"ISAAC","pages":"6:1-6:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/HuangKR21","doi":"10.4230/LIPICS.ISAAC.2021.6","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.6","url":"https://dblp.org/rec/conf/isaac/HuangKR21"},
+"url":"URL#288808"
+},
+{
+"@score":"1",
+"@id":"288809",
+"info":{"authors":{"author":[{"@pid":"42/209","text":"Tali Kaufman"},{"@pid":"179/2637","text":"David Mass"}]},"title":"Unique-Neighbor-Like Expansion and Group-Independent Cosystolic Expansion.","venue":"ISAAC","pages":"56:1-56:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/KaufmanM21","doi":"10.4230/LIPICS.ISAAC.2021.56","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.56","url":"https://dblp.org/rec/conf/isaac/KaufmanM21"},
+"url":"URL#288809"
+},
+{
+"@score":"1",
+"@id":"288810",
+"info":{"authors":{"author":[{"@pid":"156/9818","text":"Donggyu Kim"},{"@pid":"307/4558","text":"Duksang Lee"},{"@pid":"23/6820","text":"Sang-il Oum"}]},"title":"Γ-Graphic Delta-Matroids and Their Applications.","venue":"ISAAC","pages":"70:1-70:13","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/KimLO21","doi":"10.4230/LIPICS.ISAAC.2021.70","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.70","url":"https://dblp.org/rec/conf/isaac/KimLO21"},
+"url":"URL#288810"
+},
+{
+"@score":"1",
+"@id":"288811",
+"info":{"authors":{"author":[{"@pid":"244/8353","text":"Tomohiro Koana"},{"@pid":"69/1771","text":"Christian Komusiewicz"},{"@pid":"223/1925","text":"Frank Sommer"}]},"title":"Essentially Tight Kernels For (Weakly) Closed Graphs.","venue":"ISAAC","pages":"35:1-35:15","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/KoanaKS21","doi":"10.4230/LIPICS.ISAAC.2021.35","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.35","url":"https://dblp.org/rec/conf/isaac/KoanaKS21"},
+"url":"URL#288811"
+},
+{
+"@score":"1",
+"@id":"288812",
+"info":{"authors":{"author":{"@pid":"223/4387","text":"Soh Kumabe"}},"title":"Interval Query Problem on Cube-Free Median Graphs.","venue":"ISAAC","pages":"18:1-18:14","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Kumabe21","doi":"10.4230/LIPICS.ISAAC.2021.18","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.18","url":"https://dblp.org/rec/conf/isaac/Kumabe21"},
+"url":"URL#288812"
+},
+{
+"@score":"1",
+"@id":"288813",
+"info":{"authors":{"author":[{"@pid":"88/6157","text":"Michael Lampis"},{"@pid":"08/879","text":"Valia Mitsou"}]},"title":"Fine-Grained Meta-Theorems for Vertex Integrity.","venue":"ISAAC","pages":"34:1-34:15","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/LampisM21","doi":"10.4230/LIPICS.ISAAC.2021.34","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.34","url":"https://dblp.org/rec/conf/isaac/LampisM21"},
+"url":"URL#288813"
+},
+{
+"@score":"1",
+"@id":"288814",
+"info":{"authors":{"author":[{"@pid":"12/6956","text":"Shibo Li"},{"@pid":"56/6665","text":"Dominik Scheder"}]},"title":"Impatient PPSZ - A Faster Algorithm for CSP.","venue":"ISAAC","pages":"33:1-33:20","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/LiS21","doi":"10.4230/LIPICS.ISAAC.2021.33","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.33","url":"https://dblp.org/rec/conf/isaac/LiS21"},
+"url":"URL#288814"
+},
+{
+"@score":"1",
+"@id":"288815",
+"info":{"authors":{"author":[{"@pid":"284/3081","text":"Ya-Chun Liang"},{"@pid":"288/0237","text":"Kuan-Yun Lai"},{"@pid":"83/6707","text":"Ho-Lin Chen"},{"@pid":"65/4683","text":"Kazuo Iwama"}]},"title":"Tight Competitive Analyses of Online Car-Sharing Problems.","venue":"ISAAC","pages":"50:1-50:14","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/LiangLCI21","doi":"10.4230/LIPICS.ISAAC.2021.50","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.50","url":"https://dblp.org/rec/conf/isaac/LiangLCI21"},
+"url":"URL#288815"
+},
+{
+"@score":"1",
+"@id":"288816",
+"info":{"authors":{"author":[{"@pid":"16/8297","text":"Anna Malafiejska"},{"@pid":"m/MMalafiejski","text":"Michal Malafiejski"},{"@pid":"73/8020","text":"Krzysztof M. Ocetkiewicz"},{"@pid":"303/7917","text":"Krzysztof Pastuszak"}]},"title":"Interval Edge Coloring of Bipartite Graphs with Small Vertex Degrees.","venue":"ISAAC","pages":"26:1-26:12","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/MalafiejskaMOP21","doi":"10.4230/LIPICS.ISAAC.2021.26","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.26","url":"https://dblp.org/rec/conf/isaac/MalafiejskaMOP21"},
+"url":"URL#288816"
+},
+{
+"@score":"1",
+"@id":"288817",
+"info":{"authors":{"author":[{"@pid":"124/2173","text":"Michael Matheny"},{"@pid":"17/3933","text":"Jeff M. Phillips"}]},"title":"Approximate Maximum Halfspace Discrepancy.","venue":"ISAAC","pages":"4:1-4:15","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/MathenyP21","doi":"10.4230/LIPICS.ISAAC.2021.4","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.4","url":"https://dblp.org/rec/conf/isaac/MathenyP21"},
+"url":"URL#288817"
+},
+{
+"@score":"1",
+"@id":"288818",
+"info":{"authors":{"author":[{"@pid":"k/ClaireKenyon","text":"Claire Mathieu"},{"@pid":"26/3707-1","text":"Hang Zhou 0001"}]},"title":"Probabilistic Analysis of Euclidean Capacitated Vehicle Routing.","venue":"ISAAC","pages":"43:1-43:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Mathieu021","doi":"10.4230/LIPICS.ISAAC.2021.43","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.43","url":"https://dblp.org/rec/conf/isaac/Mathieu021"},
+"url":"URL#288818"
+},
+{
+"@score":"1",
+"@id":"288819",
+"info":{"authors":{"author":[{"@pid":"75/78","text":"Julián Mestre"},{"@pid":"98/8980","text":"Sergey Pupyrev"},{"@pid":"182/2576","text":"Seeun William Umboh"}]},"title":"On the Extended TSP Problem.","venue":"ISAAC","pages":"42:1-42:14","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/MestrePU21","doi":"10.4230/LIPICS.ISAAC.2021.42","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.42","url":"https://dblp.org/rec/conf/isaac/MestrePU21"},
+"url":"URL#288819"
+},
+{
+"@score":"1",
+"@id":"288820",
+"info":{"authors":{"author":[{"@pid":"n/SotirisENikoletseas","text":"Sotiris E. Nikoletseas"},{"@pid":"16/6015","text":"Christoforos L. Raptopoulos"},{"@pid":"s/PaulGSpirakis","text":"Paul G. Spirakis"}]},"title":"MAX CUT in Weighted Random Intersection Graphs and Discrepancy of Sparse Random Set Systems.","venue":"ISAAC","pages":"28:1-28:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/NikoletseasRS21","doi":"10.4230/LIPICS.ISAAC.2021.28","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.28","url":"https://dblp.org/rec/conf/isaac/NikoletseasRS21"},
+"url":"URL#288820"
+},
+{
+"@score":"1",
+"@id":"288821",
+"info":{"authors":{"author":[{"@pid":"62/3977","text":"Bengt J. Nilsson"},{"@pid":"48/2358","text":"David Orden"},{"@pid":"81/382","text":"Leonidas Palios"},{"@pid":"88/3711","text":"Carlos Seara"},{"@pid":"20/4764","text":"Pawel Zylinski"}]},"title":"Illuminating the x-Axis by α-Floodlights.","venue":"ISAAC","pages":"11:1-11:12","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/NilssonOPSZ21","doi":"10.4230/LIPICS.ISAAC.2021.11","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.11","url":"https://dblp.org/rec/conf/isaac/NilssonOPSZ21"},
+"url":"URL#288821"
+},
+{
+"@score":"1",
+"@id":"288822",
+"info":{"authors":{"author":[{"@pid":"272/7196","text":"Dhrumil Patel"},{"@pid":"75/3500","text":"Rahul Shah"}]},"title":"Inverse Suffix Array Queries for 2-Dimensional Pattern Matching in Near-Compact Space.","venue":"ISAAC","pages":"60:1-60:14","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/PatelS21","doi":"10.4230/LIPICS.ISAAC.2021.60","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.60","url":"https://dblp.org/rec/conf/isaac/PatelS21"},
+"url":"URL#288822"
+},
+{
+"@score":"1",
+"@id":"288823",
+"info":{"authors":{"author":{"@pid":"195/5907","text":"Patrick Schnider"}},"title":"Enclosing Depth and Other Depth Measures.","venue":"ISAAC","pages":"10:1-10:15","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Schnider21","doi":"10.4230/LIPICS.ISAAC.2021.10","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.10","url":"https://dblp.org/rec/conf/isaac/Schnider21"},
+"url":"URL#288823"
+},
+{
+"@score":"1",
+"@id":"288824",
+"info":{"authors":{"author":{"@pid":"195/5907","text":"Patrick Schnider"}},"title":"The Complexity of Sharing a Pizza.","venue":"ISAAC","pages":"13:1-13:15","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Schnider21a","doi":"10.4230/LIPICS.ISAAC.2021.13","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.13","url":"https://dblp.org/rec/conf/isaac/Schnider21a"},
+"url":"URL#288824"
+},
+{
+"@score":"1",
+"@id":"288825",
+"info":{"authors":{"author":[{"@pid":"245/0173","text":"Yongho Shin"},{"@pid":"08/8383","text":"Hyung-Chan An"}]},"title":"Making Three out of Two - Three-Way Online Correlated Selection.","venue":"ISAAC","pages":"49:1-49:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/ShinA21","doi":"10.4230/LIPICS.ISAAC.2021.49","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.49","url":"https://dblp.org/rec/conf/isaac/ShinA21"},
+"url":"URL#288825"
+},
+{
+"@score":"1",
+"@id":"288826",
+"info":{"authors":{"author":{"@pid":"99/3746","text":"Tatiana Starikovskaya"}},"title":"Streaming Pattern Matching (Invited Talk).","venue":"ISAAC","pages":"1:1-1:1","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Starikovskaya21","doi":"10.4230/LIPICS.ISAAC.2021.1","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.1","url":"https://dblp.org/rec/conf/isaac/Starikovskaya21"},
+"url":"URL#288826"
+},
+{
+"@score":"1",
+"@id":"288827",
+"info":{"authors":{"author":{"@pid":"258/4600","text":"Shuhao Tan"}},"title":"Computing Shapley Values for Mean Width in 3-D.","venue":"ISAAC","pages":"67:1-67:17","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Tan21","doi":"10.4230/LIPICS.ISAAC.2021.67","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.67","url":"https://dblp.org/rec/conf/isaac/Tan21"},
+"url":"URL#288827"
+},
+{
+"@score":"1",
+"@id":"288828",
+"info":{"authors":{"author":[{"@pid":"68/3428","text":"Shaojie Tang"},{"@pid":"17/5765-2","text":"Jing Yuan 0002"}]},"title":"Adaptive Regularized Submodular Maximization.","venue":"ISAAC","pages":"69:1-69:13","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Tang021","doi":"10.4230/LIPICS.ISAAC.2021.69","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.69","url":"https://dblp.org/rec/conf/isaac/Tang021"},
+"url":"URL#288828"
+},
+{
+"@score":"1",
+"@id":"288829",
+"info":{"authors":{"author":{"@pid":"211/8092","text":"Noam Touitou"}},"title":"Nearly-Tight Lower Bounds for Set Cover and Network Design with Deadlines/Delay.","venue":"ISAAC","pages":"53:1-53:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Touitou21","doi":"10.4230/LIPICS.ISAAC.2021.53","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.53","url":"https://dblp.org/rec/conf/isaac/Touitou21"},
+"url":"URL#288829"
+},
+{
+"@score":"1",
+"@id":"288830",
+"info":{"title":"Front Matter, Table of Contents, Preface, Conference Organization.","venue":"ISAAC","pages":"0:1-0:18","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/X21","doi":"10.4230/LIPICS.ISAAC.2021.0","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.0","url":"https://dblp.org/rec/conf/isaac/X21"},
+"url":"URL#288830"
+},
+{
+"@score":"1",
+"@id":"288831",
+"info":{"authors":{"author":{"@pid":"160/5593","text":"Yu Yokoi"}},"title":"An Approximation Algorithm for Maximum Stable Matching with Ties and Constraints.","venue":"ISAAC","pages":"71:1-71:16","year":"2021","type":"Conference and Workshop Papers","access":"open","key":"conf/isaac/Yokoi21","doi":"10.4230/LIPICS.ISAAC.2021.71","ee":"https://doi.org/10.4230/LIPIcs.ISAAC.2021.71","url":"https://dblp.org/rec/conf/isaac/Yokoi21"},
+"url":"URL#288831"
+},
+{
+"@score":"1",
+"@id":"336269",
+"info":{"authors":{"author":[{"@pid":"65/358","text":"Hee-Kap Ahn"},{"@pid":"74/5752","text":"Kunihiko Sadakane"}]},"title":"32nd International Symposium on Algorithms and Computation, ISAAC 2021, December 6-8, 2021, Fukuoka, Japan.","venue":["ISAAC","LIPIcs"],"volume":"212","publisher":"Schloss Dagstuhl - Leibniz-Zentrum für Informatik","year":"2021","type":"Editorship","key":"conf/isaac/2021","ee":"https://www.dagstuhl.de/dagpub/978-3-95977-214-3","url":"https://dblp.org/rec/conf/isaac/2021"},
+"url":"URL#336269"
+}
+]
+}
+}
+}

@@ -1,0 +1,219 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/dlt/dlt2021.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"319.08"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"31",
+"@dc":"31",
+"@oc":"31",
+"@id":"35341470",
+"text":":facetid:toc:db/conf/dlt/dlt2021.bht"
+}
+},
+"hits":{
+"@total":"31",
+"@computed":"31",
+"@sent":"31",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"235368",
+"info":{"authors":{"author":{"@pid":"43/6335","text":"Jean-Paul Allouche"}},"title":"Morphic Sequences Versus Automatic Sequences.","venue":"DLT","pages":"3-11","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Allouche21","doi":"10.1007/978-3-030-81508-0_1","ee":"https://doi.org/10.1007/978-3-030-81508-0_1","url":"https://dblp.org/rec/conf/dlt/Allouche21"},
+"url":"URL#235368"
+},
+{
+"@score":"1",
+"@id":"235369",
+"info":{"authors":{"author":[{"@pid":"91/344","text":"Elena Barcucci"},{"@pid":"88/835","text":"Antonio Bernini"},{"@pid":"39/4285","text":"Renzo Pinzani"}]},"title":"A Strong Non-overlapping Dyck Code.","venue":"DLT","pages":"43-53","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/BarcucciBP21","doi":"10.1007/978-3-030-81508-0_4","ee":"https://doi.org/10.1007/978-3-030-81508-0_4","url":"https://dblp.org/rec/conf/dlt/BarcucciBP21"},
+"url":"URL#235369"
+},
+{
+"@score":"1",
+"@id":"235370",
+"info":{"authors":{"author":[{"@pid":"183/1643","text":"Raphaël Berthon"},{"@pid":"117/1724","text":"Adrien Boiret"},{"@pid":"135/6266","text":"Guillermo A. Pérez 0001"},{"@pid":"05/4174","text":"Jean-François Raskin"}]},"title":"Active Learning of Sequential Transducers with Side Information About the Domain.","venue":"DLT","pages":"54-65","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/BerthonBPR21","doi":"10.1007/978-3-030-81508-0_5","ee":"https://doi.org/10.1007/978-3-030-81508-0_5","url":"https://dblp.org/rec/conf/dlt/BerthonBPR21"},
+"url":"URL#235370"
+},
+{
+"@score":"1",
+"@id":"235371",
+"info":{"authors":{"author":[{"@pid":"299/0735","text":"Malte Blattmann"},{"@pid":"48/3591","text":"Andreas Maletti"}]},"title":"Compositions of Constant Weighted Extended Tree Transducers.","venue":"DLT","pages":"66-77","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/BlattmannM21","doi":"10.1007/978-3-030-81508-0_6","ee":"https://doi.org/10.1007/978-3-030-81508-0_6","url":"https://dblp.org/rec/conf/dlt/BlattmannM21"},
+"url":"URL#235371"
+},
+{
+"@score":"1",
+"@id":"235372",
+"info":{"authors":{"author":[{"@pid":"255/7354","text":"Stijn Cambie"},{"@pid":"83/11141","text":"Michiel de Bondt"},{"@pid":"166/1311","text":"Henk Don"}]},"title":"Extremal Binary PFAs in a Černý Family.","venue":"DLT","pages":"78-89","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/CambieBD21","doi":"10.1007/978-3-030-81508-0_7","ee":"https://doi.org/10.1007/978-3-030-81508-0_7","url":"https://dblp.org/rec/conf/dlt/CambieBD21"},
+"url":"URL#235372"
+},
+{
+"@score":"1",
+"@id":"235373",
+"info":{"authors":{"author":[{"@pid":"41/4181","text":"Laura Ciobanu"},{"@pid":"259/3154","text":"Alan D. Logan"}]},"title":"Variations on the Post Correspondence Problem for Free Groups.","venue":"DLT","pages":"90-102","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/CiobanuL21","doi":"10.1007/978-3-030-81508-0_8","ee":"https://doi.org/10.1007/978-3-030-81508-0_8","url":"https://dblp.org/rec/conf/dlt/CiobanuL21"},
+"url":"URL#235373"
+},
+{
+"@score":"1",
+"@id":"235374",
+"info":{"authors":{"author":[{"@pid":"c/SCrespiReghizzi","text":"Stefano Crespi-Reghizzi"},{"@pid":"05/2717","text":"Antonio Restivo"},{"@pid":"17/906","text":"Pierluigi San Pietro"}]},"title":"Reducing Local Alphabet Size in Recognizable Picture Languages.","venue":"DLT","pages":"103-116","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Crespi-Reghizzi21","doi":"10.1007/978-3-030-81508-0_9","ee":"https://doi.org/10.1007/978-3-030-81508-0_9","url":"https://dblp.org/rec/conf/dlt/Crespi-Reghizzi21"},
+"url":"URL#235374"
+},
+{
+"@score":"1",
+"@id":"235375",
+"info":{"authors":{"author":[{"@pid":"d/VolkerDiekert","text":"Volker Diekert"},{"@pid":"f/HenningFernau","text":"Henning Fernau"},{"@pid":"47/6732-2","text":"Petra Wolf 0002"}]},"title":"Properties of Graphs Specified by a Regular Language.","venue":"DLT","pages":"117-129","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/DiekertFW21","doi":"10.1007/978-3-030-81508-0_10","ee":"https://doi.org/10.1007/978-3-030-81508-0_10","url":"https://dblp.org/rec/conf/dlt/DiekertFW21"},
+"url":"URL#235375"
+},
+{
+"@score":"1",
+"@id":"235376",
+"info":{"authors":{"author":[{"@pid":"222/2084","text":"Luc Edixhoven"},{"@pid":"91/8340","text":"Sung-Shik Jongmans"}]},"title":"Balanced-By-Construction Regular and ømega-Regular Languages.","venue":"DLT","pages":"130-142","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/EdixhovenJ21","doi":"10.1007/978-3-030-81508-0_11","ee":"https://doi.org/10.1007/978-3-030-81508-0_11","url":"https://dblp.org/rec/conf/dlt/EdixhovenJ21"},
+"url":"URL#235376"
+},
+{
+"@score":"1",
+"@id":"235377",
+"info":{"authors":{"author":[{"@pid":"265/6070","text":"Yannik Eikmeier"},{"@pid":"204/7523","text":"Pamela Fleischmann"},{"@pid":"241/9575","text":"Mitja Kulczynski"},{"@pid":"91/2495","text":"Dirk Nowotka"}]},"title":"Weighted Prefix Normal Words - Mind the Gap.","venue":"DLT","pages":"143-154","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/EikmeierFKN21","doi":"10.1007/978-3-030-81508-0_12","ee":"https://doi.org/10.1007/978-3-030-81508-0_12","url":"https://dblp.org/rec/conf/dlt/EikmeierFKN21"},
+"url":"URL#235377"
+},
+{
+"@score":"1",
+"@id":"235378",
+"info":{"authors":{"author":{"@pid":"f/HenningFernau","text":"Henning Fernau"}},"title":"Parsimonious Computational Completeness.","venue":"DLT","pages":"12-26","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Fernau21","doi":"10.1007/978-3-030-81508-0_2","ee":"https://doi.org/10.1007/978-3-030-81508-0_2","url":"https://dblp.org/rec/conf/dlt/Fernau21"},
+"url":"URL#235378"
+},
+{
+"@score":"1",
+"@id":"235379",
+"info":{"authors":{"author":[{"@pid":"225/9880","text":"Fabian Frei"},{"@pid":"h/JurajHromkovic","text":"Juraj Hromkovic"},{"@pid":"k/RiKralovic","text":"Richard Královic"},{"@pid":"k/RastislavKralovic","text":"Rastislav Královic"}]},"title":"Two-Way Non-uniform Finite Automata.","venue":"DLT","pages":"155-166","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/FreiHKK21","doi":"10.1007/978-3-030-81508-0_13","ee":"https://doi.org/10.1007/978-3-030-81508-0_13","url":"https://dblp.org/rec/conf/dlt/FreiHKK21"},
+"url":"URL#235379"
+},
+{
+"@score":"1",
+"@id":"235380",
+"info":{"authors":{"author":[{"@pid":"15/4090","text":"Vesa Halava"},{"@pid":"h/TeroHarju","text":"Tero Harju"},{"@pid":"154/6540","text":"Reino Niskanen"},{"@pid":"p/IgorPotapov","text":"Igor Potapov"}]},"title":"Integer Weighted Automata on Infinite Words.","venue":"DLT","pages":"167-179","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/HalavaHNP21","doi":"10.1007/978-3-030-81508-0_14","ee":"https://doi.org/10.1007/978-3-030-81508-0_14","url":"https://dblp.org/rec/conf/dlt/HalavaHNP21"},
+"url":"URL#235380"
+},
+{
+"@score":"1",
+"@id":"235381",
+"info":{"authors":{"author":[{"@pid":"280/0257","text":"Viktor Henriksson"},{"@pid":"79/477","text":"Manfred Kufleitner"}]},"title":"Deciding FO2 Alternation for Automata over Finite and Infinite Words.","venue":"DLT","pages":"180-191","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/HenrikssonK21","doi":"10.1007/978-3-030-81508-0_15","ee":"https://doi.org/10.1007/978-3-030-81508-0_15","url":"https://dblp.org/rec/conf/dlt/HenrikssonK21"},
+"url":"URL#235381"
+},
+{
+"@score":"1",
+"@id":"235382",
+"info":{"authors":{"author":{"@pid":"73/962-1","text":"Stefan Hoffmann 0001"}},"title":"State Complexity of Projection on Languages Recognized by Permutation Automata and Commuting Letters.","venue":"DLT","pages":"192-203","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Hoffmann21","doi":"10.1007/978-3-030-81508-0_16","ee":"https://doi.org/10.1007/978-3-030-81508-0_16","url":"https://dblp.org/rec/conf/dlt/Hoffmann21"},
+"url":"URL#235382"
+},
+{
+"@score":"1",
+"@id":"235383",
+"info":{"authors":{"author":{"@pid":"73/962-1","text":"Stefan Hoffmann 0001"}},"title":"Constrained Synchronization and Subset Synchronization Problems for Weakly Acyclic Automata.","venue":"DLT","pages":"204-216","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Hoffmann21a","doi":"10.1007/978-3-030-81508-0_17","ee":"https://doi.org/10.1007/978-3-030-81508-0_17","url":"https://dblp.org/rec/conf/dlt/Hoffmann21a"},
+"url":"URL#235383"
+},
+{
+"@score":"1",
+"@id":"235384",
+"info":{"authors":{"author":[{"@pid":"h/StepanHolub","text":"Stepan Holub"},{"@pid":"68/7551","text":"Stepán Starosta"}]},"title":"Lyndon Words Formalized in Isabelle/HOL.","venue":"DLT","pages":"217-228","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/HolubS21","doi":"10.1007/978-3-030-81508-0_18","ee":"https://doi.org/10.1007/978-3-030-81508-0_18","url":"https://dblp.org/rec/conf/dlt/HolubS21"},
+"url":"URL#235384"
+},
+{
+"@score":"1",
+"@id":"235385",
+"info":{"authors":{"author":[{"@pid":"h/MarkusHolzer1","text":"Markus Holzer 0001"},{"@pid":"51/7703","text":"Christian Rauch"}]},"title":"The Range of State Complexities of Languages Resulting from the Cascade Product - The General Case (Extended Abstract).","venue":"DLT","pages":"229-241","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/HolzerR21","doi":"10.1007/978-3-030-81508-0_19","ee":"https://doi.org/10.1007/978-3-030-81508-0_19","url":"https://dblp.org/rec/conf/dlt/HolzerR21"},
+"url":"URL#235385"
+},
+{
+"@score":"1",
+"@id":"235386",
+"info":{"authors":{"author":{"@pid":"19/4109","text":"Dietrich Kuske"}},"title":"Second-Order Finite Automata - Expressive Power and Simple Proofs Using Automatic Structures.","venue":"DLT","pages":"242-254","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Kuske21","doi":"10.1007/978-3-030-81508-0_20","ee":"https://doi.org/10.1007/978-3-030-81508-0_20","url":"https://dblp.org/rec/conf/dlt/Kuske21"},
+"url":"URL#235386"
+},
+{
+"@score":"1",
+"@id":"235387",
+"info":{"authors":{"author":[{"@pid":"k/MartinKutrib","text":"Martin Kutrib"},{"@pid":"70/6536-3","text":"Uwe Meyer 0003"}]},"title":"Reversible Top-Down Syntax Analysis.","venue":"DLT","pages":"255-266","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/KutribM21","doi":"10.1007/978-3-030-81508-0_21","ee":"https://doi.org/10.1007/978-3-030-81508-0_21","url":"https://dblp.org/rec/conf/dlt/KutribM21"},
+"url":"URL#235387"
+},
+{
+"@score":"1",
+"@id":"235388",
+"info":{"authors":{"author":[{"@pid":"299/0799","text":"Sergey Luchinin"},{"@pid":"07/4444","text":"Svetlana Puzynina"}]},"title":"Symmetry Groups of Infinite Words.","venue":"DLT","pages":"267-278","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/LuchininP21","doi":"10.1007/978-3-030-81508-0_22","ee":"https://doi.org/10.1007/978-3-030-81508-0_22","url":"https://dblp.org/rec/conf/dlt/LuchininP21"},
+"url":"URL#235388"
+},
+{
+"@score":"1",
+"@id":"235389",
+"info":{"authors":{"author":{"@pid":"233/4177","text":"Vladislav Makarov"}},"title":"Bounded Languages Described by GF(2)-grammars.","venue":"DLT","pages":"279-290","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Makarov21","doi":"10.1007/978-3-030-81508-0_23","ee":"https://doi.org/10.1007/978-3-030-81508-0_23","url":"https://dblp.org/rec/conf/dlt/Makarov21"},
+"url":"URL#235389"
+},
+{
+"@score":"1",
+"@id":"235390",
+"info":{"authors":{"author":[{"@pid":"m/SebastianManeth","text":"Sebastian Maneth"},{"@pid":"s/HelmutSeidl","text":"Helmut Seidl"},{"@pid":"244/2650","text":"Martin Vu"}]},"title":"Definability Results for Top-Down Tree Transducers.","venue":"DLT","pages":"291-303","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/ManethSV21","doi":"10.1007/978-3-030-81508-0_24","ee":"https://doi.org/10.1007/978-3-030-81508-0_24","url":"https://dblp.org/rec/conf/dlt/ManethSV21"},
+"url":"URL#235390"
+},
+{
+"@score":"1",
+"@id":"235391",
+"info":{"authors":{"author":[{"@pid":"280/3197","text":"Mikhail Mrykhin"},{"@pid":"o/AOkhotin","text":"Alexander Okhotin"}]},"title":"The Hardest LL(k) Language.","venue":"DLT","pages":"304-315","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/MrykhinO21","doi":"10.1007/978-3-030-81508-0_25","ee":"https://doi.org/10.1007/978-3-030-81508-0_25","url":"https://dblp.org/rec/conf/dlt/MrykhinO21"},
+"url":"URL#235391"
+},
+{
+"@score":"1",
+"@id":"235392",
+"info":{"authors":{"author":{"@pid":"242/3319","text":"Julian Pape-Lange"}},"title":"Upper Bounds on Distinct Maximal (Sub-)Repetitions in Compressed Strings.","venue":"DLT","pages":"316-327","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Pape-Lange21","doi":"10.1007/978-3-030-81508-0_26","ee":"https://doi.org/10.1007/978-3-030-81508-0_26","url":"https://dblp.org/rec/conf/dlt/Pape-Lange21"},
+"url":"URL#235392"
+},
+{
+"@score":"1",
+"@id":"235393",
+"info":{"authors":{"author":[{"@pid":"16/10045","text":"Elena A. Petrova"},{"@pid":"05/3762","text":"Arseny M. Shur"}]},"title":"Branching Frequency and Markov Entropy of Repetition-Free Languages.","venue":"DLT","pages":"328-341","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/PetrovaS21","doi":"10.1007/978-3-030-81508-0_27","ee":"https://doi.org/10.1007/978-3-030-81508-0_27","url":"https://dblp.org/rec/conf/dlt/PetrovaS21"},
+"url":"URL#235393"
+},
+{
+"@score":"1",
+"@id":"235394",
+"info":{"authors":{"author":{"@pid":"96/9670","text":"Alexander A. Rubtsov"}},"title":"A Linear-Time Simulation of Deterministic d-Limited Automata.","venue":"DLT","pages":"342-354","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Rubtsov21","doi":"10.1007/978-3-030-81508-0_28","ee":"https://doi.org/10.1007/978-3-030-81508-0_28","url":"https://dblp.org/rec/conf/dlt/Rubtsov21"},
+"url":"URL#235394"
+},
+{
+"@score":"1",
+"@id":"235395",
+"info":{"authors":{"author":{"@pid":"133/8629","text":"Ryoma Sin&apos;ya"}},"title":"Carathéodory Extensions of Subclasses of Regular Languages.","venue":"DLT","pages":"355-367","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Sinya21","doi":"10.1007/978-3-030-81508-0_29","ee":"https://doi.org/10.1007/978-3-030-81508-0_29","url":"https://dblp.org/rec/conf/dlt/Sinya21"},
+"url":"URL#235395"
+},
+{
+"@score":"1",
+"@id":"235396",
+"info":{"authors":{"author":{"@pid":"15/917","text":"Benjamin Steinberg"}},"title":"Pointlike Sets and Separation - A Personal Perspective.","venue":"DLT","pages":"27-40","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/Steinberg21","doi":"10.1007/978-3-030-81508-0_3","ee":"https://doi.org/10.1007/978-3-030-81508-0_3","url":"https://dblp.org/rec/conf/dlt/Steinberg21"},
+"url":"URL#235396"
+},
+{
+"@score":"1",
+"@id":"235397",
+"info":{"authors":{"author":[{"@pid":"245/3304","text":"Nobin Thomas"},{"@pid":"26/6117","text":"Lisa Mathew"},{"@pid":"180/7475","text":"Somnath Bera"},{"@pid":"53/4055","text":"Atulya K. Nagar"},{"@pid":"37/7013","text":"K. G. Subramanian 0001"}]},"title":"Parikh Word Representable Graphs and Morphisms.","venue":"DLT","pages":"368-379","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/dlt/ThomasMBNS21","doi":"10.1007/978-3-030-81508-0_30","ee":"https://doi.org/10.1007/978-3-030-81508-0_30","url":"https://dblp.org/rec/conf/dlt/ThomasMBNS21"},
+"url":"URL#235397"
+},
+{
+"@score":"1",
+"@id":"335537",
+"info":{"authors":{"author":[{"@pid":"n/NelmaMoreira","text":"Nelma Moreira"},{"@pid":"30/5254","text":"Rogério Reis"}]},"title":"Developments in Language Theory - 25th International Conference, DLT 2021, Porto, Portugal, August 16-20, 2021, Proceedings","venue":["DLT","Lecture Notes in Computer Science"],"volume":"12811","publisher":"Springer","year":"2021","type":"Editorship","key":"conf/dlt/2021","doi":"10.1007/978-3-030-81508-0","ee":"https://doi.org/10.1007/978-3-030-81508-0","url":"https://dblp.org/rec/conf/dlt/2021"},
+"url":"URL#335537"
+}
+]
+}
+}
+}

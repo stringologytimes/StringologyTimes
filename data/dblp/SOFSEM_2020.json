@@ -1,0 +1,399 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/sofsem/sofsem2020.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"117.75"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"61",
+"@dc":"61",
+"@oc":"61",
+"@id":"35373211",
+"text":":facetid:toc:db/conf/sofsem/sofsem2020.bht"
+}
+},
+"hits":{
+"@total":"61",
+"@computed":"61",
+"@sent":"61",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"745135",
+"info":{"authors":{"author":[{"@pid":"64/3320","text":"Faisal N. Abu-Khzam"},{"@pid":"66/4637","text":"Cristina Bazgan"},{"@pid":"f/HenningFernau","text":"Henning Fernau"}]},"title":"Parameterized Dynamic Variants of Red-Blue Dominating Set.","venue":"SOFSEM","pages":"236-247","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/Abu-KhzamBF20","doi":"10.1007/978-3-030-38919-2_20","ee":"https://doi.org/10.1007/978-3-030-38919-2_20","url":"https://dblp.org/rec/conf/sofsem/Abu-KhzamBF20"},
+"url":"URL#745135"
+},
+{
+"@score":"1",
+"@id":"745136",
+"info":{"authors":{"author":[{"@pid":"251/8661","text":"Duncan Adamson"},{"@pid":"126/4788","text":"Argyrios Deligkas"},{"@pid":"86/8147","text":"Vladimir V. Gusev"},{"@pid":"p/IgorPotapov","text":"Igor Potapov"}]},"title":"On the Hardness of Energy Minimisation for Crystal Structure Prediction.","venue":"SOFSEM","pages":"587-596","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/AdamsonDGP20","doi":"10.1007/978-3-030-38919-2_48","ee":"https://doi.org/10.1007/978-3-030-38919-2_48","url":"https://dblp.org/rec/conf/sofsem/AdamsonDGP20"},
+"url":"URL#745136"
+},
+{
+"@score":"1",
+"@id":"745138",
+"info":{"authors":{"author":[{"@pid":"40/1806","text":"Bogdan Aman"},{"@pid":"c/GCiobanu","text":"Gabriel Ciobanu"}]},"title":"Employing Costs in Multiagent Systems with Timed Migration and Timed Communication.","venue":"SOFSEM","pages":"441-453","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/AmanC20","doi":"10.1007/978-3-030-38919-2_36","ee":"https://doi.org/10.1007/978-3-030-38919-2_36","url":"https://dblp.org/rec/conf/sofsem/AmanC20"},
+"url":"URL#745138"
+},
+{
+"@score":"1",
+"@id":"745140",
+"info":{"authors":{"author":[{"@pid":"59/6839","text":"Leonid Barenboim"},{"@pid":"188/6250","text":"Tzalik Maimon"}]},"title":"Simple Distributed Spanners in Dense Congest Networks.","venue":"SOFSEM","pages":"260-272","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/BarenboimM20","doi":"10.1007/978-3-030-38919-2_22","ee":"https://doi.org/10.1007/978-3-030-38919-2_22","url":"https://dblp.org/rec/conf/sofsem/BarenboimM20"},
+"url":"URL#745140"
+},
+{
+"@score":"1",
+"@id":"745141",
+"info":{"authors":{"author":[{"@pid":"b/VincentBerry","text":"Vincent Berry"},{"@pid":"02/4233","text":"Céline Scornavacca"},{"@pid":"64/7186","text":"Mathias Weller"}]},"title":"Scanning Phylogenetic Networks Is NP-hard.","venue":"SOFSEM","pages":"519-530","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/BerrySW20","doi":"10.1007/978-3-030-38919-2_42","ee":"https://doi.org/10.1007/978-3-030-38919-2_42","url":"https://dblp.org/rec/conf/sofsem/BerrySW20"},
+"url":"URL#745141"
+},
+{
+"@score":"1",
+"@id":"745142",
+"info":{"authors":{"author":[{"@pid":"153/8039","text":"Markus Blumenstock"},{"@pid":"13/3984-2","text":"Frank Fischer 0002"}]},"title":"A Constructive Arboricity Approximation Scheme.","venue":"SOFSEM","pages":"51-63","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/BlumenstockF20","doi":"10.1007/978-3-030-38919-2_5","ee":"https://doi.org/10.1007/978-3-030-38919-2_5","url":"https://dblp.org/rec/conf/sofsem/BlumenstockF20"},
+"url":"URL#745142"
+},
+{
+"@score":"1",
+"@id":"745143",
+"info":{"authors":{"author":[{"@pid":"10/1734","text":"Nicolas Bousquet"},{"@pid":"220/3936","text":"Alice Joffard"}]},"title":"Approximating Shortest Connected Graph Transformation for Trees.","venue":"SOFSEM","pages":"76-87","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/BousquetJ20","doi":"10.1007/978-3-030-38919-2_7","ee":"https://doi.org/10.1007/978-3-030-38919-2_7","url":"https://dblp.org/rec/conf/sofsem/BousquetJ20"},
+"url":"URL#745143"
+},
+{
+"@score":"1",
+"@id":"745144",
+"info":{"authors":{"author":[{"@pid":"256/7403","text":"Marek Bruchatý"},{"@pid":"18/2667","text":"Karol Rástocný"}]},"title":"Does Live Regression Testing Help?","venue":"SOFSEM","pages":"699-707","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/BruchatyR20","doi":"10.1007/978-3-030-38919-2_59","ee":"https://doi.org/10.1007/978-3-030-38919-2_59","url":"https://dblp.org/rec/conf/sofsem/BruchatyR20"},
+"url":"URL#745144"
+},
+{
+"@score":"1",
+"@id":"745145",
+"info":{"authors":{"author":[{"@pid":"b/NaderHBshouty","text":"Nader H. Bshouty"},{"@pid":"85/5648","text":"George Haddad"},{"@pid":"187/4507","text":"Catherine A. Haddad-Zaknoon"}]},"title":"Bounds for the Number of Tests in Non-adaptive Randomized Algorithms for Group Testing.","venue":"SOFSEM","pages":"101-112","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/BshoutyHH20","doi":"10.1007/978-3-030-38919-2_9","ee":"https://doi.org/10.1007/978-3-030-38919-2_9","url":"https://dblp.org/rec/conf/sofsem/BshoutyHH20"},
+"url":"URL#745145"
+},
+{
+"@score":"1",
+"@id":"745146",
+"info":{"authors":{"author":[{"@pid":"236/4276","text":"Manuel Cáceres"},{"@pid":"p/SimonJPuglisi","text":"Simon J. Puglisi"},{"@pid":"193/9794","text":"Bella Zhukova"}]},"title":"Fast Indexes for Gapped Pattern Matching.","venue":"SOFSEM","pages":"493-504","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/CaceresPZ20","doi":"10.1007/978-3-030-38919-2_40","ee":"https://doi.org/10.1007/978-3-030-38919-2_40","url":"https://dblp.org/rec/conf/sofsem/CaceresPZ20"},
+"url":"URL#745146"
+},
+{
+"@score":"1",
+"@id":"745148",
+"info":{"authors":{"author":[{"@pid":"94/398","text":"Giovanna Castellano"},{"@pid":"93/5130","text":"Ciro Castiello"},{"@pid":"70/5062","text":"Corrado Mencar"},{"@pid":"151/5820","text":"Gennaro Vessio"}]},"title":"Crowd Detection for Drone Safe Landing Through Fully-Convolutional Neural Networks.","venue":"SOFSEM","pages":"301-312","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/CastellanoCMV20","doi":"10.1007/978-3-030-38919-2_25","ee":"https://doi.org/10.1007/978-3-030-38919-2_25","url":"https://dblp.org/rec/conf/sofsem/CastellanoCMV20"},
+"url":"URL#745148"
+},
+{
+"@score":"1",
+"@id":"745150",
+"info":{"authors":{"author":[{"@pid":"223/0784","text":"Fabiola Moyón Constante"},{"@pid":"256/7518","text":"Christoph Bayr"},{"@pid":"69/8522","text":"Daniel Méndez Fernández"},{"@pid":"183/3909","text":"Sebastian Dännart"},{"@pid":"93/10434","text":"Kristian Beckers"}]},"title":"A Light-Weight Tool for the Self-assessment of Security Compliance in Software Development - An Industry Case.","venue":"SOFSEM","pages":"403-416","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/ConstanteBFDB20","doi":"10.1007/978-3-030-38919-2_33","ee":"https://doi.org/10.1007/978-3-030-38919-2_33","url":"https://dblp.org/rec/conf/sofsem/ConstanteBFDB20"},
+"url":"URL#745150"
+},
+{
+"@score":"1",
+"@id":"745151",
+"info":{"authors":{"author":[{"@pid":"220/9831","text":"Ovidiu Cosma"},{"@pid":"28/3781","text":"Petrica C. Pop"},{"@pid":"52/8611","text":"Cosmin Sabo"}]},"title":"A Novel Hybrid Genetic Algorithm for the Two-Stage Transportation Problem with Fixed Charges Associated to the Routes.","venue":"SOFSEM","pages":"417-428","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/CosmaPS20","doi":"10.1007/978-3-030-38919-2_34","ee":"https://doi.org/10.1007/978-3-030-38919-2_34","url":"https://dblp.org/rec/conf/sofsem/CosmaPS20"},
+"url":"URL#745151"
+},
+{
+"@score":"1",
+"@id":"745152",
+"info":{"authors":{"author":[{"@pid":"c/JCsirik","text":"János Csirik"},{"@pid":"84/1770","text":"György Dósa"},{"@pid":"255/4896","text":"Dávid Kószó"}]},"title":"Online Scheduling with Machine Cost and a Quadratic Objective Function.","venue":"SOFSEM","pages":"199-210","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/CsirikDK20","doi":"10.1007/978-3-030-38919-2_17","ee":"https://doi.org/10.1007/978-3-030-38919-2_17","url":"https://dblp.org/rec/conf/sofsem/CsirikDK20"},
+"url":"URL#745152"
+},
+{
+"@score":"1",
+"@id":"745153",
+"info":{"authors":{"author":[{"@pid":"d/EDamiani","text":"Ernesto Damiani"},{"@pid":"62/575","text":"Claudio Agostino Ardagna"}]},"title":"Certified Machine-Learning Models.","venue":"SOFSEM","pages":"3-15","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/DamianiA20","doi":"10.1007/978-3-030-38919-2_1","ee":"https://doi.org/10.1007/978-3-030-38919-2_1","url":"https://dblp.org/rec/conf/sofsem/DamianiA20"},
+"url":"URL#745153"
+},
+{
+"@score":"1",
+"@id":"745154",
+"info":{"authors":{"author":[{"@pid":"227/4719","text":"Tom Davot"},{"@pid":"92/6470","text":"Annie Chateau"},{"@pid":"16/4193","text":"Rodolphe Giroudeau"},{"@pid":"64/7186","text":"Mathias Weller"}]},"title":"Linearizing Genomes - Exact Methods and Local Search.","venue":"SOFSEM","pages":"505-518","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/DavotCGW20","doi":"10.1007/978-3-030-38919-2_41","ee":"https://doi.org/10.1007/978-3-030-38919-2_41","url":"https://dblp.org/rec/conf/sofsem/DavotCGW20"},
+"url":"URL#745154"
+},
+{
+"@score":"1",
+"@id":"745155",
+"info":{"authors":{"author":[{"@pid":"142/9220","text":"Henrietta Dombrovskaya"},{"@pid":"256/7608","text":"Jeff Czaplewski"},{"@pid":"n/BorisNovikov","text":"Boris Novikov 0001"}]},"title":"Connecting Galaxies - Bridging the Gap Between Databases and Applications.","venue":"SOFSEM","pages":"648-656","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/DombrovskayaCN20","doi":"10.1007/978-3-030-38919-2_54","ee":"https://doi.org/10.1007/978-3-030-38919-2_54","url":"https://dblp.org/rec/conf/sofsem/DombrovskayaCN20"},
+"url":"URL#745155"
+},
+{
+"@score":"1",
+"@id":"745156",
+"info":{"authors":{"author":[{"@pid":"256/7599","text":"Rick Erkens"},{"@pid":"116/4873","text":"Jurriaan Rot"},{"@pid":"l/BasLuttik","text":"Bas Luttik"}]},"title":"Up-to Techniques for Branching Bisimilarity.","venue":"SOFSEM","pages":"285-297","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/ErkensRL20","doi":"10.1007/978-3-030-38919-2_24","ee":"https://doi.org/10.1007/978-3-030-38919-2_24","url":"https://dblp.org/rec/conf/sofsem/ErkensRL20"},
+"url":"URL#745156"
+},
+{
+"@score":"1",
+"@id":"745157",
+"info":{"authors":{"author":[{"@pid":"e/ThomasErlebach","text":"Thomas Erlebach"},{"@pid":"225/3667","text":"Jakob T. Spooner"}]},"title":"A Game of Cops and Robbers on Graphs with Periodic Edge-Connectivity.","venue":"SOFSEM","pages":"64-75","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/ErlebachS20","doi":"10.1007/978-3-030-38919-2_6","ee":"https://doi.org/10.1007/978-3-030-38919-2_6","url":"https://dblp.org/rec/conf/sofsem/ErlebachS20"},
+"url":"URL#745157"
+},
+{
+"@score":"1",
+"@id":"745158",
+"info":{"authors":{"author":[{"@pid":"169/1212","text":"Rachel Faran"},{"@pid":"k/OrnaKupferman","text":"Orna Kupferman"}]},"title":"On Synthesis of Specifications with Arithmetic.","venue":"SOFSEM","pages":"161-173","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/FaranK20","doi":"10.1007/978-3-030-38919-2_14","ee":"https://doi.org/10.1007/978-3-030-38919-2_14","url":"https://dblp.org/rec/conf/sofsem/FaranK20"},
+"url":"URL#745158"
+},
+{
+"@score":"1",
+"@id":"745160",
+"info":{"authors":{"author":[{"@pid":"250/0592","text":"Gabriel Ferrettini"},{"@pid":"08/9059","text":"Julien Aligon"},{"@pid":"s/ChantalSouleDupuy","text":"Chantal Soulé-Dupuy"}]},"title":"Explaining Single Predictions - A Faster Method.","venue":"SOFSEM","pages":"313-324","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/FerrettiniAS20","doi":"10.1007/978-3-030-38919-2_26","ee":"https://doi.org/10.1007/978-3-030-38919-2_26","url":"https://dblp.org/rec/conf/sofsem/FerrettiniAS20"},
+"url":"URL#745160"
+},
+{
+"@score":"1",
+"@id":"745161",
+"info":{"authors":{"author":[{"@pid":"196/4895","text":"Francesco De Fino"},{"@pid":"c/BarbaraCatania","text":"Barbara Catania"},{"@pid":"g/GiovannaGuerrini","text":"Giovanna Guerrini"}]},"title":"GRaCe - A Relaxed Approach for Graph Query Caching.","venue":"SOFSEM","pages":"657-666","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/FinoCG20","doi":"10.1007/978-3-030-38919-2_55","ee":"https://doi.org/10.1007/978-3-030-38919-2_55","url":"https://dblp.org/rec/conf/sofsem/FinoCG20"},
+"url":"URL#745161"
+},
+{
+"@score":"1",
+"@id":"745162",
+"info":{"authors":{"author":[{"@pid":"256/7342","text":"Naoka Fukuzono"},{"@pid":"157/1043","text":"Tesshu Hanaka"},{"@pid":"248/2102","text":"Hironori Kiya"},{"@pid":"12/377","text":"Hirotaka Ono"},{"@pid":"256/7370","text":"Ryogo Yamaguchi"}]},"title":"Two-Player Competitive Diffusion Game - Graph Classes and the Existence of a Nash Equilibrium.","venue":"SOFSEM","pages":"627-635","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/FukuzonoHKOY20","doi":"10.1007/978-3-030-38919-2_52","ee":"https://doi.org/10.1007/978-3-030-38919-2_52","url":"https://dblp.org/rec/conf/sofsem/FukuzonoHKOY20"},
+"url":"URL#745162"
+},
+{
+"@score":"1",
+"@id":"745163",
+"info":{"authors":{"author":[{"@pid":"g/ErolGelenbe","text":"Erol Gelenbe"},{"@pid":"228/7967","text":"Yunxiao Zhang"}]},"title":"Sharing Energy for Optimal Edge Performance.","venue":"SOFSEM","pages":"24-36","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/GelenbeZ20","doi":"10.1007/978-3-030-38919-2_3","ee":"https://doi.org/10.1007/978-3-030-38919-2_3","url":"https://dblp.org/rec/conf/sofsem/GelenbeZ20"},
+"url":"URL#745163"
+},
+{
+"@score":"1",
+"@id":"745164",
+"info":{"authors":{"author":[{"@pid":"169/9750","text":"Kitti Gelle"},{"@pid":"09/1881","text":"Szabolcs Iván"}]},"title":"The Order Type of Scattered Context-Free Orderings of Rank One Is Computable.","venue":"SOFSEM","pages":"273-284","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/GelleI20","doi":"10.1007/978-3-030-38919-2_23","ee":"https://doi.org/10.1007/978-3-030-38919-2_23","url":"https://dblp.org/rec/conf/sofsem/GelleI20"},
+"url":"URL#745164"
+},
+{
+"@score":"1",
+"@id":"745165",
+"info":{"authors":{"author":[{"@pid":"256/7362","text":"Issam Ghabri"},{"@pid":"b/LadjelBellatreche","text":"Ladjel Bellatreche"},{"@pid":"20/6407","text":"Sadok Ben Yahia"}]},"title":"Selection of a Green Logical Data Warehouse Schema by Anti-monotonicity Constraint.","venue":"SOFSEM","pages":"350-361","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/GhabriBY20","doi":"10.1007/978-3-030-38919-2_29","ee":"https://doi.org/10.1007/978-3-030-38919-2_29","url":"https://dblp.org/rec/conf/sofsem/GhabriBY20"},
+"url":"URL#745165"
+},
+{
+"@score":"1",
+"@id":"745166",
+"info":{"authors":{"author":[{"@pid":"g/FGurski","text":"Frank Gurski"},{"@pid":"73/962-2","text":"Stefan Hoffmann 0002"},{"@pid":"239/4139","text":"Dominique Komander"},{"@pid":"207/8219","text":"Carolin Rehs"},{"@pid":"06/342","text":"Jochen Rethmann"},{"@pid":"w/EgonWanke","text":"Egon Wanke"}]},"title":"Computing Directed Steiner Path Covers for Directed Co-graphs (Extended Abstract).","venue":"SOFSEM","pages":"556-565","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/GurskiHKRRW20","doi":"10.1007/978-3-030-38919-2_45","ee":"https://doi.org/10.1007/978-3-030-38919-2_45","url":"https://dblp.org/rec/conf/sofsem/GurskiHKRRW20"},
+"url":"URL#745166"
+},
+{
+"@score":"1",
+"@id":"745167",
+"info":{"authors":{"author":[{"@pid":"231/6314","text":"Bardia Hamedmohseni"},{"@pid":"97/8408","text":"Zahed Rahmati"},{"@pid":"90/8236","text":"Debajyoti Mondal"}]},"title":"Simplified Emanation Graphs - A Sparse Plane Spanner with Steiner Points.","venue":"SOFSEM","pages":"607-616","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/HamedmohseniRM20","doi":"10.1007/978-3-030-38919-2_50","ee":"https://doi.org/10.1007/978-3-030-38919-2_50","url":"https://dblp.org/rec/conf/sofsem/HamedmohseniRM20"},
+"url":"URL#745167"
+},
+{
+"@score":"1",
+"@id":"745168",
+"info":{"authors":{"author":{"@pid":"227/2360","text":"Mohammad Mehdi Hosseinzadeh"}},"title":"Dense Subgraphs in Biological Networks.","venue":"SOFSEM","pages":"711-719","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/Hosseinzadeh20","doi":"10.1007/978-3-030-38919-2_60","ee":"https://doi.org/10.1007/978-3-030-38919-2_60","url":"https://dblp.org/rec/conf/sofsem/Hosseinzadeh20"},
+"url":"URL#745168"
+},
+{
+"@score":"1",
+"@id":"745170",
+"info":{"authors":{"author":[{"@pid":"200/8514","text":"Davaajav Jargalsaikhan"},{"@pid":"176/8779","text":"Diptarama Hendrian"},{"@pid":"62/4416","text":"Ryo Yoshinaka"},{"@pid":"s/AyumiShinohara","text":"Ayumi Shinohara"}]},"title":"Parallel Duel-and-Sweep Algorithm for the Order-Preserving Pattern Matching.","venue":"SOFSEM","pages":"211-222","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/JargalsaikhanHY20","doi":"10.1007/978-3-030-38919-2_18","ee":"https://doi.org/10.1007/978-3-030-38919-2_18","url":"https://dblp.org/rec/conf/sofsem/JargalsaikhanHY20"},
+"url":"URL#745170"
+},
+{
+"@score":"1",
+"@id":"745171",
+"info":{"authors":{"author":[{"@pid":"256/7410","text":"Ishadi Jayasinghe"},{"@pid":"46/10481","text":"Surangika Ranathunga"}]},"title":"Two-Step Memory Networks for Deep Semantic Parsing of Geometry Word Problems.","venue":"SOFSEM","pages":"676-685","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/JayasingheR20","doi":"10.1007/978-3-030-38919-2_57","ee":"https://doi.org/10.1007/978-3-030-38919-2_57","url":"https://dblp.org/rec/conf/sofsem/JayasingheR20"},
+"url":"URL#745171"
+},
+{
+"@score":"1",
+"@id":"745172",
+"info":{"authors":{"author":[{"@pid":"256/7596","text":"Liam Jordon"},{"@pid":"66/5817","text":"Philippe Moser"}]},"title":"On the Difference Between Finite-State and Pushdown Depth.","venue":"SOFSEM","pages":"187-198","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/JordonM20","doi":"10.1007/978-3-030-38919-2_16","ee":"https://doi.org/10.1007/978-3-030-38919-2_16","url":"https://dblp.org/rec/conf/sofsem/JordonM20"},
+"url":"URL#745172"
+},
+{
+"@score":"1",
+"@id":"745173",
+"info":{"authors":{"author":[{"@pid":"59/577","text":"Shahin Kamali"},{"@pid":"86/7052","text":"Avery Miller"},{"@pid":"248/9290","text":"Kenny Zhang"}]},"title":"Burning Two Worlds.","venue":"SOFSEM","pages":"113-124","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/KamaliMZ20","doi":"10.1007/978-3-030-38919-2_10","ee":"https://doi.org/10.1007/978-3-030-38919-2_10","url":"https://dblp.org/rec/conf/sofsem/KamaliMZ20"},
+"url":"URL#745173"
+},
+{
+"@score":"1",
+"@id":"745174",
+"info":{"authors":{"author":{"@pid":"86/5666","text":"Gunnar W. Klau"}},"title":"The Lost Recipes from the Four Schools of Amathus.","venue":"SOFSEM","pages":"16-23","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/Klau20","doi":"10.1007/978-3-030-38919-2_2","ee":"https://doi.org/10.1007/978-3-030-38919-2_2","url":"https://dblp.org/rec/conf/sofsem/Klau20"},
+"url":"URL#745174"
+},
+{
+"@score":"1",
+"@id":"745175",
+"info":{"authors":{"author":[{"@pid":"k/StavrosKonstantinidis","text":"Stavros Konstantinidis"},{"@pid":"21/4601","text":"António Machiavelo"},{"@pid":"n/NelmaMoreira","text":"Nelma Moreira"},{"@pid":"30/5254","text":"Rogério Reis"}]},"title":"On the Average State Complexity of Partial Derivative Transducers.","venue":"SOFSEM","pages":"174-186","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/KonstantinidisM20","doi":"10.1007/978-3-030-38919-2_15","ee":"https://doi.org/10.1007/978-3-030-38919-2_15","url":"https://dblp.org/rec/conf/sofsem/KonstantinidisM20"},
+"url":"URL#745175"
+},
+{
+"@score":"1",
+"@id":"745176",
+"info":{"authors":{"author":{"@pid":"k/MartinKutrib","text":"Martin Kutrib"}},"title":"Kernels of Sub-classes of Context-Free Languages.","venue":"SOFSEM","pages":"136-147","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/Kutrib20","doi":"10.1007/978-3-030-38919-2_12","ee":"https://doi.org/10.1007/978-3-030-38919-2_12","url":"https://dblp.org/rec/conf/sofsem/Kutrib20"},
+"url":"URL#745176"
+},
+{
+"@score":"1",
+"@id":"745177",
+"info":{"authors":{"author":[{"@pid":"30/3372","text":"Giuseppe Liotta"},{"@pid":"99/44","text":"Ignaz Rutter"},{"@pid":"192/0799","text":"Alessandra Tappini"}]},"title":"Simultaneous FPQ-Ordering and Hybrid Planarity Testing.","venue":"SOFSEM","pages":"617-626","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/LiottaRT20","doi":"10.1007/978-3-030-38919-2_51","ee":"https://doi.org/10.1007/978-3-030-38919-2_51","url":"https://dblp.org/rec/conf/sofsem/LiottaRT20"},
+"url":"URL#745177"
+},
+{
+"@score":"1",
+"@id":"745178",
+"info":{"authors":{"author":[{"@pid":"32/5859","text":"Kristína Machová"},{"@pid":"73/6440","text":"Marián Mach"},{"@pid":"256/7592","text":"Gabriela Demková"}]},"title":"Modelling of the Fake Posting Recognition in On-Line Media Using Machine Learning.","venue":"SOFSEM","pages":"667-675","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/MachovaMD20","doi":"10.1007/978-3-030-38919-2_56","ee":"https://doi.org/10.1007/978-3-030-38919-2_56","url":"https://dblp.org/rec/conf/sofsem/MachovaMD20"},
+"url":"URL#745178"
+},
+{
+"@score":"1",
+"@id":"745179",
+"info":{"authors":{"author":[{"@pid":"151/6470","text":"Alexander Mäcker"},{"@pid":"h/FMaufderHeide","text":"Friedhelm Meyer auf der Heide"},{"@pid":"224/4394","text":"Simon Pukrop"}]},"title":"Approximating Weighted Completion Time for Order Scheduling with Setup Times.","venue":"SOFSEM","pages":"88-100","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/MackerHP20","doi":"10.1007/978-3-030-38919-2_8","ee":"https://doi.org/10.1007/978-3-030-38919-2_8","url":"https://dblp.org/rec/conf/sofsem/MackerHP20"},
+"url":"URL#745179"
+},
+{
+"@score":"1",
+"@id":"745180",
+"info":{"authors":{"author":[{"@pid":"123/4608","text":"Simon Martiel"},{"@pid":"248/2993","text":"Maxime Remaud"}]},"title":"Practical Implementation of a Quantum Backtracking Algorithm.","venue":"SOFSEM","pages":"597-606","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/MartielR20","doi":"10.1007/978-3-030-38919-2_49","ee":"https://doi.org/10.1007/978-3-030-38919-2_49","url":"https://dblp.org/rec/conf/sofsem/MartielR20"},
+"url":"URL#745180"
+},
+{
+"@score":"1",
+"@id":"745181",
+"info":{"authors":{"author":[{"@pid":"57/1554","text":"Kohei Maruyama"},{"@pid":"70/1118","text":"Shinnosuke Seki"}]},"title":"Counting Infinitely by Oritatami Co-transcriptional Folding.","venue":"SOFSEM","pages":"566-575","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/MaruyamaS20","doi":"10.1007/978-3-030-38919-2_46","ee":"https://doi.org/10.1007/978-3-030-38919-2_46","url":"https://dblp.org/rec/conf/sofsem/MaruyamaS20"},
+"url":"URL#745181"
+},
+{
+"@score":"1",
+"@id":"745182",
+"info":{"authors":{"author":[{"@pid":"184/8452","text":"Takuya Mieno"},{"@pid":"227/1402","text":"Yuki Kuhara"},{"@pid":"248/7857","text":"Tooru Akagi"},{"@pid":"167/5319","text":"Yuta Fujishige"},{"@pid":"118/6656","text":"Yuto Nakashima"},{"@pid":"88/1129","text":"Shunsuke Inenaga"},{"@pid":"44/2355","text":"Hideo Bannai"},{"@pid":"35/1544","text":"Masayuki Takeda"}]},"title":"Minimal Unique Substrings and Minimal Absent Words in a Sliding Window.","venue":"SOFSEM","pages":"148-160","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/MienoKAFNIBT20","doi":"10.1007/978-3-030-38919-2_13","ee":"https://doi.org/10.1007/978-3-030-38919-2_13","url":"https://dblp.org/rec/conf/sofsem/MienoKAFNIBT20"},
+"url":"URL#745182"
+},
+{
+"@score":"1",
+"@id":"745183",
+"info":{"authors":{"author":[{"@pid":"207/3489","text":"Radu Stefan Mincu"},{"@pid":"08/3356","text":"Alexandru Popa 0001"}]},"title":"The Maximum Equality-Free String Factorization Problem - Gaps vs. No Gaps.","venue":"SOFSEM","pages":"531-543","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/MincuP20","doi":"10.1007/978-3-030-38919-2_43","ee":"https://doi.org/10.1007/978-3-030-38919-2_43","url":"https://dblp.org/rec/conf/sofsem/MincuP20"},
+"url":"URL#745183"
+},
+{
+"@score":"1",
+"@id":"745184",
+"info":{"authors":{"author":[{"@pid":"256/7583","text":"Nils Morawietz"},{"@pid":"217/1728","text":"Niels Grüttemeier"},{"@pid":"69/1771","text":"Christian Komusiewicz"},{"@pid":"223/1925","text":"Frank Sommer"}]},"title":"Refined Parameterizations for Computing Colored Cuts in Edge-Colored Graphs.","venue":"SOFSEM","pages":"248-259","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/MorawietzGKS20","doi":"10.1007/978-3-030-38919-2_21","ee":"https://doi.org/10.1007/978-3-030-38919-2_21","url":"https://dblp.org/rec/conf/sofsem/MorawietzGKS20"},
+"url":"URL#745184"
+},
+{
+"@score":"1",
+"@id":"745185",
+"info":{"authors":{"author":[{"@pid":"251/8962","text":"Benjamin Mourad"},{"@pid":"29/7866","text":"Matteo Cimini"}]},"title":"A Calculus for Language Transformations.","venue":"SOFSEM","pages":"547-555","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/MouradC20","doi":"10.1007/978-3-030-38919-2_44","ee":"https://doi.org/10.1007/978-3-030-38919-2_44","url":"https://dblp.org/rec/conf/sofsem/MouradC20"},
+"url":"URL#745185"
+},
+{
+"@score":"1",
+"@id":"745187",
+"info":{"authors":{"author":[{"@pid":"39/2146","text":"Miroslaw Ochodek"},{"@pid":"139/8191","text":"Sylwia Kopczynska"},{"@pid":"n/JRNawrocki","text":"Jerzy R. Nawrocki"}]},"title":"A Case Study on a Hybrid Approach to Assessing the Maturity of Requirements Engineering Practices in Agile Projects (REMMA).","venue":"SOFSEM","pages":"689-698","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/OchodekKN20","doi":"10.1007/978-3-030-38919-2_58","ee":"https://doi.org/10.1007/978-3-030-38919-2_58","url":"https://dblp.org/rec/conf/sofsem/OchodekKN20"},
+"url":"URL#745187"
+},
+{
+"@score":"1",
+"@id":"745188",
+"info":{"authors":{"author":{"@pid":"03/67","text":"Friedrich Otto"}},"title":"A Characterization of the Context-Free Languages by Stateless Ordered Restart-Delete Automata.","venue":"SOFSEM","pages":"39-50","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/Otto20","doi":"10.1007/978-3-030-38919-2_4","ee":"https://doi.org/10.1007/978-3-030-38919-2_4","url":"https://dblp.org/rec/conf/sofsem/Otto20"},
+"url":"URL#745188"
+},
+{
+"@score":"1",
+"@id":"745189",
+"info":{"authors":{"author":[{"@pid":"203/8399","text":"Xavier Ouvrard"},{"@pid":"77/480","text":"Jean-Marie Le Goff"},{"@pid":"32/3825","text":"Stéphane Marchand-Maillet"}]},"title":"The HyperBagGraph DataEdron - An Enriched Browsing Experience of Datasets.","venue":"SOFSEM","pages":"362-374","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/OuvrardGM20","doi":"10.1007/978-3-030-38919-2_30","ee":"https://doi.org/10.1007/978-3-030-38919-2_30","url":"https://dblp.org/rec/conf/sofsem/OuvrardGM20"},
+"url":"URL#745189"
+},
+{
+"@score":"1",
+"@id":"745190",
+"info":{"authors":{"author":[{"@pid":"232/9632","text":"Aggelos Papamichail"},{"@pid":"35/3250","text":"Apostolos V. Zarras"},{"@pid":"13/1242","text":"Panos Vassiliadis"}]},"title":"Do People Use Naming Conventions in SQL Programming?","venue":"SOFSEM","pages":"429-440","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/PapamichailZV20","doi":"10.1007/978-3-030-38919-2_35","ee":"https://doi.org/10.1007/978-3-030-38919-2_35","url":"https://dblp.org/rec/conf/sofsem/PapamichailZV20"},
+"url":"URL#745190"
+},
+{
+"@score":"1",
+"@id":"745191",
+"info":{"authors":{"author":[{"@pid":"48/10563","text":"Thuy Pham"},{"@pid":"73/5719","text":"Nhu Nguyen"},{"@pid":"81/8316","text":"Quang Pham"},{"@pid":"36/1565","text":"Han Cao"},{"@pid":"06/2545","text":"Binh T. Nguyen 0001"}]},"title":"Vietnamese Punctuation Prediction Using Deep Neural Networks.","venue":"SOFSEM","pages":"388-400","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/PhamNPCN20","doi":"10.1007/978-3-030-38919-2_32","ee":"https://doi.org/10.1007/978-3-030-38919-2_32","url":"https://dblp.org/rec/conf/sofsem/PhamNPCN20"},
+"url":"URL#745191"
+},
+{
+"@score":"1",
+"@id":"745192",
+"info":{"authors":{"author":[{"@pid":"256/7523","text":"Stepán Plachý"},{"@pid":"21/1027","text":"Jan Janousek"}]},"title":"On Synchronizing Tree Automata and Their Work-Optimal Parallel Run, Usable for Parallel Tree Pattern Matching.","venue":"SOFSEM","pages":"576-586","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/PlachyJ20","doi":"10.1007/978-3-030-38919-2_47","ee":"https://doi.org/10.1007/978-3-030-38919-2_47","url":"https://dblp.org/rec/conf/sofsem/PlachyJ20"},
+"url":"URL#745192"
+},
+{
+"@score":"1",
+"@id":"745194",
+"info":{"authors":{"author":[{"@pid":"256/7417","text":"Aleksander Sadaj"},{"@pid":"39/2146","text":"Miroslaw Ochodek"},{"@pid":"139/8191","text":"Sylwia Kopczynska"},{"@pid":"n/JRNawrocki","text":"Jerzy R. Nawrocki"}]},"title":"Maintainability of Automatic Acceptance Tests for Web Applications - A Case Study Comparing Two Approaches to Organizing Code of Test Cases.","venue":"SOFSEM","pages":"454-466","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/SadajOKN20","doi":"10.1007/978-3-030-38919-2_37","ee":"https://doi.org/10.1007/978-3-030-38919-2_37","url":"https://dblp.org/rec/conf/sofsem/SadajOKN20"},
+"url":"URL#745194"
+},
+{
+"@score":"1",
+"@id":"745196",
+"info":{"authors":{"author":[{"@pid":"251/4678","text":"Anna Sniegula"},{"@pid":"53/1567","text":"Aneta Poniszewska-Maranda"},{"@pid":"91/7413","text":"Lukasz Chomatek"}]},"title":"Towards the Named Entity Recognition Methods in Biomedical Field.","venue":"SOFSEM","pages":"375-387","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/SniegulaPC20","doi":"10.1007/978-3-030-38919-2_31","ee":"https://doi.org/10.1007/978-3-030-38919-2_31","url":"https://dblp.org/rec/conf/sofsem/SniegulaPC20"},
+"url":"URL#745196"
+},
+{
+"@score":"1",
+"@id":"745197",
+"info":{"authors":{"author":[{"@pid":"225/8181","text":"Elena Stefancova"},{"@pid":"06/9076","text":"Ivan Srba"}]},"title":"POI Recommendation Based on Locality-Specific Seasonality and Long-Term Trends.","venue":"SOFSEM","pages":"338-349","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/StefancovaS20","doi":"10.1007/978-3-030-38919-2_28","ee":"https://doi.org/10.1007/978-3-030-38919-2_28","url":"https://dblp.org/rec/conf/sofsem/StefancovaS20"},
+"url":"URL#745197"
+},
+{
+"@score":"1",
+"@id":"745199",
+"info":{"authors":{"author":{"@pid":"170/6263","text":"Matús Sulír"}},"title":"String Representations of Java Objects - An Empirical Study.","venue":"SOFSEM","pages":"479-490","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/Sulir20","doi":"10.1007/978-3-030-38919-2_39","ee":"https://doi.org/10.1007/978-3-030-38919-2_39","url":"https://dblp.org/rec/conf/sofsem/Sulir20"},
+"url":"URL#745199"
+},
+{
+"@score":"1",
+"@id":"745200",
+"info":{"authors":{"author":{"@pid":"209/9588","text":"Ronny Tredup"}},"title":"Parameterized Complexity of Synthesizing b-Bounded (m, n)-T-Systems.","venue":"SOFSEM","pages":"223-235","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/Tredup20","doi":"10.1007/978-3-030-38919-2_19","ee":"https://doi.org/10.1007/978-3-030-38919-2_19","url":"https://dblp.org/rec/conf/sofsem/Tredup20"},
+"url":"URL#745200"
+},
+{
+"@score":"1",
+"@id":"745201",
+"info":{"authors":{"author":[{"@pid":"167/7847","text":"Theofanis Vartziotis"},{"@pid":"35/3250","text":"Apostolos V. Zarras"},{"@pid":"256/7506","text":"Anastasios Tsimakis"},{"@pid":"13/1242","text":"Panos Vassiliadis"}]},"title":"Recommending Trips in the Archipelago of Refactorings.","venue":"SOFSEM","pages":"467-478","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/VartziotisZTV20","doi":"10.1007/978-3-030-38919-2_38","ee":"https://doi.org/10.1007/978-3-030-38919-2_38","url":"https://dblp.org/rec/conf/sofsem/VartziotisZTV20"},
+"url":"URL#745201"
+},
+{
+"@score":"1",
+"@id":"745202",
+"info":{"authors":{"author":[{"@pid":"256/7426","text":"Dominik Vasko"},{"@pid":"222/9522","text":"Samuel Pecar"},{"@pid":"27/7423","text":"Marián Simko"}]},"title":"Automatic Text Generation in Slovak Language.","venue":"SOFSEM","pages":"639-647","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/VaskoPS20","doi":"10.1007/978-3-030-38919-2_53","ee":"https://doi.org/10.1007/978-3-030-38919-2_53","url":"https://dblp.org/rec/conf/sofsem/VaskoPS20"},
+"url":"URL#745202"
+},
+{
+"@score":"1",
+"@id":"745204",
+"info":{"authors":{"author":[{"@pid":"w/XiaoFanWang","text":"Xiaofan Wang"},{"@pid":"75/248","text":"Haiming Chen"}]},"title":"Inferring Deterministic Regular Expression with Unorder.","venue":"SOFSEM","pages":"325-337","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/WangC20","doi":"10.1007/978-3-030-38919-2_27","ee":"https://doi.org/10.1007/978-3-030-38919-2_27","url":"https://dblp.org/rec/conf/sofsem/WangC20"},
+"url":"URL#745204"
+},
+{
+"@score":"1",
+"@id":"745205",
+"info":{"authors":{"author":[{"@pid":"120/0476","text":"Kohei Yamada"},{"@pid":"118/6656","text":"Yuto Nakashima"},{"@pid":"88/1129","text":"Shunsuke Inenaga"},{"@pid":"44/2355","text":"Hideo Bannai"},{"@pid":"35/1544","text":"Masayuki Takeda"}]},"title":"Faster STR-EC-LCS Computation.","venue":"SOFSEM","pages":"125-135","year":"2020","type":"Conference and Workshop Papers","access":"closed","key":"conf/sofsem/YamadaNIBT20","doi":"10.1007/978-3-030-38919-2_11","ee":"https://doi.org/10.1007/978-3-030-38919-2_11","url":"https://dblp.org/rec/conf/sofsem/YamadaNIBT20"},
+"url":"URL#745205"
+},
+{
+"@score":"1",
+"@id":"762993",
+"info":{"authors":{"author":[{"@pid":"234/7810","text":"Alexander Chatzigeorgiou"},{"@pid":"59/1669","text":"Riccardo Dondi"},{"@pid":"26/5170","text":"Herodotos Herodotou"},{"@pid":"71/6552","text":"Christos A. Kapoutsis"},{"@pid":"m/YManolopoulos","text":"Yannis Manolopoulos"},{"@pid":"p/GeorgeAngelosPapadopoulos","text":"George A. Papadopoulos"},{"@pid":"32/6121","text":"Florian Sikora"}]},"title":"SOFSEM 2020 - Theory and Practice of Computer Science - 46th International Conference on Current Trends in Theory and Practice of Informatics, SOFSEM 2020, Limassol, Cyprus, January 20-24, 2020, Proceedings","venue":["SOFSEM","Lecture Notes in Computer Science"],"volume":"12011","publisher":"Springer","year":"2020","type":"Editorship","key":"conf/sofsem/2020","doi":"10.1007/978-3-030-38919-2","ee":"https://doi.org/10.1007/978-3-030-38919-2","url":"https://dblp.org/rec/conf/sofsem/2020"},
+"url":"URL#762993"
+}
+]
+}
+}
+}

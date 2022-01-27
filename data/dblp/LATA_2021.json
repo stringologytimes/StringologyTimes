@@ -1,0 +1,195 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/lata/lata2021.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"123.03"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"27",
+"@dc":"27",
+"@oc":"27",
+"@id":"35360844",
+"text":":facetid:toc:db/conf/lata/lata2021.bht"
+}
+},
+"hits":{
+"@total":"27",
+"@computed":"27",
+"@sent":"27",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"300445",
+"info":{"authors":{"author":[{"@pid":"00/7229","text":"David R. Bélanger"},{"@pid":"04/10938","text":"Ziyuan Gao"},{"@pid":"j/SanjayJain1","text":"Sanjay Jain 0001"},{"@pid":"64/6025-50","text":"Wei Li 0050"},{"@pid":"s/FrankStephan","text":"Frank Stephan 0001"}]},"title":"Learnability and Positive Equivalence Relations.","venue":"LATA","pages":"145-156","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/BelangerG00021","doi":"10.1007/978-3-030-68195-1_12","ee":"https://doi.org/10.1007/978-3-030-68195-1_12","url":"https://dblp.org/rec/conf/lata/BelangerG00021"},
+"url":"URL#300445"
+},
+{
+"@score":"1",
+"@id":"300446",
+"info":{"authors":{"author":[{"@pid":"278/8382","text":"Fabian Birkmann"},{"@pid":"m/StefanMilius","text":"Stefan Milius"},{"@pid":"131/2343","text":"Henning Urbat"}]},"title":"On Language Varieties Without Boolean Operations.","venue":"LATA","pages":"3-15","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/BirkmannMU21","doi":"10.1007/978-3-030-68195-1_1","ee":"https://doi.org/10.1007/978-3-030-68195-1_1","url":"https://dblp.org/rec/conf/lata/BirkmannMU21"},
+"url":"URL#300446"
+},
+{
+"@score":"1",
+"@id":"300447",
+"info":{"authors":{"author":[{"@pid":"59/6397","text":"Borzoo Bonakdarpour"},{"@pid":"87/4626","text":"Sarai Sheinvald"}]},"title":"Finite-Word Hyperlanguages.","venue":"LATA","pages":"173-186","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/BonakdarpourS21","doi":"10.1007/978-3-030-68195-1_17","ee":"https://doi.org/10.1007/978-3-030-68195-1_17","url":"https://dblp.org/rec/conf/lata/BonakdarpourS21"},
+"url":"URL#300447"
+},
+{
+"@score":"1",
+"@id":"300448",
+"info":{"authors":{"author":[{"@pid":"42/4087","text":"Sabine Broda"},{"@pid":"21/4601","text":"António Machiavelo"},{"@pid":"n/NelmaMoreira","text":"Nelma Moreira"},{"@pid":"30/5254","text":"Rogério Reis"}]},"title":"Location Based Automata for Expressions with Shuffle.","venue":"LATA","pages":"43-54","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/BrodaMMR21","doi":"10.1007/978-3-030-68195-1_4","ee":"https://doi.org/10.1007/978-3-030-68195-1_4","url":"https://dblp.org/rec/conf/lata/BrodaMMR21"},
+"url":"URL#300448"
+},
+{
+"@score":"1",
+"@id":"300449",
+"info":{"authors":{"author":[{"@pid":"164/1759","text":"Sankardeep Chakraborty"},{"@pid":"g/RobertoGrossi","text":"Roberto Grossi"},{"@pid":"74/5752","text":"Kunihiko Sadakane"},{"@pid":"r/SSrinivasaRao","text":"Srinivasa Rao Satti"}]},"title":"Succinct Representations for (Non)Deterministic Finite Automata.","venue":"LATA","pages":"55-67","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/ChakrabortyGSS21","doi":"10.1007/978-3-030-68195-1_5","ee":"https://doi.org/10.1007/978-3-030-68195-1_5","url":"https://dblp.org/rec/conf/lata/ChakrabortyGSS21"},
+"url":"URL#300449"
+},
+{
+"@score":"1",
+"@id":"300450",
+"info":{"authors":{"author":[{"@pid":"c/SCrespiReghizzi","text":"Stefano Crespi-Reghizzi"},{"@pid":"17/906","text":"Pierluigi San Pietro"}]},"title":"Homomorphic Characterization of Tree Languages Based on Comma-Free Encoding.","venue":"LATA","pages":"241-254","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Crespi-Reghizzi21","doi":"10.1007/978-3-030-68195-1_19","ee":"https://doi.org/10.1007/978-3-030-68195-1_19","url":"https://dblp.org/rec/conf/lata/Crespi-Reghizzi21"},
+"url":"URL#300450"
+},
+{
+"@score":"1",
+"@id":"300451",
+"info":{"authors":{"author":[{"@pid":"130/3914","text":"Francesco Dolce"},{"@pid":"73/6320","text":"L&apos;ubomíra Dvoráková"},{"@pid":"72/2018","text":"Edita Pelantová"}]},"title":"On Balanced Sequences and Their Asymptotic Critical Exponent.","venue":"LATA","pages":"293-304","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/DolceDP21","doi":"10.1007/978-3-030-68195-1_23","ee":"https://doi.org/10.1007/978-3-030-68195-1_23","url":"https://dblp.org/rec/conf/lata/DolceDP21"},
+"url":"URL#300451"
+},
+{
+"@score":"1",
+"@id":"300452",
+"info":{"authors":{"author":[{"@pid":"285/9500","text":"Frederic Dörband"},{"@pid":"16/10124-1","text":"Thomas Feller 0001"},{"@pid":"265/9625","text":"Kevin Stier"}]},"title":"Approximated Determinisation of Weighted Tree Automata.","venue":"LATA","pages":"255-266","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/DorbandFS21","doi":"10.1007/978-3-030-68195-1_20","ee":"https://doi.org/10.1007/978-3-030-68195-1_20","url":"https://dblp.org/rec/conf/lata/DorbandFS21"},
+"url":"URL#300452"
+},
+{
+"@score":"1",
+"@id":"300453",
+"info":{"authors":{"author":[{"@pid":"285/9500","text":"Frederic Dörband"},{"@pid":"16/10124-1","text":"Thomas Feller 0001"},{"@pid":"265/9625","text":"Kevin Stier"}]},"title":"Sequentiality of Group-Weighted Tree Automata.","venue":"LATA","pages":"267-278","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/DorbandFS21a","doi":"10.1007/978-3-030-68195-1_21","ee":"https://doi.org/10.1007/978-3-030-68195-1_21","url":"https://dblp.org/rec/conf/lata/DorbandFS21a"},
+"url":"URL#300453"
+},
+{
+"@score":"1",
+"@id":"300454",
+"info":{"authors":{"author":[{"@pid":"225/7935","text":"Valentina Dorigatti"},{"@pid":"43/4982","text":"Paolo Massazza"}]},"title":"Partially Directed Animals with a Bounded Number of Holes.","venue":"LATA","pages":"16-28","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/DorigattiM21","doi":"10.1007/978-3-030-68195-1_2","ee":"https://doi.org/10.1007/978-3-030-68195-1_2","url":"https://dblp.org/rec/conf/lata/DorigattiM21"},
+"url":"URL#300454"
+},
+{
+"@score":"1",
+"@id":"300455",
+"info":{"authors":{"author":[{"@pid":"221/1697","text":"Jens Oliver Gutsfeld"},{"@pid":"m/MarkusMullerOhm","text":"Markus Müller-Olm"},{"@pid":"183/8084","text":"Christian Dielitz"}]},"title":"Temporal Logics with Language Parameters.","venue":"LATA","pages":"187-199","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/GutsfeldMD21","doi":"10.1007/978-3-030-68195-1_14","ee":"https://doi.org/10.1007/978-3-030-68195-1_14","url":"https://dblp.org/rec/conf/lata/GutsfeldMD21"},
+"url":"URL#300455"
+},
+{
+"@score":"1",
+"@id":"300456",
+"info":{"authors":{"author":{"@pid":"73/962-1","text":"Stefan Hoffmann 0001"}},"title":"Completely Reachable Automata, Primitive Groups and the State Complexity of the Set of Synchronizing Words.","venue":"LATA","pages":"305-317","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Hoffmann21","doi":"10.1007/978-3-030-68195-1_24","ee":"https://doi.org/10.1007/978-3-030-68195-1_24","url":"https://dblp.org/rec/conf/lata/Hoffmann21"},
+"url":"URL#300456"
+},
+{
+"@score":"1",
+"@id":"300457",
+"info":{"authors":{"author":{"@pid":"73/962-1","text":"Stefan Hoffmann 0001"}},"title":"State Complexity of the Set of Synchronizing Words for Circular Automata and Automata over Binary Alphabets.","venue":"LATA","pages":"318-330","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Hoffmann21a","doi":"10.1007/978-3-030-68195-1_25","ee":"https://doi.org/10.1007/978-3-030-68195-1_25","url":"https://dblp.org/rec/conf/lata/Hoffmann21a"},
+"url":"URL#300457"
+},
+{
+"@score":"1",
+"@id":"300458",
+"info":{"authors":{"author":[{"@pid":"285/9718","text":"Mamoru Ishizuka"},{"@pid":"68/2427-1","text":"Takahito Aoto 0001"},{"@pid":"13/5549","text":"Munehiro Iwami"}]},"title":"Commutative Rational Term Rewriting.","venue":"LATA","pages":"200-212","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Ishizuka0I21","doi":"10.1007/978-3-030-68195-1_15","ee":"https://doi.org/10.1007/978-3-030-68195-1_15","url":"https://dblp.org/rec/conf/lata/Ishizuka0I21"},
+"url":"URL#300458"
+},
+{
+"@score":"1",
+"@id":"300459",
+"info":{"authors":{"author":[{"@pid":"150/4292","text":"Manasi S. Kulkarni"},{"@pid":"75/2295","text":"Jayalal Sarma"},{"@pid":"285/9822","text":"Janani Sundaresan"}]},"title":"On the Computational Power of Programs over BA2 Monoid.","venue":"LATA","pages":"29-40","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/KulkarniSS21","doi":"10.1007/978-3-030-68195-1_3","ee":"https://doi.org/10.1007/978-3-030-68195-1_3","url":"https://dblp.org/rec/conf/lata/KulkarniSS21"},
+"url":"URL#300459"
+},
+{
+"@score":"1",
+"@id":"300460",
+"info":{"authors":{"author":{"@pid":"142/0341","text":"Aaron Lye"}},"title":"Deciding Non-emptiness of Hypergraph Languages Generated by Connection-preserving Fusion Grammars is NP-complete.","venue":"LATA","pages":"97-108","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Lye21","doi":"10.1007/978-3-030-68195-1_8","ee":"https://doi.org/10.1007/978-3-030-68195-1_8","url":"https://dblp.org/rec/conf/lata/Lye21"},
+"url":"URL#300460"
+},
+{
+"@score":"1",
+"@id":"300461",
+"info":{"authors":{"author":[{"@pid":"71/2462","text":"Takayuki Miyazaki"},{"@pid":"27/2249","text":"Yasuhiko Minamide"}]},"title":"Context-Free Grammars with Lookahead.","venue":"LATA","pages":"213-225","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/MiyazakiM21","doi":"10.1007/978-3-030-68195-1_16","ee":"https://doi.org/10.1007/978-3-030-68195-1_16","url":"https://dblp.org/rec/conf/lata/MiyazakiM21"},
+"url":"URL#300461"
+},
+{
+"@score":"1",
+"@id":"300462",
+"info":{"authors":{"author":{"@pid":"75/6758","text":"Hiroki Morizumi"}},"title":"On the Power of Nondeterministic Circuits and Co-Nondeterministic Circuits.","venue":"LATA","pages":"109-117","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Morizumi21","doi":"10.1007/978-3-030-68195-1_9","ee":"https://doi.org/10.1007/978-3-030-68195-1_9","url":"https://dblp.org/rec/conf/lata/Morizumi21"},
+"url":"URL#300462"
+},
+{
+"@score":"1",
+"@id":"300463",
+"info":{"authors":{"author":[{"@pid":"280/3197","text":"Mikhail Mrykhin"},{"@pid":"o/AOkhotin","text":"Alexander Okhotin"}]},"title":"On Hardest Languages for One-Dimensional Cellular Automata.","venue":"LATA","pages":"118-130","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/MrykhinO21","doi":"10.1007/978-3-030-68195-1_10","ee":"https://doi.org/10.1007/978-3-030-68195-1_10","url":"https://dblp.org/rec/conf/lata/MrykhinO21"},
+"url":"URL#300463"
+},
+{
+"@score":"1",
+"@id":"300464",
+"info":{"authors":{"author":{"@pid":"242/3319","text":"Julian Pape-Lange"}},"title":"Cadences in Grammar-Compressed Strings.","venue":"LATA","pages":"331-342","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/Pape-Lange21","doi":"10.1007/978-3-030-68195-1_26","ee":"https://doi.org/10.1007/978-3-030-68195-1_26","url":"https://dblp.org/rec/conf/lata/Pape-Lange21"},
+"url":"URL#300464"
+},
+{
+"@score":"1",
+"@id":"300465",
+"info":{"authors":{"author":[{"@pid":"18/9060","text":"Kévin Perrot"},{"@pid":"215/5475","text":"Pacôme Perrotin"},{"@pid":"78/5277","text":"Sylvain Sené"}]},"title":"Optimising Attractor Computation in Boolean Automata Networks.","venue":"LATA","pages":"68-80","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/PerrotPS21","doi":"10.1007/978-3-030-68195-1_6","ee":"https://doi.org/10.1007/978-3-030-68195-1_6","url":"https://dblp.org/rec/conf/lata/PerrotPS21"},
+"url":"URL#300465"
+},
+{
+"@score":"1",
+"@id":"300466",
+"info":{"authors":{"author":[{"@pid":"285/9677","text":"Semyon Petrov"},{"@pid":"o/AOkhotin","text":"Alexander Okhotin"}]},"title":"On the Transformation of Two-Way Deterministic Finite Automata to Unambiguous Finite Automata.","venue":"LATA","pages":"81-93","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/PetrovO21","doi":"10.1007/978-3-030-68195-1_7","ee":"https://doi.org/10.1007/978-3-030-68195-1_7","url":"https://dblp.org/rec/conf/lata/PetrovO21"},
+"url":"URL#300466"
+},
+{
+"@score":"1",
+"@id":"300467",
+"info":{"authors":{"author":[{"@pid":"87/6893","text":"Giovanni Pighizzini"},{"@pid":"05/823","text":"Branislav Rovan"},{"@pid":"225/9884","text":"Simon Sádovský"}]},"title":"Usefulness of Information and Unary Languages.","venue":"LATA","pages":"131-142","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/PighizziniRS21","doi":"10.1007/978-3-030-68195-1_11","ee":"https://doi.org/10.1007/978-3-030-68195-1_11","url":"https://dblp.org/rec/conf/lata/PighizziniRS21"},
+"url":"URL#300467"
+},
+{
+"@score":"1",
+"@id":"300468",
+"info":{"authors":{"author":[{"@pid":"285/9350","text":"Bastien Sérée"},{"@pid":"21/8131","text":"Loïg Jezequel"},{"@pid":"94/6720","text":"Didier Lime"}]},"title":"An Algorithm for Single-Source Shortest Paths Enumeration in Parameterized Weighted Graphs.","venue":"LATA","pages":"279-290","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/SereeJL21","doi":"10.1007/978-3-030-68195-1_22","ee":"https://doi.org/10.1007/978-3-030-68195-1_22","url":"https://dblp.org/rec/conf/lata/SereeJL21"},
+"url":"URL#300468"
+},
+{
+"@score":"1",
+"@id":"300469",
+"info":{"authors":{"author":[{"@pid":"s/KSubramani","text":"K. Subramani"},{"@pid":"97/1885","text":"Piotr J. Wojciechowski"}]},"title":"Tree-Like Unit Refutations in Horn Constraint Systems.","venue":"LATA","pages":"226-237","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/SubramaniW21","doi":"10.1007/978-3-030-68195-1_18","ee":"https://doi.org/10.1007/978-3-030-68195-1_18","url":"https://dblp.org/rec/conf/lata/SubramaniW21"},
+"url":"URL#300469"
+},
+{
+"@score":"1",
+"@id":"300470",
+"info":{"authors":{"author":[{"@pid":"v/FritsWVaandrager","text":"Frits W. Vaandrager"},{"@pid":"80/1300","text":"Roderick Bloem"},{"@pid":"62/4010-2","text":"Masoud Ebrahimi 0002"}]},"title":"Learning Mealy Machines with One Timer.","venue":"LATA","pages":"157-170","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/lata/VaandragerB021","doi":"10.1007/978-3-030-68195-1_13","ee":"https://doi.org/10.1007/978-3-030-68195-1_13","url":"https://dblp.org/rec/conf/lata/VaandragerB021"},
+"url":"URL#300470"
+},
+{
+"@score":"1",
+"@id":"336441",
+"info":{"authors":{"author":[{"@pid":"16/1734","text":"Alberto Leporati"},{"@pid":"45/476","text":"Carlos Martín-Vide"},{"@pid":"02/222","text":"Dana Shapira"},{"@pid":"52/5668","text":"Claudio Zandron"}]},"title":"Language and Automata Theory and Applications - 15th International Conference, LATA 2021, Milan, Italy, March 1-5, 2021, Proceedings","venue":["LATA","Lecture Notes in Computer Science"],"volume":"12638","publisher":"Springer","year":"2021","type":"Editorship","key":"conf/lata/2021","doi":"10.1007/978-3-030-68195-1","ee":"https://doi.org/10.1007/978-3-030-68195-1","url":"https://dblp.org/rec/conf/lata/2021"},
+"url":"URL#336441"
+}
+]
+}
+}
+}

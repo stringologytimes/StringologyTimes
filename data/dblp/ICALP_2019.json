@@ -1,0 +1,951 @@
+
+{
+"result":{
+"query":":facetid:toc:\"db/conf/icalp/icalp2019.bht\"",
+"status":{
+"@code":"200",
+"text":"OK"
+},
+"time":{
+"@unit":"msecs",
+"text":"454.58"
+},
+"completions":{
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"153",
+"@dc":"153",
+"@oc":"153",
+"@id":"35349820",
+"text":":facetid:toc:db/conf/icalp/icalp2019.bht"
+}
+},
+"hits":{
+"@total":"153",
+"@computed":"153",
+"@sent":"153",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"1072673",
+"info":{"authors":{"author":{"@pid":"27/5091-1","text":"Thomas Watson 0001"}},"title":"Amplification with One NP Oracle Query.","venue":"ICALP","pages":"96:1-96:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/000119","doi":"10.4230/LIPICS.ICALP.2019.96","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.96","url":"https://dblp.org/rec/conf/icalp/000119"},
+"url":"URL#1072673"
+},
+{
+"@score":"1",
+"@id":"1072674",
+"info":{"authors":{"author":[{"@pid":"g/NaveenGarg","text":"Naveen Garg 0001"},{"@pid":"27/2931","text":"Anupam Gupta 0001"},{"@pid":"k/AmitKumar1","text":"Amit Kumar 0001"},{"@pid":"55/8911","text":"Sahil Singla 0001"}]},"title":"Non-Clairvoyant Precedence Constrained Scheduling.","venue":"ICALP","pages":"63:1-63:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/0001G0019","doi":"10.4230/LIPICS.ICALP.2019.63","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.63","url":"https://dblp.org/rec/conf/icalp/0001G0019"},
+"url":"URL#1072674"
+},
+{
+"@score":"1",
+"@id":"1072675",
+"info":{"authors":{"author":[{"@pid":"11/495-1","text":"Giulia Bernardini 0001"},{"@pid":"49/3088","text":"Pawel Gawrychowski"},{"@pid":"p/NadiaPisanti","text":"Nadia Pisanti"},{"@pid":"89/7966","text":"Solon P. Pissis"},{"@pid":"14/4683","text":"Giovanna Rosone"}]},"title":"Even Faster Elastic-Degenerate String Matching via Fast Matrix Multiplication.","venue":"ICALP","pages":"21:1-21:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/0001GPPR19","doi":"10.4230/LIPICS.ICALP.2019.21","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.21","url":"https://dblp.org/rec/conf/icalp/0001GPPR19"},
+"url":"URL#1072675"
+},
+{
+"@score":"1",
+"@id":"1072676",
+"info":{"authors":{"author":[{"@pid":"40/9185-1","text":"Mrinal Kumar 0001"},{"@pid":"141/7747","text":"Rafael Mendes de Oliveira"},{"@pid":"38/3658","text":"Ramprasad Saptharishi"}]},"title":"Towards Optimal Depth Reductions for Syntactically Multilinear Circuits.","venue":"ICALP","pages":"78:1-78:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/0001OS19","doi":"10.4230/LIPICS.ICALP.2019.78","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.78","url":"https://dblp.org/rec/conf/icalp/0001OS19"},
+"url":"URL#1072676"
+},
+{
+"@score":"1",
+"@id":"1072677",
+"info":{"authors":{"author":[{"@pid":"181/2310-1","text":"Tobias Friedrich 0001"},{"@pid":"156/9105","text":"Ralf Rothenberger"}]},"title":"The Satisfiability Threshold for Non-Uniform Random 2-SAT.","venue":"ICALP","pages":"61:1-61:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/0001R19","doi":"10.4230/LIPICS.ICALP.2019.61","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.61","url":"https://dblp.org/rec/conf/icalp/0001R19"},
+"url":"URL#1072677"
+},
+{
+"@score":"1",
+"@id":"1072678",
+"info":{"authors":{"author":[{"@pid":"45/7178-2","text":"Siddharth Gupta 0002"},{"@pid":"k/AdrianKosowski","text":"Adrian Kosowski"},{"@pid":"v/LaurentViennot","text":"Laurent Viennot"}]},"title":"Exploiting Hopsets - Improved Distance Oracles for Graphs of Constant Highway Dimension and Beyond.","venue":"ICALP","pages":"143:1-143:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/0002KV19","doi":"10.4230/LIPICS.ICALP.2019.143","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.143","url":"https://dblp.org/rec/conf/icalp/0002KV19"},
+"url":"URL#1072678"
+},
+{
+"@score":"1",
+"@id":"1072679",
+"info":{"authors":{"author":[{"@pid":"13/6225-2","text":"Zhiyi Huang 0002"},{"@pid":"144/1114","text":"Xue Zhu"}]},"title":"Scalable and Jointly Differentially Private Packing.","venue":"ICALP","pages":"73:1-73:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/0002Z19","doi":"10.4230/LIPICS.ICALP.2019.73","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.73","url":"https://dblp.org/rec/conf/icalp/0002Z19"},
+"url":"URL#1072679"
+},
+{
+"@score":"1",
+"@id":"1072680",
+"info":{"authors":{"author":[{"@pid":"56/1358","text":"Scott Aaronson"},{"@pid":"199/2338","text":"Alexandru Cojocaru"},{"@pid":"199/1819","text":"Alexandru Gheorghiu"},{"@pid":"70/563","text":"Elham Kashefi"}]},"title":"Complexity-Theoretic Limitations on Blind Delegated Quantum Computation.","venue":"ICALP","pages":"6:1-6:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/AaronsonCGK19","doi":"10.4230/LIPICS.ICALP.2019.6","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.6","url":"https://dblp.org/rec/conf/icalp/AaronsonCGK19"},
+"url":"URL#1072680"
+},
+{
+"@score":"1",
+"@id":"1072681",
+"info":{"authors":{"author":{"@pid":"129/1654","text":"Amir Abboud"}},"title":"Fine-Grained Reductions and Quantum Speedups for Dynamic Programming.","venue":"ICALP","pages":"8:1-8:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Abboud19","doi":"10.4230/LIPICS.ICALP.2019.8","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.8","url":"https://dblp.org/rec/conf/icalp/Abboud19"},
+"url":"URL#1072681"
+},
+{
+"@score":"1",
+"@id":"1072682",
+"info":{"authors":{"author":[{"@pid":"129/1654","text":"Amir Abboud"},{"@pid":"42/6005","text":"Loukas Georgiadis"},{"@pid":"i/GiuseppeFItaliano","text":"Giuseppe F. Italiano"},{"@pid":"k/RobertKrauthgamer","text":"Robert Krauthgamer"},{"@pid":"129/9110","text":"Nikos Parotsidis"},{"@pid":"165/8475","text":"Ohad Trabelsi"},{"@pid":"78/11210","text":"Przemyslaw Uznanski"},{"@pid":"134/6400","text":"Daniel Wolleb-Graf"}]},"title":"Faster Algorithms for All-Pairs Bounded Min-Cuts.","venue":"ICALP","pages":"7:1-7:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/AbboudGIKPTUW19","doi":"10.4230/LIPICS.ICALP.2019.7","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.7","url":"https://dblp.org/rec/conf/icalp/AbboudGIKPTUW19"},
+"url":"URL#1072682"
+},
+{
+"@score":"1",
+"@id":"1072683",
+"info":{"authors":{"author":[{"@pid":"129/6231","text":"Mikkel Abrahamsen"},{"@pid":"88/2945","text":"Panos Giannopoulos"},{"@pid":"46/6428","text":"Maarten Löffler"},{"@pid":"r/GunterRote","text":"Günter Rote"}]},"title":"Geometric Multicut.","venue":"ICALP","pages":"9:1-9:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/AbrahamsenGLR19","doi":"10.4230/LIPICS.ICALP.2019.9","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.9","url":"https://dblp.org/rec/conf/icalp/AbrahamsenGLR19"},
+"url":"URL#1072683"
+},
+{
+"@score":"1",
+"@id":"1072684",
+"info":{"authors":{"author":[{"@pid":"91/6116","text":"Peyman Afshani"},{"@pid":"202/9616","text":"Casper Benjamin Freksen"},{"@pid":"16/9056","text":"Lior Kamma"},{"@pid":"07/6242","text":"Kasper Green Larsen"}]},"title":"Lower Bounds for Multiplication via Network Coding.","venue":"ICALP","pages":"10:1-10:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/AfshaniFKL19","doi":"10.4230/LIPICS.ICALP.2019.10","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.10","url":"https://dblp.org/rec/conf/icalp/AfshaniFKL19"},
+"url":"URL#1072684"
+},
+{
+"@score":"1",
+"@id":"1072685",
+"info":{"authors":{"author":[{"@pid":"144/7801","text":"Akanksha Agrawal"},{"@pid":"f/FedorVFomin","text":"Fedor V. Fomin"},{"@pid":"78/67","text":"Daniel Lokshtanov"},{"@pid":"11/5491","text":"Saket Saurabh 0001"},{"@pid":"186/2898","text":"Prafullkumar Tale"}]},"title":"Path Contraction Faster Than 2n.","venue":"ICALP","pages":"11:1-11:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/AgrawalFL0T19","doi":"10.4230/LIPICS.ICALP.2019.11","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.11","url":"https://dblp.org/rec/conf/icalp/AgrawalFL0T19"},
+"url":"URL#1072685"
+},
+{
+"@score":"1",
+"@id":"1072686",
+"info":{"authors":{"author":[{"@pid":"136/5648","text":"Eleni C. Akrida"},{"@pid":"45/5748","text":"George B. Mertzios"},{"@pid":"n/SotirisENikoletseas","text":"Sotiris E. Nikoletseas"},{"@pid":"16/6015","text":"Christoforos L. Raptopoulos"},{"@pid":"s/PaulGSpirakis","text":"Paul G. Spirakis"},{"@pid":"57/10717","text":"Viktor Zamaraev"}]},"title":"How Fast Can We Reach a Target Vertex in Stochastic Temporal Graphs?","venue":"ICALP","pages":"131:1-131:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/AkridaMNRSZ19","doi":"10.4230/LIPICS.ICALP.2019.131","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.131","url":"https://dblp.org/rec/conf/icalp/AkridaMNRSZ19"},
+"url":"URL#1072686"
+},
+{
+"@score":"1",
+"@id":"1072687",
+"info":{"authors":{"author":[{"@pid":"a/NAlon","text":"Noga Alon"},{"@pid":"38/2434","text":"Shiri Chechik"},{"@pid":"131/6765","text":"Sarel Cohen"}]},"title":"Deterministic Combinatorial Replacement Paths and Distance Sensitivity Oracles.","venue":"ICALP","pages":"12:1-12:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/AlonCC19","doi":"10.4230/LIPICS.ICALP.2019.12","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.12","url":"https://dblp.org/rec/conf/icalp/AlonCC19"},
+"url":"URL#1072687"
+},
+{
+"@score":"1",
+"@id":"1072688",
+"info":{"authors":{"author":[{"@pid":"54/3951","text":"Aris Anagnostopoulos"},{"@pid":"130/0602","text":"Ilan Reuven Cohen"},{"@pid":"l/StefanoLeonardi","text":"Stefano Leonardi"},{"@pid":"63/9513","text":"Jakub Lacki"}]},"title":"Stochastic Graph Exploration.","venue":"ICALP","pages":"136:1-136:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Anagnostopoulos19","doi":"10.4230/LIPICS.ICALP.2019.136","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.136","url":"https://dblp.org/rec/conf/icalp/Anagnostopoulos19"},
+"url":"URL#1072688"
+},
+{
+"@score":"1",
+"@id":"1072689",
+"info":{"authors":{"author":[{"@pid":"230/8539","text":"Bertie Ancona"},{"@pid":"h/MonikaRauchHenzinger","text":"Monika Henzinger"},{"@pid":"93/5413","text":"Liam Roditty"},{"@pid":"63/8319","text":"Virginia Vassilevska Williams"},{"@pid":"218/5861","text":"Nicole Wein"}]},"title":"Algorithms and Hardness for Diameter in Dynamic Graphs.","venue":"ICALP","pages":"13:1-13:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/AnconaHRWW19","doi":"10.4230/LIPICS.ICALP.2019.13","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.13","url":"https://dblp.org/rec/conf/icalp/AnconaHRWW19"},
+"url":"URL#1072689"
+},
+{
+"@score":"1",
+"@id":"1072690",
+"info":{"authors":{"author":[{"@pid":"66/6009","text":"Alexandr Andoni"},{"@pid":"m/TalMalkin","text":"Tal Malkin"},{"@pid":"193/9652","text":"Negev Shekel Nosatzki"}]},"title":"Two Party Distribution Testing - Communication and Security.","venue":"ICALP","pages":"15:1-15:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/AndoniMN19","doi":"10.4230/LIPICS.ICALP.2019.15","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.15","url":"https://dblp.org/rec/conf/icalp/AndoniMN19"},
+"url":"URL#1072690"
+},
+{
+"@score":"1",
+"@id":"1072691",
+"info":{"authors":{"author":[{"@pid":"66/6009","text":"Alexandr Andoni"},{"@pid":"s/CliffordStein","text":"Clifford Stein 0001"},{"@pid":"148/9632","text":"Peilin Zhong"}]},"title":"Log Diameter Rounds Algorithms for 2-Vertex and 2-Edge Connectivity.","venue":"ICALP","pages":"14:1-14:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/AndoniSZ19","doi":"10.4230/LIPICS.ICALP.2019.14","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.14","url":"https://dblp.org/rec/conf/icalp/AndoniSZ19"},
+"url":"URL#1072691"
+},
+{
+"@score":"1",
+"@id":"1072692",
+"info":{"authors":{"author":[{"@pid":"200/8513","text":"Joran van Apeldoorn"},{"@pid":"198/5085","text":"András Gilyén"}]},"title":"Improvements in Quantum SDP-Solving with Applications.","venue":"ICALP","pages":"99:1-99:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ApeldoornG19","doi":"10.4230/LIPICS.ICALP.2019.99","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.99","url":"https://dblp.org/rec/conf/icalp/ApeldoornG19"},
+"url":"URL#1072692"
+},
+{
+"@score":"1",
+"@id":"1072693",
+"info":{"authors":{"author":[{"@pid":"159/8588","text":"Srinivasan Arunachalam"},{"@pid":"89/3488-1","text":"Sourav Chakraborty 0001"},{"@pid":"65/3040","text":"Troy Lee"},{"@pid":"243/3259","text":"Manaswi Paraashar"},{"@pid":"w/RonalddeWolf","text":"Ronald de Wolf"}]},"title":"Two New Results About Quantum Exact Learning.","venue":"ICALP","pages":"16:1-16:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Arunachalam0LPW19","doi":"10.4230/LIPICS.ICALP.2019.16","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.16","url":"https://dblp.org/rec/conf/icalp/Arunachalam0LPW19"},
+"url":"URL#1072693"
+},
+{
+"@score":"1",
+"@id":"1072694",
+"info":{"authors":{"author":[{"@pid":"125/2903","text":"Sepehr Assadi"},{"@pid":"s/ShaySolomon","text":"Shay Solomon"}]},"title":"When Algorithms for Maximal Independent Set and Maximal Matching Run in Sublinear Time.","venue":"ICALP","pages":"17:1-17:17","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/AssadiS19","doi":"10.4230/LIPICS.ICALP.2019.17","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.17","url":"https://dblp.org/rec/conf/icalp/AssadiS19"},
+"url":"URL#1072694"
+},
+{
+"@score":"1",
+"@id":"1072695",
+"info":{"authors":{"author":[{"@pid":"57/679","text":"Pranjal Awasthi"},{"@pid":"132/1905","text":"Ainesh Bakshi"},{"@pid":"b/MariaFlorinaBalcan","text":"Maria-Florina Balcan"},{"@pid":"136/9162","text":"Colin White"},{"@pid":"w/DPWoodruff","text":"David P. Woodruff"}]},"title":"Robust Communication-Optimal Distributed Clustering Algorithms.","venue":"ICALP","pages":"18:1-18:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/AwasthiBBWW19","doi":"10.4230/LIPICS.ICALP.2019.18","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.18","url":"https://dblp.org/rec/conf/icalp/AwasthiBBWW19"},
+"url":"URL#1072695"
+},
+{
+"@score":"1",
+"@id":"1072696",
+"info":{"authors":{"author":[{"@pid":"176/5139","text":"Kyriakos Axiotis"},{"@pid":"79/8819","text":"Christos Tzamos"}]},"title":"Capacitated Dynamic Programming - Faster Knapsack and Graph Algorithms.","venue":"ICALP","pages":"19:1-19:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/AxiotisT19","doi":"10.4230/LIPICS.ICALP.2019.19","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.19","url":"https://dblp.org/rec/conf/icalp/AxiotisT19"},
+"url":"URL#1072696"
+},
+{
+"@score":"1",
+"@id":"1072697",
+"info":{"authors":{"author":[{"@pid":"17/5657","text":"Mohamed Amine Baazizi"},{"@pid":"c/DarioColazzo","text":"Dario Colazzo"},{"@pid":"g/GiorgioGhelli","text":"Giorgio Ghelli"},{"@pid":"89/5076","text":"Carlo Sartiani"}]},"title":"A Type System for Interactive JSON Schema Inference (Extended Abstract).","venue":"ICALP","pages":"101:1-101:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BaaziziCGS19","doi":"10.4230/LIPICS.ICALP.2019.101","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.101","url":"https://dblp.org/rec/conf/icalp/BaaziziCGS19"},
+"url":"URL#1072697"
+},
+{
+"@score":"1",
+"@id":"1072698",
+"info":{"authors":{"author":[{"@pid":"136/2160","text":"Nikhil Balaji"},{"@pid":"28/6047","text":"Stefan Kiefer"},{"@pid":"91/10961","text":"Petr Novotný 0001"},{"@pid":"135/6266","text":"Guillermo A. Pérez 0001"},{"@pid":"32/9219","text":"Mahsa Shirmohammadi"}]},"title":"On the Complexity of Value Iteration.","venue":"ICALP","pages":"102:1-102:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BalajiK0PS19","doi":"10.4230/LIPICS.ICALP.2019.102","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.102","url":"https://dblp.org/rec/conf/icalp/BalajiK0PS19"},
+"url":"URL#1072698"
+},
+{
+"@score":"1",
+"@id":"1072699",
+"info":{"authors":{"author":[{"@pid":"29/5169","text":"Pablo Barceló"},{"@pid":"23/6104","text":"Diego Figueira"},{"@pid":"57/4918-1","text":"Miguel Romero 0001"}]},"title":"Boundedness of Conjunctive Regular Path Queries.","venue":"ICALP","pages":"104:1-104:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BarceloF019","doi":"10.4230/LIPICS.ICALP.2019.104","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.104","url":"https://dblp.org/rec/conf/icalp/BarceloF019"},
+"url":"URL#1072699"
+},
+{
+"@score":"1",
+"@id":"1072700",
+"info":{"authors":{"author":[{"@pid":"29/5169","text":"Pablo Barceló"},{"@pid":"00/8296","text":"Chih-Duo Hong"},{"@pid":"125/2923","text":"Xuan Bach Le"},{"@pid":"38/2655","text":"Anthony W. Lin"},{"@pid":"154/6540","text":"Reino Niskanen"}]},"title":"Monadic Decomposability of Regular Relations.","venue":"ICALP","pages":"103:1-103:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BarceloHLLN19","doi":"10.4230/LIPICS.ICALP.2019.103","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.103","url":"https://dblp.org/rec/conf/icalp/BarceloHLLN19"},
+"url":"URL#1072700"
+},
+{
+"@score":"1",
+"@id":"1072701",
+"info":{"authors":{"author":[{"@pid":"96/1036","text":"Yair Bartal"},{"@pid":"29/9959","text":"Nova Fandina"},{"@pid":"50/1416","text":"Ofer Neiman"}]},"title":"Covering Metric Spaces by Few Trees.","venue":"ICALP","pages":"20:1-20:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BartalFN19","doi":"10.4230/LIPICS.ICALP.2019.20","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.20","url":"https://dblp.org/rec/conf/icalp/BartalFN19"},
+"url":"URL#1072701"
+},
+{
+"@score":"1",
+"@id":"1072702",
+"info":{"authors":{"author":{"@pid":"06/5731","text":"Paul C. Bell"}},"title":"Polynomially Ambiguous Probabilistic Automata on Restricted Languages.","venue":"ICALP","pages":"105:1-105:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Bell19","doi":"10.4230/LIPICS.ICALP.2019.105","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.105","url":"https://dblp.org/rec/conf/icalp/Bell19"},
+"url":"URL#1072702"
+},
+{
+"@score":"1",
+"@id":"1072703",
+"info":{"authors":{"author":[{"@pid":"71/180","text":"Ivona Bezáková"},{"@pid":"16/9673","text":"Andreas Galanis"},{"@pid":"67/941","text":"Leslie Ann Goldberg"},{"@pid":"00/3605","text":"Daniel Stefankovic"}]},"title":"The Complexity of Approximating the Matching Polynomial in the Complex Plane.","venue":"ICALP","pages":"22:1-22:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BezakovaGGS19","doi":"10.4230/LIPICS.ICALP.2019.22","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.22","url":"https://dblp.org/rec/conf/icalp/BezakovaGGS19"},
+"url":"URL#1072703"
+},
+{
+"@score":"1",
+"@id":"1072704",
+"info":{"authors":{"author":[{"@pid":"23/2860","text":"Therese C. Biedl"},{"@pid":"130/4006","text":"Philipp Kindermann"}]},"title":"Finding Tutte Paths in Linear Time.","venue":"ICALP","pages":"23:1-23:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BiedlK19","doi":"10.4230/LIPICS.ICALP.2019.23","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.23","url":"https://dblp.org/rec/conf/icalp/BiedlK19"},
+"url":"URL#1072704"
+},
+{
+"@score":"1",
+"@id":"1072705",
+"info":{"authors":{"author":[{"@pid":"28/6676","text":"Andreas Björklund"},{"@pid":"w/RyanWilliams","text":"Ryan Williams 0001"}]},"title":"Computing Permanents and Counting Hamiltonian Cycles by Listing Dissimilar Vectors.","venue":"ICALP","pages":"25:1-25:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Bjorklund019","doi":"10.4230/LIPICS.ICALP.2019.25","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.25","url":"https://dblp.org/rec/conf/icalp/Bjorklund019"},
+"url":"URL#1072705"
+},
+{
+"@score":"1",
+"@id":"1072706",
+"info":{"authors":{"author":[{"@pid":"28/6676","text":"Andreas Björklund"},{"@pid":"41/6988","text":"Petteri Kaski"},{"@pid":"w/RyanWilliams","text":"Ryan Williams 0001"}]},"title":"Solving Systems of Polynomial Equations over GF(2) by a Parity-Counting Self-Reduction.","venue":"ICALP","pages":"26:1-26:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BjorklundK019","doi":"10.4230/LIPICS.ICALP.2019.26","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.26","url":"https://dblp.org/rec/conf/icalp/BjorklundK019"},
+"url":"URL#1072706"
+},
+{
+"@score":"1",
+"@id":"1072707",
+"info":{"authors":{"author":[{"@pid":"28/6676","text":"Andreas Björklund"},{"@pid":"78/67","text":"Daniel Lokshtanov"},{"@pid":"11/5491","text":"Saket Saurabh 0001"},{"@pid":"133/1023","text":"Meirav Zehavi"}]},"title":"Approximate Counting of k-Paths - Deterministic and in Polynomial Space.","venue":"ICALP","pages":"24:1-24:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BjorklundL0Z19","doi":"10.4230/LIPICS.ICALP.2019.24","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.24","url":"https://dblp.org/rec/conf/icalp/BjorklundL0Z19"},
+"url":"URL#1072707"
+},
+{
+"@score":"1",
+"@id":"1072708",
+"info":{"authors":{"author":[{"@pid":"53/4804","text":"Mikolaj Bojanczyk"},{"@pid":"160/8276","text":"Sandra Kiefer"},{"@pid":"164/5794","text":"Nathan Lhote"}]},"title":"String-to-String Interpretations With Polynomial-Size Output.","venue":"ICALP","pages":"106:1-106:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BojanczykKL19","doi":"10.4230/LIPICS.ICALP.2019.106","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.106","url":"https://dblp.org/rec/conf/icalp/BojanczykKL19"},
+"url":"URL#1072708"
+},
+{
+"@score":"1",
+"@id":"1072709",
+"info":{"authors":{"author":[{"@pid":"239/8435","text":"Matthias Bonne"},{"@pid":"91/5597","text":"Keren Censor-Hillel"}]},"title":"Distributed Detection of Cliques in Dynamic Networks.","venue":"ICALP","pages":"132:1-132:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BonneC19","doi":"10.4230/LIPICS.ICALP.2019.132","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.132","url":"https://dblp.org/rec/conf/icalp/BonneC19"},
+"url":"URL#1072709"
+},
+{
+"@score":"1",
+"@id":"1072710",
+"info":{"authors":{"author":[{"@pid":"80/9435","text":"Fernando G. S. L. Brandão"},{"@pid":"159/1823","text":"Amir Kalev"},{"@pid":"142/1312","text":"Tongyang Li"},{"@pid":"151/6298","text":"Cedric Yen-Yu Lin"},{"@pid":"s/KMSvore","text":"Krysta M. Svore"},{"@pid":"66/8037","text":"Xiaodi Wu"}]},"title":"Quantum SDP Solvers - Large Speed-Ups, Optimality, and Applications to Quantum Learning.","venue":"ICALP","pages":"27:1-27:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BrandaoKLLSW19","doi":"10.4230/LIPICS.ICALP.2019.27","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.27","url":"https://dblp.org/rec/conf/icalp/BrandaoKLLSW19"},
+"url":"URL#1072710"
+},
+{
+"@score":"1",
+"@id":"1072711",
+"info":{"authors":{"author":[{"@pid":"119/6958","text":"Raimundo Briceño"},{"@pid":"b/AndreiABulatov","text":"Andrei A. Bulatov"},{"@pid":"96/696","text":"Víctor Dalmau"},{"@pid":"l/BenoitLarose","text":"Benoît Larose"}]},"title":"Dismantlability, Connectedness, and Mixing in Relational Structures.","venue":"ICALP","pages":"29:1-29:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BricenoBDL19","doi":"10.4230/LIPICS.ICALP.2019.29","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.29","url":"https://dblp.org/rec/conf/icalp/BricenoBDL19"},
+"url":"URL#1072711"
+},
+{
+"@score":"1",
+"@id":"1072712",
+"info":{"authors":{"author":[{"@pid":"144/1341","text":"Paul Brunet"},{"@pid":"92/1378-1","text":"Alexandra Silva 0001"}]},"title":"A Kleene Theorem for Nominal Automata.","venue":"ICALP","pages":"107:1-107:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Brunet019","doi":"10.4230/LIPICS.ICALP.2019.107","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.107","url":"https://dblp.org/rec/conf/icalp/Brunet019"},
+"url":"URL#1072712"
+},
+{
+"@score":"1",
+"@id":"1072713",
+"info":{"authors":{"author":[{"@pid":"126/4933","text":"Mark Bun"},{"@pid":"182/1430","text":"Nikhil S. Mande"},{"@pid":"61/8038","text":"Justin Thaler"}]},"title":"Sign-Rank Can Increase Under Intersection.","venue":"ICALP","pages":"30:1-30:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/BunMT19","doi":"10.4230/LIPICS.ICALP.2019.30","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.30","url":"https://dblp.org/rec/conf/icalp/BunMT19"},
+"url":"URL#1072713"
+},
+{
+"@score":"1",
+"@id":"1072714",
+"info":{"authors":{"author":[{"@pid":"232/9072","text":"Angel A. Cantu"},{"@pid":"185/0975","text":"Austin Luchsinger"},{"@pid":"07/6428","text":"Robert T. Schweller"},{"@pid":"17/9766","text":"Tim Wylie"}]},"title":"Covert Computation in Self-Assembled Circuits.","venue":"ICALP","pages":"31:1-31:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/CantuLSW19","doi":"10.4230/LIPICS.ICALP.2019.31","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.31","url":"https://dblp.org/rec/conf/icalp/CantuLSW19"},
+"url":"URL#1072714"
+},
+{
+"@score":"1",
+"@id":"1072715",
+"info":{"authors":{"author":[{"@pid":"c/IoannisCaragiannis","text":"Ioannis Caragiannis"},{"@pid":"70/4474","text":"Angelo Fanelli 0001"}]},"title":"On Approximate Pure Nash Equilibria in Weighted Congestion Games with Polynomial Latencies.","venue":"ICALP","pages":"133:1-133:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Caragiannis019","doi":"10.4230/LIPICS.ICALP.2019.133","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.133","url":"https://dblp.org/rec/conf/icalp/Caragiannis019"},
+"url":"URL#1072715"
+},
+{
+"@score":"1",
+"@id":"1072716",
+"info":{"authors":{"author":[{"@pid":"186/7757","text":"Titouan Carette"},{"@pid":"j/EmmanuelJeandel","text":"Emmanuel Jeandel"},{"@pid":"58/851","text":"Simon Perdrix"},{"@pid":"195/5768","text":"Renaud Vilmart"}]},"title":"Completeness of Graphical Languages for Mixed States Quantum Mechanics.","venue":"ICALP","pages":"108:1-108:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/CaretteJPV19","doi":"10.4230/LIPICS.ICALP.2019.108","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.108","url":"https://dblp.org/rec/conf/icalp/CaretteJPV19"},
+"url":"URL#1072716"
+},
+{
+"@score":"1",
+"@id":"1072717",
+"info":{"authors":{"author":[{"@pid":"146/1252","text":"Katrin Casel"},{"@pid":"130/7599","text":"Joel D. Day"},{"@pid":"204/7523","text":"Pamela Fleischmann"},{"@pid":"38/9892","text":"Tomasz Kociumaka"},{"@pid":"67/4899","text":"Florin Manea"},{"@pid":"65/9125","text":"Markus L. Schmid"}]},"title":"Graph and String Parameters - Connections Between Pathwidth, Cutwidth and the Locality Number.","venue":"ICALP","pages":"109:1-109:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/CaselDFKMS19","doi":"10.4230/LIPICS.ICALP.2019.109","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.109","url":"https://dblp.org/rec/conf/icalp/CaselDFKMS19"},
+"url":"URL#1072717"
+},
+{
+"@score":"1",
+"@id":"1072718",
+"info":{"authors":{"author":[{"@pid":"71/4157","text":"Arnaud Casteigts"},{"@pid":"p/JosephGPeters","text":"Joseph G. Peters"},{"@pid":"228/6643","text":"Jason Schoeters"}]},"title":"Temporal Cliques Admit Sparse Spanners.","venue":"ICALP","pages":"134:1-134:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/CasteigtsPS19","doi":"10.4230/LIPICS.ICALP.2019.134","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.134","url":"https://dblp.org/rec/conf/icalp/CasteigtsPS19"},
+"url":"URL#1072718"
+},
+{
+"@score":"1",
+"@id":"1072719",
+"info":{"authors":{"author":[{"@pid":"91/5597","text":"Keren Censor-Hillel"},{"@pid":"08/9698","text":"Mikaël Rabie"}]},"title":"Distributed Reconfiguration of Maximal Independent Sets.","venue":"ICALP","pages":"135:1-135:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Censor-HillelR19","doi":"10.4230/LIPICS.ICALP.2019.135","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.135","url":"https://dblp.org/rec/conf/icalp/Censor-HillelR19"},
+"url":"URL#1072719"
+},
+{
+"@score":"1",
+"@id":"1072720",
+"info":{"authors":{"author":[{"@pid":"126/5066","text":"Shantanav Chakraborty"},{"@pid":"198/5085","text":"András Gilyén"},{"@pid":"12/7801","text":"Stacey Jeffery"}]},"title":"The Power of Block-Encoded Matrix Powers - Improved Regression Techniques via Faster Hamiltonian Simulation.","venue":"ICALP","pages":"33:1-33:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ChakrabortyGJ19","doi":"10.4230/LIPICS.ICALP.2019.33","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.33","url":"https://dblp.org/rec/conf/icalp/ChakrabortyGJ19"},
+"url":"URL#1072720"
+},
+{
+"@score":"1",
+"@id":"1072721",
+"info":{"authors":{"author":[{"@pid":"98/6438","text":"Jérémie Chalopin"},{"@pid":"c/VictorChepoi","text":"Victor Chepoi"},{"@pid":"119/5111","text":"Shay Moran"},{"@pid":"w/ManfredKWarmuth","text":"Manfred K. Warmuth"}]},"title":"Unlabeled Sample Compression Schemes and Corner Peelings for Ample and Maximum Classes.","venue":"ICALP","pages":"34:1-34:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ChalopinCMW19","doi":"10.4230/LIPICS.ICALP.2019.34","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.34","url":"https://dblp.org/rec/conf/icalp/ChalopinCMW19"},
+"url":"URL#1072721"
+},
+{
+"@score":"1",
+"@id":"1072722",
+"info":{"authors":{"author":[{"@pid":"54/3615","text":"Arkadev Chattopadhyay"},{"@pid":"71/8819","text":"Yuval Filmus"},{"@pid":"45/8395","text":"Sajin Koroth"},{"@pid":"26/2656","text":"Or Meir"},{"@pid":"p/TPitassi","text":"Toniann Pitassi"}]},"title":"Query-To-Communication Lifting for BPP Using Inner Product.","venue":"ICALP","pages":"35:1-35:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ChattopadhyayFK19","doi":"10.4230/LIPICS.ICALP.2019.35","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.35","url":"https://dblp.org/rec/conf/icalp/ChattopadhyayFK19"},
+"url":"URL#1072722"
+},
+{
+"@score":"1",
+"@id":"1072723",
+"info":{"authors":{"author":[{"@pid":"48/761-1","text":"Xue Chen 0001"},{"@pid":"40/674","text":"Eric Price"}]},"title":"Estimating the Frequency of a Clustered Signal.","venue":"ICALP","pages":"36:1-36:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ChenP19","doi":"10.4230/LIPICS.ICALP.2019.36","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.36","url":"https://dblp.org/rec/conf/icalp/ChenP19"},
+"url":"URL#1072723"
+},
+{
+"@score":"1",
+"@id":"1072724",
+"info":{"authors":{"author":[{"@pid":"126/6005","text":"Kuan Cheng"},{"@pid":"190/7719","text":"Zhengzhong Jin"},{"@pid":"09/1365-6","text":"Xin Li 0006"},{"@pid":"69/6116","text":"Ke Wu"}]},"title":"Block Edit Errors with Transpositions - Deterministic Document Exchange Protocols and Almost Optimal Binary Codes.","venue":"ICALP","pages":"37:1-37:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ChengJ0W19","doi":"10.4230/LIPICS.ICALP.2019.37","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.37","url":"https://dblp.org/rec/conf/icalp/ChengJ0W19"},
+"url":"URL#1072724"
+},
+{
+"@score":"1",
+"@id":"1072725",
+"info":{"authors":{"author":[{"@pid":"c/SiuWingCheng","text":"Siu-Wing Cheng"},{"@pid":"218/6279","text":"Yuchen Mao"}]},"title":"Restricted Max-Min Allocation - Approximation and Integrality Gap.","venue":"ICALP","pages":"38:1-38:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ChengM19","doi":"10.4230/LIPICS.ICALP.2019.38","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.38","url":"https://dblp.org/rec/conf/icalp/ChengM19"},
+"url":"URL#1072725"
+},
+{
+"@score":"1",
+"@id":"1072726",
+"info":{"authors":{"author":[{"@pid":"94/3017","text":"Mahdi Cheraghchi"},{"@pid":"k/ValentineKabanets","text":"Valentine Kabanets"},{"@pid":"196/2479","text":"Zhenjian Lu"},{"@pid":"176/6922","text":"Dimitrios Myrisiotis"}]},"title":"Circuit Lower Bounds for MCSP from Local Pseudorandom Generators.","venue":"ICALP","pages":"39:1-39:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/CheraghchiKLM19","doi":"10.4230/LIPICS.ICALP.2019.39","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.39","url":"https://dblp.org/rec/conf/icalp/CheraghchiKLM19"},
+"url":"URL#1072726"
+},
+{
+"@score":"1",
+"@id":"1072727",
+"info":{"authors":{"author":[{"@pid":"54/1902","text":"Eden Chlamtác"},{"@pid":"27/2346","text":"Michael Dinitz"},{"@pid":"118/2919","text":"Thomas Robinson"}]},"title":"The Norms of Graph Spanners.","venue":"ICALP","pages":"40:1-40:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ChlamtacDR19","doi":"10.4230/LIPICS.ICALP.2019.40","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.40","url":"https://dblp.org/rec/conf/icalp/ChlamtacDR19"},
+"url":"URL#1072727"
+},
+{
+"@score":"1",
+"@id":"1072728",
+"info":{"authors":{"author":[{"@pid":"41/4181","text":"Laura Ciobanu"},{"@pid":"66/4371","text":"Murray Elder"}]},"title":"Solutions Sets to Systems of Equations in Hyperbolic Groups Are EDT0L in PSPACE.","venue":"ICALP","pages":"110:1-110:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/CiobanuE19","doi":"10.4230/LIPICS.ICALP.2019.110","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.110","url":"https://dblp.org/rec/conf/icalp/CiobanuE19"},
+"url":"URL#1072728"
+},
+{
+"@score":"1",
+"@id":"1072729",
+"info":{"authors":{"author":[{"@pid":"136/5814","text":"Vincent Cohen-Addad"},{"@pid":"27/2931","text":"Anupam Gupta 0001"},{"@pid":"k/AmitKumar1","text":"Amit Kumar 0001"},{"@pid":"129/5624","text":"Euiwoong Lee"},{"@pid":"12/975-6","text":"Jason Li 0006"}]},"title":"Tight FPT Approximations for k-Median and k-Means.","venue":"ICALP","pages":"42:1-42:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Cohen-AddadG0LL19","doi":"10.4230/LIPICS.ICALP.2019.42","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.42","url":"https://dblp.org/rec/conf/icalp/Cohen-AddadG0LL19"},
+"url":"URL#1072729"
+},
+{
+"@score":"1",
+"@id":"1072730",
+"info":{"authors":{"author":[{"@pid":"136/5814","text":"Vincent Cohen-Addad"},{"@pid":"12/975-6","text":"Jason Li 0006"}]},"title":"On the Fixed-Parameter Tractability of Capacitated Clustering.","venue":"ICALP","pages":"41:1-41:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Cohen-AddadL19","doi":"10.4230/LIPICS.ICALP.2019.41","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.41","url":"https://dblp.org/rec/conf/icalp/Cohen-AddadL19"},
+"url":"URL#1072730"
+},
+{
+"@score":"1",
+"@id":"1072731",
+"info":{"authors":{"author":[{"@pid":"63/522","text":"Amin Coja-Oghlan"},{"@pid":"236/4502","text":"Oliver Gebhard"},{"@pid":"236/4358","text":"Max Hahn-Klimroth"},{"@pid":"236/4659","text":"Philipp Loick"}]},"title":"Information-Theoretic and Algorithmic Thresholds for Group Testing.","venue":"ICALP","pages":"43:1-43:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Coja-OghlanGHL19","doi":"10.4230/LIPICS.ICALP.2019.43","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.43","url":"https://dblp.org/rec/conf/icalp/Coja-OghlanGHL19"},
+"url":"URL#1072731"
+},
+{
+"@score":"1",
+"@id":"1072732",
+"info":{"authors":{"author":[{"@pid":"89/5530","text":"Thomas Colcombet"},{"@pid":"55/4663","text":"Joël Ouaknine"},{"@pid":"14/325","text":"Pavel Semukhin"},{"@pid":"90/2367","text":"James Worrell 0001"}]},"title":"On Reachability Problems for Low-Dimensional Matrix Semigroups.","venue":"ICALP","pages":"44:1-44:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ColcombetOS019","doi":"10.4230/LIPICS.ICALP.2019.44","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.44","url":"https://dblp.org/rec/conf/icalp/ColcombetOS019"},
+"url":"URL#1072732"
+},
+{
+"@score":"1",
+"@id":"1072733",
+"info":{"authors":{"author":[{"@pid":"c/GrahamCormode","text":"Graham Cormode"},{"@pid":"195/6259","text":"Jacques Dark"},{"@pid":"15/8910","text":"Christian Konrad"}]},"title":"Independent Sets in Vertex-Arrival Streams.","venue":"ICALP","pages":"45:1-45:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/CormodeDK19","doi":"10.4230/LIPICS.ICALP.2019.45","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.45","url":"https://dblp.org/rec/conf/icalp/CormodeDK19"},
+"url":"URL#1072733"
+},
+{
+"@score":"1",
+"@id":"1072734",
+"info":{"authors":{"author":[{"@pid":"23/584","text":"Jurek Czyzowicz"},{"@pid":"77/4787","text":"Konstantinos Georgiou"},{"@pid":"211/7025","text":"Ryan Killick"},{"@pid":"k/EvangelosKranakis","text":"Evangelos Kranakis"},{"@pid":"k/DannyKrizanc","text":"Danny Krizanc"},{"@pid":"117/8942","text":"Manuel Lafond"},{"@pid":"n/LataNarayanan","text":"Lata Narayanan"},{"@pid":"o/JaroslavOpatrny","text":"Jaroslav Opatrny"},{"@pid":"s/SunilMShende","text":"Sunil M. Shende"}]},"title":"Energy Consumption of Group Search on a Line.","venue":"ICALP","pages":"137:1-137:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/CzyzowiczGKKKLN19","doi":"10.4230/LIPICS.ICALP.2019.137","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.137","url":"https://dblp.org/rec/conf/icalp/CzyzowiczGKKKLN19"},
+"url":"URL#1072734"
+},
+{
+"@score":"1",
+"@id":"1072735",
+"info":{"authors":{"author":[{"@pid":"209/5851","text":"Mina Dalirrooyfard"},{"@pid":"63/8319","text":"Virginia Vassilevska Williams"},{"@pid":"176/1074","text":"Nikhil Vyas 0001"},{"@pid":"218/5861","text":"Nicole Wein"},{"@pid":"198/3328","text":"Yinzhan Xu"},{"@pid":"218/6704","text":"Yuancheng Yu"}]},"title":"Approximation Algorithms for Min-Distance Problems.","venue":"ICALP","pages":"46:1-46:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/DalirrooyfardW019","doi":"10.4230/LIPICS.ICALP.2019.46","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.46","url":"https://dblp.org/rec/conf/icalp/DalirrooyfardW019"},
+"url":"URL#1072735"
+},
+{
+"@score":"1",
+"@id":"1072736",
+"info":{"authors":{"author":[{"@pid":"209/5851","text":"Mina Dalirrooyfard"},{"@pid":"63/8319","text":"Virginia Vassilevska Williams"},{"@pid":"176/1074","text":"Nikhil Vyas 0001"},{"@pid":"218/5861","text":"Nicole Wein"}]},"title":"Tight Approximation Algorithms for Bichromatic Graph Diameter and Related Problems.","venue":"ICALP","pages":"47:1-47:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/DalirrooyfardW019a","doi":"10.4230/LIPICS.ICALP.2019.47","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.47","url":"https://dblp.org/rec/conf/icalp/DalirrooyfardW019a"},
+"url":"URL#1072736"
+},
+{
+"@score":"1",
+"@id":"1072737",
+"info":{"authors":{"author":[{"@pid":"d/AnujDawar","text":"Anuj Dawar"},{"@pid":"g/ErichGradel","text":"Erich Grädel"},{"@pid":"54/11266","text":"Wied Pakusa"}]},"title":"Approximations of Isomorphism and Logics with Linear-Algebraic Operators.","venue":"ICALP","pages":"112:1-112:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/DawarGP19","doi":"10.4230/LIPICS.ICALP.2019.112","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.112","url":"https://dblp.org/rec/conf/icalp/DawarGP19"},
+"url":"URL#1072737"
+},
+{
+"@score":"1",
+"@id":"1072738",
+"info":{"authors":{"author":[{"@pid":"126/4788","text":"Argyrios Deligkas"},{"@pid":"18/7412","text":"John Fearnley"},{"@pid":"194/2401","text":"Themistoklis Melissourgos"},{"@pid":"s/PaulGSpirakis","text":"Paul G. Spirakis"}]},"title":"Computing Exact Solutions of Consensus Halving and the Borsuk-Ulam Theorem.","venue":"ICALP","pages":"138:1-138:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/DeligkasFMS19","doi":"10.4230/LIPICS.ICALP.2019.138","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.138","url":"https://dblp.org/rec/conf/icalp/DeligkasFMS19"},
+"url":"URL#1072738"
+},
+{
+"@score":"1",
+"@id":"1072739",
+"info":{"authors":{"author":[{"@pid":"27/3557","text":"Holger Dell"},{"@pid":"182/1903","text":"Marc Roth"},{"@pid":"204/1616","text":"Philip Wellnitz"}]},"title":"Counting Answers to Existential Questions.","venue":"ICALP","pages":"113:1-113:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/DellRW19","doi":"10.4230/LIPICS.ICALP.2019.113","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.113","url":"https://dblp.org/rec/conf/icalp/DellRW19"},
+"url":"URL#1072739"
+},
+{
+"@score":"1",
+"@id":"1072740",
+"info":{"authors":{"author":[{"@pid":"d/JDiaz","text":"Josep Díaz"},{"@pid":"17/3093","text":"Lefteris M. Kirousis"},{"@pid":"234/6149","text":"Sofia Kokonezi"},{"@pid":"190/7464","text":"John Livieratos"}]},"title":"Algorithmically Efficient Syntactic Characterization of Possibility Domains.","venue":"ICALP","pages":"50:1-50:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/DiazKKL19","doi":"10.4230/LIPICS.ICALP.2019.50","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.50","url":"https://dblp.org/rec/conf/icalp/DiazKKL19"},
+"url":"URL#1072740"
+},
+{
+"@score":"1",
+"@id":"1072741",
+"info":{"authors":{"author":[{"@pid":"81/4023","text":"Stefan Dobrev"},{"@pid":"n/LataNarayanan","text":"Lata Narayanan"},{"@pid":"o/JaroslavOpatrny","text":"Jaroslav Opatrny"},{"@pid":"33/2732","text":"Denis Pankratov"}]},"title":"Exploration of High-Dimensional Grids by Finite Automata.","venue":"ICALP","pages":"139:1-139:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/DobrevNOP19","doi":"10.4230/LIPICS.ICALP.2019.139","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.139","url":"https://dblp.org/rec/conf/icalp/DobrevNOP19"},
+"url":"URL#1072741"
+},
+{
+"@score":"1",
+"@id":"1072742",
+"info":{"authors":{"author":[{"@pid":"234/7550","text":"Julian Dörfler"},{"@pid":"83/8775","text":"Christian Ikenmeyer"},{"@pid":"136/6733","text":"Greta Panova"}]},"title":"On Geometric Complexity Theory - Multiplicity Obstructions Are Stronger Than Occurrence Obstructions.","venue":"ICALP","pages":"51:1-51:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/DorflerIP19","doi":"10.4230/LIPICS.ICALP.2019.51","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.51","url":"https://dblp.org/rec/conf/icalp/DorflerIP19"},
+"url":"URL#1072742"
+},
+{
+"@score":"1",
+"@id":"1072743",
+"info":{"authors":{"author":[{"@pid":"206/6918","text":"Dani Dorfman"},{"@pid":"48/3950","text":"Haim Kaplan"},{"@pid":"z/UriZwick","text":"Uri Zwick"}]},"title":"A Faster Deterministic Exponential Time Algorithm for Energy Games and Mean Payoff Games.","venue":"ICALP","pages":"114:1-114:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/DorfmanKZ19","doi":"10.4230/LIPICS.ICALP.2019.114","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.114","url":"https://dblp.org/rec/conf/icalp/DorfmanKZ19"},
+"url":"URL#1072743"
+},
+{
+"@score":"1",
+"@id":"1072744",
+"info":{"authors":{"author":[{"@pid":"90/5794","text":"Ran Duan"},{"@pid":"224/0281","text":"Ce Jin"},{"@pid":"224/0209","text":"Hongxun Wu"}]},"title":"Faster Algorithms for All Pairs Non-Decreasing Paths Problem.","venue":"ICALP","pages":"48:1-48:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/DuanJW19","doi":"10.4230/LIPICS.ICALP.2019.48","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.48","url":"https://dblp.org/rec/conf/icalp/DuanJW19"},
+"url":"URL#1072744"
+},
+{
+"@score":"1",
+"@id":"1072745",
+"info":{"authors":{"author":{"@pid":"123/4532","text":"Guillaume Ducoffe"}},"title":"Faster Approximation Algorithms for Computing Shortest Cycles on Weighted Graphs.","venue":"ICALP","pages":"49:1-49:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Ducoffe19","doi":"10.4230/LIPICS.ICALP.2019.49","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.49","url":"https://dblp.org/rec/conf/icalp/Ducoffe19"},
+"url":"URL#1072745"
+},
+{
+"@score":"1",
+"@id":"1072746",
+"info":{"authors":{"author":[{"@pid":"161/3999","text":"Talya Eden"},{"@pid":"85/4800","text":"Dana Ron"},{"@pid":"147/4867","text":"Will Rosenbaum"}]},"title":"The Arboricity Captures the Complexity of Sampling Edges.","venue":"ICALP","pages":"52:1-52:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/EdenRR19","doi":"10.4230/LIPICS.ICALP.2019.52","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.52","url":"https://dblp.org/rec/conf/icalp/EdenRR19"},
+"url":"URL#1072746"
+},
+{
+"@score":"1",
+"@id":"1072747",
+"info":{"authors":{"author":[{"@pid":"80/4824","text":"Yuval Emek"},{"@pid":"k/ShayKutten","text":"Shay Kutten"},{"@pid":"16/1346","text":"Ron Lavi"},{"@pid":"10/10310","text":"William K. Moses Jr."}]},"title":"Deterministic Leader Election in Programmable Matter.","venue":"ICALP","pages":"140:1-140:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/EmekKLM19","doi":"10.4230/LIPICS.ICALP.2019.140","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.140","url":"https://dblp.org/rec/conf/icalp/EmekKLM19"},
+"url":"URL#1072747"
+},
+{
+"@score":"1",
+"@id":"1072748",
+"info":{"authors":{"author":[{"@pid":"69/1732","text":"Alina Ene"},{"@pid":"62/3796","text":"Huy L. Nguyen"}]},"title":"A Nearly-Linear Time Algorithm for Submodular Maximization with a Knapsack Constraint.","venue":"ICALP","pages":"53:1-53:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/EneN19","doi":"10.4230/LIPICS.ICALP.2019.53","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.53","url":"https://dblp.org/rec/conf/icalp/EneN19"},
+"url":"URL#1072748"
+},
+{
+"@score":"1",
+"@id":"1072749",
+"info":{"authors":{"author":[{"@pid":"69/1732","text":"Alina Ene"},{"@pid":"62/3796","text":"Huy L. Nguyen"}]},"title":"Towards Nearly-Linear Time Algorithms for Submodular Maximization with a Matroid Constraint.","venue":"ICALP","pages":"54:1-54:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/EneN19a","doi":"10.4230/LIPICS.ICALP.2019.54","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.54","url":"https://dblp.org/rec/conf/icalp/EneN19a"},
+"url":"URL#1072749"
+},
+{
+"@score":"1",
+"@id":"1072750",
+"info":{"authors":{"author":[{"@pid":"234/7533","text":"Massimo Equi"},{"@pid":"g/RobertoGrossi","text":"Roberto Grossi"},{"@pid":"77/2752","text":"Veli Mäkinen"},{"@pid":"98/3921","text":"Alexandru I. Tomescu"}]},"title":"On the Complexity of String Matching for Graphs.","venue":"ICALP","pages":"55:1-55:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/EquiGMT19","doi":"10.4230/LIPICS.ICALP.2019.55","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.55","url":"https://dblp.org/rec/conf/icalp/EquiGMT19"},
+"url":"URL#1072750"
+},
+{
+"@score":"1",
+"@id":"1072751",
+"info":{"authors":{"author":[{"@pid":"e/ThomasErlebach","text":"Thomas Erlebach"},{"@pid":"29/6224","text":"Frank Kammer"},{"@pid":"172/4922","text":"Kelin Luo"},{"@pid":"217/1861","text":"Andrej Sajenko"},{"@pid":"225/3667","text":"Jakob T. Spooner"}]},"title":"Two Moves per Time Step Make a Difference.","venue":"ICALP","pages":"141:1-141:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ErlebachKLSS19","doi":"10.4230/LIPICS.ICALP.2019.141","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.141","url":"https://dblp.org/rec/conf/icalp/ErlebachKLSS19"},
+"url":"URL#1072751"
+},
+{
+"@score":"1",
+"@id":"1072752",
+"info":{"authors":{"author":[{"@pid":"81/5741","text":"Kousha Etessami"},{"@pid":"222/1786","text":"Emanuel Martinov"},{"@pid":"73/10824","text":"Alistair Stewart"},{"@pid":"y/MihalisYannakakis","text":"Mihalis Yannakakis"}]},"title":"Reachability for Branching Concurrent Stochastic Games.","venue":"ICALP","pages":"115:1-115:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/EtessamiMSY19","doi":"10.4230/LIPICS.ICALP.2019.115","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.115","url":"https://dblp.org/rec/conf/icalp/EtessamiMSY19"},
+"url":"URL#1072752"
+},
+{
+"@score":"1",
+"@id":"1072753",
+"info":{"authors":{"author":[{"@pid":"18/7412","text":"John Fearnley"},{"@pid":"195/5560","text":"Spencer Gordon"},{"@pid":"50/7864","text":"Ruta Mehta"},{"@pid":"57/4020","text":"Rahul Savani"}]},"title":"Unique End of Potential Line.","venue":"ICALP","pages":"56:1-56:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/FearnleyGMS19","doi":"10.4230/LIPICS.ICALP.2019.56","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.56","url":"https://dblp.org/rec/conf/icalp/FearnleyGMS19"},
+"url":"URL#1072753"
+},
+{
+"@score":"1",
+"@id":"1072754",
+"info":{"authors":{"author":{"@pid":"43/1464","text":"Michal Feldman"}},"title":"Auction Design under Interdependent Values (Invited Talk).","venue":"ICALP","pages":"1:1-1:1","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Feldman19","doi":"10.4230/LIPICS.ICALP.2019.1","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.1","url":"https://dblp.org/rec/conf/icalp/Feldman19"},
+"url":"URL#1072754"
+},
+{
+"@score":"1",
+"@id":"1072755",
+"info":{"authors":{"author":[{"@pid":"239/8481","text":"Miron Ficak"},{"@pid":"05/358","text":"Marcin Kozik"},{"@pid":"192/1864","text":"Miroslav Olsák"},{"@pid":"239/8455","text":"Szymon Stankiewicz"}]},"title":"Dichotomy for Symmetric Boolean PCSPs.","venue":"ICALP","pages":"57:1-57:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/FicakKOS19","doi":"10.4230/LIPICS.ICALP.2019.57","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.57","url":"https://dblp.org/rec/conf/icalp/FicakKOS19"},
+"url":"URL#1072755"
+},
+{
+"@score":"1",
+"@id":"1072756",
+"info":{"authors":{"author":[{"@pid":"71/8819","text":"Yuval Filmus"},{"@pid":"173/5150","text":"Lianna Hambardzumyan"},{"@pid":"64/3796","text":"Hamed Hatami"},{"@pid":"40/4652","text":"Pooya Hatami"},{"@pid":"z/DZuckerman","text":"David Zuckerman"}]},"title":"Biasing Boolean Functions and Collective Coin-Flipping Protocols over Arbitrary Product Distributions.","venue":"ICALP","pages":"58:1-58:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/FilmusHHHZ19","doi":"10.4230/LIPICS.ICALP.2019.58","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.58","url":"https://dblp.org/rec/conf/icalp/FilmusHHHZ19"},
+"url":"URL#1072756"
+},
+{
+"@score":"1",
+"@id":"1072757",
+"info":{"authors":{"author":[{"@pid":"f/FedorVFomin","text":"Fedor V. Fomin"},{"@pid":"06/6306","text":"Petr A. Golovach"},{"@pid":"78/67","text":"Daniel Lokshtanov"},{"@pid":"11/5491","text":"Saket Saurabh 0001"},{"@pid":"133/1023","text":"Meirav Zehavi"}]},"title":"Covering Vectors by Spaces in Perturbed Graphic Matroids and Their Duals.","venue":"ICALP","pages":"59:1-59:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/FominGL0Z19","doi":"10.4230/LIPICS.ICALP.2019.59","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.59","url":"https://dblp.org/rec/conf/icalp/FominGL0Z19"},
+"url":"URL#1072757"
+},
+{
+"@score":"1",
+"@id":"1072758",
+"info":{"authors":{"author":[{"@pid":"f/FedorVFomin","text":"Fedor V. Fomin"},{"@pid":"78/67","text":"Daniel Lokshtanov"},{"@pid":"60/11535","text":"Fahad Panolan"},{"@pid":"11/5491","text":"Saket Saurabh 0001"},{"@pid":"133/1023","text":"Meirav Zehavi"}]},"title":"Decomposition of Map Graphs with Applications.","venue":"ICALP","pages":"60:1-60:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/FominLP0Z19","doi":"10.4230/LIPICS.ICALP.2019.60","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.60","url":"https://dblp.org/rec/conf/icalp/FominLP0Z19"},
+"url":"URL#1072758"
+},
+{
+"@score":"1",
+"@id":"1072759",
+"info":{"authors":{"author":{"@pid":"177/6212","text":"Marie Fortin"}},"title":"FO = FO3 for Linear Orders with Monotone Binary Relations.","venue":"ICALP","pages":"116:1-116:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Fortin19","doi":"10.4230/LIPICS.ICALP.2019.116","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.116","url":"https://dblp.org/rec/conf/icalp/Fortin19"},
+"url":"URL#1072759"
+},
+{
+"@score":"1",
+"@id":"1072760",
+"info":{"authors":{"author":[{"@pid":"98/516","text":"Ankit Garg"},{"@pid":"49/6983-8","text":"Nikhil Gupta 0008"},{"@pid":"07/4384","text":"Neeraj Kayal"},{"@pid":"23/5767","text":"Chandan Saha 0001"}]},"title":"Determinant Equivalence Test over Finite Fields and over Q.","venue":"ICALP","pages":"62:1-62:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/GargGK019","doi":"10.4230/LIPICS.ICALP.2019.62","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.62","url":"https://dblp.org/rec/conf/icalp/GargGK019"},
+"url":"URL#1072760"
+},
+{
+"@score":"1",
+"@id":"1072761",
+"info":{"authors":{"author":[{"@pid":"06/6583","text":"Dmitry Gavinsky"},{"@pid":"65/3040","text":"Troy Lee"},{"@pid":"18/3053","text":"Miklos Santha"},{"@pid":"21/7413","text":"Swagato Sanyal"}]},"title":"A Composition Theorem for Randomized Query Complexity via Max-Conflict Complexity.","venue":"ICALP","pages":"64:1-64:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/GavinskyLSS19","doi":"10.4230/LIPICS.ICALP.2019.64","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.64","url":"https://dblp.org/rec/conf/icalp/GavinskyLSS19"},
+"url":"URL#1072761"
+},
+{
+"@score":"1",
+"@id":"1072762",
+"info":{"authors":{"author":[{"@pid":"33/5673","text":"Mohsen Ghaffari"},{"@pid":"244/2114","text":"Ali Sayyadi"}]},"title":"Distributed Arboricity-Dependent Graph Coloring via All-to-All Communication.","venue":"ICALP","pages":"142:1-142:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/GhaffariS19","doi":"10.4230/LIPICS.ICALP.2019.142","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.142","url":"https://dblp.org/rec/conf/icalp/GhaffariS19"},
+"url":"URL#1072762"
+},
+{
+"@score":"1",
+"@id":"1072763",
+"info":{"authors":{"author":[{"@pid":"81/760","text":"Paul W. Goldberg"},{"@pid":"156/0341","text":"Alexandros Hollender"}]},"title":"The Hairy Ball Problem is PPAD-Complete.","venue":"ICALP","pages":"65:1-65:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/GoldbergH19","doi":"10.4230/LIPICS.ICALP.2019.65","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.65","url":"https://dblp.org/rec/conf/icalp/GoldbergH19"},
+"url":"URL#1072763"
+},
+{
+"@score":"1",
+"@id":"1072764",
+"info":{"authors":{"author":[{"@pid":"31/11062","text":"Alexander Golovnev"},{"@pid":"228/6463","text":"Rahul Ilango"},{"@pid":"i/RImpagliazzo","text":"Russell Impagliazzo"},{"@pid":"k/ValentineKabanets","text":"Valentine Kabanets"},{"@pid":"91/5785","text":"Antonina Kolokolova"},{"@pid":"93/8727","text":"Avishay Tal"}]},"title":"AC0[p] Lower Bounds Against MCSP via the Coin Problem.","venue":"ICALP","pages":"66:1-66:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/GolovnevIIKKT19","doi":"10.4230/LIPICS.ICALP.2019.66","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.66","url":"https://dblp.org/rec/conf/icalp/GolovnevIIKKT19"},
+"url":"URL#1072764"
+},
+{
+"@score":"1",
+"@id":"1072765",
+"info":{"authors":{"author":{"@pid":"153/2241","text":"Alex B. Grilo"}},"title":"A Simple Protocol for Verifiable Delegation of Quantum Computation in One Round.","venue":"ICALP","pages":"28:1-28:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Grilo19","doi":"10.4230/LIPICS.ICALP.2019.28","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.28","url":"https://dblp.org/rec/conf/icalp/Grilo19"},
+"url":"URL#1072765"
+},
+{
+"@score":"1",
+"@id":"1072766",
+"info":{"authors":{"author":{"@pid":"g/MGrohe","text":"Martin Grohe"}},"title":"Symmetry and Similarity (Invited Talk).","venue":"ICALP","pages":"2:1-2:1","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Grohe19","doi":"10.4230/LIPICS.ICALP.2019.2","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.2","url":"https://dblp.org/rec/conf/icalp/Grohe19"},
+"url":"URL#1072766"
+},
+{
+"@score":"1",
+"@id":"1072767",
+"info":{"authors":{"author":[{"@pid":"g/MGrohe","text":"Martin Grohe"},{"@pid":"160/8276","text":"Sandra Kiefer"}]},"title":"A Linear Upper Bound on the Weisfeiler-Leman Dimension of Graphs of Bounded Genus.","venue":"ICALP","pages":"117:1-117:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/GroheK19","doi":"10.4230/LIPICS.ICALP.2019.117","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.117","url":"https://dblp.org/rec/conf/icalp/GroheK19"},
+"url":"URL#1072767"
+},
+{
+"@score":"1",
+"@id":"1072768",
+"info":{"authors":{"author":[{"@pid":"27/2931","text":"Anupam Gupta 0001"},{"@pid":"153/2209","text":"Guru Guruganesh"},{"@pid":"210/2619","text":"Binghui Peng"},{"@pid":"92/10524","text":"David Wajc"}]},"title":"Stochastic Online Metric Matching.","venue":"ICALP","pages":"67:1-67:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/GuptaGPW19","doi":"10.4230/LIPICS.ICALP.2019.67","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.67","url":"https://dblp.org/rec/conf/icalp/GuptaGPW19"},
+"url":"URL#1072768"
+},
+{
+"@score":"1",
+"@id":"1072769",
+"info":{"authors":{"author":[{"@pid":"g/VenkatesanGuruswami","text":"Venkatesan Guruswami"},{"@pid":"61/8860","text":"Lingfei Jin"},{"@pid":"72/2199","text":"Chaoping Xing"}]},"title":"Constructions of Maximally Recoverable Local Reconstruction Codes via Function Fields.","venue":"ICALP","pages":"68:1-68:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/GuruswamiJX19","doi":"10.4230/LIPICS.ICALP.2019.68","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.68","url":"https://dblp.org/rec/conf/icalp/GuruswamiJX19"},
+"url":"URL#1072769"
+},
+{
+"@score":"1",
+"@id":"1072770",
+"info":{"authors":{"author":[{"@pid":"g/VenkatesanGuruswami","text":"Venkatesan Guruswami"},{"@pid":"199/1713","text":"Andrii Riazanov"}]},"title":"Beating Fredman-Komlós for Perfect k-Hashing.","venue":"ICALP","pages":"92:1-92:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/GuruswamiR19","doi":"10.4230/LIPICS.ICALP.2019.92","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.92","url":"https://dblp.org/rec/conf/icalp/GuruswamiR19"},
+"url":"URL#1072770"
+},
+{
+"@score":"1",
+"@id":"1072771",
+"info":{"authors":{"author":[{"@pid":"39/1043","text":"Bernhard Haeupler"},{"@pid":"26/5426","text":"Fabian Kuhn"},{"@pid":"126/1709","text":"Anders Martinsson"},{"@pid":"227/2945","text":"Kalina Petrova"},{"@pid":"166/1236","text":"Pascal Pfister"}]},"title":"Optimal Strategies for Patrolling Fences.","venue":"ICALP","pages":"144:1-144:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/HaeuplerKMPP19","doi":"10.4230/LIPICS.ICALP.2019.144","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.144","url":"https://dblp.org/rec/conf/icalp/HaeuplerKMPP19"},
+"url":"URL#1072771"
+},
+{
+"@score":"1",
+"@id":"1072772",
+"info":{"authors":{"author":[{"@pid":"207/7993","text":"Yassine Hamoudi"},{"@pid":"72/3159","text":"Frédéric Magniez"}]},"title":"Quantum Chebyshev&apos;s Inequality and Applications.","venue":"ICALP","pages":"69:1-69:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/HamoudiM19","doi":"10.4230/LIPICS.ICALP.2019.69","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.69","url":"https://dblp.org/rec/conf/icalp/HamoudiM19"},
+"url":"URL#1072772"
+},
+{
+"@score":"1",
+"@id":"1072773",
+"info":{"authors":{"author":[{"@pid":"144/7700","text":"Samuel Haney"},{"@pid":"183/6677","text":"Mehraneh Liaee"},{"@pid":"m/BruceMMaggs","text":"Bruce M. Maggs"},{"@pid":"81/6547","text":"Debmalya Panigrahi"},{"@pid":"r/RRajaraman","text":"Rajmohan Rajaraman"},{"@pid":"s/RaviSundaram","text":"Ravi Sundaram"}]},"title":"Retracting Graphs to Cycles.","venue":"ICALP","pages":"70:1-70:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/HaneyLMPRS19","doi":"10.4230/LIPICS.ICALP.2019.70","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.70","url":"https://dblp.org/rec/conf/icalp/HaneyLMPRS19"},
+"url":"URL#1072773"
+},
+{
+"@score":"1",
+"@id":"1072774",
+"info":{"authors":{"author":[{"@pid":"239/8667","text":"Falko Hegerfeld"},{"@pid":"93/5872","text":"Stefan Kratsch"}]},"title":"On Adaptive Algorithms for Maximum Matching.","venue":"ICALP","pages":"71:1-71:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/HegerfeldK19","doi":"10.4230/LIPICS.ICALP.2019.71","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.71","url":"https://dblp.org/rec/conf/icalp/HegerfeldK19"},
+"url":"URL#1072774"
+},
+{
+"@score":"1",
+"@id":"1072775",
+"info":{"authors":{"author":[{"@pid":"178/4712","text":"Mehran Hosseini"},{"@pid":"55/4663","text":"Joël Ouaknine"},{"@pid":"90/2367","text":"James Worrell 0001"}]},"title":"Termination of Linear Loops over the Integers.","venue":"ICALP","pages":"118:1-118:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/HosseiniO019","doi":"10.4230/LIPICS.ICALP.2019.118","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.118","url":"https://dblp.org/rec/conf/icalp/HosseiniO019"},
+"url":"URL#1072775"
+},
+{
+"@score":"1",
+"@id":"1072776",
+"info":{"authors":{"author":[{"@pid":"53/2691","text":"Pavel Hrubes"},{"@pid":"161/4087","text":"Sivaramakrishnan Natarajan Ramamoorthy"},{"@pid":"63/6846","text":"Anup Rao 0001"},{"@pid":"77/5599","text":"Amir Yehudayoff"}]},"title":"Lower Bounds on Balancing Sets and Depth-2 Threshold Circuits.","venue":"ICALP","pages":"72:1-72:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/HrubesRRY19","doi":"10.4230/LIPICS.ICALP.2019.72","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.72","url":"https://dblp.org/rec/conf/icalp/HrubesRRY19"},
+"url":"URL#1072776"
+},
+{
+"@score":"1",
+"@id":"1072777",
+"info":{"authors":{"author":[{"@pid":"18/7116","text":"Sungjin Im"},{"@pid":"28/5638","text":"Benjamin Moseley"},{"@pid":"p/KirkPruhs","text":"Kirk Pruhs"},{"@pid":"125/2167","text":"Manish Purohit"}]},"title":"Matroid Coflow Scheduling.","venue":"ICALP","pages":"145:1-145:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ImMPP19","doi":"10.4230/LIPICS.ICALP.2019.145","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.145","url":"https://dblp.org/rec/conf/icalp/ImMPP19"},
+"url":"URL#1072777"
+},
+{
+"@score":"1",
+"@id":"1072778",
+"info":{"authors":{"author":[{"@pid":"j/KlausJansen","text":"Klaus Jansen"},{"@pid":"230/3744","text":"Alexandra Lassota"},{"@pid":"190/7543","text":"Lars Rohwedder"}]},"title":"Near-Linear Time Algorithm for n-fold ILPs via Color Coding.","venue":"ICALP","pages":"75:1-75:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/JansenLR19","doi":"10.4230/LIPICS.ICALP.2019.75","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.75","url":"https://dblp.org/rec/conf/icalp/JansenLR19"},
+"url":"URL#1072778"
+},
+{
+"@score":"1",
+"@id":"1072779",
+"info":{"authors":{"author":[{"@pid":"j/KlausJansen","text":"Klaus Jansen"},{"@pid":"190/7543","text":"Lars Rohwedder"}]},"title":"Local Search Breaks 1.75 for Graph Balancing.","venue":"ICALP","pages":"74:1-74:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/JansenR19","doi":"10.4230/LIPICS.ICALP.2019.74","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.74","url":"https://dblp.org/rec/conf/icalp/JansenR19"},
+"url":"URL#1072779"
+},
+{
+"@score":"1",
+"@id":"1072780",
+"info":{"authors":{"author":{"@pid":"224/0281","text":"Ce Jin"}},"title":"An Improved FPTAS for 0-1 Knapsack.","venue":"ICALP","pages":"76:1-76:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Jin19","doi":"10.4230/LIPICS.ICALP.2019.76","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.76","url":"https://dblp.org/rec/conf/icalp/Jin19"},
+"url":"URL#1072780"
+},
+{
+"@score":"1",
+"@id":"1072781",
+"info":{"authors":{"author":[{"@pid":"28/6047","text":"Stefan Kiefer"},{"@pid":"81/113","text":"Richard Mayr"},{"@pid":"32/9219","text":"Mahsa Shirmohammadi"},{"@pid":"51/7221","text":"Patrick Totzke"}]},"title":"Büchi Objectives in Countable MDPs.","venue":"ICALP","pages":"119:1-119:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/KieferMST19","doi":"10.4230/LIPICS.ICALP.2019.119","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.119","url":"https://dblp.org/rec/conf/icalp/KieferMST19"},
+"url":"URL#1072781"
+},
+{
+"@score":"1",
+"@id":"1072782",
+"info":{"authors":{"author":{"@pid":"89/3764","text":"Vladimir Kolmogorov"}},"title":"Testing the Complexity of a Valued CSP Language.","venue":"ICALP","pages":"77:1-77:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Kolmogorov19","doi":"10.4230/LIPICS.ICALP.2019.77","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.77","url":"https://dblp.org/rec/conf/icalp/Kolmogorov19"},
+"url":"URL#1072782"
+},
+{
+"@score":"1",
+"@id":"1072783",
+"info":{"authors":{"author":[{"@pid":"48/4888","text":"Amos Korman"},{"@pid":"50/2906","text":"Yoav Rodeh"}]},"title":"Multi-Round Cooperative Search Games with Multiple Players.","venue":"ICALP","pages":"146:1-146:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/KormanR19","doi":"10.4230/LIPICS.ICALP.2019.146","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.146","url":"https://dblp.org/rec/conf/icalp/KormanR19"},
+"url":"URL#1072783"
+},
+{
+"@score":"1",
+"@id":"1072784",
+"info":{"authors":{"author":[{"@pid":"43/6109","text":"Dariusz R. Kowalski"},{"@pid":"24/725","text":"Miguel A. Mosteiro"}]},"title":"Polynomial Anonymous Dynamic Distributed Computing Without a Unique Leader.","venue":"ICALP","pages":"147:1-147:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/KowalskiM19","doi":"10.4230/LIPICS.ICALP.2019.147","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.147","url":"https://dblp.org/rec/conf/icalp/KowalskiM19"},
+"url":"URL#1072784"
+},
+{
+"@score":"1",
+"@id":"1072785",
+"info":{"authors":{"author":{"@pid":"41/10526","text":"Adam Kurpisz"}},"title":"Sum-Of-Squares Bounds via Boolean Function Analysis.","venue":"ICALP","pages":"79:1-79:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Kurpisz19","doi":"10.4230/LIPICS.ICALP.2019.79","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.79","url":"https://dblp.org/rec/conf/icalp/Kurpisz19"},
+"url":"URL#1072785"
+},
+{
+"@score":"1",
+"@id":"1072786",
+"info":{"authors":{"author":{"@pid":"140/1108","text":"William Kuszmaul"}},"title":"Dynamic Time Warping in Strongly Subquadratic Time - Algorithms for the Low-Distance Regime and Approximate Evaluation.","venue":"ICALP","pages":"80:1-80:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Kuszmaul19","doi":"10.4230/LIPICS.ICALP.2019.80","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.80","url":"https://dblp.org/rec/conf/icalp/Kuszmaul19"},
+"url":"URL#1072786"
+},
+{
+"@score":"1",
+"@id":"1072787",
+"info":{"authors":{"author":[{"@pid":"44/3105","text":"Ugo Dal Lago"},{"@pid":"199/1997","text":"Francesco Gavazzo"},{"@pid":"143/2718","text":"Akira Yoshimizu"}]},"title":"Differential Logical Relations, Part I - The Simply-Typed Case.","venue":"ICALP","pages":"111:1-111:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/LagoGY19","doi":"10.4230/LIPICS.ICALP.2019.111","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.111","url":"https://dblp.org/rec/conf/icalp/LagoGY19"},
+"url":"URL#1072787"
+},
+{
+"@score":"1",
+"@id":"1072788",
+"info":{"authors":{"author":{"@pid":"07/9670","text":"Bingkai Lin"}},"title":"A Simple Gap-Producing Reduction for the Parameterized Set Cover Problem.","venue":"ICALP","pages":"81:1-81:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Lin19","doi":"10.4230/LIPICS.ICALP.2019.81","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.81","url":"https://dblp.org/rec/conf/icalp/Lin19"},
+"url":"URL#1072788"
+},
+{
+"@score":"1",
+"@id":"1072789",
+"info":{"authors":{"author":[{"@pid":"l/ChristofLoding","text":"Christof Löding"},{"@pid":"225/7911","text":"Anton Pirogov"}]},"title":"Determinization of Büchi Automata - Unifying the Approaches of Safra and Muller-Schupp.","venue":"ICALP","pages":"120:1-120:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/LodingP19","doi":"10.4230/LIPICS.ICALP.2019.120","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.120","url":"https://dblp.org/rec/conf/icalp/LodingP19"},
+"url":"URL#1072789"
+},
+{
+"@score":"1",
+"@id":"1072790",
+"info":{"authors":{"author":[{"@pid":"232/1903","text":"Antonio Molina Lovett"},{"@pid":"s/JeffreyShallit","text":"Jeffrey O. Shallit"}]},"title":"Optimal Regular Expressions for Permutations.","venue":"ICALP","pages":"121:1-121:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/LovettS19","doi":"10.4230/LIPICS.ICALP.2019.121","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.121","url":"https://dblp.org/rec/conf/icalp/LovettS19"},
+"url":"URL#1072790"
+},
+{
+"@score":"1",
+"@id":"1072791",
+"info":{"authors":{"author":[{"@pid":"119/4801","text":"Frederik Mallmann-Trenn"},{"@pid":"164/5605","text":"Yannic Maus"},{"@pid":"58/10606","text":"Dominik Pajak"}]},"title":"Noidy Conmunixatipn - On the Convergence of the Averaging Population Protocol.","venue":"ICALP","pages":"148:1-148:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Mallmann-TrennM19","doi":"10.4230/LIPICS.ICALP.2019.148","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.148","url":"https://dblp.org/rec/conf/icalp/Mallmann-TrennM19"},
+"url":"URL#1072791"
+},
+{
+"@score":"1",
+"@id":"1072792",
+"info":{"authors":{"author":[{"@pid":"73/8685","text":"Jannik Matuschke"},{"@pid":"230/7808","text":"Ulrike Schmidt-Kraepelin"},{"@pid":"86/7248","text":"José Verschae"}]},"title":"Maintaining Perfect Matchings at Low Cost.","venue":"ICALP","pages":"82:1-82:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/MatuschkeSV19","doi":"10.4230/LIPICS.ICALP.2019.82","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.82","url":"https://dblp.org/rec/conf/icalp/MatuschkeSV19"},
+"url":"URL#1072792"
+},
+{
+"@score":"1",
+"@id":"1072793",
+"info":{"authors":{"author":[{"@pid":"239/8813","text":"Arturo I. Merino"},{"@pid":"84/8318","text":"José A. Soto"}]},"title":"The Minimum Cost Query Problem on Matroids with Uncertainty Areas.","venue":"ICALP","pages":"83:1-83:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/MerinoS19","doi":"10.4230/LIPICS.ICALP.2019.83","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.83","url":"https://dblp.org/rec/conf/icalp/MerinoS19"},
+"url":"URL#1072793"
+},
+{
+"@score":"1",
+"@id":"1072794",
+"info":{"authors":{"author":[{"@pid":"154/1953","text":"Ian Mertz"},{"@pid":"p/TPitassi","text":"Toniann Pitassi"},{"@pid":"198/9526","text":"Yuanhao Wei"}]},"title":"Short Proofs Are Hard to Find.","venue":"ICALP","pages":"84:1-84:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/MertzPW19","doi":"10.4230/LIPICS.ICALP.2019.84","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.84","url":"https://dblp.org/rec/conf/icalp/MertzPW19"},
+"url":"URL#1072794"
+},
+{
+"@score":"1",
+"@id":"1072795",
+"info":{"authors":{"author":[{"@pid":"218/5705","text":"Eyal Mizrachi"},{"@pid":"19/376-2","text":"Roy Schwartz 0002"},{"@pid":"26/4384","text":"Joachim Spoerhase"},{"@pid":"172/0912","text":"Sumedha Uniyal"}]},"title":"A Tight Approximation for Submodular Maximization with Mixed Packing and Covering Constraints.","venue":"ICALP","pages":"85:1-85:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/MizrachiSSU19","doi":"10.4230/LIPICS.ICALP.2019.85","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.85","url":"https://dblp.org/rec/conf/icalp/MizrachiSSU19"},
+"url":"URL#1072795"
+},
+{
+"@score":"1",
+"@id":"1072796",
+"info":{"authors":{"author":{"@pid":"28/5638","text":"Benjamin Moseley"}},"title":"Scheduling to Approximate Minimization Objectives on Identical Machines.","venue":"ICALP","pages":"86:1-86:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Moseley19","doi":"10.4230/LIPICS.ICALP.2019.86","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.86","url":"https://dblp.org/rec/conf/icalp/Moseley19"},
+"url":"URL#1072796"
+},
+{
+"@score":"1",
+"@id":"1072797",
+"info":{"authors":{"author":[{"@pid":"m/AMuscholl","text":"Anca Muscholl"},{"@pid":"37/3823","text":"Gabriele Puppis"}]},"title":"Equivalence of Finite-Valued Streaming String Transducers Is Decidable.","venue":"ICALP","pages":"122:1-122:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/MuschollP19","doi":"10.4230/LIPICS.ICALP.2019.122","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.122","url":"https://dblp.org/rec/conf/icalp/MuschollP19"},
+"url":"URL#1072797"
+},
+{
+"@score":"1",
+"@id":"1072798",
+"info":{"authors":{"author":{"@pid":"m/NabilHMustafa","text":"Nabil H. Mustafa"}},"title":"Computing Optimal Epsilon-Nets Is as Easy as Finding an Unhit Set.","venue":"ICALP","pages":"87:1-87:12","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Mustafa19","doi":"10.4230/LIPICS.ICALP.2019.87","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.87","url":"https://dblp.org/rec/conf/icalp/Mustafa19"},
+"url":"URL#1072798"
+},
+{
+"@score":"1",
+"@id":"1072799",
+"info":{"authors":{"author":[{"@pid":"n/JosephNaor","text":"Joseph (Seffi) Naor"},{"@pid":"182/2576","text":"Seeun William Umboh"},{"@pid":"w/DavidPWilliamson","text":"David P. Williamson"}]},"title":"Tight Bounds for Online Weighted Tree Augmentation.","venue":"ICALP","pages":"88:1-88:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/NaorUW19","doi":"10.4230/LIPICS.ICALP.2019.88","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.88","url":"https://dblp.org/rec/conf/icalp/NaorUW19"},
+"url":"URL#1072799"
+},
+{
+"@score":"1",
+"@id":"1072800",
+"info":{"authors":{"author":[{"@pid":"222/3380","text":"Lê Thành Dung Nguyên"},{"@pid":"155/8146","text":"Pierre Pradic"}]},"title":"From Normal Functors to Logarithmic Space Queries.","venue":"ICALP","pages":"123:1-123:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/NguyenP19","doi":"10.4230/LIPICS.ICALP.2019.123","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.123","url":"https://dblp.org/rec/conf/icalp/NguyenP19"},
+"url":"URL#1072800"
+},
+{
+"@score":"1",
+"@id":"1072801",
+"info":{"authors":{"author":[{"@pid":"180/9176","text":"Shunhao Oh"},{"@pid":"211/7146","text":"Anuja Meetoo Appavoo"},{"@pid":"84/3601","text":"Seth Gilbert"}]},"title":"Periodic Bandits and Wireless Network Selection.","venue":"ICALP","pages":"149:1-149:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/OhAG19","doi":"10.4230/LIPICS.ICALP.2019.149","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.149","url":"https://dblp.org/rec/conf/icalp/OhAG19"},
+"url":"URL#1072801"
+},
+{
+"@score":"1",
+"@id":"1072802",
+"info":{"authors":{"author":{"@pid":"12/7069","text":"Igor Carboni Oliveira"}},"title":"Randomness and Intractability in Kolmogorov Complexity.","venue":"ICALP","pages":"32:1-32:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Oliveira19","doi":"10.4230/LIPICS.ICALP.2019.32","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.32","url":"https://dblp.org/rec/conf/icalp/Oliveira19"},
+"url":"URL#1072802"
+},
+{
+"@score":"1",
+"@id":"1072803",
+"info":{"authors":{"author":[{"@pid":"00/149","text":"Konstantinos Panagiotou"},{"@pid":"244/2202","text":"Matija Pasch"}]},"title":"Satisfiability Thresholds for Regular Occupation Problems.","venue":"ICALP","pages":"90:1-90:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/PanagiotouP19","doi":"10.4230/LIPICS.ICALP.2019.90","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.90","url":"https://dblp.org/rec/conf/icalp/PanagiotouP19"},
+"url":"URL#1072803"
+},
+{
+"@score":"1",
+"@id":"1072804",
+"info":{"authors":{"author":[{"@pid":"16/9365","text":"Merav Parter"},{"@pid":"129/1614","text":"Eylon Yogev"}]},"title":"Optimal Short Cycle Decomposition in Almost Linear Time.","venue":"ICALP","pages":"89:1-89:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ParterY19","doi":"10.4230/LIPICS.ICALP.2019.89","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.89","url":"https://dblp.org/rec/conf/icalp/ParterY19"},
+"url":"URL#1072804"
+},
+{
+"@score":"1",
+"@id":"1072805",
+"info":{"authors":{"author":{"@pid":"00/5897","text":"Matthieu Picantin"}},"title":"Automatic Semigroups vs Automaton Semigroups.","venue":"ICALP","pages":"124:1-124:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Picantin19","doi":"10.4230/LIPICS.ICALP.2019.124","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.124","url":"https://dblp.org/rec/conf/icalp/Picantin19"},
+"url":"URL#1072805"
+},
+{
+"@score":"1",
+"@id":"1072806",
+"info":{"authors":{"author":[{"@pid":"95/3009","text":"Jean-Éric Pin"},{"@pid":"13/6960","text":"Christophe Reutenauer"}]},"title":"A Mahler&apos;s Theorem for Word Functions.","venue":"ICALP","pages":"125:1-125:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/PinR19","doi":"10.4230/LIPICS.ICALP.2019.125","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.125","url":"https://dblp.org/rec/conf/icalp/PinR19"},
+"url":"URL#1072806"
+},
+{
+"@score":"1",
+"@id":"1072807",
+"info":{"authors":{"author":[{"@pid":"87/2633","text":"Thomas Place"},{"@pid":"z/MarcZeitoun","text":"Marc Zeitoun"}]},"title":"On All Things Star-Free.","venue":"ICALP","pages":"126:1-126:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/PlaceZ19","doi":"10.4230/LIPICS.ICALP.2019.126","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.126","url":"https://dblp.org/rec/conf/icalp/PlaceZ19"},
+"url":"URL#1072807"
+},
+{
+"@score":"1",
+"@id":"1072808",
+"info":{"authors":{"author":[{"@pid":"244/2157","text":"Bader Abu Radi"},{"@pid":"k/OrnaKupferman","text":"Orna Kupferman"}]},"title":"Minimizing GFG Transition-Based Automata.","venue":"ICALP","pages":"100:1-100:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/RadiK19","doi":"10.4230/LIPICS.ICALP.2019.100","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.100","url":"https://dblp.org/rec/conf/icalp/RadiK19"},
+"url":"URL#1072808"
+},
+{
+"@score":"1",
+"@id":"1072809",
+"info":{"authors":{"author":[{"@pid":"166/1694","text":"Akbar Rafiey"},{"@pid":"53/2428","text":"Arash Rafiey"},{"@pid":"75/5821","text":"Thiago Santos"}]},"title":"Toward a Dichotomy for Approximation of H-Coloring.","venue":"ICALP","pages":"91:1-91:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/RafieyRS19","doi":"10.4230/LIPICS.ICALP.2019.91","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.91","url":"https://dblp.org/rec/conf/icalp/RafieyRS19"},
+"url":"URL#1072809"
+},
+{
+"@score":"1",
+"@id":"1072810",
+"info":{"authors":{"author":[{"@pid":"204/4402","text":"Martin Raszyk"},{"@pid":"b/DavidABasin","text":"David A. Basin"},{"@pid":"95/10567","text":"Dmitriy Traytel"}]},"title":"From Nondeterministic to Multi-Head Deterministic Finite-State Transducers.","venue":"ICALP","pages":"127:1-127:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/RaszykBT19","doi":"10.4230/LIPICS.ICALP.2019.127","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.127","url":"https://dblp.org/rec/conf/icalp/RaszykBT19"},
+"url":"URL#1072810"
+},
+{
+"@score":"1",
+"@id":"1072811",
+"info":{"authors":{"author":[{"@pid":"55/5954","text":"Pierre-Alain Reynier"},{"@pid":"185/2955","text":"Didier Villevalois"}]},"title":"Sequentiality of String-to-Context Transducers.","venue":"ICALP","pages":"128:1-128:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ReynierV19","doi":"10.4230/LIPICS.ICALP.2019.128","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.128","url":"https://dblp.org/rec/conf/icalp/ReynierV19"},
+"url":"URL#1072811"
+},
+{
+"@score":"1",
+"@id":"1072812",
+"info":{"authors":{"author":[{"@pid":"03/5688","text":"Thomas Sauerwald"},{"@pid":"52/9867","text":"Luca Zanetti"}]},"title":"Random Walks on Dynamic Graphs - Mixing Times, Hitting Times, and Return Probabilities.","venue":"ICALP","pages":"93:1-93:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/SauerwaldZ19","doi":"10.4230/LIPICS.ICALP.2019.93","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.93","url":"https://dblp.org/rec/conf/icalp/SauerwaldZ19"},
+"url":"URL#1072812"
+},
+{
+"@score":"1",
+"@id":"1072813",
+"info":{"authors":{"author":[{"@pid":"s/ChristianScheideler","text":"Christian Scheideler"},{"@pid":"117/3883","text":"Alexander Setzer"}]},"title":"On the Complexity of Local Graph Transformations.","venue":"ICALP","pages":"150:1-150:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ScheidelerS19","doi":"10.4230/LIPICS.ICALP.2019.150","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.150","url":"https://dblp.org/rec/conf/icalp/ScheidelerS19"},
+"url":"URL#1072813"
+},
+{
+"@score":"1",
+"@id":"1072814",
+"info":{"authors":{"author":[{"@pid":"155/9929","text":"Daniel Schmand"},{"@pid":"88/4000-2","text":"Marc Schröder 0002"},{"@pid":"73/36","text":"Alexander Skopalik"}]},"title":"Network Investment Games with Wardrop Followers.","venue":"ICALP","pages":"151:1-151:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Schmand0S19","doi":"10.4230/LIPICS.ICALP.2019.151","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.151","url":"https://dblp.org/rec/conf/icalp/Schmand0S19"},
+"url":"URL#1072814"
+},
+{
+"@score":"1",
+"@id":"1072815",
+"info":{"authors":{"author":{"@pid":"62/6048","text":"Sylvain Schmitz"}},"title":"The Parametric Complexity of Lossy Counter Machines.","venue":"ICALP","pages":"129:1-129:15","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Schmitz19","doi":"10.4230/LIPICS.ICALP.2019.129","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.129","url":"https://dblp.org/rec/conf/icalp/Schmitz19"},
+"url":"URL#1072815"
+},
+{
+"@score":"1",
+"@id":"1072816",
+"info":{"authors":{"author":[{"@pid":"87/285","text":"Xiaoming Sun"},{"@pid":"w/DPWoodruff","text":"David P. Woodruff"},{"@pid":"25/5712","text":"Guang Yang"},{"@pid":"91/2798-1","text":"Jialin Zhang 0001"}]},"title":"Querying a Matrix Through Matrix-Vector Products.","venue":"ICALP","pages":"94:1-94:16","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/SunWYZ19","doi":"10.4230/LIPICS.ICALP.2019.94","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.94","url":"https://dblp.org/rec/conf/icalp/SunWYZ19"},
+"url":"URL#1072816"
+},
+{
+"@score":"1",
+"@id":"1072817",
+"info":{"authors":{"author":{"@pid":"11/6945","text":"Ola Svensson"}},"title":"Approximately Good and Modern Matchings (Invited Talk).","venue":"ICALP","pages":"3:1-3:1","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Svensson19","doi":"10.4230/LIPICS.ICALP.2019.3","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.3","url":"https://dblp.org/rec/conf/icalp/Svensson19"},
+"url":"URL#1072817"
+},
+{
+"@score":"1",
+"@id":"1072818",
+"info":{"authors":{"author":[{"@pid":"t/MikkelThorup","text":"Mikkel Thorup"},{"@pid":"157/6049","text":"Or Zamir"},{"@pid":"z/UriZwick","text":"Uri Zwick"}]},"title":"Dynamic Ordered Sets with Approximate Queries, Approximate Heaps and Soft Heaps.","venue":"ICALP","pages":"95:1-95:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/ThorupZZ19","doi":"10.4230/LIPICS.ICALP.2019.95","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.95","url":"https://dblp.org/rec/conf/icalp/ThorupZZ19"},
+"url":"URL#1072818"
+},
+{
+"@score":"1",
+"@id":"1072819",
+"info":{"authors":{"author":[{"@pid":"131/2343","text":"Henning Urbat"},{"@pid":"m/StefanMilius","text":"Stefan Milius"}]},"title":"Varieties of Data Languages.","venue":"ICALP","pages":"130:1-130:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/UrbatM19","doi":"10.4230/LIPICS.ICALP.2019.130","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.130","url":"https://dblp.org/rec/conf/icalp/UrbatM19"},
+"url":"URL#1072819"
+},
+{
+"@score":"1",
+"@id":"1072820",
+"info":{"authors":{"author":{"@pid":"v/FritsWVaandrager","text":"Frits W. Vaandrager"}},"title":"Automata Learning and Galois Connections (Invited Talk).","venue":"ICALP","pages":"4:1-4:1","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Vaandrager19","doi":"10.4230/LIPICS.ICALP.2019.4","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.4","url":"https://dblp.org/rec/conf/icalp/Vaandrager19"},
+"url":"URL#1072820"
+},
+{
+"@score":"1",
+"@id":"1072821",
+"info":{"authors":{"author":[{"@pid":"w/DPWoodruff","text":"David P. Woodruff"},{"@pid":"25/5712","text":"Guang Yang"}]},"title":"Separating k-Player from t-Player One-Way Communication, with Applications to Data Streams.","venue":"ICALP","pages":"97:1-97:14","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/WoodruffY19","doi":"10.4230/LIPICS.ICALP.2019.97","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.97","url":"https://dblp.org/rec/conf/icalp/WoodruffY19"},
+"url":"URL#1072821"
+},
+{
+"@score":"1",
+"@id":"1072822",
+"info":{"title":"Front Matter, Table of Contents, Preface, Conference Organization.","venue":"ICALP","pages":"0:1-0:38","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/X19","doi":"10.4230/LIPICS.ICALP.2019.0","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.0","url":"https://dblp.org/rec/conf/icalp/X19"},
+"url":"URL#1072822"
+},
+{
+"@score":"1",
+"@id":"1072823",
+"info":{"authors":{"author":[{"@pid":"72/2199","text":"Chaoping Xing"},{"@pid":"97/7492-3","text":"Chen Yuan 0003"}]},"title":"Construction of Optimal Locally Recoverable Codes and Connection with Hypergraph.","venue":"ICALP","pages":"98:1-98:13","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/XingY19","doi":"10.4230/LIPICS.ICALP.2019.98","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.98","url":"https://dblp.org/rec/conf/icalp/XingY19"},
+"url":"URL#1072823"
+},
+{
+"@score":"1",
+"@id":"1072824",
+"info":{"authors":{"author":{"@pid":"y/MihalisYannakakis","text":"Mihalis Yannakakis"}},"title":"Fixed Point Computation Problems and Facets of Complexity (Invited Talk).","venue":"ICALP","pages":"5:1-5:1","year":"2019","type":"Conference and Workshop Papers","access":"open","key":"conf/icalp/Yannakakis19","doi":"10.4230/LIPICS.ICALP.2019.5","ee":"https://doi.org/10.4230/LIPIcs.ICALP.2019.5","url":"https://dblp.org/rec/conf/icalp/Yannakakis19"},
+"url":"URL#1072824"
+},
+{
+"@score":"1",
+"@id":"1185008",
+"info":{"authors":{"author":[{"@pid":"b/ChristelBaier","text":"Christel Baier"},{"@pid":"c/IoannisChatzigiannakis","text":"Ioannis Chatzigiannakis"},{"@pid":"96/778","text":"Paola Flocchini"},{"@pid":"l/StefanoLeonardi","text":"Stefano Leonardi"}]},"title":"46th International Colloquium on Automata, Languages, and Programming, ICALP 2019, July 9-12, 2019, Patras, Greece.","venue":["ICALP","LIPIcs"],"volume":"132","publisher":"Schloss Dagstuhl - Leibniz-Zentrum für Informatik","year":"2019","type":"Editorship","key":"conf/icalp/2019","ee":"http://www.dagstuhl.de/dagpub/978-3-95977-109-2","url":"https://dblp.org/rec/conf/icalp/2019"},
+"url":"URL#1185008"
+}
+]
+}
+}
+}
