@@ -5,12 +5,16 @@ import { PaperArticle } from "../article"
 const fs = require('fs');
 
 function TrimRightmostDot(title : string) : string{
-    const p = title.indexOf(".");
+    const p = title.lastIndexOf(".");
     if(p != -1){
         return title.substring(0, p);
     }else{
         return title;
     }
+}
+function getCorrectTitle(title : string) : string{
+    title = title.replace(/ \- /g, ': ');
+    return TrimRightmostDot(title);
 }
 
 const dblpFolderPath = "./data/dblp";
@@ -28,7 +32,7 @@ function loadJson(conference : string, year : number) : PaperArticle[]{
         collection.forEach((v) =>{
             const p = new PaperArticle();
             const info = v["info"];
-            p.title = TrimRightmostDot(info["title"]);
+            p.title = getCorrectTitle(info["title"]);
             p.conferencePaperURL = info["ee"];
             p.conference = conference;
             p.year = year;
