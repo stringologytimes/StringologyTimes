@@ -13,6 +13,8 @@ class DagstuhlPaperArticle{
         return `${this.title}\t${this.authors.join(", ")}\t${this.url}`;
     }
 }
+
+
 function cleaning(name : string){
     const p = name.indexOf("{");
     if(p != -1){

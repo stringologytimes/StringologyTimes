@@ -8,17 +8,740 @@
 },
 "time":{
 "@unit":"msecs",
-"text":"0.55"
+"text":"132.21"
 },
 "completions":{
-"@total":"0",
-"@computed":"0",
-"@sent":"0"
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"119",
+"@dc":"119",
+"@oc":"119",
+"@id":"36111232",
+"text":":facetid:toc:db/conf/focs/focs2021.bht"
+}
 },
 "hits":{
-"@total":"0",
-"@computed":"0",
-"@sent":"0",
-"@first":"0"}
+"@total":"119",
+"@computed":"119",
+"@sent":"119",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"60903",
+"info":{"title":"62nd IEEE Annual Symposium on Foundations of Computer Science, FOCS 2021, Denver, CO, USA, February 7-10, 2022","venue":"FOCS","publisher":"IEEE","year":"2022","type":"Editorship","key":"conf/focs/2021","doi":"10.1109/FOCS52979.2022","ee":"https://doi.org/10.1109/FOCS52979.2022","url":"https://dblp.org/rec/conf/focs/2021"},
+"url":"URL#60903"
+},
+{
+"@score":"1",
+"@id":"324326",
+"info":{"authors":{"author":[{"@pid":"27/2931","text":"Anupam Gupta 0001"},{"@pid":"k/AmitKumar1","text":"Amit Kumar 0001"},{"@pid":"81/6547","text":"Debmalya Panigrahi"}]},"title":"A Hitting Set Relaxation for $k$-Server and an Extension to Time-Windows.","venue":"FOCS","pages":"504-515","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/00010P21","doi":"10.1109/FOCS52979.2021.00057","ee":"https://doi.org/10.1109/FOCS52979.2021.00057","url":"https://dblp.org/rec/conf/focs/00010P21"},
+"url":"URL#324326"
+},
+{
+"@score":"1",
+"@id":"324327",
+"info":{"authors":{"author":[{"@pid":"116/0948-1","text":"Lijie Chen 0001"},{"@pid":"224/0281","text":"Ce Jin"},{"@pid":"84/1179","text":"Rahul Santhanam"},{"@pid":"w/RyanWilliams","text":"R. Ryan Williams"}]},"title":"Constructive Separations and Their Consequences.","venue":"FOCS","pages":"646-657","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/0001JSW21","doi":"10.1109/FOCS52979.2021.00069","ee":"https://doi.org/10.1109/FOCS52979.2021.00069","url":"https://dblp.org/rec/conf/focs/0001JSW21"},
+"url":"URL#324327"
+},
+{
+"@score":"1",
+"@id":"324328",
+"info":{"authors":{"author":[{"@pid":"42/4430-1","text":"Rahul Jain 0001"},{"@pid":"155/4201","text":"Srijita Kundu"}]},"title":"A direct product theorem for quantum communication complexity with applications to device-independent QKD.","venue":"FOCS","pages":"1285-1295","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/0001K21","doi":"10.1109/FOCS52979.2021.00125","ee":"https://doi.org/10.1109/FOCS52979.2021.00125","url":"https://dblp.org/rec/conf/focs/0001K21"},
+"url":"URL#324328"
+},
+{
+"@score":"1",
+"@id":"324329",
+"info":{"authors":{"author":[{"@pid":"14/1571-1","text":"George Christodoulou 0001"},{"@pid":"35/4411","text":"Elias Koutsoupias"},{"@pid":"k/AnnamariaKovacs","text":"Annamária Kovács"}]},"title":"On the Nisan-Ronen conjecture.","venue":"FOCS","pages":"839-850","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/0001KK21","doi":"10.1109/FOCS52979.2021.00086","ee":"https://doi.org/10.1109/FOCS52979.2021.00086","url":"https://dblp.org/rec/conf/focs/0001KK21"},
+"url":"URL#324329"
+},
+{
+"@score":"1",
+"@id":"324330",
+"info":{"authors":{"author":[{"@pid":"27/2931","text":"Anupam Gupta 0001"},{"@pid":"228/6865","text":"Gregory Kehne"},{"@pid":"161/9976","text":"Roie Levin"}]},"title":"Random Order Online Set Cover is as Easy as Offline.","venue":"FOCS","pages":"1253-1264","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/0001KL21","doi":"10.1109/FOCS52979.2021.00122","ee":"https://doi.org/10.1109/FOCS52979.2021.00122","url":"https://dblp.org/rec/conf/focs/0001KL21"},
+"url":"URL#324330"
+},
+{
+"@score":"1",
+"@id":"324331",
+"info":{"authors":{"author":[{"@pid":"136/4904-1","text":"Wenyu Jin 0001"},{"@pid":"70/7506","text":"Xiaorui Sun"}]},"title":"Fully Dynamic s-t Edge Connectivity in Subpolynomial Time (Extended Abstract).","venue":"FOCS","pages":"861-872","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/0001S21","doi":"10.1109/FOCS52979.2021.00088","ee":"https://doi.org/10.1109/FOCS52979.2021.00088","url":"https://dblp.org/rec/conf/focs/0001S21"},
+"url":"URL#324331"
+},
+{
+"@score":"1",
+"@id":"324332",
+"info":{"authors":{"author":[{"@pid":"116/0948-1","text":"Lijie Chen 0001"},{"@pid":"143/2243","text":"Roei Tell"}]},"title":"Hardness vs Randomness, Revised - Uniform, Non-Black-Box, and Instance-Wise.","venue":"FOCS","pages":"125-136","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/0001T21","doi":"10.1109/FOCS52979.2021.00021","ee":"https://doi.org/10.1109/FOCS52979.2021.00021","url":"https://dblp.org/rec/conf/focs/0001T21"},
+"url":"URL#324332"
+},
+{
+"@score":"1",
+"@id":"324333",
+"info":{"authors":{"author":[{"@pid":"g/OdedGoldreich","text":"Oded Goldreich 0001"},{"@pid":"w/AviWigderson","text":"Avi Wigderson"}]},"title":"Non-adaptive vs Adaptive Queries in the Dense Graph Testing Model.","venue":"FOCS","pages":"269-275","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/0001W21","doi":"10.1109/FOCS52979.2021.00035","ee":"https://doi.org/10.1109/FOCS52979.2021.00035","url":"https://dblp.org/rec/conf/focs/0001W21"},
+"url":"URL#324333"
+},
+{
+"@score":"1",
+"@id":"324334",
+"info":{"authors":{"author":[{"@pid":"b/MarcoBressan2","text":"Marco Bressan 0002"},{"@pid":"182/1903","text":"Marc Roth"}]},"title":"Exact and Approximate Pattern Counting in Degenerate Graphs - New Algorithms, Hardness Results, and Complexity Dichotomies.","venue":"FOCS","pages":"276-285","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/0002R21","doi":"10.1109/FOCS52979.2021.00036","ee":"https://doi.org/10.1109/FOCS52979.2021.00036","url":"https://dblp.org/rec/conf/focs/0002R21"},
+"url":"URL#324334"
+},
+{
+"@score":"1",
+"@id":"324335",
+"info":{"authors":{"author":[{"@pid":"140/9567-3","text":"Akash Kumar 0003"},{"@pid":"60/4210","text":"C. Seshadhri"},{"@pid":"208/4885","text":"Andrew Stolman"}]},"title":"Random walks and forbidden minors III - $\\text{poly}\\left(d\\varepsilon {-1}\\right)$-time partition oracles for minor-free graph classes.","venue":"FOCS","pages":"257-268","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/0003SS21","doi":"10.1109/FOCS52979.2021.00034","ee":"https://doi.org/10.1109/FOCS52979.2021.00034","url":"https://dblp.org/rec/conf/focs/0003SS21"},
+"url":"URL#324335"
+},
+{
+"@score":"1",
+"@id":"324336",
+"info":{"authors":{"author":[{"@pid":"12/975-6","text":"Jason Li 0006"},{"@pid":"81/6547","text":"Debmalya Panigrahi"},{"@pid":"123/4694","text":"Thatchaphol Saranurak"}]},"title":"A Nearly Optimal All-Pairs Min-Cuts Algorithm in Simple Graphs.","venue":"FOCS","pages":"1124-1134","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/0006PS21","doi":"10.1109/FOCS52979.2021.00111","ee":"https://doi.org/10.1109/FOCS52979.2021.00111","url":"https://dblp.org/rec/conf/focs/0006PS21"},
+"url":"URL#324336"
+},
+{
+"@score":"1",
+"@id":"324337",
+"info":{"authors":{"author":[{"@pid":"84/5016","text":"Emmanuel Abbe"},{"@pid":"267/5538","text":"Shuangping Li"},{"@pid":"36/3231","text":"Allan Sly"}]},"title":"Proof of the Contiguity Conjecture and Lognormal Limit for the Symmetric Perceptron.","venue":"FOCS","pages":"327-338","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AbbeLS21","doi":"10.1109/FOCS52979.2021.00041","ee":"https://doi.org/10.1109/FOCS52979.2021.00041","url":"https://dblp.org/rec/conf/focs/AbbeLS21"},
+"url":"URL#324337"
+},
+{
+"@score":"1",
+"@id":"324338",
+"info":{"authors":{"author":[{"@pid":"129/1654","text":"Amir Abboud"},{"@pid":"k/RobertKrauthgamer","text":"Robert Krauthgamer"},{"@pid":"165/8475","text":"Ohad Trabelsi"}]},"title":"APMF &lt; APSP? Gomory-Hu Tree for Unweighted Graphs in Almost-Quadratic Time.","venue":"FOCS","pages":"1135-1146","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AbboudKT21","doi":"10.1109/FOCS52979.2021.00112","ee":"https://doi.org/10.1109/FOCS52979.2021.00112","url":"https://dblp.org/rec/conf/focs/AbboudKT21"},
+"url":"URL#324338"
+},
+{
+"@score":"1",
+"@id":"324339",
+"info":{"authors":{"author":[{"@pid":"294/4868","text":"Dorna Abdolazimi"},{"@pid":"230/3619","text":"Kuikui Liu"},{"@pid":"61/395","text":"Shayan Oveis Gharan"}]},"title":"A Matrix Trickle-Down Theorem on Simplicial Complexes and Applications to Sampling Colorings.","venue":"FOCS","pages":"161-172","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AbdolazimiLG21","doi":"10.1109/FOCS52979.2021.00024","ee":"https://doi.org/10.1109/FOCS52979.2021.00024","url":"https://dblp.org/rec/conf/focs/AbdolazimiLG21"},
+"url":"URL#324339"
+},
+{
+"@score":"1",
+"@id":"324340",
+"info":{"authors":{"author":{"@pid":"129/6231","text":"Mikkel Abrahamsen"}},"title":"Covering Polygons is Even Harder.","venue":"FOCS","pages":"375-386","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Abrahamsen21","doi":"10.1109/FOCS52979.2021.00045","ee":"https://doi.org/10.1109/FOCS52979.2021.00045","url":"https://dblp.org/rec/conf/focs/Abrahamsen21"},
+"url":"URL#324340"
+},
+{
+"@score":"1",
+"@id":"324341",
+"info":{"authors":{"author":[{"@pid":"245/0376","text":"Shyan Akmal"},{"@pid":"202/1974","text":"Ryan Williams"}]},"title":"MAJORITY-3SAT (and Related Problems) in Polynomial Time.","venue":"FOCS","pages":"1033-1043","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AkmalW21","doi":"10.1109/FOCS52979.2021.00103","ee":"https://doi.org/10.1109/FOCS52979.2021.00103","url":"https://dblp.org/rec/conf/focs/AkmalW21"},
+"url":"URL#324341"
+},
+{
+"@score":"1",
+"@id":"324342",
+"info":{"authors":{"author":[{"@pid":"10/7536","text":"Zeyuan Allen-Zhu"},{"@pid":"73/3628","text":"Yuanzhi Li"}]},"title":"Feature Purification - How Adversarial Training Performs Robust Deep Learning.","venue":"FOCS","pages":"977-988","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Allen-ZhuL21","doi":"10.1109/FOCS52979.2021.00098","ee":"https://doi.org/10.1109/FOCS52979.2021.00098","url":"https://dblp.org/rec/conf/focs/Allen-ZhuL21"},
+"url":"URL#324342"
+},
+{
+"@score":"1",
+"@id":"324343",
+"info":{"authors":{"author":[{"@pid":"a/NAlon","text":"Noga Alon"},{"@pid":"40/154","text":"Steve Hanneke"},{"@pid":"29/3935","text":"Ron Holzman"},{"@pid":"119/5111","text":"Shay Moran"}]},"title":"A Theory of PAC Learnability of Partial Concept Classes.","venue":"FOCS","pages":"658-671","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AlonHHM21","doi":"10.1109/FOCS52979.2021.00070","ee":"https://doi.org/10.1109/FOCS52979.2021.00070","url":"https://dblp.org/rec/conf/focs/AlonHHM21"},
+"url":"URL#324343"
+},
+{
+"@score":"1",
+"@id":"324344",
+"info":{"authors":{"author":[{"@pid":"159/8588","text":"Srinivasan Arunachalam"},{"@pid":"153/2241","text":"Alex B. Grilo"},{"@pid":"08/11249","text":"Tom Gur"},{"@pid":"12/7069","text":"Igor Carboni Oliveira"},{"@pid":"144/2304","text":"Aarthi Sundaram"}]},"title":"Quantum learning algorithms imply circuit lower bounds.","venue":"FOCS","pages":"562-573","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ArunachalamGGOS21","doi":"10.1109/FOCS52979.2021.00062","ee":"https://doi.org/10.1109/FOCS52979.2021.00062","url":"https://dblp.org/rec/conf/focs/ArunachalamGGOS21"},
+"url":"URL#324344"
+},
+{
+"@score":"1",
+"@id":"324345",
+"info":{"authors":{"author":[{"@pid":"176/5139","text":"Kyriakos Axiotis"},{"@pid":"67/2454","text":"Aleksander Madry"},{"@pid":"48/9056","text":"Adrian Vladu"}]},"title":"Faster Sparse Minimum Cost Flow by Electrical Flow Localization.","venue":"FOCS","pages":"528-539","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/AxiotisMV21","doi":"10.1109/FOCS52979.2021.00059","ee":"https://doi.org/10.1109/FOCS52979.2021.00059","url":"https://dblp.org/rec/conf/focs/AxiotisMV21"},
+"url":"URL#324345"
+},
+{
+"@score":"1",
+"@id":"324346",
+"info":{"authors":{"author":[{"@pid":"75/8158","text":"Kaspars Balodis"},{"@pid":"14/8614","text":"Shalev Ben-David"},{"@pid":"25/7589","text":"Mika Göös"},{"@pid":"81/8212-2","text":"Siddhartha Jain 0002"},{"@pid":"77/8774","text":"Robin Kothari"}]},"title":"Unambiguous DNFs and Alon-Saks-Seymour.","venue":"FOCS","pages":"116-124","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BalodisBG0K21","doi":"10.1109/FOCS52979.2021.00020","ee":"https://doi.org/10.1109/FOCS52979.2021.00020","url":"https://dblp.org/rec/conf/focs/BalodisBG0K21"},
+"url":"URL#324346"
+},
+{
+"@score":"1",
+"@id":"324347",
+"info":{"authors":{"author":[{"@pid":"82/5861","text":"Saugata Basu"},{"@pid":"218/6751","text":"Nathanael Cox"}]},"title":"Harmonic Persistent Homology (extended abstract).","venue":"FOCS","pages":"1112-1123","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BasuC21","doi":"10.1109/FOCS52979.2021.00110","ee":"https://doi.org/10.1109/FOCS52979.2021.00110","url":"https://dblp.org/rec/conf/focs/BasuC21"},
+"url":"URL#324347"
+},
+{
+"@score":"1",
+"@id":"324348",
+"info":{"authors":{"author":[{"@pid":"182/7987","text":"Oren Becker"},{"@pid":"33/1007","text":"Alexander Lubotzky"},{"@pid":"133/1142","text":"Jonathan Mosheiff"}]},"title":"Testability of relations between permutations.","venue":"FOCS","pages":"286-297","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BeckerLM21","doi":"10.1109/FOCS52979.2021.00037","ee":"https://doi.org/10.1109/FOCS52979.2021.00037","url":"https://dblp.org/rec/conf/focs/BeckerLM21"},
+"url":"URL#324348"
+},
+{
+"@score":"1",
+"@id":"324349",
+"info":{"authors":{"author":{"@pid":"192/1220","text":"Soheil Behnezhad"}},"title":"Time-Optimal Sublinear Algorithms for Matching and Vertex Cover.","venue":"FOCS","pages":"873-884","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Behnezhad21","doi":"10.1109/FOCS52979.2021.00089","ee":"https://doi.org/10.1109/FOCS52979.2021.00089","url":"https://dblp.org/rec/conf/focs/Behnezhad21"},
+"url":"URL#324349"
+},
+{
+"@score":"1",
+"@id":"324350",
+"info":{"authors":{"author":[{"@pid":"b/MichaelABender","text":"Michael A. Bender"},{"@pid":"77/1312","text":"Bradley C. Kuszmaul"},{"@pid":"140/1108","text":"William Kuszmaul"}]},"title":"Linear Probing Revisited - Tombstones Mark the Demise of Primary Clustering.","venue":"FOCS","pages":"1171-1182","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BenderKK21","doi":"10.1109/FOCS52979.2021.00115","ee":"https://doi.org/10.1109/FOCS52979.2021.00115","url":"https://dblp.org/rec/conf/focs/BenderKK21"},
+"url":"URL#324350"
+},
+{
+"@score":"1",
+"@id":"324351",
+"info":{"authors":{"author":[{"@pid":"02/4059","text":"Aaron Bernstein"},{"@pid":"223/4496","text":"Maximilian Probst Gutenberg"},{"@pid":"123/4694","text":"Thatchaphol Saranurak"}]},"title":"Deterministic Decremental SSSP and Approximate Min-Cost Flow in Almost-Linear Time.","venue":"FOCS","pages":"1000-1008","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BernsteinGS21","doi":"10.1109/FOCS52979.2021.00100","ee":"https://doi.org/10.1109/FOCS52979.2021.00100","url":"https://dblp.org/rec/conf/focs/BernsteinGS21"},
+"url":"URL#324351"
+},
+{
+"@score":"1",
+"@id":"324352",
+"info":{"authors":{"author":[{"@pid":"211/7035","text":"Guy Blanc"},{"@pid":"c/MosesCharikar","text":"Moses Charikar"}]},"title":"Multiway Online Correlated Selection.","venue":"FOCS","pages":"1277-1284","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BlancC21","doi":"10.1109/FOCS52979.2021.00124","ee":"https://doi.org/10.1109/FOCS52979.2021.00124","url":"https://dblp.org/rec/conf/focs/BlancC21"},
+"url":"URL#324352"
+},
+{
+"@score":"1",
+"@id":"324353",
+"info":{"authors":{"author":[{"@pid":"211/7035","text":"Guy Blanc"},{"@pid":"254/1613","text":"Jane Lange"},{"@pid":"185/0592","text":"Mingda Qiao"},{"@pid":"87/5034","text":"Li-Yang Tan"}]},"title":"Properly learning decision trees in almost polynomial time.","venue":"FOCS","pages":"920-929","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BlancLQT21","doi":"10.1109/FOCS52979.2021.00093","ee":"https://doi.org/10.1109/FOCS52979.2021.00093","url":"https://dblp.org/rec/conf/focs/BlancLQT21"},
+"url":"URL#324353"
+},
+{
+"@score":"1",
+"@id":"324354",
+"info":{"authors":{"author":[{"@pid":"30/8037","text":"Jeremiah Blocki"},{"@pid":"126/6005","text":"Kuan Cheng"},{"@pid":"07/1562","text":"Elena Grigorescu"},{"@pid":"09/1365","text":"Xin Li"},{"@pid":"87/1585","text":"Yu Zheng"},{"@pid":"190/7732","text":"Minshen Zhu"}]},"title":"Exponential Lower Bounds for Locally Decodable and Correctable Codes for Insertions and Deletions.","venue":"FOCS","pages":"739-750","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BlockiCGLZZ21","doi":"10.1109/FOCS52979.2021.00077","ee":"https://doi.org/10.1109/FOCS52979.2021.00077","url":"https://dblp.org/rec/conf/focs/BlockiCGLZZ21"},
+"url":"URL#324354"
+},
+{
+"@score":"1",
+"@id":"324355",
+"info":{"authors":{"author":[{"@pid":"b/HLBodlaender","text":"Hans L. Bodlaender"},{"@pid":"166/2956","text":"Carla Groenland"},{"@pid":"33/7187","text":"Jesper Nederlof"},{"@pid":"255/4976","text":"Céline M. F. Swennenhuis"}]},"title":"Parameterized Problems Complete for Nondeterministic FPT time and Logarithmic Space.","venue":"FOCS","pages":"193-204","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BodlaenderGNS21","doi":"10.1109/FOCS52979.2021.00027","ee":"https://doi.org/10.1109/FOCS52979.2021.00027","url":"https://dblp.org/rec/conf/focs/BodlaenderGNS21"},
+"url":"URL#324355"
+},
+{
+"@score":"1",
+"@id":"324356",
+"info":{"authors":{"author":[{"@pid":"238/0265","text":"Enric Boix-Adserà"},{"@pid":"71/3436","text":"Guy Bresler"},{"@pid":"132/1904","text":"Frederic Koehler"}]},"title":"Chow-Liu++ - Optimal Prediction-Centric Learning of Tree Ising Models.","venue":"FOCS","pages":"417-426","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Boix-AdseraBK21","doi":"10.1109/FOCS52979.2021.00049","ee":"https://doi.org/10.1109/FOCS52979.2021.00049","url":"https://dblp.org/rec/conf/focs/Boix-AdseraBK21"},
+"url":"URL#324356"
+},
+{
+"@score":"1",
+"@id":"324357",
+"info":{"authors":{"author":[{"@pid":"118/7184","text":"Adam Bouland"},{"@pid":"77/1650","text":"Bill Fefferman"},{"@pid":"68/6017","text":"Zeph Landau"},{"@pid":"225/6368","text":"Yunchao Liu"}]},"title":"Noise and the Frontier of Quantum Supremacy.","venue":"FOCS","pages":"1308-1317","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BoulandFLL21","doi":"10.1109/FOCS52979.2021.00127","ee":"https://doi.org/10.1109/FOCS52979.2021.00127","url":"https://dblp.org/rec/conf/focs/BoulandFLL21"},
+"url":"URL#324357"
+},
+{
+"@score":"1",
+"@id":"324358",
+"info":{"authors":{"author":[{"@pid":"82/2045","text":"Olivier Bousquet"},{"@pid":"16/6136","text":"Mark Braverman"},{"@pid":"39/4172","text":"Gillat Kol"},{"@pid":"80/3623","text":"Klim Efremenko"},{"@pid":"119/5111","text":"Shay Moran"}]},"title":"Statistically Near-Optimal Hypothesis Selection.","venue":"FOCS","pages":"909-919","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BousquetBKEM21","doi":"10.1109/FOCS52979.2021.00092","ee":"https://doi.org/10.1109/FOCS52979.2021.00092","url":"https://dblp.org/rec/conf/focs/BousquetBKEM21"},
+"url":"URL#324358"
+},
+{
+"@score":"1",
+"@id":"324359",
+"info":{"authors":{"author":[{"@pid":"16/6136","text":"Mark Braverman"},{"@pid":"183/6544","text":"Sumegha Garg"},{"@pid":"157/6049","text":"Or Zamir"}]},"title":"Tight Space Complexity of the Coin Problem.","venue":"FOCS","pages":"1068-1079","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BravermanGZ21","doi":"10.1109/FOCS52979.2021.00106","ee":"https://doi.org/10.1109/FOCS52979.2021.00106","url":"https://dblp.org/rec/conf/focs/BravermanGZ21"},
+"url":"URL#324359"
+},
+{
+"@score":"1",
+"@id":"324360",
+"info":{"authors":{"author":[{"@pid":"16/6136","text":"Mark Braverman"},{"@pid":"25/1492","text":"Subhash Khot"},{"@pid":"145/1628","text":"Noam Lifshitz"},{"@pid":"161/4102","text":"Dor Minzer"}]},"title":"An Invariance Principle for the Multi-slice, with Applications.","venue":"FOCS","pages":"228-236","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BravermanKLM21","doi":"10.1109/FOCS52979.2021.00030","ee":"https://doi.org/10.1109/FOCS52979.2021.00030","url":"https://dblp.org/rec/conf/focs/BravermanKLM21"},
+"url":"URL#324360"
+},
+{
+"@score":"1",
+"@id":"324361",
+"info":{"authors":{"author":[{"@pid":"71/3436","text":"Guy Bresler"},{"@pid":"240/5301","text":"Brice Huang"}]},"title":"The Algorithmic Phase Transition of Random k-SAT for Low Degree Polynomials.","venue":"FOCS","pages":"298-309","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BreslerH21","doi":"10.1109/FOCS52979.2021.00038","ee":"https://doi.org/10.1109/FOCS52979.2021.00038","url":"https://dblp.org/rec/conf/focs/BreslerH21"},
+"url":"URL#324361"
+},
+{
+"@score":"1",
+"@id":"324362",
+"info":{"authors":{"author":[{"@pid":"73/3708","text":"Boris Bukh"},{"@pid":"70/9222","text":"Karthik C. S."},{"@pid":"205/2840","text":"Bhargav Narayanan"}]},"title":"Applications of Random Algebraic Constructions to Hardness of Approximation.","venue":"FOCS","pages":"237-244","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BukhSN21","doi":"10.1109/FOCS52979.2021.00032","ee":"https://doi.org/10.1109/FOCS52979.2021.00032","url":"https://dblp.org/rec/conf/focs/BukhSN21"},
+"url":"URL#324362"
+},
+{
+"@score":"1",
+"@id":"324363",
+"info":{"authors":{"author":[{"@pid":"56/818","text":"Kyle W. Burke"},{"@pid":"211/6765","text":"Matthew T. Ferland"},{"@pid":"t/ShangHuaTeng","text":"Shang-Hua Teng"}]},"title":"Winning the War by (Strategically) Losing Battles - Settling the Complexity of Grundy-Values in Undirected Geography.","venue":"FOCS","pages":"1217-1228","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/BurkeFT21","doi":"10.1109/FOCS52979.2021.00119","ee":"https://doi.org/10.1109/FOCS52979.2021.00119","url":"https://dblp.org/rec/conf/focs/BurkeFT21"},
+"url":"URL#324363"
+},
+{
+"@score":"1",
+"@id":"324364",
+"info":{"authors":{"author":[{"@pid":"89/11340","text":"Marco Carmosino"},{"@pid":"k/ValentineKabanets","text":"Valentine Kabanets"},{"@pid":"91/5785","text":"Antonina Kolokolova"},{"@pid":"12/7069","text":"Igor Carboni Oliveira"}]},"title":"LEARN-Uniform Circuit Lower Bounds and Provability in Bounded Arithmetic.","venue":"FOCS","pages":"770-780","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/CarmosinoKKO21","doi":"10.1109/FOCS52979.2021.00080","ee":"https://doi.org/10.1109/FOCS52979.2021.00080","url":"https://dblp.org/rec/conf/focs/CarmosinoKKO21"},
+"url":"URL#324364"
+},
+{
+"@score":"1",
+"@id":"324365",
+"info":{"authors":{"author":[{"@pid":"71/4157","text":"Arnaud Casteigts"},{"@pid":"149/7838","text":"Michael Raskin"},{"@pid":"204/7133","text":"Malte Renken"},{"@pid":"57/10717","text":"Viktor Zamaraev"}]},"title":"Sharp Thresholds in Random Simple Temporal Graphs.","venue":"FOCS","pages":"319-326","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/CasteigtsRRZ21","doi":"10.1109/FOCS52979.2021.00040","ee":"https://doi.org/10.1109/FOCS52979.2021.00040","url":"https://dblp.org/rec/conf/focs/CasteigtsRRZ21"},
+"url":"URL#324365"
+},
+{
+"@score":"1",
+"@id":"324366",
+"info":{"authors":{"author":[{"@pid":"255/9278","text":"Ruoxu Cen"},{"@pid":"12/975-6","text":"Jason Li 0006"},{"@pid":"61/2421","text":"Danupon Nanongkai"},{"@pid":"81/6547","text":"Debmalya Panigrahi"},{"@pid":"123/4694","text":"Thatchaphol Saranurak"},{"@pid":"157/8351","text":"Kent Quanrud"}]},"title":"Minimum Cuts in Directed Graphs via Partial Sparsification.","venue":"FOCS","pages":"1147-1158","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Cen0NPSQ21","doi":"10.1109/FOCS52979.2021.00113","ee":"https://doi.org/10.1109/FOCS52979.2021.00113","url":"https://dblp.org/rec/conf/focs/Cen0NPSQ21"},
+"url":"URL#324366"
+},
+{
+"@score":"1",
+"@id":"324367",
+"info":{"authors":{"author":[{"@pid":"80/5358","text":"Deeparnab Chakrabarty"},{"@pid":"87/1254","text":"Yu Chen"},{"@pid":"k/SanjeevKhanna","text":"Sanjeev Khanna"}]},"title":"A Polynomial Lower Bound on the Number of Rounds for Parallel Submodular Function Minimization.","venue":"FOCS","pages":"37-48","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChakrabartyCK21","doi":"10.1109/FOCS52979.2021.00013","ee":"https://doi.org/10.1109/FOCS52979.2021.00013","url":"https://dblp.org/rec/conf/focs/ChakrabartyCK21"},
+"url":"URL#324367"
+},
+{
+"@score":"1",
+"@id":"324368",
+"info":{"authors":{"author":[{"@pid":"117/3135","text":"Eshan Chattopadhyay"},{"@pid":"231/3159","text":"Jesse Goodman"}]},"title":"Improved Extractors for Small-Space Sources.","venue":"FOCS","pages":"610-621","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChattopadhyayG21","doi":"10.1109/FOCS52979.2021.00066","ee":"https://doi.org/10.1109/FOCS52979.2021.00066","url":"https://dblp.org/rec/conf/focs/ChattopadhyayG21"},
+"url":"URL#324368"
+},
+{
+"@score":"1",
+"@id":"324369",
+"info":{"authors":{"author":[{"@pid":"117/3135","text":"Eshan Chattopadhyay"},{"@pid":"231/3159","text":"Jesse Goodman"},{"@pid":"13/9741","text":"Jyun-Jie Liao"}]},"title":"Affine Extractors for Almost Logarithmic Entropy.","venue":"FOCS","pages":"622-633","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChattopadhyayGL21","doi":"10.1109/FOCS52979.2021.00067","ee":"https://doi.org/10.1109/FOCS52979.2021.00067","url":"https://dblp.org/rec/conf/focs/ChattopadhyayGL21"},
+"url":"URL#324369"
+},
+{
+"@score":"1",
+"@id":"324370",
+"info":{"authors":{"author":[{"@pid":"141/7670","text":"Sitan Chen"},{"@pid":"306/0933","text":"Jordan Cotler"},{"@pid":"97/2540","text":"Hsin-Yuan Huang"},{"@pid":"162/8838","text":"Jerry Li 0001"}]},"title":"Exponential Separations Between Learning With and Without Quantum Memory.","venue":"FOCS","pages":"574-585","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChenCH021","doi":"10.1109/FOCS52979.2021.00063","ee":"https://doi.org/10.1109/FOCS52979.2021.00063","url":"https://dblp.org/rec/conf/focs/ChenCH021"},
+"url":"URL#324370"
+},
+{
+"@score":"1",
+"@id":"324371",
+"info":{"authors":{"author":[{"@pid":"30/4497","text":"Xiaoyu Chen"},{"@pid":"132/0888","text":"Weiming Feng"},{"@pid":"30/328","text":"Yitong Yin"},{"@pid":"22/4397","text":"Xinyuan Zhang"}]},"title":"Rapid mixing of Glauber dynamics via spectral independence for all degrees.","venue":"FOCS","pages":"137-148","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChenFYZ21","doi":"10.1109/FOCS52979.2021.00022","ee":"https://doi.org/10.1109/FOCS52979.2021.00022","url":"https://dblp.org/rec/conf/focs/ChenFYZ21"},
+"url":"URL#324371"
+},
+{
+"@score":"1",
+"@id":"324372",
+"info":{"authors":{"author":[{"@pid":"141/7670","text":"Sitan Chen"},{"@pid":"k/AdamRKlivans","text":"Adam R. Klivans"},{"@pid":"76/1906","text":"Raghu Meka"}]},"title":"Learning Deep ReLU Networks Is Fixed-Parameter Tractable.","venue":"FOCS","pages":"696-707","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChenKM21","doi":"10.1109/FOCS52979.2021.00073","ee":"https://doi.org/10.1109/FOCS52979.2021.00073","url":"https://dblp.org/rec/conf/focs/ChenKM21"},
+"url":"URL#324372"
+},
+{
+"@score":"1",
+"@id":"324373",
+"info":{"authors":{"author":[{"@pid":"141/7670","text":"Sitan Chen"},{"@pid":"132/1904","text":"Frederic Koehler"},{"@pid":"04/952","text":"Ankur Moitra"},{"@pid":"191/4950","text":"Morris Yau"}]},"title":"Online and Distribution-Free Robustness - Regression and Contextual Bandits with Huber Contamination.","venue":"FOCS","pages":"684-695","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChenKMY21","doi":"10.1109/FOCS52979.2021.00072","ee":"https://doi.org/10.1109/FOCS52979.2021.00072","url":"https://dblp.org/rec/conf/focs/ChenKMY21"},
+"url":"URL#324373"
+},
+{
+"@score":"1",
+"@id":"324374",
+"info":{"authors":{"author":[{"@pid":"167/9061","text":"Zongchen Chen"},{"@pid":"230/3619","text":"Kuikui Liu"},{"@pid":"03/4633","text":"Eric Vigoda"}]},"title":"Spectral Independence via Stability and Applications to Holant-Type Problems.","venue":"FOCS","pages":"149-160","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChenLV21","doi":"10.1109/FOCS52979.2021.00023","ee":"https://doi.org/10.1109/FOCS52979.2021.00023","url":"https://dblp.org/rec/conf/focs/ChenLV21"},
+"url":"URL#324374"
+},
+{
+"@score":"1",
+"@id":"324375",
+"info":{"authors":{"author":[{"@pid":"181/2847","text":"Li Chen"},{"@pid":"46/7997","text":"Richard Peng"},{"@pid":"18/5410","text":"Di Wang"}]},"title":"2-norm Flow Diffusion in Near-Linear Time.","venue":"FOCS","pages":"540-549","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChenPW21","doi":"10.1109/FOCS52979.2021.00060","ee":"https://doi.org/10.1109/FOCS52979.2021.00060","url":"https://dblp.org/rec/conf/focs/ChenPW21"},
+"url":"URL#324375"
+},
+{
+"@score":"1",
+"@id":"324376",
+"info":{"authors":{"author":[{"@pid":"182/2247","text":"Yeshwanth Cherapanamjeri"},{"@pid":"68/3296","text":"Jelani Nelson"}]},"title":"Terminal Embeddings in Sublinear Time.","venue":"FOCS","pages":"1209-1216","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/CherapanamjeriN21","doi":"10.1109/FOCS52979.2021.00118","ee":"https://doi.org/10.1109/FOCS52979.2021.00118","url":"https://dblp.org/rec/conf/focs/CherapanamjeriN21"},
+"url":"URL#324376"
+},
+{
+"@score":"1",
+"@id":"324377",
+"info":{"authors":{"author":[{"@pid":"121/4317","text":"Nai-Hui Chia"},{"@pid":"11/6568","text":"Kai-Min Chung"},{"@pid":"40/8351","text":"Qipeng Liu"},{"@pid":"136/6660","text":"Takashi Yamakawa"}]},"title":"On the Impossibility of Post-Quantum Black-Box Zero-Knowledge in Constant Round.","venue":"FOCS","pages":"59-67","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChiaCLY21","doi":"10.1109/FOCS52979.2021.00015","ee":"https://doi.org/10.1109/FOCS52979.2021.00015","url":"https://dblp.org/rec/conf/focs/ChiaCLY21"},
+"url":"URL#324377"
+},
+{
+"@score":"1",
+"@id":"324378",
+"info":{"authors":{"author":[{"@pid":"27/8534","text":"Alessandro Chiesa"},{"@pid":"146/0144","text":"Fermi Ma"},{"@pid":"163/5623","text":"Nicholas Spooner"},{"@pid":"39/10308","text":"Mark Zhandry"}]},"title":"Post-Quantum Succinct Arguments - Breaking the Quantum Rewinding Barrier.","venue":"FOCS","pages":"49-58","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChiesaMSZ21","doi":"10.1109/FOCS52979.2021.00014","ee":"https://doi.org/10.1109/FOCS52979.2021.00014","url":"https://dblp.org/rec/conf/focs/ChiesaMSZ21"},
+"url":"URL#324378"
+},
+{
+"@score":"1",
+"@id":"324379",
+"info":{"authors":{"author":[{"@pid":"217/0130","text":"Chi-Ning Chou"},{"@pid":"31/11062","text":"Alexander Golovnev"},{"@pid":"s/MadhuSudan","text":"Madhu Sudan"},{"@pid":"204/2444","text":"Santhoshini Velusamy"}]},"title":"Approximability of all finite CSPs with linear sketches.","venue":"FOCS","pages":"1197-1208","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChouGSV21","doi":"10.1109/FOCS52979.2021.00117","ee":"https://doi.org/10.1109/FOCS52979.2021.00117","url":"https://dblp.org/rec/conf/focs/ChouGSV21"},
+"url":"URL#324379"
+},
+{
+"@score":"1",
+"@id":"324380",
+"info":{"authors":{"author":[{"@pid":"160/8650","text":"Arka Rai Choudhuri"},{"@pid":"315/3186","text":"Abhihsek Jain"},{"@pid":"190/7719","text":"Zhengzhong Jin"}]},"title":"SNARGs for $\\mathcal{P}$ from LWE.","venue":"FOCS","pages":"68-79","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ChoudhuriJJ21","doi":"10.1109/FOCS52979.2021.00016","ee":"https://doi.org/10.1109/FOCS52979.2021.00016","url":"https://dblp.org/rec/conf/focs/ChoudhuriJJ21"},
+"url":"URL#324380"
+},
+{
+"@score":"1",
+"@id":"324381",
+"info":{"authors":{"author":[{"@pid":"266/2787","text":"Nolan J. Coble"},{"@pid":"126/1798","text":"Matthew Coudron"}]},"title":"Quasi-polynomial Time Approximation of Output Probabilities of Geometrically-local, Shallow Quantum Circuits.","venue":"FOCS","pages":"598-609","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/CobleC21","doi":"10.1109/FOCS52979.2021.00065","ee":"https://doi.org/10.1109/FOCS52979.2021.00065","url":"https://dblp.org/rec/conf/focs/CobleC21"},
+"url":"URL#324381"
+},
+{
+"@score":"1",
+"@id":"324382",
+"info":{"authors":{"author":[{"@pid":"136/5814","text":"Vincent Cohen-Addad"},{"@pid":"145/0249-1","text":"Debarati Das 0001"},{"@pid":"234/8033","text":"Evangelos Kipouridis"},{"@pid":"129/9110","text":"Nikos Parotsidis"},{"@pid":"t/MikkelThorup","text":"Mikkel Thorup"}]},"title":"Fitting Distances by Tree Metrics Minimizing the Total Error within a Constant Factor.","venue":"FOCS","pages":"468-479","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Cohen-Addad0KPT21","doi":"10.1109/FOCS52979.2021.00054","ee":"https://doi.org/10.1109/FOCS52979.2021.00054","url":"https://dblp.org/rec/conf/focs/Cohen-Addad0KPT21"},
+"url":"URL#324382"
+},
+{
+"@score":"1",
+"@id":"324383",
+"info":{"authors":{"author":[{"@pid":"56/7270","text":"Wojciech Czerwinski"},{"@pid":"291/4569","text":"Lukasz Orlikowski"}]},"title":"Reachability in Vector Addition Systems is Ackermann-complete.","venue":"FOCS","pages":"1229-1240","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/CzerwinskiO21","doi":"10.1109/FOCS52979.2021.00120","ee":"https://doi.org/10.1109/FOCS52979.2021.00120","url":"https://dblp.org/rec/conf/focs/CzerwinskiO21"},
+"url":"URL#324383"
+},
+{
+"@score":"1",
+"@id":"324384",
+"info":{"authors":{"author":[{"@pid":"209/5851","text":"Mina Dalirrooyfard"},{"@pid":"121/3676","text":"Ray Li"},{"@pid":"63/8319","text":"Virginia Vassilevska Williams"}]},"title":"Hardness of Approximate Diameter - Now for Undirected Graphs.","venue":"FOCS","pages":"1021-1032","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/DalirrooyfardLW21","doi":"10.1109/FOCS52979.2021.00102","ee":"https://doi.org/10.1109/FOCS52979.2021.00102","url":"https://dblp.org/rec/conf/focs/DalirrooyfardLW21"},
+"url":"URL#324384"
+},
+{
+"@score":"1",
+"@id":"324385",
+"info":{"authors":{"author":[{"@pid":"69/11105","text":"Heiko Dietrich"},{"@pid":"68/5859","text":"James B. Wilson"}]},"title":"Group isomorphism is nearly-linear time for most orders.","venue":"FOCS","pages":"457-467","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/DietrichW21","doi":"10.1109/FOCS52979.2021.00053","ee":"https://doi.org/10.1109/FOCS52979.2021.00053","url":"https://dblp.org/rec/conf/focs/DietrichW21"},
+"url":"URL#324385"
+},
+{
+"@score":"1",
+"@id":"324386",
+"info":{"authors":{"author":[{"@pid":"274/1196","text":"Jingqiu Ding"},{"@pid":"275/8135","text":"Tommaso d&apos;Orsi"},{"@pid":"09/10672","text":"Rajai Nasser"},{"@pid":"59/254","text":"David Steurer"}]},"title":"Robust recovery for stochastic block models.","venue":"FOCS","pages":"387-394","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/DingdNS21","doi":"10.1109/FOCS52979.2021.00046","ee":"https://doi.org/10.1109/FOCS52979.2021.00046","url":"https://dblp.org/rec/conf/focs/DingdNS21"},
+"url":"URL#324386"
+},
+{
+"@score":"1",
+"@id":"324387",
+"info":{"authors":{"author":[{"@pid":"67/297","text":"Itai Dinur"},{"@pid":"08/2079","text":"Nathan Keller"},{"@pid":"207/8385","text":"Ohad Klein"}]},"title":"Fine-Grained Cryptanalysis - Tight Conditional Bounds for Dense k-SUM and k-XOR.","venue":"FOCS","pages":"80-91","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/DinurKK21","doi":"10.1109/FOCS52979.2021.00017","ee":"https://doi.org/10.1109/FOCS52979.2021.00017","url":"https://dblp.org/rec/conf/focs/DinurKK21"},
+"url":"URL#324387"
+},
+{
+"@score":"1",
+"@id":"324388",
+"info":{"authors":{"author":[{"@pid":"39/1177","text":"David Doty"},{"@pid":"220/3144","text":"Mahsa Eftekhari"},{"@pid":"g/LeszekGasieniec","text":"Leszek Gasieniec"},{"@pid":"237/9892","text":"Eric E. Severson"},{"@pid":"78/11210","text":"Przemyslaw Uznanski"},{"@pid":"84/2024","text":"Grzegorz Stachowiak"}]},"title":"A time and space optimal stable population protocol solving exact majority.","venue":"FOCS","pages":"1044-1055","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/DotyEGSUS21","doi":"10.1109/FOCS52979.2021.00104","ee":"https://doi.org/10.1109/FOCS52979.2021.00104","url":"https://dblp.org/rec/conf/focs/DotyEGSUS21"},
+"url":"URL#324388"
+},
+{
+"@score":"1",
+"@id":"324389",
+"info":{"authors":{"author":[{"@pid":"172/4071","text":"Pranjal Dutta"},{"@pid":"224/7019","text":"Prateek Dwivedi"},{"@pid":"86/6915","text":"Nitin Saxena 0001"}]},"title":"Demystifying the border of depth-3 algebraic circuits.","venue":"FOCS","pages":"92-103","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/DuttaD021","doi":"10.1109/FOCS52979.2021.00018","ee":"https://doi.org/10.1109/FOCS52979.2021.00018","url":"https://dblp.org/rec/conf/focs/DuttaD021"},
+"url":"URL#324389"
+},
+{
+"@score":"1",
+"@id":"324390",
+"info":{"authors":{"author":[{"@pid":"70/7588","text":"Paul Dütting"},{"@pid":"200/8166","text":"Tomer Ezra"},{"@pid":"43/1464","text":"Michal Feldman"},{"@pid":"48/7186","text":"Thomas Kesselheim"}]},"title":"Combinatorial Contracts.","venue":"FOCS","pages":"815-826","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/DuttingEFK21","doi":"10.1109/FOCS52979.2021.00084","ee":"https://doi.org/10.1109/FOCS52979.2021.00084","url":"https://dblp.org/rec/conf/focs/DuttingEFK21"},
+"url":"URL#324390"
+},
+{
+"@score":"1",
+"@id":"324391",
+"info":{"authors":{"author":[{"@pid":"80/3623","text":"Klim Efremenko"},{"@pid":"39/4172","text":"Gillat Kol"},{"@pid":"236/5951","text":"Dmitry Paramonov"},{"@pid":"209/9985","text":"Raghuvansh R. Saxena"}]},"title":"Tight Bounds for General Computation in Noisy Broadcast Networks.","venue":"FOCS","pages":"634-645","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/EfremenkoKPS21","doi":"10.1109/FOCS52979.2021.00068","ee":"https://doi.org/10.1109/FOCS52979.2021.00068","url":"https://dblp.org/rec/conf/focs/EfremenkoKPS21"},
+"url":"URL#324391"
+},
+{
+"@score":"1",
+"@id":"324392",
+"info":{"authors":{"author":[{"@pid":"67/1162","text":"Vitaly Feldman"},{"@pid":"179/2626","text":"Audra McMillan"},{"@pid":"06/3696","text":"Kunal Talwar"}]},"title":"Hiding Among the Clones - A Simple and Nearly Optimal Analysis of Privacy Amplification by Shuffling.","venue":"FOCS","pages":"954-964","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/FeldmanMT21","doi":"10.1109/FOCS52979.2021.00096","ee":"https://doi.org/10.1109/FOCS52979.2021.00096","url":"https://dblp.org/rec/conf/focs/FeldmanMT21"},
+"url":"URL#324392"
+},
+{
+"@score":"1",
+"@id":"324393",
+"info":{"authors":{"author":[{"@pid":"93/8396","text":"Asaf Ferber"},{"@pid":"87/5718","text":"Matthew Kwan"},{"@pid":"219/8632","text":"Lisa Sauermann"}]},"title":"List-decodability with large radius for Reed-Solomon codes.","venue":"FOCS","pages":"720-726","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/FerberKS21","doi":"10.1109/FOCS52979.2021.00075","ee":"https://doi.org/10.1109/FOCS52979.2021.00075","url":"https://dblp.org/rec/conf/focs/FerberKS21"},
+"url":"URL#324393"
+},
+{
+"@score":"1",
+"@id":"324394",
+"info":{"authors":{"author":[{"@pid":"29/10537","text":"Aris Filos-Ratsikas"},{"@pid":"54/2046","text":"Kristoffer Arnsfelt Hansen"},{"@pid":"287/4379","text":"Kasper Høgh"},{"@pid":"156/0341","text":"Alexandros Hollender"}]},"title":"FIXP-membership via Convex Optimization - Games, Cakes, and Markets.","venue":"FOCS","pages":"827-838","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Filos-RatsikasH21","doi":"10.1109/FOCS52979.2021.00085","ee":"https://doi.org/10.1109/FOCS52979.2021.00085","url":"https://dblp.org/rec/conf/focs/Filos-RatsikasH21"},
+"url":"URL#324394"
+},
+{
+"@score":"1",
+"@id":"324395",
+"info":{"authors":{"author":{"@pid":"135/4993","text":"Arnold Filtser"}},"title":"Hop-Constrained Metric Embeddings and their Applications.","venue":"FOCS","pages":"492-503","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Filtser21","doi":"10.1109/FOCS52979.2021.00056","ee":"https://doi.org/10.1109/FOCS52979.2021.00056","url":"https://dblp.org/rec/conf/focs/Filtser21"},
+"url":"URL#324395"
+},
+{
+"@score":"1",
+"@id":"324396",
+"info":{"authors":{"author":[{"@pid":"49/381","text":"Samuel Fiorini"},{"@pid":"95/6753","text":"Gwenaël Joret"},{"@pid":"129/2840","text":"Stefan Weltge"},{"@pid":"44/8191","text":"Yelena Yuditsky"}]},"title":"Integer programs with bounded subdeterminants and two nonzeros per row.","venue":"FOCS","pages":"13-24","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/FioriniJWY21","doi":"10.1109/FOCS52979.2021.00011","ee":"https://doi.org/10.1109/FOCS52979.2021.00011","url":"https://dblp.org/rec/conf/focs/FioriniJWY21"},
+"url":"URL#324396"
+},
+{
+"@score":"1",
+"@id":"324397",
+"info":{"authors":{"author":[{"@pid":"33/9134","text":"Sebastian Forster"},{"@pid":"179/2404","text":"Gramoz Goranci"},{"@pid":"217/1820","text":"Yang P. Liu"},{"@pid":"46/7997","text":"Richard Peng"},{"@pid":"70/7506","text":"Xiaorui Sun"},{"@pid":"128/2055","text":"Mingquan Ye"}]},"title":"Minor Sparsifiers and the Distributed Laplacian Paradigm.","venue":"FOCS","pages":"989-999","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/ForsterGLPSY21","doi":"10.1109/FOCS52979.2021.00099","ee":"https://doi.org/10.1109/FOCS52979.2021.00099","url":"https://dblp.org/rec/conf/focs/ForsterGLPSY21"},
+"url":"URL#324397"
+},
+{
+"@score":"1",
+"@id":"324398",
+"info":{"authors":{"author":[{"@pid":"294/6673","text":"Ruiquan Gao"},{"@pid":"31/3988","text":"Zhongtian He"},{"@pid":"137/7797","text":"Zhiyi Huang"},{"@pid":"164/0496","text":"Zipei Nie"},{"@pid":"294/6413","text":"Bijun Yuan"},{"@pid":"81/5094","text":"Yan Zhong"}]},"title":"Improved Online Correlated Selection.","venue":"FOCS","pages":"1265-1276","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GaoHHNYZ21","doi":"10.1109/FOCS52979.2021.00123","ee":"https://doi.org/10.1109/FOCS52979.2021.00123","url":"https://dblp.org/rec/conf/focs/GaoHHNYZ21"},
+"url":"URL#324398"
+},
+{
+"@score":"1",
+"@id":"324399",
+"info":{"authors":{"author":[{"@pid":"46/2974","text":"Yu Gao"},{"@pid":"217/1820","text":"Yang P. Liu"},{"@pid":"46/7997","text":"Richard Peng"}]},"title":"Fully Dynamic Electrical Flows - Sparse Maxflow Faster Than Goldberg-Rao.","venue":"FOCS","pages":"516-527","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GaoLP21","doi":"10.1109/FOCS52979.2021.00058","ee":"https://doi.org/10.1109/FOCS52979.2021.00058","url":"https://dblp.org/rec/conf/focs/GaoLP21"},
+"url":"URL#324399"
+},
+{
+"@score":"1",
+"@id":"324400",
+"info":{"authors":{"author":[{"@pid":"33/5673","text":"Mohsen Ghaffari"},{"@pid":"26/5426","text":"Fabian Kuhn"}]},"title":"Deterministic Distributed Vertex Coloring - Simpler, Faster, and without Network Decomposition.","venue":"FOCS","pages":"1009-1020","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GhaffariK21","doi":"10.1109/FOCS52979.2021.00101","ee":"https://doi.org/10.1109/FOCS52979.2021.00101","url":"https://dblp.org/rec/conf/focs/GhaffariK21"},
+"url":"URL#324400"
+},
+{
+"@score":"1",
+"@id":"324401",
+"info":{"authors":{"author":[{"@pid":"33/5780","text":"Zeyu Guo"},{"@pid":"121/3676","text":"Ray Li"},{"@pid":"154/6534","text":"Chong Shangguan"},{"@pid":"07/7218","text":"Itzhak Tamo"},{"@pid":"79/7019","text":"Mary Wootters"}]},"title":"Improved List-Decodability and List-Recoverability of Reed-Solomon Codes via Tree Packings - [Extended Abstract].","venue":"FOCS","pages":"708-719","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GuoLSTW21","doi":"10.1109/FOCS52979.2021.00074","ee":"https://doi.org/10.1109/FOCS52979.2021.00074","url":"https://dblp.org/rec/conf/focs/GuoLSTW21"},
+"url":"URL#324401"
+},
+{
+"@score":"1",
+"@id":"324402",
+"info":{"authors":{"author":[{"@pid":"g/VenkatesanGuruswami","text":"Venkatesan Guruswami"},{"@pid":"128/8291","text":"Xiaoyu He"},{"@pid":"121/3676","text":"Ray Li"}]},"title":"The zero-rate threshold for adversarial bit-deletions is less than 1/2.","venue":"FOCS","pages":"727-738","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/GuruswamiHL21","doi":"10.1109/FOCS52979.2021.00076","ee":"https://doi.org/10.1109/FOCS52979.2021.00076","url":"https://dblp.org/rec/conf/focs/GuruswamiHL21"},
+"url":"URL#324402"
+},
+{
+"@score":"1",
+"@id":"324403",
+"info":{"authors":{"author":[{"@pid":"149/1265","text":"Nika Haghtalab"},{"@pid":"r/TimRoughgarden","text":"Tim Roughgarden"},{"@pid":"223/4770","text":"Abhishek Shetty"}]},"title":"Smoothed Analysis with Adaptive Adversaries.","venue":"FOCS","pages":"942-953","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/HaghtalabRS21","doi":"10.1109/FOCS52979.2021.00095","ee":"https://doi.org/10.1109/FOCS52979.2021.00095","url":"https://dblp.org/rec/conf/focs/HaghtalabRS21"},
+"url":"URL#324403"
+},
+{
+"@score":"1",
+"@id":"324404",
+"info":{"authors":{"author":[{"@pid":"40/4652","text":"Pooya Hatami"},{"@pid":"155/9793","text":"William M. Hoza"},{"@pid":"93/8727","text":"Avishay Tal"},{"@pid":"143/2243","text":"Roei Tell"}]},"title":"Fooling Constant-Depth Threshold Circuits (Extended Abstract).","venue":"FOCS","pages":"104-115","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/HatamiHTT21","doi":"10.1109/FOCS52979.2021.00019","ee":"https://doi.org/10.1109/FOCS52979.2021.00019","url":"https://dblp.org/rec/conf/focs/HatamiHTT21"},
+"url":"URL#324404"
+},
+{
+"@score":"1",
+"@id":"324405",
+"info":{"authors":{"author":[{"@pid":"150/4919","text":"Shuichi Hirahara"},{"@pid":"222/5308","text":"Mikito Nanashima"}]},"title":"On Worst-Case Learning in Relativized Heuristica.","venue":"FOCS","pages":"751-758","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/HiraharaN21","doi":"10.1109/FOCS52979.2021.00078","ee":"https://doi.org/10.1109/FOCS52979.2021.00078","url":"https://dblp.org/rec/conf/focs/HiraharaN21"},
+"url":"URL#324405"
+},
+{
+"@score":"1",
+"@id":"324406",
+"info":{"authors":{"author":{"@pid":"228/6463","text":"Rahul Ilango"}},"title":"The Minimum Formula Size Problem is (ETH) Hard.","venue":"FOCS","pages":"427-432","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Ilango21","doi":"10.1109/FOCS52979.2021.00050","ee":"https://doi.org/10.1109/FOCS52979.2021.00050","url":"https://dblp.org/rec/conf/focs/Ilango21"},
+"url":"URL#324406"
+},
+{
+"@score":"1",
+"@id":"324407",
+"info":{"authors":{"author":[{"@pid":"204/0386","text":"Vishesh Jain"},{"@pid":"257/4961","text":"Huy Tuan Pham"},{"@pid":"239/5144","text":"Thuy Duong Vuong"}]},"title":"Towards the sampling Lovász Local Lemma.","venue":"FOCS","pages":"173-183","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/JainPV21","doi":"10.1109/FOCS52979.2021.00025","ee":"https://doi.org/10.1109/FOCS52979.2021.00025","url":"https://dblp.org/rec/conf/focs/JainPV21"},
+"url":"URL#324407"
+},
+{
+"@score":"1",
+"@id":"324408",
+"info":{"authors":{"author":[{"@pid":"30/2575","text":"Zhengfeng Ji"},{"@pid":"27/4274","text":"Anand Natarajan"},{"@pid":"94/6173","text":"Thomas Vidick"},{"@pid":"10/3047-4","text":"John Wright 0004"},{"@pid":"17/8909","text":"Henry Yuen"}]},"title":"Quantum soundness of testing tensor codes.","venue":"FOCS","pages":"586-597","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/JiNV0Y21","doi":"10.1109/FOCS52979.2021.00064","ee":"https://doi.org/10.1109/FOCS52979.2021.00064","url":"https://dblp.org/rec/conf/focs/JiNV0Y21"},
+"url":"URL#324408"
+},
+{
+"@score":"1",
+"@id":"324409",
+"info":{"authors":{"author":[{"@pid":"98/2250","text":"Chris Jones"},{"@pid":"65/3122","text":"Aaron Potechin"},{"@pid":"274/1323","text":"Goutham Rajendran"},{"@pid":"63/5004","text":"Madhur Tulsiani"},{"@pid":"187/8337","text":"Jeff Xu"}]},"title":"Sum-of-Squares Lower Bounds for Sparse Independent Set.","venue":"FOCS","pages":"406-416","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/JonesPRTX21","doi":"10.1109/FOCS52979.2021.00048","ee":"https://doi.org/10.1109/FOCS52979.2021.00048","url":"https://dblp.org/rec/conf/focs/JonesPRTX21"},
+"url":"URL#324409"
+},
+{
+"@score":"1",
+"@id":"324410",
+"info":{"authors":{"author":{"@pid":"188/6358","text":"John Kallaugher"}},"title":"A Quantum Advantage for a Natural Streaming Problem.","venue":"FOCS","pages":"897-908","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Kallaugher21","doi":"10.1109/FOCS52979.2021.00091","ee":"https://doi.org/10.1109/FOCS52979.2021.00091","url":"https://dblp.org/rec/conf/focs/Kallaugher21"},
+"url":"URL#324410"
+},
+{
+"@score":"1",
+"@id":"324411",
+"info":{"authors":{"author":[{"@pid":"162/0243","text":"Dong Yeap Kang"},{"@pid":"73/6228","text":"Tom Kelly"},{"@pid":"84/391","text":"Daniela Kühn"},{"@pid":"173/5893","text":"Abhishek Methuku"},{"@pid":"75/6278","text":"Deryk Osthus"}]},"title":"A proof of the Erdös-Faber-Lovász conjecture - Algorithmic aspects.","venue":"FOCS","pages":"1080-1089","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/KangKKMO21","doi":"10.1109/FOCS52979.2021.00107","ee":"https://doi.org/10.1109/FOCS52979.2021.00107","url":"https://dblp.org/rec/conf/focs/KangKKMO21"},
+"url":"URL#324411"
+},
+{
+"@score":"1",
+"@id":"324412",
+"info":{"authors":{"author":[{"@pid":"76/6407","text":"Michael Kapralov"},{"@pid":"k/RobertKrauthgamer","text":"Robert Krauthgamer"},{"@pid":"238/1649","text":"Jakab Tardos"},{"@pid":"36/4449","text":"Yuichi Yoshida"}]},"title":"Spectral Hypergraph Sparsifiers of Nearly Linear Size.","venue":"FOCS","pages":"1159-1170","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/KapralovKTY21","doi":"10.1109/FOCS52979.2021.00114","ee":"https://doi.org/10.1109/FOCS52979.2021.00114","url":"https://dblp.org/rec/conf/focs/KapralovKTY21"},
+"url":"URL#324412"
+},
+{
+"@score":"1",
+"@id":"324413",
+"info":{"authors":{"author":[{"@pid":"45/6846","text":"Ken-ichi Kawarabayashi"},{"@pid":"99/6850","text":"Anastasios Sidiropoulos"}]},"title":"Embeddings of Planar Quasimetrics into Directed ℓ1 and Polylogarithmic Approximation for Directed Sparsest-Cut.","venue":"FOCS","pages":"480-491","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/KawarabayashiS21","doi":"10.1109/FOCS52979.2021.00055","ee":"https://doi.org/10.1109/FOCS52979.2021.00055","url":"https://dblp.org/rec/conf/focs/KawarabayashiS21"},
+"url":"URL#324413"
+},
+{
+"@score":"1",
+"@id":"324414",
+"info":{"authors":{"author":[{"@pid":"64/4772","text":"Jonathan A. Kelner"},{"@pid":"132/1904","text":"Frederic Koehler"},{"@pid":"76/1906","text":"Raghu Meka"},{"@pid":"223/4465","text":"Dhruv Rohatgi"}]},"title":"On the Power of Preconditioning in Sparse Linear Regression.","venue":"FOCS","pages":"550-561","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/KelnerKMR21","doi":"10.1109/FOCS52979.2021.00061","ee":"https://doi.org/10.1109/FOCS52979.2021.00061","url":"https://dblp.org/rec/conf/focs/KelnerKMR21"},
+"url":"URL#324414"
+},
+{
+"@score":"1",
+"@id":"324415",
+"info":{"authors":{"author":[{"@pid":"153/1825","text":"Sándor Kisfaludi-Bak"},{"@pid":"33/7187","text":"Jesper Nederlof"},{"@pid":"182/6949","text":"Karol Wegrzycki"}]},"title":"A Gap-ETH-Tight Approximation Scheme for Euclidean TSP.","venue":"FOCS","pages":"351-362","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Kisfaludi-BakNW21","doi":"10.1109/FOCS52979.2021.00043","ee":"https://doi.org/10.1109/FOCS52979.2021.00043","url":"https://dblp.org/rec/conf/focs/Kisfaludi-BakNW21"},
+"url":"URL#324415"
+},
+{
+"@score":"1",
+"@id":"324416",
+"info":{"authors":{"author":[{"@pid":"38/9892","text":"Tomasz Kociumaka"},{"@pid":"02/836","text":"Ely Porat"},{"@pid":"99/3746","text":"Tatiana Starikovskaya"}]},"title":"Small-space and streaming pattern matching with $k$ edits.","venue":"FOCS","pages":"885-896","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/KociumakaPS21","doi":"10.1109/FOCS52979.2021.00090","ee":"https://doi.org/10.1109/FOCS52979.2021.00090","url":"https://dblp.org/rec/conf/focs/KociumakaPS21"},
+"url":"URL#324416"
+},
+{
+"@score":"1",
+"@id":"324417",
+"info":{"authors":{"author":[{"@pid":"77/10268","text":"Yasuhiro Kondo"},{"@pid":"29/5791","text":"Ryuhei Mori"},{"@pid":"145/4003","text":"Ramis Movassagh"}]},"title":"Quantum supremacy and hardness of estimating output probabilities of quantum circuits.","venue":"FOCS","pages":"1296-1307","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/KondoMM21","doi":"10.1109/FOCS52979.2021.00126","ee":"https://doi.org/10.1109/FOCS52979.2021.00126","url":"https://dblp.org/rec/conf/focs/KondoMM21"},
+"url":"URL#324417"
+},
+{
+"@score":"1",
+"@id":"324418",
+"info":{"authors":{"author":{"@pid":"204/2613","text":"Tuukka Korhonen"}},"title":"A Single-Exponential Time 2-Approximation Algorithm for Treewidth.","venue":"FOCS","pages":"184-192","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Korhonen21","doi":"10.1109/FOCS52979.2021.00026","ee":"https://doi.org/10.1109/FOCS52979.2021.00026","url":"https://dblp.org/rec/conf/focs/Korhonen21"},
+"url":"URL#324418"
+},
+{
+"@score":"1",
+"@id":"324419",
+"info":{"authors":{"author":{"@pid":"254/1476","text":"Oliver Korten"}},"title":"The Hardest Explicit Construction.","venue":"FOCS","pages":"433-444","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Korten21","doi":"10.1109/FOCS52979.2021.00051","ee":"https://doi.org/10.1109/FOCS52979.2021.00051","url":"https://dblp.org/rec/conf/focs/Korten21"},
+"url":"URL#324419"
+},
+{
+"@score":"1",
+"@id":"324420",
+"info":{"authors":{"author":[{"@pid":"140/1108","text":"William Kuszmaul"},{"@pid":"222/2805","text":"Shyam Narayanan"}]},"title":"Stochastic and Worst-Case Generalized Sorting Revisited.","venue":"FOCS","pages":"1056-1067","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/KuszmaulN21","doi":"10.1109/FOCS52979.2021.00105","ee":"https://doi.org/10.1109/FOCS52979.2021.00105","url":"https://dblp.org/rec/conf/focs/KuszmaulN21"},
+"url":"URL#324420"
+},
+{
+"@score":"1",
+"@id":"324421",
+"info":{"authors":{"author":[{"@pid":"45/466","text":"Hung Le"},{"@pid":"79/1632","text":"Christian Wulff-Nilsen"}]},"title":"Optimal Approximate Distance Oracle for Planar Graphs.","venue":"FOCS","pages":"363-374","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/LeW21","doi":"10.1109/FOCS52979.2021.00044","ee":"https://doi.org/10.1109/FOCS52979.2021.00044","url":"https://dblp.org/rec/conf/focs/LeW21"},
+"url":"URL#324421"
+},
+{
+"@score":"1",
+"@id":"324422",
+"info":{"authors":{"author":[{"@pid":"179/7412","text":"Victor Lecomte"},{"@pid":"87/5034","text":"Li-Yang Tan"}]},"title":"Sharper bounds on the Fourier concentration of DNFs.","venue":"FOCS","pages":"930-941","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/LecomteT21","doi":"10.1109/FOCS52979.2021.00094","ee":"https://doi.org/10.1109/FOCS52979.2021.00094","url":"https://dblp.org/rec/conf/focs/LecomteT21"},
+"url":"URL#324422"
+},
+{
+"@score":"1",
+"@id":"324423",
+"info":{"authors":{"author":[{"@pid":"150/4950","text":"Jasper C. H. Lee"},{"@pid":"82/2417","text":"Paul Valiant"}]},"title":"Optimal Sub-Gaussian Mean Estimation in $\\mathbb{R}$.","venue":"FOCS","pages":"672-683","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/LeeV21","doi":"10.1109/FOCS52979.2021.00071","ee":"https://doi.org/10.1109/FOCS52979.2021.00071","url":"https://dblp.org/rec/conf/focs/LeeV21"},
+"url":"URL#324423"
+},
+{
+"@score":"1",
+"@id":"324424",
+"info":{"authors":{"author":{"@pid":"50/3164","text":"Jérôme Leroux"}},"title":"The Reachability Problem for Petri Nets is Not Primitive Recursive.","venue":"FOCS","pages":"1241-1252","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Leroux21","doi":"10.1109/FOCS52979.2021.00121","ee":"https://doi.org/10.1109/FOCS52979.2021.00121","url":"https://dblp.org/rec/conf/focs/Leroux21"},
+"url":"URL#324424"
+},
+{
+"@score":"1",
+"@id":"324425",
+"info":{"authors":{"author":[{"@pid":"36/4877","text":"Wenzheng Li"},{"@pid":"29/5942","text":"Jan Vondrák"}]},"title":"A constant-factor approximation algorithm for Nash Social Welfare with submodular valuations.","venue":"FOCS","pages":"25-36","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/LiV21","doi":"10.1109/FOCS52979.2021.00012","ee":"https://doi.org/10.1109/FOCS52979.2021.00012","url":"https://dblp.org/rec/conf/focs/LiV21"},
+"url":"URL#324425"
+},
+{
+"@score":"1",
+"@id":"324426",
+"info":{"authors":{"author":[{"@pid":"73/3628","text":"Yuanzhi Li"},{"@pid":"183/6164","text":"Ruosong Wang"},{"@pid":"166/6264","text":"Lin F. Yang"}]},"title":"Settling the Horizon-Dependence of Sample Complexity in Reinforcement Learning.","venue":"FOCS","pages":"965-976","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/LiWY21","doi":"10.1109/FOCS52979.2021.00097","ee":"https://doi.org/10.1109/FOCS52979.2021.00097","url":"https://dblp.org/rec/conf/focs/LiWY21"},
+"url":"URL#324426"
+},
+{
+"@score":"1",
+"@id":"324427",
+"info":{"authors":{"author":[{"@pid":"11/1649","text":"Nutan Limaye"},{"@pid":"05/6302","text":"Srikanth Srinivasan 0001"},{"@pid":"38/11466","text":"Sébastien Tavenas"}]},"title":"Superpolynomial Lower Bounds Against Low-Depth Algebraic Circuits.","venue":"FOCS","pages":"804-814","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Limaye0T21","doi":"10.1109/FOCS52979.2021.00083","ee":"https://doi.org/10.1109/FOCS52979.2021.00083","url":"https://dblp.org/rec/conf/focs/Limaye0T21"},
+"url":"URL#324427"
+},
+{
+"@score":"1",
+"@id":"324428",
+"info":{"authors":{"author":[{"@pid":"60/9360","text":"Siqi Liu"},{"@pid":"222/2652","text":"Sidhanth Mohanty"},{"@pid":"69/3746","text":"Prasad Raghavendra"}]},"title":"On statistical inference when fixed points of belief propagation are unstable.","venue":"FOCS","pages":"395-405","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/LiuMR21","doi":"10.1109/FOCS52979.2021.00047","ee":"https://doi.org/10.1109/FOCS52979.2021.00047","url":"https://dblp.org/rec/conf/focs/LiuMR21"},
+"url":"URL#324428"
+},
+{
+"@score":"1",
+"@id":"324429",
+"info":{"authors":{"author":{"@pid":"261/2743","text":"Xiao Mao"}},"title":"Breaking the Cubic Barrier for (Unweighted) Tree Edit Distance.","venue":"FOCS","pages":"792-803","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Mao21","doi":"10.1109/FOCS52979.2021.00082","ee":"https://doi.org/10.1109/FOCS52979.2021.00082","url":"https://dblp.org/rec/conf/focs/Mao21"},
+"url":"URL#324429"
+},
+{
+"@score":"1",
+"@id":"324430",
+"info":{"authors":{"author":[{"@pid":"37/8210","text":"Tillmann Miltzow"},{"@pid":"294/5077","text":"Reinier F. Schmiermann"}]},"title":"On Classifying Continuous Constraint Satisfaction problems.","venue":"FOCS","pages":"781-791","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/MiltzowS21","doi":"10.1109/FOCS52979.2021.00081","ee":"https://doi.org/10.1109/FOCS52979.2021.00081","url":"https://dblp.org/rec/conf/focs/MiltzowS21"},
+"url":"URL#324430"
+},
+{
+"@score":"1",
+"@id":"324431",
+"info":{"authors":{"author":{"@pid":"m/JosephSBMitchell","text":"Joseph S. B. Mitchell"}},"title":"Approximating Maximum Independent Set for Rectangles in the Plane.","venue":"FOCS","pages":"339-350","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Mitchell21","doi":"10.1109/FOCS52979.2021.00042","ee":"https://doi.org/10.1109/FOCS52979.2021.00042","url":"https://dblp.org/rec/conf/focs/Mitchell21"},
+"url":"URL#324431"
+},
+{
+"@score":"1",
+"@id":"324432",
+"info":{"authors":{"author":{"@pid":"02/1547","text":"Guillaume Moroz"}},"title":"New data structure for univariate polynomial approximation and applications to root isolation, numerical multipoint evaluation, and other problems.","venue":"FOCS","pages":"1090-1099","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Moroz21","doi":"10.1109/FOCS52979.2021.00108","ee":"https://doi.org/10.1109/FOCS52979.2021.00108","url":"https://dblp.org/rec/conf/focs/Moroz21"},
+"url":"URL#324432"
+},
+{
+"@score":"1",
+"@id":"324433",
+"info":{"authors":{"author":[{"@pid":"308/2515","text":"Danny Nam"},{"@pid":"36/3231","text":"Allan Sly"},{"@pid":"308/2834","text":"Youngtak Sohn"}]},"title":"One-step replica symmetry breaking of random regular NAE-SAT.","venue":"FOCS","pages":"310-318","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/NamSS21","doi":"10.1109/FOCS52979.2021.00039","ee":"https://doi.org/10.1109/FOCS52979.2021.00039","url":"https://dblp.org/rec/conf/focs/NamSS21"},
+"url":"URL#324433"
+},
+{
+"@score":"1",
+"@id":"324434",
+"info":{"authors":{"author":[{"@pid":"22/2571","text":"Neil Olver"},{"@pid":"98/10397","text":"Leon Sering"},{"@pid":"184/8459","text":"Laura Vargas Koch"}]},"title":"Continuity, Uniqueness and Long-Term Behavior of Nash Flows Over Time.","venue":"FOCS","pages":"851-860","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/OlverSK21","doi":"10.1109/FOCS52979.2021.00087","ee":"https://doi.org/10.1109/FOCS52979.2021.00087","url":"https://dblp.org/rec/conf/focs/OlverSK21"},
+"url":"URL#324434"
+},
+{
+"@score":"1",
+"@id":"324435",
+"info":{"authors":{"author":[{"@pid":"43/4120","text":"Cory Palmer"},{"@pid":"56/6527","text":"Dömötör Pálvölgyi"}]},"title":"At most 3.55n stable matchings.","venue":"FOCS","pages":"217-227","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/PalmerP21","doi":"10.1109/FOCS52979.2021.00029","ee":"https://doi.org/10.1109/FOCS52979.2021.00029","url":"https://dblp.org/rec/conf/focs/PalmerP21"},
+"url":"URL#324435"
+},
+{
+"@score":"1",
+"@id":"324436",
+"info":{"authors":{"author":[{"@pid":"p/TPitassi","text":"Toniann Pitassi"},{"@pid":"215/3431","text":"Prasanna Ramakrishnan"},{"@pid":"87/5034","text":"Li-Yang Tan"}]},"title":"Tradeoffs for small-depth Frege proofs.","venue":"FOCS","pages":"445-456","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/PitassiRT21","doi":"10.1109/FOCS52979.2021.00052","ee":"https://doi.org/10.1109/FOCS52979.2021.00052","url":"https://dblp.org/rec/conf/focs/PitassiRT21"},
+"url":"URL#324436"
+},
+{
+"@score":"1",
+"@id":"324437",
+"info":{"authors":{"author":[{"@pid":"122/2714","text":"Robert Robere"},{"@pid":"162/0063","text":"Jeroen Zuiddam"}]},"title":"Amortized Circuit Complexity, Formal Complexity Measures, and Catalytic Algorithms.","venue":"FOCS","pages":"759-769","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/RobereZ21","doi":"10.1109/FOCS52979.2021.00079","ee":"https://doi.org/10.1109/FOCS52979.2021.00079","url":"https://dblp.org/rec/conf/focs/RobereZ21"},
+"url":"URL#324437"
+},
+{
+"@score":"1",
+"@id":"324438",
+"info":{"authors":{"author":{"@pid":"194/3922","text":"Sai Sandeep"}},"title":"Almost Optimal Inapproximability of Multidimensional Packing Problems.","venue":"FOCS","pages":"245-256","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Sandeep21","doi":"10.1109/FOCS52979.2021.00033","ee":"https://doi.org/10.1109/FOCS52979.2021.00033","url":"https://dblp.org/rec/conf/focs/Sandeep21"},
+"url":"URL#324438"
+},
+{
+"@score":"1",
+"@id":"324439",
+"info":{"authors":{"author":{"@pid":"56/6665","text":"Dominik Scheder"}},"title":"PPSZ is better than you think.","venue":"FOCS","pages":"205-216","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Scheder21","doi":"10.1109/FOCS52979.2021.00028","ee":"https://doi.org/10.1109/FOCS52979.2021.00028","url":"https://dblp.org/rec/conf/focs/Scheder21"},
+"url":"URL#324439"
+},
+{
+"@score":"1",
+"@id":"324440",
+"info":{"authors":{"author":[{"@pid":"170/0126","text":"Vera Traub"},{"@pid":"48/4189","text":"Rico Zenklusen"}]},"title":"A Better-Than-2 Approximation for Weighted Tree Augmentation.","venue":"FOCS","pages":"1-12","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/TraubZ21","doi":"10.1109/FOCS52979.2021.00010","ee":"https://doi.org/10.1109/FOCS52979.2021.00010","url":"https://dblp.org/rec/conf/focs/TraubZ21"},
+"url":"URL#324440"
+},
+{
+"@score":"1",
+"@id":"324441",
+"info":{"authors":{"author":{"@pid":"02/2229","text":"Nisheeth K. Vishnoi"}},"title":"FOCS 2021 Preface.","venue":"FOCS","pages":"xvii","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Vishnoi21","doi":"10.1109/FOCS52979.2021.00005","ee":"https://doi.org/10.1109/FOCS52979.2021.00005","url":"https://dblp.org/rec/conf/focs/Vishnoi21"},
+"url":"URL#324441"
+},
+{
+"@score":"1",
+"@id":"324442",
+"info":{"authors":{"author":{"@pid":"162/8958","text":"Benjamin Wesolowski"}},"title":"The supersingular isogeny path and endomorphism ring problems are equivalent.","venue":"FOCS","pages":"1100-1111","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/Wesolowski21","doi":"10.1109/FOCS52979.2021.00109","ee":"https://doi.org/10.1109/FOCS52979.2021.00109","url":"https://dblp.org/rec/conf/focs/Wesolowski21"},
+"url":"URL#324442"
+},
+{
+"@score":"1",
+"@id":"324443",
+"info":{"authors":{"author":[{"@pid":"w/DPWoodruff","text":"David P. Woodruff"},{"@pid":"179/2683","text":"Samson Zhou"}]},"title":"Tight Bounds for Adversarially Robust Streams and Sliding Windows via Difference Estimators.","venue":"FOCS","pages":"1183-1196","year":"2021","type":"Conference and Workshop Papers","access":"closed","key":"conf/focs/WoodruffZ21","doi":"10.1109/FOCS52979.2021.00116","ee":"https://doi.org/10.1109/FOCS52979.2021.00116","url":"https://dblp.org/rec/conf/focs/WoodruffZ21"},
+"url":"URL#324443"
+}
+]
+}
 }
 }

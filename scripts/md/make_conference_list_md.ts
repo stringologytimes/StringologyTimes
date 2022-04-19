@@ -1,21 +1,8 @@
 
 import { ConferenceArticle, PaperArticle } from "../article"
+import { DBLPArticle } from "../dblp"
 
-//const request = require('sync-request');
 const fs = require('fs');
-
-let conferenceUrl = "";
-let paperUrl = "";
-let outputFolder = "";
-
-if(process.argv.length != 5){
-    throw new Error("Arguments Error");
-}
-conferenceUrl = process.argv[2];
-paperUrl = process.argv[3];
-outputFolder = process.argv[4];
-
-
 
 function createMD(_papers: PaperArticle[], _conferences: ConferenceArticle[], year: number) {
     const thisYearConferences = _conferences.filter((v) => v.year == year);
@@ -31,13 +18,13 @@ function createMD(_papers: PaperArticle[], _conferences: ConferenceArticle[], ye
     lines.push(`# Conference List for Stringologist (${year})`);
     thisYearConferences.forEach((v) => {
         let s = "";
-        if(v.conferenceURL.length > 0){
+        if (v.conferenceURL.length > 0) {
             s += `+ ${v.getDeadlineString()}: [${v.conference} ${v.year}](${v.conferenceURL})`;
-        }else{
+        } else {
             s += `+ ${v.getDeadlineString()}: ${v.conference} ${v.year}`;
         }
 
-        if(v.acceptedPaperURL.length > 0){
+        if (v.acceptedPaperURL.length > 0) {
             s += ` [Accepted Papers](${v.acceptedPaperURL})`;
         }
         lines.push(s)
@@ -60,9 +47,9 @@ function createMD(_papers: PaperArticle[], _conferences: ConferenceArticle[], ye
             }
         })
         paperList.forEach((v) => {
-            if(v.conferencePaperURL.length > 0){
+            if (v.conferencePaperURL.length > 0) {
                 lines.push(`+ [${v.title}](${v.conferencePaperURL})  `);
-            }else{
+            } else {
                 lines.push(`+ ${v.title}  `);
             }
             lines.push(`${v.authors.join(", ")}  `);
@@ -84,31 +71,28 @@ function createMD(_papers: PaperArticle[], _conferences: ConferenceArticle[], ye
 }
 
 
+let conferenceUrl = "";
+let dblpFolderUrl = "";
+let doiListPath = "";
 
-//console.log(`${conferenceUrl}`)
-//console.log(`${paperUrl}`)
+let outputFolder = "";
 
+if (process.argv.length != 6) {
+    throw new Error("Arguments Error");
+}
+conferenceUrl = process.argv[2];
+dblpFolderUrl = process.argv[3];
+doiListPath = process.argv[4];
 
+outputFolder = process.argv[5];
 
+//const paperInfoRawText: string = fs.readFileSync(paperUrl, 'utf8');
+//const papers = PaperArticle.parseList(paperInfoRawText);
 
-const paperInfoRawText: string = fs.readFileSync(paperUrl, 'utf8');
-const papers = PaperArticle.parseList(paperInfoRawText);
+const papers = DBLPArticle.loadPaperArticlesInDBLPFolderWithFilter(dblpFolderUrl, doiListPath);
 
 const conferenceInfoRawText: string = fs.readFileSync(conferenceUrl, 'utf8');
 const conferences = ConferenceArticle.parseList(conferenceInfoRawText);
-
-
-/*
-papers.forEach((v) => {
-    console.log(v.toCSSString());
-})
-*/
-
-/*
-conferences.forEach((v) => {
-    console.log(v.toString());
-})
-*/
 
 const yearSet = new Set<number>();
 papers.forEach((v) => {

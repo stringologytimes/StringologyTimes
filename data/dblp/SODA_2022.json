@@ -8,17 +8,920 @@
 },
 "time":{
 "@unit":"msecs",
-"text":"0.62"
+"text":"131.14"
 },
 "completions":{
-"@total":"0",
-"@computed":"0",
-"@sent":"0"
+"@total":"1",
+"@computed":"1",
+"@sent":"1",
+"c":{
+"@sc":"149",
+"@dc":"149",
+"@oc":"149",
+"@id":"36138746",
+"text":":facetid:toc:db/conf/soda/soda2022.bht"
+}
 },
 "hits":{
-"@total":"0",
-"@computed":"0",
-"@sent":"0",
-"@first":"0"}
+"@total":"149",
+"@computed":"149",
+"@sent":"149",
+"@first":"0",
+"hit":[{
+"@score":"1",
+"@id":"59218",
+"info":{"authors":{"author":[{"@pid":"129/1654","text":"Amir Abboud"},{"@pid":"k/RobertKrauthgamer","text":"Robert Krauthgamer"},{"@pid":"165/8475","text":"Ohad Trabelsi"}]},"title":"Friendly Cut Sparsifiers and Faster Gomory-Hu Trees.","venue":"SODA","pages":"3630-3649","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/AbboudKT22","doi":"10.1137/1.9781611977073.143","ee":"https://doi.org/10.1137/1.9781611977073.143","url":"https://dblp.org/rec/conf/soda/AbboudKT22"},
+"url":"URL#59218"
+},
+{
+"@score":"1",
+"@id":"59219",
+"info":{"authors":{"author":[{"@pid":"251/5593","text":"Tara Abrishami"},{"@pid":"70/4508","text":"Maria Chudnovsky"},{"@pid":"184/4948","text":"Cemil Dibek"},{"@pid":"63/9303","text":"Pawel Rzazewski"}]},"title":"Polynomial-time algorithm for Maximum Independent Set in bounded-degree graphs with no long induced claws.","venue":"SODA","pages":"1448-1470","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/AbrishamiCDR22","doi":"10.1137/1.9781611977073.61","ee":"https://doi.org/10.1137/1.9781611977073.61","url":"https://dblp.org/rec/conf/soda/AbrishamiCDR22"},
+"url":"URL#59219"
+},
+{
+"@score":"1",
+"@id":"59220",
+"info":{"authors":{"author":[{"@pid":"144/7801","text":"Akanksha Agrawal"},{"@pid":"199/5848","text":"Lawqueen Kanesh"},{"@pid":"78/67","text":"Daniel Lokshtanov"},{"@pid":"60/11535","text":"Fahad Panolan"},{"@pid":"04/9023","text":"M. S. Ramanujan 0001"},{"@pid":"11/5491","text":"Saket Saurabh 0001"},{"@pid":"133/1023","text":"Meirav Zehavi"}]},"title":"Deleting, Eliminating and Decomposing to Hereditary Classes Are All FPT-Equivalent.","venue":"SODA","pages":"1976-2004","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/AgrawalKLPRSZ22","doi":"10.1137/1.9781611977073.79","ee":"https://doi.org/10.1137/1.9781611977073.79","url":"https://dblp.org/rec/conf/soda/AgrawalKLPRSZ22"},
+"url":"URL#59220"
+},
+{
+"@score":"1",
+"@id":"59221",
+"info":{"authors":{"author":[{"@pid":"31/9507","text":"Sara Ahmadian"},{"@pid":"146/7746","text":"Hossein Esfandiari"},{"@pid":"m/VahabSMirrokni","text":"Vahab S. Mirrokni"},{"@pid":"210/2619","text":"Binghui Peng"}]},"title":"Robust Load Balancing with Machine Learned Advice.","venue":"SODA","pages":"20-34","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/AhmadianEMP22","doi":"10.1137/1.9781611977073.2","ee":"https://doi.org/10.1137/1.9781611977073.2","url":"https://dblp.org/rec/conf/soda/AhmadianEMP22"},
+"url":"URL#59221"
+},
+{
+"@score":"1",
+"@id":"59222",
+"info":{"authors":{"author":[{"@pid":"245/0376","text":"Shyan Akmal"},{"@pid":"224/0281","text":"Ce Jin"}]},"title":"Near-Optimal Quantum Algorithms for String Problems.","venue":"SODA","pages":"2791-2832","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/AkmalJ22","doi":"10.1137/1.9781611977073.109","ee":"https://doi.org/10.1137/1.9781611977073.109","url":"https://dblp.org/rec/conf/soda/AkmalJ22"},
+"url":"URL#59222"
+},
+{
+"@score":"1",
+"@id":"59223",
+"info":{"authors":{"author":[{"@pid":"284/7820","text":"Yeganeh Alimohammadi"},{"@pid":"b/ChristianBorgs","text":"Christian Borgs"},{"@pid":"28/4017","text":"Amin Saberi"}]},"title":"Algorithms Using Local Graph Features to Predict Epidemics.","venue":"SODA","pages":"3430-3451","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/AlimohammadiBS22","doi":"10.1137/1.9781611977073.136","ee":"https://doi.org/10.1137/1.9781611977073.136","url":"https://dblp.org/rec/conf/soda/AlimohammadiBS22"},
+"url":"URL#59223"
+},
+{
+"@score":"1",
+"@id":"59224",
+"info":{"authors":{"author":[{"@pid":"317/9904","text":"Santiago Aranguri"},{"@pid":"12/9507","text":"Hsien-Chih Chang"},{"@pid":"262/8254","text":"Dylan Fridman"}]},"title":"Untangling Planar Graphs and Curves by Staying Positive.","venue":"SODA","pages":"211-225","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/AranguriCF22","doi":"10.1137/1.9781611977073.11","ee":"https://doi.org/10.1137/1.9781611977073.11","url":"https://dblp.org/rec/conf/soda/AranguriCF22"},
+"url":"URL#59224"
+},
+{
+"@score":"1",
+"@id":"59225",
+"info":{"authors":{"author":[{"@pid":"172/6323","text":"C. J. Argue"},{"@pid":"27/2931","text":"Anupam Gupta 0001"},{"@pid":"88/4732","text":"Marco Molinaro 0001"},{"@pid":"55/8911","text":"Sahil Singla 0001"}]},"title":"Robust Secretary and Prophet Algorithms for Packing Integer Programs.","venue":"SODA","pages":"1273-1297","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ArgueGMS22","doi":"10.1137/1.9781611977073.53","ee":"https://doi.org/10.1137/1.9781611977073.53","url":"https://dblp.org/rec/conf/soda/ArgueGMS22"},
+"url":"URL#59225"
+},
+{
+"@score":"1",
+"@id":"59226",
+"info":{"authors":{"author":[{"@pid":"25/7423","text":"Gilad Asharov"},{"@pid":"49/11433","text":"Ilan Komargodski"},{"@pid":"03/1108","text":"Wei-Kai Lin"},{"@pid":"04/5824","text":"Enoch Peserico"},{"@pid":"80/4580","text":"Elaine Shi"}]},"title":"Optimal Oblivious Parallel RAM.","venue":"SODA","pages":"2459-2521","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/AsharovKLPS22","doi":"10.1137/1.9781611977073.98","ee":"https://doi.org/10.1137/1.9781611977073.98","url":"https://dblp.org/rec/conf/soda/AsharovKLPS22"},
+"url":"URL#59226"
+},
+{
+"@score":"1",
+"@id":"59227",
+"info":{"authors":{"author":{"@pid":"125/2903","text":"Sepehr Assadi"}},"title":"A Two-Pass (Conditional) Lower Bound for Semi-Streaming Maximum Matching.","venue":"SODA","pages":"708-742","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/Assadi22","doi":"10.1137/1.9781611977073.32","ee":"https://doi.org/10.1137/1.9781611977073.32","url":"https://dblp.org/rec/conf/soda/Assadi22"},
+"url":"URL#59227"
+},
+{
+"@score":"1",
+"@id":"59228",
+"info":{"authors":{"author":[{"@pid":"125/2903","text":"Sepehr Assadi"},{"@pid":"209/9910","text":"Arun Jambulapati"},{"@pid":"98/1295","text":"Yujia Jin"},{"@pid":"125/2326","text":"Aaron Sidford"},{"@pid":"37/2934","text":"Kevin Tian"}]},"title":"Semi-Streaming Bipartite Matching in Fewer Passes and Optimal Space.","venue":"SODA","pages":"627-669","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/AssadiJJST22","doi":"10.1137/1.9781611977073.29","ee":"https://doi.org/10.1137/1.9781611977073.29","url":"https://dblp.org/rec/conf/soda/AssadiJJST22"},
+"url":"URL#59228"
+},
+{
+"@score":"1",
+"@id":"59229",
+"info":{"authors":{"author":[{"@pid":"66/5890","text":"Albert Atserias"},{"@pid":"96/696","text":"Víctor Dalmau"}]},"title":"Promise Constraint Satisfaction and Width.","venue":"SODA","pages":"1129-1153","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/AtseriasD22","doi":"10.1137/1.9781611977073.48","ee":"https://doi.org/10.1137/1.9781611977073.48","url":"https://dblp.org/rec/conf/soda/AtseriasD22"},
+"url":"URL#59229"
+},
+{
+"@score":"1",
+"@id":"59230",
+"info":{"authors":{"author":[{"@pid":"36/3857","text":"Per Austrin"},{"@pid":"254/6838","text":"Kilian Risse"}]},"title":"Perfect Matching in Random Graphs is as Hard as Tseitin.","venue":"SODA","pages":"979-1012","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/AustrinR22","doi":"10.1137/1.9781611977073.43","ee":"https://doi.org/10.1137/1.9781611977073.43","url":"https://dblp.org/rec/conf/soda/AustrinR22"},
+"url":"URL#59230"
+},
+{
+"@score":"1",
+"@id":"59231",
+"info":{"authors":{"author":[{"@pid":"a/YAzar","text":"Yossi Azar"},{"@pid":"l/StefanoLeonardi","text":"Stefano Leonardi"},{"@pid":"211/8092","text":"Noam Touitou"}]},"title":"Distortion-Oblivious Algorithms for Minimizing Flow Time.","venue":"SODA","pages":"252-274","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/AzarLT22","doi":"10.1137/1.9781611977073.13","ee":"https://doi.org/10.1137/1.9781611977073.13","url":"https://dblp.org/rec/conf/soda/AzarLT22"},
+"url":"URL#59231"
+},
+{
+"@score":"1",
+"@id":"59232",
+"info":{"authors":{"author":[{"@pid":"a/YAzar","text":"Yossi Azar"},{"@pid":"81/6547","text":"Debmalya Panigrahi"},{"@pid":"211/8092","text":"Noam Touitou"}]},"title":"Online Graph Algorithms with Predictions.","venue":"SODA","pages":"35-66","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/AzarPT22","doi":"10.1137/1.9781611977073.3","ee":"https://doi.org/10.1137/1.9781611977073.3","url":"https://dblp.org/rec/conf/soda/AzarPT22"},
+"url":"URL#59232"
+},
+{
+"@score":"1",
+"@id":"59233",
+"info":{"authors":{"author":[{"@pid":"184/8450","text":"Mitali Bafna"},{"@pid":"206/6755","text":"Max Hopkins"},{"@pid":"42/209","text":"Tali Kaufman"},{"@pid":"77/4422","text":"Shachar Lovett"}]},"title":"High Dimensional Expanders - Eigenstripping, Pseudorandomness, and Unique Games.","venue":"SODA","pages":"1069-1128","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BafnaHKL22","doi":"10.1137/1.9781611977073.47","ee":"https://doi.org/10.1137/1.9781611977073.47","url":"https://dblp.org/rec/conf/soda/BafnaHKL22"},
+"url":"URL#59233"
+},
+{
+"@score":"1",
+"@id":"59234",
+"info":{"authors":{"author":[{"@pid":"132/1997","text":"Eric Balkanski"},{"@pid":"274/6957","text":"Pranav Garimidi"},{"@pid":"72/7609","text":"Vasilis Gkatzelis"},{"@pid":"256/1650","text":"Daniel Schoepflin 0001"},{"@pid":"275/3566","text":"Xizhi Tan"}]},"title":"Deterministic Budget-Feasible Clock Auctions.","venue":"SODA","pages":"2940-2963","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BalkanskiGGST22","doi":"10.1137/1.9781611977073.114","ee":"https://doi.org/10.1137/1.9781611977073.114","url":"https://dblp.org/rec/conf/soda/BalkanskiGGST22"},
+"url":"URL#59234"
+},
+{
+"@score":"1",
+"@id":"59235",
+"info":{"authors":{"author":[{"@pid":"227/2455","text":"Étienne Bamas"},{"@pid":"306/8255","text":"Marina Drygala"},{"@pid":"239/5932","text":"Andreas Maggiori"}]},"title":"An Improved Analysis of Greedy for Online Steiner Forest.","venue":"SODA","pages":"3202-3229","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BamasDM22","doi":"10.1137/1.9781611977073.125","ee":"https://doi.org/10.1137/1.9781611977073.125","url":"https://dblp.org/rec/conf/soda/BamasDM22"},
+"url":"URL#59235"
+},
+{
+"@score":"1",
+"@id":"59236",
+"info":{"authors":{"author":[{"@pid":"124/9336","text":"Sayan Bandyapadhyay"},{"@pid":"191/1802","text":"William Lochet"},{"@pid":"78/67","text":"Daniel Lokshtanov"},{"@pid":"11/5491","text":"Saket Saurabh 0001"},{"@pid":"11/8310","text":"Jie Xue"}]},"title":"Subexponential Parameterized Algorithms for Cut and Cycle Hitting Problems on H&lt;-Minor-Free Graphs.","venue":"SODA","pages":"2063-2084","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BandyapadhyayLL22","doi":"10.1137/1.9781611977073.82","ee":"https://doi.org/10.1137/1.9781611977073.82","url":"https://dblp.org/rec/conf/soda/BandyapadhyayLL22"},
+"url":"URL#59236"
+},
+{
+"@score":"1",
+"@id":"59237",
+"info":{"authors":{"author":[{"@pid":"88/9184","text":"Siddhartha Banerjee"},{"@pid":"72/7609","text":"Vasilis Gkatzelis"},{"@pid":"168/8210","text":"Artur Gorokh"},{"@pid":"271/0586","text":"Billy Jin"}]},"title":"Online Nash Social Welfare Maximization with Predictions.","venue":"SODA","pages":"1-19","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BanerjeeGGJ22","doi":"10.1137/1.9781611977073.1","ee":"https://doi.org/10.1137/1.9781611977073.1","url":"https://dblp.org/rec/conf/soda/BanerjeeGGJ22"},
+"url":"URL#59237"
+},
+{
+"@score":"1",
+"@id":"59238",
+"info":{"authors":{"author":[{"@pid":"222/1688","text":"Gregor Bankhamer"},{"@pid":"b/PetraBerenbrink","text":"Petra Berenbrink"},{"@pid":"202/1913","text":"Felix Biermeier"},{"@pid":"e/RobertElsasser","text":"Robert Elsässer"},{"@pid":"288/2143","text":"Hamed Hosseinpour"},{"@pid":"46/8192","text":"Dominik Kaaser"},{"@pid":"98/8192","text":"Peter Kling"}]},"title":"Fast Consensus via the Unconstrained Undecided State Dynamics.","venue":"SODA","pages":"3417-3429","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BankhamerBBEHKK22","doi":"10.1137/1.9781611977073.135","ee":"https://doi.org/10.1137/1.9781611977073.135","url":"https://dblp.org/rec/conf/soda/BankhamerBBEHKK22"},
+"url":"URL#59238"
+},
+{
+"@score":"1",
+"@id":"59239",
+"info":{"authors":{"author":[{"@pid":"69/5601","text":"Nikhil Bansal 0001"},{"@pid":"195/5890","text":"Christian Coester"},{"@pid":"k/RaviKumar","text":"Ravi Kumar 0001"},{"@pid":"125/2167","text":"Manish Purohit"},{"@pid":"02/3492","text":"Erik Vee"}]},"title":"Learning-Augmented Weighted Paging.","venue":"SODA","pages":"67-89","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BansalCKPV22","doi":"10.1137/1.9781611977073.4","ee":"https://doi.org/10.1137/1.9781611977073.4","url":"https://dblp.org/rec/conf/soda/BansalCKPV22"},
+"url":"URL#59239"
+},
+{
+"@score":"1",
+"@id":"59240",
+"info":{"authors":{"author":[{"@pid":"68/3678","text":"Libor Barto"},{"@pid":"05/358","text":"Marcin Kozik"}]},"title":"Combinatorial Gap Theorem and Reductions between Promise CSPs.","venue":"SODA","pages":"1204-1220","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BartoK22","doi":"10.1137/1.9781611977073.50","ee":"https://doi.org/10.1137/1.9781611977073.50","url":"https://dblp.org/rec/conf/soda/BartoK22"},
+"url":"URL#59240"
+},
+{
+"@score":"1",
+"@id":"59241",
+"info":{"authors":{"author":[{"@pid":"79/3284","text":"Sabyasachi Basu"},{"@pid":"140/9567-3","text":"Akash Kumar 0003"},{"@pid":"60/4210","text":"C. Seshadhri"}]},"title":"The complexity of testing all properties of planar graphs, and the role of isomorphism.","venue":"SODA","pages":"1702-1714","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BasuKS22","doi":"10.1137/1.9781611977073.69","ee":"https://doi.org/10.1137/1.9781611977073.69","url":"https://dblp.org/rec/conf/soda/BasuKS22"},
+"url":"URL#59241"
+},
+{
+"@score":"1",
+"@id":"59242",
+"info":{"authors":{"author":[{"@pid":"00/1481","text":"Surender Baswana"},{"@pid":"278/3209","text":"Abhyuday Pandey"}]},"title":"Sensitivity Oracles for All-Pairs Mincuts.","venue":"SODA","pages":"581-609","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BaswanaP22","doi":"10.1137/1.9781611977073.27","ee":"https://doi.org/10.1137/1.9781611977073.27","url":"https://dblp.org/rec/conf/soda/BaswanaP22"},
+"url":"URL#59242"
+},
+{
+"@score":"1",
+"@id":"59243",
+"info":{"authors":{"author":[{"@pid":"192/1220","text":"Soheil Behnezhad"},{"@pid":"b/AvrimBlum","text":"Avrim Blum"},{"@pid":"192/1807","text":"Mahsa Derakhshan"}]},"title":"Stochastic Vertex Cover with Few Queries.","venue":"SODA","pages":"1808-1846","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BehnezhadBD22","doi":"10.1137/1.9781611977073.73","ee":"https://doi.org/10.1137/1.9781611977073.73","url":"https://dblp.org/rec/conf/soda/BehnezhadBD22"},
+"url":"URL#59243"
+},
+{
+"@score":"1",
+"@id":"59244",
+"info":{"authors":{"author":[{"@pid":"192/1220","text":"Soheil Behnezhad"},{"@pid":"k/SanjeevKhanna","text":"Sanjeev Khanna"}]},"title":"New Trade-Offs for Fully Dynamic Matching via Hierarchical EDCS.","venue":"SODA","pages":"3529-3566","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BehnezhadK22","doi":"10.1137/1.9781611977073.140","ee":"https://doi.org/10.1137/1.9781611977073.140","url":"https://dblp.org/rec/conf/soda/BehnezhadK22"},
+"url":"URL#59244"
+},
+{
+"@score":"1",
+"@id":"59245",
+"info":{"authors":{"author":[{"@pid":"144/7352","text":"Calvin Beideman"},{"@pid":"83/1935","text":"Karthekeyan Chandrasekaran"},{"@pid":"57/7210-2","text":"Weihang Wang 0002"}]},"title":"Deterministic enumeration of all minimum k-cut-sets in hypergraphs for fixed k.","venue":"SODA","pages":"2208-2228","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BeidemanCW22","doi":"10.1137/1.9781611977073.88","ee":"https://doi.org/10.1137/1.9781611977073.88","url":"https://dblp.org/rec/conf/soda/BeidemanCW22"},
+"url":"URL#59245"
+},
+{
+"@score":"1",
+"@id":"59246",
+"info":{"authors":{"author":[{"@pid":"247/0884","text":"Benjamin Aram Berendsohn"},{"@pid":"85/2288-2","text":"László Kozma 0002"}]},"title":"Splay trees on trees.","venue":"SODA","pages":"1875-1900","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BerendsohnK22","doi":"10.1137/1.9781611977073.75","ee":"https://doi.org/10.1137/1.9781611977073.75","url":"https://dblp.org/rec/conf/soda/BerendsohnK22"},
+"url":"URL#59246"
+},
+{
+"@score":"1",
+"@id":"59247",
+"info":{"authors":{"author":[{"@pid":"34/8239-1","text":"Lorenzo Beretta 0001"},{"@pid":"211/6738","text":"Jakub Tetek"}]},"title":"Better Sum Estimation via Weighted Sampling.","venue":"SODA","pages":"2303-2338","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BerettaT22","doi":"10.1137/1.9781611977073.93","ee":"https://doi.org/10.1137/1.9781611977073.93","url":"https://dblp.org/rec/conf/soda/BerettaT22"},
+"url":"URL#59247"
+},
+{
+"@score":"1",
+"@id":"59248",
+"info":{"authors":{"author":[{"@pid":"b/CBhattacharyya","text":"Chiranjib Bhattacharyya"},{"@pid":"k/RaviKannan","text":"Ravindran Kannan"},{"@pid":"k/AmitKumar1","text":"Amit Kumar 0001"}]},"title":"How many Clusters? - An algorithmic answer.","venue":"SODA","pages":"2607-2640","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BhattacharyyaKK22","doi":"10.1137/1.9781611977073.102","ee":"https://doi.org/10.1137/1.9781611977073.102","url":"https://dblp.org/rec/conf/soda/BhattacharyyaKK22"},
+"url":"URL#59248"
+},
+{
+"@score":"1",
+"@id":"59249",
+"info":{"authors":{"author":[{"@pid":"317/9948","text":"Aviv Bick"},{"@pid":"39/4172","text":"Gillat Kol"},{"@pid":"02/2005","text":"Rotem Oshman"}]},"title":"Distributed Zero-Knowledge Proofs Over Networks.","venue":"SODA","pages":"2426-2458","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BickKO22","doi":"10.1137/1.9781611977073.97","ee":"https://doi.org/10.1137/1.9781611977073.97","url":"https://dblp.org/rec/conf/soda/BickKO22"},
+"url":"URL#59249"
+},
+{
+"@score":"1",
+"@id":"59250",
+"info":{"authors":{"author":{"@pid":"45/8522","text":"Christopher J. Bishop"}},"title":"Optimal angle bounds for Steiner triangulations of polygons.","venue":"SODA","pages":"3127-3143","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/Bishop22","doi":"10.1137/1.9781611977073.121","ee":"https://doi.org/10.1137/1.9781611977073.121","url":"https://dblp.org/rec/conf/soda/Bishop22"},
+"url":"URL#59250"
+},
+{
+"@score":"1",
+"@id":"59251",
+"info":{"authors":{"author":[{"@pid":"262/3347","text":"Mitchell Black"},{"@pid":"223/2693","text":"William Maxwell"},{"@pid":"98/6971","text":"Amir Nayyeri"},{"@pid":"317/9997","text":"Eli Winkelman"}]},"title":"Computational Topology in a Collapsing Universe - Laplacians, Homology, Cohomology.","venue":"SODA","pages":"226-251","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BlackMNW22","doi":"10.1137/1.9781611977073.12","ee":"https://doi.org/10.1137/1.9781611977073.12","url":"https://dblp.org/rec/conf/soda/BlackMNW22"},
+"url":"URL#59251"
+},
+{
+"@score":"1",
+"@id":"59252",
+"info":{"authors":{"author":[{"@pid":"00/10871","text":"Antonio Blanca"},{"@pid":"00/9831","text":"Pietro Caputo"},{"@pid":"167/9061","text":"Zongchen Chen"},{"@pid":"288/1357","text":"Daniel Parisi"},{"@pid":"00/3605","text":"Daniel Stefankovic"},{"@pid":"03/4633","text":"Eric Vigoda"}]},"title":"On Mixing of Markov Chains - Coupling, Spectral Independence, and Entropy Factorization.","venue":"SODA","pages":"3670-3692","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BlancaCCPSV22","doi":"10.1137/1.9781611977073.145","ee":"https://doi.org/10.1137/1.9781611977073.145","url":"https://dblp.org/rec/conf/soda/BlancaCCPSV22"},
+"url":"URL#59252"
+},
+{
+"@score":"1",
+"@id":"59253",
+"info":{"authors":{"author":[{"@pid":"157/3752","text":"Greg Bodwin"},{"@pid":"27/2346","text":"Michael Dinitz"},{"@pid":"259/2552","text":"Caleb Robelle"}]},"title":"Partially Optimal Edge Fault-Tolerant Spanners.","venue":"SODA","pages":"3272-3286","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BodwinDR22","doi":"10.1137/1.9781611977073.129","ee":"https://doi.org/10.1137/1.9781611977073.129","url":"https://dblp.org/rec/conf/soda/BodwinDR22"},
+"url":"URL#59253"
+},
+{
+"@score":"1",
+"@id":"59254",
+"info":{"authors":{"author":[{"@pid":"131/6607","text":"Édouard Bonnet"},{"@pid":"87/5080-2","text":"Eun Jung Kim 0002"},{"@pid":"297/3871","text":"Amadeus Reinald"},{"@pid":"78/5708","text":"Stéphan Thomassé"}]},"title":"Twin-width VI - the lens of contraction sequences.","venue":"SODA","pages":"1036-1056","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BonnetKRT22","doi":"10.1137/1.9781611977073.45","ee":"https://doi.org/10.1137/1.9781611977073.45","url":"https://dblp.org/rec/conf/soda/BonnetKRT22"},
+"url":"URL#59254"
+},
+{
+"@score":"1",
+"@id":"59255",
+"info":{"authors":{"author":[{"@pid":"163/2227","text":"Shant Boodaghians"},{"@pid":"228/6594","text":"Bhaskar Ray Chaudhury"},{"@pid":"50/7864","text":"Ruta Mehta"}]},"title":"Polynomial Time Algorithms to Find an Approximate Competitive Equilibrium for Chores.","venue":"SODA","pages":"2285-2302","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BoodaghiansCM22","doi":"10.1137/1.9781611977073.92","ee":"https://doi.org/10.1137/1.9781611977073.92","url":"https://dblp.org/rec/conf/soda/BoodaghiansCM22"},
+"url":"URL#59255"
+},
+{
+"@score":"1",
+"@id":"59256",
+"info":{"authors":{"author":[{"@pid":"96/2643","text":"Karl Bringmann"},{"@pid":"39/8000","text":"Anne Driemel"},{"@pid":"146/9680","text":"André Nusser"},{"@pid":"142/2508","text":"Ioannis Psarros"}]},"title":"Tight Bounds for Approximate Near Neighbor Searching for Time Series under the Fréchet Distance.","venue":"SODA","pages":"517-550","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BringmannDNP22","doi":"10.1137/1.9781611977073.25","ee":"https://doi.org/10.1137/1.9781611977073.25","url":"https://dblp.org/rec/conf/soda/BringmannDNP22"},
+"url":"URL#59256"
+},
+{
+"@score":"1",
+"@id":"59257",
+"info":{"authors":{"author":[{"@pid":"96/2643","text":"Karl Bringmann"},{"@pid":"228/8075","text":"Nick Fischer"},{"@pid":"151/0349","text":"Vasileios Nakos"}]},"title":"Deterministic and Las Vegas Algorithms for Sparse Nonnegative Convolution.","venue":"SODA","pages":"3069-3090","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/BringmannFN22","doi":"10.1137/1.9781611977073.119","ee":"https://doi.org/10.1137/1.9781611977073.119","url":"https://dblp.org/rec/conf/soda/BringmannFN22"},
+"url":"URL#59257"
+},
+{
+"@score":"1",
+"@id":"59258",
+"info":{"authors":{"author":[{"@pid":"236/4276","text":"Manuel Cáceres"},{"@pid":"173/4604","text":"Massimo Cairo"},{"@pid":"39/1826","text":"Brendan Mumey"},{"@pid":"81/4826","text":"Romeo Rizzi"},{"@pid":"98/3921","text":"Alexandru I. Tomescu"}]},"title":"Sparsifying, Shrinking and Splicing for Minimum Path Cover in Parameterized Linear Time.","venue":"SODA","pages":"359-376","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/CaceresCMRT22","doi":"10.1137/1.9781611977073.18","ee":"https://doi.org/10.1137/1.9781611977073.18","url":"https://dblp.org/rec/conf/soda/CaceresCMRT22"},
+"url":"URL#59258"
+},
+{
+"@score":"1",
+"@id":"59259",
+"info":{"authors":{"author":[{"@pid":"96/5760","text":"Constantine Caramanis"},{"@pid":"70/7588","text":"Paul Dütting"},{"@pid":"195/2526","text":"Matthew Faw"},{"@pid":"243/5755","text":"Federico Fusco"},{"@pid":"195/6203","text":"Philip Lazos"},{"@pid":"l/StefanoLeonardi","text":"Stefano Leonardi"},{"@pid":"163/9826","text":"Orestis Papadigenopoulos"},{"@pid":"97/7802","text":"Emmanouil Pountourakis"},{"@pid":"163/6389","text":"Rebecca Reiffenhäuser"}]},"title":"Single-Sample Prophet Inequalities via Greedy-Ordered Selection.","venue":"SODA","pages":"1298-1325","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/CaramanisDFFLLP22","doi":"10.1137/1.9781611977073.54","ee":"https://doi.org/10.1137/1.9781611977073.54","url":"https://dblp.org/rec/conf/soda/CaramanisDFFLLP22"},
+"url":"URL#59259"
+},
+{
+"@score":"1",
+"@id":"59260",
+"info":{"authors":{"author":[{"@pid":"85/4356","text":"Jean Cardinal"},{"@pid":"239/8813","text":"Arturo I. Merino"},{"@pid":"93/8602","text":"Torsten Mütze"}]},"title":"Efficient generation of elimination trees and graph associahedra.","venue":"SODA","pages":"2128-2140","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/CardinalMM22","doi":"10.1137/1.9781611977073.84","ee":"https://doi.org/10.1137/1.9781611977073.84","url":"https://dblp.org/rec/conf/soda/CardinalMM22"},
+"url":"URL#59260"
+},
+{
+"@score":"1",
+"@id":"59261",
+"info":{"authors":{"author":[{"@pid":"255/9278","text":"Ruoxu Cen"},{"@pid":"12/975-6","text":"Jason Li 0006"},{"@pid":"81/6547","text":"Debmalya Panigrahi"}]},"title":"Augmenting Edge Connectivity via Isolating Cuts.","venue":"SODA","pages":"3237-3252","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/CenLP22","doi":"10.1137/1.9781611977073.127","ee":"https://doi.org/10.1137/1.9781611977073.127","url":"https://dblp.org/rec/conf/soda/CenLP22"},
+"url":"URL#59261"
+},
+{
+"@score":"1",
+"@id":"59262",
+"info":{"authors":{"author":[{"@pid":"60/3556","text":"Timothy M. Chan"},{"@pid":"205/3189","text":"Qizheng He"},{"@pid":"s/SubhashSuri","text":"Subhash Suri"},{"@pid":"11/8310-3","text":"Jie Xue 0003"}]},"title":"Dynamic Geometric Set Cover, Revisited.","venue":"SODA","pages":"3496-3528","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChanHSX22","doi":"10.1137/1.9781611977073.139","ee":"https://doi.org/10.1137/1.9781611977073.139","url":"https://dblp.org/rec/conf/soda/ChanHSX22"},
+"url":"URL#59262"
+},
+{
+"@score":"1",
+"@id":"59263",
+"info":{"authors":{"author":[{"@pid":"60/3556","text":"Timothy M. Chan"},{"@pid":"87/10078","text":"Da Wei Zheng"}]},"title":"Hopcroft&apos;s Problem, Log-Star Shaving, 2D Fractional Cascading, and Decision Trees.","venue":"SODA","pages":"190-210","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChanZ22","doi":"10.1137/1.9781611977073.10","ee":"https://doi.org/10.1137/1.9781611977073.10","url":"https://dblp.org/rec/conf/soda/ChanZ22"},
+"url":"URL#59263"
+},
+{
+"@score":"1",
+"@id":"59264",
+"info":{"authors":{"author":[{"@pid":"c/MosesCharikar","text":"Moses Charikar"},{"@pid":"195/6273","text":"Lunjia Hu"}]},"title":"Near-Optimal Explainable k-Means for All Dimensions.","venue":"SODA","pages":"2580-2606","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/CharikarH22","doi":"10.1137/1.9781611977073.101","ee":"https://doi.org/10.1137/1.9781611977073.101","url":"https://dblp.org/rec/conf/soda/CharikarH22"},
+"url":"URL#59264"
+},
+{
+"@score":"1",
+"@id":"59265",
+"info":{"authors":{"author":[{"@pid":"c/MosesCharikar","text":"Moses Charikar"},{"@pid":"215/3431","text":"Prasanna Ramakrishnan"}]},"title":"Metric Distortion Bounds for Randomized Social Choice.","venue":"SODA","pages":"2986-3004","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/CharikarR22","doi":"10.1137/1.9781611977073.116","ee":"https://doi.org/10.1137/1.9781611977073.116","url":"https://dblp.org/rec/conf/soda/CharikarR22"},
+"url":"URL#59265"
+},
+{
+"@score":"1",
+"@id":"59266",
+"info":{"authors":{"author":[{"@pid":"38/2434","text":"Shiri Chechik"},{"@pid":"17/322","text":"Tianyi Zhang"}]},"title":"Nearly 2-Approximate Distance Oracles in Subquadratic Time.","venue":"SODA","pages":"551-580","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChechikZ22","doi":"10.1137/1.9781611977073.26","ee":"https://doi.org/10.1137/1.9781611977073.26","url":"https://dblp.org/rec/conf/soda/ChechikZ22"},
+"url":"URL#59266"
+},
+{
+"@score":"1",
+"@id":"59267",
+"info":{"authors":{"author":[{"@pid":"82/3212","text":"Chandra Chekuri"},{"@pid":"157/8351","text":"Kent Quanrud"},{"@pid":"153/5354","text":"Manuel R. Torres"}]},"title":"Densest Subgraph - Supermodularity, Iterative Peeling, and Flow.","venue":"SODA","pages":"1531-1555","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChekuriQT22","doi":"10.1137/1.9781611977073.64","ee":"https://doi.org/10.1137/1.9781611977073.64","url":"https://dblp.org/rec/conf/soda/ChekuriQT22"},
+"url":"URL#59267"
+},
+{
+"@score":"1",
+"@id":"59268",
+"info":{"authors":{"author":[{"@pid":"65/1924","text":"Thomas Chen"},{"@pid":"16/3283","text":"Xi Chen"},{"@pid":"210/2619","text":"Binghui Peng"},{"@pid":"y/MihalisYannakakis","text":"Mihalis Yannakakis"}]},"title":"Computational Hardness of the Hylland-Zeckhauser Scheme.","venue":"SODA","pages":"2253-2268","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChenCPY22","doi":"10.1137/1.9781611977073.90","ee":"https://doi.org/10.1137/1.9781611977073.90","url":"https://dblp.org/rec/conf/soda/ChenCPY22"},
+"url":"URL#59268"
+},
+{
+"@score":"1",
+"@id":"59269",
+"info":{"authors":{"author":[{"@pid":"16/3283-1","text":"Xi Chen 0001"},{"@pid":"49/2398","text":"Anindya De"},{"@pid":"00/10547","text":"Chin Ho Lee"},{"@pid":"s/RAServedio","text":"Rocco A. Servedio"},{"@pid":"225/4844","text":"Sandip Sinha"}]},"title":"Near-Optimal Average-Case Approximate Trace Reconstruction from Few Traces.","venue":"SODA","pages":"779-821","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChenDLSS22","doi":"10.1137/1.9781611977073.34","ee":"https://doi.org/10.1137/1.9781611977073.34","url":"https://dblp.org/rec/conf/soda/ChenDLSS22"},
+"url":"URL#59269"
+},
+{
+"@score":"1",
+"@id":"59270",
+"info":{"authors":{"author":[{"@pid":"167/9061","text":"Zongchen Chen"},{"@pid":"16/9673","text":"Andreas Galanis"},{"@pid":"00/3605","text":"Daniel Stefankovic"},{"@pid":"03/4633","text":"Eric Vigoda"}]},"title":"Sampling Colorings and Independent Sets of Random Regular Bipartite Graphs in the Non-Uniqueness Region.","venue":"SODA","pages":"2198-2207","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChenGSV22","doi":"10.1137/1.9781611977073.87","ee":"https://doi.org/10.1137/1.9781611977073.87","url":"https://dblp.org/rec/conf/soda/ChenGSV22"},
+"url":"URL#59270"
+},
+{
+"@score":"1",
+"@id":"59271",
+"info":{"authors":{"author":[{"@pid":"16/3283-1","text":"Xi Chen 0001"},{"@pid":"218/5430","text":"Yaonan Jin"},{"@pid":"245/9157","text":"Tim Randolph"},{"@pid":"s/RAServedio","text":"Rocco A. Servedio"}]},"title":"Average-Case Subset Balancing Problems.","venue":"SODA","pages":"743-778","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChenJRS22","doi":"10.1137/1.9781611977073.33","ee":"https://doi.org/10.1137/1.9781611977073.33","url":"https://dblp.org/rec/conf/soda/ChenJRS22"},
+"url":"URL#59271"
+},
+{
+"@score":"1",
+"@id":"59272",
+"info":{"authors":{"author":[{"@pid":"116/0948-1","text":"Lijie Chen 0001"},{"@pid":"224/0281","text":"Ce Jin"},{"@pid":"w/RyanWilliams","text":"R. Ryan Williams"},{"@pid":"224/0209","text":"Hongxun Wu"}]},"title":"Truly Low-Space Element Distinctness and Subset Sum via Pseudorandom Hash Functions.","venue":"SODA","pages":"1661-1678","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChenJWW22","doi":"10.1137/1.9781611977073.67","ee":"https://doi.org/10.1137/1.9781611977073.67","url":"https://dblp.org/rec/conf/soda/ChenJWW22"},
+"url":"URL#59272"
+},
+{
+"@score":"1",
+"@id":"59273",
+"info":{"authors":{"author":[{"@pid":"16/3283","text":"Xi Chen"},{"@pid":"54/31","text":"Shyamal Patel"}]},"title":"Distribution-free Testing for Halfspaces (Almost) Requires PAC Learning.","venue":"SODA","pages":"1715-1743","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChenP22","doi":"10.1137/1.9781611977073.70","ee":"https://doi.org/10.1137/1.9781611977073.70","url":"https://dblp.org/rec/conf/soda/ChenP22"},
+"url":"URL#59273"
+},
+{
+"@score":"1",
+"@id":"59274",
+"info":{"authors":{"author":[{"@pid":"166/1291","text":"Antares Chen"},{"@pid":"44/7540","text":"Jonathan Shi"},{"@pid":"t/LucaTrevisan","text":"Luca Trevisan"}]},"title":"Cut Sparsification of the Clique Beyond the Ramanujan Bound - A Separation of Cut Versus Spectral Sparsification.","venue":"SODA","pages":"3693-3731","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChenST22","doi":"10.1137/1.9781611977073.146","ee":"https://doi.org/10.1137/1.9781611977073.146","url":"https://dblp.org/rec/conf/soda/ChenST22"},
+"url":"URL#59274"
+},
+{
+"@score":"1",
+"@id":"59275",
+"info":{"authors":{"author":[{"@pid":"13/3479","text":"Lin Chen"},{"@pid":"236/5952","text":"Liangde Tao"},{"@pid":"86/7248","text":"José Verschae"}]},"title":"Tight running times for minimum &lt;italic&gt;ℓq&lt;/italic&gt;-norm load balancing - beyond exponential dependencies on 1/&lt;italic&gt;∊&lt;/italic&gt;.","venue":"SODA","pages":"275-315","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChenTV22","doi":"10.1137/1.9781611977073.14","ee":"https://doi.org/10.1137/1.9781611977073.14","url":"https://dblp.org/rec/conf/soda/ChenTV22"},
+"url":"URL#59275"
+},
+{
+"@score":"1",
+"@id":"59276",
+"info":{"authors":{"author":[{"@pid":"236/5817","text":"Nadiia Chepurko"},{"@pid":"89/2783","text":"Kenneth L. Clarkson"},{"@pid":"255/5684","text":"Praneeth Kacham"},{"@pid":"w/DPWoodruff","text":"David P. Woodruff"}]},"title":"Near-Optimal Algorithms for Linear Algebra in the Current Matrix Multiplication Time.","venue":"SODA","pages":"3043-3068","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChepurkoCKW22","doi":"10.1137/1.9781611977073.118","ee":"https://doi.org/10.1137/1.9781611977073.118","url":"https://dblp.org/rec/conf/soda/ChepurkoCKW22"},
+"url":"URL#59276"
+},
+{
+"@score":"1",
+"@id":"59277",
+"info":{"authors":{"author":[{"@pid":"288/0905","text":"Shucheng Chi"},{"@pid":"90/5794","text":"Ran Duan"},{"@pid":"283/4508","text":"Tianle Xie"}]},"title":"Faster Algorithms for Bounded-Difference Min-Plus Product.","venue":"SODA","pages":"1435-1447","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChiDX22","doi":"10.1137/1.9781611977073.60","ee":"https://doi.org/10.1137/1.9781611977073.60","url":"https://dblp.org/rec/conf/soda/ChiDX22"},
+"url":"URL#59277"
+},
+{
+"@score":"1",
+"@id":"59278",
+"info":{"authors":{"author":[{"@pid":"54/1902","text":"Eden Chlamtác"},{"@pid":"08/4400","text":"Yury Makarychev"},{"@pid":"116/4679","text":"Ali Vakilian"}]},"title":"Approximating Fair Clustering with Cascaded Norm Objectives.","venue":"SODA","pages":"2664-2683","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ChlamtacMV22","doi":"10.1137/1.9781611977073.104","ee":"https://doi.org/10.1137/1.9781611977073.104","url":"https://dblp.org/rec/conf/soda/ChlamtacMV22"},
+"url":"URL#59278"
+},
+{
+"@score":"1",
+"@id":"59279",
+"info":{"authors":{"author":[{"@pid":"297/3454","text":"Lorenzo Ciardo"},{"@pid":"z/StanislavZivny","text":"Stanislav Zivný"}]},"title":"CLAP - A New Algorithm for Promise CSPs.","venue":"SODA","pages":"1057-1068","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/CiardoZ22","doi":"10.1137/1.9781611977073.46","ee":"https://doi.org/10.1137/1.9781611977073.46","url":"https://dblp.org/rec/conf/soda/CiardoZ22"},
+"url":"URL#59279"
+},
+{
+"@score":"1",
+"@id":"59280",
+"info":{"authors":{"author":[{"@pid":"136/5814","text":"Vincent Cohen-Addad"},{"@pid":"27/2931","text":"Anupam Gupta 0001"},{"@pid":"195/6273","text":"Lunjia Hu"},{"@pid":"60/5264","text":"Hoon Oh"},{"@pid":"203/8484","text":"David Saulpic"}]},"title":"An Improved Local Search Algorithm for k-Median.","venue":"SODA","pages":"1556-1612","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/Cohen-AddadGHOS22","doi":"10.1137/1.9781611977073.65","ee":"https://doi.org/10.1137/1.9781611977073.65","url":"https://dblp.org/rec/conf/soda/Cohen-AddadGHOS22"},
+"url":"URL#59280"
+},
+{
+"@score":"1",
+"@id":"59281",
+"info":{"authors":{"author":[{"@pid":"136/5814","text":"Vincent Cohen-Addad"},{"@pid":"70/9222","text":"Karthik C. S."},{"@pid":"129/5624","text":"Euiwoong Lee"}]},"title":"Johnson Coverage Hypothesis - Inapproximability of k-means and k-median in ℓp-metrics.","venue":"SODA","pages":"1493-1530","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/Cohen-AddadSL22","doi":"10.1137/1.9781611977073.63","ee":"https://doi.org/10.1137/1.9781611977073.63","url":"https://dblp.org/rec/conf/soda/Cohen-AddadSL22"},
+"url":"URL#59281"
+},
+{
+"@score":"1",
+"@id":"59282",
+"info":{"authors":{"author":[{"@pid":"63/522","text":"Amin Coja-Oghlan"},{"@pid":"56/1975","text":"Oliver Cooley"},{"@pid":"71/2814","text":"Mihyun Kang"},{"@pid":"64/4749","text":"Joon Lee"},{"@pid":"221/2761","text":"Jean Bernoulli Ravelomanana"}]},"title":"The Sparse Parity Matrix.","venue":"SODA","pages":"822-833","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/Coja-OghlanCKLR22","doi":"10.1137/1.9781611977073.35","ee":"https://doi.org/10.1137/1.9781611977073.35","url":"https://dblp.org/rec/conf/soda/Coja-OghlanCKLR22"},
+"url":"URL#59282"
+},
+{
+"@score":"1",
+"@id":"59283",
+"info":{"authors":{"author":[{"@pid":"07/3765","text":"Daniel Dadush"},{"@pid":"12/2680","text":"László A. Végh"},{"@pid":"45/1147","text":"Giacomo Zambelli"}]},"title":"On finding exact solutions of linear programs in the oracle model.","venue":"SODA","pages":"2700-2722","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/DadushVZ22","doi":"10.1137/1.9781611977073.106","ee":"https://doi.org/10.1137/1.9781611977073.106","url":"https://dblp.org/rec/conf/soda/DadushVZ22"},
+"url":"URL#59283"
+},
+{
+"@score":"1",
+"@id":"59284",
+"info":{"authors":{"author":[{"@pid":"145/0249-1","text":"Debarati Das 0001"},{"@pid":"223/4496","text":"Maximilian Probst Gutenberg"},{"@pid":"79/1632","text":"Christian Wulff-Nilsen"}]},"title":"A Near-Optimal Offline Algorithm for Dynamic All-Pairs Shortest Paths in Planar Digraphs.","venue":"SODA","pages":"3482-3495","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/DasGW22","doi":"10.1137/1.9781611977073.138","ee":"https://doi.org/10.1137/1.9781611977073.138","url":"https://dblp.org/rec/conf/soda/DasGW22"},
+"url":"URL#59284"
+},
+{
+"@score":"1",
+"@id":"59285",
+"info":{"authors":{"author":[{"@pid":"223/5708","text":"Sami Davies"},{"@pid":"54/1978","text":"Janardhan Kulkarni"},{"@pid":"10/1896","text":"Thomas Rothvoss"},{"@pid":"194/3922","text":"Sai Sandeep"},{"@pid":"157/6045","text":"Jakub Tarnawski"},{"@pid":"42/1023","text":"Yihao Zhang"}]},"title":"On the Hardness of Scheduling With Non-Uniform Communication Delays.","venue":"SODA","pages":"316-328","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/DaviesKRSTZ22","doi":"10.1137/1.9781611977073.15","ee":"https://doi.org/10.1137/1.9781611977073.15","url":"https://dblp.org/rec/conf/soda/DaviesKRSTZ22"},
+"url":"URL#59285"
+},
+{
+"@score":"1",
+"@id":"59286",
+"info":{"authors":{"author":[{"@pid":"49/2398","text":"Anindya De"},{"@pid":"282/1473","text":"Shivam Nadimpalli"},{"@pid":"s/RAServedio","text":"Rocco A. Servedio"}]},"title":"Approximating Sumset Size.","venue":"SODA","pages":"2339-2357","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/DeNS22","doi":"10.1137/1.9781611977073.94","ee":"https://doi.org/10.1137/1.9781611977073.94","url":"https://dblp.org/rec/conf/soda/DeNS22"},
+"url":"URL#59286"
+},
+{
+"@score":"1",
+"@id":"59287",
+"info":{"authors":{"author":[{"@pid":"190/7818","text":"Souvik Dhara"},{"@pid":"252/8492","text":"Julia Gaudio"},{"@pid":"m/EMossel","text":"Elchanan Mossel"},{"@pid":"120/3958","text":"Colin Sandon"}]},"title":"Spectral recovery of binary censored block models.","venue":"SODA","pages":"3389-3416","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/DharaGMS22","doi":"10.1137/1.9781611977073.134","ee":"https://doi.org/10.1137/1.9781611977073.134","url":"https://dblp.org/rec/conf/soda/DharaGMS22"},
+"url":"URL#59287"
+},
+{
+"@score":"1",
+"@id":"59288",
+"info":{"authors":{"author":[{"@pid":"169/3453","text":"Sally Dong"},{"@pid":"46/2974","text":"Yu Gao"},{"@pid":"179/2404","text":"Gramoz Goranci"},{"@pid":"125/2145","text":"Yin Tat Lee"},{"@pid":"46/7997","text":"Richard Peng"},{"@pid":"25/9221","text":"Sushant Sachdeva"},{"@pid":"268/5500","text":"Guanghao Ye"}]},"title":"Nested Dissection Meets IPMs - Planar Min-Cost Flow in Nearly-Linear Time.","venue":"SODA","pages":"124-153","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/DongGGLPSY22","doi":"10.1137/1.9781611977073.7","ee":"https://doi.org/10.1137/1.9781611977073.7","url":"https://dblp.org/rec/conf/soda/DongGGLPSY22"},
+"url":"URL#59288"
+},
+{
+"@score":"1",
+"@id":"59289",
+"info":{"authors":{"author":[{"@pid":"282/2915","text":"Dingding Dong"},{"@pid":"279/9791","text":"Nitya Mani"},{"@pid":"58/8828","text":"Yufei Zhao"}]},"title":"Enumerating k-SAT functions.","venue":"SODA","pages":"2141-2184","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/DongMZ22","doi":"10.1137/1.9781611977073.85","ee":"https://doi.org/10.1137/1.9781611977073.85","url":"https://dblp.org/rec/conf/soda/DongMZ22"},
+"url":"URL#59289"
+},
+{
+"@score":"1",
+"@id":"59290",
+"info":{"authors":{"author":[{"@pid":"195/5711","text":"Bartlomiej Dudek 0001"},{"@pid":"49/3088","text":"Pawel Gawrychowski"},{"@pid":"213/7336","text":"Garance Gourdel"},{"@pid":"99/3746","text":"Tatiana Starikovskaya"}]},"title":"Streaming Regular Expression Membership and Pattern Matching.","venue":"SODA","pages":"670-694","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/DudekGGS22","doi":"10.1137/1.9781611977073.30","ee":"https://doi.org/10.1137/1.9781611977073.30","url":"https://dblp.org/rec/conf/soda/DudekGGS22"},
+"url":"URL#59290"
+},
+{
+"@score":"1",
+"@id":"59291",
+"info":{"authors":{"author":[{"@pid":"157/6064","text":"Alon Eden"},{"@pid":"147/8529","text":"Kira Goldner"},{"@pid":"180/1389","text":"Shuran Zheng"}]},"title":"Private Interdependent Valuations.","venue":"SODA","pages":"2920-2939","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/EdenGZ22","doi":"10.1137/1.9781611977073.113","ee":"https://doi.org/10.1137/1.9781611977073.113","url":"https://dblp.org/rec/conf/soda/EdenGZ22"},
+"url":"URL#59291"
+},
+{
+"@score":"1",
+"@id":"59292",
+"info":{"authors":{"author":[{"@pid":"161/3999","text":"Talya Eden"},{"@pid":"272/8736","text":"Saleet Mossel"},{"@pid":"85/4800","text":"Dana Ron"}]},"title":"Approximating the Arboricity in Sublinear Time.","venue":"SODA","pages":"2404-2425","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/EdenMR22","doi":"10.1137/1.9781611977073.96","ee":"https://doi.org/10.1137/1.9781611977073.96","url":"https://dblp.org/rec/conf/soda/EdenMR22"},
+"url":"URL#59292"
+},
+{
+"@score":"1",
+"@id":"59293",
+"info":{"authors":{"author":[{"@pid":"58/7802","text":"Alessandro Epasto"},{"@pid":"23/1799","text":"Mohammad Mahdian"},{"@pid":"m/VahabSMirrokni","text":"Vahab S. Mirrokni"},{"@pid":"148/9632","text":"Peilin Zhong"}]},"title":"Massively Parallel and Dynamic Algorithms for Minimum Size Clustering.","venue":"SODA","pages":"1613-1660","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/EpastoMMZ22","doi":"10.1137/1.9781611977073.66","ee":"https://doi.org/10.1137/1.9781611977073.66","url":"https://dblp.org/rec/conf/soda/EpastoMMZ22"},
+"url":"URL#59293"
+},
+{
+"@score":"1",
+"@id":"59294",
+"info":{"authors":{"author":[{"@pid":"58/7802","text":"Alessandro Epasto"},{"@pid":"23/1799","text":"Mohammad Mahdian"},{"@pid":"m/VahabSMirrokni","text":"Vahab S. Mirrokni"},{"@pid":"148/9632","text":"Peilin Zhong"}]},"title":"Improved Sliding Window Algorithms for Clustering and Coverage via Bucketing-Based Sketches.","venue":"SODA","pages":"3005-3042","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/EpastoMMZ22a","doi":"10.1137/1.9781611977073.117","ee":"https://doi.org/10.1137/1.9781611977073.117","url":"https://dblp.org/rec/conf/soda/EpastoMMZ22a"},
+"url":"URL#59294"
+},
+{
+"@score":"1",
+"@id":"59295",
+"info":{"authors":{"author":[{"@pid":"146/7746","text":"Hossein Esfandiari"},{"@pid":"m/VahabSMirrokni","text":"Vahab S. Mirrokni"},{"@pid":"222/2805","text":"Shyam Narayanan"}]},"title":"Almost Tight Approximation Algorithms for Explainable Clustering.","venue":"SODA","pages":"2641-2663","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/EsfandiariMN22","doi":"10.1137/1.9781611977073.103","ee":"https://doi.org/10.1137/1.9781611977073.103","url":"https://dblp.org/rec/conf/soda/EsfandiariMN22"},
+"url":"URL#59295"
+},
+{
+"@score":"1",
+"@id":"59296",
+"info":{"authors":{"author":[{"@pid":"10/2309","text":"Maryam Fazel"},{"@pid":"125/2145","text":"Yin Tat Lee"},{"@pid":"237/9510","text":"Swati Padmanabhan"},{"@pid":"125/2326","text":"Aaron Sidford"}]},"title":"Computing Lewis Weights to High Precision.","venue":"SODA","pages":"2723-2742","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/FazelLPS22","doi":"10.1137/1.9781611977073.107","ee":"https://doi.org/10.1137/1.9781611977073.107","url":"https://dblp.org/rec/conf/soda/FazelLPS22"},
+"url":"URL#59296"
+},
+{
+"@score":"1",
+"@id":"59297",
+"info":{"authors":{"author":[{"@pid":"202/1955","text":"Jacob Focke"},{"@pid":"95/1832","text":"Dániel Marx"},{"@pid":"63/9303","text":"Pawel Rzazewski"}]},"title":"Counting list homomorphisms from graphs of bounded treewidth - tight complexity bounds.","venue":"SODA","pages":"431-458","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/FockeMR22","doi":"10.1137/1.9781611977073.22","ee":"https://doi.org/10.1137/1.9781611977073.22","url":"https://dblp.org/rec/conf/soda/FockeMR22"},
+"url":"URL#59297"
+},
+{
+"@score":"1",
+"@id":"59298",
+"info":{"authors":{"author":[{"@pid":"f/FedorVFomin","text":"Fedor V. Fomin"},{"@pid":"06/6306","text":"Petr A. Golovach"},{"@pid":"224/0154","text":"Danil Sagunov"},{"@pid":"236/6131","text":"Kirill Simonov"}]},"title":"Algorithmic Extensions of Dirac&apos;s Theorem.","venue":"SODA","pages":"406-416","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/FominGSS22","doi":"10.1137/1.9781611977073.20","ee":"https://doi.org/10.1137/1.9781611977073.20","url":"https://dblp.org/rec/conf/soda/FominGSS22"},
+"url":"URL#59298"
+},
+{
+"@score":"1",
+"@id":"59299",
+"info":{"authors":{"author":[{"@pid":"305/3876","text":"Dvir Fried"},{"@pid":"184/8087","text":"Shay Golan 0001"},{"@pid":"38/9892","text":"Tomasz Kociumaka"},{"@pid":"84/3922","text":"Tsvi Kopelowitz"},{"@pid":"02/836","text":"Ely Porat"},{"@pid":"99/3746","text":"Tatiana Starikovskaya"}]},"title":"An Improved Algorithm for The k-Dyck Edit Distance Problem.","venue":"SODA","pages":"3650-3669","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/FriedGKKPS22","doi":"10.1137/1.9781611977073.144","ee":"https://doi.org/10.1137/1.9781611977073.144","url":"https://dblp.org/rec/conf/soda/FriedGKKPS22"},
+"url":"URL#59299"
+},
+{
+"@score":"1",
+"@id":"59300",
+"info":{"authors":{"author":[{"@pid":"191/8331","text":"Waldo Gálvez"},{"@pid":"96/9083-1","text":"Arindam Khan 0001"},{"@pid":"248/8733","text":"Mathieu Mari"},{"@pid":"58/5658","text":"Tobias Mömke"},{"@pid":"272/6061","text":"Madhusudhan Reddy Pittu"},{"@pid":"92/715","text":"Andreas Wiese"}]},"title":"A 3-Approximation Algorithm for Maximum Independent Set of Rectangles.","venue":"SODA","pages":"894-905","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/GalvezKMMPW22","doi":"10.1137/1.9781611977073.38","ee":"https://doi.org/10.1137/1.9781611977073.38","url":"https://dblp.org/rec/conf/soda/GalvezKMMPW22"},
+"url":"URL#59300"
+},
+{
+"@score":"1",
+"@id":"59301",
+"info":{"authors":{"author":[{"@pid":"160/7709","text":"Moses Ganardi"},{"@pid":"49/3088","text":"Pawel Gawrychowski"}]},"title":"Pattern Matching on Grammar-Compressed Strings in Linear Time.","venue":"SODA","pages":"2833-2846","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/GanardiG22","doi":"10.1137/1.9781611977073.110","ee":"https://doi.org/10.1137/1.9781611977073.110","url":"https://dblp.org/rec/conf/soda/GanardiG22"},
+"url":"URL#59301"
+},
+{
+"@score":"1",
+"@id":"59302",
+"info":{"authors":{"author":[{"@pid":"201/4732","text":"Arun Ganesh"},{"@pid":"38/9892","text":"Tomasz Kociumaka"},{"@pid":"59/9032","text":"Andrea Lincoln"},{"@pid":"66/3027","text":"Barna Saha"}]},"title":"How Compression and Approximation Affect Efficiency in String Distance Measures.","venue":"SODA","pages":"2867-2919","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/GaneshKLS22","doi":"10.1137/1.9781611977073.112","ee":"https://doi.org/10.1137/1.9781611977073.112","url":"https://dblp.org/rec/conf/soda/GaneshKLS22"},
+"url":"URL#59302"
+},
+{
+"@score":"1",
+"@id":"59303",
+"info":{"authors":{"author":[{"@pid":"04/7867","text":"Jugal Garg"},{"@pid":"133/3849","text":"Yixin Tao"},{"@pid":"12/2680","text":"László A. Végh"}]},"title":"Approximating Equilibrium under Constrained Piecewise Linear Concave Utilities with Applications to Matching Markets.","venue":"SODA","pages":"2269-2284","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/GargTV22","doi":"10.1137/1.9781611977073.91","ee":"https://doi.org/10.1137/1.9781611977073.91","url":"https://dblp.org/rec/conf/soda/GargTV22"},
+"url":"URL#59303"
+},
+{
+"@score":"1",
+"@id":"59304",
+"info":{"authors":{"author":[{"@pid":"195/5527","text":"Sumanta Ghosh"},{"@pid":"81/10454","text":"Rohit Gurjar"},{"@pid":"47/3306","text":"Roshan Raj"}]},"title":"A Deterministic Parallel Reduction from Weighted Matroid Intersection Search to Decision.","venue":"SODA","pages":"1013-1035","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/GhoshGR22","doi":"10.1137/1.9781611977073.44","ee":"https://doi.org/10.1137/1.9781611977073.44","url":"https://dblp.org/rec/conf/soda/GhoshGR22"},
+"url":"URL#59304"
+},
+{
+"@score":"1",
+"@id":"59305",
+"info":{"authors":{"author":[{"@pid":"18/8045","text":"Archontia C. Giannopoulou"},{"@pid":"45/6846","text":"Ken-ichi Kawarabayashi"},{"@pid":"k/StephanKreutzer","text":"Stephan Kreutzer"},{"@pid":"143/7283","text":"O-joung Kwon"}]},"title":"Directed Tangle Tree-Decompositions and Applications.","venue":"SODA","pages":"377-405","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/GiannopoulouKKK22","doi":"10.1137/1.9781611977073.19","ee":"https://doi.org/10.1137/1.9781611977073.19","url":"https://dblp.org/rec/conf/soda/GiannopoulouKKK22"},
+"url":"URL#59305"
+},
+{
+"@score":"1",
+"@id":"59306",
+"info":{"authors":{"author":[{"@pid":"129/6534","text":"Lior Gishboliner"},{"@pid":"276/5992","text":"Yevgeny Levanzov"},{"@pid":"68/615","text":"Asaf Shapira"},{"@pid":"y/RaphaelYuster","text":"Raphael Yuster"}]},"title":"Counting Homomorphic Cycles in Degenerate Graphs.","venue":"SODA","pages":"417-430","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/GishbolinerLSY22","doi":"10.1137/1.9781611977073.21","ee":"https://doi.org/10.1137/1.9781611977073.21","url":"https://dblp.org/rec/conf/soda/GishbolinerLSY22"},
+"url":"URL#59306"
+},
+{
+"@score":"1",
+"@id":"59307",
+"info":{"authors":{"author":[{"@pid":"g/FGrandoni","text":"Fabrizio Grandoni 0001"},{"@pid":"58/5658","text":"Tobias Mömke"},{"@pid":"92/715","text":"Andreas Wiese"}]},"title":"Unsplittable Flow on a Path - The Game!.","venue":"SODA","pages":"906-926","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/GrandoniMW22","doi":"10.1137/1.9781611977073.39","ee":"https://doi.org/10.1137/1.9781611977073.39","url":"https://dblp.org/rec/conf/soda/GrandoniMW22"},
+"url":"URL#59307"
+},
+{
+"@score":"1",
+"@id":"59308",
+"info":{"authors":{"author":[{"@pid":"55/5525","text":"Joachim Gudmundsson"},{"@pid":"193/9719","text":"Martin P. Seybold"}]},"title":"A Tail Estimate with Exponential Decay for the Randomized Incremental Construction of Search Structures.","venue":"SODA","pages":"610-626","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/GudmundssonS22","doi":"10.1137/1.9781611977073.28","ee":"https://doi.org/10.1137/1.9781611977073.28","url":"https://dblp.org/rec/conf/soda/GudmundssonS22"},
+"url":"URL#59308"
+},
+{
+"@score":"1",
+"@id":"59309",
+"info":{"authors":{"author":[{"@pid":"55/5525","text":"Joachim Gudmundsson"},{"@pid":"190/1162","text":"Sampson Wong"}]},"title":"Cubic upper and lower bounds for subtrajectory clustering under the continuous Fréchet distance.","venue":"SODA","pages":"173-189","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/GudmundssonW22","doi":"10.1137/1.9781611977073.9","ee":"https://doi.org/10.1137/1.9781611977073.9","url":"https://dblp.org/rec/conf/soda/GudmundssonW22"},
+"url":"URL#59309"
+},
+{
+"@score":"1",
+"@id":"59310",
+"info":{"authors":{"author":[{"@pid":"27/2931","text":"Anupam Gupta 0001"},{"@pid":"288/0050","text":"Vijaykrishna Gurunathan"},{"@pid":"74/813","text":"Ravishankar Krishnaswamy"},{"@pid":"k/AmitKumar1","text":"Amit Kumar 0001"},{"@pid":"55/8911","text":"Sahil Singla 0001"}]},"title":"Online Discrepancy with Recourse for Vectors and Graphs.","venue":"SODA","pages":"1356-1383","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/GuptaGKKS22","doi":"10.1137/1.9781611977073.57","ee":"https://doi.org/10.1137/1.9781611977073.57","url":"https://dblp.org/rec/conf/soda/GuptaGKKS22"},
+"url":"URL#59310"
+},
+{
+"@score":"1",
+"@id":"59311",
+"info":{"authors":{"author":[{"@pid":"g/VenkatesanGuruswami","text":"Venkatesan Guruswami"},{"@pid":"194/3922","text":"Sai Sandeep"}]},"title":"Approximate Hypergraph Vertex Cover and generalized Tuza&apos;s conjecture.","venue":"SODA","pages":"927-944","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/GuruswamiS22","doi":"10.1137/1.9781611977073.40","ee":"https://doi.org/10.1137/1.9781611977073.40","url":"https://dblp.org/rec/conf/soda/GuruswamiS22"},
+"url":"URL#59311"
+},
+{
+"@score":"1",
+"@id":"59312",
+"info":{"authors":{"author":{"@pid":"22/9452","text":"David G. Harris 0001"}},"title":"Deterministic algorithms for the Lovász Local Lemma - simpler, more general, and more parallel.","venue":"SODA","pages":"1744-1779","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/Harris22","doi":"10.1137/1.9781611977073.71","ee":"https://doi.org/10.1137/1.9781611977073.71","url":"https://dblp.org/rec/conf/soda/Harris22"},
+"url":"URL#59312"
+},
+{
+"@score":"1",
+"@id":"59313",
+"info":{"authors":{"author":[{"@pid":"h/MonikaRauchHenzinger","text":"Monika Henzinger"},{"@pid":"59/9032","text":"Andrea Lincoln"},{"@pid":"66/3027","text":"Barna Saha"}]},"title":"The Complexity of Average-Case Dynamic Subgraph Counting.","venue":"SODA","pages":"459-498","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/HenzingerLS22","doi":"10.1137/1.9781611977073.23","ee":"https://doi.org/10.1137/1.9781611977073.23","url":"https://dblp.org/rec/conf/soda/HenzingerLS22"},
+"url":"URL#59313"
+},
+{
+"@score":"1",
+"@id":"59314",
+"info":{"authors":{"author":[{"@pid":"200/8577","text":"Ivor van der Hoog"},{"@pid":"46/5483","text":"Irina Kostitsyna"},{"@pid":"46/6428","text":"Maarten Löffler"},{"@pid":"s/BettinaSpeckmann","text":"Bettina Speckmann"}]},"title":"Preprocessing Imprecise Points for the Pareto Front.","venue":"SODA","pages":"3144-3167","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/HoogKLS22","doi":"10.1137/1.9781611977073.122","ee":"https://doi.org/10.1137/1.9781611977073.122","url":"https://dblp.org/rec/conf/soda/HoogKLS22"},
+"url":"URL#59314"
+},
+{
+"@score":"1",
+"@id":"59315",
+"info":{"authors":{"author":[{"@pid":"211/6948","text":"Jun-Ting Hsieh"},{"@pid":"47/7934","text":"Pravesh K. Kothari"}]},"title":"Algorithmic Thresholds for Refuting Random Polynomial Systems.","venue":"SODA","pages":"1154-1203","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/HsiehK22","doi":"10.1137/1.9781611977073.49","ee":"https://doi.org/10.1137/1.9781611977073.49","url":"https://dblp.org/rec/conf/soda/HsiehK22"},
+"url":"URL#59315"
+},
+{
+"@score":"1",
+"@id":"59316",
+"info":{"authors":{"author":[{"@pid":"194/2616","text":"Edin Husic"},{"@pid":"178/6497","text":"Georg Loho"},{"@pid":"10/4604","text":"Ben Smith"},{"@pid":"12/2680","text":"László A. Végh"}]},"title":"On complete classes of valuated matroids.","venue":"SODA","pages":"945-962","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/HusicLSV22","doi":"10.1137/1.9781611977073.41","ee":"https://doi.org/10.1137/1.9781611977073.41","url":"https://dblp.org/rec/conf/soda/HusicLSV22"},
+"url":"URL#59316"
+},
+{
+"@score":"1",
+"@id":"59317",
+"info":{"authors":{"author":[{"@pid":"i/PiotrIndyk","text":"Piotr Indyk"},{"@pid":"222/2805","text":"Shyam Narayanan"},{"@pid":"w/DPWoodruff","text":"David P. Woodruff"}]},"title":"Frequency Estimation with One-Sided Error.","venue":"SODA","pages":"695-707","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/IndykNW22","doi":"10.1137/1.9781611977073.31","ee":"https://doi.org/10.1137/1.9781611977073.31","url":"https://dblp.org/rec/conf/soda/IndykNW22"},
+"url":"URL#59317"
+},
+{
+"@score":"1",
+"@id":"59318",
+"info":{"authors":{"author":[{"@pid":"25/1135","text":"Takehiro Ito"},{"@pid":"144/7775","text":"Yuni Iwamasa"},{"@pid":"45/4449","text":"Naonori Kakimura"},{"@pid":"69/2057","text":"Naoyuki Kamiyama"},{"@pid":"45/1736-1","text":"Yusuke Kobayashi 0001"},{"@pid":"233/4228","text":"Shun-ichi Maezawa"},{"@pid":"304/8737","text":"Yuta Nozaki"},{"@pid":"14/837","text":"Yoshio Okamoto"},{"@pid":"32/5807","text":"Kenta Ozeki"}]},"title":"Monotone edge flips to an orientation of maximum edge-connectivity à la Nash-Williams.","venue":"SODA","pages":"1342-1355","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ItoIKKKMNOO22","doi":"10.1137/1.9781611977073.56","ee":"https://doi.org/10.1137/1.9781611977073.56","url":"https://dblp.org/rec/conf/soda/ItoIKKKMNOO22"},
+"url":"URL#59318"
+},
+{
+"@score":"1",
+"@id":"59319",
+"info":{"authors":{"author":[{"@pid":"296/2095","text":"Aditya Jayaprakash"},{"@pid":"74/5082","text":"Mohammad R. Salavatipour"}]},"title":"Approximation Schemes for Capacitated Vehicle Routing on Graphs of Bounded Treewidth, Bounded Doubling, or Highway Dimension.","venue":"SODA","pages":"877-893","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/JayaprakashS22","doi":"10.1137/1.9781611977073.37","ee":"https://doi.org/10.1137/1.9781611977073.37","url":"https://dblp.org/rec/conf/soda/JayaprakashS22"},
+"url":"URL#59319"
+},
+{
+"@score":"1",
+"@id":"59320",
+"info":{"authors":{"author":[{"@pid":"126/6712","text":"Matthew Jenssen"},{"@pid":"189/7676","text":"Aditya Potukuchi"},{"@pid":"65/8860","text":"Will Perkins"}]},"title":"Approximately counting independent sets in bipartite graphs via graph containers.","venue":"SODA","pages":"499-516","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/JenssenPP22","doi":"10.1137/1.9781611977073.24","ee":"https://doi.org/10.1137/1.9781611977073.24","url":"https://dblp.org/rec/conf/soda/JenssenPP22"},
+"url":"URL#59320"
+},
+{
+"@score":"1",
+"@id":"59321",
+"info":{"authors":{"author":[{"@pid":"281/6676","text":"Jiashuo Jiang"},{"@pid":"86/8650","text":"Will Ma"},{"@pid":"10/239","text":"Jiawei Zhang"}]},"title":"Tight Guarantees for Multi-unit Prophet Inequalities and Online Stochastic Knapsack.","venue":"SODA","pages":"1221-1246","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/JiangMZ22","doi":"10.1137/1.9781611977073.51","ee":"https://doi.org/10.1137/1.9781611977073.51","url":"https://dblp.org/rec/conf/soda/JiangMZ22"},
+"url":"URL#59321"
+},
+{
+"@score":"1",
+"@id":"59322",
+"info":{"authors":{"author":[{"@pid":"229/4297","text":"Paul Jungeblut"},{"@pid":"245/7445","text":"Laura Merker"},{"@pid":"87/2203","text":"Torsten Ueckerdt"}]},"title":"A Sublinear Bound on the Page Number of Upward Planar Graphs.","venue":"SODA","pages":"963-978","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/JungeblutMU22","doi":"10.1137/1.9781611977073.42","ee":"https://doi.org/10.1137/1.9781611977073.42","url":"https://dblp.org/rec/conf/soda/JungeblutMU22"},
+"url":"URL#59322"
+},
+{
+"@score":"1",
+"@id":"59323",
+"info":{"authors":{"author":[{"@pid":"317/9933","text":"Avi Kadria"},{"@pid":"93/5413","text":"Liam Roditty"},{"@pid":"125/2326","text":"Aaron Sidford"},{"@pid":"63/8319","text":"Virginia Vassilevska Williams"},{"@pid":"z/UriZwick","text":"Uri Zwick"}]},"title":"Algorithmic trade-offs for girth approximation in undirected graphs.","venue":"SODA","pages":"1471-1492","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KadriaRSWZ22","doi":"10.1137/1.9781611977073.62","ee":"https://doi.org/10.1137/1.9781611977073.62","url":"https://dblp.org/rec/conf/soda/KadriaRSWZ22"},
+"url":"URL#59323"
+},
+{
+"@score":"1",
+"@id":"59324",
+"info":{"authors":{"author":[{"@pid":"188/6358","text":"John Kallaugher"},{"@pid":"76/6407","text":"Michael Kapralov"},{"@pid":"40/674","text":"Eric Price"}]},"title":"Simulating Random Walks in Random Streams.","venue":"SODA","pages":"3091-3126","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KallaugherKP22","doi":"10.1137/1.9781611977073.120","ee":"https://doi.org/10.1137/1.9781611977073.120","url":"https://dblp.org/rec/conf/soda/KallaugherKP22"},
+"url":"URL#59324"
+},
+{
+"@score":"1",
+"@id":"59325",
+"info":{"authors":{"author":[{"@pid":"297/4658","text":"Zi Yang Kang"},{"@pid":"298/4830","text":"Francisco Pernice"},{"@pid":"29/5942","text":"Jan Vondrák"}]},"title":"Fixed-Price Approximations in Bilateral Trade.","venue":"SODA","pages":"2964-2985","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KangPV22","doi":"10.1137/1.9781611977073.115","ee":"https://doi.org/10.1137/1.9781611977073.115","url":"https://dblp.org/rec/conf/soda/KangPV22"},
+"url":"URL#59325"
+},
+{
+"@score":"1",
+"@id":"59326",
+"info":{"authors":{"author":[{"@pid":"48/3950","text":"Haim Kaplan"},{"@pid":"244/2589","text":"David Naori"},{"@pid":"r/DannyRaz","text":"Danny Raz"}]},"title":"Online Weighted Matching with a Sample.","venue":"SODA","pages":"1247-1272","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KaplanNR22","doi":"10.1137/1.9781611977073.52","ee":"https://doi.org/10.1137/1.9781611977073.52","url":"https://dblp.org/rec/conf/soda/KaplanNR22"},
+"url":"URL#59326"
+},
+{
+"@score":"1",
+"@id":"59327",
+"info":{"authors":{"author":[{"@pid":"48/3950","text":"Haim Kaplan"},{"@pid":"t/RobertEndreTarjan","text":"Robert E. Tarjan"},{"@pid":"157/6049","text":"Or Zamir"},{"@pid":"z/UriZwick","text":"Uri Zwick"}]},"title":"Simulating a stack using queues.","venue":"SODA","pages":"1901-1924","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KaplanTZZ22","doi":"10.1137/1.9781611977073.76","ee":"https://doi.org/10.1137/1.9781611977073.76","url":"https://dblp.org/rec/conf/soda/KaplanTZZ22"},
+"url":"URL#59327"
+},
+{
+"@score":"1",
+"@id":"59328",
+"info":{"authors":{"author":{"@pid":"164/5852","text":"Adam Karczmarz"}},"title":"Improved Strongly Polynomial Algorithms for Deterministic MDPs, 2VPI Feasibility, and Discounted All-Pairs Shortest Paths.","venue":"SODA","pages":"154-172","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/Karczmarz22","doi":"10.1137/1.9781611977073.8","ee":"https://doi.org/10.1137/1.9781611977073.8","url":"https://dblp.org/rec/conf/soda/Karczmarz22"},
+"url":"URL#59328"
+},
+{
+"@score":"1",
+"@id":"59329",
+"info":{"authors":{"author":[{"@pid":"42/209","text":"Tali Kaufman"},{"@pid":"140/7252","text":"Rasmus Kyng"},{"@pid":"259/0689","text":"Federico Soldà"}]},"title":"Scalar and Matrix Chernoff Bounds from ℓ∞-Independence.","venue":"SODA","pages":"3732-3753","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KaufmanKS22","doi":"10.1137/1.9781611977073.147","ee":"https://doi.org/10.1137/1.9781611977073.147","url":"https://dblp.org/rec/conf/soda/KaufmanKS22"},
+"url":"URL#59329"
+},
+{
+"@score":"1",
+"@id":"59330",
+"info":{"authors":{"author":[{"@pid":"76/3493","text":"Telikepalli Kavitha"},{"@pid":"26/1533","text":"Tamás Király"},{"@pid":"73/8685","text":"Jannik Matuschke"},{"@pid":"09/515","text":"Ildikó Schlotter"},{"@pid":"230/7808","text":"Ulrike Schmidt-Kraepelin"}]},"title":"The popular assignment problem - when cardinality is more important than popularity.","venue":"SODA","pages":"103-123","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KavithaKMSS22","doi":"10.1137/1.9781611977073.6","ee":"https://doi.org/10.1137/1.9781611977073.6","url":"https://dblp.org/rec/conf/soda/KavithaKMSS22"},
+"url":"URL#59330"
+},
+{
+"@score":"1",
+"@id":"59331",
+"info":{"authors":{"author":[{"@pid":"54/11279","text":"Dominik Kempa"},{"@pid":"66/3027","text":"Barna Saha"}]},"title":"An Upper Bound and Linear-Space Queries on the LZ-End Parsing.","venue":"SODA","pages":"2847-2866","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KempaS22","doi":"10.1137/1.9781611977073.111","ee":"https://doi.org/10.1137/1.9781611977073.111","url":"https://dblp.org/rec/conf/soda/KempaS22"},
+"url":"URL#59331"
+},
+{
+"@score":"1",
+"@id":"59332",
+"info":{"authors":{"author":{"@pid":"126/5183","text":"Kim-Manuel Klein"}},"title":"On the Fine-Grained Complexity of the Unbounded SubsetSum and the Frobenius Problem.","venue":"SODA","pages":"3567-3582","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/Klein22","doi":"10.1137/1.9781611977073.141","ee":"https://doi.org/10.1137/1.9781611977073.141","url":"https://dblp.org/rec/conf/soda/Klein22"},
+"url":"URL#59332"
+},
+{
+"@score":"1",
+"@id":"59333",
+"info":{"authors":{"author":[{"@pid":"126/5183","text":"Kim-Manuel Klein"},{"@pid":"304/7644","text":"Janina Reuter"}]},"title":"Collapsing the Tower - On the Complexity of Multistage Stochastic IPs.","venue":"SODA","pages":"348-358","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KleinR22","doi":"10.1137/1.9781611977073.17","ee":"https://doi.org/10.1137/1.9781611977073.17","url":"https://dblp.org/rec/conf/soda/KleinR22"},
+"url":"URL#59333"
+},
+{
+"@score":"1",
+"@id":"59334",
+"info":{"authors":{"author":[{"@pid":"56/7413","text":"Max Klimm"},{"@pid":"14/8199","text":"Guillaume Sagnol"},{"@pid":"80/2691","text":"Martin Skutella"},{"@pid":"299/7702","text":"Khai Van Tran"}]},"title":"Competitive Strategies for Symmetric Rendezvous on the Line.","venue":"SODA","pages":"329-347","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KlimmSST22","doi":"10.1137/1.9781611977073.16","ee":"https://doi.org/10.1137/1.9781611977073.16","url":"https://dblp.org/rec/conf/soda/KlimmSST22"},
+"url":"URL#59334"
+},
+{
+"@score":"1",
+"@id":"59335",
+"info":{"authors":{"author":[{"@pid":"40/8159","text":"Shimon Kogan"},{"@pid":"16/9365","text":"Merav Parter"}]},"title":"New Diameter-Reducing Shortcuts and Directed Hopsets - Breaking the Barrier.","venue":"SODA","pages":"1326-1341","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KoganP22","doi":"10.1137/1.9781611977073.55","ee":"https://doi.org/10.1137/1.9781611977073.55","url":"https://dblp.org/rec/conf/soda/KoganP22"},
+"url":"URL#59335"
+},
+{
+"@score":"1",
+"@id":"59336",
+"info":{"authors":{"author":[{"@pid":"223/4387","text":"Soh Kumabe"},{"@pid":"36/4449","text":"Yuichi Yoshida"}]},"title":"Average Sensitivity of Dynamic Programming.","venue":"SODA","pages":"1925-1961","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KumabeY22","doi":"10.1137/1.9781611977073.77","ee":"https://doi.org/10.1137/1.9781611977073.77","url":"https://dblp.org/rec/conf/soda/KumabeY22"},
+"url":"URL#59336"
+},
+{
+"@score":"1",
+"@id":"59337",
+"info":{"authors":{"author":[{"@pid":"236/4784","text":"Dmitriy Kunisky"},{"@pid":"160/8992","text":"Jonathan Niles-Weed"}]},"title":"Strong recovery of geometric planted matchings.","venue":"SODA","pages":"834-876","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KuniskyN22","doi":"10.1137/1.9781611977073.36","ee":"https://doi.org/10.1137/1.9781611977073.36","url":"https://dblp.org/rec/conf/soda/KuniskyN22"},
+"url":"URL#59337"
+},
+{
+"@score":"1",
+"@id":"59338",
+"info":{"authors":{"author":[{"@pid":"52/735","text":"Marvin Künnemann"},{"@pid":"146/9680","text":"André Nusser"}]},"title":"Polygon Placement Revisited - (Degree of Freedom + 1)-SUM Hardness and an Improvement via Offline Dynamic Rectangle Union.","venue":"SODA","pages":"3181-3201","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KunnemannN22","doi":"10.1137/1.9781611977073.124","ee":"https://doi.org/10.1137/1.9781611977073.124","url":"https://dblp.org/rec/conf/soda/KunnemannN22"},
+"url":"URL#59338"
+},
+{
+"@score":"1",
+"@id":"59339",
+"info":{"authors":{"author":[{"@pid":"140/7252","text":"Rasmus Kyng"},{"@pid":"220/3828","text":"Simon Meierhans"},{"@pid":"223/4496","text":"Maximilian Probst Gutenberg"}]},"title":"Incremental SSSP for Sparse Digraphs Beyond the Hopset Barrier.","venue":"SODA","pages":"3452-3481","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/KyngMG22","doi":"10.1137/1.9781611977073.137","ee":"https://doi.org/10.1137/1.9781611977073.137","url":"https://dblp.org/rec/conf/soda/KyngMG22"},
+"url":"URL#59339"
+},
+{
+"@score":"1",
+"@id":"59340",
+"info":{"authors":{"author":{"@pid":"117/8942","text":"Manuel Lafond"}},"title":"Recognizing &lt;italic&gt;k&lt;/italic&gt;-leaf powers in polynomial time, for constant &lt;italic&gt;k&lt;/italic&gt;.","venue":"SODA","pages":"1384-1410","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/Lafond22","doi":"10.1137/1.9781611977073.58","ee":"https://doi.org/10.1137/1.9781611977073.58","url":"https://dblp.org/rec/conf/soda/Lafond22"},
+"url":"URL#59340"
+},
+{
+"@score":"1",
+"@id":"59341",
+"info":{"authors":{"author":[{"@pid":"45/466","text":"Hung Le"},{"@pid":"s/ShaySolomon","text":"Shay Solomon"}]},"title":"Near-Optimal Spanners for General Graphs in (Nearly) Linear Time.","venue":"SODA","pages":"3332-3361","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/LeS22","doi":"10.1137/1.9781611977073.132","ee":"https://doi.org/10.1137/1.9781611977073.132","url":"https://dblp.org/rec/conf/soda/LeS22"},
+"url":"URL#59341"
+},
+{
+"@score":"1",
+"@id":"59342",
+"info":{"authors":{"author":[{"@pid":"45/466","text":"Hung Le"},{"@pid":"61/3272","text":"Cuong Than"}]},"title":"Greedy Spanners in Euclidean Spaces Admit Sublinear Separators.","venue":"SODA","pages":"3287-3310","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/LeT22","doi":"10.1137/1.9781611977073.130","ee":"https://doi.org/10.1137/1.9781611977073.130","url":"https://dblp.org/rec/conf/soda/LeT22"},
+"url":"URL#59342"
+},
+{
+"@score":"1",
+"@id":"59343",
+"info":{"authors":{"author":[{"@pid":"33/5448-15","text":"Jian Li 0015"},{"@pid":"245/4078","text":"Daogao Liu"}]},"title":"Multi-token Markov Game with Switching Costs.","venue":"SODA","pages":"1780-1807","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/LiL22","doi":"10.1137/1.9781611977073.72","ee":"https://doi.org/10.1137/1.9781611977073.72","url":"https://dblp.org/rec/conf/soda/LiL22"},
+"url":"URL#59343"
+},
+{
+"@score":"1",
+"@id":"59344",
+"info":{"authors":{"author":[{"@pid":"31/4501-1","text":"Shi Li 0001"},{"@pid":"56/1487","text":"Bundit Laekhanukit"}]},"title":"Polynomial Integrality Gap of Flow LP for Directed Steiner Tree.","venue":"SODA","pages":"3230-3236","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/LiL22a","doi":"10.1137/1.9781611977073.126","ee":"https://doi.org/10.1137/1.9781611977073.126","url":"https://dblp.org/rec/conf/soda/LiL22a"},
+"url":"URL#59344"
+},
+{
+"@score":"1",
+"@id":"59345",
+"info":{"authors":{"author":[{"@pid":"03/1108","text":"Wei-Kai Lin"},{"@pid":"80/4580","text":"Elaine Shi"}]},"title":"Optimal Sorting Circuits for Short Keys.","venue":"SODA","pages":"3583-3629","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/LinS22","doi":"10.1137/1.9781611977073.142","ee":"https://doi.org/10.1137/1.9781611977073.142","url":"https://dblp.org/rec/conf/soda/LinS22"},
+"url":"URL#59345"
+},
+{
+"@score":"1",
+"@id":"59346",
+"info":{"authors":{"author":[{"@pid":"78/67","text":"Daniel Lokshtanov"},{"@pid":"60/11535","text":"Fahad Panolan"},{"@pid":"11/5491","text":"Saket Saurabh 0001"},{"@pid":"11/8310","text":"Jie Xue"},{"@pid":"133/1023","text":"Meirav Zehavi"}]},"title":"Subexponential Parameterized Algorithms on Disk Graphs (Extended Abstract).","venue":"SODA","pages":"2005-2031","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/LokshtanovPSXZ22","doi":"10.1137/1.9781611977073.80","ee":"https://doi.org/10.1137/1.9781611977073.80","url":"https://dblp.org/rec/conf/soda/LokshtanovPSXZ22"},
+"url":"URL#59346"
+},
+{
+"@score":"1",
+"@id":"59347",
+"info":{"authors":{"author":[{"@pid":"297/3801","text":"Dimitrios Los"},{"@pid":"03/5688","text":"Thomas Sauerwald"},{"@pid":"94/2696","text":"John Sylvester"}]},"title":"Balanced Allocations - Caching and Packing, Twinning and Thinning.","venue":"SODA","pages":"1847-1874","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/LosSS22","doi":"10.1137/1.9781611977073.74","ee":"https://doi.org/10.1137/1.9781611977073.74","url":"https://dblp.org/rec/conf/soda/LosSS22"},
+"url":"URL#59347"
+},
+{
+"@score":"1",
+"@id":"59348",
+"info":{"authors":{"author":[{"@pid":"17/8813","text":"Kevin Lu"},{"@pid":"63/8319","text":"Virginia Vassilevska Williams"},{"@pid":"218/5861","text":"Nicole Wein"},{"@pid":"249/0973","text":"Zixuan Xu"}]},"title":"Better Lower Bounds for Shortcut Sets and Additive Spanners via an Improved Alternation Product.","venue":"SODA","pages":"3311-3331","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/LuWWX22","doi":"10.1137/1.9781611977073.131","ee":"https://doi.org/10.1137/1.9781611977073.131","url":"https://dblp.org/rec/conf/soda/LuWWX22"},
+"url":"URL#59348"
+},
+{
+"@score":"1",
+"@id":"59349",
+"info":{"authors":{"author":[{"@pid":"95/1832","text":"Dániel Marx"},{"@pid":"10/10553","text":"Pranabendu Misra"},{"@pid":"176/5089","text":"Daniel Neuen"},{"@pid":"186/2898","text":"Prafullkumar Tale"}]},"title":"A Framework for Parameterized Subexponential Algorithms for Generalized Cycle Hitting Problems on Planar Graphs.","venue":"SODA","pages":"2085-2127","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/MarxMNT22","doi":"10.1137/1.9781611977073.83","ee":"https://doi.org/10.1137/1.9781611977073.83","url":"https://dblp.org/rec/conf/soda/MarxMNT22"},
+"url":"URL#59349"
+},
+{
+"@score":"1",
+"@id":"59350",
+"info":{"authors":{"author":[{"@pid":"m/KameshMunagala","text":"Kamesh Munagala"},{"@pid":"257/3189","text":"Yiheng Shen"},{"@pid":"93/8434","text":"Kangning Wang"},{"@pid":"66/7776","text":"Zhiyi Wang"}]},"title":"Approximate Core for Committee Selection via Multilinear Extension and Market Clearing.","venue":"SODA","pages":"2229-2252","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/MunagalaSWW22","doi":"10.1137/1.9781611977073.89","ee":"https://doi.org/10.1137/1.9781611977073.89","url":"https://dblp.org/rec/conf/soda/MunagalaSWW22"},
+"url":"URL#59350"
+},
+{
+"@score":"1",
+"@id":"59351",
+"info":{"authors":{"author":[{"@pid":"203/8215","text":"Martin Nägele"},{"@pid":"192/1713","text":"Richard Santiago"},{"@pid":"48/4189","text":"Rico Zenklusen"}]},"title":"Congruency-Constrained TU Problems Beyond the Bimodular Case.","venue":"SODA","pages":"2743-2790","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/NageleSZ22","doi":"10.1137/1.9781611977073.108","ee":"https://doi.org/10.1137/1.9781611977073.108","url":"https://dblp.org/rec/conf/soda/NageleSZ22"},
+"url":"URL#59351"
+},
+{
+"@score":"1",
+"@id":"59352",
+"info":{"authors":{"author":{"@pid":"176/5089","text":"Daniel Neuen"}},"title":"Isomorphism Testing for Graphs Excluding Small Topological Subgraphs.","venue":"SODA","pages":"1411-1434","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/Neuen22","doi":"10.1137/1.9781611977073.59","ee":"https://doi.org/10.1137/1.9781611977073.59","url":"https://dblp.org/rec/conf/soda/Neuen22"},
+"url":"URL#59352"
+},
+{
+"@score":"1",
+"@id":"59353",
+"info":{"authors":{"author":[{"@pid":"283/7019","text":"Sukanya Pandey"},{"@pid":"52/269","text":"Erik Jan van Leeuwen"}]},"title":"Planar Multiway Cut with Terminals on Few Faces.","venue":"SODA","pages":"2032-2063","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/PandeyL22","doi":"10.1137/1.9781611977073.81","ee":"https://doi.org/10.1137/1.9781611977073.81","url":"https://dblp.org/rec/conf/soda/PandeyL22"},
+"url":"URL#59353"
+},
+{
+"@score":"1",
+"@id":"59354",
+"info":{"authors":{"author":[{"@pid":"p/GiuseppePersiano","text":"Giuseppe Persiano"},{"@pid":"176/7649","text":"Kevin Yeo"}]},"title":"Limits of Preprocessing for Single-Server PIR.","venue":"SODA","pages":"2522-2548","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/PersianoY22","doi":"10.1137/1.9781611977073.99","ee":"https://doi.org/10.1137/1.9781611977073.99","url":"https://dblp.org/rec/conf/soda/PersianoY22"},
+"url":"URL#59354"
+},
+{
+"@score":"1",
+"@id":"59355",
+"info":{"authors":{"author":[{"@pid":"64/7810","text":"Alberto Del Pia"},{"@pid":"270/0326","text":"Silvia Di Gregorio"}]},"title":"On the complexity of binary polynomial optimization over acyclic hypergraphs.","venue":"SODA","pages":"2684-2699","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/PiaG22","doi":"10.1137/1.9781611977073.105","ee":"https://doi.org/10.1137/1.9781611977073.105","url":"https://dblp.org/rec/conf/soda/PiaG22"},
+"url":"URL#59355"
+},
+{
+"@score":"1",
+"@id":"59356",
+"info":{"authors":{"author":[{"@pid":"p/ArielDProcaccia","text":"Ariel D. Procaccia"},{"@pid":"215/4952","text":"Jamie Tucker-Foltz"}]},"title":"Compact Redistricting Plans Have Many Spanning Trees.","venue":"SODA","pages":"3754-3771","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ProcacciaT22","doi":"10.1137/1.9781611977073.148","ee":"https://doi.org/10.1137/1.9781611977073.148","url":"https://dblp.org/rec/conf/soda/ProcacciaT22"},
+"url":"URL#59356"
+},
+{
+"@score":"1",
+"@id":"59357",
+"info":{"authors":{"author":[{"@pid":"147/8522","text":"Bryce Sandlund"},{"@pid":"47/2657","text":"Lingyi Zhang"}]},"title":"Selectable Heaps and Optimal Lazy Search Trees.","venue":"SODA","pages":"1962-1975","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/SandlundZ22","doi":"10.1137/1.9781611977073.78","ee":"https://doi.org/10.1137/1.9781611977073.78","url":"https://dblp.org/rec/conf/soda/SandlundZ22"},
+"url":"URL#59357"
+},
+{
+"@score":"1",
+"@id":"59358",
+"info":{"authors":{"author":[{"@pid":"193/9674","text":"Miriam Schlöter"},{"@pid":"80/2691","text":"Martin Skutella"},{"@pid":"299/7702","text":"Khai Van Tran"}]},"title":"A Faster Algorithm for Quickest Transshipments via an Extended Discrete Newton Method.","venue":"SODA","pages":"90-102","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/SchloterST22","doi":"10.1137/1.9781611977073.5","ee":"https://doi.org/10.1137/1.9781611977073.5","url":"https://dblp.org/rec/conf/soda/SchloterST22"},
+"url":"URL#59358"
+},
+{
+"@score":"1",
+"@id":"59359",
+"info":{"authors":{"author":[{"@pid":"211/1007","text":"Michael Simkin"},{"@pid":"14/8684","text":"Zur Luria"}]},"title":"A Lower Bound for the n-queens Problem.","venue":"SODA","pages":"2185-2197","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/SimkinL22","doi":"10.1137/1.9781611977073.86","ee":"https://doi.org/10.1137/1.9781611977073.86","url":"https://dblp.org/rec/conf/soda/SimkinL22"},
+"url":"URL#59359"
+},
+{
+"@score":"1",
+"@id":"59360",
+"info":{"authors":{"author":[{"@pid":"153/2148","text":"Mehdi Soleimanifar"},{"@pid":"10/3047","text":"John Wright"}]},"title":"Testing matrix product states.","venue":"SODA","pages":"1679-1701","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/SoleimanifarW22","doi":"10.1137/1.9781611977073.68","ee":"https://doi.org/10.1137/1.9781611977073.68","url":"https://dblp.org/rec/conf/soda/SoleimanifarW22"},
+"url":"URL#59360"
+},
+{
+"@score":"1",
+"@id":"59361",
+"info":{"authors":{"author":[{"@pid":"170/0126","text":"Vera Traub"},{"@pid":"48/4189","text":"Rico Zenklusen"}]},"title":"Local Search for Weighted Tree Augmentation and Steiner Tree.","venue":"SODA","pages":"3253-3272","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/TraubZ22","doi":"10.1137/1.9781611977073.128","ee":"https://doi.org/10.1137/1.9781611977073.128","url":"https://dblp.org/rec/conf/soda/TraubZ22"},
+"url":"URL#59361"
+},
+{
+"@score":"1",
+"@id":"59362",
+"info":{"authors":{"author":{"@pid":"71/3863","text":"Haitao Wang"}},"title":"Constructing Many Faces in Arrangements of Lines and Segments.","venue":"SODA","pages":"3168-3180","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/Wang22","doi":"10.1137/1.9781611977073.123","ee":"https://doi.org/10.1137/1.9781611977073.123","url":"https://dblp.org/rec/conf/soda/Wang22"},
+"url":"URL#59362"
+},
+{
+"@score":"1",
+"@id":"59363",
+"info":{"authors":{"author":[{"@pid":"63/11345-2","text":"Haotian Wang 0002"},{"@pid":"181/2672","text":"Feng Luo"},{"@pid":"g/JieGao","text":"Jie Gao 0001"}]},"title":"Co-evolution of Opinion and Social Tie Dynamics Towards Structural Balance.","venue":"SODA","pages":"3362-3388","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/WangLG22","doi":"10.1137/1.9781611977073.133","ee":"https://doi.org/10.1137/1.9781611977073.133","url":"https://dblp.org/rec/conf/soda/WangLG22"},
+"url":"URL#59363"
+},
+{
+"@score":"1",
+"@id":"59364",
+"info":{"authors":{"author":[{"@pid":"w/DPWoodruff","text":"David P. Woodruff"},{"@pid":"177/9741-2","text":"Taisuke Yasuda 0002"}]},"title":"Improved Algorithms for Low Rank Approximation from Sparsity.","venue":"SODA","pages":"2358-2403","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/WoodruffY22","doi":"10.1137/1.9781611977073.95","ee":"https://doi.org/10.1137/1.9781611977073.95","url":"https://dblp.org/rec/conf/soda/WoodruffY22"},
+"url":"URL#59364"
+},
+{
+"@score":"1",
+"@id":"59365",
+"info":{"authors":{"author":[{"@pid":"149/2213","text":"Goran Zuzic"},{"@pid":"179/2404","text":"Gramoz Goranci"},{"@pid":"128/2055","text":"Mingquan Ye"},{"@pid":"39/1043","text":"Bernhard Haeupler"},{"@pid":"70/7506","text":"Xiaorui Sun"}]},"title":"Universally-Optimal Distributed Shortest Paths and Transshipment via Graph-Based ℓ1-Oblivious Routing.","venue":"SODA","pages":"2549-2579","year":"2022","type":"Conference and Workshop Papers","access":"closed","key":"conf/soda/ZuzicGYHS22","doi":"10.1137/1.9781611977073.100","ee":"https://doi.org/10.1137/1.9781611977073.100","url":"https://dblp.org/rec/conf/soda/ZuzicGYHS22"},
+"url":"URL#59365"
+},
+{
+"@score":"1",
+"@id":"61075",
+"info":{"authors":{"author":[{"@pid":"n/JosephNaor","text":"Joseph (Seffi) Naor"},{"@pid":"48/4123","text":"Niv Buchbinder"}]},"title":"Proceedings of the 2022 ACM-SIAM Symposium on Discrete Algorithms, SODA 2022, Virtual Conference / Alexandria, VA, USA, January 9 - 12, 2022","venue":"SODA","publisher":"SIAM","year":"2022","type":"Editorship","access":"open","key":"conf/soda/2022","doi":"10.1137/1.9781611977073","ee":"https://doi.org/10.1137/1.9781611977073","url":"https://dblp.org/rec/conf/soda/2022"},
+"url":"URL#61075"
+}
+]
+}
 }
 }

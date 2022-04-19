@@ -7,6 +7,7 @@ export class PaperArticle {
     arxivURL: string = "";
     videoURL : string = "";
     slideURL : string = "";
+    doi : string = "";
     public constructor() {
     }
     public copy() : PaperArticle{
@@ -61,6 +62,9 @@ export class PaperArticle {
             if(p.length > 7){
                 r.slideURL = p[7];
             }
+            if(p.length > 8){
+                r.doi = p[8];
+            }
             if(isNaN(r.year)){
                 console.log(`Skip: ${line}`);
                 return null;
@@ -89,6 +93,7 @@ export class ConferenceArticle{
     public deadline : Date = new Date();
     public dblpName : string | null;
     public dblpSubname : string = "";
+    public dblpSuffixName : string = "";
 
     public static parseList(list : string) : ConferenceArticle[] {
         const lines = list.split("\r\n");
@@ -120,6 +125,9 @@ export class ConferenceArticle{
             if(p.length > 6){
                 r.dblpSubname = p[6];                
             }
+            if(p.length > 7){
+                r.dblpSuffixName = p[7];
+            }
 
             if(isNaN(r.year)){
                 console.log(`Skip: ${line}`);
@@ -138,6 +146,15 @@ export class ConferenceArticle{
         const year = this.deadline.getFullYear().toString();
 
         return `${year}/${month}/${day}`;
+    }
+    public getDBLPJSONURL() : string {
+        const subname = this.dblpSubname.length > 0 ? this.dblpSubname : this.dblpName;
+
+        if(this.dblpSuffixName.length > 0){
+            return `https://dblp.org/search/publ/api?q=toc%3Adb/conf/${subname}/${this.dblpName}${this.year}${this.dblpSuffixName}.bht%3A&h=1000&format=jsonp`
+        }else{
+            return `https://dblp.org/search/publ/api?q=toc%3Adb/conf/${subname}/${this.dblpName}${this.year}.bht%3A&h=1000&format=jsonp`
+        }
     }
     public toString(){
         return `Year: ${this.year}, Conference: ${this.conference}, conferenceURL: ${this.conferenceURL}, acceptedPaperURL: ${this.acceptedPaperURL}, deadline: ${this.getDeadlineString()}`;

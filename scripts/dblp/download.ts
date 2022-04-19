@@ -1,3 +1,5 @@
+// tsvに記された学会のDBLP情報をダウンロード
+
 import { ConferenceArticle } from "../article"
 
 var request = require('sync-request');
@@ -22,8 +24,7 @@ conferences.forEach((v) => {
     if (v.dblpName != null && v.dblpName!.length > 0) {
         const outputFileName = outputFolder + "/" + v.conference + "_" + v.year + ".json";
         if (!fs.existsSync(outputFileName)) {
-            const subname = v.dblpSubname.length > 0 ? v.dblpSubname : v.dblpName;
-            const pURL = `https://dblp.org/search/publ/api?q=toc%3Adb/conf/${subname}/${v.dblpName}${v.year}.bht%3A&h=1000&format=jsonp`
+            const pURL = v.getDBLPJSONURL();
 
             //console.log("Download " + pURL);
             const response = request('GET', pURL);
