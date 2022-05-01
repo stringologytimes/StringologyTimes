@@ -77,14 +77,20 @@ let doiListPath = "";
 
 let outputFolder = "";
 
+console.log(process.argv)
+
 if (process.argv.length != 6) {
-    throw new Error("Arguments Error");
+    throw new Error("Arguments Error" + process.argv.length );
 }
 conferenceUrl = process.argv[2];
 dblpFolderUrl = process.argv[3];
 doiListPath = process.argv[4];
-
 outputFolder = process.argv[5];
+
+console.log(`conferenceUrl: ${conferenceUrl}`)
+console.log(`dblpFolderUrl: ${dblpFolderUrl}`)
+console.log(`doiListPath: ${doiListPath}`)
+console.log(`outputFolder: ${outputFolder}`)
 
 //const paperInfoRawText: string = fs.readFileSync(paperUrl, 'utf8');
 //const papers = PaperArticle.parseList(paperInfoRawText);

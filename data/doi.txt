@@ -30,7 +30,6 @@
 10.4230/LIPICS.CPM.2019.23
 10.4230/LIPICS.CPM.2019.29
 10.4230/LIPICS.CPM.2019.3
-http://www.dagstuhl.de/dagpub/978-3-95977-103-0
 10.4230/LIPICS.CPM.2020.6
 10.4230/LIPICS.CPM.2020.7
 10.4230/LIPICS.CPM.2020.13
@@ -60,7 +59,6 @@ http://www.dagstuhl.de/dagpub/978-3-95977-103-0
 10.4230/LIPICS.CPM.2020.27
 10.4230/LIPICS.CPM.2020.28
 10.4230/LIPICS.CPM.2020.29
-https://www.dagstuhl.de/dagpub/978-3-95977-149-8
 10.4230/LIPICS.CPM.2021.2
 10.4230/LIPICS.CPM.2021.15
 10.4230/LIPICS.CPM.2021.9
@@ -86,7 +84,6 @@ https://www.dagstuhl.de/dagpub/978-3-95977-149-8
 10.4230/LIPICS.CPM.2021.23
 10.4230/LIPICS.CPM.2021.24
 10.4230/LIPICS.CPM.2021.25
-https://www.dagstuhl.de/dagpub/978-3-95977-186-3
 http://www.stringology.org/event/2019/p04.html
 http://www.stringology.org/event/2019/p12.html
 http://www.stringology.org/event/2019/p08.html
@@ -277,12 +274,9 @@ http://www.stringology.org/event/2021/p01.html
 10.1137/1.9781611975994.99
 10.1137/1.9781611975994.37
 10.1007/978-3-030-38919-2_13
-http://ceur-ws.org/Vol-2568/paper9.pdf
-http://ceur-ws.org/Vol-2568/paper1.pdf
 10.1007/978-3-030-38919-2_40
 10.1007/978-3-030-38919-2_18
 10.1007/978-3-030-38919-2_11
-http://ceur-ws.org/Vol-2568/paper2.pdf
 10.1137/1.9781611976007.14
 10.1137/1.9781611976007.16
 10.1137/1.9781611976007.13

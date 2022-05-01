@@ -4,11 +4,13 @@
   "description": "アルゴリズムやデータ構造に関係していると思われる論文がIssueページでタグ付けされています。",
   "main": "index.js",
   "dependencies": {
+    "@types/xmldom": "^0.1.31",
     "sync-request": "^6.1.0",
     "xmldom": "^0.6.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "md": "ts-node scripts/md/make_conference_list_md.ts data/spreadsheets/Conference_Site.tsv data/dblp data/paper_list.txt docs/conference"
   },
   "repository": {
     "type": "git",

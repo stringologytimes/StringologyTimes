@@ -67,8 +67,6 @@ Clemens Müllner, Andrew Ryzhikov
 + [Regular Matching and Inclusion on Compressed Tree Patterns with Context Variables](https://doi.org/10.1007/978-3-030-13435-8_25)  
 Iovka Boneva, Joachim Niehren, Momar Sakho  
 ## CPM
-+ [30th Annual Symposium on Combinatorial Pattern Matching, CPM 2019, June 18-20, 2019, Pisa, Italy](http://www.dagstuhl.de/dagpub/978-3-95977-103-0)  
-Nadia Pisanti, Solon P. Pissis  
 + [A 2-Approximation Algorithm for the Complementary Maximal Strip Recovery Problem](https://doi.org/10.4230/LIPIcs.CPM.2019.5)  
 Haitao Jiang, Jiong Guo, Daming Zhu, Binhai Zhu  
 + [A New Class of Searchable and Provably Highly Compressible String Transformations](https://doi.org/10.4230/LIPIcs.CPM.2019.12)  

@@ -47,12 +47,6 @@ Takuya Mieno, Yuki Kuhara, Tooru Akagi, Yuta Fujishige, Yuto Nakashima, Shunsuke
 + [Parallel Duel-and-Sweep Algorithm for the Order-Preserving Pattern Matching](https://doi.org/10.1007/978-3-030-38919-2_18)  
 Davaajav Jargalsaikhan, Diptarama Hendrian, Ryo Yoshinaka, Ayumi Shinohara  
 ## SOFSEMdrsf
-+ [AOBA: An Online Benchmark Tool for Algorithms in Stringology](http://ceur-ws.org/Vol-2568/paper1.pdf)  
-Ryu Wakimoto, Satoshi Kobayashi, Yuki Igarashi, Davaajav Jargalsaikhan, Diptarama Hendrian, Ryo Yoshinaka, Ayumi Shinohara  
-+ [An Extension of Linear-size Suffix Tries for Parameterized Strings](http://ceur-ws.org/Vol-2568/paper9.pdf)  
-Katsuhito Nakashima, Diptarama Hendrian, Ryo Yoshinaka, Ayumi Shinohara  
-+ [Bit-Layers Text Encoding for Efficient Text Processing](http://ceur-ws.org/Vol-2568/paper2.pdf)  
-Domenico Cantone, Simone Faro, Stefano Scafiti  
 ## ALENEX
 + [Engineering Top-Down Weight-Balanced Trees](https://doi.org/10.1137/1.9781611976007.13)  
 Lukas Barth, Dorothea Wagner  
@@ -148,8 +142,6 @@ Lukas Barth, Dorothea Wagner
 + [Optimal In-place Algorithms for Basic Graph Problems](https://doi.org/10.1007/978-3-030-48966-3_10)  
 Sankardeep Chakraborty, Kunihiko Sadakane, Srinivasa Rao Satti  
 ## CPM
-+ [31st Annual Symposium on Combinatorial Pattern Matching, CPM 2020, June 17-19, 2020, Copenhagen, Denmark](https://www.dagstuhl.de/dagpub/978-3-95977-149-8)  
-Inge Li Gørtz, Oren Weimann  
 + [Algebraic Algorithms for Finding Patterns in Graphs (Invited Talk)](https://doi.org/10.4230/LIPIcs.CPM.2020.1)  
 Thore Husfeldt  
 + [Approximating Longest Common Substring with k mismatches: Theory and Practice](https://doi.org/10.4230/LIPIcs.CPM.2020.16)  

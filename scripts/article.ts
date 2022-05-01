@@ -1,3 +1,5 @@
+export type PaperIDType = "doi" | "arxiv" | "otherURL" | "none";
+
 export class PaperArticle {
     year: number = 0;
     conference: string = "";
@@ -9,6 +11,20 @@ export class PaperArticle {
     slideURL : string = "";
     doi : string = "";
     public constructor() {
+    }
+    public static get_paper_id_type(id : string) : PaperIDType{
+        if(id.indexOf('https://arxiv.org/abs/')== 0){
+            return "arxiv";
+
+        }else if(id.indexOf('10.')==0){
+            return "doi";
+
+        }else if(id.indexOf('http')==0){
+            return "otherURL";
+        }
+        else{
+            return "none";
+        }
     }
     public copy() : PaperArticle{
         const r = new PaperArticle();

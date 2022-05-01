@@ -96,8 +96,6 @@ Pawel Gawrychowski, Wojciech Janczewski
 + [Improved dynamic algorithms for longest increasing subsequence](https://doi.org/10.1145/3406325.3451026)  
 Tomasz Kociumaka, Saeed Seddighin  
 ## CPM
-+ [32nd Annual Symposium on Combinatorial Pattern Matching, CPM 2021, July 5-7, 2021, Wrocław, Poland](https://www.dagstuhl.de/dagpub/978-3-95977-186-3)  
-Pawel Gawrychowski, Tatiana Starikovskaya  
 + [A Compact Index for Cartesian Tree Matching](https://doi.org/10.4230/LIPIcs.CPM.2021.18)  
 Sung-Hwan Kim, Hwan-Gue Cho  
 + [A Fast and Small Subsampled R-Index](https://doi.org/10.4230/LIPIcs.CPM.2021.13)  
