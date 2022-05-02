@@ -1,6 +1,6 @@
 import { DOMParser } from 'xmldom'
 import * as fs from 'fs'
-import { DBLPElement } from "./dblp"
+import { DBLPElement } from "./dblp_element"
 
 //const root = doc.getElementsByTagName("dblp").item[0];
 
