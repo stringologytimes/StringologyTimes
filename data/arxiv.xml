@@ -26355,4 +26355,68 @@ not previously known.
     <link title="pdf" href="http://arxiv.org/pdf/2112.12678v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2012.12013">
+    <id>http://arxiv.org/abs/2012.12013v1</id>
+    <updated>2020-12-21T16:41:59Z</updated>
+    <published>2020-12-21T16:41:59Z</published>
+    <title>SARS-CoV-2 Coronavirus Data Compression Benchmark</title>
+    <summary>  This paper introduces a lossless data compression competition that benchmarks
+solutions (computer programs) by the compressed size of the 44,981 concatenated
+SARS-CoV-2 sequences, with a total uncompressed size of 1,339,868,341 bytes.
+The data, downloaded on 13 December 2020, from the severe acute respiratory
+syndrome coronavirus 2 data hub of ncbi.nlm.nih.gov is presented in FASTA and
+2Bit format. The aim of this competition is to encourage multidisciplinary
+research to find the shortest lossless description for the sequences and to
+demonstrate that data compression can serve as an objective and repeatable
+measure to align scientific breakthroughs across disciplines. The shortest
+description of the data is the best model; therefore, further reducing the size
+of this description requires a fundamental understanding of the underlying
+context and data. This paper presents preliminary results with multiple
+well-known compression algorithms for baseline measurements, and insights
+regarding promising research avenues. The competition's progress will be
+reported at \url{https://coronavirus.innar.com}, and the benchmark is open for
+all to participate and contribute.
+</summary>
+    <author>
+      <name>Innar Liiv</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">6 pages, 2 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2012.12013v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2012.12013v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2201.11550">
+    <id>http://arxiv.org/abs/2201.11550v1</id>
+    <updated>2022-01-27T14:44:21Z</updated>
+    <published>2022-01-27T14:44:21Z</published>
+    <title>Predecessor on the Ultra-Wide Word RAM</title>
+    <summary>  We consider the predecessor problem on the ultra-wide word RAM model of
+computation, which extends the word RAM model with 'ultrawords' consisting of
+$w^2$ bits [TAMC, 2015]. The model supports arithmetic and boolean operations
+on ultrawords, in addition to 'scattered' memory operations that access or
+modify $w$ (potentially non-contiguous) memory addresses simultaneously. The
+ultra-wide word RAM model captures (and idealizes) modern vector processor
+architectures.
+  Our main result is a simple, linear space data structure that supports
+predecessor in constant time and updates in amortized, expected constant time.
+This improves the space of the previous constant time solution that uses space
+in the order of the size of the universe.
+  Our result is based on a new implementation of the classic $x$-fast trie data
+structure of Willard [Inform.~Process.~Lett. 17(2), 1983] combined with a new
+dictionary data structure that supports fast parallel lookups.
+</summary>
+    <author>
+      <name>Philip Bille</name>
+    </author>
+    <author>
+      <name>Inge Li Gørtz</name>
+    </author>
+    <author>
+      <name>Tord Stordalen</name>
+    </author>
+    <link href="http://arxiv.org/abs/2201.11550v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2201.11550v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
   </entry></articles>
