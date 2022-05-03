@@ -5,26 +5,92 @@
 export type DBLPElementType = 'article' | 'inproceedings' | 'proceedings'
 
 
-
+function get_formal_ee(ee: string) : string {
+    if (ee.indexOf("http://arxiv.org/") == 0) {
+        return "https" + ee.substring(4);
+    } else if (ee.indexOf("http://arxiv.org/") == 0) {
+        return ee;
+    } else {
+        return ee;
+    }
+}
 export class DBLPInproceedings {
     public authors: string[] = [];
     public title: string = "";
     public year: number = 0;
     public booktitle: string = "";
     public ee: string[] = [];
-    //public type: DBLPElementType;
-    //public mdate: Date;
+    public url: string;
+
+    public get proceedingsURL() : string{
+        const x = this.url.split("#");
+        return `https://dblp.org/${x[0]}`;
+    }
+    public static parseFromXMLInproceedings(node: Element): DBLPInproceedings {
+        const children = node.childNodes;
+
+        var el = new DBLPInproceedings();
+        for (var i = 0; i < children.length; i++) {
+            const child = children.item(i);
+            if (child.nodeType == child.ELEMENT_NODE) {
+                if (child.nodeName == "author") {
+                    el.authors.push(child.textContent!);
+                } else if (child.nodeName == "title") {
+                    el.title = child.textContent!;
+                } else if (child.nodeName == "year") {
+                    el.year = Number.parseInt(child.textContent!);
+                } else if (child.nodeName == "booktitle") {
+                    el.booktitle = child.textContent!;
+                } else if (child.nodeName == "ee") {
+                    el.ee.push(get_formal_ee(child.textContent!));
+                } else if (child.nodeName == "url") {
+                    el.url = child.textContent!;
+                }
+            }
+        }
+        return el;
+    }
 }
 
 export class DBLPArticle {
     public authors: string[] = [];
     public title: string = "";
     public year: number = 0;
-    public booktitle: string = "";
+    public journal: string = "";
     public ee: string[] = [];
-    //public month = 1;
-    //public type: DBLPElementType;
-    //public mdate: Date;
+    public url: string;
+    public volume: string;
+    public get journalURL() : string{
+        const x = this.url.split("#");
+        return `https://dblp.org/${x[0]}`;
+    }
+    public static parseFromXMLArticle(node: Element): DBLPArticle {
+        const children = node.childNodes;
+
+        var el = new DBLPArticle();
+        for (var i = 0; i < children.length; i++) {
+            const child = children.item(i);
+            if (child.nodeType == child.ELEMENT_NODE) {
+                if (child.nodeName == "author") {
+                    el.authors.push(child.textContent!);
+                } else if (child.nodeName == "title") {
+                    el.title = child.textContent!;
+                } else if (child.nodeName == "year") {
+                    el.year = Number.parseInt(child.textContent!);
+                } else if (child.nodeName == "journal") {
+                    el.journal = child.textContent!;
+                } else if (child.nodeName == "ee") {
+                    el.ee.push(get_formal_ee(child.textContent!));
+                } else if (child.nodeName == "url") {
+                    el.url = child.textContent!;
+                } else if (child.nodeName == "volume") {
+                    el.volume = child.textContent!;
+                }
+            }
+        }
+        return el;
+    }
+
 }
 export class DBLPProceedings {
     public editors: string[] = [];
@@ -32,75 +98,55 @@ export class DBLPProceedings {
     public year: number = 0;
     public booktitle: string = "";
     public ee: string[] = [];
-    //public mdate: Date;
+    public url: string;
+
+    public static parseFromXMLProceedings(node: Element): DBLPProceedings {
+        const children = node.childNodes;
+        var el: DBLPProceedings = new DBLPProceedings();
+        for (var i = 0; i < children.length; i++) {
+            const child = children.item(i);
+            if (child.nodeType == child.ELEMENT_NODE) {
+                if (child.nodeName == "author") {
+                    el.editors.push(child.textContent!);
+                } else if (child.nodeName == "title") {
+                    el.title = child.textContent!;
+                } else if (child.nodeName == "year") {
+                    el.year = Number.parseInt(child.textContent!);
+                } else if (child.nodeName == "booktitle") {
+                    el.booktitle = child.textContent!;
+                } else if (child.nodeName == "ee") {
+                    el.ee.push(get_formal_ee(child.textContent!));
+                } else if (child.nodeName == "url") {
+                    el.url = child.textContent!;
+                }
+            }
+        }
+        return el;
+    }
 }
 export type DBLPElementClass = DBLPInproceedings | DBLPArticle | DBLPProceedings;
 
 
 export class DBLPElement {
 
+    
+    
+    
+
+
     private static parseFromXMLChild(node: Element): DBLPElementClass {
 
-        const children = node.childNodes;
         const type = <DBLPElementType>node.nodeName;
         if (type == "article") {
-            var el = new DBLPArticle();
-            for (var i = 0; i < children.length; i++) {
-                const child = children.item(i);
-                if (child.nodeType == child.ELEMENT_NODE) {
-                    if (child.nodeName == "author") {
-                        el.authors.push(child.textContent!);
-                    } else if (child.nodeName == "title") {
-                        el.title = child.textContent!;
-                    } else if (child.nodeName == "year") {
-                        el.year = Number.parseInt(child.textContent!);
-                    } else if (child.nodeName == "journal") {
-                        el.booktitle = child.textContent!;
-                    } else if (child.nodeName == "ee") {
-                        el.ee.push(this.get_formal_ee(child.textContent!));
-                    }
-                }
-            }
+            const el = DBLPArticle.parseFromXMLArticle(node);
             return el;
         } else if (type == "inproceedings") {
-            var elA = new DBLPInproceedings();
-            for (var i = 0; i < children.length; i++) {
-                const child = children.item(i);
-                if (child.nodeType == child.ELEMENT_NODE) {
-                    if (child.nodeName == "author") {
-                        elA.authors.push(child.textContent!);
-                    } else if (child.nodeName == "title") {
-                        elA.title = child.textContent!;
-                    } else if (child.nodeName == "year") {
-                        elA.year = Number.parseInt(child.textContent!);
-                    } else if (child.nodeName == "booktitle") {
-                        elA.booktitle = child.textContent!;
-                    } else if (child.nodeName == "ee") {
-                        elA.ee.push(this.get_formal_ee(child.textContent!));
-                    }
-                }
-            }
-            return elA;
+            const el = DBLPInproceedings.parseFromXMLInproceedings(node);
+            return el;
 
         } else if (type == "proceedings") {
-            var el2: DBLPProceedings = new DBLPProceedings();
-            for (var i = 0; i < children.length; i++) {
-                const child = children.item(i);
-                if (child.nodeType == child.ELEMENT_NODE) {
-                    if (child.nodeName == "author") {
-                        el2.editors.push(child.textContent!);
-                    } else if (child.nodeName == "title") {
-                        el2.title = child.textContent!;
-                    } else if (child.nodeName == "year") {
-                        el2.year = Number.parseInt(child.textContent!);
-                    } else if (child.nodeName == "booktitle") {
-                        el2.booktitle = child.textContent!;
-                    } else if (child.nodeName == "ee") {
-                        el2.ee.push(this.get_formal_ee(child.textContent!));
-                    }
-                }
-            }
-            return el2;
+            const el: DBLPProceedings = DBLPProceedings.parseFromXMLProceedings(node);
+            return el;
         }
         else {
             console.log(type);
@@ -108,15 +154,6 @@ export class DBLPElement {
         }
 
 
-    }
-    private static get_formal_ee(ee : string){
-        if(ee.indexOf("http://arxiv.org/") == 0){
-            return "https" + ee.substring(4);
-        }else if (ee.indexOf("http://arxiv.org/") == 0){
-            return ee;
-        }else{
-            return ee;
-        }
     }
     private static get_root(doc: Document): ChildNode {
         const children = doc.childNodes;
@@ -129,7 +166,7 @@ export class DBLPElement {
         throw new Error("Error");
 
     }
-    public static get_sanitized_title(title : string) : string{
+    public static get_sanitized_title(title: string): string {
 
         let r = title.replace(/\r?\n/g, '');
         r = r.replace(/\|/g, '│');
