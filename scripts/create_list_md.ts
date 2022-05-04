@@ -17,8 +17,8 @@ type YearPaperCollection = {
 
 function createInproceedingsMD(_proceedings: ProceedingsInfo[], year: number): string[] {
     const lines: string[] = new Array();
-    lines.push(`### Proceedings  `);
-    lines.push(`  `);
+    //lines.push(`### Proceedings  `);
+    //lines.push(`  `);
 
     _proceedings.forEach((v) => {
         lines.push(`#### [${v.name} ${year}](${v.dblp_url})`);
@@ -35,8 +35,8 @@ function createInproceedingsMD(_proceedings: ProceedingsInfo[], year: number): s
 }
 function createArticleMD(journals: JournalInfo[], year: number): string[] {
     const lines: string[] = new Array();
-    lines.push(`### Journals  `);
-    lines.push(`  `);
+    //lines.push(`### Journals  `);
+    //lines.push(`  `);
 
     journals.forEach((v) => {
         lines.push(`#### ${v.name} ${year}  `);
@@ -131,17 +131,17 @@ function create_overview_year(item: YearPaperCollection): string[] {
     const journals = <DBLPArticle[]>item.papers.filter((w) => w instanceof DBLPArticle);
     const sorted_journals = get_sorted_journals(journals, item.year);
 
-    lines.push(`## ${item.year}  `);
-    lines.push(`### Proceedings (${item.year})`);
+    //lines.push(`+ ${item.year}  `);
+    //lines.push(`### Proceedings (${item.year})`);
     lines.push(`  `);
     sorted_inproceedings.forEach((w) => {
-        let s = `- [${w.name}](#${w.name.toLocaleLowerCase()}-${item.year}) [\[dblp\]](${w.dblp_url})  `;
+        let s = `- [${w.name}(${item.year})](#${w.name.toLocaleLowerCase()}-${item.year}) [\[dblp\]](${w.dblp_url})  `;
         lines.push(s)
     })
-    lines.push(`### Journals (${item.year})`);
+    //lines.push(`### Journals (${item.year})`);
     lines.push(`  `);
     sorted_journals.forEach((w) => {
-        let s = `- [${w.name}](#${w.name.toLocaleLowerCase()}-${item.year}) [\[dblp\]](${w.dblp_url})  `;
+        let s = `- [${w.name}(${item.year})](#${w.name.toLocaleLowerCase()}-${item.year}) [\[dblp\]](${w.dblp_url})  `;
         lines.push(s)
     })
     lines.push(`  `);
@@ -154,6 +154,7 @@ function create_overview_year(item: YearPaperCollection): string[] {
 
 function create_overview(_papers: DBLPElementClass[]): string[] {
     const lines: string[] = new Array();
+    lines.push("## Table of Contents")
 
     const sorted_papers_by_year = get_sorted_papers_by_year(_papers);
     sorted_papers_by_year.forEach((v) => {
@@ -172,6 +173,7 @@ export function createCompleteMD(_papers: DBLPElementClass[]): string[] {
     overview_lines.forEach((v) => lines.push(v));
 
     const sorted_papers_by_year = get_sorted_papers_by_year(_papers);
+    lines.push("## Contents")
     sorted_papers_by_year.forEach((v) => {
         const inproceedings = <DBLPInproceedings[]>v.papers.filter((w) => w instanceof DBLPInproceedings);
         const sorted_inproceedings = get_sorted_proceedings(inproceedings, v.year);
@@ -203,7 +205,8 @@ export function createMD(papers: DBLPElementClass[], year : number): string[] {
         const sorted_inproceedings = get_sorted_proceedings(inproceedings, item.year);
         const journals = <DBLPArticle[]>item.papers.filter((w) => w instanceof DBLPArticle);
         const sorted_journals = get_sorted_journals(journals, item.year);
-    
+
+        lines.push("## Contents")
         createInproceedingsMD(sorted_inproceedings, item.year).forEach((v) => lines.push(v));
         createArticleMD(sorted_journals, item.year).forEach((v) => lines.push(v));
     

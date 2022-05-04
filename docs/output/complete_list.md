@@ -1,332 +1,240 @@
-## 2022  
-### Proceedings (2022)
-  
-- [SODA](#soda-2022) [[dblp]](https://dblp.org/db/conf/soda/soda2022.html)  
-### Journals (2022)
-  
-- [CoRR](#corr-2022) [[dblp]](https://dblp.org/db/journals/corr/corr2201.html)  
-  
-## 2021  
-### Proceedings (2021)
-  
-- [ALENEX](#alenex-2021) [[dblp]](https://dblp.org/db/conf/alenex/alenex2021.html)  
-- [CPM](#cpm-2021) [[dblp]](https://dblp.org/db/conf/cpm/cpm2021.html)  
-- [DCC](#dcc-2021) [[dblp]](https://dblp.org/db/conf/dcc/dcc2021.html)  
-- [DLT](#dlt-2021) [[dblp]](https://dblp.org/db/conf/dlt/dlt2021.html)  
-- [ESA](#esa-2021) [[dblp]](https://dblp.org/db/conf/esa/esa2021.html)  
-- [FOCS](#focs-2021) [[dblp]](https://dblp.org/db/conf/focs/focs2021.html)  
-- [ICALP](#icalp-2021) [[dblp]](https://dblp.org/db/conf/icalp/icalp2021.html)  
-- [ISAAC](#isaac-2021) [[dblp]](https://dblp.org/db/conf/isaac/isaac2021.html)  
-- [IWOCA](#iwoca-2021) [[dblp]](https://dblp.org/db/conf/iwoca/iwoca2021.html)  
-- [LATA](#lata-2021) [[dblp]](https://dblp.org/db/conf/lata/lata2021.html)  
-- [MFCS](#mfcs-2021) [[dblp]](https://dblp.org/db/conf/mfcs/mfcs2021.html)  
-- [SEA](#sea-2021) [[dblp]](https://dblp.org/db/conf/wea/sea2021.html)  
-- [SODA](#soda-2021) [[dblp]](https://dblp.org/db/conf/soda/soda2021.html)  
-- [SOFSEM](#sofsem-2021) [[dblp]](https://dblp.org/db/conf/sofsem/sofsem2021.html)  
-- [SPIRE](#spire-2021) [[dblp]](https://dblp.org/db/conf/spire/spire2021.html)  
-- [STACS](#stacs-2021) [[dblp]](https://dblp.org/db/conf/stacs/stacs2021.html)  
-- [STOC](#stoc-2021) [[dblp]](https://dblp.org/db/conf/stoc/stoc2021.html)  
-- [Stringology](#stringology-2021) [[dblp]](https://dblp.org/db/conf/stringology/stringology2021.html)  
-### Journals (2021)
-  
-- [CoRR](#corr-2021) [[dblp]](https://dblp.org/db/journals/corr/corr2112.html)  
-  
-## 2020  
-### Proceedings (2020)
-  
-- [ALENEX](#alenex-2020) [[dblp]](https://dblp.org/db/conf/alenex/alenex2020.html)  
-- [CPM](#cpm-2020) [[dblp]](https://dblp.org/db/conf/cpm/cpm2020.html)  
-- [DCC](#dcc-2020) [[dblp]](https://dblp.org/db/conf/dcc/dcc2020.html)  
-- [ESA](#esa-2020) [[dblp]](https://dblp.org/db/conf/esa/esa2020.html)  
-- [FOCS](#focs-2020) [[dblp]](https://dblp.org/db/conf/focs/focs2020.html)  
-- [ICALP](#icalp-2020) [[dblp]](https://dblp.org/db/conf/icalp/icalp2020.html)  
-- [ISAAC](#isaac-2020) [[dblp]](https://dblp.org/db/conf/isaac/isaac2020.html)  
-- [IWOCA](#iwoca-2020) [[dblp]](https://dblp.org/db/conf/iwoca/iwoca2020.html)  
-- [LATA](#lata-2020) [[dblp]](https://dblp.org/db/conf/lata/lata2020.html)  
-- [LATIN](#latin-2020) [[dblp]](https://dblp.org/db/conf/latin/latin2020.html)  
-- [SEA](#sea-2020) [[dblp]](https://dblp.org/db/conf/wea/sea2020.html)  
-- [SODA](#soda-2020) [[dblp]](https://dblp.org/db/conf/soda/soda2020.html)  
-- [SOFSEM](#sofsem-2020) [[dblp]](https://dblp.org/db/conf/sofsem/sofsem2020.html)  
-- [SPIRE](#spire-2020) [[dblp]](https://dblp.org/db/conf/spire/spire2020.html)  
-- [STACS](#stacs-2020) [[dblp]](https://dblp.org/db/conf/stacs/stacs2020.html)  
-- [STOC](#stoc-2020) [[dblp]](https://dblp.org/db/conf/stoc/stoc2020.html)  
-- [Stringology](#stringology-2020) [[dblp]](https://dblp.org/db/conf/stringology/stringology2020.html)  
-- [WALCOM](#walcom-2020) [[dblp]](https://dblp.org/db/conf/walcom/walcom2020.html)  
-### Journals (2020)
-  
-- [CoRR](#corr-2020) [[dblp]](https://dblp.org/db/journals/corr/corr2003.html)  
-- [Discret. Appl. Math.](#discret. appl. math.-2020) [[dblp]](https://dblp.org/db/journals/dam/dam274.html)  
-  
-## 2019  
-### Proceedings (2019)
-  
-- [CPM](#cpm-2019) [[dblp]](https://dblp.org/db/conf/cpm/cpm2019.html)  
-- [DLT](#dlt-2019) [[dblp]](https://dblp.org/db/conf/dlt/dlt2019.html)  
-- [ESA](#esa-2019) [[dblp]](https://dblp.org/db/conf/esa/esa2019.html)  
-- [FOCS](#focs-2019) [[dblp]](https://dblp.org/db/conf/focs/focs2019.html)  
-- [ICALP](#icalp-2019) [[dblp]](https://dblp.org/db/conf/icalp/icalp2019.html)  
-- [ISAAC](#isaac-2019) [[dblp]](https://dblp.org/db/conf/isaac/isaac2019.html)  
-- [IWOCA](#iwoca-2019) [[dblp]](https://dblp.org/db/conf/iwoca/iwoca2019.html)  
-- [LATA](#lata-2019) [[dblp]](https://dblp.org/db/conf/lata/lata2019.html)  
-- [MFCS](#mfcs-2019) [[dblp]](https://dblp.org/db/conf/mfcs/mfcs2019.html)  
-- [SEA²](#sea²-2019) [[dblp]](https://dblp.org/db/conf/sea2/sea2019.html)  
-- [SODA](#soda-2019) [[dblp]](https://dblp.org/db/conf/soda/soda2019.html)  
-- [SOFSEM](#sofsem-2019) [[dblp]](https://dblp.org/db/conf/sofsem/sofsem2019.html)  
-- [SPIRE](#spire-2019) [[dblp]](https://dblp.org/db/conf/spire/spire2019.html)  
-- [STACS](#stacs-2019) [[dblp]](https://dblp.org/db/conf/stacs/stacs2019.html)  
-- [STOC](#stoc-2019) [[dblp]](https://dblp.org/db/conf/stoc/stoc2019.html)  
-- [Stringology](#stringology-2019) [[dblp]](https://dblp.org/db/conf/stringology/stringology2019.html)  
-### Journals (2019)
-  
-- [CoRR](#corr-2019) [[dblp]](https://dblp.org/db/journals/corr/corr1904.html)  
-  
-## 2018  
-### Proceedings (2018)
-  
-- [CPM](#cpm-2018) [[dblp]](https://dblp.org/db/conf/cpm/cpm2018.html)  
-- [SODA](#soda-2018) [[dblp]](https://dblp.org/db/conf/soda/soda2018.html)  
-- [SPIRE](#spire-2018) [[dblp]](https://dblp.org/db/conf/spire/spire2018.html)  
-- [Stringology](#stringology-2018) [[dblp]](https://dblp.org/db/conf/stringology/stringology2018.html)  
-- [TFPIE@TFP](#tfpie@tfp-2018) [[dblp]](https://dblp.org/db/series/eptcs/eptcs295.html)  
-### Journals (2018)
-  
-- [CoRR](#corr-2018) [[dblp]](https://dblp.org/db/journals/corr/corr1812.html)  
-  
-## 2017  
-### Proceedings (2017)
-  
-- [CPM](#cpm-2017) [[dblp]](https://dblp.org/db/conf/cpm/cpm2017.html)  
-- [SPIRE](#spire-2017) [[dblp]](https://dblp.org/db/conf/spire/spire2017.html)  
-- [Stringology](#stringology-2017) [[dblp]](https://dblp.org/db/conf/stringology/stringology2017.html)  
-### Journals (2017)
+# Papers for stringologist
+## Table of Contents
+  
+- [SODA(2022)](#soda-2022) [[dblp]](https://dblp.org/db/conf/soda/soda2022.html)  
+  
+- [CoRR(2022)](#corr-2022) [[dblp]](https://dblp.org/db/journals/corr/corr2201.html)  
+  
+  
+- [ALENEX(2021)](#alenex-2021) [[dblp]](https://dblp.org/db/conf/alenex/alenex2021.html)  
+- [CPM(2021)](#cpm-2021) [[dblp]](https://dblp.org/db/conf/cpm/cpm2021.html)  
+- [DCC(2021)](#dcc-2021) [[dblp]](https://dblp.org/db/conf/dcc/dcc2021.html)  
+- [DLT(2021)](#dlt-2021) [[dblp]](https://dblp.org/db/conf/dlt/dlt2021.html)  
+- [ESA(2021)](#esa-2021) [[dblp]](https://dblp.org/db/conf/esa/esa2021.html)  
+- [FOCS(2021)](#focs-2021) [[dblp]](https://dblp.org/db/conf/focs/focs2021.html)  
+- [ICALP(2021)](#icalp-2021) [[dblp]](https://dblp.org/db/conf/icalp/icalp2021.html)  
+- [ISAAC(2021)](#isaac-2021) [[dblp]](https://dblp.org/db/conf/isaac/isaac2021.html)  
+- [IWOCA(2021)](#iwoca-2021) [[dblp]](https://dblp.org/db/conf/iwoca/iwoca2021.html)  
+- [LATA(2021)](#lata-2021) [[dblp]](https://dblp.org/db/conf/lata/lata2021.html)  
+- [MFCS(2021)](#mfcs-2021) [[dblp]](https://dblp.org/db/conf/mfcs/mfcs2021.html)  
+- [SEA(2021)](#sea-2021) [[dblp]](https://dblp.org/db/conf/wea/sea2021.html)  
+- [SODA(2021)](#soda-2021) [[dblp]](https://dblp.org/db/conf/soda/soda2021.html)  
+- [SOFSEM(2021)](#sofsem-2021) [[dblp]](https://dblp.org/db/conf/sofsem/sofsem2021.html)  
+- [SPIRE(2021)](#spire-2021) [[dblp]](https://dblp.org/db/conf/spire/spire2021.html)  
+- [STACS(2021)](#stacs-2021) [[dblp]](https://dblp.org/db/conf/stacs/stacs2021.html)  
+- [STOC(2021)](#stoc-2021) [[dblp]](https://dblp.org/db/conf/stoc/stoc2021.html)  
+- [Stringology(2021)](#stringology-2021) [[dblp]](https://dblp.org/db/conf/stringology/stringology2021.html)  
   
-- [CoRR](#corr-2017) [[dblp]](https://dblp.org/db/journals/corr/corr1702.html)  
+- [CoRR(2021)](#corr-2021) [[dblp]](https://dblp.org/db/journals/corr/corr2112.html)  
   
-## 2016  
-### Proceedings (2016)
   
-- [CPM](#cpm-2016) [[dblp]](https://dblp.org/db/conf/cpm/cpm2016.html)  
-- [SPIRE](#spire-2016) [[dblp]](https://dblp.org/db/conf/spire/spire2016.html)  
-- [Stringology](#stringology-2016) [[dblp]](https://dblp.org/db/conf/stringology/stringology2016.html)  
-### Journals (2016)
+- [ALENEX(2020)](#alenex-2020) [[dblp]](https://dblp.org/db/conf/alenex/alenex2020.html)  
+- [CPM(2020)](#cpm-2020) [[dblp]](https://dblp.org/db/conf/cpm/cpm2020.html)  
+- [DCC(2020)](#dcc-2020) [[dblp]](https://dblp.org/db/conf/dcc/dcc2020.html)  
+- [ESA(2020)](#esa-2020) [[dblp]](https://dblp.org/db/conf/esa/esa2020.html)  
+- [FOCS(2020)](#focs-2020) [[dblp]](https://dblp.org/db/conf/focs/focs2020.html)  
+- [ICALP(2020)](#icalp-2020) [[dblp]](https://dblp.org/db/conf/icalp/icalp2020.html)  
+- [ISAAC(2020)](#isaac-2020) [[dblp]](https://dblp.org/db/conf/isaac/isaac2020.html)  
+- [IWOCA(2020)](#iwoca-2020) [[dblp]](https://dblp.org/db/conf/iwoca/iwoca2020.html)  
+- [LATA(2020)](#lata-2020) [[dblp]](https://dblp.org/db/conf/lata/lata2020.html)  
+- [LATIN(2020)](#latin-2020) [[dblp]](https://dblp.org/db/conf/latin/latin2020.html)  
+- [SEA(2020)](#sea-2020) [[dblp]](https://dblp.org/db/conf/wea/sea2020.html)  
+- [SODA(2020)](#soda-2020) [[dblp]](https://dblp.org/db/conf/soda/soda2020.html)  
+- [SOFSEM(2020)](#sofsem-2020) [[dblp]](https://dblp.org/db/conf/sofsem/sofsem2020.html)  
+- [SPIRE(2020)](#spire-2020) [[dblp]](https://dblp.org/db/conf/spire/spire2020.html)  
+- [STACS(2020)](#stacs-2020) [[dblp]](https://dblp.org/db/conf/stacs/stacs2020.html)  
+- [STOC(2020)](#stoc-2020) [[dblp]](https://dblp.org/db/conf/stoc/stoc2020.html)  
+- [Stringology(2020)](#stringology-2020) [[dblp]](https://dblp.org/db/conf/stringology/stringology2020.html)  
+- [WALCOM(2020)](#walcom-2020) [[dblp]](https://dblp.org/db/conf/walcom/walcom2020.html)  
   
-- [CoRR](#corr-2016) [[dblp]](https://dblp.org/db/journals/corr/corr1607.html)  
-- [Discret. Appl. Math.](#discret. appl. math.-2016) [[dblp]](https://dblp.org/db/journals/dam/dam212.html)  
+- [CoRR(2020)](#corr-2020) [[dblp]](https://dblp.org/db/journals/corr/corr2003.html)  
+- [Discret. Appl. Math.(2020)](#discret. appl. math.-2020) [[dblp]](https://dblp.org/db/journals/dam/dam274.html)  
   
-## 2015  
-### Proceedings (2015)
   
-- [CPM](#cpm-2015) [[dblp]](https://dblp.org/db/conf/cpm/cpm2015.html)  
-- [SPIRE](#spire-2015) [[dblp]](https://dblp.org/db/conf/spire/spire2015.html)  
-- [Stringology](#stringology-2015) [[dblp]](https://dblp.org/db/conf/stringology/stringology2015.html)  
-### Journals (2015)
+- [CPM(2019)](#cpm-2019) [[dblp]](https://dblp.org/db/conf/cpm/cpm2019.html)  
+- [DLT(2019)](#dlt-2019) [[dblp]](https://dblp.org/db/conf/dlt/dlt2019.html)  
+- [ESA(2019)](#esa-2019) [[dblp]](https://dblp.org/db/conf/esa/esa2019.html)  
+- [FOCS(2019)](#focs-2019) [[dblp]](https://dblp.org/db/conf/focs/focs2019.html)  
+- [ICALP(2019)](#icalp-2019) [[dblp]](https://dblp.org/db/conf/icalp/icalp2019.html)  
+- [ISAAC(2019)](#isaac-2019) [[dblp]](https://dblp.org/db/conf/isaac/isaac2019.html)  
+- [IWOCA(2019)](#iwoca-2019) [[dblp]](https://dblp.org/db/conf/iwoca/iwoca2019.html)  
+- [LATA(2019)](#lata-2019) [[dblp]](https://dblp.org/db/conf/lata/lata2019.html)  
+- [MFCS(2019)](#mfcs-2019) [[dblp]](https://dblp.org/db/conf/mfcs/mfcs2019.html)  
+- [SEA²(2019)](#sea²-2019) [[dblp]](https://dblp.org/db/conf/sea2/sea2019.html)  
+- [SODA(2019)](#soda-2019) [[dblp]](https://dblp.org/db/conf/soda/soda2019.html)  
+- [SOFSEM(2019)](#sofsem-2019) [[dblp]](https://dblp.org/db/conf/sofsem/sofsem2019.html)  
+- [SPIRE(2019)](#spire-2019) [[dblp]](https://dblp.org/db/conf/spire/spire2019.html)  
+- [STACS(2019)](#stacs-2019) [[dblp]](https://dblp.org/db/conf/stacs/stacs2019.html)  
+- [STOC(2019)](#stoc-2019) [[dblp]](https://dblp.org/db/conf/stoc/stoc2019.html)  
+- [Stringology(2019)](#stringology-2019) [[dblp]](https://dblp.org/db/conf/stringology/stringology2019.html)  
   
+- [CoRR(2019)](#corr-2019) [[dblp]](https://dblp.org/db/journals/corr/corr1904.html)  
   
-## 2014  
-### Proceedings (2014)
   
-- [CPM](#cpm-2014) [[dblp]](https://dblp.org/db/conf/cpm/cpm2014.html)  
-- [SPIRE](#spire-2014) [[dblp]](https://dblp.org/db/conf/spire/spire2014.html)  
-- [Stringology](#stringology-2014) [[dblp]](https://dblp.org/db/conf/stringology/stringology2014.html)  
-### Journals (2014)
+- [CPM(2018)](#cpm-2018) [[dblp]](https://dblp.org/db/conf/cpm/cpm2018.html)  
+- [SODA(2018)](#soda-2018) [[dblp]](https://dblp.org/db/conf/soda/soda2018.html)  
+- [SPIRE(2018)](#spire-2018) [[dblp]](https://dblp.org/db/conf/spire/spire2018.html)  
+- [Stringology(2018)](#stringology-2018) [[dblp]](https://dblp.org/db/conf/stringology/stringology2018.html)  
+- [TFPIE@TFP(2018)](#tfpie@tfp-2018) [[dblp]](https://dblp.org/db/series/eptcs/eptcs295.html)  
   
-- [CoRR](#corr-2014) [[dblp]](https://dblp.org/db/journals/corr/corr1410.html)  
-- [Discret. Appl. Math.](#discret. appl. math.-2014) [[dblp]](https://dblp.org/db/journals/dam/dam163.html)  
+- [CoRR(2018)](#corr-2018) [[dblp]](https://dblp.org/db/journals/corr/corr1812.html)  
   
-## 2013  
-### Proceedings (2013)
   
-- [CPM](#cpm-2013) [[dblp]](https://dblp.org/db/conf/cpm/cpm2013.html)  
-- [SPIRE](#spire-2013) [[dblp]](https://dblp.org/db/conf/spire/spire2013.html)  
-- [Stringology](#stringology-2013) [[dblp]](https://dblp.org/db/conf/stringology/stringology2013.html)  
-### Journals (2013)
+- [CPM(2017)](#cpm-2017) [[dblp]](https://dblp.org/db/conf/cpm/cpm2017.html)  
+- [SPIRE(2017)](#spire-2017) [[dblp]](https://dblp.org/db/conf/spire/spire2017.html)  
+- [Stringology(2017)](#stringology-2017) [[dblp]](https://dblp.org/db/conf/stringology/stringology2017.html)  
   
-- [CoRR](#corr-2013) [[dblp]](https://dblp.org/db/journals/corr/corr1304.html)  
+- [CoRR(2017)](#corr-2017) [[dblp]](https://dblp.org/db/journals/corr/corr1702.html)  
   
-## 2012  
-### Proceedings (2012)
   
-- [CPM](#cpm-2012) [[dblp]](https://dblp.org/db/conf/cpm/cpm2012.html)  
-- [SPIRE](#spire-2012) [[dblp]](https://dblp.org/db/conf/spire/spire2012.html)  
-- [Stringology](#stringology-2012) [[dblp]](https://dblp.org/db/conf/stringology/stringology2012.html)  
-### Journals (2012)
+- [CPM(2016)](#cpm-2016) [[dblp]](https://dblp.org/db/conf/cpm/cpm2016.html)  
+- [SPIRE(2016)](#spire-2016) [[dblp]](https://dblp.org/db/conf/spire/spire2016.html)  
+- [Stringology(2016)](#stringology-2016) [[dblp]](https://dblp.org/db/conf/stringology/stringology2016.html)  
   
-- [CoRR](#corr-2012) [[dblp]](https://dblp.org/db/journals/corr/corr1203.html)  
+- [CoRR(2016)](#corr-2016) [[dblp]](https://dblp.org/db/journals/corr/corr1607.html)  
+- [Discret. Appl. Math.(2016)](#discret. appl. math.-2016) [[dblp]](https://dblp.org/db/journals/dam/dam212.html)  
   
-## 2011  
-### Proceedings (2011)
   
-- [CPM](#cpm-2011) [[dblp]](https://dblp.org/db/conf/cpm/cpm2011.html)  
-- [SPIRE](#spire-2011) [[dblp]](https://dblp.org/db/conf/spire/spire2011.html)  
-- [Stringology](#stringology-2011) [[dblp]](https://dblp.org/db/conf/stringology/stringology2011.html)  
-### Journals (2011)
+- [CPM(2015)](#cpm-2015) [[dblp]](https://dblp.org/db/conf/cpm/cpm2015.html)  
+- [SPIRE(2015)](#spire-2015) [[dblp]](https://dblp.org/db/conf/spire/spire2015.html)  
+- [Stringology(2015)](#stringology-2015) [[dblp]](https://dblp.org/db/conf/stringology/stringology2015.html)  
   
-- [CoRR](#corr-2011) [[dblp]](https://dblp.org/db/journals/corr/corr1108.html)  
   
-## 2010  
-### Proceedings (2010)
   
-- [CPM](#cpm-2010) [[dblp]](https://dblp.org/db/conf/cpm/cpm2010.html)  
-- [SPIRE](#spire-2010) [[dblp]](https://dblp.org/db/conf/spire/spire2010.html)  
-- [Stringology](#stringology-2010) [[dblp]](https://dblp.org/db/conf/stringology/stringology2010.html)  
-### Journals (2010)
+- [CPM(2014)](#cpm-2014) [[dblp]](https://dblp.org/db/conf/cpm/cpm2014.html)  
+- [SPIRE(2014)](#spire-2014) [[dblp]](https://dblp.org/db/conf/spire/spire2014.html)  
+- [Stringology(2014)](#stringology-2014) [[dblp]](https://dblp.org/db/conf/stringology/stringology2014.html)  
   
-- [CoRR](#corr-2010) [[dblp]](https://dblp.org/db/journals/corr/corr1007.html)  
+- [CoRR(2014)](#corr-2014) [[dblp]](https://dblp.org/db/journals/corr/corr1410.html)  
+- [Discret. Appl. Math.(2014)](#discret. appl. math.-2014) [[dblp]](https://dblp.org/db/journals/dam/dam163.html)  
   
-## 2009  
-### Proceedings (2009)
   
-- [CPM](#cpm-2009) [[dblp]](https://dblp.org/db/conf/cpm/cpm2009.html)  
-- [SPIRE](#spire-2009) [[dblp]](https://dblp.org/db/conf/spire/spire2009.html)  
-- [Stringology](#stringology-2009) [[dblp]](https://dblp.org/db/conf/stringology/stringology2009.html)  
-### Journals (2009)
+- [CPM(2013)](#cpm-2013) [[dblp]](https://dblp.org/db/conf/cpm/cpm2013.html)  
+- [SPIRE(2013)](#spire-2013) [[dblp]](https://dblp.org/db/conf/spire/spire2013.html)  
+- [Stringology(2013)](#stringology-2013) [[dblp]](https://dblp.org/db/conf/stringology/stringology2013.html)  
   
-- [CoRR](#corr-2009) [[dblp]](https://dblp.org/db/journals/corr/corr0910.html)  
+- [CoRR(2013)](#corr-2013) [[dblp]](https://dblp.org/db/journals/corr/corr1304.html)  
   
-## 2008  
-### Proceedings (2008)
   
-- [CPM](#cpm-2008) [[dblp]](https://dblp.org/db/conf/cpm/cpm2008.html)  
-- [SPIRE](#spire-2008) [[dblp]](https://dblp.org/db/conf/spire/spire2008.html)  
-- [Stringology](#stringology-2008) [[dblp]](https://dblp.org/db/conf/stringology/stringology2008.html)  
-### Journals (2008)
+- [CPM(2012)](#cpm-2012) [[dblp]](https://dblp.org/db/conf/cpm/cpm2012.html)  
+- [SPIRE(2012)](#spire-2012) [[dblp]](https://dblp.org/db/conf/spire/spire2012.html)  
+- [Stringology(2012)](#stringology-2012) [[dblp]](https://dblp.org/db/conf/stringology/stringology2012.html)  
   
+- [CoRR(2012)](#corr-2012) [[dblp]](https://dblp.org/db/journals/corr/corr1203.html)  
   
-## 2007  
-### Proceedings (2007)
   
-- [CPM](#cpm-2007) [[dblp]](https://dblp.org/db/conf/cpm/cpm2007.html)  
-- [SPIRE](#spire-2007) [[dblp]](https://dblp.org/db/conf/spire/spire2007.html)  
-### Journals (2007)
+- [CPM(2011)](#cpm-2011) [[dblp]](https://dblp.org/db/conf/cpm/cpm2011.html)  
+- [SPIRE(2011)](#spire-2011) [[dblp]](https://dblp.org/db/conf/spire/spire2011.html)  
+- [Stringology(2011)](#stringology-2011) [[dblp]](https://dblp.org/db/conf/stringology/stringology2011.html)  
   
-- [CoRR](#corr-2007) [[dblp]](https://dblp.org/db/journals/corr/corr0706.html)  
+- [CoRR(2011)](#corr-2011) [[dblp]](https://dblp.org/db/journals/corr/corr1108.html)  
   
-## 2006  
-### Proceedings (2006)
   
-- [CPM](#cpm-2006) [[dblp]](https://dblp.org/db/conf/cpm/cpm2006.html)  
-- [SPIRE](#spire-2006) [[dblp]](https://dblp.org/db/conf/spire/spire2006.html)  
-- [Stringology](#stringology-2006) [[dblp]](https://dblp.org/db/conf/stringology/stringology2006.html)  
-### Journals (2006)
+- [CPM(2010)](#cpm-2010) [[dblp]](https://dblp.org/db/conf/cpm/cpm2010.html)  
+- [SPIRE(2010)](#spire-2010) [[dblp]](https://dblp.org/db/conf/spire/spire2010.html)  
+- [Stringology(2010)](#stringology-2010) [[dblp]](https://dblp.org/db/conf/stringology/stringology2010.html)  
   
+- [CoRR(2010)](#corr-2010) [[dblp]](https://dblp.org/db/journals/corr/corr1007.html)  
   
-## 2005  
-### Proceedings (2005)
   
-- [CPM](#cpm-2005) [[dblp]](https://dblp.org/db/conf/cpm/cpm2005.html)  
-- [SPIRE](#spire-2005) [[dblp]](https://dblp.org/db/conf/spire/spire2005.html)  
-- [Stringology](#stringology-2005) [[dblp]](https://dblp.org/db/conf/stringology/stringology2005.html)  
-### Journals (2005)
+- [CPM(2009)](#cpm-2009) [[dblp]](https://dblp.org/db/conf/cpm/cpm2009.html)  
+- [SPIRE(2009)](#spire-2009) [[dblp]](https://dblp.org/db/conf/spire/spire2009.html)  
+- [Stringology(2009)](#stringology-2009) [[dblp]](https://dblp.org/db/conf/stringology/stringology2009.html)  
   
+- [CoRR(2009)](#corr-2009) [[dblp]](https://dblp.org/db/journals/corr/corr0910.html)  
   
-## 2004  
-### Proceedings (2004)
   
-- [CPM](#cpm-2004) [[dblp]](https://dblp.org/db/conf/cpm/cpm2004.html)  
-- [SPIRE](#spire-2004) [[dblp]](https://dblp.org/db/conf/spire/spire2004.html)  
-- [Stringology](#stringology-2004) [[dblp]](https://dblp.org/db/conf/stringology/stringology2004.html)  
-### Journals (2004)
+- [CPM(2008)](#cpm-2008) [[dblp]](https://dblp.org/db/conf/cpm/cpm2008.html)  
+- [SPIRE(2008)](#spire-2008) [[dblp]](https://dblp.org/db/conf/spire/spire2008.html)  
+- [Stringology(2008)](#stringology-2008) [[dblp]](https://dblp.org/db/conf/stringology/stringology2008.html)  
   
   
-## 2003  
-### Proceedings (2003)
   
-- [CPM](#cpm-2003) [[dblp]](https://dblp.org/db/conf/cpm/cpm2003.html)  
-- [SPIRE](#spire-2003) [[dblp]](https://dblp.org/db/conf/spire/spire2003.html)  
-- [Stringology](#stringology-2003) [[dblp]](https://dblp.org/db/conf/stringology/stringology2003.html)  
-### Journals (2003)
+- [CPM(2007)](#cpm-2007) [[dblp]](https://dblp.org/db/conf/cpm/cpm2007.html)  
+- [SPIRE(2007)](#spire-2007) [[dblp]](https://dblp.org/db/conf/spire/spire2007.html)  
   
+- [CoRR(2007)](#corr-2007) [[dblp]](https://dblp.org/db/journals/corr/corr0706.html)  
   
-## 2002  
-### Proceedings (2002)
   
-- [CPM](#cpm-2002) [[dblp]](https://dblp.org/db/conf/cpm/cpm2002.html)  
-- [SPIRE](#spire-2002) [[dblp]](https://dblp.org/db/conf/spire/spire2002.html)  
-- [Stringology](#stringology-2002) [[dblp]](https://dblp.org/db/conf/stringology/stringology2002.html)  
-### Journals (2002)
+- [CPM(2006)](#cpm-2006) [[dblp]](https://dblp.org/db/conf/cpm/cpm2006.html)  
+- [SPIRE(2006)](#spire-2006) [[dblp]](https://dblp.org/db/conf/spire/spire2006.html)  
+- [Stringology(2006)](#stringology-2006) [[dblp]](https://dblp.org/db/conf/stringology/stringology2006.html)  
   
   
-## 2001  
-### Proceedings (2001)
   
-- [CPM](#cpm-2001) [[dblp]](https://dblp.org/db/conf/cpm/cpm2001.html)  
-- [SPIRE](#spire-2001) [[dblp]](https://dblp.org/db/conf/spire/spire2001.html)  
-- [Stringology](#stringology-2001) [[dblp]](https://dblp.org/db/conf/stringology/stringology2001.html)  
-### Journals (2001)
+- [CPM(2005)](#cpm-2005) [[dblp]](https://dblp.org/db/conf/cpm/cpm2005.html)  
+- [SPIRE(2005)](#spire-2005) [[dblp]](https://dblp.org/db/conf/spire/spire2005.html)  
+- [Stringology(2005)](#stringology-2005) [[dblp]](https://dblp.org/db/conf/stringology/stringology2005.html)  
   
   
-## 2000  
-### Proceedings (2000)
   
-- [CPM](#cpm-2000) [[dblp]](https://dblp.org/db/conf/cpm/cpm2000.html)  
-- [SPIRE](#spire-2000) [[dblp]](https://dblp.org/db/conf/spire/spire2000.html)  
-- [Stringology](#stringology-2000) [[dblp]](https://dblp.org/db/conf/stringology/stringology2000.html)  
-### Journals (2000)
+- [CPM(2004)](#cpm-2004) [[dblp]](https://dblp.org/db/conf/cpm/cpm2004.html)  
+- [SPIRE(2004)](#spire-2004) [[dblp]](https://dblp.org/db/conf/spire/spire2004.html)  
+- [Stringology(2004)](#stringology-2004) [[dblp]](https://dblp.org/db/conf/stringology/stringology2004.html)  
   
   
-## 1999  
-### Proceedings (1999)
   
-- [CPM](#cpm-1999) [[dblp]](https://dblp.org/db/conf/cpm/cpm99.html)  
-- [Stringology](#stringology-1999) [[dblp]](https://dblp.org/db/conf/stringology/stringology1999.html)  
-### Journals (1999)
+- [CPM(2003)](#cpm-2003) [[dblp]](https://dblp.org/db/conf/cpm/cpm2003.html)  
+- [SPIRE(2003)](#spire-2003) [[dblp]](https://dblp.org/db/conf/spire/spire2003.html)  
+- [Stringology(2003)](#stringology-2003) [[dblp]](https://dblp.org/db/conf/stringology/stringology2003.html)  
   
   
-## 1998  
-### Proceedings (1998)
   
-- [CPM](#cpm-1998) [[dblp]](https://dblp.org/db/conf/cpm/cpm98.html)  
-- [SPIRE](#spire-1998) [[dblp]](https://dblp.org/db/conf/spire/spire98.html)  
-- [Stringology](#stringology-1998) [[dblp]](https://dblp.org/db/conf/stringology/stringology1998.html)  
-### Journals (1998)
+- [CPM(2002)](#cpm-2002) [[dblp]](https://dblp.org/db/conf/cpm/cpm2002.html)  
+- [SPIRE(2002)](#spire-2002) [[dblp]](https://dblp.org/db/conf/spire/spire2002.html)  
+- [Stringology(2002)](#stringology-2002) [[dblp]](https://dblp.org/db/conf/stringology/stringology2002.html)  
   
   
-## 1997  
-### Proceedings (1997)
   
-- [CPM](#cpm-1997) [[dblp]](https://dblp.org/db/conf/cpm/cpm97.html)  
-- [Stringology](#stringology-1997) [[dblp]](https://dblp.org/db/conf/stringology/stringology1997.html)  
-### Journals (1997)
+- [CPM(2001)](#cpm-2001) [[dblp]](https://dblp.org/db/conf/cpm/cpm2001.html)  
+- [SPIRE(2001)](#spire-2001) [[dblp]](https://dblp.org/db/conf/spire/spire2001.html)  
+- [Stringology(2001)](#stringology-2001) [[dblp]](https://dblp.org/db/conf/stringology/stringology2001.html)  
   
   
-## 1996  
-### Proceedings (1996)
   
-- [CPM](#cpm-1996) [[dblp]](https://dblp.org/db/conf/cpm/cpm96.html)  
-- [Stringology](#stringology-1996) [[dblp]](https://dblp.org/db/conf/stringology/stringology1996.html)  
-### Journals (1996)
+- [CPM(2000)](#cpm-2000) [[dblp]](https://dblp.org/db/conf/cpm/cpm2000.html)  
+- [SPIRE(2000)](#spire-2000) [[dblp]](https://dblp.org/db/conf/spire/spire2000.html)  
+- [Stringology(2000)](#stringology-2000) [[dblp]](https://dblp.org/db/conf/stringology/stringology2000.html)  
   
   
-## 1995  
-### Proceedings (1995)
   
-- [CPM](#cpm-1995) [[dblp]](https://dblp.org/db/conf/cpm/cpm95.html)  
-### Journals (1995)
+- [CPM(1999)](#cpm-1999) [[dblp]](https://dblp.org/db/conf/cpm/cpm99.html)  
+- [Stringology(1999)](#stringology-1999) [[dblp]](https://dblp.org/db/conf/stringology/stringology1999.html)  
   
   
-## 1994  
-### Proceedings (1994)
   
-- [CPM](#cpm-1994) [[dblp]](https://dblp.org/db/conf/cpm/cpm94.html)  
-### Journals (1994)
+- [CPM(1998)](#cpm-1998) [[dblp]](https://dblp.org/db/conf/cpm/cpm98.html)  
+- [SPIRE(1998)](#spire-1998) [[dblp]](https://dblp.org/db/conf/spire/spire98.html)  
+- [Stringology(1998)](#stringology-1998) [[dblp]](https://dblp.org/db/conf/stringology/stringology1998.html)  
   
   
-## 1993  
-### Proceedings (1993)
   
-- [CPM](#cpm-1993) [[dblp]](https://dblp.org/db/conf/cpm/cpm93.html)  
-### Journals (1993)
+- [CPM(1997)](#cpm-1997) [[dblp]](https://dblp.org/db/conf/cpm/cpm97.html)  
+- [Stringology(1997)](#stringology-1997) [[dblp]](https://dblp.org/db/conf/stringology/stringology1997.html)  
   
   
-## 1992  
-### Proceedings (1992)
   
-- [CPM](#cpm-1992) [[dblp]](https://dblp.org/db/conf/cpm/cpm92.html)  
-### Journals (1992)
+- [CPM(1996)](#cpm-1996) [[dblp]](https://dblp.org/db/conf/cpm/cpm96.html)  
+- [Stringology(1996)](#stringology-1996) [[dblp]](https://dblp.org/db/conf/stringology/stringology1996.html)  
   
   
-### Proceedings  
   
+- [CPM(1995)](#cpm-1995) [[dblp]](https://dblp.org/db/conf/cpm/cpm95.html)  
+  
+  
+  
+- [CPM(1994)](#cpm-1994) [[dblp]](https://dblp.org/db/conf/cpm/cpm94.html)  
+  
+  
+  
+- [CPM(1993)](#cpm-1993) [[dblp]](https://dblp.org/db/conf/cpm/cpm93.html)  
+  
+  
+  
+- [CPM(1992)](#cpm-1992) [[dblp]](https://dblp.org/db/conf/cpm/cpm92.html)  
+  
+  
+## Contents
 #### [SODA 2022](https://dblp.org/db/conf/soda/soda2022.html)
   1. [A Lower Bound for the n-queens Problem.](https://doi.org/10.1137/1.9781611977073.86)  
   2. [An Improved Algorithm for The k-Dyck Edit Distance Problem.](https://doi.org/10.1137/1.9781611977073.144)  
@@ -339,8 +247,6 @@
   9. [Selectable Heaps and Optimal Lazy Search Trees.](https://doi.org/10.1137/1.9781611977073.78)  
   10. [Simulating a stack using queues.](https://doi.org/10.1137/1.9781611977073.76)  
   11. [Splay trees on trees.](https://doi.org/10.1137/1.9781611977073.75)  
-  
-### Journals  
   
 #### CoRR 2022  
   1. [A theoretical and experimental analysis of BWT variants for string collections.](https://arxiv.org/abs/2202.13235)  
@@ -361,8 +267,6 @@
   16. [Standard Vs Uniform Binary Search and Their Variants in Learned Static Indexing: The Case of the Searching on Sorted Data Benchmarking Software Platform.](https://arxiv.org/abs/2201.01554)  
   17. [What Does Dynamic Optimality Mean in External Memory?](https://arxiv.org/abs/2201.01742)  
   18. [X3: Lossless Data Compressor.](https://arxiv.org/abs/2201.01727)  
-  
-### Proceedings  
   
 #### [ALENEX 2021](https://dblp.org/db/conf/alenex/alenex2021.html)
   1. [PFP Compressed Suffix Trees.](https://doi.org/10.1137/1.9781611976472.5)  
@@ -521,8 +425,6 @@
   7. [The n-ary Initial Literal and Literal Shuffle.](http://www.stringology.org/event/2021/p06.html)  
   8. [Towards an Efficient Text Sampling Approach for Exact and Approximate Matching.](http://www.stringology.org/event/2021/p07.html)  
   
-### Journals  
-  
 #### CoRR 2021  
   1. [$r$-indexing Wheeler graphs.](https://arxiv.org/abs/2101.12341)  
   2. [A Bloom Filter Survey: Variants for Different Domain Applications.](https://arxiv.org/abs/2106.12189)  
@@ -650,8 +552,6 @@
   124. [Weighted Ancestors in Suffix Trees Revisited.](https://arxiv.org/abs/2103.00462)  
   125. [Weighted Burrows-Wheeler Compression.](https://arxiv.org/abs/2105.10327)  
   126. [Which Regular Languages can be Efficiently Indexed?](https://arxiv.org/abs/2102.06798)  
-  
-### Proceedings  
   
 #### [ALENEX 2020](https://dblp.org/db/conf/alenex/alenex2020.html)
   1. [Engineering Top-Down Weight-Balanced Trees.](https://doi.org/10.1137/1.9781611976007.13)  
@@ -825,8 +725,6 @@
   2. [Faster Privacy-Preserving Computation of Edit Distance with Moves.](https://doi.org/10.1007/978-3-030-39881-1_26)  
   3. [Generalized Dictionary Matching Under Substring Consistent Equivalence Relations.](https://doi.org/10.1007/978-3-030-39881-1_11)  
   4. [Shortest Covers of All Cyclic Shifts of a String.](https://doi.org/10.1007/978-3-030-39881-1_7)  
-  
-### Journals  
   
 #### CoRR 2020  
   1. [$O(\log \log n)$ Worst-Case Local Decoding and Update Efficiency for Data Compression.](https://arxiv.org/abs/2001.08679)  
@@ -1020,8 +918,6 @@
   12. [Preface: Stringology Algorithms.](https://doi.org/10.1016/j.dam.2020.01.025)  
   13. [The order-preserving pattern matching problem in practice.](https://doi.org/10.1016/j.dam.2018.10.023)  
   
-### Proceedings  
-  
 #### [CPM 2019](https://dblp.org/db/conf/cpm/cpm2019.html)
   1. [A 2-Approximation Algorithm for the Complementary Maximal Strip Recovery Problem.](https://doi.org/10.4230/LIPIcs.CPM.2019.5)  
   2. [A New Class of Searchable and Provably Highly Compressible String Transformations.](https://doi.org/10.4230/LIPIcs.CPM.2019.12)  
@@ -1186,8 +1082,6 @@
   10. [Pattern Matching on Weighted Strings.](http://www.stringology.org/event/2019/p01.html)  
   11. [Selective Dynamic Compression.](http://www.stringology.org/event/2019/p10.html)  
   12. [Translating Between Wavelet Tree and Wavelet Matrix Construction.](http://www.stringology.org/event/2019/p12.html)  
-  
-### Journals  
   
 #### CoRR 2019  
   1. [3SUM with Preprocessing: Algorithms, Lower Bounds and Cryptographic Applications.](https://arxiv.org/abs/1907.08355)  
@@ -1430,8 +1324,6 @@
   238. [k-Spectra of c-Balanced Words.](https://arxiv.org/abs/1904.09125)  
   239. [scaleBF: A High Scalable Membership Filter using 3D Bloom Filter.](https://arxiv.org/abs/1903.06570)  
   
-### Proceedings  
-  
 #### [CPM 2018](https://dblp.org/db/conf/cpm/cpm2018.html)
   1. [A Simple Linear-Time Algorithm for Computing the Centroid and Canonical Form of a Plane Graph and Its Applications.](https://doi.org/10.4230/LIPIcs.CPM.2018.10)  
   2. [A Succinct Four Russians Speedup for Edit Distance Computation and One-against-many Banded Alignment.](https://doi.org/10.4230/LIPIcs.CPM.2018.13)  
@@ -1507,8 +1399,6 @@
   
 #### [TFPIE@TFP 2018](https://dblp.org/db/series/eptcs/eptcs295.html)
   1. [Vector Programming Using Generative Recursion.](https://doi.org/10.4204/EPTCS.295.3)  
-  
-### Journals  
   
 #### CoRR 2018  
   1. [A Compact Representation for Trips over Networks built on self-indexes.](https://arxiv.org/abs/1812.11249)  
@@ -1685,8 +1575,6 @@
   172. [copMEM: Finding maximal exact matches via sampling both genomes.](https://arxiv.org/abs/1805.08816)  
   173. [k-Maximum Subarrays for Small k: Divide-and-Conquer made simpler.](https://arxiv.org/abs/1804.05956)  
   
-### Proceedings  
-  
 #### [CPM 2017](https://dblp.org/db/conf/cpm/cpm2017.html)
   1. [A Family of Approximation Algorithms for the Maximum Duo-Preservation String Mapping Problem.](https://doi.org/10.4230/LIPIcs.CPM.2017.10)  
   2. [Approximate Cover of Strings.](https://doi.org/10.4230/LIPIcs.CPM.2017.26)  
@@ -1765,8 +1653,6 @@
   13. [The Linear Equivalence of the Suffix Array and the Partially Sorted Lyndon Array.](http://www.stringology.org/event/2017/p08.html)  
   14. [Trade-offs in Query and Target Indexing for the Selection of Candidates in Protein Homology Searches.](http://www.stringology.org/event/2017/p12.html)  
   
-### Journals  
-  
 #### CoRR 2017  
   1. [At the Roots of Dictionary Compression: String Attractors.](https://arxiv.org/abs/1710.10964)  
   2. [Closing in on Time and Space Optimal Construction of Compressed Indexes.](https://arxiv.org/abs/1712.04886)  
@@ -1777,8 +1663,6 @@
   7. [On Two LZ78-style Grammars: Compression Bounds and Compressed-Space Computation.](https://arxiv.org/abs/1705.09538)  
   8. [Practical and Effective Re-Pair Compression.](https://arxiv.org/abs/1704.08558)  
   9. [String Attractors.](https://arxiv.org/abs/1709.05314)  
-  
-### Proceedings  
   
 #### [CPM 2016](https://dblp.org/db/conf/cpm/cpm2016.html)
   1. [A 7/2-Approximation Algorithm for the Maximum Duo-Preservation String Mapping Problem.](https://doi.org/10.4230/LIPIcs.CPM.2016.11)  
@@ -1856,8 +1740,6 @@
   14. [The Use and Usefulness of Fibonacci Codes.](http://www.stringology.org/event/2016/p01.html)  
   15. [Using Human Computation in Dead-zone based 2D Pattern Matching.](http://www.stringology.org/event/2016/p03.html)  
   
-### Journals  
-  
 #### CoRR 2016  
   1. [A Self-Index on Block Trees.](https://arxiv.org/abs/1606.06617)  
   2. [Pachinko.](https://arxiv.org/abs/1601.05706)  
@@ -1879,8 +1761,6 @@
   11. [Similarity based deduplication with small data chunks.](https://doi.org/10.1016/j.dam.2015.09.018)  
   12. [The New Periodicity Lemma revisited.](https://doi.org/10.1016/j.dam.2016.05.003)  
   13. [The power of greedy algorithms for approximating Max-ATSP, Cyclic Cover, and superstrings.](https://doi.org/10.1016/j.dam.2015.06.003)  
-  
-### Proceedings  
   
 #### [CPM 2015](https://dblp.org/db/conf/cpm/cpm2015.html)
   1. [A Framework for Space-Efficient String Kernels.](https://doi.org/10.1007/978-3-319-19929-0_2)  
@@ -1969,10 +1849,6 @@
   12. [Refined Tagging of Complex Verbal Phrases for the Italian Language.](http://www.stringology.org/event/2015/p13.html)  
   13. [Tuning Algorithms for Jumbled Matching.](http://www.stringology.org/event/2015/p07.html)  
   
-### Journals  
-  
-### Proceedings  
-  
 #### [CPM 2014](https://dblp.org/db/conf/cpm/cpm2014.html)
   1. [A really Simple Approximation of Smallest Grammar.](https://doi.org/10.1007/978-3-319-07566-2_19)  
   2. [An Improved Query Time for Succinct Dynamic Dictionary Matching.](https://doi.org/10.1007/978-3-319-07566-2_13)  
@@ -2052,8 +1928,6 @@
   18. [Two Squares Canonical Factorization.](http://www.stringology.org/event/2014/p06.html)  
   19. [Using Correctness-by-Construction to Derive Dead-zone Algorithms.](http://www.stringology.org/event/2014/p09.html)  
   
-### Journals  
-  
 #### CoRR 2014  
   1. [Efficient and Compact Representations of Prefix Codes.](https://arxiv.org/abs/1410.3438)  
   2. [Queries on LZ-Bounded Encodings.](https://arxiv.org/abs/1412.0967)  
@@ -2096,8 +1970,6 @@
   35. [Tilted Sperner families.](https://doi.org/10.1016/j.dam.2012.02.024)  
   36. [Triple arrays and related designs.](https://doi.org/10.1016/j.dam.2013.04.010)  
   37. [Unital designs with blocking sets.](https://doi.org/10.1016/j.dam.2013.02.023)  
-  
-### Proceedings  
   
 #### [CPM 2013](https://dblp.org/db/conf/cpm/cpm2013.html)
   1. [A Bit-Parallel, General Integer-Scoring Sequence Alignment Algorithm.](https://doi.org/10.1007/978-3-642-38905-4_7)  
@@ -2178,13 +2050,9 @@
   16. [Towards a Very Fast Multiple String Matching Algorithm for Short Patterns.](http://www.stringology.org/event/2013/p08.html)  
   17. [Weak Factor Automata: Comparing (Failure) Oracles and Storacles.](http://www.stringology.org/event/2013/p16.html)  
   
-### Journals  
-  
 #### CoRR 2013  
   1. [Compact q-gram Profiling of Compressed Strings](https://arxiv.org/abs/1304.5373)  
   2. [Efficient repeat finding via suffix arrays](https://arxiv.org/abs/1304.0528)  
-  
-### Proceedings  
   
 #### [CPM 2012](https://dblp.org/db/conf/cpm/cpm2012.html)
   1. [A Linear Kernel for the Complementary Maximal Strip Recovery Problem.](https://doi.org/10.1007/978-3-642-31265-6_28)  
@@ -2280,14 +2148,10 @@
   10. [Similarity Based Deduplication with Small Data Chunks.](http://www.stringology.org/event/2012/p02.html)  
   11. [The Number of Cubes in Sturmian Words.](http://www.stringology.org/event/2012/p09.html)  
   
-### Journals  
-  
 #### CoRR 2012  
   1. [Data Structure Lower Bounds on Random Access to Grammar-Compressed Strings](https://arxiv.org/abs/1203.1080)  
   2. [Efficient LZ78 factorization of grammar compressed text](https://arxiv.org/abs/1207.4607)  
   3. [Speeding-up $q$-gram mining on grammar-based compressed texts](https://arxiv.org/abs/1202.3311)  
-  
-### Proceedings  
   
 #### [CPM 2011](https://dblp.org/db/conf/cpm/cpm2011.html)
   1. [A Coarse-to-Fine Approach to Computing the k-Best Viterbi Paths.](https://doi.org/10.1007/978-3-642-21458-5_32)  
@@ -2395,12 +2259,8 @@
   19. [On Compile Time Knuth-Morris-Pratt Precomputation.](http://www.stringology.org/event/2011/p03.html)  
   20. [Variations of Forward-SBNDM.](http://www.stringology.org/event/2011/p02.html)  
   
-### Journals  
-  
 #### CoRR 2011  
   1. [Towards Optimal Sorting of 16 Elements](https://arxiv.org/abs/1108.0866)  
-  
-### Proceedings  
   
 #### [CPM 2010](https://dblp.org/db/conf/cpm/cpm2010.html)
   1. [A Compact Representation of Nondeterministic (Suffix) Automata for the Bit-Parallel Approach.](https://doi.org/10.1007/978-3-642-13509-5_26)  
@@ -2497,13 +2357,9 @@
   16. [Tight and Simple Web Graph Compression.](http://www.stringology.org/event/2010/p11.html)  
   17. [Tiling Binary Matrices in Haplotyping: Complexity, Models and Algorithms.](http://www.stringology.org/event/2010/p08.html)  
   
-### Journals  
-  
 #### CoRR 2010  
   1. [Random Access to Grammar Compressed Strings](https://arxiv.org/abs/1001.1565)  
   2. [Tree structure compression with RePair](https://arxiv.org/abs/1007.5406)  
-  
-### Proceedings  
   
 #### [CPM 2009](https://dblp.org/db/conf/cpm/cpm2009.html)
   1. [An Efficient Matching Algorithm for Encoded DNA Sequences and Binary Strings.](https://doi.org/10.1007/978-3-642-02441-2_10)  
@@ -2600,13 +2456,9 @@
   23. [Taxonomies of Regular Tree Algorithms.](http://www.stringology.org/event/2009/p14.html)  
   24. [Validation and Decomposition of Partially Occluded Images with Holes.](http://www.stringology.org/event/2009/p12.html)  
   
-### Journals  
-  
 #### CoRR 2009  
   1. [On Bijective Variants of the Burrows-Wheeler Transform](https://arxiv.org/abs/0908.0239)  
   2. [Wee LCP](https://arxiv.org/abs/0910.3123)  
-  
-### Proceedings  
   
 #### [CPM 2008](https://dblp.org/db/conf/cpm/cpm2008.html)
   1. [A Black Box for Online Approximate Pattern Matching.](https://doi.org/10.1007/978-3-540-69068-9_15)  
@@ -2690,10 +2542,6 @@
   20. [The Virtual Suffix Tree: An Efficient Data Structure for Suffix Trees and Suffix Arrays.](http://www.stringology.org/event/2008/p07.html)  
   21. [Usefulness of Directed Acyclic Subword Graphs in Problems Related to Standard Sturmian Words.](http://www.stringology.org/event/2008/p18.html)  
   
-### Journals  
-  
-### Proceedings  
-  
 #### [CPM 2007](https://dblp.org/db/conf/cpm/cpm2007.html)
   1. [A Combinatorial Approach to Genome-Wide Ortholog Assignment: Beyond Sequence Similarity Search.](https://doi.org/10.1007/978-3-540-73437-6_1)  
   2. [A Lempel-Ziv Text Index on Secondary Storage.](https://doi.org/10.1007/978-3-540-73437-6_11)  
@@ -2760,12 +2608,8 @@
   26. [Prefix-Shuffled Geometric Suffix Tree.](https://doi.org/10.1007/978-3-540-75530-2_27)  
   27. [Tuning Approximate Boyer-Moore for Gene Sequences.](https://doi.org/10.1007/978-3-540-75530-2_16)  
   
-### Journals  
-  
 #### CoRR 2007  
   1. [Radix Sorting With No Extra Space](https://arxiv.org/abs/0706.4107)  
-  
-### Proceedings  
   
 #### [CPM 2006](https://dblp.org/db/conf/cpm/cpm2006.html)
   1. [A Compact Mathematical Programming Formulation for DNA Motif Finding.](https://doi.org/10.1007/11780441_22)  
@@ -2860,10 +2704,6 @@
   19. [Two-dimensional bitwise memory matrix: A tool for optimal parallel approximate pattern matching.](http://www.stringology.org/event/2006/p04.html)  
   20. [Using alignment for multilingual text compression.](http://www.stringology.org/event/2006/p15.html)  
   21. [Working with compressed concordances.](http://www.stringology.org/event/2006/p17.html)  
-  
-### Journals  
-  
-### Proceedings  
   
 #### [CPM 2005](https://dblp.org/db/conf/cpm/cpm2005.html)
   1. [A Fast Algorithm for Approximate String Matching on Gene Sequences.](https://doi.org/10.1007/11496656_8)  
@@ -2971,10 +2811,6 @@
   17. [Reconstructing a suffix array.](http://www.stringology.org/event/2005/p4.html)  
   18. [Reordering finite automata states for fast string recognition.](http://www.stringology.org/event/2005/p5.html)  
   
-### Journals  
-  
-### Proceedings  
-  
 #### [CPM 2004](https://dblp.org/db/conf/cpm/cpm2004.html)
   1. [A Combinatorial Shape Matching Algorithm for Rigid Protein Docking.](https://doi.org/10.1007/978-3-540-27801-6_21)  
   2. [A Computational Model for RNA Multiple Structural Alignment..](https://doi.org/10.1007/978-3-540-27801-6_19)  
@@ -3075,10 +2911,6 @@
   13. [Sorting suffixes of two-pattern strings.](http://www.stringology.org/event/2004/p6.html)  
   14. [Theoretical Issues of Searching Aerial Photographs: A Bird's Eye View.](http://www.stringology.org/event/2004/p1.html)  
   
-### Journals  
-  
-### Proceedings  
-  
 #### [CPM 2003](https://dblp.org/db/conf/cpm/cpm2003.html)
   1. [A Fully Linear-Time Approximation Algorithm for Grammar-Based Compression.](https://doi.org/10.1007/3-540-44888-8_25)  
   2. [A Simpler 1.5-Approximation Algorithm for Sorting by Transpositions.](https://doi.org/10.1007/3-540-44888-8_12)  
@@ -3153,10 +2985,6 @@
   10. [Operation L-INSERT on Factor Automaton.](http://www.stringology.org/event/2003/p10.html)  
   11. [The Transformation Distance Problem Revisited.](http://www.stringology.org/event/2003/p1.html)  
   
-### Journals  
-  
-### Proceedings  
-  
 #### [CPM 2002](https://dblp.org/db/conf/cpm/cpm2002.html)
   1. [A Better Method for Length Distribution Modeling in HMMs and Its Application to Gene Finding.](https://doi.org/10.1007/3-540-45452-7_17)  
   2. [Application of Lempel-Ziv Factorization to the Approximation of Grammar-Based Compression.](https://doi.org/10.1007/3-540-45452-7_3)  
@@ -3225,10 +3053,6 @@
   10. [String Matching with Gaps for Musical Melodic Recognition.](http://www.stringology.org/event/2002/p7.html)  
   11. [String Regularities with Don't Cares.](http://www.stringology.org/event/2002/p8.html)  
   
-### Journals  
-  
-### Proceedings  
-  
 #### [CPM 2001](https://dblp.org/db/conf/cpm/cpm2001.html)
   1. [A Fast Algorithm for Optimal Alignment between Similar Ordered Trees.](https://doi.org/10.1007/3-540-48194-X_22)  
   2. [A Very Elementary Presentation of the Hannenhalli-Pevzner Theory.](https://doi.org/10.1007/3-540-48194-X_9)  
@@ -3291,10 +3115,6 @@
   3. [Bioinformatics: tools for analysis of biological sequences.](http://www.stringology.org/event/2001/p5.html)  
   4. [Construction of the CDAWG for a Trie.](http://www.stringology.org/event/2001/p4.html)  
   5. [Searching in an Efficiently Stored DNA Text Using a Hardware Solution.](http://www.stringology.org/event/2001/p1.html)  
-  
-### Journals  
-  
-### Proceedings  
   
 #### [CPM 2000](https://dblp.org/db/conf/cpm/cpm2000.html)
   1. [A Boyer-Moore Type Algorithm for Compressed Pattern Matching.](https://doi.org/10.1007/3-540-45123-4_17)  
@@ -3374,10 +3194,6 @@
   6. [The Set-Set Closest Common Subsequence Problem.](http://www.stringology.org/event/2000/p1.html)  
   7. [Word-based Compression Method with Direct Access.](http://www.stringology.org/event/2000/p3.html)  
   
-### Journals  
-  
-### Proceedings  
-  
 #### [CPM 1999](https://dblp.org/db/conf/cpm/cpm99.html)
   1. [A Dynamic Data Structure for Reverse Lexicographically Sorted Prefixes.](https://doi.org/10.1007/3-540-48452-3_12)  
   2. [A General Practical Approach to Pattern Matching over Ziv-Lempel Compressed Text.](https://doi.org/10.1007/3-540-48452-3_2)  
@@ -3407,10 +3223,6 @@
   3. [Centroid Trees with Application to String Processing.](http://www.stringology.org/event/1999/p5.html)  
   4. [On Procedures for Multiple-string Match with Respect to Two Sets.](http://www.stringology.org/event/1999/p3.html)  
   5. [The Closest Common Subsequence Problems.](http://www.stringology.org/event/1999/p1.html)  
-  
-### Journals  
-  
-### Proceedings  
   
 #### [CPM 1998](https://dblp.org/db/conf/cpm/cpm98.html)
   1. [A Bit-Parallel Approach to Suffix Automata: Fast Extended String Matching.](https://doi.org/10.1007/BFb0030778)  
@@ -3463,10 +3275,6 @@
   13. [The Longest Restricted Common Subsequence Problem.](http://www.stringology.org/event/1998/p02.html)  
   14. [Validating and Decomposing Partially Occluded Two-Dimensional Images (Extended Abstract).](http://www.stringology.org/event/1998/p09.html)  
   
-### Journals  
-  
-### Proceedings  
-  
 #### [CPM 1997](https://dblp.org/db/conf/cpm/cpm97.html)
   1. [A Filter Method for the Weighted Local Similarity Search Problem.](https://doi.org/10.1007/3-540-63220-4_60)  
   2. [A New Algorithm for the Ordered Tree Inclusion Problem.](https://doi.org/10.1007/3-540-63220-4_57)  
@@ -3499,10 +3307,6 @@
   5. [An Efficient Trie Hashing Method Using a Compact Binary Trie.](http://www.stringology.org/event/1997/p1.html)  
   6. [SPARE Parts: A C++ Toolkit for String PAttern REcognition.](http://www.stringology.org/event/1997/p6.html)  
   7. [Simulation of NFA in Approximate String and Sequence Matching.](http://www.stringology.org/event/1997/p5.html)  
-  
-### Journals  
-  
-### Proceedings  
   
 #### [CPM 1996](https://dblp.org/db/conf/cpm/cpm96.html)
   1. [A 2 2/3-Approximation Algorithm for the Shortest Superstring Problem.](https://doi.org/10.1007/3-540-61258-0_8)  
@@ -3543,10 +3347,6 @@
   6. [Reduced Nondeterministic Finite Automata for Approximate String Matching.](http://www.stringology.org/event/1996/p3.html)  
   7. [Space Complexity of Linear Time Approximate String Matching.](http://www.stringology.org/event/1996/p4.html)  
   
-### Journals  
-  
-### Proceedings  
-  
 #### [CPM 1995](https://dblp.org/db/conf/cpm/cpm95.html)
   1. [A New Flexible Algorithm for the Longest Common Subsequence Problem.](https://doi.org/10.1007/3-540-60044-2_53)  
   2. [An Efficient Algorithm for Developing Topological Valid Matchings.](https://doi.org/10.1007/3-540-60044-2_40)  
@@ -3578,10 +3378,6 @@
   28. [Suffix Cactus: A Cross between Suffix Tree and Suffix Array.](https://doi.org/10.1007/3-540-60044-2_43)  
   29. [Three-Dimensional Pattern Matching in Protein Structure Analysis.](https://doi.org/10.1007/3-540-60044-2_47)  
   
-### Journals  
-  
-### Proceedings  
-  
 #### [CPM 1994](https://dblp.org/db/conf/cpm/cpm94.html)
   1. [A Context Dependent Method for Comparing Sequences.](https://doi.org/10.1007/3-540-58094-8_5)  
   2. [A Lossy Data Compression Based on String Matching: Preliminary Analysis and Suboptimal Algorithms.](https://doi.org/10.1007/3-540-58094-8_9)  
@@ -3610,10 +3406,6 @@
   25. [The Parameterized Complexity of Sequence Alignment and Consensus.](https://doi.org/10.1007/3-540-58094-8_2)  
   26. [Unit Route Upper Bound for String-Matching on Hypercube.](https://doi.org/10.1007/3-540-58094-8_12)  
   
-### Journals  
-  
-### Proceedings  
-  
 #### [CPM 1993](https://dblp.org/db/conf/cpm/cpm93.html)
   1. [3-D Docking of Protein Molecules.](https://doi.org/10.1007/BFb0029794)  
   2. [A Fast Filtration Algorithm for the Substring Matching Problem.](https://doi.org/10.1007/BFb0029806)  
@@ -3634,10 +3426,6 @@
   17. [The Maximum Weight Trace Problem in Multiple Sequence Alignment.](https://doi.org/10.1007/BFb0029800)  
   18. [Tight Comparison Bounds for the String Prefix-Matching Problem.](https://doi.org/10.1007/BFb0029793)  
   19. [Two Dimensional Pattern Matching in a Digitized Image.](https://doi.org/10.1007/BFb0029802)  
-  
-### Journals  
-  
-### Proceedings  
   
 #### [CPM 1992](https://dblp.org/db/conf/cpm/cpm92.html)
   1. [3-D Substructure Matching in Protein Molecules.](https://doi.org/10.1007/3-540-56024-6_11)  
@@ -3662,6 +3450,4 @@
   20. [Probabilistic Analysis of Generalized Suffix Trees (Extended Abstract).](https://doi.org/10.1007/3-540-56024-6_1)  
   21. [Theoretical and Empirical Comparisons of Approximate String Matching Algorithms.](https://doi.org/10.1007/3-540-56024-6_14)  
   22. [Two Algorithms for the Longest Common Subsequence of Three (or More) Strings.](https://doi.org/10.1007/3-540-56024-6_18)  
-  
-### Journals  
   
