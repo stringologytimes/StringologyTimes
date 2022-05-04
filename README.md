@@ -3,10 +3,11 @@
 
 # Contents
 - [arXiv List for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/arxiv_list)
-- [2019 Conference List for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2019)
-- [2020 Conference List for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2020)
-- [2021 Conference List for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2021)
-- [2022 Conference List for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2022)
+- [Papers for Stringologist (2019)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2019)
+- [Papers for Stringologist (2020)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2020)
+- [Papers for Stringologist (2021)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2021)
+- [Papers for Stringologist (2022)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2022)
+- [All papers for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/complete_list_2022)
 
 
 

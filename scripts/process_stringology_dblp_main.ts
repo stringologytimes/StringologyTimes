@@ -3,7 +3,7 @@ import * as fs from 'fs'
 import { DBLPArticle, DBLPElement, DBLPInproceedings, DBLPElementClass } from "./dblp_element"
 import { ArxivArticle } from "./arxiv_xml"
 import { createArxivMD } from "./create_arxiv_md"
-import { createMD } from "./create_list_md"
+import { createCompleteMD, createMD } from "./create_list_md"
 
 //const root = doc.getElementsByTagName("dblp").item[0];
 
@@ -17,7 +17,8 @@ const dblpElements = DBLPElement.parseFromXML(doc);
 
 //dblpElements.forEach((v) => console.log(v));
 
-const yearList : number[] = [...new Set(dblpElements.map((v) => v.year))];
+//const yearList : number[] = [...new Set(dblpElements.map((v) => v.year))];
+const yearList : number[] = [2019, 2020, 2021, 2022];
 
 yearList.forEach((year) =>{
     const mdlines = createMD(dblpElements, year);
@@ -31,6 +32,18 @@ yearList.forEach((year) =>{
         console.log(e);
     }
 })
+
+const complete_MD_lines = createCompleteMD(dblpElements);
+const complete_MD_text = complete_MD_lines.join("\r\n");
+try {
+    fs.writeFileSync(`docs/output/complete_list.md`, complete_MD_text);
+    console.log(`Outputted markdown file for the complete list`);
+
+} catch (e) {
+    console.log(e);
+}
+
+
 
 const arxivArticles = ArxivArticle.loadArxivArticles("data/arxiv.xml");
 const arxivPapers = (<DBLPArticle[]>dblpElements.filter((v) => v instanceof DBLPArticle)).filter((v) => v.journal == "CoRR");
