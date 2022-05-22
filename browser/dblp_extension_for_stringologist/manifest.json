@@ -1,0 +1,24 @@
+{
+
+    "manifest_version": 2,
+    "name": "dblp_extension_for_stringologist",
+    "version": "1.0",
+  
+    "description": "Test.",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://dblp.org/*"],
+        "js": ["dist/main.js"]
+      }
+    ], 
+    "permissions": [
+      "webRequest", 
+      "http://lampin.sakura.ne.jp/"
+    ]
+  
+  }
