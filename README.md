@@ -9,7 +9,8 @@
 - [Papers for Stringologist (2022)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2022)
 - [All papers for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/complete_list)
 
-
+# The number of registered URLs
+- 22/05/23: 3117
 
 # Links
 [arXivTimes](https://github.com/arXivTimes/arXivTimes)

@@ -134,7 +134,7 @@ export class DBLPElement {
     
 
 
-    private static parseFromXMLChild(node: Element): DBLPElementClass {
+    private static parseFromXMLChild(node: Element): DBLPElementClass | null {
 
         const type = <DBLPElementType>node.nodeName;
         if (type == "article") {
@@ -150,7 +150,8 @@ export class DBLPElement {
         }
         else {
             console.log(type);
-            throw new Error("Error");
+            return null;
+            //throw new Error("Error");
         }
 
 
@@ -182,7 +183,9 @@ export class DBLPElement {
             const child = children.item(i);
             if (child.nodeType == child.ELEMENT_NODE) {
                 const p = DBLPElement.parseFromXMLChild(<Element>child);
-                r.push(p);
+                if(p != null){
+                    r.push(p);
+                }
             }
         }
         return r;

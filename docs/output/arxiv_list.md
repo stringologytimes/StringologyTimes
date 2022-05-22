@@ -1,11 +1,28 @@
 # arXiv Papers  
 ## 2022  
+### 2022/3  
+  1. [Numeric Lyndon-based feature embedding of sequencing reads for machine learning approaches.](https://arxiv.org/abs/2202.13884)  
+  
+### 2022/2  
+  1. [Logarithmic equal-letter runs for BWT of purely morphic words.](https://arxiv.org/abs/2202.02609)  
+  2. [Longest (Sub-)Periodic Subsequence.](https://arxiv.org/abs/2202.07189)  
+  3. [Minimal Absent Words on Run-Length Encoded Strings.](https://arxiv.org/abs/2202.13591)  
+  4. [Cartesian Tree Subsequence Matching.](https://arxiv.org/abs/2202.04349)  
+  5. [Memory Efficient Tries for Sequential Pattern Mining.](https://arxiv.org/abs/2202.06834)  
+  6. [A theoretical and experimental analysis of BWT variants for string collections.](https://arxiv.org/abs/2202.13235)  
+  7. [An Optimal-Time RLBWT Construction in BWT-runs Bounded Space.](https://arxiv.org/abs/2202.07885)  
+  8. [MONI can find k-MEMs.](https://arxiv.org/abs/2202.05085)  
+  9. [RePair Grammars are the Smallest Grammars for Fibonacci Words.](https://arxiv.org/abs/2202.08447)  
+  
 ### 2022/1  
-  1. [X3: Lossless Data Compressor.](https://arxiv.org/abs/2201.01727)  
-  2. [Dynamic Suffix Array with Polylogarithmic Queries and Updates.](https://arxiv.org/abs/2201.01285)  
-  3. [Predecessor on the Ultra-Wide Word RAM.](https://arxiv.org/abs/2201.11550)  
-  4. [Standard Vs Uniform Binary Search and Their Variants in Learned Static Indexing: The Case of the Searching on Sorted Data Benchmarking Software Platform.](https://arxiv.org/abs/2201.01554)  
-  5. [What Does Dynamic Optimality Mean in External Memory?](https://arxiv.org/abs/2201.01742)  
+  1. [Multiple Genome Analytics Framework: The Case of All SARS-CoV-2 Complete Variants.](https://arxiv.org/abs/2201.05198)  
+  2. [X3: Lossless Data Compressor.](https://arxiv.org/abs/2201.01727)  
+  3. [Computing Longest (Common) Lyndon Subsequences.](https://arxiv.org/abs/2201.06773)  
+  4. [Safety and Completeness in Flow Decompositions for RNA Assembly.](https://arxiv.org/abs/2201.10372)  
+  5. [Dynamic Suffix Array with Polylogarithmic Queries and Updates.](https://arxiv.org/abs/2201.01285)  
+  6. [Predecessor on the Ultra-Wide Word RAM.](https://arxiv.org/abs/2201.11550)  
+  7. [Standard Vs Uniform Binary Search and Their Variants in Learned Static Indexing: The Case of the Searching on Sorted Data Benchmarking Software Platform.](https://arxiv.org/abs/2201.01554)  
+  8. [What Does Dynamic Optimality Mean in External Memory?](https://arxiv.org/abs/2201.01742)  
   
   
 ## 2021  
@@ -485,9 +502,10 @@
   20. [Finding First and Most-Beautiful Queens by Integer Programming.](https://arxiv.org/abs/1907.08246)  
   21. [3SUM with Preprocessing: Algorithms, Lower Bounds and Cryptographic Applications.](https://arxiv.org/abs/1907.08355)  
   22. [String Attractors and Combinatorics on Words.](https://arxiv.org/abs/1907.04660)  
-  23. [The Alternating BWT: an algorithmic perspective.](https://arxiv.org/abs/1907.02308)  
-  24. [Stack sorting with restricted stacks.](https://arxiv.org/abs/1907.08142)  
-  25. [Sparse Regular Expression Matching.](https://arxiv.org/abs/1907.04752)  
+  23. [DeepCABAC: A Universal Compression Algorithm for Deep Neural Networks.](https://arxiv.org/abs/1907.11900)  
+  24. [The Alternating BWT: an algorithmic perspective.](https://arxiv.org/abs/1907.02308)  
+  25. [Stack sorting with restricted stacks.](https://arxiv.org/abs/1907.08142)  
+  26. [Sparse Regular Expression Matching.](https://arxiv.org/abs/1907.04752)  
   
 ### 2019/6  
   1. [Direct Linear Time Construction of Parameterized Suffix and LCP Arrays for Constant Alphabets.](https://arxiv.org/abs/1906.00563)  
@@ -827,11 +845,24 @@
 ### 2017/12  
   1. [Closing in on Time and Space Optimal Construction of Compressed Indexes.](https://arxiv.org/abs/1712.04886)  
   
+### 2017/11  
+  1. [A compressed dynamic self-index for highly repetitive text collections.](https://arxiv.org/abs/1711.02855)  
+  2. [Compressed Indexing with Signature Grammars.](https://arxiv.org/abs/1711.08217)  
+  3. [A Separation Between Run-Length SLPs and LZ77.](https://arxiv.org/abs/1711.07270)  
+  
 ### 2017/10  
   1. [At the Roots of Dictionary Compression: String Attractors.](https://arxiv.org/abs/1710.10964)  
   
 ### 2017/9  
   1. [String Attractors.](https://arxiv.org/abs/1709.05314)  
+  
+### 2017/7  
+  1. [Document Listing on Repetitive Collections with Guaranteed Performance.](https://arxiv.org/abs/1707.06374)  
+  2. [Lempel-Ziv: a "one-bit catastrophe" but not a tragedy.](https://arxiv.org/abs/1707.04312)  
+  3. [Relations Between Greedy and Bit-Optimal LZ77 Encodings.](https://arxiv.org/abs/1707.09789)  
+  
+### 2017/6  
+  1. [Time-Space Trade-Offs for Lempel-Ziv Compressed Indexing.](https://arxiv.org/abs/1706.10094)  
   
 ### 2017/5  
   1. [Fast Locating with the RLBWT.](https://arxiv.org/abs/1705.10382)  
@@ -841,14 +872,21 @@
   
 ### 2017/4  
   1. [Practical and Effective Re-Pair Compression.](https://arxiv.org/abs/1704.08558)  
+  2. [A Faster Implementation of Online Run-Length Burrows-Wheeler Transform.](https://arxiv.org/abs/1704.05233)  
   
 ### 2017/2  
   1. [Compression with the tudocomp Framework.](https://arxiv.org/abs/1702.07577)  
+  2. [Small-space encoding LCE data structure with constant-time queries.](https://arxiv.org/abs/1702.07458)  
+  3. [From LZ77 to the Run-Length Encoded Burrows-Wheeler Transform, and Back.](https://arxiv.org/abs/1702.01340)  
   
   
 ## 2016  
 ### 2016/11  
-  1. [Space-Efficient Re-Pair Compression.](https://arxiv.org/abs/1611.01479)  
+  1. [LZ-End Parsing in Compressed Space.](https://arxiv.org/abs/1611.01769)  
+  2. [Space-Efficient Re-Pair Compression.](https://arxiv.org/abs/1611.01479)  
+  
+### 2016/9  
+  1. [Practical Data Compression for Modern Memory Hierarchies.](https://arxiv.org/abs/1609.02067)  
   
 ### 2016/7  
   1. [Space-Efficient Construction of Compressed Indexes in Deterministic Linear Time.](https://arxiv.org/abs/1607.04346)  
@@ -857,8 +895,42 @@
   1. [Scalable Partial Least Squares Regression on Grammar-Compressed Data Matrices.](https://arxiv.org/abs/1606.05031)  
   2. [A Self-Index on Block Trees.](https://arxiv.org/abs/1606.06617)  
   
+### 2016/5  
+  1. [Fully dynamic data structure for LCE queries in compressed space.](https://arxiv.org/abs/1605.01488)  
+  2. [Dynamic index and LZ factorization in compressed space.](https://arxiv.org/abs/1605.09558)  
+  3. [Efficient and Compact Representations of Some Non-Canonical Prefix-Free Codes.](https://arxiv.org/abs/1605.06615)  
+  
+### 2016/4  
+  1. [Universal Indexes for Highly Repetitive Document Collections.](https://arxiv.org/abs/1604.08897)  
+  
 ### 2016/1  
   1. [Pachinko.](https://arxiv.org/abs/1601.05706)  
+  
+  
+## 2015  
+### 2015/11  
+  1. [Burrows-Wheeler transform for terabases.](https://arxiv.org/abs/1511.00898)  
+  
+### 2015/10  
+  1. [Computing LZ77 in Run-Compressed Space.](https://arxiv.org/abs/1510.06257)  
+  
+### 2015/7  
+  1. [Range Predecessor and Lempel-Ziv Parsing.](https://arxiv.org/abs/1507.07080)  
+  
+### 2015/4  
+  1. [Dynamic index, LZ factorization, and LCE queries in compressed space.](https://arxiv.org/abs/1504.06954)  
+  2. [Approximating LZ77 via Small-Space Multiple-Pattern Matching.](https://arxiv.org/abs/1504.06647)  
+  3. [Lempel Ziv Computation In Small Space (LZ-CISS).](https://arxiv.org/abs/1504.02605)  
+  4. [Faster Lightweight Lempel-Ziv Parsing.](https://arxiv.org/abs/1504.06712)  
+  
+### 2015/3  
+  1. [Approximating LZ77 in Small Space.](https://arxiv.org/abs/1503.02416)  
+  
+### 2015/2  
+  1. [Composite repetition-aware data structures.](https://arxiv.org/abs/1502.05937)  
+  
+### 2015/1  
+  1. [Constructing LZ78 Tries and Position Heaps in Linear Time for Large Alphabets.](https://arxiv.org/abs/1501.06619)  
   
   
 ## 2014  
@@ -868,16 +940,40 @@
 ### 2014/10  
   1. [Efficient and Compact Representations of Prefix Codes.](https://arxiv.org/abs/1410.3438)  
   
+### 2014/3  
+  1. [A really simple approximation of smallest grammar.](https://arxiv.org/abs/1403.4445)  
+  
+### 2014/1  
+  1. [Linear time construction of compressed text indices in compact space.](https://arxiv.org/abs/1401.0936)  
+  
   
 ## 2013  
+### 2013/10  
+  1. [Space Efficient Linear Time Lempel-Ziv Factorization on Constant~Size~Alphabets.](https://arxiv.org/abs/1310.1448)  
+  
+### 2013/7  
+  1. [Lempel-Ziv Parsing in External Memory.](https://arxiv.org/abs/1307.1428)  
+  
+### 2013/6  
+  1. [Hybrid Indexes for Repetitive Datasets.](https://arxiv.org/abs/1306.4037)  
+  
 ### 2013/4  
   1. [Compact q-gram Profiling of Compressed Strings](https://arxiv.org/abs/1304.5373)  
   2. [Efficient repeat finding via suffix arrays](https://arxiv.org/abs/1304.0528)  
   
+### 2013/2  
+  1. [Lightweight Lempel-Ziv Parsing](https://arxiv.org/abs/1302.1064)  
+  
   
 ## 2012  
+### 2012/12  
+  1. [Linear Time Lempel-Ziv Factorization: Simple, Fast, Small](https://arxiv.org/abs/1212.2952)  
+  
 ### 2012/7  
   1. [Efficient LZ78 factorization of grammar compressed text](https://arxiv.org/abs/1207.4607)  
+  
+### 2012/4  
+  1. [Time and Space Efficient Lempel-Ziv Factorization based on Run Length Encoding](https://arxiv.org/abs/1204.5524)  
   
 ### 2012/3  
   1. [Data Structure Lower Bounds on Random Access to Grammar-Compressed Strings](https://arxiv.org/abs/1203.1080)  
@@ -887,8 +983,17 @@
   
   
 ## 2011  
+### 2011/9  
+  1. [A Faster LZ77-Based Index](https://arxiv.org/abs/1109.3954)  
+  
 ### 2011/8  
   1. [Towards Optimal Sorting of 16 Elements](https://arxiv.org/abs/1108.0866)  
+  
+### 2011/7  
+  1. [Restructuring Compressed Texts without Explicit Decompression](https://arxiv.org/abs/1107.2729)  
+  
+### 2011/1  
+  1. [Self-Index Based on LZ77](https://arxiv.org/abs/1101.4065)  
   
   
 ## 2010  
@@ -903,12 +1008,16 @@
 ### 2009/10  
   1. [Wee LCP](https://arxiv.org/abs/0910.3123)  
   
+### 2009/9  
+  1. [Lightweight Data Indexing and Compression in External Memory](https://arxiv.org/abs/0909.4341)  
+  
 ### 2009/8  
   1. [On Bijective Variants of the Burrows-Wheeler Transform](https://arxiv.org/abs/0908.0239)  
   
   
 ## 2007  
 ### 2007/6  
-  1. [Radix Sorting With No Extra Space](https://arxiv.org/abs/0706.4107)  
+  1. [Sublinear Algorithms for Approximating String Compressibility](https://arxiv.org/abs/0706.1084)  
+  2. [Radix Sorting With No Extra Space](https://arxiv.org/abs/0706.4107)  
   
   

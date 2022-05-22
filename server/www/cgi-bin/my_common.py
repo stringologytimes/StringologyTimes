@@ -24,6 +24,10 @@ def check_correct_input(url):
         return "DOI"
     elif url.find("http://www.stringology.org/event/") == 0: 
         return "STRINGOLOGY"
+    elif url.find("^ProceedingName,") == 0: 
+        return "PROCEEDING_NAME"
+    elif url.find("^JournalURL,") == 0: 
+        return "JOURNAL_URL"
     else:
         return "OTHER"
 def add_data(cursor, url): 
@@ -31,7 +35,7 @@ def add_data(cursor, url):
     id = cursor.execute('select * from paper_url_list')
     hit = cursor.execute(f'select * from paper_url_list where url="{url}"')
     inputType = check_correct_input(url)
-    if inputType == "ARXIV" or inputType == "DOI" or inputType == "STRINGOLOGY" or inputType == "SPECIAL": 
+    if inputType == "ARXIV" or inputType == "DOI" or inputType == "STRINGOLOGY" or inputType == "SPECIAL" or inputType == "PROCEEDING_NAME" or inputType == "JOURNAL_URL": 
         if hit == 0: 
             cursor.execute(f'INSERT INTO paper_url_list values ({id}, "{url}", 1)')
             return "SUCCESS"
@@ -39,6 +43,18 @@ def add_data(cursor, url):
             return "DUPLICATION"
     else:
         return "INVALID"
+def check_data(cursor, url): 
+    url = remove_special_characters(url)
+    hit = cursor.execute(f'select * from paper_url_list where url="{url}"')
+    inputType = check_correct_input(url)
+    if inputType == "ARXIV" or inputType == "DOI" or inputType == "STRINGOLOGY" or inputType == "SPECIAL": 
+        if hit == 0: 
+            return "NOT_REGISTRED"
+        else:
+            return "DUPLICATION"
+    else:
+        return "INVALID"
+
 def listup_url(cursor): 
     cursor.execute('select * from paper_url_list')
     result = cursor.fetchall()

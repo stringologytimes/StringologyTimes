@@ -14,6 +14,7 @@ import { createCompleteMD, createMD } from "./create_list_md"
 const stringology_dblp_raw_text = fs.readFileSync("data/stringology_dblp.xml", 'utf8');
 const doc = new DOMParser().parseFromString(stringology_dblp_raw_text,'text/xml');
 const dblpElements = DBLPElement.parseFromXML(doc);
+console.log("The number of dblp elements: " + dblpElements.length);
 
 //dblpElements.forEach((v) => console.log(v));
 

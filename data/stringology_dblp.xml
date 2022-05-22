@@ -1,5 +1,820 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <dblp>
+  <incollection mdate="2017-07-12" key="reference/algo/GagieM08" publtype="encyclopedia">
+    <author>Travis Gagie</author>
+    <author>Giovanni Manzini</author>
+    <title>Dictionary-Based Data Compression.</title>
+    <year>2008</year>
+    <booktitle>Encyclopedia of Algorithms</booktitle>
+    <ee>https://doi.org/10.1007/978-0-387-30162-4_108</ee>
+    <crossref>reference/algo/2008</crossref>
+    <url>db/reference/algo/algo2008.html#GagieM08</url>
+  </incollection>
+  <article mdate="2021-11-03" key="journals/ipl/MienoWNIBT22">
+    <author orcid="0000-0003-2922-9434">Takuya Mieno</author>
+    <author>Kiichi Watanabe</author>
+    <author>Yuto Nakashima</author>
+    <author>Shunsuke Inenaga</author>
+    <author orcid="0000-0002-6856-5185">Hideo Bannai</author>
+    <author>Masayuki Takeda</author>
+    <title>Palindromic trees for a sliding window and its applications.</title>
+    <pages>106174</pages>
+    <year>2022</year>
+    <volume>173</volume>
+    <journal>Inf. Process. Lett.</journal>
+    <ee>https://doi.org/10.1016/j.ipl.2021.106174</ee>
+    <url>db/journals/ipl/ipl173.html#MienoWNIBT22</url>
+  </article>
+  <article mdate="2019-06-02" key="journals/ipl/CrochemoreT11">
+    <author orcid="0000-0003-1087-1419">Maxime Crochemore</author>
+    <author>German Tischler</author>
+    <title>Computing Longest Previous non-overlapping Factors.</title>
+    <pages>291-295</pages>
+    <year>2011</year>
+    <volume>111</volume>
+    <journal>Inf. Process. Lett.</journal>
+    <number>6</number>
+    <ee>https://doi.org/10.1016/j.ipl.2010.12.005</ee>
+    <ee>https://www.wikidata.org/entity/Q61677890</ee>
+    <url>db/journals/ipl/ipl111.html#CrochemoreT11</url>
+  </article>
+  <article mdate="2018-11-14" key="journals/ipl/CrochemoreI08">
+    <author orcid="0000-0003-1087-1419">Maxime Crochemore</author>
+    <author>Lucian Ilie</author>
+    <title>Computing Longest Previous Factor in linear time and applications.</title>
+    <pages>75-80</pages>
+    <year>2008</year>
+    <volume>106</volume>
+    <journal>Inf. Process. Lett.</journal>
+    <number>2</number>
+    <ee>https://doi.org/10.1016/j.ipl.2007.10.006</ee>
+    <ee>https://www.wikidata.org/entity/Q56767309</ee>
+    <url>db/journals/ipl/ipl106.html#CrochemoreI08</url>
+  </article>
+  <article mdate="2017-12-28" key="journals/ipl/NakashimaIIBT15">
+    <author>Yuto Nakashima</author>
+    <author>Tomohiro I</author>
+    <author>Shunsuke Inenaga</author>
+    <author orcid="0000-0002-6856-5185">Hideo Bannai</author>
+    <author>Masayuki Takeda</author>
+    <title>Constructing LZ78 tries and position heaps in linear time for large alphabets.</title>
+    <pages>655-659</pages>
+    <year>2015</year>
+    <volume>115</volume>
+    <journal>Inf. Process. Lett.</journal>
+    <number>9</number>
+    <ee>https://doi.org/10.1016/j.ipl.2015.04.002</ee>
+    <url>db/journals/ipl/ipl115.html#NakashimaIIBT15</url>
+  </article>
+  <article mdate="2020-03-13" key="journals/almob/DeorowiczG13">
+    <author orcid="0000-0002-9496-733X">Sebastian Deorowicz</author>
+    <author orcid="0000-0003-1714-1224">Szymon Grabowski</author>
+    <title>Data compression for sequencing data.</title>
+    <pages>25</pages>
+    <year>2013</year>
+    <volume>8</volume>
+    <journal>Algorithms Mol. Biol.</journal>
+    <ee type="oa">https://doi.org/10.1186/1748-7188-8-25</ee>
+    <ee>https://www.wikidata.org/entity/Q30697591</ee>
+    <url>db/journals/almob/almob8.html#DeorowiczG13</url>
+  </article>
+  <article mdate="2021-07-25" key="journals/almob/BoucherGKLMM19">
+    <author>Christina Boucher</author>
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author orcid="0000-0001-6506-1902">Alan Kuhnle</author>
+    <author orcid="0000-0003-2437-1976">Ben Langmead</author>
+    <author orcid="0000-0002-5047-0196">Giovanni Manzini</author>
+    <author>Taher Mun</author>
+    <title>Prefix-free parsing for building big BWTs.</title>
+    <pages>13:1-13:15</pages>
+    <year>2019</year>
+    <volume>14</volume>
+    <journal>Algorithms Mol. Biol.</journal>
+    <number>1</number>
+    <ee type="oa">https://doi.org/10.1186/s13015-019-0148-5</ee>
+    <ee>https://www.wikidata.org/entity/Q64284792</ee>
+    <url>db/journals/almob/almob14.html#BoucherGKLMM19</url>
+  </article>
+  <article mdate="2022-01-08" key="journals/talg/ChristiansenEKN21">
+    <author>Anders Roy Christiansen</author>
+    <author>Mikko Berggren Ettienne</author>
+    <author orcid="0000-0002-2477-1702">Tomasz Kociumaka</author>
+    <author>Gonzalo Navarro</author>
+    <author orcid="0000-0003-3553-4953">Nicola Prezza</author>
+    <title>Optimal-Time Dictionary-Compressed Indexes.</title>
+    <pages>8:1-8:39</pages>
+    <year>2021</year>
+    <volume>17</volume>
+    <journal>ACM Trans. Algorithms</journal>
+    <number>1</number>
+    <ee>https://doi.org/10.1145/3426473</ee>
+    <url>db/journals/talg/talg17.html#ChristiansenEKN21</url>
+  </article>
+  <article mdate="2018-11-14" key="journals/talg/ChanHLS07">
+    <author>Ho-Leung Chan</author>
+    <author orcid="0000-0002-0570-2904">Wing-Kai Hon</author>
+    <author orcid="0000-0003-4676-8587">Tak Wah Lam</author>
+    <author orcid="0000-0002-8212-3682">Kunihiko Sadakane</author>
+    <title>Compressed indexes for dynamic text collections.</title>
+    <year>2007</year>
+    <volume>3</volume>
+    <journal>ACM Trans. Algorithms</journal>
+    <number>2</number>
+    <ee>https://doi.org/10.1145/1240233.1240244</ee>
+    <ee>https://www.wikidata.org/entity/Q58062987</ee>
+    <url>db/journals/talg/talg3.html#ChanHLS07</url>
+    <pages>21</pages>
+  </article>
+  <article mdate="2021-02-05" key="journals/talg/Prezza21">
+    <author>Nicola Prezza</author>
+    <title>Optimal Substring Equality Queries with Applications to Sparse Text Indexing.</title>
+    <pages>7:1-7:23</pages>
+    <year>2021</year>
+    <volume>17</volume>
+    <journal>ACM Trans. Algorithms</journal>
+    <number>1</number>
+    <ee>https://doi.org/10.1145/3426870</ee>
+    <url>db/journals/talg/talg17.html#Prezza21</url>
+  </article>
+  <article mdate="2020-09-06" key="journals/tcbb/LN17">
+    <author orcid="0000-0001-6655-4450">Biji C. L.</author>
+    <author>Achuthsankar S. Nair</author>
+    <title>Benchmark Dataset for Whole Genome Sequence Compression.</title>
+    <pages>1228-1236</pages>
+    <year>2017</year>
+    <volume>14</volume>
+    <journal>IEEE ACM Trans. Comput. Biol. Bioinform.</journal>
+    <number>6</number>
+    <ee>https://doi.org/10.1109/TCBB.2016.2568186</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/TCBB.2016.2568186</ee>
+    <ee>https://www.wikidata.org/entity/Q39743408</ee>
+    <url>db/journals/tcbb/tcbb14.html#LN17</url>
+  </article>
+  <article mdate="2020-09-06" key="journals/tcbb/LiuHS16">
+    <author orcid="0000-0003-3440-9675">Yongchao Liu</author>
+    <author>Thomas Hankeln</author>
+    <author>Bertil Schmidt</author>
+    <title>Parallel and Space-Efficient Construction of Burrows-Wheeler Transform and Suffix Array for Big Genome Data.</title>
+    <pages>592-598</pages>
+    <year>2016</year>
+    <volume>13</volume>
+    <journal>IEEE ACM Trans. Comput. Biol. Bioinform.</journal>
+    <number>3</number>
+    <ee>https://doi.org/10.1109/TCBB.2015.2430314</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/TCBB.2015.2430314</ee>
+    <ee>https://www.wikidata.org/entity/Q31107799</ee>
+    <url>db/journals/tcbb/tcbb13.html#LiuHS16</url>
+  </article>
+  <article mdate="2020-03-15" key="journals/bmcbi/LiuYCBZY08">
+    <author>Qi Liu</author>
+    <author>Yu Yang</author>
+    <author>Chun Chen 0001</author>
+    <author>Jiajun Bu</author>
+    <author>Yin Zhang 0006</author>
+    <author>Xiuzi Ye</author>
+    <title>RNACompress: Grammar-based compression and informational complexity measurement of RNA secondary structure.</title>
+    <year>2008</year>
+    <volume>9</volume>
+    <journal>BMC Bioinform.</journal>
+    <ee type="oa">https://doi.org/10.1186/1471-2105-9-176</ee>
+    <ee>https://www.wikidata.org/entity/Q27496521</ee>
+    <url>db/journals/bmcbi/bmcbi9.html#LiuYCBZY08</url>
+  </article>
+  <article mdate="2022-04-01" key="journals/algorithmica/MienoFNIBT22">
+    <author orcid="0000-0003-2922-9434">Takuya Mieno</author>
+    <author>Yuta Fujishige</author>
+    <author>Yuto Nakashima</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Hideo Bannai</author>
+    <author>Masayuki Takeda</author>
+    <title>Computing Minimal Unique Substrings for a Sliding Window.</title>
+    <pages>670-693</pages>
+    <year>2022</year>
+    <volume>84</volume>
+    <journal>Algorithmica</journal>
+    <number>3</number>
+    <ee>https://doi.org/10.1007/s00453-021-00864-1</ee>
+    <url>db/journals/algorithmica/algorithmica84.html#MienoFNIBT22</url>
+  </article>
+  <article mdate="2018-11-30" key="journals/algorithmica/RaskhodnikovaRRS13">
+    <author>Sofya Raskhodnikova</author>
+    <author orcid="0000-0001-6576-7200">Dana Ron</author>
+    <author>Ronitt Rubinfeld</author>
+    <author>Adam D. Smith</author>
+    <title>Sublinear Algorithms for Approximating String Compressibility.</title>
+    <pages>685-709</pages>
+    <year>2013</year>
+    <volume>65</volume>
+    <journal>Algorithmica</journal>
+    <number>3</number>
+    <ee>https://doi.org/10.1007/s00453-012-9618-6</ee>
+    <url>db/journals/algorithmica/algorithmica65.html#RaskhodnikovaRRS13</url>
+  </article>
+  <article mdate="2021-07-25" key="journals/algorithmica/FerraginaGM12">
+    <author orcid="0000-0003-1353-360X">Paolo Ferragina</author>
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author orcid="0000-0002-5047-0196">Giovanni Manzini</author>
+    <title>Lightweight Data Indexing and Compression in External Memory.</title>
+    <pages>707-730</pages>
+    <year>2012</year>
+    <volume>63</volume>
+    <journal>Algorithmica</journal>
+    <number>3</number>
+    <ee>https://doi.org/10.1007/s00453-011-9535-0</ee>
+    <url>db/journals/algorithmica/algorithmica63.html#FerraginaGM12</url>
+  </article>
+  <article mdate="2017-11-06" key="journals/algorithmica/ArroyueloNS12">
+    <author>Diego Arroyuelo</author>
+    <author>Gonzalo Navarro</author>
+    <author orcid="0000-0002-8212-3682">Kunihiko Sadakane</author>
+    <title>Stronger Lempel-Ziv Based Compressed Text Indexing.</title>
+    <pages>54-101</pages>
+    <year>2012</year>
+    <volume>62</volume>
+    <journal>Algorithmica</journal>
+    <number>1-2</number>
+    <ee>https://doi.org/10.1007/s00453-010-9443-8</ee>
+    <url>db/journals/algorithmica/algorithmica62.html#ArroyueloNS12</url>
+  </article>
+  <article mdate="2019-10-19" key="journals/algorithmica/JanssonSS15">
+    <author orcid="0000-0001-6859-8932">Jesper Jansson</author>
+    <author orcid="0000-0002-8212-3682">Kunihiko Sadakane</author>
+    <author orcid="0000-0001-7806-7086">Wing-Kin Sung</author>
+    <title>Linked Dynamic Tries with Applications to LZ-Compression in Sublinear Time and Space.</title>
+    <pages>969-988</pages>
+    <year>2015</year>
+    <volume>71</volume>
+    <journal>Algorithmica</journal>
+    <number>4</number>
+    <ee>https://doi.org/10.1007/s00453-013-9836-6</ee>
+    <url>db/journals/algorithmica/algorithmica71.html#JanssonSS15</url>
+  </article>
+  <article mdate="2020-12-29" key="journals/algorithmica/MunroNN20">
+    <author>J. Ian Munro</author>
+    <author orcid="0000-0002-2286-741X">Gonzalo Navarro</author>
+    <author orcid="0000-0003-3771-5088">Yakov Nekrich</author>
+    <title>Fast Compressed Self-indexes with Deterministic Linear-Time Construction.</title>
+    <pages>316-337</pages>
+    <year>2020</year>
+    <volume>82</volume>
+    <journal>Algorithmica</journal>
+    <number>2</number>
+    <ee>https://doi.org/10.1007/s00453-019-00637-x</ee>
+    <url>db/journals/algorithmica/algorithmica82.html#MunroNN20</url>
+  </article>
+  <article mdate="2018-05-05" key="journals/algorithmica/PolicritiP18">
+    <author>Alberto Policriti</author>
+    <author orcid="0000-0003-3553-4953">Nicola Prezza</author>
+    <title>LZ77 Computation Based on the Run-Length Encoded BWT.</title>
+    <pages>1986-2011</pages>
+    <year>2018</year>
+    <volume>80</volume>
+    <journal>Algorithmica</journal>
+    <number>7</number>
+    <ee>https://doi.org/10.1007/s00453-017-0327-z</ee>
+    <url>db/journals/algorithmica/algorithmica80.html#PolicritiP18</url>
+  </article>
+  <article mdate="2021-02-12" key="journals/ejc/CrochemoreIIKRW13">
+    <author orcid="0000-0003-1087-1419">Maxime Crochemore</author>
+    <author>Lucian Ilie</author>
+    <author>Costas S. Iliopoulos</author>
+    <author>Marcin Kubica</author>
+    <author>Wojciech Rytter</author>
+    <author orcid="0000-0002-7369-3309">Tomasz Walen</author>
+    <title>Computing the Longest Previous Factor.</title>
+    <pages>15-26</pages>
+    <year>2013</year>
+    <volume>34</volume>
+    <journal>Eur. J. Comb.</journal>
+    <number>1</number>
+    <ee type="oa">https://doi.org/10.1016/j.ejc.2012.07.011</ee>
+    <ee>https://www.wikidata.org/entity/Q61677857</ee>
+    <url>db/journals/ejc/ejc34.html#CrochemoreIIKRW13</url>
+  </article>
+  <article mdate="2020-02-21" key="journals/ipm/GrumbachT94">
+    <author>Stéphane Grumbach</author>
+    <author>Fariza Tahi</author>
+    <title>A New Challenge for Compression Algorithms: Genetic Sequences.</title>
+    <pages>875-886</pages>
+    <year>1994</year>
+    <volume>30</volume>
+    <journal>Inf. Process. Manag.</journal>
+    <number>6</number>
+    <url>db/journals/ipm/ipm30.html#GrumbachT94</url>
+    <ee>https://doi.org/10.1016/0306-4573(94)90014-0</ee>
+  </article>
+  <article mdate="2021-02-17" key="journals/tcs/INIBT15">
+    <author>Tomohiro I</author>
+    <author>Takaaki Nishimoto</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Hideo Bannai</author>
+    <author orcid="0000-0002-6138-1607">Masayuki Takeda</author>
+    <title>Compressed automata for dictionary matching.</title>
+    <pages>30-41</pages>
+    <year>2015</year>
+    <volume>578</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee type="oa">https://doi.org/10.1016/j.tcs.2015.01.019</ee>
+    <url>db/journals/tcs/tcs578.html#INIBT15</url>
+  </article>
+  <article mdate="2021-02-17" key="journals/tcs/Karkkainen07">
+    <author>Juha Kärkkäinen</author>
+    <title>Fast BWT in small space by blockwise suffix sorting.</title>
+    <pages>249-257</pages>
+    <year>2007</year>
+    <volume>387</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <number>3</number>
+    <ee type="oa">https://doi.org/10.1016/j.tcs.2007.07.018</ee>
+    <url>db/journals/tcs/tcs387.html#Karkkainen07</url>
+  </article>
+  <article mdate="2021-02-17" key="journals/tcs/KreftN13">
+    <author>Sebastian Kreft</author>
+    <author>Gonzalo Navarro</author>
+    <title>On compressing and indexing repetitive sequences.</title>
+    <pages>115-133</pages>
+    <year>2013</year>
+    <volume>483</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee type="oa">https://doi.org/10.1016/j.tcs.2012.02.006</ee>
+    <url>db/journals/tcs/tcs483.html#KreftN13</url>
+  </article>
+  <article mdate="2021-02-17" key="journals/tcs/Rytter03">
+    <author>Wojciech Rytter</author>
+    <title>Application of Lempel-Ziv factorization to the approximation of grammar-based compression.</title>
+    <pages>211-222</pages>
+    <year>2003</year>
+    <volume>302</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <number>1-3</number>
+    <ee type="oa">https://doi.org/10.1016/S0304-3975(02)00777-6</ee>
+    <url>db/journals/tcs/tcs302.html#Rytter03</url>
+  </article>
+  <article mdate="2021-02-17" key="journals/tcs/GuptaHSV07">
+    <author>Ankur Gupta 0003</author>
+    <author orcid="0000-0002-0570-2904">Wing-Kai Hon</author>
+    <author>Rahul Shah</author>
+    <author>Jeffrey Scott Vitter</author>
+    <title>Compressed data structures: Dictionaries and data-aware measures.</title>
+    <pages>313-331</pages>
+    <year>2007</year>
+    <volume>387</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <number>3</number>
+    <ee type="oa">https://doi.org/10.1016/j.tcs.2007.07.042</ee>
+    <url>db/journals/tcs/tcs387.html#GuptaHSV07</url>
+  </article>
+  <article mdate="2022-04-25" key="journals/tcs/KatohG22">
+    <author>Takashi Katoh</author>
+    <author>Keisuke Goto 0001</author>
+    <title>In-place initializable arrays.</title>
+    <pages>62-69</pages>
+    <year>2022</year>
+    <volume>916</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2022.03.004</ee>
+    <url>db/journals/tcs/tcs916.html#KatohG22</url>
+  </article>
+  <article mdate="2020-03-03" key="journals/tcs/BannaiGI20">
+    <author>Hideo Bannai</author>
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author>Tomohiro I</author>
+    <title>Refining the <i>r</i>-index.</title>
+    <pages>96-108</pages>
+    <year>2020</year>
+    <volume>812</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2019.08.005</ee>
+    <url>db/journals/tcs/tcs812.html#BannaiGI20</url>
+  </article>
+  <article mdate="2021-12-15" key="journals/tcs/FiciPV21">
+    <author orcid="0000-0002-3536-327X">Gabriele Fici</author>
+    <author>Nicola Prezza</author>
+    <author>Rossano Venturini</author>
+    <title>Adaptive learning of compressible strings.</title>
+    <pages>46-52</pages>
+    <year>2021</year>
+    <volume>896</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2021.10.003</ee>
+    <url>db/journals/tcs/tcs896.html#FiciPV21</url>
+  </article>
+  <article mdate="2021-07-25" key="journals/tcs/GagieMS17">
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author orcid="0000-0002-5047-0196">Giovanni Manzini</author>
+    <author orcid="0000-0001-5828-4139">Jouni Sirén</author>
+    <title>Wheeler graphs: A framework for BWT-based data structures.</title>
+    <pages>67-78</pages>
+    <year>2017</year>
+    <volume>698</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee type="oa">https://doi.org/10.1016/j.tcs.2017.06.016</ee>
+    <ee>https://www.wikidata.org/entity/Q47136623</ee>
+    <url>db/journals/tcs/tcs698.html#GagieMS17</url>
+  </article>
+  <article mdate="2019-05-31" key="journals/tcs/Navarro19">
+    <author orcid="0000-0002-2286-741X">Gonzalo Navarro</author>
+    <title>Document listing on repetitive collections with guaranteed performance.</title>
+    <pages>58-72</pages>
+    <year>2019</year>
+    <volume>772</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2018.11.022</ee>
+    <url>db/journals/tcs/tcs772.html#Navarro19</url>
+  </article>
+  <article mdate="2017-12-28" key="journals/tcs/INIBT16">
+    <author>Tomohiro I</author>
+    <author>Yuto Nakashima</author>
+    <author>Shunsuke Inenaga</author>
+    <author orcid="0000-0002-6856-5185">Hideo Bannai</author>
+    <author>Masayuki Takeda</author>
+    <title>Faster Lyndon factorization algorithms for SLP and LZ78 compressed text.</title>
+    <pages>215-224</pages>
+    <year>2016</year>
+    <volume>656</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2016.03.005</ee>
+    <url>db/journals/tcs/tcs656.html#INIBT16</url>
+  </article>
+  <article mdate="2020-09-05" key="journals/tcs/EgidiM20">
+    <author orcid="0000-0002-9745-0942">Lavinia Egidi</author>
+    <author orcid="0000-0002-5047-0196">Giovanni Manzini</author>
+    <title>Lightweight merging of compressed indices based on BWT variants.</title>
+    <pages>214-229</pages>
+    <year>2020</year>
+    <volume>812</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2019.11.001</ee>
+    <url>db/journals/tcs/tcs812.html#EgidiM20</url>
+  </article>
+  <article mdate="2021-02-17" key="journals/tcs/Jez16">
+    <author orcid="0000-0003-4321-3105">Artur Jez</author>
+    <title>A really simple approximation of smallest grammar.</title>
+    <pages>141-150</pages>
+    <year>2016</year>
+    <volume>616</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee type="oa">https://doi.org/10.1016/j.tcs.2015.12.032</ee>
+    <url>db/journals/tcs/tcs616.html#Jez16</url>
+  </article>
+  <article mdate="2022-03-15" key="journals/tcs/FarinaGGMNP22">
+    <author orcid="0000-0001-8263-3298">Antonio Fariña</author>
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author>Szymon Grabowski</author>
+    <author>Giovanni Manzini</author>
+    <author>Gonzalo Navarro</author>
+    <author>Alberto Ordóñez Pereira</author>
+    <title>Efficient and compact representations of some non-canonical prefix-free codes.</title>
+    <pages>11-25</pages>
+    <year>2022</year>
+    <volume>907</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2022.01.010</ee>
+    <url>db/journals/tcs/tcs907.html#FarinaGGMNP22</url>
+  </article>
+  <article mdate="2021-07-25" key="journals/ir/GagieHKKNPS17">
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author>Aleksi Hartikainen</author>
+    <author>Kalle Karhu</author>
+    <author>Juha Kärkkäinen</author>
+    <author>Gonzalo Navarro</author>
+    <author orcid="0000-0001-7668-7636">Simon J. Puglisi</author>
+    <author orcid="0000-0001-5828-4139">Jouni Sirén</author>
+    <title>Document retrieval on repetitive string collections.</title>
+    <pages>253-291</pages>
+    <year>2017</year>
+    <volume>20</volume>
+    <journal>Inf. Retr. J.</journal>
+    <number>3</number>
+    <ee type="oa">https://doi.org/10.1007/s10791-017-9297-7</ee>
+    <ee>https://www.wikidata.org/entity/Q38735204</ee>
+    <url>db/journals/ir/ir20.html#GagieHKKNPS17</url>
+  </article>
+  <article mdate="2018-11-24" key="journals/ir/RussoO08">
+    <author>Luís M. S. Russo</author>
+    <author orcid="0000-0001-8638-5594">Arlindo L. Oliveira</author>
+    <title>A compressed self-index using a Ziv-Lempel dictionary.</title>
+    <pages>359-388</pages>
+    <year>2008</year>
+    <volume>11</volume>
+    <journal>Inf. Retr.</journal>
+    <number>4</number>
+    <ee>https://doi.org/10.1007/s10791-008-9050-3</ee>
+    <ee>https://www.wikidata.org/entity/Q58883998</ee>
+    <url>db/journals/ir/ir11.html#RussoO08</url>
+  </article>
+  <article mdate="2020-10-02" key="journals/tpds/MittalV16a">
+    <author orcid="0000-0002-2908-993X">Sparsh Mittal</author>
+    <author>Jeffrey S. Vetter</author>
+    <title>A Survey Of Architectural Approaches for Data Compression in Cache and Main Memory Systems.</title>
+    <pages>1524-1536</pages>
+    <year>2016</year>
+    <volume>27</volume>
+    <journal>IEEE Trans. Parallel Distributed Syst.</journal>
+    <number>5</number>
+    <ee>https://doi.org/10.1109/TPDS.2015.2435788</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/TPDS.2015.2435788</ee>
+    <ee>https://www.wikidata.org/entity/Q57694360</ee>
+    <url>db/journals/tpds/tpds27.html#MittalV16a</url>
+  </article>
+  <article mdate="2020-06-25" key="journals/jea/Navarro08">
+    <author orcid="0000-0002-2286-741X">Gonzalo Navarro</author>
+    <title>Implementing the LZ-index: Theory versus practice.</title>
+    <year>2008</year>
+    <volume>13</volume>
+    <journal>ACM J. Exp. Algorithmics</journal>
+    <url>db/journals/jea/jea13.html#Navarro08</url>
+    <ee>https://doi.org/10.1145/1412228.1412230</ee>
+  </article>
+  <article mdate="2018-11-14" key="journals/jacm/StorerS82">
+    <author>James A. Storer</author>
+    <author>Thomas G. Szymanski</author>
+    <title>Data compression via textual substitution.</title>
+    <pages>928-951</pages>
+    <year>1982</year>
+    <volume>29</volume>
+    <journal>J. ACM</journal>
+    <number>4</number>
+    <ee>https://doi.org/10.1145/322344.322346</ee>
+    <ee>https://www.wikidata.org/entity/Q57479682</ee>
+    <url>db/journals/jacm/jacm29.html#StorerS82</url>
+  </article>
+  <article mdate="2021-07-25" key="journals/jacm/GagieNP20">
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author>Gonzalo Navarro</author>
+    <author>Nicola Prezza</author>
+    <title>Fully Functional Suffix Trees and Optimal Text Searching in BWT-Runs Bounded Space.</title>
+    <pages>2:1-2:54</pages>
+    <year>2020</year>
+    <volume>67</volume>
+    <journal>J. ACM</journal>
+    <number>1</number>
+    <ee>https://doi.org/10.1145/3375890</ee>
+    <url>db/journals/jacm/jacm67.html#GagieNP20</url>
+  </article>
+  <article mdate="2021-02-17" key="journals/taco/SardashtiSW16">
+    <author>Somayeh Sardashti</author>
+    <author>André Seznec</author>
+    <author>David A. Wood 0001</author>
+    <title>Yet Another Compressed Cache: A Low-Cost Yet Effective Compressed Cache.</title>
+    <pages>27:1-27:25</pages>
+    <year>2016</year>
+    <volume>13</volume>
+    <journal>ACM Trans. Archit. Code Optim.</journal>
+    <number>3</number>
+    <ee type="oa">https://doi.org/10.1145/2976740</ee>
+    <url>db/journals/taco/taco13.html#SardashtiSW16</url>
+  </article>
+  <article mdate="2021-05-14" key="journals/jksucis/JTP21">
+    <author>Uthayakumar J.</author>
+    <author orcid="0000-0002-2516-7371">Vengattaraman Thirumal</author>
+    <author>Dhavachelvan Ponnurangam</author>
+    <title>A survey on data compression techniques: From the perspective of data quality, coding schemes, data type and applications.</title>
+    <pages>119-140</pages>
+    <year>2021</year>
+    <volume>33</volume>
+    <journal>J. King Saud Univ. Comput. Inf. Sci.</journal>
+    <number>2</number>
+    <ee type="oa">https://doi.org/10.1016/j.jksuci.2018.05.006</ee>
+    <url>db/journals/jksucis/jksucis33.html#JTP21</url>
+  </article>
+  <article mdate="2019-05-07" key="journals/jda/OhnoSTIS18">
+    <author>Tatsuya Ohno</author>
+    <author>Kensuke Sakai</author>
+    <author orcid="0000-0002-4566-8974">Yoshimasa Takabatake</author>
+    <author>Tomohiro I</author>
+    <author>Hiroshi Sakamoto</author>
+    <title>A faster implementation of online RLBWT and its application to LZ77 parsing.</title>
+    <pages>18-28</pages>
+    <year>2018</year>
+    <volume>52-53</volume>
+    <journal>J. Discrete Algorithms</journal>
+    <ee>https://doi.org/10.1016/j.jda.2018.11.002</ee>
+    <url>db/journals/jda/jda52.html#OhnoSTIS18</url>
+  </article>
+  <article mdate="2021-02-16" key="journals/jda/Navarro04">
+    <author>Gonzalo Navarro</author>
+    <title>Indexing text using the Ziv-Lempel trie.</title>
+    <pages>87-114</pages>
+    <year>2004</year>
+    <volume>2</volume>
+    <journal>J. Discrete Algorithms</journal>
+    <number>1</number>
+    <ee type="oa">https://doi.org/10.1016/S1570-8667(03)00066-2</ee>
+    <url>db/journals/jda/jda2.html#Navarro04</url>
+  </article>
+  <article mdate="2021-02-16" key="journals/jda/CrochemoreGLMR12">
+    <author>Maxime Crochemore</author>
+    <author>Laura Giambruno</author>
+    <author orcid="0000-0002-5706-7500">Alessio Langiu</author>
+    <author orcid="0000-0001-9599-5730">Filippo Mignosi</author>
+    <author>Antonio Restivo</author>
+    <title>Dictionary-symbolwise flexible parsing.</title>
+    <pages>74-90</pages>
+    <year>2012</year>
+    <volume>14</volume>
+    <journal>J. Discrete Algorithms</journal>
+    <ee type="oa">https://doi.org/10.1016/j.jda.2011.12.021</ee>
+    <url>db/journals/jda/jda14.html#CrochemoreGLMR12</url>
+  </article>
+  <article mdate="2021-07-25" key="journals/jda/LouzaGT17">
+    <author orcid="0000-0003-2931-1470">Felipe A. Louza</author>
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author>Guilherme P. Telles</author>
+    <title>Burrows-Wheeler transform and LCP array construction in constant space.</title>
+    <pages>14-22</pages>
+    <year>2017</year>
+    <volume>42</volume>
+    <journal>J. Discrete Algorithms</journal>
+    <ee>https://doi.org/10.1016/j.jda.2016.11.003</ee>
+    <url>db/journals/jda/jda42.html#LouzaGT17</url>
+  </article>
+  <article mdate="2021-02-16" key="journals/jda/CrochemoreGKL15">
+    <author orcid="0000-0003-1087-1419">Maxime Crochemore</author>
+    <author>Roberto Grossi</author>
+    <author>Juha Kärkkäinen</author>
+    <author>Gad M. Landau</author>
+    <title>Computing the Burrows-Wheeler transform in place and in small space.</title>
+    <pages>44-52</pages>
+    <year>2015</year>
+    <volume>32</volume>
+    <journal>J. Discrete Algorithms</journal>
+    <ee type="oa">https://doi.org/10.1016/j.jda.2015.01.004</ee>
+    <ee>https://www.wikidata.org/entity/Q61677839</ee>
+    <url>db/journals/jda/jda32.html#CrochemoreGKL15</url>
+  </article>
+  <article mdate="2019-09-25" key="journals/jda/BilleGGP18">
+    <author orcid="0000-0002-1120-5154">Philip Bille</author>
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author orcid="0000-0002-8322-4952">Inge Li Gørtz</author>
+    <author>Nicola Prezza</author>
+    <title>A separation between RLSLPs and LZ77.</title>
+    <pages>36-39</pages>
+    <year>2018</year>
+    <volume>50</volume>
+    <journal>J. Discrete Algorithms</journal>
+    <ee>https://doi.org/10.1016/j.jda.2018.09.002</ee>
+    <ee>https://www.wikidata.org/entity/Q60554302</ee>
+    <url>db/journals/jda/jda50.html#BilleGGP18</url>
+  </article>
+  <article mdate="2020-05-30" key="journals/bioinformatics/GhaffaariM19">
+    <author>Ali Ghaffaari</author>
+    <author>Tobias Marschall</author>
+    <title>Fully-sensitive seed finding in sequence graphs using a hybrid index.</title>
+    <pages>i81-i89</pages>
+    <year>2019</year>
+    <volume>35</volume>
+    <journal>Bioinform.</journal>
+    <number>14</number>
+    <ee>https://doi.org/10.1093/bioinformatics/btz341</ee>
+    <ee>https://www.wikidata.org/entity/Q90064820</ee>
+    <url>db/journals/bioinformatics/bioinformatics35.html#GhaffaariM19</url>
+  </article>
+  <article mdate="2020-03-02" key="journals/bioinformatics/ChenLMT02">
+    <author>Xin Chen</author>
+    <author>Ming Li 0001</author>
+    <author>Bin Ma</author>
+    <author>John Tromp</author>
+    <title>DNACompress: fast and effective DNA sequence compression.</title>
+    <pages>1696-1698</pages>
+    <year>2002</year>
+    <volume>18</volume>
+    <journal>Bioinform.</journal>
+    <number>12</number>
+    <url>db/journals/bioinformatics/bioinformatics18.html#ChenLMT02</url>
+    <ee>https://doi.org/10.1093/bioinformatics/18.12.1696</ee>
+    <ee>https://www.wikidata.org/entity/Q46675453</ee>
+  </article>
+  <article mdate="2020-03-02" key="journals/bioinformatics/DeorowiczG11">
+    <author orcid="0000-0002-9496-733X">Sebastian Deorowicz</author>
+    <author orcid="0000-0003-1714-1224">Szymon Grabowski</author>
+    <title>Compression of DNA sequence reads in FASTQ format.</title>
+    <pages>860-862</pages>
+    <year>2011</year>
+    <volume>27</volume>
+    <journal>Bioinform.</journal>
+    <number>6</number>
+    <ee>https://doi.org/10.1093/bioinformatics/btr014</ee>
+    <ee>https://www.wikidata.org/entity/Q45804680</ee>
+    <url>db/journals/bioinformatics/bioinformatics27.html#DeorowiczG11</url>
+  </article>
+  <article mdate="2020-03-02" key="journals/bioinformatics/GiancarloSU09">
+    <author>Raffaele Giancarlo</author>
+    <author>Davide Scaturro</author>
+    <author orcid="0000-0003-3226-7642">Filippo Utro</author>
+    <title>Textual data compression in computational biology: a synopsis.</title>
+    <pages>1575-1586</pages>
+    <year>2009</year>
+    <volume>25</volume>
+    <journal>Bioinform.</journal>
+    <number>13</number>
+    <ee>https://doi.org/10.1093/bioinformatics/btp117</ee>
+    <ee>https://www.wikidata.org/entity/Q33413590</ee>
+    <url>db/journals/bioinformatics/bioinformatics25.html#GiancarloSU09</url>
+  </article>
+  <article mdate="2020-09-01" key="journals/bioinformatics/SimpsonD10">
+    <author>Jared T. Simpson</author>
+    <author orcid="0000-0002-9130-1006">Richard Durbin</author>
+    <title>Efficient construction of an assembly string graph using the FM-index.</title>
+    <pages>367-373</pages>
+    <year>2010</year>
+    <volume>26</volume>
+    <journal>Bioinform.</journal>
+    <number>12</number>
+    <ee>https://doi.org/10.1093/bioinformatics/btq217</ee>
+    <ee>https://www.wikidata.org/entity/Q34119500</ee>
+    <url>db/journals/bioinformatics/bioinformatics26.html#SimpsonD10</url>
+  </article>
+  <article mdate="2020-09-08" key="journals/tecs/YangDLC10">
+    <author>Lei Yang 0017</author>
+    <author>Robert P. Dick</author>
+    <author>Haris Lekatsas</author>
+    <author>Srimat T. Chakradhar</author>
+    <title>Online memory compression for embedded systems.</title>
+    <year>2010</year>
+    <volume>9</volume>
+    <journal>ACM Trans. Embed. Comput. Syst.</journal>
+    <number>3</number>
+    <ee>https://doi.org/10.1145/1698772.1698785</ee>
+    <url>db/journals/tecs/tecs9.html#YangDLC10</url>
+    <pages>27:1-27:30</pages>
+  </article>
+  <article mdate="2020-03-10" key="journals/tit/YangH03">
+    <author>En-Hui Yang</author>
+    <author>Da-ke He</author>
+    <title>Efficient universal lossless data compression algorithms based on a greedy sequential grammar transform .2. With context models.</title>
+    <pages>2874-2894</pages>
+    <year>2003</year>
+    <volume>49</volume>
+    <journal>IEEE Trans. Inf. Theory</journal>
+    <number>11</number>
+    <url>db/journals/tit/tit49.html#YangH03</url>
+    <ee>https://doi.org/10.1109/TIT.2003.818411</ee>
+  </article>
+  <article mdate="2020-03-10" key="journals/tit/LouchardS97">
+    <author>Guy Louchard</author>
+    <author>Wojciech Szpankowski</author>
+    <title>On the average redundancy rate of the Lempel-Ziv code.</title>
+    <pages>2-8</pages>
+    <year>1997</year>
+    <volume>43</volume>
+    <journal>IEEE Trans. Inf. Theory</journal>
+    <number>1</number>
+    <url>db/journals/tit/tit43.html#LouchardS97</url>
+    <ee>https://doi.org/10.1109/18.567640</ee>
+  </article>
+  <article mdate="2021-07-25" key="journals/tit/GagieNNP15">
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author>Gonzalo Navarro</author>
+    <author orcid="0000-0003-3771-5088">Yakov Nekrich</author>
+    <author>Alberto Ordóñez Pereira</author>
+    <title>Efficient and Compact Representations of Prefix Codes.</title>
+    <pages>4999-5011</pages>
+    <year>2015</year>
+    <volume>61</volume>
+    <journal>IEEE Trans. Inf. Theory</journal>
+    <number>9</number>
+    <ee>https://doi.org/10.1109/TIT.2015.2452252</ee>
+    <url>db/journals/tit/tit61.html#GagieNNP15</url>
+  </article>
+  <article mdate="2017-06-08" key="journals/tkde/MoffatZS97">
+    <author orcid="0000-0002-6638-0232">Alistair Moffat</author>
+    <author>Justin Zobel</author>
+    <author>Neil Sharman</author>
+    <title>Text Compression for Dynamic Document Databases.</title>
+    <pages>302-313</pages>
+    <year>1997</year>
+    <volume>9</volume>
+    <journal>IEEE Trans. Knowl. Data Eng.</journal>
+    <number>2</number>
+    <url>db/journals/tkde/tkde9.html#MoffatZS97</url>
+    <ee>https://doi.org/10.1109/69.591454</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/69.591454</ee>
+    <cite>journals/csur/Faloutsos85</cite>
+    <cite>books/ph/FrakesB92</cite>
+    <cite>journals/cacm/BentleySTW86</cite>
+    <cite>journals/spe/Moffat89</cite>
+    <cite>...</cite>
+    <cite>conf/dcc/HorspoolC92</cite>
+    <cite>...</cite>
+    <cite>journals/cacm/HirschbergL90</cite>
+    <cite>journals/spe/ZobelM95</cite>
+    <cite>journals/jasis/BellMNWZ93</cite>
+    <cite>journals/ipm/BooksteinKZ92</cite>
+    <cite>...</cite>
+    <cite>...</cite>
+    <cite>conf/trec/Harman92</cite>
+    <cite>journals/ipm/MoffatSWB94</cite>
+    <cite>...</cite>
+    <cite>books/nostrand/WittenMT94</cite>
+    <cite>...</cite>
+    <cite>conf/dcc/Williams91</cite>
+    <cite>journals/cacm/WittenNC87</cite>
+    <cite>journals/computer/Welch84</cite>
+    <cite>journals/cj/CormackH87</cite>
+    <cite>...</cite>
+    <cite>journals/tois/MoffatZ96</cite>
+  </article>
   <article mdate="2019-05-02" key="journals/corr/abs-1904-12135" publtype="informal">
     <author>Maurice Margenstern</author>
     <title>About Fibonacci trees. I.</title>
@@ -380,6 +1195,16 @@
     <ee type="oa">http://arxiv.org/abs/1906.11030</ee>
     <url>db/journals/corr/corr1906.html#abs-1906-11030</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/BelazzouguiP15" publtype="informal">
+    <author>Djamal Belazzougui</author>
+    <author>Simon J. Puglisi</author>
+    <title>Range Predecessor and Lempel-Ziv Parsing.</title>
+    <year>2015</year>
+    <volume>abs/1507.07080</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1507.07080</ee>
+    <url>db/journals/corr/corr1507.html#BelazzouguiP15</url>
+  </article>
   <article mdate="2019-10-25" key="journals/corr/abs-1910-10406" publtype="informal">
     <author>Hiroki Masuda</author>
     <author>Tetsuo Yokoyama</author>
@@ -677,6 +1502,20 @@
     <ee type="oa">https://arxiv.org/abs/2112.04271</ee>
     <url>db/journals/corr/corr2112.html#abs-2112-04271</url>
   </article>
+  <article mdate="2021-02-22" key="journals/corr/abs-1107-2729" publtype="informal">
+    <author>Keisuke Goto 0001</author>
+    <author>Shirou Maruyama</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Hideo Bannai</author>
+    <author>Hiroshi Sakamoto</author>
+    <author>Masayuki Takeda</author>
+    <title>Restructuring Compressed Texts without Explicit Decompression</title>
+    <ee type="oa">http://arxiv.org/abs/1107.2729</ee>
+    <year>2011</year>
+    <journal>CoRR</journal>
+    <volume>abs/1107.2729</volume>
+    <url>db/journals/corr/corr1107.html#abs-1107-2729</url>
+  </article>
   <article mdate="2019-09-23" key="journals/corr/abs-1909-06444" publtype="informal">
     <author>Shashank Vatedka</author>
     <author>Aslan Tchamkerten</author>
@@ -728,6 +1567,17 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1812.01844</ee>
     <url>db/journals/corr/corr1812.html#abs-1812-01844</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1711-02855" publtype="informal">
+    <author>Takaaki Nishimoto</author>
+    <author>Yoshimasa Takabatake</author>
+    <author>Yasuo Tabei</author>
+    <title>A compressed dynamic self-index for highly repetitive text collections.</title>
+    <year>2017</year>
+    <volume>abs/1711.02855</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1711.02855</ee>
+    <url>db/journals/corr/corr1711.html#abs-1711-02855</url>
   </article>
   <article mdate="2020-03-03" key="journals/corr/abs-2002-10303" publtype="informal">
     <author>Jarno Alanko</author>
@@ -921,6 +1771,15 @@
     <ee type="oa">http://arxiv.org/abs/1902.02889</ee>
     <url>db/journals/corr/corr1902.html#abs-1902-02889</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Navarro17" publtype="informal">
+    <author>Gonzalo Navarro</author>
+    <title>Document Listing on Repetitive Collections with Guaranteed Performance.</title>
+    <year>2017</year>
+    <volume>abs/1707.06374</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1707.06374</ee>
+    <url>db/journals/corr/corr1707.html#Navarro17</url>
+  </article>
   <article mdate="2019-11-11" key="journals/corr/abs-1911-01348" publtype="informal">
     <author>Huacheng Yu</author>
     <title>Nearly Optimal Static Las Vegas Succinct Dictionary.</title>
@@ -961,6 +1820,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1907.10984</ee>
     <url>db/journals/corr/corr1907.html#abs-1907-10984</url>
+  </article>
+  <article mdate="2021-02-22" key="journals/corr/GotoB13" publtype="informal">
+    <author>Keisuke Goto 0001</author>
+    <author>Hideo Bannai</author>
+    <title>Space Efficient Linear Time Lempel-Ziv Factorization on Constant~Size~Alphabets.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1310.1448</ee>
+    <volume>abs/1310.1448</volume>
+    <url>db/journals/corr/corr1310.html#GotoB13</url>
   </article>
   <article mdate="2019-06-24" key="journals/corr/abs-1906-05384" publtype="informal">
     <author>Shoupu Wan</author>
@@ -1060,6 +1929,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1907.06310</ee>
     <url>db/journals/corr/corr1907.html#abs-1907-06310</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/KempaK16" publtype="informal">
+    <author>Dominik Kempa</author>
+    <author>Dmitry Kosolobov</author>
+    <title>LZ-End Parsing in Compressed Space.</title>
+    <year>2016</year>
+    <volume>abs/1611.01769</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1611.01769</ee>
+    <url>db/journals/corr/corr1611.html#KempaK16</url>
   </article>
   <article mdate="2019-02-02" key="journals/corr/abs-1901-07809" publtype="informal">
     <author>Uriel Feige</author>
@@ -1631,6 +2510,18 @@
     <ee type="oa">https://arxiv.org/abs/2101.11408</ee>
     <url>db/journals/corr/corr2101.html#abs-2101-11408</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/ClaudeFMN16" publtype="informal">
+    <author>Francisco Claude</author>
+    <author>Antonio Fariña</author>
+    <author>Miguel A. Martínez-Prieto</author>
+    <author>Gonzalo Navarro</author>
+    <title>Universal Indexes for Highly Repetitive Document Collections.</title>
+    <year>2016</year>
+    <volume>abs/1604.08897</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1604.08897</ee>
+    <url>db/journals/corr/corr1604.html#ClaudeFMN16</url>
+  </article>
   <article mdate="2021-09-20" key="journals/corr/abs-2109-00287" publtype="informal">
     <author>Elias Alevizos</author>
     <author>Alexander Artikis</author>
@@ -1780,6 +2671,15 @@
     <ee type="oa">http://arxiv.org/abs/1810.11308</ee>
     <url>db/journals/corr/corr1810.html#abs-1810-11308</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Belazzougui14" publtype="informal">
+    <author>Djamal Belazzougui</author>
+    <title>Linear time construction of compressed text indices in compact space.</title>
+    <year>2014</year>
+    <volume>abs/1401.0936</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1401.0936</ee>
+    <url>db/journals/corr/corr1401.html#Belazzougui14</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1304-0528" publtype="informal">
     <author>Verónica Becher</author>
     <author>Alejandro Deymonnaz</author>
@@ -1896,6 +2796,19 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2007.04128</ee>
     <url>db/journals/corr/corr2007.html#abs-2007-04128</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/NishimotoIIBT15" publtype="informal">
+    <author>Takaaki Nishimoto</author>
+    <author>Tomohiro I</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Hideo Bannai</author>
+    <author>Masayuki Takeda</author>
+    <title>Dynamic index, LZ factorization, and LCE queries in compressed space.</title>
+    <year>2015</year>
+    <volume>abs/1504.06954</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1504.06954</ee>
+    <url>db/journals/corr/corr1504.html#NishimotoIIBT15</url>
   </article>
   <article mdate="2020-06-04" key="journals/corr/abs-1901-01825" publtype="informal">
     <author>Francesco Concas</author>
@@ -2068,6 +2981,18 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2012.06840</ee>
     <url>db/journals/corr/corr2012.html#abs-2012-06840</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1204-5524" publtype="informal">
+    <author>Jun-ichi Yamamoto</author>
+    <author>Hideo Bannai</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Masayuki Takeda</author>
+    <title>Time and Space Efficient Lempel-Ziv Factorization based on Run Length Encoding</title>
+    <ee type="oa">http://arxiv.org/abs/1204.5524</ee>
+    <year>2012</year>
+    <journal>CoRR</journal>
+    <volume>abs/1204.5524</volume>
+    <url>db/journals/corr/corr1204.html#abs-1204-5524</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1804-10062" publtype="informal">
     <author>Stefan Edelkamp</author>
@@ -2640,6 +3565,16 @@
     <ee type="oa">http://arxiv.org/abs/1803.11245</ee>
     <url>db/journals/corr/corr1803.html#abs-1803-11245</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1101-4065" publtype="informal">
+    <author>Sebastian Kreft</author>
+    <author>Gonzalo Navarro</author>
+    <title>Self-Index Based on LZ77</title>
+    <ee type="oa">http://arxiv.org/abs/1101.4065</ee>
+    <year>2011</year>
+    <journal>CoRR</journal>
+    <volume>abs/1101.4065</volume>
+    <url>db/journals/corr/corr1101.html#abs-1101-4065</url>
+  </article>
   <article mdate="2021-01-23" key="journals/corr/abs-2007-08188" publtype="informal">
     <author orcid="0000-0001-9707-0803">Daniel Gabric</author>
     <author>Jeffrey O. Shallit</author>
@@ -2807,6 +3742,19 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1901.10633</ee>
     <url>db/journals/corr/corr1901.html#abs-1901-10633</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/NishimotoIIBT16" publtype="informal">
+    <author>Takaaki Nishimoto</author>
+    <author>Tomohiro I</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Hideo Bannai</author>
+    <author>Masayuki Takeda</author>
+    <title>Fully dynamic data structure for LCE queries in compressed space.</title>
+    <year>2016</year>
+    <volume>abs/1605.01488</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1605.01488</ee>
+    <url>db/journals/corr/corr1605.html#NishimotoIIBT16</url>
   </article>
   <article mdate="2021-06-10" key="journals/corr/abs-2106-01595" publtype="informal">
     <author>Akio Nishimoto</author>
@@ -3050,6 +3998,16 @@
     <ee type="oa">http://arxiv.org/abs/1910.03578</ee>
     <url>db/journals/corr/corr1910.html#abs-1910-03578</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/LagardeP17" publtype="informal">
+    <author>Guillaume Lagarde</author>
+    <author>Sylvain Perifel</author>
+    <title>Lempel-Ziv: a "one-bit catastrophe" but not a tragedy.</title>
+    <year>2017</year>
+    <volume>abs/1707.04312</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1707.04312</ee>
+    <url>db/journals/corr/corr1707.html#LagardeP17</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1804-02112" publtype="informal">
     <author>Amr Elmasry</author>
     <author>Mostafa Kahla</author>
@@ -3125,6 +4083,18 @@
     <ee type="oa">https://arxiv.org/abs/2002.06786</ee>
     <url>db/journals/corr/corr2002.html#abs-2002-06786</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/0001GGK15" publtype="informal">
+    <author>Johannes Fischer 0001</author>
+    <author>Travis Gagie</author>
+    <author>Pawel Gawrychowski</author>
+    <author>Tomasz Kociumaka</author>
+    <title>Approximating LZ77 via Small-Space Multiple-Pattern Matching.</title>
+    <year>2015</year>
+    <volume>abs/1504.06647</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1504.06647</ee>
+    <url>db/journals/corr/corr1504.html#0001GGK15</url>
+  </article>
   <article mdate="2019-05-21" key="journals/corr/abs-1902-06864" publtype="informal">
     <author>Lech Duraj</author>
     <title>A sub-quadratic algorithm for the longest common increasing subsequence problem.</title>
@@ -3165,6 +4135,15 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2001.11763</ee>
     <url>db/journals/corr/corr2001.html#abs-2001-11763</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Gagie15" publtype="informal">
+    <author>Travis Gagie</author>
+    <title>Approximating LZ77 in Small Space.</title>
+    <year>2015</year>
+    <volume>abs/1503.02416</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1503.02416</ee>
+    <url>db/journals/corr/corr1503.html#Gagie15</url>
   </article>
   <article mdate="2020-07-29" key="journals/corr/abs-2007-13241" publtype="informal">
     <author>Tim Roughgarden</author>
@@ -3238,6 +4217,15 @@
     <ee type="oa">https://arxiv.org/abs/2106.05123</ee>
     <url>db/journals/corr/corr2106.html#abs-2106-05123</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Jez14" publtype="informal">
+    <author>Artur Jez</author>
+    <title>A really simple approximation of smallest grammar.</title>
+    <year>2014</year>
+    <volume>abs/1403.4445</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1403.4445</ee>
+    <url>db/journals/corr/corr1403.html#Jez14</url>
+  </article>
   <article mdate="2019-02-03" key="journals/corr/abs-1901-10722" publtype="informal">
     <author>Mitsuru Funakoshi</author>
     <author>Yuto Nakashima</author>
@@ -3298,6 +4286,19 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2110.01111</ee>
     <url>db/journals/corr/corr2110.html#abs-2110-01111</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/TanimuraNBIT17" publtype="informal">
+    <author>Yuka Tanimura</author>
+    <author>Takaaki Nishimoto</author>
+    <author>Hideo Bannai</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Masayuki Takeda</author>
+    <title>Small-space encoding LCE data structure with constant-time queries.</title>
+    <year>2017</year>
+    <volume>abs/1702.07458</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1702.07458</ee>
+    <url>db/journals/corr/corr1702.html#TanimuraNBIT17</url>
   </article>
   <article mdate="2019-05-21" key="journals/corr/abs-1902-04785" publtype="informal">
     <author>Lorraine A. K. Ayad</author>
@@ -3536,6 +4537,19 @@
     <ee type="oa">http://arxiv.org/abs/1809.01759</ee>
     <url>db/journals/corr/corr1809.html#abs-1809-01759</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/BelazzouguiCGPR15" publtype="informal">
+    <author>Djamal Belazzougui</author>
+    <author>Fabio Cunial</author>
+    <author>Travis Gagie</author>
+    <author>Nicola Prezza</author>
+    <author>Mathieu Raffinot</author>
+    <title>Composite repetition-aware data structures.</title>
+    <year>2015</year>
+    <volume>abs/1502.05937</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1502.05937</ee>
+    <url>db/journals/corr/corr1502.html#BelazzouguiCGPR15</url>
+  </article>
   <article mdate="2018-10-30" key="journals/corr/abs-1810-02270" publtype="informal">
     <author>Yong Tan</author>
     <title>Compound Binary Search Tree and Algorithms.</title>
@@ -3663,6 +4677,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1705.01720</ee>
     <url>db/journals/corr/corr1705.html#KaneLM17</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1711-08217" publtype="informal">
+    <author>Anders Roy Christiansen</author>
+    <author>Mikko Berggren Ettienne</author>
+    <title>Compressed Indexing with Signature Grammars.</title>
+    <year>2017</year>
+    <volume>abs/1711.08217</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1711.08217</ee>
+    <url>db/journals/corr/corr1711.html#abs-1711-08217</url>
   </article>
   <article mdate="2021-02-22" key="journals/corr/abs-1806-00198" publtype="informal">
     <author>Keisuke Goto 0001</author>
@@ -3823,6 +4847,17 @@
     <ee type="oa">http://arxiv.org/abs/1804.06809</ee>
     <url>db/journals/corr/corr1804.html#abs-1804-06809</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/KarkkainenKP13" publtype="informal">
+    <author>Juha Kärkkäinen</author>
+    <author>Dominik Kempa</author>
+    <author>Simon J. Puglisi</author>
+    <title>Lempel-Ziv Parsing in External Memory.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1307.1428</ee>
+    <volume>abs/1307.1428</volume>
+    <url>db/journals/corr/corr1307.html#KarkkainenKP13</url>
+  </article>
   <article mdate="2019-08-09" key="journals/corr/abs-1908-02741" publtype="informal">
     <author>Seth Gilbert</author>
     <author>Wei Quan Lim</author>
@@ -3833,6 +4868,17 @@
     <ee type="oa">http://arxiv.org/abs/1908.02741</ee>
     <url>db/journals/corr/corr1908.html#abs-1908-02741</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/FischerIK15" publtype="informal">
+    <author>Johannes Fischer 0001</author>
+    <author>Tomohiro I</author>
+    <author>Dominik Köppl</author>
+    <title>Lempel Ziv Computation In Small Space (LZ-CISS).</title>
+    <year>2015</year>
+    <volume>abs/1504.02605</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1504.02605</ee>
+    <url>db/journals/corr/corr1504.html#FischerIK15</url>
+  </article>
   <article mdate="2018-10-31" key="journals/corr/abs-1810-11262" publtype="informal">
     <author>Igor S. Sergeev</author>
     <title>Some comments on the structure of the best known networks sorting 16 elements.</title>
@@ -3841,6 +4887,18 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1810.11262</ee>
     <url>db/journals/corr/corr1810.html#abs-1810-11262</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1711-07270" publtype="informal">
+    <author>Philip Bille</author>
+    <author>Travis Gagie</author>
+    <author>Inge Li Gørtz</author>
+    <author>Nicola Prezza</author>
+    <title>A Separation Between Run-Length SLPs and LZ77.</title>
+    <year>2017</year>
+    <volume>abs/1711.07270</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1711.07270</ee>
+    <url>db/journals/corr/corr1711.html#abs-1711-07270</url>
   </article>
   <article mdate="2021-02-19" key="journals/corr/abs-2102-08670" publtype="informal">
     <author>Jonas Ellert</author>
@@ -4083,6 +5141,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1907.05369</ee>
     <url>db/journals/corr/corr1907.html#abs-1907-05369</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Siren15" publtype="informal">
+    <author>Jouni Sirén</author>
+    <title>Burrows-Wheeler transform for terabases.</title>
+    <year>2015</year>
+    <volume>abs/1511.00898</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1511.00898</ee>
+    <url>db/journals/corr/corr1511.html#Siren15</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1804-03604" publtype="informal">
     <author>Bernhard Haeupler</author>
@@ -4720,6 +5787,15 @@
     <ee type="oa">http://arxiv.org/abs/1805.05228</ee>
     <url>db/journals/corr/corr1805.html#abs-1805-05228</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Kosolobov15" publtype="informal">
+    <author>Dmitry Kosolobov</author>
+    <title>Faster Lightweight Lempel-Ziv Parsing.</title>
+    <year>2015</year>
+    <volume>abs/1504.06712</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1504.06712</ee>
+    <url>db/journals/corr/corr1504.html#Kosolobov15</url>
+  </article>
   <article mdate="2022-03-01" key="journals/corr/abs-2202-07885" publtype="informal">
     <author>Takaaki Nishimoto</author>
     <author>Shunsuke Kanda</author>
@@ -4941,6 +6017,19 @@
     <ee type="oa">http://arxiv.org/abs/1809.07661</ee>
     <url>db/journals/corr/corr1809.html#abs-1809-07661</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/NakashimaIIBT15" publtype="informal">
+    <author>Yuto Nakashima</author>
+    <author>Tomohiro I</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Hideo Bannai</author>
+    <author>Masayuki Takeda</author>
+    <title>Constructing LZ78 Tries and Position Heaps in Linear Time for Large Alphabets.</title>
+    <year>2015</year>
+    <volume>abs/1501.06619</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1501.06619</ee>
+    <url>db/journals/corr/corr1501.html#NakashimaIIBT15</url>
+  </article>
   <article mdate="2022-02-23" key="journals/corr/abs-1911-00044" publtype="informal">
     <author>Uwe Baier</author>
     <author>Thomas Büchler</author>
@@ -4975,6 +6064,19 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2102.02505</ee>
     <url>db/journals/corr/corr2102.html#abs-2102-02505</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/NishimotoIIBT16a" publtype="informal">
+    <author>Takaaki Nishimoto</author>
+    <author>Tomohiro I</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Hideo Bannai</author>
+    <author>Masayuki Takeda</author>
+    <title>Dynamic index and LZ factorization in compressed space.</title>
+    <year>2016</year>
+    <volume>abs/1605.09558</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1605.09558</ee>
+    <url>db/journals/corr/corr1605.html#NishimotoIIBT16a</url>
   </article>
   <article mdate="2019-03-30" key="journals/corr/abs-1903-01387" publtype="informal">
     <author>Gaurav Menghani</author>
@@ -5128,6 +6230,15 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2107.02503</ee>
     <url>db/journals/corr/corr2107.html#abs-2107-02503</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Kosolobov17" publtype="informal">
+    <author>Dmitry Kosolobov</author>
+    <title>Relations Between Greedy and Bit-Optimal LZ77 Encodings.</title>
+    <year>2017</year>
+    <volume>abs/1707.09789</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1707.09789</ee>
+    <url>db/journals/corr/corr1707.html#Kosolobov17</url>
   </article>
   <article mdate="2022-01-10" key="journals/corr/abs-2201-01554" publtype="informal">
     <author>Domenico Amato</author>
@@ -5310,6 +6421,17 @@
     <journal>CoRR</journal>
     <volume>abs/1108.0866</volume>
     <url>db/journals/corr/corr1108.html#abs-1108-0866</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1302-1064" publtype="informal">
+    <author>Juha Kärkkäinen</author>
+    <author>Dominik Kempa</author>
+    <author>Simon J. Puglisi</author>
+    <title>Lightweight Lempel-Ziv Parsing</title>
+    <ee type="oa">http://arxiv.org/abs/1302.1064</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1302.1064</volume>
+    <url>db/journals/corr/corr1302.html#abs-1302-1064</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1805-08612" publtype="informal">
     <author>Nicolas Auger</author>
@@ -5606,6 +6728,16 @@
     <ee type="oa">http://arxiv.org/abs/1911.01851</ee>
     <url>db/journals/corr/corr1911.html#abs-1911-01851</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1109-3954" publtype="informal">
+    <author>Travis Gagie</author>
+    <author>Pawel Gawrychowski</author>
+    <title>A Faster LZ77-Based Index</title>
+    <ee type="oa">http://arxiv.org/abs/1109.3954</ee>
+    <year>2011</year>
+    <journal>CoRR</journal>
+    <volume>abs/1109.3954</volume>
+    <url>db/journals/corr/corr1109.html#abs-1109-3954</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1807-01804" publtype="informal">
     <author>Michael A. Bender</author>
     <author>Jake Christensen</author>
@@ -5820,6 +6952,18 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1910.10631</ee>
     <url>db/journals/corr/corr1910.html#abs-1910-10631</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-0706-1084" publtype="informal">
+    <author>Sofya Raskhodnikova</author>
+    <author>Dana Ron</author>
+    <author>Ronitt Rubinfeld</author>
+    <author>Adam D. Smith</author>
+    <title>Sublinear Algorithms for Approximating String Compressibility</title>
+    <ee type="oa">http://arxiv.org/abs/0706.1084</ee>
+    <year>2007</year>
+    <journal>CoRR</journal>
+    <volume>abs/0706.1084</volume>
+    <url>db/journals/corr/corr0706.html#abs-0706-1084</url>
   </article>
   <article mdate="2019-02-02" key="journals/corr/abs-1901-10165" publtype="informal">
     <author>Fabio Cunial</author>
@@ -6070,6 +7214,16 @@
     <ee type="oa">https://arxiv.org/abs/2007.07718</ee>
     <url>db/journals/corr/corr2007.html#abs-2007-07718</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/PrezzaP15" publtype="informal">
+    <author>Nicola Prezza</author>
+    <author>Alberto Policriti</author>
+    <title>Computing LZ77 in Run-Compressed Space.</title>
+    <year>2015</year>
+    <volume>abs/1510.06257</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1510.06257</ee>
+    <url>db/journals/corr/corr1510.html#PrezzaP15</url>
+  </article>
   <article mdate="2019-07-23" key="journals/corr/abs-1907-08246" publtype="informal">
     <author>Matteo Fischetti</author>
     <author>Domenico Salvagnin</author>
@@ -6284,6 +7438,19 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1811.02177</ee>
     <url>db/journals/corr/corr1811.html#abs-1811-02177</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/FarinaGMNP16" publtype="informal">
+    <author>Antonio Fariña</author>
+    <author>Travis Gagie</author>
+    <author>Giovanni Manzini</author>
+    <author>Gonzalo Navarro</author>
+    <author>Alberto Ordóñez Pereira</author>
+    <title>Efficient and Compact Representations of Some Non-Canonical Prefix-Free Codes.</title>
+    <year>2016</year>
+    <volume>abs/1605.06615</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1605.06615</ee>
+    <url>db/journals/corr/corr1605.html#FarinaGMNP16</url>
   </article>
   <article mdate="2019-11-11" key="journals/corr/abs-1911-03028" publtype="informal">
     <author>Robert Kelly</author>
@@ -6645,6 +7812,27 @@
     <ee type="oa">http://arxiv.org/abs/1808.01071</ee>
     <url>db/journals/corr/corr1808.html#abs-1808-01071</url>
   </article>
+  <article mdate="2019-08-01" key="journals/corr/abs-1907-11900" publtype="informal">
+    <author>Simon Wiedemann</author>
+    <author>Heiner Kirchhoffer</author>
+    <author>Stefan Matlage</author>
+    <author>Paul Haase</author>
+    <author>Arturo Marbán</author>
+    <author>Talmaj Marinc</author>
+    <author>David Neumann</author>
+    <author>Tung Nguyen</author>
+    <author>Ahmed Osman</author>
+    <author>Detlev Marpe</author>
+    <author>Heiko Schwarz</author>
+    <author>Thomas Wiegand</author>
+    <author>Wojciech Samek</author>
+    <title>DeepCABAC: A Universal Compression Algorithm for Deep Neural Networks.</title>
+    <year>2019</year>
+    <volume>abs/1907.11900</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1907.11900</ee>
+    <url>db/journals/corr/corr1907.html#abs-1907-11900</url>
+  </article>
   <article mdate="2021-11-05" key="journals/corr/abs-2111-00376" publtype="informal">
     <author>Younan Gao</author>
     <title>Computing Matching Statistics on Repetitive Texts.</title>
@@ -6653,6 +7841,16 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2111.00376</ee>
     <url>db/journals/corr/corr2111.html#abs-2111-00376</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/PolicritiP17" publtype="informal">
+    <author>Alberto Policriti</author>
+    <author>Nicola Prezza</author>
+    <title>From LZ77 to the Run-Length Encoded Burrows-Wheeler Transform, and Back.</title>
+    <year>2017</year>
+    <volume>abs/1702.01340</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1702.01340</ee>
+    <url>db/journals/corr/corr1702.html#PolicritiP17</url>
   </article>
   <article mdate="2019-04-01" key="journals/corr/abs-1903-07967" publtype="informal">
     <author>Peyman Afshani</author>
@@ -6814,6 +8012,18 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2002.06764</ee>
     <url>db/journals/corr/corr2002.html#abs-2002-06764</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/BilleEGV17" publtype="informal">
+    <author>Philip Bille</author>
+    <author>Mikko Berggren Ettienne</author>
+    <author>Inge Li Gørtz</author>
+    <author>Hjalte Wedel Vildhøj</author>
+    <title>Time-Space Trade-Offs for Lempel-Ziv Compressed Indexing.</title>
+    <year>2017</year>
+    <volume>abs/1706.10094</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1706.10094</ee>
+    <url>db/journals/corr/corr1706.html#BilleEGV17</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1805-02200" publtype="informal">
     <author>Xingbo Wu</author>
@@ -7380,6 +8590,18 @@
     <ee type="oa">http://arxiv.org/abs/1805.03574</ee>
     <url>db/journals/corr/corr1805.html#abs-1805-03574</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/OhnoTIS17" publtype="informal">
+    <author>Tatsuya Ohno</author>
+    <author>Yoshimasa Takabatake</author>
+    <author>Tomohiro I</author>
+    <author>Hiroshi Sakamoto</author>
+    <title>A Faster Implementation of Online Run-Length Burrows-Wheeler Transform.</title>
+    <year>2017</year>
+    <volume>abs/1704.05233</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1704.05233</ee>
+    <url>db/journals/corr/corr1704.html#OhnoTIS17</url>
+  </article>
   <article mdate="2020-07-10" key="journals/corr/abs-1903-10583" publtype="informal">
     <author>Felipe A. Louza</author>
     <author>Guilherme P. Telles</author>
@@ -7402,6 +8624,15 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2107.08615</ee>
     <url>db/journals/corr/corr2107.html#abs-2107-08615</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Pekhimenko16" publtype="informal">
+    <author>Gennady Pekhimenko</author>
+    <title>Practical Data Compression for Modern Memory Hierarchies.</title>
+    <year>2016</year>
+    <volume>abs/1609.02067</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1609.02067</ee>
+    <url>db/journals/corr/corr1609.html#Pekhimenko16</url>
   </article>
   <article mdate="2019-12-03" key="journals/corr/abs-1911-08971" publtype="informal">
     <author>Diego Arroyuelo</author>
@@ -8001,6 +9232,17 @@
     <ee type="oa">https://arxiv.org/abs/2103.05460</ee>
     <url>db/journals/corr/corr2103.html#abs-2103-05460</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-0909-4341" publtype="informal">
+    <author>Paolo Ferragina</author>
+    <author>Travis Gagie</author>
+    <author>Giovanni Manzini</author>
+    <title>Lightweight Data Indexing and Compression in External Memory</title>
+    <ee type="oa">http://arxiv.org/abs/0909.4341</ee>
+    <year>2009</year>
+    <journal>CoRR</journal>
+    <volume>abs/0909.4341</volume>
+    <url>db/journals/corr/corr0909.html#abs-0909-4341</url>
+  </article>
   <article mdate="2019-09-27" key="journals/corr/abs-1909-11433" publtype="informal">
     <author>Panagiotis Charalampopoulos</author>
     <author>Tomasz Kociumaka</author>
@@ -8145,6 +9387,29 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1910.07819</ee>
     <url>db/journals/corr/corr1910.html#abs-1910-07819</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/FerradaGHP13" publtype="informal">
+    <author>Hector Ferrada</author>
+    <author>Travis Gagie</author>
+    <author>Tommi Hirvola</author>
+    <author>Simon J. Puglisi</author>
+    <title>Hybrid Indexes for Repetitive Datasets.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1306.4037</ee>
+    <volume>abs/1306.4037</volume>
+    <url>db/journals/corr/corr1306.html#FerradaGHP13</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1212-2952" publtype="informal">
+    <author>Juha Kärkkäinen</author>
+    <author>Dominik Kempa</author>
+    <author>Simon J. Puglisi</author>
+    <title>Linear Time Lempel-Ziv Factorization: Simple, Fast, Small</title>
+    <ee type="oa">http://arxiv.org/abs/1212.2952</ee>
+    <year>2012</year>
+    <journal>CoRR</journal>
+    <volume>abs/1212.2952</volume>
+    <url>db/journals/corr/corr1212.html#abs-1212-2952</url>
   </article>
   <article mdate="2021-08-27" key="journals/corr/abs-2108-11475" publtype="informal">
     <author>Pawel Gawrychowski</author>
@@ -8350,6 +9615,59 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1905.08563</ee>
     <url>db/journals/corr/corr1905.html#abs-1905-08563</url>
+  </article>
+  <article mdate="2022-01-08" key="journals/csur/Navarro21">
+    <author orcid="0000-0002-2286-741X">Gonzalo Navarro</author>
+    <title>Indexing Highly Repetitive String Collections, Part II: Compressed Indexes.</title>
+    <pages>26:1-26:32</pages>
+    <year>2021</year>
+    <volume>54</volume>
+    <journal>ACM Comput. Surv.</journal>
+    <number>2</number>
+    <ee>https://doi.org/10.1145/3432999</ee>
+    <url>db/journals/csur/csur54.html#Navarro21</url>
+  </article>
+  <article mdate="2019-06-02" key="journals/csur/Al-HafeedhCIKSTY12">
+    <author>Anisa Al-Hafeedh</author>
+    <author orcid="0000-0003-1087-1419">Maxime Crochemore</author>
+    <author>Lucian Ilie</author>
+    <author>Evguenia Kopylova</author>
+    <author>William F. Smyth</author>
+    <author>German Tischler</author>
+    <author>Munina Yusufu</author>
+    <title>A comparison of index-based lempel-Ziv LZ77 factorization algorithms.</title>
+    <pages>5:1-5:17</pages>
+    <year>2012</year>
+    <volume>45</volume>
+    <journal>ACM Comput. Surv.</journal>
+    <number>1</number>
+    <ee>https://doi.org/10.1145/2379776.2379781</ee>
+    <ee>https://www.wikidata.org/entity/Q61677864</ee>
+    <url>db/journals/csur/csur45.html#Al-HafeedhCIKSTY12</url>
+  </article>
+  <article mdate="2021-05-19" key="journals/csur/Navarro21a">
+    <author>Gonzalo Navarro</author>
+    <title>Indexing Highly Repetitive String Collections, Part I: Repetitiveness Measures.</title>
+    <pages>29:1-29:31</pages>
+    <year>2021</year>
+    <volume>54</volume>
+    <journal>ACM Comput. Surv.</journal>
+    <number>2</number>
+    <ee>https://doi.org/10.1145/3434399</ee>
+    <url>db/journals/csur/csur54.html#Navarro21a</url>
+  </article>
+  <article mdate="2021-07-25" key="journals/mics/GagieHP17">
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author>Christopher Hoobin</author>
+    <author orcid="0000-0001-7668-7636">Simon J. Puglisi</author>
+    <title>Block Graphs in Practice.</title>
+    <pages>191-196</pages>
+    <year>2017</year>
+    <volume>11</volume>
+    <journal>Math. Comput. Sci.</journal>
+    <number>2</number>
+    <ee>https://doi.org/10.1007/s11786-016-0286-9</ee>
+    <url>db/journals/mics/mics11.html#GagieHP17</url>
   </article>
   <article mdate="2021-02-11" key="journals/dam/FiciLLP14">
     <author orcid="0000-0002-3536-327X">Gabriele Fici</author>
@@ -9112,6 +10430,164 @@
     <ee type="oa">https://doi.org/10.1016/j.dam.2013.01.021</ee>
     <url>db/journals/dam/dam163.html#Harper14</url>
   </article>
+  <article mdate="2021-05-14" key="journals/vlsisp/FangCLAH20">
+    <author orcid="0000-0002-1077-1859">Jian Fang 0004</author>
+    <author>Jianyu Chen</author>
+    <author>Jinho Lee</author>
+    <author>Zaid Al-Ars</author>
+    <author>H. Peter Hofstee</author>
+    <title>An Efficient High-Throughput LZ77-Based Decompressor in Reconfigurable Logic.</title>
+    <pages>931-947</pages>
+    <year>2020</year>
+    <volume>92</volume>
+    <journal>J. Signal Process. Syst.</journal>
+    <number>9</number>
+    <ee type="oa">https://doi.org/10.1007/s11265-020-01547-w</ee>
+    <url>db/journals/vlsisp/vlsisp92.html#FangCLAH20</url>
+  </article>
+  <article mdate="2022-04-09" key="journals/pieee/ApostolicoL00">
+    <author>Alberto Apostolico</author>
+    <author orcid="0000-0002-2696-7274">Stefano Lonardi</author>
+    <title>Off-line compression by greedy textual substitution.</title>
+    <pages>1733-1744</pages>
+    <year>2000</year>
+    <volume>88</volume>
+    <journal>Proc. IEEE</journal>
+    <number>11</number>
+    <ee>https://doi.org/10.1109/5.892709</ee>
+    <url>db/journals/pieee/pieee88.html#ApostolicoL00</url>
+  </article>
+  <article mdate="2020-05-22" key="journals/algorithms/MansouriYS20">
+    <author orcid="0000-0002-6476-1568">Deloula Mansouri</author>
+    <author>Xiaohui Yuan</author>
+    <author>Abdeldjalil Saidani</author>
+    <title>A New Lossless DNA Compression Algorithm Based on A Single-Block Encoding Scheme.</title>
+    <pages>99</pages>
+    <year>2020</year>
+    <volume>13</volume>
+    <journal>Algorithms</journal>
+    <number>4</number>
+    <ee type="oa">https://doi.org/10.3390/a13040099</ee>
+    <url>db/journals/algorithms/algorithms13.html#MansouriYS20</url>
+  </article>
+  <article mdate="2021-04-07" key="journals/algorithms/Prezza21">
+    <author orcid="0000-0003-3553-4953">Nicola Prezza</author>
+    <title>Subpath Queries on Compressed Graphs: A Survey.</title>
+    <pages>14</pages>
+    <year>2021</year>
+    <volume>14</volume>
+    <journal>Algorithms</journal>
+    <number>1</number>
+    <ee type="oa">https://doi.org/10.3390/a14010014</ee>
+    <url>db/journals/algorithms/algorithms14.html#Prezza21</url>
+  </article>
+  <article mdate="2021-02-12" key="journals/iandc/ArroyueloN11">
+    <author>Diego Arroyuelo</author>
+    <author>Gonzalo Navarro</author>
+    <title>Space-efficient construction of Lempel-Ziv compressed text indexes.</title>
+    <pages>1070-1102</pages>
+    <year>2011</year>
+    <volume>209</volume>
+    <journal>Inf. Comput.</journal>
+    <number>7</number>
+    <ee type="oa">https://doi.org/10.1016/j.ic.2011.03.001</ee>
+    <url>db/journals/iandc/iandc209.html#ArroyueloN11</url>
+  </article>
+  <article mdate="2020-06-16" key="journals/iandc/NishimotoTT20">
+    <author>Takaaki Nishimoto</author>
+    <author>Yoshimasa Takabatake</author>
+    <author>Yasuo Tabei</author>
+    <title>A compressed dynamic self-index for highly repetitive text collections.</title>
+    <pages>104518</pages>
+    <year>2020</year>
+    <volume>273</volume>
+    <journal>Inf. Comput.</journal>
+    <ee>https://doi.org/10.1016/j.ic.2020.104518</ee>
+    <url>db/journals/iandc/iandc273.html#NishimotoTT20</url>
+  </article>
+  <article mdate="2022-04-09" key="journals/spe/LiuNCW16">
+    <author>Weijun Liu</author>
+    <author>Ge Nong</author>
+    <author>Wai Hong Chan</author>
+    <author orcid="0000-0002-5913-2126">Yi Wu 0011</author>
+    <title>Improving a lightweight LZ77 computation algorithm for running faster.</title>
+    <pages>1201-1217</pages>
+    <year>2016</year>
+    <volume>46</volume>
+    <journal>Softw. Pract. Exp.</journal>
+    <number>9</number>
+    <ee>https://doi.org/10.1002/spe.2377</ee>
+    <url>db/journals/spe/spe46.html#LiuNCW16</url>
+  </article>
+  <article mdate="2020-03-12" key="journals/jcb/MakinenNSV10">
+    <author orcid="0000-0003-4454-1493">Veli Mäkinen</author>
+    <author>Gonzalo Navarro</author>
+    <author orcid="0000-0001-5828-4139">Jouni Sirén</author>
+    <author>Niko Välimäki</author>
+    <title>Storage and Retrieval of Highly Repetitive Sequence Collections.</title>
+    <pages>281-308</pages>
+    <year>2010</year>
+    <volume>17</volume>
+    <journal>J. Comput. Biol.</journal>
+    <number>3</number>
+    <ee>https://doi.org/10.1089/cmb.2009.0169</ee>
+    <ee>https://www.wikidata.org/entity/Q51059165</ee>
+    <url>db/journals/jcb/jcb17.html#MakinenNSV10</url>
+  </article>
+  <article mdate="2022-03-16" key="journals/jcb/KuhnleMBGLM20">
+    <author>Alan Kuhnle</author>
+    <author>Taher Mun</author>
+    <author>Christina Boucher</author>
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author orcid="0000-0003-2437-1976">Ben Langmead</author>
+    <author orcid="0000-0002-5047-0196">Giovanni Manzini</author>
+    <title>Efficient Construction of a Complete Index for Pan-Genomics Read Alignment.</title>
+    <pages>500-513</pages>
+    <year>2020</year>
+    <volume>27</volume>
+    <journal>J. Comput. Biol.</journal>
+    <number>4</number>
+    <ee>https://doi.org/10.1089/cmb.2019.0309</ee>
+    <ee>https://www.wikidata.org/entity/Q90386981</ee>
+    <url>db/journals/jcb/jcb27.html#KuhnleMBGLM20</url>
+  </article>
+  <article mdate="2017-05-27" key="journals/siamcomp/GrossiV05">
+    <author>Roberto Grossi</author>
+    <author>Jeffrey Scott Vitter</author>
+    <title>Compressed Suffix Arrays and Suffix Trees with Applications to Text Indexing and String Matching.</title>
+    <pages>378-407</pages>
+    <year>2005</year>
+    <volume>35</volume>
+    <journal>SIAM J. Comput.</journal>
+    <number>2</number>
+    <ee>https://doi.org/10.1137/S0097539702402354</ee>
+    <url>db/journals/siamcomp/siamcomp35.html#GrossiV05</url>
+  </article>
+  <article mdate="2019-09-16" key="journals/siamcomp/KosarajuM99">
+    <author>S. Rao Kosaraju</author>
+    <author orcid="0000-0002-5047-0196">Giovanni Manzini</author>
+    <title>Compression of Low Entropy Strings with Lempel-Ziv Algorithms.</title>
+    <pages>893-911</pages>
+    <year>1999</year>
+    <volume>29</volume>
+    <journal>SIAM J. Comput.</journal>
+    <number>3</number>
+    <url>db/journals/siamcomp/siamcomp29.html#KosarajuM99</url>
+    <ee>https://doi.org/10.1137/S0097539797331105</ee>
+  </article>
+  <article mdate="2020-10-26" key="journals/siamcomp/FerraginaNV13">
+    <author orcid="0000-0003-1353-360X">Paolo Ferragina</author>
+    <author>Igor Nitto</author>
+    <author orcid="0000-0002-9830-3936">Rossano Venturini</author>
+    <title>On the Bit-Complexity of Lempel-Ziv Compression.</title>
+    <pages>1521-1541</pages>
+    <year>2013</year>
+    <volume>42</volume>
+    <journal>SIAM J. Comput.</journal>
+    <number>4</number>
+    <ee>https://doi.org/10.1137/120869511</ee>
+    <url>db/journals/siamcomp/siamcomp42.html#FerraginaNV13</url>
+  </article>
   <inproceedings mdate="2021-09-16" key="conf/isaac/0001MNWW20">
     <author orcid="0000-0003-0358-7102">Meng He 0001</author>
     <author orcid="0000-0002-7165-7988">J. Ian Munro</author>
@@ -9176,6 +10652,17 @@
     <ee type="oa">https://doi.org/10.4230/LIPIcs.ISAAC.2019.22</ee>
     <crossref>conf/isaac/2019</crossref>
     <url>db/conf/isaac/isaac2019.html#Charalampopoulos19</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-19" key="conf/isaac/ArroyueloN05">
+    <author>Diego Arroyuelo</author>
+    <author>Gonzalo Navarro</author>
+    <title>Space-Efficient Construction of LZ-Index.</title>
+    <pages>1143-1152</pages>
+    <year>2005</year>
+    <crossref>conf/isaac/2005</crossref>
+    <booktitle>ISAAC</booktitle>
+    <ee>https://doi.org/10.1007/11602613_113</ee>
+    <url>db/conf/isaac/isaac2005.html#ArroyueloN05</url>
   </inproceedings>
   <inproceedings mdate="2022-04-09" key="conf/isaac/FerraginaMV21">
     <author>Paolo Ferragina</author>
@@ -9279,6 +10766,19 @@
     <ee type="oa">https://doi.org/10.4230/LIPIcs.ISAAC.2020.29</ee>
     <crossref>conf/isaac/2020</crossref>
     <url>db/conf/isaac/isaac2020.html#SumigawaCSS20</url>
+  </inproceedings>
+  <inproceedings mdate="2022-01-03" key="conf/cikm/ClaudeFMN11">
+    <author>Francisco Claude</author>
+    <author orcid="0000-0001-8263-3298">Antonio Fariña</author>
+    <author>Miguel A. Martínez-Prieto</author>
+    <author>Gonzalo Navarro</author>
+    <title>Indexes for highly repetitive document collections.</title>
+    <pages>463-468</pages>
+    <year>2011</year>
+    <booktitle>CIKM</booktitle>
+    <ee>https://doi.org/10.1145/2063576.2063646</ee>
+    <crossref>conf/cikm/2011</crossref>
+    <url>db/conf/cikm/cikm2011.html#ClaudeFMN11</url>
   </inproceedings>
   <inproceedings mdate="2021-07-15" key="conf/soda/ChengHLSW19">
     <author>Kuan Cheng</author>
@@ -9487,6 +10987,17 @@
     <crossref>conf/soda/2022</crossref>
     <url>db/conf/soda/soda2022.html#KempaS22</url>
   </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/LagardeP18">
+    <author>Guillaume Lagarde</author>
+    <author>Sylvain Perifel</author>
+    <title>Lempel-Ziv: a "one-bit catastrophe" but not a tragedy.</title>
+    <pages>1478-1495</pages>
+    <year>2018</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611975031.97</ee>
+    <crossref>conf/soda/2018</crossref>
+    <url>db/conf/soda/soda2018.html#LagardeP18</url>
+  </inproceedings>
   <inproceedings mdate="2021-07-15" key="conf/soda/BoseCIKL20">
     <author>Prosenjit Bose</author>
     <author>Jean Cardinal</author>
@@ -9552,6 +11063,19 @@
     <crossref>conf/soda/2022</crossref>
     <url>db/conf/soda/soda2022.html#GaneshKLS22</url>
   </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/MunroNN17">
+    <author>J. Ian Munro</author>
+    <author>Gonzalo Navarro</author>
+    <author orcid="0000-0003-3771-5088">Yakov Nekrich</author>
+    <title>Space-Efficient Construction of Compressed Indexes in Deterministic Linear Time.</title>
+    <pages>408-424</pages>
+    <year>2017</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611974782.26</ee>
+    <ee>http://dl.acm.org/citation.cfm?id=3039712</ee>
+    <crossref>conf/soda/2017</crossref>
+    <url>db/conf/soda/soda2017.html#MunroNN17</url>
+  </inproceedings>
   <inproceedings mdate="2021-07-15" key="conf/soda/Cohen-AddadFS19">
     <author>Vincent Cohen-Addad</author>
     <author orcid="0000-0002-3994-0898">Laurent Feuilloley</author>
@@ -9564,6 +11088,18 @@
     <ee>https://dl.acm.org/citation.cfm?id=3310505</ee>
     <crossref>conf/soda/2019</crossref>
     <url>db/conf/soda/soda2019.html#Cohen-AddadFS19</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/BelazzouguiP16">
+    <author>Djamal Belazzougui</author>
+    <author>Simon J. Puglisi</author>
+    <title>Range Predecessor and Lempel-Ziv Parsing.</title>
+    <pages>2053-2071</pages>
+    <year>2016</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611974331.ch143</ee>
+    <ee>http://dl.acm.org/citation.cfm?id=2884578</ee>
+    <crossref>conf/soda/2016</crossref>
+    <url>db/conf/soda/soda2016.html#BelazzouguiP16</url>
   </inproceedings>
   <inproceedings mdate="2021-07-15" key="conf/soda/Nekrich21">
     <author>Yakov Nekrich</author>
@@ -9735,6 +11271,42 @@
     <crossref>conf/walcom/2020</crossref>
     <url>db/conf/walcom/walcom2020.html#Hendrian20</url>
   </inproceedings>
+  <inproceedings mdate="2019-05-13" key="conf/recomb/ChenKL00">
+    <author>Xin Chen</author>
+    <author>Sam Kwong</author>
+    <author>Ming Li 0001</author>
+    <title>A compression algorithm for DNA sequences and its applications in genome comparison.</title>
+    <pages>107</pages>
+    <year>2000</year>
+    <crossref>conf/recomb/2000</crossref>
+    <booktitle>RECOMB</booktitle>
+    <ee>https://doi.org/10.1145/332306.332352</ee>
+    <url>db/conf/recomb/recomb2000.html#ChenKL00</url>
+  </inproceedings>
+  <inproceedings mdate="2019-05-13" key="conf/recomb/MakinenNSV09">
+    <author orcid="0000-0003-4454-1493">Veli Mäkinen</author>
+    <author>Gonzalo Navarro</author>
+    <author>Jouni Sirén</author>
+    <author>Niko Välimäki</author>
+    <title>Storage and Retrieval of Individual Genomes.</title>
+    <pages>121-137</pages>
+    <year>2009</year>
+    <booktitle>RECOMB</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-02008-7_9</ee>
+    <crossref>conf/recomb/2009</crossref>
+    <url>db/conf/recomb/recomb2009.html#MakinenNSV09</url>
+  </inproceedings>
+  <inproceedings mdate="2018-11-06" key="conf/wmpi/HallnorR04">
+    <author>Erik G. Hallnor</author>
+    <author>Steven K. Reinhardt</author>
+    <title>A compressed memory hierarchy using an indirect index cache.</title>
+    <pages>9-15</pages>
+    <year>2004</year>
+    <crossref>conf/wmpi/2004</crossref>
+    <booktitle>WMPI</booktitle>
+    <ee>https://doi.org/10.1145/1054943.1054945</ee>
+    <url>db/conf/wmpi/wmpi2004.html#HallnorR04</url>
+  </inproceedings>
   <inproceedings mdate="2020-06-16" key="conf/wea/LiptakP020">
     <author orcid="0000-0002-3233-0691">Zsuzsanna Lipták</author>
     <author orcid="0000-0001-7668-7636">Simon J. Puglisi</author>
@@ -9757,6 +11329,32 @@
     <ee type="oa">https://doi.org/10.4230/LIPIcs.SEA.2020.25</ee>
     <crossref>conf/wea/2020</crossref>
     <url>db/conf/wea/sea2020.html#BarthW20</url>
+  </inproceedings>
+  <inproceedings mdate="2020-10-25" key="conf/wea/DinklageFKLS17">
+    <author orcid="0000-0002-2004-6781">Patrick Dinklage</author>
+    <author>Johannes Fischer 0001</author>
+    <author orcid="0000-0002-8721-4444">Dominik Köppl</author>
+    <author>Marvin Löbel</author>
+    <author orcid="0000-0002-8212-3682">Kunihiko Sadakane</author>
+    <title>Compression with the tudocomp Framework.</title>
+    <pages>13:1-13:22</pages>
+    <year>2017</year>
+    <booktitle>SEA</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.SEA.2017.13</ee>
+    <crossref>conf/wea/2017</crossref>
+    <url>db/conf/wea/sea2017.html#DinklageFKLS17</url>
+  </inproceedings>
+  <inproceedings mdate="2020-06-15" key="conf/wea/KarkkainenKP13">
+    <author>Juha Kärkkäinen</author>
+    <author orcid="0000-0003-2286-7417">Dominik Kempa</author>
+    <author orcid="0000-0001-7668-7636">Simon J. Puglisi</author>
+    <title>Lightweight Lempel-Ziv Parsing.</title>
+    <pages>139-150</pages>
+    <year>2013</year>
+    <booktitle>SEA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-38527-8_14</ee>
+    <crossref>conf/wea/2013</crossref>
+    <url>db/conf/wea/sea2013.html#KarkkainenKP13</url>
   </inproceedings>
   <inproceedings mdate="2020-06-16" key="conf/wea/KobayashiHYS20">
     <author>Satoshi Kobayashi</author>
@@ -9793,6 +11391,64 @@
     <ee type="oa">https://doi.org/10.4230/LIPIcs.SEA.2021.12</ee>
     <crossref>conf/wea/2021</crossref>
     <url>db/conf/wea/sea2021.html#PuglisiZ21</url>
+  </inproceedings>
+  <inproceedings mdate="2022-01-25" key="conf/iwmm/WilsonJNB95">
+    <author>Paul R. Wilson 0001</author>
+    <author>Mark S. Johnstone</author>
+    <author>Michael Neely</author>
+    <author>David Boles</author>
+    <title>Dynamic Storage Allocation: A Survey and Critical Review</title>
+    <pages>1-116</pages>
+    <crossref>conf/iwmm/95</crossref>
+    <booktitle>IWMM</booktitle>
+    <year>1995</year>
+    <url>db/conf/iwmm/iwmm95.html#WilsonJNB95</url>
+    <ee>https://doi.org/10.1007/3-540-60368-9_19</ee>
+    <ee>https://www.wikidata.org/entity/Q56095602</ee>
+  </inproceedings>
+  <inproceedings mdate="2021-08-11" key="conf/micro/PekhimenkoSKXMGKM13">
+    <author>Gennady Pekhimenko</author>
+    <author>Vivek Seshadri</author>
+    <author>Yoongu Kim</author>
+    <author>Hongyi Xin</author>
+    <author>Onur Mutlu</author>
+    <author>Phillip B. Gibbons</author>
+    <author>Michael A. Kozuch</author>
+    <author>Todd C. Mowry</author>
+    <title>Linearly compressed pages: a low-complexity, low-latency main memory compression framework.</title>
+    <pages>172-184</pages>
+    <year>2013</year>
+    <booktitle>MICRO</booktitle>
+    <ee>https://doi.org/10.1145/2540708.2540724</ee>
+    <ee>https://ieeexplore.ieee.org/document/7847624/</ee>
+    <crossref>conf/micro/2013</crossref>
+    <url>db/conf/micro/micro2013.html#PekhimenkoSKXMGKM13</url>
+  </inproceedings>
+  <inproceedings mdate="2021-08-11" key="conf/micro/SardashtiW13">
+    <author>Somayeh Sardashti</author>
+    <author>David A. Wood 0001</author>
+    <title>Decoupled compressed cache: exploiting spatial locality for energy-optimized compressed caching.</title>
+    <pages>62-73</pages>
+    <year>2013</year>
+    <booktitle>MICRO</booktitle>
+    <ee>https://doi.org/10.1145/2540708.2540715</ee>
+    <ee>https://ieeexplore.ieee.org/document/7847615/</ee>
+    <crossref>conf/micro/2013</crossref>
+    <url>db/conf/micro/micro2013.html#SardashtiW13</url>
+  </inproceedings>
+  <inproceedings mdate="2019-02-07" key="conf/hpca/ShafieeTBD14">
+    <author>Ali Shafiee</author>
+    <author>Meysam Taassori</author>
+    <author>Rajeev Balasubramonian</author>
+    <author>Al Davis</author>
+    <title>MemZip: Exploring unconventional benefits from memory compression.</title>
+    <pages>638-649</pages>
+    <year>2014</year>
+    <booktitle>HPCA</booktitle>
+    <ee>https://doi.org/10.1109/HPCA.2014.6835972</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/HPCA.2014.6835972</ee>
+    <crossref>conf/hpca/2014</crossref>
+    <url>db/conf/hpca/hpca2014.html#ShafieeTBD14</url>
   </inproceedings>
   <inproceedings mdate="2019-06-07" key="conf/cpm/NishimotoT19">
     <author>Takaaki Nishimoto</author>
@@ -20124,6 +21780,30 @@
     <crossref>conf/esa/2020</crossref>
     <url>db/conf/esa/esa2020.html#ChalermsookJ20</url>
   </inproceedings>
+  <inproceedings mdate="2020-06-15" key="conf/esa/KempaPPR18">
+    <author orcid="0000-0003-2286-7417">Dominik Kempa</author>
+    <author>Alberto Policriti</author>
+    <author>Nicola Prezza</author>
+    <author orcid="0000-0001-5853-7909">Eva Rotenberg</author>
+    <title>String Attractors: Verification and Optimization.</title>
+    <pages>52:1-52:13</pages>
+    <year>2018</year>
+    <booktitle>ESA</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ESA.2018.52</ee>
+    <crossref>conf/esa/2018</crossref>
+    <url>db/conf/esa/esa2018.html#KempaPPR18</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-26" key="conf/esa/LautherL05">
+    <author>Ulrich Lauther</author>
+    <author>Tamás Lukovszki</author>
+    <title>Space Efficient Algorithms for the Burrows-Wheeler Backtransformation.</title>
+    <pages>293-304</pages>
+    <year>2005</year>
+    <crossref>conf/esa/2005</crossref>
+    <booktitle>ESA</booktitle>
+    <ee>https://doi.org/10.1007/11561071_28</ee>
+    <url>db/conf/esa/esa2005.html#LautherL05</url>
+  </inproceedings>
   <inproceedings mdate="2021-09-16" key="conf/esa/Dinklage0HKK20">
     <author orcid="0000-0002-2004-6781">Patrick Dinklage</author>
     <author>Johannes Fischer 0001</author>
@@ -20151,6 +21831,43 @@
     <ee type="oa">https://doi.org/10.4230/LIPIcs.ESA.2019.41</ee>
     <crossref>conf/esa/2019</crossref>
     <url>db/conf/esa/esa2019.html#DinklageE0KP19</url>
+  </inproceedings>
+  <inproceedings mdate="2018-11-02" key="conf/esa/BelazzouguiBPV10">
+    <author>Djamal Belazzougui</author>
+    <author orcid="0000-0002-8297-6255">Paolo Boldi</author>
+    <author>Rasmus Pagh</author>
+    <author orcid="0000-0002-3257-651X">Sebastiano Vigna</author>
+    <title>Fast Prefix Search in Little Space, with Applications.</title>
+    <pages>427-438</pages>
+    <year>2010</year>
+    <booktitle>ESA (1)</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-15775-2_37</ee>
+    <crossref>conf/esa/2010-1</crossref>
+    <url>db/conf/esa/esa2010-1.html#BelazzouguiBPV10</url>
+  </inproceedings>
+  <inproceedings mdate="2017-06-15" key="conf/esa/BelazzouguiCKM13">
+    <author>Djamal Belazzougui</author>
+    <author>Fabio Cunial</author>
+    <author>Juha Kärkkäinen</author>
+    <author orcid="0000-0003-4454-1493">Veli Mäkinen</author>
+    <title>Versatile Succinct Representations of the Bidirectional Burrows-Wheeler Transform.</title>
+    <pages>133-144</pages>
+    <year>2013</year>
+    <booktitle>ESA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-40450-4_12</ee>
+    <crossref>conf/esa/2013</crossref>
+    <url>db/conf/esa/esa2013.html#BelazzouguiCKM13</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-26" key="conf/esa/KarkkainenP10">
+    <author>Juha Kärkkäinen</author>
+    <author>Simon J. Puglisi</author>
+    <title>Medium-Space Algorithms for Inverse BWT.</title>
+    <pages>451-462</pages>
+    <year>2010</year>
+    <booktitle>ESA (1)</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-15775-2_39</ee>
+    <crossref>conf/esa/2010-1</crossref>
+    <url>db/conf/esa/esa2010-1.html#KarkkainenP10</url>
   </inproceedings>
   <inproceedings mdate="2022-01-03" key="conf/esa/LoukidesP21">
     <author>Grigorios Loukides</author>
@@ -20188,6 +21905,19 @@
     <crossref>conf/esa/2020</crossref>
     <url>db/conf/esa/esa2020.html#BentleyGT20</url>
   </inproceedings>
+  <inproceedings mdate="2021-07-25" key="conf/esa/0001GGK15">
+    <author>Johannes Fischer 0001</author>
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author>Pawel Gawrychowski</author>
+    <author>Tomasz Kociumaka</author>
+    <title>Approximating LZ77 via Small-Space Multiple-Pattern Matching.</title>
+    <pages>533-544</pages>
+    <year>2015</year>
+    <booktitle>ESA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-662-48350-3_45</ee>
+    <crossref>conf/esa/2015</crossref>
+    <url>db/conf/esa/esa2015.html#0001GGK15</url>
+  </inproceedings>
   <inproceedings mdate="2021-08-31" key="conf/esa/Ganardi21">
     <author>Moses Ganardi</author>
     <title>Compression by Contracting Straight-Line Programs.</title>
@@ -20221,6 +21951,17 @@
     <ee type="oa">https://doi.org/10.4230/LIPIcs.ESA.2019.6</ee>
     <crossref>conf/esa/2019</crossref>
     <url>db/conf/esa/esa2019.html#AmirCPR19</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-26" key="conf/esa/BelazzouguiN11">
+    <author>Djamal Belazzougui</author>
+    <author>Gonzalo Navarro</author>
+    <title>Alphabet-Independent Compressed Text Indexing.</title>
+    <pages>748-759</pages>
+    <year>2011</year>
+    <booktitle>ESA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-23719-5_63</ee>
+    <crossref>conf/esa/2011</crossref>
+    <url>db/conf/esa/esa2011.html#BelazzouguiN11</url>
   </inproceedings>
   <inproceedings mdate="2022-04-09" key="conf/esa/Charalampopoulos21">
     <author orcid="0000-0002-6024-1557">Panagiotis Charalampopoulos</author>
@@ -20258,6 +21999,17 @@
     <ee type="oa">https://doi.org/10.4230/LIPIcs.ESA.2021.70</ee>
     <crossref>conf/esa/2021</crossref>
     <url>db/conf/esa/esa2021.html#MunroNBW21</url>
+  </inproceedings>
+  <inproceedings mdate="2020-06-15" key="conf/esa/KempaK17">
+    <author orcid="0000-0003-2286-7417">Dominik Kempa</author>
+    <author orcid="0000-0002-2909-2952">Dmitry Kosolobov</author>
+    <title>LZ-End Parsing in Linear Time.</title>
+    <pages>53:1-53:14</pages>
+    <year>2017</year>
+    <booktitle>ESA</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ESA.2017.53</ee>
+    <crossref>conf/esa/2017</crossref>
+    <url>db/conf/esa/esa2017.html#KempaK17</url>
   </inproceedings>
   <inproceedings mdate="2020-12-29" key="conf/esa/Gao0N20">
     <author>Younan Gao</author>
@@ -20528,6 +22280,39 @@
     <crossref>conf/icalp/2021</crossref>
     <url>db/conf/icalp/icalp2021.html#BringmannD21</url>
   </inproceedings>
+  <inproceedings mdate="2020-09-05" key="conf/cc/ZhangG02">
+    <author>Youtao Zhang</author>
+    <author orcid="0000-0002-9348-3974">Rajiv Gupta 0001</author>
+    <title>Data Compression Transformations for Dynamically Allocated Data Structures.</title>
+    <pages>14-28</pages>
+    <year>2002</year>
+    <crossref>conf/cc/2002</crossref>
+    <booktitle>CC</booktitle>
+    <ee>https://doi.org/10.1007/3-540-45937-5_4</ee>
+    <url>db/conf/cc/cc2002.html#ZhangG02</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-26" key="conf/icess/TianZ07">
+    <author>Xinhua Tian</author>
+    <author>Minxuan Zhang</author>
+    <title>A Unified Compressed Cache Hierarchy Using Simple Frequent Pattern Compression and Partial Cache Line Prefetching.</title>
+    <pages>142-153</pages>
+    <year>2007</year>
+    <crossref>conf/icess/2007</crossref>
+    <booktitle>ICESS</booktitle>
+    <ee>https://doi.org/10.1007/978-3-540-72685-2_14</ee>
+    <url>db/conf/icess/icess2007.html#TianZ07</url>
+  </inproceedings>
+  <inproceedings mdate="2019-01-30" key="conf/itw/DubeB09">
+    <author>Danny Dubé</author>
+    <author>Vincent Beaudoin</author>
+    <title>Constructing optimal whole-bit recycling codes.</title>
+    <pages>27-31</pages>
+    <year>2009</year>
+    <booktitle>ITW</booktitle>
+    <ee>https://doi.org/10.1109/ITWNIT.2009.5158535</ee>
+    <crossref>conf/itw/2009</crossref>
+    <url>db/conf/itw/itw2009.html#DubeB09</url>
+  </inproceedings>
   <inproceedings mdate="2020-10-25" key="conf/lata/CharlierPV19">
     <author>Émilie Charlier</author>
     <author>Svetlana Puzynina</author>
@@ -20575,6 +22360,20 @@
     <ee>https://doi.org/10.1007/978-3-030-40608-0_29</ee>
     <crossref>conf/lata/2020</crossref>
     <url>db/conf/lata/lata2020.html#FleischmannKNP20</url>
+  </inproceedings>
+  <inproceedings mdate="2021-07-25" key="conf/lata/GagieGKNP12">
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author>Pawel Gawrychowski</author>
+    <author>Juha Kärkkäinen</author>
+    <author orcid="0000-0003-3771-5088">Yakov Nekrich</author>
+    <author>Simon J. Puglisi</author>
+    <title>A Faster Grammar-Based Self-index.</title>
+    <pages>240-251</pages>
+    <year>2012</year>
+    <booktitle>LATA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-28332-1_21</ee>
+    <crossref>conf/lata/2012</crossref>
+    <url>db/conf/lata/lata2012.html#GagieGKNP12</url>
   </inproceedings>
   <inproceedings mdate="2019-06-02" key="conf/lata/MahalingamP19">
     <author orcid="0000-0003-2418-0512">Kalpana Mahalingam</author>
@@ -20634,6 +22433,18 @@
     <crossref>conf/lata/2020</crossref>
     <url>db/conf/lata/lata2020.html#BonizzoniFZZ20</url>
   </inproceedings>
+  <inproceedings mdate="2019-10-19" key="conf/lata/PolicritiGP15">
+    <author>Alberto Policriti</author>
+    <author orcid="0000-0002-2254-4821">Nicola Gigante</author>
+    <author>Nicola Prezza</author>
+    <title>Average Linear Time and Compressed Space Construction of the Burrows-Wheeler Transform.</title>
+    <pages>587-598</pages>
+    <year>2015</year>
+    <booktitle>LATA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-319-15579-1_46</ee>
+    <crossref>conf/lata/2015</crossref>
+    <url>db/conf/lata/lata2015.html#PolicritiGP15</url>
+  </inproceedings>
   <inproceedings mdate="2019-04-12" key="conf/lata/KociumakaRRSWZ19">
     <author orcid="0000-0002-2477-1702">Tomasz Kociumaka</author>
     <author orcid="0000-0002-0067-6401">Jakub Radoszewski</author>
@@ -20661,6 +22472,17 @@
     <ee>https://doi.org/10.1007/978-3-030-68195-1_5</ee>
     <crossref>conf/lata/2021</crossref>
     <url>db/conf/lata/lata2021.html#ChakrabortyGSS21</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-24" key="conf/europar/TakagiH03">
+    <author>Masamichi Takagi</author>
+    <author>Kei Hiraki</author>
+    <title>Compression in Data Caches with Compressible Field Isolation for Recursive Data Structures.</title>
+    <pages>609-615</pages>
+    <ee>https://doi.org/10.1007/978-3-540-45209-6_86</ee>
+    <year>2003</year>
+    <crossref>conf/europar/2003</crossref>
+    <booktitle>Euro-Par</booktitle>
+    <url>db/conf/europar/europar2003.html#TakagiH03</url>
   </inproceedings>
   <inproceedings mdate="2019-11-15" key="conf/sea2/CalikDDP19">
     <author>Çagdas Çalik</author>
@@ -20711,6 +22533,20 @@
     <crossref>conf/mfcs/2019</crossref>
     <url>db/conf/mfcs/mfcs2019.html#LohreyW19</url>
   </inproceedings>
+  <inproceedings mdate="2018-08-23" key="conf/mfcs/NishimotoIIBT16">
+    <author>Takaaki Nishimoto</author>
+    <author>Tomohiro I</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Hideo Bannai</author>
+    <author>Masayuki Takeda</author>
+    <title>Fully Dynamic Data Structure for LCE Queries in Compressed Space.</title>
+    <pages>72:1-72:15</pages>
+    <year>2016</year>
+    <booktitle>MFCS</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.MFCS.2016.72</ee>
+    <crossref>conf/mfcs/2016</crossref>
+    <url>db/conf/mfcs/mfcs2016.html#NishimotoIIBT16</url>
+  </inproceedings>
   <inproceedings mdate="2021-10-14" key="conf/mfcs/GawrychowskiMS21">
     <author orcid="0000-0002-6993-5440">Pawel Gawrychowski</author>
     <author>Florin Manea</author>
@@ -20733,6 +22569,20 @@
     <ee type="oa">https://doi.org/10.4230/LIPIcs.MFCS.2019.67</ee>
     <crossref>conf/mfcs/2019</crossref>
     <url>db/conf/mfcs/mfcs2019.html#ChakrabortyS19</url>
+  </inproceedings>
+  <inproceedings mdate="2018-08-23" key="conf/mfcs/TanimuraNBIT17">
+    <author>Yuka Tanimura</author>
+    <author>Takaaki Nishimoto</author>
+    <author>Hideo Bannai</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Masayuki Takeda</author>
+    <title>Small-Space LCE Data Structure with Constant-Time Queries.</title>
+    <pages>10:1-10:15</pages>
+    <year>2017</year>
+    <booktitle>MFCS</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.MFCS.2017.10</ee>
+    <crossref>conf/mfcs/2017</crossref>
+    <url>db/conf/mfcs/mfcs2017.html#TanimuraNBIT17</url>
   </inproceedings>
   <inproceedings mdate="2019-08-30" key="conf/mfcs/KoechlinNR19">
     <author>Florent Koechlin</author>
@@ -24715,6 +26565,32 @@
     <crossref>conf/stringology/2020</crossref>
     <url>db/conf/stringology/stringology2020.html#DaykinKKS20</url>
   </inproceedings>
+  <inproceedings mdate="2017-05-25" key="conf/wia/INIBT13">
+    <author>Tomohiro I</author>
+    <author>Takaaki Nishimoto</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Hideo Bannai</author>
+    <author>Masayuki Takeda</author>
+    <title>Compressed Automata for Dictionary Matching.</title>
+    <pages>319-330</pages>
+    <year>2013</year>
+    <booktitle>CIAA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-39274-0_28</ee>
+    <crossref>conf/wia/2013</crossref>
+    <url>db/conf/wia/ciaa2013.html#INIBT13</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/ccp/KarkkainenP11">
+    <author>Juha Kärkkäinen</author>
+    <author>Simon J. Puglisi</author>
+    <title>Cache Friendly Burrows-Wheeler Inversion.</title>
+    <pages>38-42</pages>
+    <year>2011</year>
+    <booktitle>CCP</booktitle>
+    <ee>https://doi.org/10.1109/CCP.2011.15</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/CCP.2011.15</ee>
+    <crossref>conf/ccp/2011</crossref>
+    <url>db/conf/ccp/ccp2011.html#KarkkainenP11</url>
+  </inproceedings>
   <inproceedings mdate="2019-08-08" key="conf/dlt/Saarela19">
     <author orcid="0000-0002-6636-2317">Aleksi Saarela</author>
     <title>Separating Many Words by Counting Occurrences of Factors.</title>
@@ -24748,6 +26624,20 @@
     <ee>https://doi.org/10.1007/978-3-030-81508-0_12</ee>
     <crossref>conf/dlt/2021</crossref>
     <url>db/conf/dlt/dlt2021.html#EikmeierFKN21</url>
+  </inproceedings>
+  <inproceedings mdate="2019-09-16" key="conf/dlt/GiancarloMRRS18">
+    <author>Raffaele Giancarlo</author>
+    <author orcid="0000-0002-5047-0196">Giovanni Manzini</author>
+    <author>Antonio Restivo</author>
+    <author>Giovanna Rosone</author>
+    <author>Marinella Sciortino</author>
+    <title>Block Sorting-Based Transformations on Words: Beyond the Magic BWT.</title>
+    <pages>1-17</pages>
+    <year>2018</year>
+    <booktitle>DLT</booktitle>
+    <ee>https://doi.org/10.1007/978-3-319-98654-8_1</ee>
+    <crossref>conf/dlt/2018</crossref>
+    <url>db/conf/dlt/dlt2018.html#GiancarloMRRS18</url>
   </inproceedings>
   <inproceedings mdate="2019-08-08" key="conf/dlt/DobronravovDO19">
     <author>Egor Dobronravov</author>
@@ -24819,6 +26709,17 @@
     <crossref>conf/dlt/2019</crossref>
     <url>db/conf/dlt/dlt2019.html#Frid19</url>
   </inproceedings>
+  <inproceedings mdate="2019-05-19" key="conf/dcc/NishimotoT19">
+    <author>Takaaki Nishimoto</author>
+    <author>Yasuo Tabei</author>
+    <title>LZRR: LZ77 Parsing with Right Reference.</title>
+    <pages>211-220</pages>
+    <year>2019</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2019.00029</ee>
+    <crossref>conf/dcc/2019</crossref>
+    <url>db/conf/dcc/dcc2019.html#NishimotoT19</url>
+  </inproceedings>
   <inproceedings mdate="2022-02-23" key="conf/dcc/BaierBOW20">
     <author>Uwe Baier</author>
     <author>Thomas Büchler</author>
@@ -24868,6 +26769,21 @@
     <crossref>conf/dcc/2021</crossref>
     <url>db/conf/dcc/dcc2021.html#Fiergolla021</url>
   </inproceedings>
+  <inproceedings mdate="2021-02-22" key="conf/dcc/SakaiOGTIS19">
+    <author>Kensuke Sakai</author>
+    <author>Tatsuya Ohno</author>
+    <author>Keisuke Goto 0001</author>
+    <author>Yoshimasa Takabatake</author>
+    <author>Tomohiro I</author>
+    <author>Hiroshi Sakamoto</author>
+    <title>RePair in Compressed Space and Time.</title>
+    <pages>518-527</pages>
+    <year>2019</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2019.00060</ee>
+    <crossref>conf/dcc/2019</crossref>
+    <url>db/conf/dcc/dcc2019.html#SakaiOGTIS19</url>
+  </inproceedings>
   <inproceedings mdate="2021-10-14" key="conf/dcc/Diaz-DominguezN21">
     <author orcid="0000-0002-9071-0254">Diego Díaz-Domínguez</author>
     <author>Gonzalo Navarro</author>
@@ -24878,6 +26794,22 @@
     <ee>https://doi.org/10.1109/DCC50243.2021.00016</ee>
     <crossref>conf/dcc/2021</crossref>
     <url>db/conf/dcc/dcc2021.html#Diaz-DominguezN21</url>
+  </inproceedings>
+  <inproceedings mdate="2021-07-25" key="conf/dcc/BelazzouguiGGKO15">
+    <author>Djamal Belazzougui</author>
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author>Pawel Gawrychowski</author>
+    <author>Juha Kärkkäinen</author>
+    <author>Alberto Ordóñez Pereira</author>
+    <author orcid="0000-0001-7668-7636">Simon J. Puglisi</author>
+    <author>Yasuo Tabei</author>
+    <title>Queries on LZ-Bounded Encodings.</title>
+    <pages>83-92</pages>
+    <year>2015</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2015.69</ee>
+    <crossref>conf/dcc/2015</crossref>
+    <url>db/conf/dcc/dcc2015.html#BelazzouguiGGKO15</url>
   </inproceedings>
   <inproceedings mdate="2020-12-29" key="conf/dcc/Gomez-Brandon20">
     <author orcid="0000-0002-1216-2176">Adrián Gómez-Brandón</author>
@@ -24899,6 +26831,18 @@
     <ee>https://doi.org/10.1109/DCC50243.2021.00022</ee>
     <crossref>conf/dcc/2021</crossref>
     <url>db/conf/dcc/dcc2021.html#WagnerB21</url>
+  </inproceedings>
+  <inproceedings mdate="2020-06-15" key="conf/dcc/KarkkainenKP14">
+    <author>Juha Kärkkäinen</author>
+    <author orcid="0000-0003-2286-7417">Dominik Kempa</author>
+    <author orcid="0000-0001-7668-7636">Simon J. Puglisi</author>
+    <title>Lempel-Ziv Parsing in External Memory.</title>
+    <pages>153-162</pages>
+    <year>2014</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2014.78</ee>
+    <crossref>conf/dcc/2014</crossref>
+    <url>db/conf/dcc/dcc2014.html#KarkkainenKP14</url>
   </inproceedings>
   <inproceedings mdate="2021-05-17" key="conf/dcc/Wu21">
     <author>Cody Yingquan Wu</author>
@@ -24928,6 +26872,19 @@
     <crossref>conf/dcc/2021</crossref>
     <url>db/conf/dcc/dcc2021.html#BoucherGIKLMNP021</url>
   </inproceedings>
+  <inproceedings mdate="2020-06-15" key="conf/dcc/KarkkainenKP12">
+    <author>Juha Kärkkäinen</author>
+    <author orcid="0000-0003-2286-7417">Dominik Kempa</author>
+    <author>Simon J. Puglisi</author>
+    <title>Slashing the Time for BWT Inversion.</title>
+    <pages>99-108</pages>
+    <year>2012</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2012.18</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2012.18</ee>
+    <crossref>conf/dcc/2012</crossref>
+    <url>db/conf/dcc/dcc2012.html#KarkkainenKP12</url>
+  </inproceedings>
   <inproceedings mdate="2021-10-14" key="conf/dcc/Fuentes-Sepulveda21">
     <author orcid="0000-0002-3962-6495">José Fuentes-Sepúlveda</author>
     <author>Diego Gatica</author>
@@ -24954,6 +26911,18 @@
     <crossref>conf/dcc/2020</crossref>
     <url>db/conf/dcc/dcc2020.html#BottcherHP20</url>
   </inproceedings>
+  <inproceedings mdate="2020-09-05" key="conf/dcc/ApostolicoL98">
+    <author>Alberto Apostolico</author>
+    <author orcid="0000-0002-2696-7274">Stefano Lonardi</author>
+    <title>Some Theory and Practice of Greedy Off-Line Textual Substitution.</title>
+    <pages>119-128</pages>
+    <year>1998</year>
+    <crossref>conf/dcc/1998</crossref>
+    <booktitle>Data Compression Conference</booktitle>
+    <ee>https://doi.org/10.1109/DCC.1998.672138</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.1998.672138</ee>
+    <url>db/conf/dcc/dcc98.html#ApostolicoL98</url>
+  </inproceedings>
   <inproceedings mdate="2020-06-06" key="conf/dcc/RussoCNF20">
     <author>Luís M. S. Russo</author>
     <author>Ana Sofia D. Correia</author>
@@ -24966,6 +26935,32 @@
     <ee>https://doi.org/10.1109/DCC47342.2020.00023</ee>
     <crossref>conf/dcc/2020</crossref>
     <url>db/conf/dcc/dcc2020.html#RussoCNF20</url>
+  </inproceedings>
+  <inproceedings mdate="2017-09-16" key="conf/dcc/GuptaHSV06">
+    <author>Ankur Gupta 0003</author>
+    <author orcid="0000-0002-0570-2904">Wing-Kai Hon</author>
+    <author>Rahul Shah</author>
+    <author>Jeffrey Scott Vitter</author>
+    <title>Compressed Data Structures: Dictionaries and Data-Aware Measures.</title>
+    <pages>213-222</pages>
+    <year>2006</year>
+    <crossref>conf/dcc/2006</crossref>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2006.12</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2006.12</ee>
+    <url>db/conf/dcc/dcc2006.html#GuptaHSV06</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/dcc/DubeB07">
+    <author>Danny Dubé</author>
+    <author>Vincent Beaudoin</author>
+    <title>Bit Recycling with Prefix Codes.</title>
+    <pages>379</pages>
+    <year>2007</year>
+    <crossref>conf/dcc/2007</crossref>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2007.18</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2007.18</ee>
+    <url>db/conf/dcc/dcc2007.html#DubeB07</url>
   </inproceedings>
   <inproceedings mdate="2021-05-17" key="conf/dcc/AcanCJNSS21">
     <author>Hüseyin Acan</author>
@@ -25063,6 +27058,28 @@
     <crossref>conf/dcc/2020</crossref>
     <url>db/conf/dcc/dcc2020.html#KopplIFTSG20</url>
   </inproceedings>
+  <inproceedings mdate="2020-06-15" key="conf/dcc/KempaK17">
+    <author orcid="0000-0003-2286-7417">Dominik Kempa</author>
+    <author orcid="0000-0002-2909-2952">Dmitry Kosolobov</author>
+    <title>LZ-End Parsing in Compressed Space.</title>
+    <pages>350-359</pages>
+    <year>2017</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2017.73</ee>
+    <crossref>conf/dcc/2017</crossref>
+    <url>db/conf/dcc/dcc2017.html#KempaK17</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/dcc/Seward01">
+    <author>Julian Seward</author>
+    <title>Space-Time Tradeoffs in the Inverse B-W Transform.</title>
+    <pages>439-448</pages>
+    <year>2001</year>
+    <crossref>conf/dcc/2001</crossref>
+    <booktitle>Data Compression Conference</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2001.917175</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2001.917175</ee>
+    <url>db/conf/dcc/dcc2001.html#Seward01</url>
+  </inproceedings>
   <inproceedings mdate="2020-09-05" key="conf/dcc/NaganumaHYS020">
     <author>Hiroaki Naganuma</author>
     <author orcid="0000-0002-8168-7312">Diptarama Hendrian</author>
@@ -25104,6 +27121,16 @@
     <crossref>conf/dcc/2021</crossref>
     <url>db/conf/dcc/dcc2021.html#ChamainRBPF21</url>
   </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/dcc/Siren16">
+    <author>Jouni Sirén</author>
+    <title>Burrows-Wheeler Transform for Terabases.</title>
+    <pages>211-220</pages>
+    <year>2016</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2016.17</ee>
+    <crossref>conf/dcc/2016</crossref>
+    <url>db/conf/dcc/dcc2016.html#Siren16</url>
+  </inproceedings>
   <inproceedings mdate="2021-07-25" key="conf/dcc/BilleEGGP20">
     <author orcid="0000-0002-1120-5154">Philip Bille</author>
     <author>Mikko Berggren Ettienne</author>
@@ -25140,6 +27167,18 @@
     <crossref>conf/dcc/2020</crossref>
     <url>db/conf/dcc/dcc2020.html#Ganczorz20</url>
   </inproceedings>
+  <inproceedings mdate="2021-10-14" key="conf/dcc/SepulvedaNN19">
+    <author orcid="0000-0002-3962-6495">José Fuentes-Sepúlveda</author>
+    <author>Gonzalo Navarro</author>
+    <author orcid="0000-0003-3771-5088">Yakov Nekrich</author>
+    <title>Space-Efficient Computation of the Burrows-Wheeler Transform.</title>
+    <pages>132-141</pages>
+    <year>2019</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2019.00021</ee>
+    <crossref>conf/dcc/2019</crossref>
+    <url>db/conf/dcc/dcc2019.html#SepulvedaNN19</url>
+  </inproceedings>
   <inproceedings mdate="2022-04-09" key="conf/dcc/GoyalTCO21">
     <author>Mohit Goyal</author>
     <author>Kedar Tatwawadi</author>
@@ -25152,6 +27191,18 @@
     <ee>https://doi.org/10.1109/DCC50243.2021.00023</ee>
     <crossref>conf/dcc/2021</crossref>
     <url>db/conf/dcc/dcc2021.html#GoyalTCO21</url>
+  </inproceedings>
+  <inproceedings mdate="2017-06-15" key="conf/dcc/KreftN10">
+    <author>Sebastian Kreft</author>
+    <author orcid="0000-0002-2286-741X">Gonzalo Navarro</author>
+    <title>LZ77-Like Compression with Fast Random Access.</title>
+    <pages>239-248</pages>
+    <year>2010</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2010.29</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2010.29</ee>
+    <crossref>conf/dcc/2010</crossref>
+    <url>db/conf/dcc/dcc2010.html#KreftN10</url>
   </inproceedings>
   <inproceedings mdate="2021-05-17" key="conf/dcc/ChakrabortyJSS21">
     <author>Sankardeep Chakraborty</author>
@@ -25202,6 +27253,30 @@
     <crossref>conf/dcc/2021</crossref>
     <url>db/conf/dcc/dcc2021.html#MatsushitaI21</url>
   </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/dcc/DubeB08">
+    <author>Danny Dubé</author>
+    <author>Vincent Beaudoin</author>
+    <title>All-Match LZ77 Bit Recycling.</title>
+    <pages>513</pages>
+    <year>2008</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2008.101</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2008.101</ee>
+    <crossref>conf/dcc/2008</crossref>
+    <url>db/conf/dcc/dcc2008.html#DubeB08</url>
+  </inproceedings>
+  <inproceedings mdate="2018-07-25" key="conf/dcc/NishimotoTT18">
+    <author>Takaaki Nishimoto</author>
+    <author>Yoshimasa Takabatake</author>
+    <author>Yasuo Tabei</author>
+    <title>A Dynamic Compressed Self-Index for Highly Repetitive Text Collections.</title>
+    <pages>287-296</pages>
+    <year>2018</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2018.00037</ee>
+    <crossref>conf/dcc/2018</crossref>
+    <url>db/conf/dcc/dcc2018.html#NishimotoTT18</url>
+  </inproceedings>
   <inproceedings mdate="2021-10-14" key="conf/dcc/PuglisiZ21">
     <author orcid="0000-0001-7668-7636">Simon J. Puglisi</author>
     <author>Bella Zhukova</author>
@@ -25226,6 +27301,17 @@
     <crossref>conf/dcc/2021</crossref>
     <url>db/conf/dcc/dcc2021.html#MaPRZ21</url>
   </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/dcc/ShunZ13">
+    <author>Julian Shun</author>
+    <author>Fuyao Zhao</author>
+    <title>Practical Parallel Lempel-Ziv Factorization.</title>
+    <pages>123-132</pages>
+    <year>2013</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2013.20</ee>
+    <crossref>conf/dcc/2013</crossref>
+    <url>db/conf/dcc/dcc2013.html#ShunZ13</url>
+  </inproceedings>
   <inproceedings mdate="2021-10-14" key="conf/dcc/TsurutaKKNIBT20">
     <author>Kazuya Tsuruta</author>
     <author orcid="0000-0002-8721-4444">Dominik Köppl</author>
@@ -25241,6 +27327,59 @@
     <ee>https://doi.org/10.1109/DCC47342.2020.00032</ee>
     <crossref>conf/dcc/2020</crossref>
     <url>db/conf/dcc/dcc2020.html#TsurutaKKNIBT20</url>
+  </inproceedings>
+  <inproceedings mdate="2019-02-07" key="conf/dexaw/ChairungseeBCC15">
+    <author>Supaporn Chairungsee</author>
+    <author>Tida Butrak</author>
+    <author>Surangkanang Chareonrak</author>
+    <author>Thana Charuphanthuset</author>
+    <title>Longest Previous Non-overlapping Factors Computation.</title>
+    <pages>5-8</pages>
+    <year>2015</year>
+    <booktitle>DEXA Workshops</booktitle>
+    <ee>https://doi.org/10.1109/DEXA.2015.21</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DEXA.2015.21</ee>
+    <crossref>conf/dexaw/2015</crossref>
+    <url>db/conf/dexaw/dexaw2015.html#ChairungseeBCC15</url>
+  </inproceedings>
+  <inproceedings mdate="2019-04-30" key="conf/sequences/KosarajuM97">
+    <author>S. Rao Kosaraju</author>
+    <author>Giovanni Manzini</author>
+    <title>Compression of low entropy strings with Lempel-Ziv algorithms.</title>
+    <pages>121-</pages>
+    <year>1997</year>
+    <booktitle>SEQUENCES</booktitle>
+    <ee>https://doi.org/10.1109/SEQUEN.1997.666907</ee>
+    <crossref>conf/sequences/1997</crossref>
+    <url>db/conf/sequences/sequences1997.html#KosarajuM97</url>
+  </inproceedings>
+  <inproceedings mdate="2019-06-02" key="conf/iccS/ChaconMEH13">
+    <author orcid="0000-0001-8851-7618">Alejandro Chacón</author>
+    <author orcid="0000-0001-6697-0331">Juan Carlos Moure</author>
+    <author orcid="0000-0002-6460-3789">Antonio Espinosa</author>
+    <author orcid="0000-0002-8592-934X">Porfidio Hernández</author>
+    <title>n-step FM-Index for Faster Pattern Matching.</title>
+    <pages>70-79</pages>
+    <year>2013</year>
+    <booktitle>ICCS</booktitle>
+    <ee>https://doi.org/10.1016/j.procs.2013.05.170</ee>
+    <ee>https://www.wikidata.org/entity/Q61896581</ee>
+    <crossref>conf/iccS/2013</crossref>
+    <url>db/conf/iccS/iccS2013.html#ChaconMEH13</url>
+  </inproceedings>
+  <inproceedings mdate="2019-02-04" key="conf/islped/MolinaAGGT03">
+    <author>Carlos Molina</author>
+    <author>Carles Aliagas</author>
+    <author orcid="0000-0002-9838-8896">Montse Garcia 0002</author>
+    <author>Antonio González 0001</author>
+    <author>Jordi Tubella</author>
+    <title>Non redundant data cache.</title>
+    <pages>274-277</pages>
+    <year>2003</year>
+    <crossref>conf/islped/2003</crossref>
+    <booktitle>ISLPED</booktitle>
+    <ee>https://doi.org/10.1145/871506.871574</ee>
+    <url>db/conf/islped/islped2003.html#MolinaAGGT03</url>
   </inproceedings>
   <inproceedings mdate="2019-06-01" key="conf/stacs/DietzfelbingerW19">
     <author orcid="0000-0001-5484-3474">Martin Dietzfelbinger</author>
@@ -25295,6 +27434,16 @@
     <ee type="oa">https://doi.org/10.4230/LIPIcs.STACS.2021.35</ee>
     <crossref>conf/stacs/2021</crossref>
     <url>db/conf/stacs/stacs2021.html#GibneyT21</url>
+  </inproceedings>
+  <inproceedings mdate="2018-11-30" key="conf/stacs/Kosolobov18">
+    <author orcid="0000-0002-2909-2952">Dmitry Kosolobov</author>
+    <title>Relations Between Greedy and Bit-Optimal LZ77 Encodings.</title>
+    <pages>46:1-46:14</pages>
+    <year>2018</year>
+    <booktitle>STACS</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.STACS.2018.46</ee>
+    <crossref>conf/stacs/2018</crossref>
+    <url>db/conf/stacs/stacs2018.html#Kosolobov18</url>
   </inproceedings>
   <inproceedings mdate="2020-03-19" key="conf/stacs/Ganczorz20">
     <author orcid="0000-0003-4047-2486">Michal Ganczorz</author>
@@ -25385,6 +27534,45 @@
     <crossref>conf/iwoca/2020</crossref>
     <url>db/conf/iwoca/iwoca2020.html#ChakrabortySS20</url>
   </inproceedings>
+  <inproceedings mdate="2017-05-17" key="conf/iwoca/Navarro12">
+    <author>Gonzalo Navarro</author>
+    <title>Indexing Highly Repetitive Collections.</title>
+    <pages>274-279</pages>
+    <year>2012</year>
+    <booktitle>IWOCA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-35926-2_29</ee>
+    <crossref>conf/iwoca/2012</crossref>
+    <url>db/conf/iwoca/iwoca2012.html#Navarro12</url>
+  </inproceedings>
+  <inproceedings mdate="2017-06-04" key="conf/iwoca/CrochemoreIIKRW09">
+    <author>Maxime Crochemore</author>
+    <author>Lucian Ilie</author>
+    <author>Costas S. Iliopoulos</author>
+    <author>Marcin Kubica</author>
+    <author>Wojciech Rytter</author>
+    <author orcid="0000-0002-7369-3309">Tomasz Walen</author>
+    <title>LPF Computation Revisited.</title>
+    <pages>158-169</pages>
+    <year>2009</year>
+    <booktitle>IWOCA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-10217-2_18</ee>
+    <crossref>conf/iwoca/2009</crossref>
+    <url>db/conf/iwoca/iwoca2009.html#CrochemoreIIKRW09</url>
+  </inproceedings>
+  <inproceedings mdate="2017-06-15" key="conf/iwoca/CrochemoreGLMR10">
+    <author>Maxime Crochemore</author>
+    <author>Laura Giambruno</author>
+    <author orcid="0000-0002-5706-7500">Alessio Langiu</author>
+    <author orcid="0000-0001-9599-5730">Filippo Mignosi</author>
+    <author>Antonio Restivo</author>
+    <title>Dictionary-Symbolwise Flexible Parsing.</title>
+    <pages>390-403</pages>
+    <year>2010</year>
+    <booktitle>IWOCA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-19222-7_38</ee>
+    <crossref>conf/iwoca/2010</crossref>
+    <url>db/conf/iwoca/iwoca2010.html#CrochemoreGLMR10</url>
+  </inproceedings>
   <inproceedings mdate="2021-07-29" key="conf/iwoca/CicaleseP21">
     <author orcid="0000-0003-1652-0599">Ferdinando Cicalese</author>
     <author>Nicolò Pilati</author>
@@ -25449,6 +27637,20 @@
     <crossref>conf/alenex/2021</crossref>
     <url>db/conf/alenex/alenex2021.html#BoucherCGHMNR21</url>
   </inproceedings>
+  <inproceedings mdate="2021-07-25" key="conf/cie/BelazzouguiCGPR17">
+    <author>Djamal Belazzougui</author>
+    <author>Fabio Cunial</author>
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author>Nicola Prezza</author>
+    <author>Mathieu Raffinot</author>
+    <title>Flexible Indexing of Repetitive Collections.</title>
+    <pages>162-174</pages>
+    <year>2017</year>
+    <booktitle>CiE</booktitle>
+    <ee>https://doi.org/10.1007/978-3-319-58741-7_17</ee>
+    <crossref>conf/cie/2017</crossref>
+    <url>db/conf/cie/cie2017.html#BelazzouguiCGPR17</url>
+  </inproceedings>
   <inproceedings mdate="2020-06-10" key="conf/stoc/ChanGKKP20">
     <author>Timothy M. Chan</author>
     <author>Shay Golan 0001</author>
@@ -25462,6 +27664,16 @@
     <ee>https://doi.org/10.1145/3357713.3384266</ee>
     <crossref>conf/stoc/2020</crossref>
     <url>db/conf/stoc/stoc2020.html#ChanGKKP20</url>
+  </inproceedings>
+  <inproceedings mdate="2018-11-06" key="conf/stoc/Belazzougui14">
+    <author>Djamal Belazzougui</author>
+    <title>Linear time construction of compressed text indices in compact space.</title>
+    <pages>148-193</pages>
+    <year>2014</year>
+    <booktitle>STOC</booktitle>
+    <ee>https://doi.org/10.1145/2591796.2591885</ee>
+    <crossref>conf/stoc/2014</crossref>
+    <url>db/conf/stoc/stoc2014.html#Belazzougui14</url>
   </inproceedings>
   <inproceedings mdate="2019-09-25" key="conf/stoc/SinhaW19">
     <author orcid="0000-0002-2592-175X">Sandip Sinha</author>
@@ -25527,6 +27739,17 @@
     <ee>https://doi.org/10.1145/3313276.3316352</ee>
     <crossref>conf/stoc/2019</crossref>
     <url>db/conf/stoc/stoc2019.html#Yu19</url>
+  </inproceedings>
+  <inproceedings mdate="2020-06-15" key="conf/stoc/KempaP18">
+    <author orcid="0000-0003-2286-7417">Dominik Kempa</author>
+    <author>Nicola Prezza</author>
+    <title>At the roots of dictionary compression: string attractors.</title>
+    <pages>827-840</pages>
+    <year>2018</year>
+    <booktitle>STOC</booktitle>
+    <ee>https://doi.org/10.1145/3188745.3188814</ee>
+    <crossref>conf/stoc/2018</crossref>
+    <url>db/conf/stoc/stoc2018.html#KempaP18</url>
   </inproceedings>
   <inproceedings mdate="2020-06-09" key="conf/stoc/Yu20">
     <author>Huacheng Yu</author>
@@ -34227,6 +36450,33 @@
     <crossref>conf/spire/2015</crossref>
     <url>db/conf/spire/spire2015.html#AmirLT15</url>
   </inproceedings>
+  <inproceedings mdate="2021-07-25" key="conf/wabi/BoucherGKM18">
+    <author>Christina Boucher</author>
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author>Alan Kuhnle</author>
+    <author orcid="0000-0002-5047-0196">Giovanni Manzini</author>
+    <title>Prefix-Free Parsing for Building Big BWTs.</title>
+    <pages>2:1-2:16</pages>
+    <year>2018</year>
+    <booktitle>WABI</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.WABI.2018.2</ee>
+    <crossref>conf/wabi/2018</crossref>
+    <url>db/conf/wabi/wabi2018.html#BoucherGKM18</url>
+  </inproceedings>
+  <inproceedings mdate="2021-07-25" key="conf/latin/GagieGKNP14">
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author>Pawel Gawrychowski</author>
+    <author>Juha Kärkkäinen</author>
+    <author orcid="0000-0003-3771-5088">Yakov Nekrich</author>
+    <author>Simon J. Puglisi</author>
+    <title>LZ77-Based Self-indexing with Faster Pattern Matching.</title>
+    <pages>731-742</pages>
+    <year>2014</year>
+    <booktitle>LATIN</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-54423-1_63</ee>
+    <crossref>conf/latin/2014</crossref>
+    <url>db/conf/latin/latin2014.html#GagieGKNP14</url>
+  </inproceedings>
   <inproceedings mdate="2020-12-03" key="conf/latin/Bender0MMT20">
     <author>Michael A. Bender</author>
     <author>Mayank Goswami 0001</author>
@@ -34251,6 +36501,29 @@
     <ee>https://doi.org/10.1007/978-3-030-61792-9_43</ee>
     <crossref>conf/latin/2020</crossref>
     <url>db/conf/latin/latin2020.html#BenknerW20</url>
+  </inproceedings>
+  <inproceedings mdate="2021-07-25" key="conf/latin/FerraginaGM10">
+    <author orcid="0000-0003-1353-360X">Paolo Ferragina</author>
+    <author orcid="0000-0003-3689-327X">Travis Gagie</author>
+    <author orcid="0000-0002-5047-0196">Giovanni Manzini</author>
+    <title>Lightweight Data Indexing and Compression in External Memory.</title>
+    <pages>697-710</pages>
+    <year>2010</year>
+    <booktitle>LATIN</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-12200-2_60</ee>
+    <crossref>conf/latin/2010</crossref>
+    <url>db/conf/latin/latin2010.html#FerraginaGM10</url>
+  </inproceedings>
+  <inproceedings mdate="2018-04-11" key="conf/latin/ChristiansenE18">
+    <author>Anders Roy Christiansen</author>
+    <author>Mikko Berggren Ettienne</author>
+    <title>Compressed Indexing with Signature Grammars.</title>
+    <pages>331-345</pages>
+    <year>2018</year>
+    <booktitle>LATIN</booktitle>
+    <ee>https://doi.org/10.1007/978-3-319-77404-6_25</ee>
+    <crossref>conf/latin/2018</crossref>
+    <url>db/conf/latin/latin2018.html#ChristiansenE18</url>
   </inproceedings>
   <inproceedings mdate="2020-12-17" key="conf/latin/KociumakaNP20">
     <author orcid="0000-0002-2477-1702">Tomasz Kociumaka</author>
@@ -34382,5 +36655,17 @@
     <ee>https://doi.org/10.1007/978-3-030-38919-2_11</ee>
     <crossref>conf/sofsem/2020</crossref>
     <url>db/conf/sofsem/sofsem2020.html#YamadaNIBT20</url>
+  </inproceedings>
+  <inproceedings mdate="2019-09-25" key="conf/fsttcs/JanssonSS07">
+    <author>Jesper Jansson</author>
+    <author orcid="0000-0002-8212-3682">Kunihiko Sadakane</author>
+    <author>Wing-Kin Sung</author>
+    <title>Compressed Dynamic Tries with Applications to LZ-Compression in Sublinear Time and Space.</title>
+    <pages>424-435</pages>
+    <year>2007</year>
+    <crossref>conf/fsttcs/2007</crossref>
+    <booktitle>FSTTCS</booktitle>
+    <ee>https://doi.org/10.1007/978-3-540-77050-3_35</ee>
+    <url>db/conf/fsttcs/fsttcs2007.html#JanssonSS07</url>
   </inproceedings>
 </dblp>
