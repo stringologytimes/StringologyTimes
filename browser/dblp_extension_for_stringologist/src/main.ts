@@ -17,12 +17,14 @@ function node_request2(parent : HTMLElement, button : HTMLElement, url : string)
     button_request.onload = function () {
         const json = JSON.parse(this.responseText);
         if(json["result"] == "SUCCESS"){
-            console.log(json);
             button.textContent = "OK";
             button.onclick = null;
+            parent.style.backgroundColor = "springgreen"
         }else{
             button.textContent = "ERROR";
             button.onclick = null;
+            parent.style.backgroundColor = "red"
+
         }
 
     }
@@ -45,8 +47,8 @@ function node_request(node: HTMLElement, url: string) {
             }
             node.appendChild(button);
 
-        } else {
-
+        } else if(json["result"] == "DUPLICATION") {
+            node.style.backgroundColor = "springgreen"
         }
     }
     request.onerror = function () {

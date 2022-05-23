@@ -14,13 +14,14 @@ function node_request2(parent, button, url) {
     button_request.onload = function () {
         const json = JSON.parse(this.responseText);
         if (json["result"] == "SUCCESS") {
-            console.log(json);
             button.textContent = "OK";
             button.onclick = null;
+            parent.style.backgroundColor = "springgreen";
         }
         else {
             button.textContent = "ERROR";
             button.onclick = null;
+            parent.style.backgroundColor = "red";
         }
     };
     button_request.send();
@@ -39,7 +40,8 @@ function node_request(node, url) {
             };
             node.appendChild(button);
         }
-        else {
+        else if (json["result"] == "DUPLICATION") {
+            node.style.backgroundColor = "springgreen";
         }
     };
     request.onerror = function () {
