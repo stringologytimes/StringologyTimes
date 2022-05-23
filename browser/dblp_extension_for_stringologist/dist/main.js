@@ -1,5 +1,23 @@
 "use strict";
 const dblpElements = [];
+class RequestCollection {
+    constructor() {
+        this.collection = [];
+    }
+}
+function createCollections(info_list) {
+    const r = [];
+    let x = new RequestCollection();
+    info_list.forEach((v) => {
+        if (x.collection.length > 50) {
+            r.push(x);
+            x = new RequestCollection();
+        }
+        x.collection.push(v);
+    });
+    r.push(x);
+    return r;
+}
 function addToDBLPElements(nodes, output) {
     for (let i = 0; i < nodes.length; i++) {
         const node = nodes.item(i);
@@ -13,7 +31,9 @@ function node_request2(parent, button, url) {
     button_request.open('GET', `http://lampin.sakura.ne.jp/cgi-bin/paper_check.cgi?mode=register&url=${encodeURI(url)}`, true);
     button_request.onload = function () {
         const json = JSON.parse(this.responseText);
-        if (json["result"] == "SUCCESS") {
+        const json_line = json["result"][0];
+        const result = json_line[1];
+        if (result == "SUCCESS") {
             button.textContent = "OK";
             button.onclick = null;
             parent.style.backgroundColor = "springgreen";
@@ -26,23 +46,34 @@ function node_request2(parent, button, url) {
     };
     button_request.send();
 }
-function node_request(node, url) {
+function node_request_X(info_collection) {
+    const url_parameter = info_collection.collection.map((v) => v.url).join(",");
+    console.log(url_parameter);
     let request = new XMLHttpRequest();
-    request.open('GET', `http://lampin.sakura.ne.jp/cgi-bin/paper_check.cgi?mode=check&url=${encodeURI(url)}`, true);
+    const get_url = `http://lampin.sakura.ne.jp/cgi-bin/paper_check.cgi?mode=check&url=${encodeURI(url_parameter)}`;
+    console.log(get_url);
+    request.open('GET', get_url, true);
     request.onload = function () {
         const json = JSON.parse(this.responseText);
-        if (json["result"] == "NOT_REGISTRED") {
-            const button = document.createElement("button");
-            button.setAttribute("custom-url", url);
-            button.textContent = "Regist";
-            button.onclick = (e) => {
-                node_request2(node, button, url);
-            };
-            node.appendChild(button);
-        }
-        else if (json["result"] == "DUPLICATION") {
-            node.style.backgroundColor = "springgreen";
-        }
+        const result_list = json["result"];
+        result_list.forEach((v, i) => {
+            const check_result = v[1];
+            const node = info_collection.collection[i].node;
+            const url = info_collection.collection[i].url;
+            if (check_result == "NOT_REGISTRED") {
+                const button = document.createElement("button");
+                button.setAttribute("custom-url", url);
+                button.textContent = "Regist";
+                button.onclick = (e) => {
+                    node_request2(node, button, url);
+                };
+                node.appendChild(button);
+            }
+            else if (check_result == "DUPLICATION") {
+                node.style.backgroundColor = "springgreen";
+            }
+        });
+        console.log(json);
     };
     request.onerror = function () {
         console.log("error");
@@ -58,6 +89,7 @@ function node_request(node, url) {
 addToDBLPElements(document.body.getElementsByClassName("entry inproceedings toc"), dblpElements);
 addToDBLPElements(document.body.getElementsByClassName("entry informal toc"), dblpElements);
 addToDBLPElements(document.body.getElementsByClassName("entry article toc"), dblpElements);
+const dblpElementsWithURL = [];
 dblpElements.forEach((node) => {
     const aNodes = node.getElementsByTagName("a");
     let doi = null;
@@ -90,7 +122,12 @@ dblpElements.forEach((node) => {
         registURL = arXivURL;
     }
     if (registURL != null) {
-        node_request(node, registURL);
+        const xnode = { node: node, url: registURL };
+        dblpElementsWithURL.push(xnode);
     }
+});
+const collections = createCollections(dblpElementsWithURL);
+collections.forEach((v) => {
+    node_request_X(v);
 });
 //# sourceMappingURL=main.js.map

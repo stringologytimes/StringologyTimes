@@ -33,21 +33,24 @@ for grp in grpList:
     tmpList = grp.split('=')
     grpDict[tmpList[0]] = tmpList[1]
 
-
-url = urllib.parse.unquote(grpDict["url"])
-
 mode = grpDict["mode"]
 
-result = ""
-if mode == "register" : 
-    result = my_common.add_data(cursor, url)
-else:    
-    result = my_common.check_data(cursor, url)
+urls = urllib.parse.unquote(grpDict["url"])
+urlList = urls.split(',')
+result_list = [] 
+for url in urlList:
+    result = ""
+    if mode == "register" : 
+        result = my_common.add_data(cursor, url)
+    else:    
+        result = my_common.check_data(cursor, url)
+    result_list.append([url, result])
+
 conn.commit()
 conn.close()
     
     
-result_json = {'result': result, 'url' : url}
+result_json = {'result': result_list }
 print('Content-Type: application/json; charset=utf-8\n')
 print(json.dumps(result_json))
 
