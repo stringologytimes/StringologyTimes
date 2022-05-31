@@ -48,10 +48,8 @@ function node_request2(parent, button, url) {
 }
 function node_request_X(info_collection) {
     const url_parameter = info_collection.collection.map((v) => v.url).join(",");
-    console.log(url_parameter);
     let request = new XMLHttpRequest();
     const get_url = `http://lampin.sakura.ne.jp/cgi-bin/paper_check.cgi?mode=check&url=${encodeURI(url_parameter)}`;
-    console.log(get_url);
     request.open('GET', get_url, true);
     request.onload = function () {
         const json = JSON.parse(this.responseText);
@@ -73,7 +71,6 @@ function node_request_X(info_collection) {
                 node.style.backgroundColor = "springgreen";
             }
         });
-        console.log(json);
     };
     request.onerror = function () {
         console.log("error");
@@ -86,9 +83,9 @@ function node_request_X(info_collection) {
     };
     request.send();
 }
-addToDBLPElements(document.body.getElementsByClassName("entry inproceedings toc"), dblpElements);
-addToDBLPElements(document.body.getElementsByClassName("entry informal toc"), dblpElements);
-addToDBLPElements(document.body.getElementsByClassName("entry article toc"), dblpElements);
+addToDBLPElements(document.body.getElementsByClassName("entry inproceedings"), dblpElements);
+addToDBLPElements(document.body.getElementsByClassName("entry informal"), dblpElements);
+addToDBLPElements(document.body.getElementsByClassName("entry article"), dblpElements);
 const dblpElementsWithURL = [];
 dblpElements.forEach((node) => {
     const aNodes = node.getElementsByTagName("a");

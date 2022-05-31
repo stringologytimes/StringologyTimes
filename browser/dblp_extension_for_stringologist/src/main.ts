@@ -101,9 +101,12 @@ function node_request_X(info_collection: RequestCollection ) {
 
 }
 
-addToDBLPElements(document.body.getElementsByClassName("entry inproceedings toc"), dblpElements);
-addToDBLPElements(document.body.getElementsByClassName("entry informal toc"), dblpElements);
-addToDBLPElements(document.body.getElementsByClassName("entry article toc"), dblpElements);
+//addToDBLPElements(document.body.getElementsByClassName("entry inproceedings toc"), dblpElements);
+//addToDBLPElements(document.body.getElementsByClassName("entry informal toc"), dblpElements);
+//addToDBLPElements(document.body.getElementsByClassName("entry article toc"), dblpElements);
+addToDBLPElements(document.body.getElementsByClassName("entry inproceedings"), dblpElements);
+addToDBLPElements(document.body.getElementsByClassName("entry informal"), dblpElements);
+addToDBLPElements(document.body.getElementsByClassName("entry article"), dblpElements);
 
 const dblpElementsWithURL: dblpElementInfo[] = [];
 
