@@ -47,6 +47,10 @@ function downloadArxivInfomation(ids: string[], arxivInfo: ArxivXMLInfo) {
         const entry = entryCol.item(i)!;
         const idNode = entry.getElementsByTagName("id").item(0)!.textContent!;
         console.log(`${ids[i]} / ${idNode} / ${idNode.indexOf(ids[i]) != -1}`)
+        if(idNode.indexOf("incorrect_id_format") != -1){
+            throw new Error("incorrect_id_format");
+        }
+
         if (idNode.indexOf(ids[i]) != -1) {
             entry.setAttribute("id", ids[i]);
             articlesNode.appendChild(entry);
@@ -68,14 +72,20 @@ function downloadAllArxivInfomation(ids: string[], arxivInfo: ArxivXMLInfo) {
 
 function load_arxiv_ids(urlPath : string){
     const text = fs.readFileSync(urlPath, 'utf8');
-    const lines = text.toString().split(/\r\n|\n/);
+    const lines : string[] = text.toString().split(/\r\n|\n/);
     const id_arr: string[] = new Array(0);
     for (let line of lines) {
         const b = line.indexOf("https://arxiv.org/") == 0;
         if (b) {
+
             const subs = line.split("/");
-            const id: string = subs[subs.length - 1];
-            id_arr.push(id);
+            const pindex = subs.indexOf("abs");
+            if(pindex != -1){
+                const id = subs.slice(pindex+1).join("/");
+                id_arr.push(id);
+
+            }
+            //const id: string = subs[subs.length - 1];
             
             /*
             if (!arxivXMLInfo.dic.has(id)) {

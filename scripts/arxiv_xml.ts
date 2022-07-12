@@ -35,6 +35,12 @@ export class ArxivArticle {
     url: string;
     public constructor(_node: Element) {
         this.node = _node;
+        const publishedNode: Element | null = this.node.getElementsByTagName("published").item(0)!;
+        if(publishedNode == undefined){
+            console.log(this.node.textContent);
+
+        }
+
         const dateStr: string = this.node.getElementsByTagName("published").item(0)!.textContent!;
         this.date = new Date(dateStr);
 
