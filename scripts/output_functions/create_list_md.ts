@@ -1,4 +1,4 @@
-import { DBLPArticle, DBLPElement, DBLPInproceedings, DBLPElementClass } from "./dblp_element"
+import { DBLPArticle, DBLPElement, DBLPInproceedings, DBLPElementClass } from "../basic_functions/dblp_element"
 
 type ProceedingsInfo = {
     name: string,

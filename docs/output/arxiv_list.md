@@ -1441,4 +1441,7 @@
   2. [Sorting a Low-Entropy Sequence](https://arxiv.org/abs/cs/0506027)  
   3. [Large Alphabets and Incompressibility](https://arxiv.org/abs/cs/0506056)  
   
+### 2005/3  
+  1. [Dynamic Shannon Coding](https://arxiv.org/abs/cs/0503085)  
+  
   

@@ -20,8 +20,13 @@ cd dblp_processor
 dotnet build -c Release
 cd ..
 
+
 $dblpProcessor = "./dblp_processor/bin/Release/net6.0/dblp_processor.exe"
 $dblpProcessorArg = "./data/external/dblp.xml ./data/paper_list.txt ./data/stringology_dblp.xml"
 
 $dblpProc = Start-Process -FilePath $dblpProcessor -ArgumentList $dblpProcessorArg -Wait
+
+ts-node ./scripts/download_arxiv_xml_main.ts
+ts-node ./scripts/process_stringology_dblp_main.ts
+
 

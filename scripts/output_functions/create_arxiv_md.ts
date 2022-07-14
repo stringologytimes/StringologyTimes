@@ -1,6 +1,6 @@
 
-import { DBLPArticle, DBLPElement, DBLPInproceedings, DBLPElementClass } from "./dblp_element"
-import { ArxivArticle } from "./arxiv_xml"
+import { DBLPArticle, DBLPElement, DBLPInproceedings, DBLPElementClass } from "../basic_functions/dblp_element"
+import { ArxivArticle } from "../basic_functions/arxiv_xml"
 
 function createArxivYearMonthMD(_papers: DBLPArticle[], year : number, monthMap : Map<string, number>) : string[] {
     const lines: string[] = new Array();
