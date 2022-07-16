@@ -9,8 +9,9 @@
 - [Papers for Stringologist (2022)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2022)
 - [All papers for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/complete_list)
 
-## The number of registered URLs
-- 22/05/23: 3117
+## Statistics
+
+![Test](https://stringologytimes.github.io/StringologyTimes/docs/output/paper_statistics_for_each_year.png)
 
 ## Recent accepted papers for stringologist
 
