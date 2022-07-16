@@ -14,6 +14,66 @@
 
 ## Recent accepted papers for stringologist
 
+### 2022/07/04 [FOCS 2022](https://focs2022.eecs.berkeley.edu/accepted_papers.html)
+
+1. Online List Labeling: Breaking the $\log^2 n$ Barrier.  
+Michael A. Bender (Stony Brook University), Alex Conway (VMWare Research), Martin Farach-Colton (Rutgers University), Hanna Komlos (Rutgers University), William Kuszmaul (MIT), Nicole Wein (DIMACS).  
+2. Estimating the Longest Increasing Subsequence in Nearly Optimal Time.  
+Alexandr Andoni (Columbia University), Negev Shekel Nosatzki (Columbia University), Sandip Sinha (Columbia University), Clifford Stein (Columbia University).  
+3. Õ(n + poly(k))-time Algorithm for Distance k Tree Edit Distance.  
+Debarati Das (Penn State University), Jacob Gilbert (University of Maryland), MohammadTaghi Hajiaghayi (University of Maryland), Tomasz Kociumaka (UC Berkeley), Barna Saha (University of California San Diego), Hamed Saleh (University of Maryland).  
+4. Faster Pattern Matching under Edit Distance.  
+Panagiotis Charalampopoulos (Reichman University, Herzliya, Israel and Birkbeck, University of London), Tomasz Kociumaka (UC Berkeley and Max Planck Institute for Informatics, SIC, Germany), Philip Wellnitz (Max Planck Institute for Informatics, SIC, Germany).  
+5. Gap Edit Distance via Non-Adaptive Queries: Simple and Optimal.  
+Elazar Goldenberg (The Academic College of Tel Aviv-Yafo), Tomasz Kociumaka (UC Berkeley), Robert Krauthgamer (Weizmann Institute of Science), Barna Saha (University of California San Diego).  
+6. Strong XOR Lemma for Communication with Bounded Rounds.  
+Huacheng Yu (Princeton University).  
+
+### 2022/06/18 [ESA 2022](https://algo2022.eu/esa/#papers)
+
+1. An Improved Algorithm for Finding the Shortest Synchronizing Words  
+Marek Szykuła and Adam Zyzik.  
+2. Lyndon Arrays Simplified  
+Jonas Ellert.  
+3. Simple worst-case optimal adaptive prefix-free coding  
+Travis Gagie.  
+4. Approximate Circular Pattern Matching  
+Panagiotis Charalampopoulos, Tomasz Kociumaka, Jakub Radoszewski, Solon Pissis, Wojciech Rytter, Tomasz Walen and Wiktor Zuba.  
+5. Distinct Elements in Streams: An Algorithm for the (Text) Book  
+Sourav Chakraborty, Kuldeep S. Meel and N.V. Vinodchandran.   
+6. Insertion Time of Random Walk Cuckoo Hashing below the Peeling Threshold (extended abstract)  
+Stefan Walzer.   
+7. Approximating Dynamic Time Warping Distance Between Run-Length Encoded Strings  
+Zoe Xi and William Kuszmaul.   
+8. Computing NP-hard Repetitiveness Measures via MAX-SAT  
+Hideo Bannai, Keisuke Goto, Masakazu Ishihata, Shunsuke Kanda, Dominik Köppl and Takaaki Nishimoto.   
+
+### 2022/06/14 [WABI 2022](https://algo2022.eu/wabi/)
+1. Haplotype Threading Using the Positional Burrows-Wheeler Transform   
+Ahsan Sanaullah, Degui Zhi and Shaojie Zhang.   
+2. On Weighted K-Mer Dictionaries  
+Giulio Ermanno Pibiri.   
+3. Fast gapped k-mer counting with subdivided multi-way bucketed Cuckoo hash tables  
+Jens Zentgraf and Sven Rahmann.  
+4. Prefix-free parsing for building large tunnelled Wheeler graphs  
+Adrián Goga and Andrej Baláž.  
+5. Suffix sorting via matching statistics  
+Zsuzsanna Liptak, Francesco Masillo and Simon J. Puglisi.  
+6. phyBWT: Alignment-free phylogeny via eBWT positional clustering  
+Veronica Guerrini, Alessio Conte, Roberto Grossi, Gianni Liti, Giovanna Rosone and Lorenzo Tattini.  
+7. Eulertigs: minimum plain text representation of k-mer sets without repetitions in linear time  
+Sebastian Schmidt and Jarno Alanko.  
+8. Toward optimal fingerprint indexing for large scale genomics  
+Clément Agret, Bastien Cazaux and Antoine Limasset.  
+
+### 2022/04/10 [SWAT 2022](https://www.setur.fo/en/education/swat-2022/) 
+
+1. Predecessor on the Ultra-Wide Word RAM  
+Philip Bille, Inge Li Gørtz and Tord Stordalen  
+2. Space-Efficient Data Structure for Posets with Applications  
+Tatsuya Yanagita, Sankardeep Chakraborty, Kunihiko Sadakane and Srinivasa Rao Satti
+
+
 ### [SEA 2022](https://sea2022.ifi.uni-heidelberg.de/acceptedpapers.html)
 1. RLBWT Tricks  
 Nathaniel K. Brown, Travis Gagie and Massimiliano Rossi  
@@ -65,34 +125,10 @@ Dora Bulgakova, Anna Frid and Jérémy Scanvic
 2. Logarithmic equal-letter runs for BWT of purely morphic words  
 Andrea Frosini, Ilaria Mancini, Simone Rinaldi, Giuseppe Romana and Marinella Sciortino  
 
-### 2022/04/10 [SWAT 2022](https://www.setur.fo/en/education/swat-2022/) 
 
-1. Predecessor on the Ultra-Wide Word RAM  
-Philip Bille, Inge Li Gørtz and Tord Stordalen  
-2. Space-Efficient Data Structure for Posets with Applications  
-Tatsuya Yanagita, Sankardeep Chakraborty, Kunihiko Sadakane and Srinivasa Rao Satti
+### CPM 2022 
 
-### CPM 2022
 
-### ESA 2022
-
-### 2022/07/04 [FOCS 2022](https://focs2022.eecs.berkeley.edu/accepted_papers.html)
-
-1. Online List Labeling: Breaking the $\log^2 n$ Barrier.  
-Michael A. Bender (Stony Brook University), Alex Conway (VMWare Research), Martin Farach-Colton (Rutgers University), Hanna Komlos (Rutgers University), William Kuszmaul (MIT), Nicole Wein (DIMACS).  
-2. Estimating the Longest Increasing Subsequence in Nearly Optimal Time.  
-Alexandr Andoni (Columbia University), Negev Shekel Nosatzki (Columbia University), Sandip Sinha (Columbia University), Clifford Stein (Columbia University).  
-3. Õ(n + poly(k))-time Algorithm for Distance k Tree Edit Distance.  
-Debarati Das (Penn State University), Jacob Gilbert (University of Maryland), MohammadTaghi Hajiaghayi (University of Maryland), Tomasz Kociumaka (UC Berkeley), Barna Saha (University of California San Diego), Hamed Saleh (University of Maryland).  
-4. Faster Pattern Matching under Edit Distance.  
-Panagiotis Charalampopoulos (Reichman University, Herzliya, Israel and Birkbeck, University of London), Tomasz Kociumaka (UC Berkeley and Max Planck Institute for Informatics, SIC, Germany), Philip Wellnitz (Max Planck Institute for Informatics, SIC, Germany).  
-5. Gap Edit Distance via Non-Adaptive Queries: Simple and Optimal.  
-Elazar Goldenberg (The Academic College of Tel Aviv-Yafo), Tomasz Kociumaka (UC Berkeley), Robert Krauthgamer (Weizmann Institute of Science), Barna Saha (University of California San Diego).  
-6. Strong XOR Lemma for Communication with Bounded Rounds.  
-Huacheng Yu (Princeton University).  
- 
-
-### WABI 2022
 
 ## Links
 [arXivTimes](https://github.com/arXivTimes/arXivTimes)
