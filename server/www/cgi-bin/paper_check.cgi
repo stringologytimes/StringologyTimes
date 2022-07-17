@@ -1,5 +1,6 @@
 #!/home/lampin/local/python/bin/python3.9
 #/usr/bin/python3
+
 # -*- coding: utf-8 -*-
 
 import cgi

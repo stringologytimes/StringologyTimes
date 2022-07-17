@@ -1,5 +1,6 @@
 #!/home/lampin/local/python/bin/python3.9
 #/usr/bin/python3
+
 # -*- coding: utf-8 -*-
 import MySQLdb
 
@@ -37,7 +38,7 @@ def add_data(cursor, url):
     inputType = check_correct_input(url)
     if inputType == "ARXIV" or inputType == "DOI" or inputType == "STRINGOLOGY" or inputType == "SPECIAL" or inputType == "PROCEEDING_NAME" or inputType == "JOURNAL_URL": 
         if hit == 0: 
-            cursor.execute(f'INSERT INTO paper_url_list values ({id}, "{url}", 1)')
+            cursor.execute(f'INSERT INTO paper_url_list VALUE (null, "{url}", 1, DEFAULT)')
             return "SUCCESS"
         else:
             return "DUPLICATION"
