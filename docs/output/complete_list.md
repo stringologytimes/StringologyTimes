@@ -3,9 +3,13 @@
   
 - [CPM(2022)](#cpm-2022) [[dblp]](https://dblp.org/db/conf/cpm/cpm2022.html)  
 - [DLT(2022)](#dlt-2022) [[dblp]](https://dblp.org/db/conf/dlt/dlt2022.html)  
+- [ICALP(2022)](#icalp-2022) [[dblp]](https://dblp.org/db/conf/icalp/icalp2022.html)  
 - [IWOCA(2022)](#iwoca-2022) [[dblp]](https://dblp.org/db/conf/iwoca/iwoca2022.html)  
+- [SEA(2022)](#sea-2022) [[dblp]](https://dblp.org/db/conf/wea/sea2022.html)  
 - [SODA(2022)](#soda-2022) [[dblp]](https://dblp.org/db/conf/soda/soda2022.html)  
 - [SOSA(2022)](#sosa-2022) [[dblp]](https://dblp.org/db/conf/sosa/sosa2022.html)  
+- [STOC(2022)](#stoc-2022) [[dblp]](https://dblp.org/db/conf/stoc/stoc2022.html)  
+- [SWAT(2022)](#swat-2022) [[dblp]](https://dblp.org/db/conf/swat/swat2022.html)  
   
 - [ACM Trans. Algorithms(2022)](#acm trans. algorithms-2022) [[dblp]](https://dblp.org/db/journals/talg/talg18.html)  
 - [Algorithmica(2022)](#algorithmica-2022) [[dblp]](https://dblp.org/db/journals/algorithmica/algorithmica84.html)  
@@ -67,6 +71,7 @@
 - [APPROX-RANDOM(2020)](#approx-random-2020) [[dblp]](https://dblp.org/db/conf/approx/approx2020.html)  
 - [BCB(2020)](#bcb-2020) [[dblp]](https://dblp.org/db/conf/bcb/bcb2020.html)  
 - [CPM(2020)](#cpm-2020) [[dblp]](https://dblp.org/db/conf/cpm/cpm2020.html)  
+- [CSR(2020)](#csr-2020) [[dblp]](https://dblp.org/db/conf/csr/csr2020.html)  
 - [CiE(2020)](#cie-2020) [[dblp]](https://dblp.org/db/conf/cie/cie2020.html)  
 - [DCC(2020)](#dcc-2020) [[dblp]](https://dblp.org/db/conf/dcc/dcc2020.html)  
 - [ESA(2020)](#esa-2020) [[dblp]](https://dblp.org/db/conf/esa/esa2020.html)  
@@ -1002,10 +1007,26 @@
   
 #### [DLT 2022](https://dblp.org/db/conf/dlt/dlt2022.html)
   1. [Logarithmic Equal-Letter Runs for BWT of Purely Morphic Words.](https://doi.org/10.1007/978-3-031-05578-2_11)  
+  2. [Prefix Palindromic Length of the Sierpinski Word.](https://doi.org/10.1007/978-3-031-05578-2_6)  
+  
+#### [ICALP 2022](https://dblp.org/db/conf/icalp/icalp2022.html)
+  1. [An Optimal-Time RLBWT Construction in BWT-Runs Bounded Space.](https://doi.org/10.4230/LIPIcs.ICALP.2022.99)  
+  2. [Fully Functional Parameterized Suffix Trees in Compact Space.](https://doi.org/10.4230/LIPIcs.ICALP.2022.65)  
+  3. [Galloping in Fast-Growth Natural Merge Sorts.](https://doi.org/10.4230/LIPIcs.ICALP.2022.68)  
+  4. [Improved Approximation Algorithms for Dyck Edit Distance and RNA Folding.](https://doi.org/10.4230/LIPIcs.ICALP.2022.49)  
+  5. [Improved Sublinear-Time Edit Distance for Preprocessed Strings.](https://doi.org/10.4230/LIPIcs.ICALP.2022.32)  
+  6. [Listing, Verifying and Counting Lowest Common Ancestors in DAGs: Algorithms and Fine-Grained Lower Bounds.](https://doi.org/10.4230/LIPIcs.ICALP.2022.94)  
   
 #### [IWOCA 2022](https://dblp.org/db/conf/iwoca/iwoca2022.html)
   1. [Computing Longest (Common) Lyndon Subsequences.](https://doi.org/10.1007/978-3-031-06678-8_10)  
-  2. [Space-Efficient B Trees via Load-Balancing.](https://doi.org/10.1007/978-3-031-06678-8_24)  
+  2. [Linear Time Construction of Indexable Elastic Founder Graphs.](https://doi.org/10.1007/978-3-031-06678-8_35)  
+  3. [Practical Space-Efficient Index for Structural Pattern Matching.](https://doi.org/10.1007/978-3-031-06678-8_27)  
+  4. [Shortest Unique Palindromic Substring Queries in Semi-dynamic Settings.](https://doi.org/10.1007/978-3-031-06678-8_31)  
+  5. [Space-Efficient B Trees via Load-Balancing.](https://doi.org/10.1007/978-3-031-06678-8_24)  
+  
+#### [SEA 2022](https://dblp.org/db/conf/wea/sea2022.html)
+  1. [Computing Maximal Unique Matches with the r-Index.](https://doi.org/10.4230/LIPIcs.SEA.2022.22)  
+  2. [RLBWT Tricks.](https://doi.org/10.4230/LIPIcs.SEA.2022.16)  
   
 #### [SODA 2022](https://dblp.org/db/conf/soda/soda2022.html)
   1. [A Lower Bound for the n-queens Problem.](https://doi.org/10.1137/1.9781611977073.86)  
@@ -1025,14 +1046,26 @@
   1. [Faster Exponential Algorithm for Permutation Pattern Matching.](https://doi.org/10.1137/1.9781611977066.21)  
   2. [Simpler Adjacency Labeling for Planar Graphs with B-Trees.](https://doi.org/10.1137/1.9781611977066.3)  
   
+#### [STOC 2022](https://dblp.org/db/conf/stoc/stoc2022.html)
+  1. [Almost-optimal sublinear-time edit distance in the low distance regime.](https://doi.org/10.1145/3519935.3519990)  
+  2. [Dynamic suffix array with polylogarithmic queries and updates.](https://doi.org/10.1145/3519935.3520061)  
+  3. [Explicit binary tree codes with sub-logarithmic size alphabet.](https://doi.org/10.1145/3519935.3520033)  
+  4. [Improved approximation guarantees for shortest superstrings using cycle classification by overlap to length ratios.](https://doi.org/10.1145/3519935.3520001)  
+  5. [On the optimal time/space tradeoff for hash tables.](https://doi.org/10.1145/3519935.3519969)  
+  
+#### [SWAT 2022](https://dblp.org/db/conf/swat/swat2022.html)
+  1. [Predecessor on the Ultra-Wide Word RAM.](https://doi.org/10.4230/LIPIcs.SWAT.2022.18)  
+  2. [Unit-Disk Range Searching and Applications.](https://doi.org/10.4230/LIPIcs.SWAT.2022.32)  
+  
 #### ACM Trans. Algorithms 2022  
   1. [A Simple Algorithm for Optimal Search Trees with Two-way Comparisons.](https://doi.org/10.1145/3477910)  
   
 #### Algorithmica 2022  
-  1. [Computing Minimal Unique Substrings for a Sliding Window.](https://doi.org/10.1007/s00453-021-00864-1)  
-  2. [Fast and Longest Rollercoasters.](https://doi.org/10.1007/s00453-021-00908-6)  
-  3. [Space Efficient Merging of de Bruijn Graphs and Wheeler Graphs.](https://doi.org/10.1007/s00453-021-00855-2)  
-  4. [Streaming Dictionary Matching with Mismatches.](https://doi.org/10.1007/s00453-021-00876-x)  
+  1. [Adaptive Succinctness.](https://doi.org/10.1007/s00453-021-00872-1)  
+  2. [Computing Minimal Unique Substrings for a Sliding Window.](https://doi.org/10.1007/s00453-021-00864-1)  
+  3. [Fast and Longest Rollercoasters.](https://doi.org/10.1007/s00453-021-00908-6)  
+  4. [Space Efficient Merging of de Bruijn Graphs and Wheeler Graphs.](https://doi.org/10.1007/s00453-021-00855-2)  
+  5. [Streaming Dictionary Matching with Mismatches.](https://doi.org/10.1007/s00453-021-00876-x)  
   
 #### Algorithms Mol. Biol. 2022  
   1. [Space-efficient representation of genomic k-mer count tables.](https://doi.org/10.1186/s13015-022-00212-0)  
@@ -1075,6 +1108,7 @@
   
 #### Commun. ACM 2022  
   1. [Resolution of the burrows-wheeler transform conjecture.](https://doi.org/10.1145/3531445)  
+  2. [The compression power of the BWT: technical perspective.](https://doi.org/10.1145/3531443)  
   
 #### Inf. Comput. 2022  
   1. [A periodicity lemma for partial words.](https://doi.org/10.1016/j.ic.2020.104677)  
@@ -1515,6 +1549,9 @@
   29. [Unary Words Have the Smallest Levenshtein k-Neighbourhoods.](https://doi.org/10.4230/LIPIcs.CPM.2020.10)  
   30. [k-Approximate Quasiperiodicity under Hamming and Edit Distance.](https://doi.org/10.4230/LIPIcs.CPM.2020.18)  
   
+#### [CSR 2020](https://dblp.org/db/conf/csr/csr2020.html)
+  1. [Optimal Skeleton Huffman Trees Revisited.](https://doi.org/10.1007/978-3-030-50026-9_20)  
+  
 #### [CiE 2020](https://dblp.org/db/conf/cie/cie2020.html)
   1. [Faster Online Computation of the Succinct Longest Previous Factor Array.](https://doi.org/10.1007/978-3-030-51466-2_31)  
   
@@ -1947,14 +1984,15 @@
   3. [Compressed range minimum queries.](https://doi.org/10.1016/j.tcs.2019.07.002)  
   4. [Efficient computation of longest single-arm-gapped palindromes in a string.](https://doi.org/10.1016/j.tcs.2019.10.025)  
   5. [Faster algorithms for 1-mappability of a sequence.](https://doi.org/10.1016/j.tcs.2019.04.026)  
-  6. [Lightweight merging of compressed indices based on BWT variants.](https://doi.org/10.1016/j.tcs.2019.11.001)  
-  7. [Longest property-preserved common factor: A new string-processing framework.](https://doi.org/10.1016/j.tcs.2020.02.012)  
-  8. [Parallel computation of the Burrows Wheeler Transform in compact space.](https://doi.org/10.1016/j.tcs.2019.09.030)  
-  9. [Refining the r-index.](https://doi.org/10.1016/j.tcs.2019.08.005)  
-  10. [Space-efficient algorithms for computing minimal/shortest unique substrings.](https://doi.org/10.1016/j.tcs.2020.09.017)  
-  11. [The Alternating BWT: An algorithmic perspective.](https://doi.org/10.1016/j.tcs.2019.11.002)  
-  12. [Tree path majority data structures.](https://doi.org/10.1016/j.tcs.2020.05.039)  
-  13. [Universal reconstruction of a string.](https://doi.org/10.1016/j.tcs.2019.10.027)  
+  6. [Generating a Gray code for prefix normal words in amortized polylogarithmic time per word.](https://doi.org/10.1016/j.tcs.2020.07.035)  
+  7. [Lightweight merging of compressed indices based on BWT variants.](https://doi.org/10.1016/j.tcs.2019.11.001)  
+  8. [Longest property-preserved common factor: A new string-processing framework.](https://doi.org/10.1016/j.tcs.2020.02.012)  
+  9. [Parallel computation of the Burrows Wheeler Transform in compact space.](https://doi.org/10.1016/j.tcs.2019.09.030)  
+  10. [Refining the r-index.](https://doi.org/10.1016/j.tcs.2019.08.005)  
+  11. [Space-efficient algorithms for computing minimal/shortest unique substrings.](https://doi.org/10.1016/j.tcs.2020.09.017)  
+  12. [The Alternating BWT: An algorithmic perspective.](https://doi.org/10.1016/j.tcs.2019.11.002)  
+  13. [Tree path majority data structures.](https://doi.org/10.1016/j.tcs.2020.05.039)  
+  14. [Universal reconstruction of a string.](https://doi.org/10.1016/j.tcs.2019.10.027)  
   
 #### Theory Comput. Syst. 2020  
   1. [Fast Algorithms for the Shortest Unique Palindromic Substring Problem on Run-Length Encoded Strings.](https://doi.org/10.1007/s00224-020-09980-x)  

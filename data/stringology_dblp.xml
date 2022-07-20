@@ -1890,6 +1890,18 @@
     <ee>https://www.wikidata.org/entity/Q60554325</ee>
     <url>db/journals/algorithmica/algorithmica77.html#BilleCG17</url>
   </article>
+  <article mdate="2022-04-01" key="journals/algorithmica/ArroyueloR22">
+    <author orcid="0000-0002-2509-8097">Diego Arroyuelo</author>
+    <author>Rajeev Raman</author>
+    <title>Adaptive Succinctness.</title>
+    <pages>694-718</pages>
+    <year>2022</year>
+    <volume>84</volume>
+    <journal>Algorithmica</journal>
+    <number>3</number>
+    <ee>https://doi.org/10.1007/s00453-021-00872-1</ee>
+    <url>db/journals/algorithmica/algorithmica84.html#ArroyueloR22</url>
+  </article>
   <article mdate="2021-09-23" key="journals/algorithmica/GawrychowskiMSU19">
     <author orcid="0000-0002-6993-5440">Pawel Gawrychowski</author>
     <author>Oleg Merkurev</author>
@@ -3424,6 +3436,20 @@
     <journal>Theor. Comput. Sci.</journal>
     <ee>https://doi.org/10.1016/j.tcs.2021.07.011</ee>
     <url>db/journals/tcs/tcs887.html#SugaharaNIBT21</url>
+  </article>
+  <article mdate="2022-04-09" key="journals/tcs/BurcsiFLRS20">
+    <author>Péter Burcsi</author>
+    <author>Gabriele Fici</author>
+    <author orcid="0000-0002-3233-0691">Zsuzsanna Lipták</author>
+    <author>Rajeev Raman</author>
+    <author>Joe Sawada</author>
+    <title>Generating a Gray code for prefix normal words in amortized polylogarithmic time per word.</title>
+    <pages>86-99</pages>
+    <year>2020</year>
+    <volume>842</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2020.07.035</ee>
+    <url>db/journals/tcs/tcs842.html#BurcsiFLRS20</url>
   </article>
   <article mdate="2020-08-06" key="journals/tcs/GagieHNO20">
     <author orcid="0000-0003-3689-327X">Travis Gagie</author>
@@ -18952,6 +18978,17 @@
     <ee>https://doi.org/10.1016/0734-189X(83)90111-1</ee>
     <url>db/journals/cvgip/cvgip23.html#GonnetMW83</url>
   </article>
+  <article mdate="2022-05-25" key="journals/cacm/Navarro22">
+    <author>Gonzalo Navarro</author>
+    <title>The compression power of the BWT: technical perspective.</title>
+    <pages>90</pages>
+    <year>2022</year>
+    <volume>65</volume>
+    <journal>Commun. ACM</journal>
+    <number>6</number>
+    <ee>https://doi.org/10.1145/3531443</ee>
+    <url>db/journals/cacm/cacm65.html#Navarro22</url>
+  </article>
   <article mdate="2022-05-25" key="journals/cacm/KempaK22">
     <author>Dominik Kempa</author>
     <author>Tomasz Kociumaka</author>
@@ -22408,6 +22445,18 @@
     <crossref>conf/wea/2012</crossref>
     <url>db/conf/wea/sea2012.html#NavarroP12</url>
   </inproceedings>
+  <inproceedings mdate="2022-07-11" key="conf/wea/BrownG022">
+    <author>Nathaniel K. Brown</author>
+    <author>Travis Gagie</author>
+    <author>Massimiliano Rossi 0001</author>
+    <title>RLBWT Tricks.</title>
+    <pages>16:1-16:16</pages>
+    <year>2022</year>
+    <booktitle>SEA</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.SEA.2022.16</ee>
+    <crossref>conf/wea/2022</crossref>
+    <url>db/conf/wea/sea2022.html#BrownG022</url>
+  </inproceedings>
   <inproceedings mdate="2018-08-23" key="conf/wea/Prezza17">
     <author>Nicola Prezza</author>
     <title>A Framework of Dynamic Data Structures for String Processing.</title>
@@ -22571,6 +22620,18 @@
     <ee>https://doi.org/10.1007/978-3-642-20662-7_12</ee>
     <crossref>conf/wea/2011</crossref>
     <url>db/conf/wea/sea2011.html#BrisaboaCCMN11</url>
+  </inproceedings>
+  <inproceedings mdate="2022-07-11" key="conf/wea/GiulianiR022">
+    <author>Sara Giuliani</author>
+    <author>Giuseppe Romana</author>
+    <author>Massimiliano Rossi 0001</author>
+    <title>Computing Maximal Unique Matches with the r-Index.</title>
+    <pages>22:1-22:16</pages>
+    <year>2022</year>
+    <booktitle>SEA</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.SEA.2022.22</ee>
+    <crossref>conf/wea/2022</crossref>
+    <url>db/conf/wea/sea2022.html#GiulianiR022</url>
   </inproceedings>
   <inproceedings mdate="2022-01-25" key="conf/iwmm/WilsonJNB95">
     <author>Paul R. Wilson 0001</author>
@@ -34462,6 +34523,18 @@
     <crossref>conf/icalp/2009-1</crossref>
     <url>db/conf/icalp/icalp2009-1.html#FarzanM09</url>
   </inproceedings>
+  <inproceedings mdate="2022-06-28" key="conf/icalp/GhasemiJK22">
+    <author>Elahe Ghasemi</author>
+    <author>Vincent Jugé</author>
+    <author>Ghazal Khalighinejad</author>
+    <title>Galloping in Fast-Growth Natural Merge Sorts.</title>
+    <pages>68:1-68:19</pages>
+    <year>2022</year>
+    <booktitle>ICALP</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ICALP.2022.68</ee>
+    <crossref>conf/icalp/2022</crossref>
+    <url>db/conf/icalp/icalp2022.html#GhasemiJK22</url>
+  </inproceedings>
   <inproceedings mdate="2017-06-15" key="conf/icalp/MunroRRR03">
     <author>J. Ian Munro</author>
     <author>Rajeev Raman</author>
@@ -34474,6 +34547,18 @@
     <booktitle>ICALP</booktitle>
     <ee>https://doi.org/10.1007/3-540-45061-0_29</ee>
     <url>db/conf/icalp/icalp2003.html#MunroRRR03</url>
+  </inproceedings>
+  <inproceedings mdate="2022-06-28" key="conf/icalp/0002ST22">
+    <author>Arnab Ganguly 0002</author>
+    <author>Rahul Shah</author>
+    <author>Sharma V. Thankachan</author>
+    <title>Fully Functional Parameterized Suffix Trees in Compact Space.</title>
+    <pages>65:1-65:18</pages>
+    <year>2022</year>
+    <booktitle>ICALP</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ICALP.2022.65</ee>
+    <crossref>conf/icalp/2022</crossref>
+    <url>db/conf/icalp/icalp2022.html#0002ST22</url>
   </inproceedings>
   <inproceedings mdate="2017-05-19" key="conf/icalp/GonnetM82">
     <author>Gaston H. Gonnet</author>
@@ -34608,6 +34693,19 @@
     <ee type="oa">https://doi.org/10.4230/LIPIcs.ICALP.2021.79</ee>
     <crossref>conf/icalp/2021</crossref>
     <url>db/conf/icalp/icalp2021.html#Hartmann0ST21</url>
+  </inproceedings>
+  <inproceedings mdate="2022-06-28" key="conf/icalp/BringmannCFN22">
+    <author>Karl Bringmann</author>
+    <author>Alejandro Cassis</author>
+    <author>Nick Fischer</author>
+    <author>Vasileios Nakos</author>
+    <title>Improved Sublinear-Time Edit Distance for Preprocessed Strings.</title>
+    <pages>32:1-32:20</pages>
+    <year>2022</year>
+    <booktitle>ICALP</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ICALP.2022.32</ee>
+    <crossref>conf/icalp/2022</crossref>
+    <url>db/conf/icalp/icalp2022.html#BringmannCFN22</url>
   </inproceedings>
   <inproceedings mdate="2021-09-23" key="conf/icalp/DudekG18">
     <author orcid="0000-0003-2652-995X">Bartlomiej Dudek 0001</author>
@@ -34806,6 +34904,18 @@
     <crossref>conf/icalp/2021</crossref>
     <url>db/conf/icalp/icalp2021.html#BringmannD21</url>
   </inproceedings>
+  <inproceedings mdate="2022-06-28" key="conf/icalp/MathialaganWX22">
+    <author>Surya Mathialagan</author>
+    <author>Virginia Vassilevska Williams</author>
+    <author>Yinzhan Xu</author>
+    <title>Listing, Verifying and Counting Lowest Common Ancestors in DAGs: Algorithms and Fine-Grained Lower Bounds.</title>
+    <pages>94:1-94:20</pages>
+    <year>2022</year>
+    <booktitle>ICALP</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ICALP.2022.94</ee>
+    <crossref>conf/icalp/2022</crossref>
+    <url>db/conf/icalp/icalp2022.html#MathialaganWX22</url>
+  </inproceedings>
   <inproceedings mdate="2017-05-23" key="conf/icalp/BilleT09">
     <author>Philip Bille</author>
     <author>Mikkel Thorup</author>
@@ -34817,6 +34927,18 @@
     <crossref>conf/icalp/2009-1</crossref>
     <url>db/conf/icalp/icalp2009-1.html#BilleT09</url>
   </inproceedings>
+  <inproceedings mdate="2022-06-28" key="conf/icalp/NishimotoKT22">
+    <author>Takaaki Nishimoto</author>
+    <author>Shunsuke Kanda</author>
+    <author>Yasuo Tabei</author>
+    <title>An Optimal-Time RLBWT Construction in BWT-Runs Bounded Space.</title>
+    <pages>99:1-99:20</pages>
+    <year>2022</year>
+    <booktitle>ICALP</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ICALP.2022.99</ee>
+    <crossref>conf/icalp/2022</crossref>
+    <url>db/conf/icalp/icalp2022.html#NishimotoKT22</url>
+  </inproceedings>
   <inproceedings mdate="2019-10-15" key="conf/icalp/CliffordS16">
     <author>Raphaël Clifford</author>
     <author>Tatiana Starikovskaya</author>
@@ -34827,6 +34949,18 @@
     <ee type="oa">https://doi.org/10.4230/LIPIcs.ICALP.2016.20</ee>
     <crossref>conf/icalp/2016</crossref>
     <url>db/conf/icalp/icalp2016.html#CliffordS16</url>
+  </inproceedings>
+  <inproceedings mdate="2022-06-28" key="conf/icalp/0001KS22">
+    <author>Debarati Das 0001</author>
+    <author>Tomasz Kociumaka</author>
+    <author>Barna Saha</author>
+    <title>Improved Approximation Algorithms for Dyck Edit Distance and RNA Folding.</title>
+    <pages>49:1-49:20</pages>
+    <year>2022</year>
+    <booktitle>ICALP</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ICALP.2022.49</ee>
+    <crossref>conf/icalp/2022</crossref>
+    <url>db/conf/icalp/icalp2022.html#0001KS22</url>
   </inproceedings>
   <inproceedings mdate="2022-04-09" key="conf/inns/FerraginaV19">
     <author>Paolo Ferragina</author>
@@ -39949,6 +40083,18 @@
     <crossref>conf/dlt/2021</crossref>
     <url>db/conf/dlt/dlt2021.html#Pape-Lange21</url>
   </inproceedings>
+  <inproceedings mdate="2022-05-12" key="conf/dlt/BulgakovaFS22">
+    <author>Dora V. Bulgakova</author>
+    <author>Anna E. Frid</author>
+    <author>Jérémy Scanvic</author>
+    <title>Prefix Palindromic Length of the Sierpinski Word.</title>
+    <pages>78-89</pages>
+    <year>2022</year>
+    <booktitle>DLT</booktitle>
+    <ee>https://doi.org/10.1007/978-3-031-05578-2_6</ee>
+    <crossref>conf/dlt/2022</crossref>
+    <url>db/conf/dlt/dlt2022.html#BulgakovaFS22</url>
+  </inproceedings>
   <inproceedings mdate="2019-08-08" key="conf/dlt/Lejeune0R19">
     <author orcid="0000-0001-5620-8052">Marie Lejeune</author>
     <author>Julien Leroy 0002</author>
@@ -41332,6 +41478,17 @@
     <booktitle>WAE</booktitle>
     <url>db/conf/wae/wae1999.html#BrengelCFM99</url>
   </inproceedings>
+  <inproceedings mdate="2020-06-22" key="conf/csr/KosolobovM20">
+    <author>Dmitry Kosolobov</author>
+    <author>Oleg Merkurev</author>
+    <title>Optimal Skeleton Huffman Trees Revisited.</title>
+    <pages>276-288</pages>
+    <year>2020</year>
+    <booktitle>CSR</booktitle>
+    <ee>https://doi.org/10.1007/978-3-030-50026-9_20</ee>
+    <crossref>conf/csr/2020</crossref>
+    <url>db/conf/csr/csr2020.html#KosolobovM20</url>
+  </inproceedings>
   <inproceedings mdate="2017-05-17" key="conf/csr/Gawrychowski13">
     <author>Pawel Gawrychowski</author>
     <title>Alphabetic Minimax Trees in Linear Time.</title>
@@ -42221,6 +42378,28 @@
     <crossref>conf/icdt/2020</crossref>
     <url>db/conf/icdt/icdt2020.html#NavarroRR20</url>
   </inproceedings>
+  <inproceedings mdate="2022-06-01" key="conf/iwoca/KimC22">
+    <author>Sung-Hwan Kim</author>
+    <author>Hwan-Gue Cho</author>
+    <title>Practical Space-Efficient Index for Structural Pattern Matching.</title>
+    <pages>369-382</pages>
+    <year>2022</year>
+    <booktitle>IWOCA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-031-06678-8_27</ee>
+    <crossref>conf/iwoca/2022</crossref>
+    <url>db/conf/iwoca/iwoca2022.html#KimC22</url>
+  </inproceedings>
+  <inproceedings mdate="2022-06-13" key="conf/iwoca/RizzoM22">
+    <author orcid="0000-0002-2035-6309">Nicola Rizzo 0001</author>
+    <author orcid="0000-0003-4454-1493">Veli Mäkinen</author>
+    <title>Linear Time Construction of Indexable Elastic Founder Graphs.</title>
+    <pages>480-493</pages>
+    <year>2022</year>
+    <booktitle>IWOCA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-031-06678-8_35</ee>
+    <crossref>conf/iwoca/2022</crossref>
+    <url>db/conf/iwoca/iwoca2022.html#RizzoM22</url>
+  </inproceedings>
   <inproceedings mdate="2022-06-13" key="conf/iwoca/BannaiIKKP22">
     <author orcid="0000-0002-6856-5185">Hideo Bannai</author>
     <author orcid="0000-0001-9106-6192">Tomohiro I</author>
@@ -42249,6 +42428,17 @@
     <ee>https://www.wikidata.org/entity/Q90737123</ee>
     <crossref>conf/iwoca/2019</crossref>
     <url>db/conf/iwoca/iwoca2019.html#WatanabeNIBT19</url>
+  </inproceedings>
+  <inproceedings mdate="2022-06-13" key="conf/iwoca/MienoF22">
+    <author orcid="0000-0003-2922-9434">Takuya Mieno</author>
+    <author orcid="0000-0002-2547-1509">Mitsuru Funakoshi</author>
+    <title>Shortest Unique Palindromic Substring Queries in Semi-dynamic Settings.</title>
+    <pages>425-438</pages>
+    <year>2022</year>
+    <booktitle>IWOCA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-031-06678-8_31</ee>
+    <crossref>conf/iwoca/2022</crossref>
+    <url>db/conf/iwoca/iwoca2022.html#MienoF22</url>
   </inproceedings>
   <inproceedings mdate="2019-07-15" key="conf/iwoca/BataaPALP19">
     <author>Magsarjav Bataa</author>
@@ -42931,6 +43121,18 @@
     <crossref>conf/swat/2012</crossref>
     <url>db/conf/swat/swat2012.html#NekrichN12</url>
   </inproceedings>
+  <inproceedings mdate="2022-06-23" key="conf/swat/BilleGS22">
+    <author>Philip Bille</author>
+    <author>Inge Li Gørtz</author>
+    <author>Tord Stordalen</author>
+    <title>Predecessor on the Ultra-Wide Word RAM.</title>
+    <pages>18:1-18:15</pages>
+    <year>2022</year>
+    <booktitle>SWAT</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.SWAT.2022.18</ee>
+    <crossref>conf/swat/2022</crossref>
+    <url>db/conf/swat/swat2022.html#BilleGS22</url>
+  </inproceedings>
   <inproceedings mdate="2018-11-14" key="conf/swat/FarzanM08">
     <author>Arash Farzan</author>
     <author>J. Ian Munro</author>
@@ -42954,6 +43156,16 @@
     <booktitle>SWAT</booktitle>
     <url>db/conf/swat/swat88.html#CarlssonMP88</url>
     <ee>https://doi.org/10.1007/3-540-19487-8_1</ee>
+  </inproceedings>
+  <inproceedings mdate="2022-06-23" key="conf/swat/000122">
+    <author>Haitao Wang 0001</author>
+    <title>Unit-Disk Range Searching and Applications.</title>
+    <pages>32:1-32:17</pages>
+    <year>2022</year>
+    <booktitle>SWAT</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.SWAT.2022.32</ee>
+    <crossref>conf/swat/2022</crossref>
+    <url>db/conf/swat/swat2022.html#000122</url>
   </inproceedings>
   <inproceedings mdate="2017-05-23" key="conf/swat/MunroNST14">
     <author>J. Ian Munro</author>
@@ -43392,6 +43604,42 @@
     <crossref>conf/stoc/2020</crossref>
     <url>db/conf/stoc/stoc2020.html#KouckyS20</url>
   </inproceedings>
+  <inproceedings mdate="2022-06-14" key="conf/stoc/BringmannCFN22">
+    <author>Karl Bringmann</author>
+    <author>Alejandro Cassis</author>
+    <author>Nick Fischer</author>
+    <author>Vasileios Nakos</author>
+    <title>Almost-optimal sublinear-time edit distance in the low distance regime.</title>
+    <pages>1102-1115</pages>
+    <year>2022</year>
+    <booktitle>STOC</booktitle>
+    <ee>https://doi.org/10.1145/3519935.3519990</ee>
+    <crossref>conf/stoc/2022</crossref>
+    <url>db/conf/stoc/stoc2022.html#BringmannCFN22</url>
+  </inproceedings>
+  <inproceedings mdate="2022-06-14" key="conf/stoc/KempaK22">
+    <author>Dominik Kempa</author>
+    <author>Tomasz Kociumaka</author>
+    <title>Dynamic suffix array with polylogarithmic queries and updates.</title>
+    <pages>1657-1670</pages>
+    <year>2022</year>
+    <booktitle>STOC</booktitle>
+    <ee>https://doi.org/10.1145/3519935.3520061</ee>
+    <crossref>conf/stoc/2022</crossref>
+    <url>db/conf/stoc/stoc2022.html#KempaK22</url>
+  </inproceedings>
+  <inproceedings mdate="2022-06-14" key="conf/stoc/EnglertMV22">
+    <author>Matthias Englert</author>
+    <author>Nicolaos Matsakis</author>
+    <author>Pavel Veselý</author>
+    <title>Improved approximation guarantees for shortest superstrings using cycle classification by overlap to length ratios.</title>
+    <pages>317-330</pages>
+    <year>2022</year>
+    <booktitle>STOC</booktitle>
+    <ee>https://doi.org/10.1145/3519935.3520001</ee>
+    <crossref>conf/stoc/2022</crossref>
+    <url>db/conf/stoc/stoc2022.html#EnglertMV22</url>
+  </inproceedings>
   <inproceedings mdate="2019-06-22" key="conf/stoc/Yu19">
     <author>Huacheng Yu</author>
     <title>Optimal succinct rank data structure via approximate nonnegative tensor decomposition.</title>
@@ -43401,6 +43649,20 @@
     <ee>https://doi.org/10.1145/3313276.3316352</ee>
     <crossref>conf/stoc/2019</crossref>
     <url>db/conf/stoc/stoc2019.html#Yu19</url>
+  </inproceedings>
+  <inproceedings mdate="2022-06-14" key="conf/stoc/BenderFKKL22">
+    <author>Michael A. Bender</author>
+    <author>Martin Farach-Colton</author>
+    <author>John Kuszmaul</author>
+    <author>William Kuszmaul</author>
+    <author>Mingmou Liu</author>
+    <title>On the optimal time/space tradeoff for hash tables.</title>
+    <pages>1284-1297</pages>
+    <year>2022</year>
+    <booktitle>STOC</booktitle>
+    <ee>https://doi.org/10.1145/3519935.3519969</ee>
+    <crossref>conf/stoc/2022</crossref>
+    <url>db/conf/stoc/stoc2022.html#BenderFKKL22</url>
   </inproceedings>
   <inproceedings mdate="2020-06-15" key="conf/stoc/KempaP18">
     <author orcid="0000-0003-2286-7417">Dominik Kempa</author>
@@ -43422,6 +43684,18 @@
     <booktitle>STOC</booktitle>
     <url>db/conf/stoc/stoc87.html#Munro87</url>
     <ee>https://doi.org/10.1145/28395.28436</ee>
+  </inproceedings>
+  <inproceedings mdate="2022-06-14" key="conf/stoc/YaacovCY22">
+    <author>Inbar Ben Yaacov</author>
+    <author>Gil Cohen</author>
+    <author>Tal Yankovitz</author>
+    <title>Explicit binary tree codes with sub-logarithmic size alphabet.</title>
+    <pages>595-608</pages>
+    <year>2022</year>
+    <booktitle>STOC</booktitle>
+    <ee>https://doi.org/10.1145/3519935.3520033</ee>
+    <crossref>conf/stoc/2022</crossref>
+    <url>db/conf/stoc/stoc2022.html#YaacovCY22</url>
   </inproceedings>
   <inproceedings mdate="2020-06-09" key="conf/stoc/Yu20">
     <author>Huacheng Yu</author>
