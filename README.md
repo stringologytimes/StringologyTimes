@@ -18,6 +18,7 @@
 
 ## Recent accepted papers for stringologist
 
+
 ### 2022/07/04 [FOCS 2022](https://focs2022.eecs.berkeley.edu/accepted_papers.html)
 
 1. Online List Labeling: Breaking the $\log^2 n$ Barrier.  
@@ -32,6 +33,13 @@ Panagiotis Charalampopoulos (Reichman University, Herzliya, Israel and Birkbeck,
 Elazar Goldenberg (The Academic College of Tel Aviv-Yafo), Tomasz Kociumaka (UC Berkeley), Robert Krauthgamer (Weizmann Institute of Science), Barna Saha (University of California San Diego).  
 6. Strong XOR Lemma for Communication with Bounded Rounds.  
 Huacheng Yu (Princeton University).  
+
+### ## 2022/06/21 [MFCS 2022](https://www.ac.tuwien.ac.at/mfcs2022/accepted/)
+
+1. Streaming word problems  
+Markus Lohrey and Lukas Lück  
+2. On Uniformization in the Full Binary Tree  
+Alexander Rabinovich  
 
 ### 2022/06/18 [ESA 2022](https://algo2022.eu/esa/#papers)
 
