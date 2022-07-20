@@ -34,7 +34,7 @@ Elazar Goldenberg (The Academic College of Tel Aviv-Yafo), Tomasz Kociumaka (UC 
 6. Strong XOR Lemma for Communication with Bounded Rounds.  
 Huacheng Yu (Princeton University).  
 
-### ## 2022/06/21 [MFCS 2022](https://www.ac.tuwien.ac.at/mfcs2022/accepted/)
+### 2022/06/21 [MFCS 2022](https://www.ac.tuwien.ac.at/mfcs2022/accepted/)
 
 1. Streaming word problems  
 Markus Lohrey and Lukas Lück  
