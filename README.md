@@ -11,7 +11,10 @@
 
 ## Statistics
 
-![Test](https://stringologytimes.github.io/StringologyTimes/docs/output/paper_statistics_for_each_year.png)
+![paper_statistics_for_each_year](https://stringologytimes.github.io/StringologyTimes/docs/output/paper_statistics_for_each_year.png)
+
+![checker_table_2022_2011](https://stringologytimes.github.io/StringologyTimes/docs/output/checker_table_2022_2011.png)
+
 
 ## Recent accepted papers for stringologist
 
