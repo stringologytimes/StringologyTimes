@@ -1,7 +1,18 @@
 # arXiv Papers  
 ## 2022  
+### 2022/5  
+  1. [Substring Complexities on Run-length Compressed Strings.](https://arxiv.org/abs/2205.12421)  
+  2. [A New Class of String Transformations for Compressed Text Indexing.](https://arxiv.org/abs/2205.05643)  
+  
+### 2022/4  
+  1. [Shortest Unique Palindromic Substring Queries in Semi-dynamic Settings.](https://arxiv.org/abs/2204.07327)  
+  2. [Faster Pattern Matching under Edit Distance.](https://arxiv.org/abs/2204.03087)  
+  3. [Efficient Construction of the BWT for Repetitive Text Using String Compression.](https://arxiv.org/abs/2204.05969)  
+  4. [An n Hk-compressed searchable partial-sums data structure for static sequences of sublogarithmic positive integers.](https://arxiv.org/abs/2204.07916)  
+  
 ### 2022/3  
   1. [Numeric Lyndon-based feature embedding of sequencing reads for machine learning approaches.](https://arxiv.org/abs/2202.13884)  
+  2. [Improving Matrix-vector Multiplication via Lossless Grammar-Compressed Matrices.](https://arxiv.org/abs/2203.14540)  
   
 ### 2022/2  
   1. [Logarithmic equal-letter runs for BWT of purely morphic words.](https://arxiv.org/abs/2202.02609)  

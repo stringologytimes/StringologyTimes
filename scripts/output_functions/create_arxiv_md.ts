@@ -2,14 +2,18 @@
 import { DBLPArticle, DBLPElement, DBLPInproceedings, DBLPElementClass } from "../basic_functions/dblp_element"
 import { ArxivArticle } from "../basic_functions/arxiv_xml"
 
+function getNormalizedURL(paper : DBLPArticle) : string {
+    return paper.ee[0].replace("doi.org/10.48550/arXiv.", "arxiv.org/abs/");
+}
 function createArxivYearMonthMD(_papers: DBLPArticle[], year : number, monthMap : Map<string, number>) : string[] {
     const lines: string[] = new Array();
     for(var i = 12; i >= 1 ;i--){
-        const list = _papers.filter((v) => v.year == year && monthMap.has(v.ee[0]) && monthMap.get(v.ee[0])! == i);
+        const list = _papers.filter((v) => v.year == year && monthMap.has(getNormalizedURL(v)) && monthMap.get(getNormalizedURL(v))! == i);
+
         if(list.length > 0){
             lines.push(`### ${year}/${i}  `);
             list.forEach((v, x) =>{
-                lines.push(`  ${x+1}. [${DBLPElement.get_sanitized_title(v.title)}](${v.ee[0]})  `);
+                lines.push(`  ${x+1}. [${DBLPElement.get_sanitized_title(v.title)}](${getNormalizedURL(v)})  `);
             })
             lines.push(`  `);
 
@@ -25,6 +29,7 @@ export function createArxivMD(_papers: DBLPArticle[], arxivArticles : ArxivArtic
     arxivArticles.forEach((v) =>{
         monthSet.set(v.url, v.date.getMonth() + 1);
     })
+
 
     const lines: string[] = new Array();
     lines.push(`# arXiv Papers  `)

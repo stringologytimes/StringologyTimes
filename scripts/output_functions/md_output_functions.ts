@@ -35,7 +35,7 @@ export function write_arxiv_list_md(dblpElements: DBLPElementClass[], arxivArtic
     const arxivMDText = createArxivMD(arxivPapers, arxivArticles).join("\r\n");
     try {
         fs.writeFileSync(outputFilePath, arxivMDText);
-        console.log(`Outputted markdown file for arXiv`);
+        console.log(`Outputted markdown file for arXiv / ${outputFilePath}`);
 
     } catch (e) {
         console.log(e);
