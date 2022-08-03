@@ -3,6 +3,8 @@ $7zip = "C:\Program Files\7-Zip\7z.exe"
 $7zipArg = "x -o./data/external/ ./data/external/dblp.xml.gz"
 
 if (!(Test-Path ./data/external/dblp.xml.gz)){
+    echo "Downloading... https://dblp.uni-trier.de/xml/dblp.xml.gz"
+
     Invoke-WebRequest -Uri https://dblp.uni-trier.de/xml/dblp.xml.gz -OutFile ./data/external/dblp.xml.gz
 }else{
     echo "Skipped the download of the file from https://dblp.uni-trier.de/xml/dblp.xml.gz"
@@ -10,6 +12,8 @@ if (!(Test-Path ./data/external/dblp.xml.gz)){
 Start-Process -FilePath $7zip -ArgumentList $7zipArg -NoNewWindow -Wait
 
 if (!(Test-Path ./data/external/dblp.dtd)){
+    echo "Downloading... https://dblp.uni-trier.de/xml/dblp.dtd"
+
     Invoke-WebRequest -Uri https://dblp.uni-trier.de/xml/dblp.dtd -OutFile ./data/external/dblp.dtd    
 }
 else{

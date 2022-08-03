@@ -3,6 +3,15 @@
 
 ## Contents
 - [arXiv List for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/arxiv_list)
+- [Papers for Stringologist (2010)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2010)
+- [Papers for Stringologist (2011)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2011)
+- [Papers for Stringologist (2012)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2012)
+- [Papers for Stringologist (2013)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2013)
+- [Papers for Stringologist (2014)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2014)
+- [Papers for Stringologist (2015)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2015)
+- [Papers for Stringologist (2016)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2016)
+- [Papers for Stringologist (2017)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2017)
+- [Papers for Stringologist (2018)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2018)
 - [Papers for Stringologist (2019)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2019)
 - [Papers for Stringologist (2020)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2020)
 - [Papers for Stringologist (2021)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2021)
