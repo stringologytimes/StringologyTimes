@@ -28,6 +28,31 @@
 
 ## Recent accepted papers for stringologist
 
+### 2022/09/07 [ISAAC 2022](https://isa.hanyang.ac.kr/isaac2022/apl.html)
+
+1. On the Complexity of Tree Edit Distance with Variables  
+Tatsuya Akutsu, Tomoya Mori, Naotoshi Nakamura, Satoshi Kozawa, Yuhei Ueno and Thomas N. Sato  
+2. Succinct List Indexing in Optimal Time  
+William Holland  
+3. Simple Order-isomorphic Matching Index with Expected Compact Space  
+Sung-Hwan Kim and Hwan-Gue Cho  
+4. Computing palindromes on a trie in linear time  
+Takuya Mieno, Mitsuru Funakoshi and Shunsuke Inenaga  
+5. External-memory dictionaries with worst-case update cost  
+Rathish Das, John Iacono and Yakov Nekrich  
+
+### 2022/08/31 [LATIN 2022](https://pakal.cs.cinvestav.mx/latin2022/accepted_latin_2022.html)
+
+1. Elastic Degenerate String Matching with 1 Edit  
+Giulia Bernardini, Estéban Gabory, Solon Pissis, Leen Stougie,  Michelle Sweering and Wiktor Zuba  
+2. String Attractors and Infinite Words  
+Antonio Restivo, Giuseppe Romana and Marinella Sciortino  
+3. Near-Optimal Search Time in $\delta$-Optimal Space  
+Tomasz Kociumaka, Gonzalo Navarro and Francisco Olivares  
+4. Space-efficient data structure for next/previous larger/smaller value queries  
+Seungbum Jo and Geunho Kim  
+5. Patterns in ordered (random) matchings  
+Andrzej Dudek, Jaroslaw Grytczuk and Andrzej Rucinski  
 
 ### 2022/07/04 [FOCS 2022](https://focs2022.eecs.berkeley.edu/accepted_papers.html)
 
