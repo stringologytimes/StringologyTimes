@@ -30,9 +30,10 @@ export function write_complete_md(dblpElements: DBLPElementClass[], outputFilePa
     }
 }
 
-export function write_arxiv_list_md(dblpElements: DBLPElementClass[], arxivArticles: ArxivArticle[], outputFilePath: string): void {
-    const arxivPapers = (<DBLPArticle[]>dblpElements.filter((v) => v instanceof DBLPArticle)).filter((v) => v.journal == "CoRR");
-    const arxivMDText = createArxivMD(arxivPapers, arxivArticles).join("\r\n");
+export function write_arxiv_list_md(arxivArticles: ArxivArticle[], outputFilePath: string): void {
+    //const arxivPapers = (<DBLPArticle[]>dblpElements.filter((v) => v instanceof DBLPArticle)).filter((v) => v.journal == "CoRR");
+
+    const arxivMDText = createArxivMD(arxivArticles).join("\r\n");
     try {
         fs.writeFileSync(outputFilePath, arxivMDText);
         console.log(`Outputted markdown file for arXiv / ${outputFilePath}`);

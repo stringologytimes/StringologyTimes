@@ -19,6 +19,6 @@ for(let i= 2010;i<=2022;i++){
 
 write_list_year_md(yearList, dblpElements, "docs/output/list");
 write_complete_md(dblpElements, `docs/output/complete_list.md`);
-write_arxiv_list_md(dblpElements, arxivArticles, `docs/output/arxiv_list.md`);
+write_arxiv_list_md(arxivArticles, `docs/output/arxiv_list.md`);
 append_registered_papers_info(dblpElements, arxivArticles, `data/stringology_times_history.csv`);
 writeGenrePaperNumberPerYearFile(dblpElements, arxivArticles, `data/paper_statistics_for_each_year.csv`);
