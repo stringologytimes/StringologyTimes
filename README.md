@@ -28,6 +28,13 @@
 
 ## Recent accepted papers for stringologist
 
+### 2022/09/30 [SOFSEM 2023](https://ics.science.upjs.sk/sofsem2023/accepted-papers/)
+
+1. The k-center Problem for Classes of Cyclic Words  
+Duncan Adamson, Argyrios Deligkas, Vladimir Gusev and Igor Potapov.  
+2. Yuuki Yonemoto, Yuto Nakashima, Shunsuke Inenaga and Hideo Bannai.  
+Space-Efficient STR-IC-LCS Computation  
+
 ### 2022/09/07 [ISAAC 2022](https://isa.hanyang.ac.kr/isaac2022/apl.html)
 
 1. On the Complexity of Tree Edit Distance with Variables  

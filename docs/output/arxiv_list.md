@@ -871,6 +871,7 @@
   1. [String Periods in the Order-Preserving Model.](https://arxiv.org/abs/1801.01404)  
   2. [Longest Common Prefixes with k-Errors and Applications.](https://arxiv.org/abs/1801.04425)  
   3. [On Periodicity Lemma for Partial Words.](https://arxiv.org/abs/1801.01096)  
+  4. [Sliding Suffix Tree.](https://arxiv.org/abs/1801.07449)  
   
   
 ## 2017  

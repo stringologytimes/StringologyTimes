@@ -39867,4 +39867,1214 @@ string, and the alphabets of the static and parameter characters, respectively.
     <link title="pdf" href="http://arxiv.org/pdf/2206.15100v1" rel="related" type="application/pdf"/>
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2207.14592">
+    <id>http://arxiv.org/abs/2207.14592v1</id>
+    <updated>2022-07-29T10:21:05Z</updated>
+    <published>2022-07-29T10:21:05Z</published>
+    <title>Pattern matching algorithms in Blockchain for network fees reduction</title>
+    <summary>  Blockchain received a vast amount of attention in recent years and is still
+growing. The second generation of blockchain, such as Ethereum, allows
+execution of almost any program in Ethereum Virtual Machine (EVM), making it a
+global protocol for distributed applications. The code deployment and each
+operation performed in EVM cost the network fee called gas, which price varies
+and can be significant. That is why code optimization and well-chosen
+algorithms are crucial in programming on the blockchain. This paper evaluates
+the gas usage of several exact pattern matching algorithms on the Ethereum
+Virtual Machine. We also propose an efficient implementation of the algorithms
+in the Solidity/YUL language. We evaluate the gas fees of all the algorithms
+for different parameters (such as pattern length, alphabet size, and text
+size). We show a significant gas fee and execution time reduction with up to
+22-fold lower gas usage and 55-fold speed-up comparing to StringUtils (a
+popular Solidity string library).
+</summary>
+    <author>
+      <name>Robert Susik</name>
+    </author>
+    <author>
+      <name>Robert Nowotniak</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Source codes, and datasets:
+  https://github.com/rsusik/pattern-matching-in-blockchain</arxiv:comment>
+    <link href="http://arxiv.org/abs/2207.14592v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2207.14592v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68W32, 68M14" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="K.4.0; J.0" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2207.13870">
+    <id>http://arxiv.org/abs/2207.13870v1</id>
+    <updated>2022-07-28T03:43:18Z</updated>
+    <published>2022-07-28T03:43:18Z</published>
+    <title>Engineering faster double-array Aho-Corasick automata</title>
+    <summary>  Multiple pattern matching in strings is a fundamental problem in text
+processing applications such as regular expressions or tokenization. This paper
+studies efficient implementations of \emph{double-array Aho--Corasick automata
+(DAACs)}, data structures for quickly performing the multiple pattern matching.
+The practical performance of DAACs is improved by carefully designing the data
+structure, and many implementation techniques have been proposed thus far. A
+problem in DAACs is that their ideas are not aggregated. Since comprehensive
+descriptions and experimental analyses are unavailable, engineers face
+difficulties in implementing an efficient DAAC.
+  In this paper, we review implementation techniques for DAACs and provide a
+comprehensive description of them. We also propose several new techniques for
+further improvement. We conduct exhaustive experiments through real-world
+datasets and reveal the best combination of techniques to achieve a higher
+performance in DAACs. The best combination is different from those used in the
+most popular libraries of DAACs, which demonstrates that their performance can
+be further enhanced. On the basis of our experimental analysis, we developed a
+new Rust library for fast multiple pattern matching using DAACs, named
+\emph{Daachorse}, as open-source software at
+\url{https://github.com/daac-tools/daachorse}. Experiments demonstrate that
+Daachorse outperforms other AC-automaton implementations, indicating its
+suitability as a fast alternative for multiple pattern matching in many
+applications.
+</summary>
+    <author>
+      <name>Shunsuke Kanda</name>
+    </author>
+    <author>
+      <name>Koichi Akabe</name>
+    </author>
+    <author>
+      <name>Yusuke Oda</name>
+    </author>
+    <link href="http://arxiv.org/abs/2207.13870v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2207.13870v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2207.11954">
+    <id>http://arxiv.org/abs/2207.11954v1</id>
+    <updated>2022-07-25T07:43:07Z</updated>
+    <published>2022-07-25T07:43:07Z</published>
+    <title>Simple O(1) Query Algorithm for Level Ancestors</title>
+    <summary>  This note describes a very simple O(1) query time algorithm for finding level
+ancestors. This is basically a serial (re)-implementation of the parallel
+algorithm.
+  Earlier, Menghani and Matani described another simple algorithm; however,
+their algorithm takes O(log n) time to answer queries.
+  Although the basic algorithm has preprocessing time of O(n\log n), by having
+additional levels, the preprocessing time can be reduced to almost linear or
+linear.
+</summary>
+    <author>
+      <name>Sanjeev Saxena</name>
+    </author>
+    <link href="http://arxiv.org/abs/2207.11954v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2207.11954v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2207.10556">
+    <id>http://arxiv.org/abs/2207.10556v2</id>
+    <updated>2022-07-25T11:28:02Z</updated>
+    <published>2022-07-21T15:56:16Z</published>
+    <title>Tight Bounds for Monotone Minimal Perfect Hashing</title>
+    <summary>  The monotone minimal perfect hash function (MMPHF) problem is the following
+indexing problem. Given a set $S= \{s_1,\ldots,s_n\}$ of $n$ distinct keys from
+a universe $U$ of size $u$, create a data structure $DS$ that answers the
+following query:
+  \[ RankOp(q) = \text{rank of } q \text{ in } S \text{ for all } q\in S
+  ~\text{ and arbitrary answer otherwise.}
+  \]
+  Solutions to the MMPHF problem are in widespread use in both theory and
+practice.
+  The best upper bound known for the problem encodes $DS$ in $O(n\log\log\log
+u)$ bits and performs queries in $O(\log u)$ time. It has been an open problem
+to either improve the space upper bound or to show that this somewhat odd
+looking bound is tight.
+  In this paper, we show the latter: specifically that any data structure
+(deterministic or randomized) for monotone minimal perfect hashing of any
+collection of $n$ elements from a universe of size $u$ requires $\Omega(n \cdot
+\log\log\log{u})$ expected bits to answer every query correctly.
+  We achieve our lower bound by defining a graph $\mathbf{G}$ where the nodes
+are the possible ${u \choose n}$ inputs and where two nodes are adjacent if
+they cannot share the same $DS$. The size of $DS$ is then lower bounded by the
+log of the chromatic number of $\mathbf{G}$. Finally, we show that the
+fractional chromatic number (and hence the chromatic number) of $\mathbf{G}$ is
+lower bounded by $2^{\Omega(n \log\log\log u)}$.
+</summary>
+    <author>
+      <name>Sepehr Assadi</name>
+    </author>
+    <author>
+      <name>Martin Farach-Colton</name>
+    </author>
+    <author>
+      <name>William Kuszmaul</name>
+    </author>
+    <link href="http://arxiv.org/abs/2207.10556v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2207.10556v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2207.10171">
+    <id>http://arxiv.org/abs/2207.10171v1</id>
+    <updated>2022-07-20T19:49:15Z</updated>
+    <published>2022-07-20T19:49:15Z</published>
+    <title>Pseudoperiodic Words and a Question of Shevelev</title>
+    <summary>  We generalize the familiar notion of periodicity in sequences to a new kind
+of pseudoperiodicity, and we prove some basic results about it. We revisit the
+results of a 2012 paper of Shevelev and reprove his results in a simpler and
+more unified manner, and provide a complete answer to one of his previously
+unresolved questions. We consider finding words with specific pseudoperiods and
+having the smallest possible critical exponent. Finally, we consider the
+problem of determining whether a finite word is pseudoperiodic of a given size,
+and show that it is NP-complete.
+</summary>
+    <author>
+      <name>Joseph Meleshko</name>
+    </author>
+    <author>
+      <name>Pascal Ochem</name>
+    </author>
+    <author>
+      <name>Jeffrey Shallit</name>
+    </author>
+    <author>
+      <name>Sonja Linghui Shan</name>
+    </author>
+    <link href="http://arxiv.org/abs/2207.10171v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2207.10171v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2207.09937">
+    <id>http://arxiv.org/abs/2207.09937v1</id>
+    <updated>2022-07-20T14:24:56Z</updated>
+    <published>2022-07-20T14:24:56Z</published>
+    <title>Abelian Combinatorics on Words: a Survey</title>
+    <summary>  We survey known results and open problems in abelian combinatorics on words.
+Abelian combinatorics on words is the extension to the commutative setting of
+the classical theory of combinatorics on words, i.e., the extension based on
+the equivalence relation defined in the set of words by having the same Parikh
+vector, that is, the same number of occurrences of each letter of the alphabet
+-- called \emph{abelian equivalence}. In the past few years, there was a lot of
+research on abelian analogues of classical definitions and properties in
+combinatorics on words. This survey aims to gather these results.
+</summary>
+    <author>
+      <name>Gabriele Fici</name>
+    </author>
+    <author>
+      <name>Svetlana Puzynina</name>
+    </author>
+    <link href="http://arxiv.org/abs/2207.09937v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2207.09937v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2207.09201">
+    <id>http://arxiv.org/abs/2207.09201v2</id>
+    <updated>2022-09-22T13:00:01Z</updated>
+    <published>2022-07-19T11:22:32Z</published>
+    <title>Subsequences in Bounded Ranges: Matching and Analysis Problems</title>
+    <summary>  In this paper, we consider a variant of the classical algorithmic problem of
+checking whether a given word $v$ is a subsequence of another word $w$. More
+precisely, we consider the problem of deciding, given a number $p$ (defining a
+range-bound) and two words $v$ and $w$, whether there exists a factor
+$w[i:i+p-1]$ (or, in other words, a range of length $p$) of $w$ having $v$ as
+subsequence (i.\,e., $v$ occurs as a subsequence in the bounded range
+$w[i:i+p-1]$). We give matching upper and lower quadratic bounds for the time
+complexity of this problem. Further, we consider a series of algorithmic
+problems in this setting, in which, for given integers $k$, $p$ and a word $w$,
+we analyse the set $p$-Subseq$_{k}(w)$ of all words of length $k$ which occur
+as subsequence of some factor of length $p$ of $w$. Among these, we consider
+the $k$-universality problem, the $k$-equivalence problem, as well as problems
+related to absent subsequences. Surprisingly, unlike the case of the classical
+model of subsequences in words where such problems have efficient solutions in
+general, we show that most of these problems become intractable in the new
+setting when subsequences in bounded ranges are considered. Finally, we provide
+an example of how some of our results can be applied to subsequence matching
+problems for circular words.
+</summary>
+    <author>
+      <name>Maria Kosche</name>
+    </author>
+    <author>
+      <name>Tore Koß</name>
+    </author>
+    <author>
+      <name>Florin Manea</name>
+    </author>
+    <author>
+      <name>Viktoriya Pak</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Extended version of a paper which will appear in the proceedings of
+  the 16th International Conference on Reachability Problems, RP 2022</arxiv:comment>
+    <link href="http://arxiv.org/abs/2207.09201v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2207.09201v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2207.08120">
+    <id>http://arxiv.org/abs/2207.08120v1</id>
+    <updated>2022-07-17T09:08:13Z</updated>
+    <published>2022-07-17T09:08:13Z</published>
+    <title>On the Practical Power of Automata in Pattern Matching</title>
+    <summary>  The classical pattern matching paradigm is that of seeking occurrences of one
+string - the pattern, in another - the text, where both strings are drawn from
+an alphabet set $\Sigma$. Assuming the text length is $n$ and the pattern
+length is $m$, this problem can naively be solved in time $O(nm)$. In Knuth,
+Morris and Pratt's seminal paper of 1977, an automaton, was developed that
+allows solving this problem in time $O(n)$ for any alphabet.
+  This automaton, which we will refer to as the {\em KMP-automaton}, has proven
+useful in solving many other problems. A notable example is the {\em
+parameterized pattern matching} model. In this model, a consistent renaming of
+symbols from $\Sigma$ is allowed in a match. The parameterized matching
+paradigm has proven useful in problems in software engineering, computer
+vision, and other applications.
+  It has long been suspected that for texts where the symbols are uniformly
+random, the naive algorithm will perform as well as the KMP algorithm. In this
+paper we examine the practical efficiency of the KMP algorithm vs. the naive
+algorithm on a randomly generated text. We analyse the time under various
+parameters, such as alphabet size, pattern length, and the distribution of
+pattern occurrences in the text. We do this for both the original exact
+matching problem and parameterized matching. While the folklore wisdom is
+vindicated by these findings for the exact matching case, surprisingly, the KMP
+algorithm works significantly faster than the naive in the parameterized
+matching case.
+  We check this hypothesis for DNA texts, and observe a similar behaviour as in
+the random text. We also show a very structured case where the automaton is
+much more efficient.
+</summary>
+    <author>
+      <name>Ora Amir</name>
+    </author>
+    <author>
+      <name>Amihood Amir</name>
+    </author>
+    <author>
+      <name>Aviezri Fraenkel</name>
+    </author>
+    <author>
+      <name>David Sarne</name>
+    </author>
+    <link href="http://arxiv.org/abs/2207.08120v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2207.08120v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="F.2.2" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2207.07477">
+    <id>http://arxiv.org/abs/2207.07477v1</id>
+    <updated>2022-07-15T13:46:16Z</updated>
+    <published>2022-07-15T13:46:16Z</published>
+    <title>Matching Patterns with Variables Under Edit Distance</title>
+    <summary>  A pattern $\alpha$ is a string of variables and terminal letters. We say that
+$\alpha$ matches a word $w$, consisting only of terminal letters, if $w$ can be
+obtained by replacing the variables of $\alpha$ by terminal words. The matching
+problem, i.e., deciding whether a given pattern matches a given word, was
+heavily investigated: it is NP-complete in general, but can be solved
+efficiently for classes of patterns with restricted structure. If we are
+interested in what is the minimum Hamming distance between $w$ and any word $u$
+obtained by replacing the variables of $\alpha$ by terminal words (so matching
+under Hamming distance), one can devise efficient algorithms and matching
+conditional lower bounds for the class of regular patterns (in which no
+variable occurs twice), as well as for classes of patterns where we allow
+unbounded repetitions of variables, but restrict the structure of the pattern,
+i.e., the way the occurrences of different variables can be interleaved.
+Moreover, under Hamming distance, if a variable occurs more than once and its
+occurrences can be interleaved arbitrarily with those of other variables, even
+if each of these occurs just once, the matching problem is intractable. In this
+paper, we consider the problem of matching patterns with variables under edit
+distance. We still obtain efficient algorithms and matching conditional lower
+bounds for the class of regular patterns, but show that the problem becomes, in
+this case, intractable already for unary patterns, consisting of repeated
+occurrences of a single variable interleaved with terminals.
+</summary>
+    <author>
+      <name>Paweł Gawrychowski</name>
+    </author>
+    <author>
+      <name>Florin Manea</name>
+    </author>
+    <author>
+      <name>Stefan Siemer</name>
+    </author>
+    <link href="http://arxiv.org/abs/2207.07477v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2207.07477v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="1801.07449">
+    <id>http://arxiv.org/abs/1801.07449v3</id>
+    <updated>2018-09-06T11:56:57Z</updated>
+    <published>2018-01-23T09:25:19Z</published>
+    <title>Sliding Suffix Tree using LCA</title>
+    <summary>  We consider a sliding window $W$ over a stream of characters from some
+alphabet of constant size. The user wants to perform deterministic substring
+matching on the current sliding window content and obtain positions of the
+matches. We present an indexed version of the sliding window using the suffix
+tree, the link tree and the lowest common ancestor. The data structure of size
+$\Theta(|W|)$ has optimal time queries $\Theta(m+occ)$ and amortized constant
+time updates, where $m$ is the length of the query string and $occ$ is the
+number of its occurrences.
+</summary>
+    <author>
+      <name>Andrej Brodnik</name>
+    </author>
+    <author>
+      <name>Matevž Jekovec</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">A simplified version with improved maintenance and without using the
+  LCA is available at https://doi.org/10.3390/a11080118</arxiv:comment>
+    <link href="http://arxiv.org/abs/1801.07449v3" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1801.07449v3" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="F.2.2" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.09351">
+    <id>http://arxiv.org/abs/2208.09351v1</id>
+    <updated>2022-08-19T14:02:53Z</updated>
+    <published>2022-08-19T14:02:53Z</published>
+    <title>Merging Sorted Lists of Similar Strings</title>
+    <summary>  Merging $T$ sorted, non-redundant lists containing $M$ elements into a single
+sorted, non-redundant result of size $N \ge M/T$ is a classic problem typically
+solved practically in $O(M \log T)$ time with a priority-queue data structure
+the most basic of which is the simple *heap*. We revisit this problem in the
+situation where the list elements are *strings* and the lists contain many
+*identical or nearly identical elements*. By keeping simple auxiliary
+information with each heap node, we devise an $O(M \log T+S)$ worst-case method
+that performs no more character comparisons than the sum of the lengths of all
+the strings $S$, and another $O(M \log (T/ \bar e)+S)$ method that becomes
+progressively more efficient as a function of the fraction of equal elements
+$\bar e = M/N$ between input lists, reaching linear time when the lists are all
+identical. The methods perform favorably in practice versus an alternate
+formulation based on a trie.
+</summary>
+    <author>
+      <name>Gene Myers</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages. Associated code at
+  https://github.com/thegenemyers/STRING.HEAP</arxiv:comment>
+    <link href="http://arxiv.org/abs/2208.09351v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.09351v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68W40 (Primary) 68P05, 68P10, 68W05, 68W32 (Secondary)" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="E.1; F.2.2" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.08913">
+    <id>http://arxiv.org/abs/2208.08913v1</id>
+    <updated>2022-08-18T15:29:11Z</updated>
+    <published>2022-08-18T15:29:11Z</published>
+    <title>Walking on Words</title>
+    <summary>  Take any word over some alphabet. If it is non-empty, go to any position and
+print out the letter being scanned. Now repeat the following any number of
+times (possibly zero): either stay at the current letter, or move one letter
+leftwards (if possible) or move one letter rightwards (if possible); then print
+out the letter being scanned. In effect, we are going for a walk on the input
+word. Let u be the infix of the input word comprising the visited positions,
+and w the word printed out (empty if the input word is). Since any unvisited
+prefix or suffix of the input word cannot influence w, we may as well discard
+them, and say that u generates w. We ask: given a word w, what words u generate
+it? The answer is surprising. Call u a primitive generator of w if u generates
+w and is not generated by any word shorter than u. We show that, excepting some
+degenerate cases, every word has precisely two primitive generators.
+</summary>
+    <author>
+      <name>Ian Pratt-Hartmann</name>
+    </author>
+    <link href="http://arxiv.org/abs/2208.08913v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.08913v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68Q42" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="F.4.2; G.2.1" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.08823">
+    <id>http://arxiv.org/abs/2208.08823v1</id>
+    <updated>2022-08-18T13:29:29Z</updated>
+    <published>2022-08-18T13:29:29Z</published>
+    <title>Algorithm to derive shortest edit script using Levenshtein distance
+  algorithm</title>
+    <summary>  String similarity, longest common subsequence and shortest edit scripts are
+the triplets of problem that related to each other. There are different
+algorithms exist to generate edit script by solving longest common subsequence
+problem. This paper proposes an algorithm that uses string similarity problem
+to generate shortest edit script. For this we use the famous Levenshtein
+distance algorithm, which computes a numerical value that represents similarity
+between the strings from 0 to n, where n is the length of longest input string,
+and produce the shortest edit script which contains instructions of Insert,
+Delete and Substitute.
+</summary>
+    <author>
+      <name>P. Prakash Maria Liju</name>
+    </author>
+    <link href="http://arxiv.org/abs/2208.08823v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.08823v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.08915">
+    <id>http://arxiv.org/abs/2208.08915v1</id>
+    <updated>2022-08-18T15:35:06Z</updated>
+    <published>2022-08-18T15:35:06Z</published>
+    <title>Approximate Circular Pattern Matching</title>
+    <summary>  We consider approximate circular pattern matching (CPM, in short) under the
+Hamming and edit distance, in which we are given a length-$n$ text $T$, a
+length-$m$ pattern $P$, and a threshold $k>0$, and we are to report all
+starting positions of fragments of $T$ (called occurrences) that are at
+distance at most $k$ from some cyclic rotation of $P$. In the decision version
+of the problem, we are to check if any such occurrence exists. All previous
+results for approximate CPM were either average-case upper bounds or
+heuristics, except for the work of Charalampopoulos et al. [CKP$^+$, JCSS'21],
+who considered only the Hamming distance. For the reporting version of the
+approximate CPM problem, under the Hamming distance we improve upon the main
+algorithm of [CKP$^+$, JCSS'21] from ${\cal O}(n+(n/m)\cdot k^4)$ to ${\cal
+O}(n+(n/m)\cdot k^3\log\log k)$ time; for the edit distance, we give an ${\cal
+O}(nk^2)$-time algorithm. We also consider the decision version of the
+approximate CPM problem. Under the Hamming distance, we obtain an ${\cal
+O}(n+(n/m)\cdot k^2\log k/\log\log k)$-time algorithm, which nearly matches the
+algorithm by Chan et al. [CGKKP, STOC'20] for the standard counterpart of the
+problem. Under the edit distance, the ${\cal O}(nk\log^3 k)$ runtime of our
+algorithm nearly matches the ${\cal O}(nk)$ runtime of the Landau-Vishkin
+algorithm [LV, J. Algorithms'89]. As a stepping stone, we propose ${\cal
+O}(nk\log^3 k)$-time algorithm for the Longest Prefix $k'$-Approximate Match
+problem, proposed by Landau et al. [LMS, SICOMP'98], for all $k'\in
+\{1,\dots,k\}$. We give a conditional lower bound that suggests a polynomial
+separation between approximate CPM under the Hamming distance over the binary
+alphabet and its non-circular counterpart. We also show that a strongly
+subquadratic-time algorithm for the decision version of approximate CPM under
+edit distance would refute SETH.
+</summary>
+    <author>
+      <name>Panagiotis Charalampopoulos</name>
+    </author>
+    <author>
+      <name>Tomasz Kociumaka</name>
+    </author>
+    <author>
+      <name>Jakub Radoszewski</name>
+    </author>
+    <author>
+      <name>Solon P. Pissis</name>
+    </author>
+    <author>
+      <name>Wojciech Rytter</name>
+    </author>
+    <author>
+      <name>Tomasz Waleń</name>
+    </author>
+    <author>
+      <name>Wiktor Zuba</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to ESA 2022. Abstract abridged to meet arXiv requirements</arxiv:comment>
+    <link href="http://arxiv.org/abs/2208.08915v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.08915v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.07800">
+    <id>http://arxiv.org/abs/2208.07800v1</id>
+    <updated>2022-08-16T15:30:22Z</updated>
+    <published>2022-08-16T15:30:22Z</published>
+    <title>New Parallel Order Maintenance Data Structure</title>
+    <summary>  The \emph{Order-Maintenance} (OM) data structure maintains a total order list
+of items for insertions, deletions, and comparisons. As a basic data structure,
+OM has many applications, such as maintaining the topological order, core
+numbers, and truss in graphs, and maintaining ordered sets in Unified Modeling
+Language (UML) Specification. The prevalence of multicore machines suggests
+parallelizing such a basic data structure. This paper proposes a new parallel
+OM data structure that supports insertions, deletions, and comparisons in
+parallel. Specifically, parallel insertions and deletions are synchronized by
+using locks efficiently, which achieve up to $7$x and $5.6$x speedups with $64$
+workers. One big advantage is that the comparisons are lock-free so that they
+can execute highly in parallel with other insertions and deletions, which
+achieve up to $34.4$x speedups with $64$ workers. Typical real applications
+maintain order lists that always have a much larger portion of comparisons than
+insertions and deletions. For example, in core maintenance, the number of
+comparisons is up to 297 times larger compared with insertions and deletions in
+certain graphs. This is why the lock-free order comparison is a breakthrough in
+practice.
+</summary>
+    <author>
+      <name>Bin Guo</name>
+    </author>
+    <author>
+      <name>Emil Sekerinski</name>
+    </author>
+    <link href="http://arxiv.org/abs/2208.07800v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.07800v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.06025">
+    <id>http://arxiv.org/abs/2208.06025v1</id>
+    <updated>2022-08-11T20:12:29Z</updated>
+    <published>2022-08-11T20:12:29Z</published>
+    <title>Automatic Sequences in Negative Bases and Proofs of Some Conjectures of
+  Shevelev</title>
+    <summary>  We discuss the use of negative bases in automatic sequences. Recently the
+theorem-prover Walnut has been extended to allow the use of base (-k) to
+express variables, thus permitting quantification over Z instead of N. This
+enables us to prove results about two-sided (bi-infinite) automatic sequences.
+We first explain the theory behind negative bases in Walnut. Next, we use this
+new version of Walnut to give a very simple proof of a strengthened version of
+a theorem of Shevelev. We use our ideas to resolve two open problems of
+Shevelev from 2017. We also reprove a 2000 result of Shur involving bi-infinite
+binary words.
+</summary>
+    <author>
+      <name>Jeffrey Shallit</name>
+    </author>
+    <author>
+      <name>Sonja Linghui Shan</name>
+    </author>
+    <author>
+      <name>Kai Hsiang Yang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2208.06025v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.06025v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.04931">
+    <id>http://arxiv.org/abs/2208.04931v1</id>
+    <updated>2022-08-09T17:51:20Z</updated>
+    <published>2022-08-09T17:51:20Z</published>
+    <title>Co-lexicographically ordering automata and regular languages. Part I</title>
+    <summary>  In the present work, we lay out a new theory showing that all automata can
+always be co-lexicographically partially ordered, and an intrinsic measure of
+their complexity can be defined and effectively determined, namely, the minimum
+width $p$ of one of their admissible co-lex partial orders - dubbed here the
+automaton's co-lex width. We first show that this new measure captures at once
+the complexity of several seemingly-unrelated hard problems on automata. Any
+NFA of co-lex width $p$: (i) has an equivalent powerset DFA whose size is
+exponential in $p$ rather than (as a classic analysis shows) in the NFA's size;
+(ii) can be encoded using just $\Theta(\log p)$ bits per transition; (iii)
+admits a linear-space data structure solving regular expression matching
+queries in time proportional to $p^2$ per matched character. Some consequences
+of this new parameterization of automata are that PSPACE-hard problems such as
+NFA equivalence are FPT in $p$, and quadratic lower bounds for the regular
+expression matching problem do not hold for sufficiently small $p$. Having
+established that the co-lex width of an automaton is a fundamental complexity
+measure, we proceed by (i) determining its computational complexity and (ii)
+extending this notion from automata to regular languages by studying their
+smallest-width accepting NFAs and DFAs. In this work we focus on the
+deterministic case and prove that a canonical minimum-width DFA accepting a
+language $\mathcal L$ - dubbed the Hasse automaton $\mathcal H$ of $\mathcal L$
+- can be exhibited. Finally, we explore the relationship between two
+conflicting objectives: minimizing the width and minimizing the number of
+states of a DFA. In this context, we provide an analogous of the Myhill-Nerode
+Theorem for co-lexicographically ordered regular languages.
+</summary>
+    <author>
+      <name>Nicola Cotumaccio</name>
+    </author>
+    <author>
+      <name>Giovanna D'Agostino</name>
+    </author>
+    <author>
+      <name>Alberto Policriti</name>
+    </author>
+    <author>
+      <name>Nicola Prezza</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">arXiv admin note: text overlap with arXiv:2106.02309</arxiv:comment>
+    <link href="http://arxiv.org/abs/2208.04931v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.04931v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.04380">
+    <id>http://arxiv.org/abs/2208.04380v1</id>
+    <updated>2022-08-08T19:36:01Z</updated>
+    <published>2022-08-08T19:36:01Z</published>
+    <title>Almost optimal searching of maximal subrepetitions in a word</title>
+    <summary>  For $0&lt;\delta &lt;1$ a $\delta$-subrepetition in a word is a factor which
+exponent is less than~2 but is not less than $1+\delta$ (the exponent of the
+factor is the ratio of the factor length to its minimal period). The
+$\delta$-subrepetition is maximal if it cannot be extended to the left or to
+the right by at least one letter with preserving its minimal period. In the
+paper we propose an algorithm for searching all maximal $\delta$-subrepetitions
+in a word of length~$n$ in $O(\frac{n}{\delta}\log\frac{1}{\delta})$ time (the
+lower bound for this time is $\Omega (\frac{n}{\delta})$).
+</summary>
+    <author>
+      <name>Roman Kolpakov</name>
+    </author>
+    <link href="http://arxiv.org/abs/2208.04380v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.04380v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.03451">
+    <id>http://arxiv.org/abs/2208.03451v1</id>
+    <updated>2022-08-06T06:32:36Z</updated>
+    <published>2022-08-06T06:32:36Z</published>
+    <title>Fast detection of specific fragments against a set of sequences</title>
+    <summary>  We design alignment-free techniques for comparing a sequence or word, called
+a target, against a set of words, called a reference. A target-specific factor
+of a target $T$ against a reference $R$ is a factor $w$ of a word in $T$ which
+is not a factor of a word of $R$ and such that any proper factor of $w$ is a
+factor of a word of $R$. We first address the computation of the set of
+target-specific factors of a target $T$ against a reference $R$, where $T$ and
+$R$ are finite sets of sequences. The result is the construction of an
+automaton accepting the set of all considered target-specific factors. The
+construction algorithm runs in linear time according to the size of $T\cup R$.
+The second result consists in the design of an algorithm to compute all the
+occurrences in a single sequence $T$ of its target-specific factors against a
+reference $R$. The algorithm runs in real-time on the target sequence,
+independently of the number of occurrences of target-specific factors.
+</summary>
+    <author>
+      <name>Marie-Pierre Béal</name>
+    </author>
+    <author>
+      <name>Maxime Crochemore</name>
+    </author>
+    <link href="http://arxiv.org/abs/2208.03451v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.03451v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.03123">
+    <id>http://arxiv.org/abs/2208.03123v1</id>
+    <updated>2022-08-05T12:28:13Z</updated>
+    <published>2022-08-05T12:28:13Z</published>
+    <title>Watson-Crick conjugates of words and languages</title>
+    <summary>  This paper is a theoretical study of notions in combinatorics of words
+motivated by information being encoded as DNA strands in DNA computing. We
+study Watson-Crick conjugates or \theta-conjugates, a generalization of the
+classical notions of conjugates of a word, inspired by biomolecular computing.
+The Watson-Crick mapping \theta is an involution that is also an antimorphism.
+We study some combinatorial properties of \theta-conjugates of a word. We
+characterize words that have the same set of \theta-conjugates. We investigate
+whether or not the family of certain languages is closed under \theta-conjugate
+operation. We also study the iterated \theta-conjugates. We then discuss the
+concept of \theta-conjugate-free language and some decidability problems for
+\theta-conjugate-freeness for different language classes.
+</summary>
+    <author>
+      <name>Kalpana Mahalingam</name>
+    </author>
+    <author>
+      <name>Anuran Maity</name>
+    </author>
+    <link href="http://arxiv.org/abs/2208.03123v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.03123v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2209.00158">
+    <id>http://arxiv.org/abs/2209.00158v1</id>
+    <updated>2022-08-31T23:53:47Z</updated>
+    <published>2022-08-31T23:53:47Z</published>
+    <title>Space-efficient data structure for next/previous larger/smaller value
+  queries</title>
+    <summary>  Given an array of size $n$ from a total order, we consider the problem of
+constructing a data structure that supports various queries (range
+minimum/maximum queries with their variants and next/previous larger/smaller
+queries) efficiently. In the encoding model (i.e., the queries can be answered
+without the input array), we propose a $(3.701n + o(n))$-bit data structure,
+which supports all these queries in $O(\log^{(\ell)}n)$ time, for any positive
+integer $\ell$ (here, $\log^{(1)} n = \log n$, and for $\ell > 1$,
+$\log^{(\ell)} n = \log ({\log^{(\ell-1)}} n)$). The space of our data
+structure matches the current best upper bound of Tsur (Inf. Process. Lett.,
+2019), which does not support the queries efficiently. Also, we show that at
+least $3.16n-\Theta(\log n)$ bits are necessary for answering all the queries.
+Our result is obtained by generalizing Gawrychowski and Nicholson's $(3n -
+\Theta(\log n))$-bit lower bound (ICALP 15) for answering range minimum and
+maximum queries on a permutation of size $n$.
+</summary>
+    <author>
+      <name>Seungbum Jo</name>
+    </author>
+    <author>
+      <name>Geunho Kim</name>
+    </author>
+    <link href="http://arxiv.org/abs/2209.00158v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2209.00158v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2209.00271">
+    <id>http://arxiv.org/abs/2209.00271v1</id>
+    <updated>2022-09-01T07:18:12Z</updated>
+    <published>2022-09-01T07:18:12Z</published>
+    <title>Maximal Closed Substrings</title>
+    <summary>  A string is closed if it has length 1 or has a nonempty border without
+internal occurrences. In this paper we introduce the definition of a maximal
+closed substring (MCS), which is an occurrence of a closed substring that
+cannot be extended to the left nor to the right into a longer closed substring.
+MCSs with exponent at least $2$ are commonly called runs; those with exponent
+smaller than $2$, instead, are particular cases of maximal gapped repeats. We
+show that a string of length $n$ contains $\mathcal O(n^{1.5})$ MCSs. We also
+provide an output-sensitive algorithm that, given a string of length $n$ over a
+constant-size alphabet, locates all $m$ MCSs the string contains in $\mathcal
+O(n\log n + m)$ time.
+</summary>
+    <author>
+      <name>Golnaz Badkobeh</name>
+    </author>
+    <author>
+      <name>Alessandro De Luca</name>
+    </author>
+    <author>
+      <name>Gabriele Fici</name>
+    </author>
+    <author>
+      <name>Simon Puglisi</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">accepted in SPIRE '22</arxiv:comment>
+    <link href="http://arxiv.org/abs/2209.00271v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2209.00271v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.14722">
+    <id>http://arxiv.org/abs/2208.14722v1</id>
+    <updated>2022-08-31T09:28:43Z</updated>
+    <published>2022-08-31T09:28:43Z</published>
+    <title>Combinatorial Algorithms for Subsequence Matching: A Survey</title>
+    <summary>  In this paper we provide an overview of a series of recent results regarding
+algorithms for searching for subsequences in words or for the analysis of the
+sets of subsequences occurring in a word.
+</summary>
+    <author>
+      <name>Maria Kosche</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Göttingen University, Germany</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tore Koß</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Göttingen University, Germany</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Florin Manea</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Göttingen University, Germany</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Stefan Siemer</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">Göttingen University, Germany</arxiv:affiliation>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.4204/EPTCS.367.2</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.4204/EPTCS.367.2" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">In Proceedings NCMA 2022, arXiv:2208.13015. arXiv admin note: text
+  overlap with arXiv:2206.13896</arxiv:comment>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">EPTCS 367, 2022, pp. 11-27</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2208.14722v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.14722v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.14669">
+    <id>http://arxiv.org/abs/2208.14669v1</id>
+    <updated>2022-08-31T07:54:35Z</updated>
+    <published>2022-08-31T07:54:35Z</published>
+    <title>Pattern matching under DTW distance</title>
+    <summary>  In this work, we consider the problem of pattern matching under the dynamic
+time warping (DTW) distance motivated by potential applications in the analysis
+of biological data produced by the third generation sequencing. To measure the
+DTW distance between two strings, one must "warp" them, that is, double some
+letters in the strings to obtain two equal-lengths strings, and then sum the
+distances between the letters in the corresponding positions. When the
+distances between letters are integers, we show that for a pattern P with m
+runs and a text T with n runs: 1. There is an O(m + n)-time algorithm that
+computes all locations where the DTW distance from P to T is at most 1; 2.
+There is an O(kmn)-time algorithm that computes all locations where the DTW
+distance from P to T is at most k. As a corollary of the second result, we also
+derive an approximation algorithm for general metrics on the alphabet.
+</summary>
+    <author>
+      <name>Garance Gourdel</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">IRISA, DI-ENS</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Anne Driemel</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">IRISA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pierre Peterlongo</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">IRISA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tatiana Starikovskaya</name>
+      <arxiv:affiliation xmlns:arxiv="http://arxiv.org/schemas/atom">DI-ENS</arxiv:affiliation>
+    </author>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">SPIRE: String Processing and Information Retrieval, Nov 2022,
+  Concepci{\'o}n, Chile</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2208.14669v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.14669v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.14787">
+    <id>http://arxiv.org/abs/2208.14787v1</id>
+    <updated>2022-08-31T11:52:58Z</updated>
+    <published>2022-08-31T11:52:58Z</published>
+    <title>Computing all-vs-all MEMs in run-length encoded collections of HiFi
+  reads</title>
+    <summary>  We describe an algorithm to find maximal exact matches (MEMs) among HiFi
+reads with homopolymer errors. The main novelty in our work is that we resort
+to run-length compression to help deal with errors. Our method receives as
+input a run-length-encoded string collection containing the HiFi reads along
+with their reverse complements. Subsequently, it splits the encoding into two
+arrays, one storing the sequence of symbols for equal-symbol runs and another
+storing the run lengths. The purpose of the split is to get the BWT of the run
+symbols and reorder their lengths accordingly. We show that this special BWT,
+as it encodes the HiFi reads and their reverse complements, supports
+bi-directional queries for the HiFi reads. Then, we propose a variation of the
+MEM algorithm of Belazzougui et al. (2013) that exploits the run-length
+encoding and the implicit bi-directional property of our BWT to compute
+approximate MEMs. Concretely, if the algorithm finds that two substrings, $a_1
+\ldots a_p$ and $b_1 \ldots b_p$, have a MEM, then it reports the MEM only if
+their corresponding length sequences, $\ell^{a}_1 \ldots \ell^{a}_p$ and
+$\ell^{b}_1 \ldots \ell^{b}_p$, do not differ beyond an input threshold. We use
+a simple metric to calculate the similarity of the length sequences that we
+call the {\em run-length excess}. Our technique facilitates the detection of
+MEMs with homopolymer errors as it does not require dynamic programming to find
+approximate matches where the only edits are the lengths of the equal-symbol
+runs. Finally, we present a method that relies on a geometric data structure to
+report the text occurrences of the MEMs detected by our algorithm.
+</summary>
+    <author>
+      <name>Diego Díaz-Domínguez</name>
+    </author>
+    <author>
+      <name>Simon J. Puglisi</name>
+    </author>
+    <author>
+      <name>Leena Salmela</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted in SPIRE'22</arxiv:comment>
+    <link href="http://arxiv.org/abs/2208.14787v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.14787v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.14315">
+    <id>http://arxiv.org/abs/2208.14315v1</id>
+    <updated>2022-08-30T14:53:16Z</updated>
+    <published>2022-08-30T14:53:16Z</published>
+    <title>Sorting Genomes by Prefix Double-Cut-and-Joins</title>
+    <summary>  In this paper, we study the problem of sorting unichromosomal linear genomes
+by prefix double-cut-and-joins (or DCJs) in both the signed and the unsigned
+settings. Prefix DCJs cut the leftmost segment of a genome and any other
+segment, and recombine the severed endpoints in one of two possible ways: one
+of these options corresponds to a prefix reversal, which reverses the order of
+elements between the two cuts (as well as their signs in the signed case).
+Depending on whether we consider both options or reversals only, our main
+results are:
+  (1) new structural lower bounds based on the breakpoint graph for sorting by
+unsigned prefix reversals, unsigned prefix DCJs, or signed prefix DCJs;
+  (2) a polynomial-time algorithm for sorting by signed prefix DCJs, thus
+answering an open question in [8];
+  (3) a 3/2-approximation for sorting by unsigned prefix DCJs, which is, to the
+best of our knowledge, the first sorting by {\em prefix} rearrangements problem
+that admits an approximation ratio strictly smaller than 2 (with the obvious
+exception of the polynomial-time solvable problems); and finally,
+  (4) an FPT algorithm for sorting by unsigned prefix DCJs parameterised by the
+number of breakpoints in the genome.
+</summary>
+    <author>
+      <name>Guillaume Fertin</name>
+    </author>
+    <author>
+      <name>Géraldine Jean</name>
+    </author>
+    <author>
+      <name>Anthony Labarre</name>
+    </author>
+    <link href="http://arxiv.org/abs/2208.14315v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.14315v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.11791">
+    <id>http://arxiv.org/abs/2208.11791v1</id>
+    <updated>2022-08-24T22:53:13Z</updated>
+    <published>2022-08-24T22:53:13Z</published>
+    <title>A Simpler Proof that Pairing Heaps Take O(1) Amortized Time per
+  Insertion</title>
+    <summary>  The pairing heap is a simple "self-adjusting" implementation of a heap
+(priority queue). Inserting an item into a pairing heap or decreasing the key
+of an item takes O(1) time worst-case, as does melding two heaps. But deleting
+an item of minimum key can take time linear in the heap size in the worst case.
+The paper that introduced the pairing heap proved an O(log n) amortized time
+bound for each heap operation, where n is the number of items in the heap or
+heaps involved in the operation, by charging all but O(log n) of the time for
+each deletion to non-deletion operations, O(log n) to each. Later Iacono found
+a way to reduce the amortized time per insertion to O(1) and that of meld to
+zero while preserving the O(log n) amortized time bound for the other update
+operations. We give a simpler proof of Iacono's result with significantly
+smaller constant factors. Our analysis uses the natural representation of
+pairing heaps instead of the conversion to a binary tree used in the original
+analysis and in Iacono's.
+</summary>
+    <author>
+      <name>Corwin Sinnamon</name>
+    </author>
+    <author>
+      <name>Robert Tarjan</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">13 pages, 1 figure, submitted to SOSA 2023</arxiv:comment>
+    <link href="http://arxiv.org/abs/2208.11791v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.11791v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="68P05 (Primary) 68W40 (Secondary)" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="F.2.2; E.1; E.2" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.11371">
+    <id>http://arxiv.org/abs/2208.11371v1</id>
+    <updated>2022-08-24T08:43:47Z</updated>
+    <published>2022-08-24T08:43:47Z</published>
+    <title>Hierarchical Relative Lempel-Ziv Compression</title>
+    <summary>  Relative Lempel-Ziv (RLZ) parsing is a dictionary compression method in which
+a string $S$ is compressed relative to a second string $R$ (called the
+reference) by parsing $S$ into a sequence of substrings that occur in $R$. RLZ
+is particularly effective at compressing sets of strings that have a high
+degree of similarity to the reference string, such as a set of genomes of
+individuals from the same species. With the now cheap cost of DNA sequencing,
+such data sets have become extremely abundant and are rapidly growing. In this
+paper, instead of using a single reference string for the entire collection, we
+investigate the use of different reference strings for subsets of the
+collection, with the aim of improving compression. In particular, we form a
+rooted tree (or hierarchy) on the strings and then compressed each string using
+RLZ with parent as reference, storing only the root of the tree in plain text.
+To decompress, we traverse the tree in BFS order starting at the root,
+decompressing children with respect to their parent. We show that this approach
+leads to a twofold improvement in compression on bacterial genome data sets,
+with negligible effect on decompression time compared to the standard single
+reference approach. We show that an effective hierarchy for a given set of
+strings can be constructed by computing the optimal arborescence of a completed
+weighted digraph of the strings, with weights as the number of phrases in the
+RLZ parsing of the source and destination vertices. We further show that
+instead of computing the complete graph, a sparse graph derived using locality
+sensitive hashing can significantly reduce the cost of computing a good
+hierarchy, without adversely effecting compression performance.
+</summary>
+    <author>
+      <name>Philip Bille</name>
+    </author>
+    <author>
+      <name>Inge Li Gørtz</name>
+    </author>
+    <author>
+      <name>Simon J. Puglisi</name>
+    </author>
+    <author>
+      <name>Simon R. Tarnow</name>
+    </author>
+    <link href="http://arxiv.org/abs/2208.11371v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.11371v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.09809">
+    <id>http://arxiv.org/abs/2208.09809v1</id>
+    <updated>2022-08-21T05:49:04Z</updated>
+    <published>2022-08-21T05:49:04Z</published>
+    <title>A Work-Efficient Parallel Algorithm for Longest Increasing Subsequence</title>
+    <summary>  This paper studies parallel algorithms for the longest increasing subsequence
+(LIS) problem. Let $n$ be the input size and $k$ be the LIS length of the
+input. Sequentially, LIS is a simple textbook problem that can be solved using
+dynamic programming (DP) in $O(n\log n)$ work. However, parallelizing LIS is a
+long-standing challenge. We are unaware of any parallel LIS algorithm that has
+optimal $O(n\log n)$ work and non-trivial parallelism (i.e., $\tilde{O}(k)$ or
+$o(n)$ span). Here, the work of a parallel algorithm is the total number of
+operations, and the span is the longest dependent instructions.
+  This paper proposes a parallel LIS algorithm that costs $O(n\log k)$ work,
+$\tilde{O}(k)$ span, and $O(n)$ space, and is \emph{much simpler} than the
+previous parallel LIS algorithms. We also generalize the algorithm to a
+weighted version of LIS, which maximizes the weighted sum for all objects in an
+increasing subsequence. Our weighted LIS algorithm has $O(n\log^2 n)$ work and
+$\tilde{O}(k)$ span.
+  We also implemented our parallel LIS algorithms. Due to simplicity, our
+implementation is light-weighted, efficient, and scalable. On input size
+$10^9$, our LIS algorithm outperforms a highly-optimized sequential algorithm
+(with $O(n\log k)$ cost) on inputs with $k\le 3\times 10^5$. Our algorithm is
+also much faster than the best existing parallel implementation by Shen et al.
+on all input instances.
+</summary>
+    <author>
+      <name>Yan Gu</name>
+    </author>
+    <author>
+      <name>Zheqi Shen</name>
+    </author>
+    <author>
+      <name>Yihan Sun</name>
+    </author>
+    <author>
+      <name>Zijin Wan</name>
+    </author>
+    <link href="http://arxiv.org/abs/2208.09809v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.09809v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="F.2" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.09840">
+    <id>http://arxiv.org/abs/2208.09840v1</id>
+    <updated>2022-08-21T08:23:57Z</updated>
+    <published>2022-08-21T08:23:57Z</published>
+    <title>Teaching the Burrows-Wheeler Transform via the Positional
+  Burrows-Wheeler Transform</title>
+    <summary>  The Burrows-Wheeler Transform (BWT) is often taught in undergraduate courses
+on algorithmic bioinformatics, because it underlies the FM-index and thus
+important tools such as Bowtie and BWA. Its admirers consider the BWT a thing
+of beauty but, despite thousands of pages being written about it over nearly
+thirty years, to undergraduates seeing it for the first time it still often
+seems like magic. Some who persevere are later shown the Positional BWT (PBWT),
+which was published twenty years after the BWT. In this paper we argue that the
+PBWT should be taught {\em before} the BWT.
+  We first use the PBWT's close relation to a right-to-left radix sort to
+explain how to use it as a fast and space-efficient index for {\em positional
+search} on a set of strings (that is, given a pattern and a position, quickly
+list the strings containing that pattern starting in that position). We then
+observe that {\em prefix search} (listing all the strings that start with the
+pattern) is an easy special case of positional search, and that prefix search
+on the suffixes of a single string is equivalent to {\em substring search} in
+that string (listing all the starting positions of occurrences of the pattern
+in the string).
+  Storing na\"ively a PBWT of the suffixes of a string is space-{\em
+inefficient} but, in even reasonably small examples, most of its columns are
+nearly the same. It is not difficult to show that if we store a PBWT of the
+cyclic shifts of the string, instead of its suffixes, then all the columns are
+exactly the same -- and equal to the BWT of the string. Thus we can teach the
+BWT and the FM-index via the PBWT.
+</summary>
+    <author>
+      <name>Travis Gagie</name>
+    </author>
+    <author>
+      <name>Giovanni Manzini</name>
+    </author>
+    <author>
+      <name>Marinella Sciortino</name>
+    </author>
+    <link href="http://arxiv.org/abs/2208.09840v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.09840v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2209.05686">
+    <id>http://arxiv.org/abs/2209.05686v1</id>
+    <updated>2022-09-13T01:51:02Z</updated>
+    <published>2022-09-13T01:51:02Z</published>
+    <title>Software-Hardware Codesign for Efficient In-Memory Regular Pattern
+  Matching</title>
+    <summary>  Regular pattern matching is used in numerous application domains, including
+text processing, bioinformatics, and network security. Patterns are typically
+expressed with an extended syntax of regular expressions that include the
+computationally challenging construct of bounded iteration or counting, which
+describes the repetition of a pattern a fixed number of times. We develop a
+design for a specialized in-memory hardware architecture for NFA execution that
+integrates counter and bit vector elements. The design is inspired by the
+theoretical model of nondeterministic counter automata (NCA). A key feature of
+our approach is that we statically analyze regular expressions to determine
+bounds on the amount of memory needed for the occurrences of counting. The
+results of this analysis are used by a regex-to-hardware compiler in order to
+make an appropriate selection of counter or bit vector elements. We evaluate
+the performance of our hardware implementation on a simulator based on circuit
+parameters collected by SPICE simulation using a TSMC 28nm process. We find the
+usage of counter and bit vector quickly outperforms unfolding solutions by
+orders of magnitude with small counting quantifiers. Experiments concerning
+realistic workloads show up to 76% energy reduction and 58% area reduction in
+comparison to traditional in-memory NFA processors.
+</summary>
+    <author>
+      <name>Lingkun Kong</name>
+    </author>
+    <author>
+      <name>Qixuan Yu</name>
+    </author>
+    <author>
+      <name>Agnishom Chattopadhyay</name>
+    </author>
+    <author>
+      <name>Alexis Le Glaunec</name>
+    </author>
+    <author>
+      <name>Yi Huang</name>
+    </author>
+    <author>
+      <name>Konstantinos Mamouras</name>
+    </author>
+    <author>
+      <name>Kaiyuan Yang</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1145/3519939.3523456</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1145/3519939.3523456" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">This paper has been published in PLDI 2022</arxiv:comment>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">43rd ACM SIGPLAN Conference on Programming Language Design and
+  Implementation (PLDI 2022)</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2209.05686v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2209.05686v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2209.01095">
+    <id>http://arxiv.org/abs/2209.01095v1</id>
+    <updated>2022-09-02T14:54:17Z</updated>
+    <published>2022-09-02T14:54:17Z</published>
+    <title>Elastic-Degenerate String Matching with 1 Error</title>
+    <summary>  An elastic-degenerate string is a sequence of $n$ finite sets of strings of
+total length $N$, introduced to represent a set of related DNA sequences, also
+known as a pangenome. The ED string matching (EDSM) problem consists in
+reporting all occurrences of a pattern of length $m$ in an ED text. This
+problem has recently received some attention by the combinatorial pattern
+matching community, culminating in an
+$\tilde{\mathcal{O}}(nm^{\omega-1})+\mathcal{O}(N)$-time algorithm [Bernardini
+et al., SIAM J. Comput. 2022], where $\omega$ denotes the matrix multiplication
+exponent and the $\tilde{\mathcal{O}}(\cdot)$ notation suppresses polylog
+factors. In the $k$-EDSM problem, the approximate version of EDSM, we are asked
+to report all pattern occurrences with at most $k$ errors. $k$-EDSM can be
+solved in $\mathcal{O}(k^2mG+kN)$ time, under edit distance, or
+$\mathcal{O}(kmG+kN)$ time, under Hamming distance, where $G$ denotes the total
+number of strings in the ED text [Bernardini et al., Theor. Comput. Sci. 2020].
+Unfortunately, $G$ is only bounded by $N$, and so even for $k=1$, the existing
+algorithms run in $\Omega(mN)$ time in the worst case. In this paper we show
+that $1$-EDSM can be solved in $\mathcal{O}((nm^2 + N)\log m)$ or
+$\mathcal{O}(nm^3 + N)$ time under edit distance. For the decision version, we
+present a faster $\mathcal{O}(nm^2\sqrt{\log m} + N\log\log m)$-time algorithm.
+We also show that $1$-EDSM can be solved in $\mathcal{O}(nm^2 + N\log m)$ time
+under Hamming distance. Our algorithms for edit distance rely on non-trivial
+reductions from $1$-EDSM to special instances of classic computational geometry
+problems (2d rectangle stabbing or 2d range emptiness), which we show how to
+solve efficiently. In order to obtain an even faster algorithm for Hamming
+distance, we rely on employing and adapting the $k$-errata trees for indexing
+with errors [Cole et al., STOC 2004].
+</summary>
+    <author>
+      <name>Giulia Bernardini</name>
+    </author>
+    <author>
+      <name>Estéban Gabory</name>
+    </author>
+    <author>
+      <name>Solon P. Pissis</name>
+    </author>
+    <author>
+      <name>Leen Stougie</name>
+    </author>
+    <author>
+      <name>Michelle Sweering</name>
+    </author>
+    <author>
+      <name>Wiktor Zuba</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">This is an extended version of a paper accepted at LATIN 2022</arxiv:comment>
+    <link href="http://arxiv.org/abs/2209.01095v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2209.01095v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+  </entry><entry id="2208.14481">
+    <id>http://arxiv.org/abs/2208.14481v1</id>
+    <updated>2022-08-30T18:13:42Z</updated>
+    <published>2022-08-30T18:13:42Z</published>
+    <title>Unbalancing Binary Trees</title>
+    <summary>  Assuming Zipf's Law to be accurate, we show that existing techniques for
+partially optimizing binary trees produce results that are approximately 10%
+worse than true optimal. We present a new approximate optimization technique
+that runs in O(n log n) time and produces trees approximately 1% worse than
+optimal. The running time is comparable to that of the Garsia-Wachs algorithm
+but the technique can be applied to the more useful case where the node being
+searched for is expected to be contained in the tree as opposed to outside of
+it.
+</summary>
+    <author>
+      <name>Matthew L. Ginsberg</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">14 pages, 8 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2208.14481v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2208.14481v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="H.2.1" scheme="http://arxiv.org/schemas/atom"/>
   </entry></articles>

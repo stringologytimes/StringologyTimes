@@ -15776,6 +15776,16 @@
     <ee type="oa">https://arxiv.org/abs/2004.12590</ee>
     <url>db/journals/corr/corr2004.html#abs-2004-12590</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1801-07449" publtype="informal">
+    <author>Andrej Brodnik</author>
+    <author>Matevz Jekovec</author>
+    <title>Sliding Suffix Tree.</title>
+    <year>2018</year>
+    <volume>abs/1801.07449</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1801.07449</ee>
+    <url>db/journals/corr/corr1801.html#abs-1801-07449</url>
+  </article>
   <article mdate="2020-07-02" key="journals/corr/abs-1810-03551" publtype="informal">
     <author>Diptarka Chakraborty</author>
     <author>Debarati Das 0001</author>
@@ -19435,6 +19445,19 @@
     <ee type="oa">https://doi.org/10.3390/a13010028</ee>
     <url>db/journals/algorithms/algorithms13.html#Bille20</url>
   </article>
+  <article mdate="2020-05-30" key="journals/algorithms/BrodnikJ18">
+    <author>Andrej Brodnik</author>
+    <author>Matevz Jekovec</author>
+    <title>Sliding Suffix Tree.</title>
+    <pages>118</pages>
+    <year>2018</year>
+    <volume>11</volume>
+    <journal>Algorithms</journal>
+    <number>8</number>
+    <ee type="oa">https://doi.org/10.3390/a11080118</ee>
+    <ee>https://www.wikidata.org/entity/Q90431196</ee>
+    <url>db/journals/algorithms/algorithms11.html#BrodnikJ18</url>
+  </article>
   <article mdate="2021-07-29" key="journals/algorithms/Koppl21a">
     <author orcid="0000-0002-8721-4444">Dominik Köppl</author>
     <title>Reversed Lempel-Ziv Factorization with Suffix Trees.</title>
@@ -20800,6 +20823,19 @@
     <crossref>conf/isaac/2017</crossref>
     <url>db/conf/isaac/isaac2017.html#0002ST17</url>
   </inproceedings>
+  <inproceedings mdate="2019-10-19" key="conf/isaac/BrodalFGL09">
+    <author orcid="0000-0001-9054-915X">Gerth Stølting Brodal</author>
+    <author>Rolf Fagerberg</author>
+    <author>Mark Greve</author>
+    <author>Alejandro López-Ortiz</author>
+    <title>Online Sorted Range Reporting.</title>
+    <pages>173-182</pages>
+    <year>2009</year>
+    <booktitle>ISAAC</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-10631-6_19</ee>
+    <crossref>conf/isaac/2009</crossref>
+    <url>db/conf/isaac/isaac2009.html#BrodalFGL09</url>
+  </inproceedings>
   <inproceedings mdate="2021-07-25" key="conf/isaac/ChrobakGMY15">
     <author>Marek Chrobak</author>
     <author orcid="0000-0002-1260-6574">Mordecai J. Golin</author>
@@ -20878,6 +20914,17 @@
     <booktitle>ISAAC</booktitle>
     <url>db/conf/isaac/isaac2003.html#HonLSS03</url>
   </inproceedings>
+  <inproceedings mdate="2020-12-29" key="conf/isaac/Schmidt09">
+    <author orcid="0000-0003-3032-4834">Jens M. Schmidt</author>
+    <title>Interval Stabbing Problems in Small Integer Ranges.</title>
+    <pages>163-172</pages>
+    <year>2009</year>
+    <booktitle>ISAAC</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-10631-6_18</ee>
+    <ee>https://www.wikidata.org/entity/Q56028769</ee>
+    <crossref>conf/isaac/2009</crossref>
+    <url>db/conf/isaac/isaac2009.html#Schmidt09</url>
+  </inproceedings>
   <inproceedings mdate="2018-11-30" key="conf/isaac/BilleCGSVV16">
     <author orcid="0000-0002-1120-5154">Philip Bille</author>
     <author>Patrick Hagge Cording</author>
@@ -20905,6 +20952,18 @@
     <ee>https://doi.org/10.1007/978-3-642-25591-5_69</ee>
     <crossref>conf/isaac/2011</crossref>
     <url>db/conf/isaac/isaac2011.html#HonLST11</url>
+  </inproceedings>
+  <inproceedings mdate="2017-06-04" key="conf/isaac/HsuCC09">
+    <author>Ping-Hui Hsu</author>
+    <author>Kuan-Yu Chen</author>
+    <author orcid="0000-0003-2837-1279">Kun-Mao Chao</author>
+    <title>Finding All Approximate Gapped Palindromes.</title>
+    <pages>1084-1093</pages>
+    <year>2009</year>
+    <booktitle>ISAAC</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-10631-6_109</ee>
+    <crossref>conf/isaac/2009</crossref>
+    <url>db/conf/isaac/isaac2009.html#HsuCC09</url>
   </inproceedings>
   <inproceedings mdate="2017-05-19" key="conf/isaac/SaikkonenS12">
     <author>Riku Saikkonen</author>
@@ -21138,6 +21197,28 @@
     <crossref>conf/isaac/2010-2</crossref>
     <url>db/conf/isaac/isaac2010-2.html#Nekrich10</url>
   </inproceedings>
+  <inproceedings mdate="2017-12-30" key="conf/isaac/SenT09">
+    <author>Siddhartha Sen 0001</author>
+    <author>Robert Endre Tarjan</author>
+    <title>Deletion without Rebalancing in Multiway Search Trees.</title>
+    <pages>832-841</pages>
+    <year>2009</year>
+    <booktitle>ISAAC</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-10631-6_84</ee>
+    <crossref>conf/isaac/2009</crossref>
+    <url>db/conf/isaac/isaac2009.html#SenT09</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-19" key="conf/isaac/CohenP09">
+    <author>Hagai Cohen</author>
+    <author>Ely Porat</author>
+    <title>Range Non-overlapping Indexing.</title>
+    <pages>1044-1053</pages>
+    <year>2009</year>
+    <booktitle>ISAAC</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-10631-6_105</ee>
+    <crossref>conf/isaac/2009</crossref>
+    <url>db/conf/isaac/isaac2009.html#CohenP09</url>
+  </inproceedings>
   <inproceedings mdate="2017-05-19" key="conf/isaac/PolicritiP14">
     <author>Alberto Policriti</author>
     <author>Nicola Prezza</author>
@@ -21229,6 +21310,21 @@
     <crossref>conf/isaac/2003</crossref>
     <booktitle>ISAAC</booktitle>
     <url>db/conf/isaac/isaac2003.html#HonSS03</url>
+  </inproceedings>
+  <inproceedings mdate="2018-11-14" key="conf/isaac/Hon09">
+    <author orcid="0000-0002-0570-2904">Wing-Kai Hon</author>
+    <author orcid="0000-0003-4676-8587">Tak Wah Lam</author>
+    <author>Rahul Shah</author>
+    <author>Siu-Lung Tam</author>
+    <author>Jeffrey Scott Vitter</author>
+    <title>Succinct Index for Dynamic Dictionary Matching.</title>
+    <pages>1034-1043</pages>
+    <year>2009</year>
+    <booktitle>ISAAC</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-10631-6_104</ee>
+    <ee>https://www.wikidata.org/entity/Q58062967</ee>
+    <crossref>conf/isaac/2009</crossref>
+    <url>db/conf/isaac/isaac2009.html#Hon09</url>
   </inproceedings>
   <inproceedings mdate="2022-04-09" key="conf/isaac/Charalampopoulos21">
     <author orcid="0000-0002-6024-1557">Panagiotis Charalampopoulos</author>
@@ -21634,6 +21730,16 @@
     <crossref>conf/isaac/2020</crossref>
     <url>db/conf/isaac/isaac2020.html#SumigawaCSS20</url>
   </inproceedings>
+  <inproceedings mdate="2018-11-02" key="conf/isaac/Nekrich09">
+    <author orcid="0000-0003-3771-5088">Yakov Nekrich</author>
+    <title>Data Structures for Approximate Orthogonal Range Counting.</title>
+    <pages>183-192</pages>
+    <year>2009</year>
+    <booktitle>ISAAC</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-10631-6_20</ee>
+    <crossref>conf/isaac/2009</crossref>
+    <url>db/conf/isaac/isaac2009.html#Nekrich09</url>
+  </inproceedings>
   <inproceedings mdate="2017-05-19" key="conf/isaac/LewensteinMR13">
     <author>Moshe Lewenstein</author>
     <author>J. Ian Munro</author>
@@ -21819,6 +21925,17 @@
     <crossref>conf/soda/2022</crossref>
     <url>db/conf/soda/soda2022.html#BerendsohnK22</url>
   </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/ChanP10">
+    <author>Timothy M. Chan</author>
+    <author>Mihai Patrascu</author>
+    <title>Counting Inversions, Offline Orthogonal Range Counting, and Related Problems.</title>
+    <pages>161-173</pages>
+    <year>2010</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973075.15</ee>
+    <crossref>conf/soda/2010</crossref>
+    <url>db/conf/soda/soda2010.html#ChanP10</url>
+  </inproceedings>
   <inproceedings mdate="2021-07-25" key="conf/soda/HartungHMW20">
     <author orcid="0000-0002-4041-1862">Elizabeth Hartung</author>
     <author>Hung Phuc Hoang</author>
@@ -21857,6 +21974,21 @@
     <ee type="oa">https://doi.org/10.1137/1.9781611976465.135</ee>
     <crossref>conf/soda/2021</crossref>
     <url>db/conf/soda/soda2021.html#MathieuRYY21</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/KociumakaKRRW12">
+    <author>Tomasz Kociumaka</author>
+    <author>Marcin Kubica</author>
+    <author>Jakub Radoszewski</author>
+    <author>Wojciech Rytter</author>
+    <author orcid="0000-0002-7369-3309">Tomasz Walen</author>
+    <title>A linear time algorithm for seeds computation.</title>
+    <pages>1095-1112</pages>
+    <year>2012</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973099.86</ee>
+    <ee>https://dl.acm.org/citation.cfm?id=2095202</ee>
+    <crossref>conf/soda/2012</crossref>
+    <url>db/conf/soda/soda2012.html#KociumakaKRRW12</url>
   </inproceedings>
   <inproceedings mdate="2022-04-12" key="conf/soda/KumabeY22">
     <author>Soh Kumabe</author>
@@ -21996,6 +22128,17 @@
     <crossref>conf/soda/2014</crossref>
     <url>db/conf/soda/soda2014.html#ChanMR14</url>
   </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/PatrascuV10">
+    <author>Mihai Patrascu</author>
+    <author>Emanuele Viola</author>
+    <title>Cell-Probe Lower Bounds for Succinct Partial Sums.</title>
+    <pages>117-122</pages>
+    <year>2010</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973075.11</ee>
+    <crossref>conf/soda/2010</crossref>
+    <url>db/conf/soda/soda2010.html#PatrascuV10</url>
+  </inproceedings>
   <inproceedings mdate="2021-02-02" key="conf/soda/SadakaneN10">
     <author>Kunihiko Sadakane</author>
     <author>Gonzalo Navarro</author>
@@ -22022,6 +22165,20 @@
     <crossref>conf/soda/2010</crossref>
     <url>db/conf/soda/soda2010.html#BrodalDFILM10</url>
   </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/BrodalTST12">
+    <author>Gerth Stølting Brodal</author>
+    <author>Konstantinos Tsakalidis</author>
+    <author>Spyros Sioutas</author>
+    <author orcid="0000-0003-4107-9520">Kostas Tsichlas</author>
+    <title>Fully persistent B-trees.</title>
+    <pages>602-614</pages>
+    <year>2012</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973099.51</ee>
+    <ee>https://dl.acm.org/citation.cfm?id=2095167</ee>
+    <crossref>conf/soda/2012</crossref>
+    <url>db/conf/soda/soda2012.html#BrodalTST12</url>
+  </inproceedings>
   <inproceedings mdate="2021-02-02" key="conf/soda/MunroS18">
     <author>J. Ian Munro</author>
     <author>Corwin Sinnamon</author>
@@ -22032,6 +22189,29 @@
     <ee type="oa">https://doi.org/10.1137/1.9781611975031.36</ee>
     <crossref>conf/soda/2018</crossref>
     <url>db/conf/soda/soda2018.html#MunroS18</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/Mucha13">
+    <author>Marcin Mucha</author>
+    <title>Lyndon Words and Short Superstrings.</title>
+    <pages>958-972</pages>
+    <year>2013</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973105.69</ee>
+    <crossref>conf/soda/2013</crossref>
+    <url>db/conf/soda/soda2013.html#Mucha13</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/AfshaniBZ11">
+    <author>Peyman Afshani</author>
+    <author>Gerth Stølting Brodal</author>
+    <author>Norbert Zeh</author>
+    <title>Ordered and Unordered Top-K Range Reporting in Large Data Sets.</title>
+    <pages>390-400</pages>
+    <year>2011</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973082.31</ee>
+    <ee>http://dl.acm.org/citation.cfm?id=2133067</ee>
+    <crossref>conf/soda/2011</crossref>
+    <url>db/conf/soda/soda2011.html#AfshaniBZ11</url>
   </inproceedings>
   <inproceedings mdate="2022-04-12" key="conf/soda/DudekGGS22">
     <author>Bartlomiej Dudek 0001</author>
@@ -22058,6 +22238,16 @@
     <ee>https://dl.acm.org/citation.cfm?id=3310503</ee>
     <crossref>conf/soda/2019</crossref>
     <url>db/conf/soda/soda2019.html#CliffordKP19</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/Seidel10">
+    <author>Raimund Seidel</author>
+    <title>Data-Specific Analysis of String Sorting.</title>
+    <pages>1278-1286</pages>
+    <year>2010</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973075.102</ee>
+    <crossref>conf/soda/2010</crossref>
+    <url>db/conf/soda/soda2010.html#Seidel10</url>
   </inproceedings>
   <inproceedings mdate="2022-04-12" key="conf/soda/FriedGKKPS22">
     <author>Dvir Fried</author>
@@ -22100,6 +22290,17 @@
     <crossref>conf/soda/2021</crossref>
     <url>db/conf/soda/soda2021.html#Afshani21</url>
   </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/SenT10">
+    <author>Siddhartha Sen 0001</author>
+    <author>Robert Endre Tarjan</author>
+    <title>Deletion Without Rebalancing in Balanced Binary Trees.</title>
+    <pages>1490-1499</pages>
+    <year>2010</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973075.121</ee>
+    <crossref>conf/soda/2010</crossref>
+    <url>db/conf/soda/soda2010.html#SenT10</url>
+  </inproceedings>
   <inproceedings mdate="2021-07-15" key="conf/soda/XingY21">
     <author>Chaoping Xing</author>
     <author>Chen Yuan 0003</author>
@@ -22121,6 +22322,18 @@
     <ee type="oa">https://doi.org/10.1137/1.9781611976465.153</ee>
     <crossref>conf/soda/2021</crossref>
     <url>db/conf/soda/soda2021.html#CotumaccioP21</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/AfshaniZ11">
+    <author>Peyman Afshani</author>
+    <author>Norbert Zeh</author>
+    <title>Improved Space Bounds for Cache-Oblivious Range Reporting.</title>
+    <pages>1745-1758</pages>
+    <year>2011</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973082.134</ee>
+    <ee>http://dl.acm.org/citation.cfm?id=2133170</ee>
+    <crossref>conf/soda/2011</crossref>
+    <url>db/conf/soda/soda2011.html#AfshaniZ11</url>
   </inproceedings>
   <inproceedings mdate="2021-02-02" key="conf/soda/Gawrychowski11">
     <author>Pawel Gawrychowski</author>
@@ -22156,6 +22369,17 @@
     <crossref>conf/soda/2013</crossref>
     <url>db/conf/soda/soda2013.html#BelazzouguiV13</url>
   </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/ChanW13">
+    <author>Timothy M. Chan</author>
+    <author>Bryan T. Wilkinson</author>
+    <title>Adaptive and Approximate Orthogonal Range Counting.</title>
+    <pages>241-251</pages>
+    <year>2013</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973105.18</ee>
+    <crossref>conf/soda/2013</crossref>
+    <url>db/conf/soda/soda2013.html#ChanW13</url>
+  </inproceedings>
   <inproceedings mdate="2021-02-02" key="conf/soda/Prezza18">
     <author>Nicola Prezza</author>
     <title>In-Place Sparse Suffix Sorting.</title>
@@ -22165,6 +22389,53 @@
     <ee type="oa">https://doi.org/10.1137/1.9781611975031.98</ee>
     <crossref>conf/soda/2018</crossref>
     <url>db/conf/soda/soda2018.html#Prezza18</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/AlstrupHL14">
+    <author>Stephen Alstrup</author>
+    <author>Esben Bistrup Halvorsen</author>
+    <author>Kasper Green Larsen</author>
+    <title>Near-optimal labeling schemes for nearest common ancestors.</title>
+    <pages>972-982</pages>
+    <year>2014</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973402.72</ee>
+    <crossref>conf/soda/2014</crossref>
+    <url>db/conf/soda/soda2014.html#AlstrupHL14</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/KarpinskiN11">
+    <author>Marek Karpinski</author>
+    <author orcid="0000-0003-3771-5088">Yakov Nekrich</author>
+    <title>Top-K Color Queries for Document Retrieval.</title>
+    <pages>401-411</pages>
+    <year>2011</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973082.32</ee>
+    <ee>http://dl.acm.org/citation.cfm?id=2133068</ee>
+    <crossref>conf/soda/2011</crossref>
+    <url>db/conf/soda/soda2011.html#KarpinskiN11</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/YuanA10">
+    <author>Hao Yuan</author>
+    <author>Mikhail J. Atallah</author>
+    <title>Data Structures for Range Minimum Queries in Multidimensional Arrays.</title>
+    <pages>150-160</pages>
+    <year>2010</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973075.14</ee>
+    <crossref>conf/soda/2010</crossref>
+    <url>db/conf/soda/soda2010.html#YuanA10</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/LarsenP12">
+    <author>Kasper Green Larsen</author>
+    <author>Rasmus Pagh</author>
+    <title>I/O-efficient data structures for colored range and prefix reporting.</title>
+    <pages>583-592</pages>
+    <year>2012</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973099.49</ee>
+    <ee>https://dl.acm.org/citation.cfm?id=2095165</ee>
+    <crossref>conf/soda/2012</crossref>
+    <url>db/conf/soda/soda2012.html#LarsenP12</url>
   </inproceedings>
   <inproceedings mdate="2021-07-15" key="conf/soda/BirenzwigeGP20">
     <author>Or Birenzwige</author>
@@ -22189,6 +22460,18 @@
     <ee type="oa">https://doi.org/10.1137/1.9781611975994.99</ee>
     <crossref>conf/soda/2020</crossref>
     <url>db/conf/soda/soda2020.html#BoroujeniSS20</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/AndoniJP10">
+    <author>Alexandr Andoni</author>
+    <author>T. S. Jayram</author>
+    <author>Mihai Patrascu</author>
+    <title>Lower Bounds for Edit Distance and Product Metrics via Poincaré-Type Inequalities.</title>
+    <pages>184-192</pages>
+    <year>2010</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973075.17</ee>
+    <crossref>conf/soda/2010</crossref>
+    <url>db/conf/soda/soda2010.html#AndoniJP10</url>
   </inproceedings>
   <inproceedings mdate="2021-09-23" key="conf/soda/GawrychowskiKKL18">
     <author orcid="0000-0002-6993-5440">Pawel Gawrychowski</author>
@@ -22225,6 +22508,17 @@
     <ee type="oa">https://doi.org/10.1137/1.9781611975031.97</ee>
     <crossref>conf/soda/2018</crossref>
     <url>db/conf/soda/soda2018.html#LagardeP18</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/LarsenW13">
+    <author>Kasper Green Larsen</author>
+    <author>Freek van Walderveen</author>
+    <title>Near-Optimal Range Reporting Structures for Categorical Data.</title>
+    <pages>265-276</pages>
+    <year>2013</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973105.20</ee>
+    <crossref>conf/soda/2013</crossref>
+    <url>db/conf/soda/soda2013.html#LarsenW13</url>
   </inproceedings>
   <inproceedings mdate="2021-02-02" key="conf/soda/FischerMS18">
     <author>Eldar Fischer</author>
@@ -22264,6 +22558,17 @@
     <ee type="oa">https://doi.org/10.1137/1.9781611975994.115</ee>
     <crossref>conf/soda/2020</crossref>
     <url>db/conf/soda/soda2020.html#BoseCIKL20</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/YiZ10">
+    <author>Ke Yi 0001</author>
+    <author>Qin Zhang 0001</author>
+    <title>On the Cell Probe Complexity of Dynamic Membership.</title>
+    <pages>123-133</pages>
+    <year>2010</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973075.12</ee>
+    <crossref>conf/soda/2010</crossref>
+    <url>db/conf/soda/soda2010.html#YiZ10</url>
   </inproceedings>
   <inproceedings mdate="2022-04-09" key="conf/soda/JelinekK17">
     <author orcid="0000-0003-4831-4079">Vít Jelínek</author>
@@ -22338,6 +22643,17 @@
     <crossref>conf/soda/2013</crossref>
     <url>db/conf/soda/soda2013.html#NavarroN13</url>
   </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/PatrascuT13">
+    <author>Mihai Patrascu</author>
+    <author orcid="0000-0001-5237-1709">Mikkel Thorup</author>
+    <title>Twisted Tabulation Hashing.</title>
+    <pages>209-228</pages>
+    <year>2013</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973105.16</ee>
+    <crossref>conf/soda/2013</crossref>
+    <url>db/conf/soda/soda2013.html#PatrascuT13</url>
+  </inproceedings>
   <inproceedings mdate="2021-03-09" key="conf/soda/AsharovCNP0S20">
     <author>Gilad Asharov</author>
     <author>T.-H. Hubert Chan</author>
@@ -22375,6 +22691,19 @@
     <ee type="oa">https://doi.org/10.1137/1.9781611975031.56</ee>
     <crossref>conf/soda/2018</crossref>
     <url>db/conf/soda/soda2018.html#KnudsenT18</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/AfshaniSTW14">
+    <author>Peyman Afshani</author>
+    <author>Cheng Sheng 0001</author>
+    <author orcid="0000-0003-3883-5452">Yufei Tao</author>
+    <author>Bryan T. Wilkinson</author>
+    <title>Concurrent Range Reporting in Two-Dimensional Space.</title>
+    <pages>983-994</pages>
+    <year>2014</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973402.73</ee>
+    <crossref>conf/soda/2014</crossref>
+    <url>db/conf/soda/soda2014.html#AfshaniSTW14</url>
   </inproceedings>
   <inproceedings mdate="2022-04-12" key="conf/soda/GaneshKLS22">
     <author>Arun Ganesh</author>
@@ -22415,6 +22744,27 @@
     <crossref>conf/soda/2019</crossref>
     <url>db/conf/soda/soda2019.html#Cohen-AddadFS19</url>
   </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/Goodrich10">
+    <author>Michael T. Goodrich</author>
+    <title>Randomized Shellsort: A Simple Oblivious Sorting Algorithm.</title>
+    <pages>1262-1277</pages>
+    <year>2010</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973075.101</ee>
+    <crossref>conf/soda/2010</crossref>
+    <url>db/conf/soda/soda2010.html#Goodrich10</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/Chan11">
+    <author>Timothy M. Chan</author>
+    <title>Persistent Predecessor Search and Orthogonal point Location on the Word RAM.</title>
+    <pages>1131-1145</pages>
+    <year>2011</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973082.85</ee>
+    <ee>http://dl.acm.org/citation.cfm?id=2133121</ee>
+    <crossref>conf/soda/2011</crossref>
+    <url>db/conf/soda/soda2011.html#Chan11</url>
+  </inproceedings>
   <inproceedings mdate="2021-02-02" key="conf/soda/BelazzouguiP16">
     <author>Djamal Belazzougui</author>
     <author>Simon J. Puglisi</author>
@@ -22426,6 +22776,18 @@
     <ee>http://dl.acm.org/citation.cfm?id=2884578</ee>
     <crossref>conf/soda/2016</crossref>
     <url>db/conf/soda/soda2016.html#BelazzouguiP16</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/IaconoP12">
+    <author>John Iacono</author>
+    <author>Mihai Patrascu</author>
+    <title>Using hashing to solve the dictionary problem.</title>
+    <pages>570-582</pages>
+    <year>2012</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973099.48</ee>
+    <ee>https://dl.acm.org/citation.cfm?id=2095164</ee>
+    <crossref>conf/soda/2012</crossref>
+    <url>db/conf/soda/soda2012.html#IaconoP12</url>
   </inproceedings>
   <inproceedings mdate="2021-07-15" key="conf/soda/Nekrich21">
     <author>Yakov Nekrich</author>
@@ -22540,6 +22902,17 @@
     <crossref>conf/soda/2019</crossref>
     <url>db/conf/soda/soda2019.html#BringmannWK19</url>
   </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/WeiY13">
+    <author>Zhewei Wei</author>
+    <author>Ke Yi 0001</author>
+    <title>The Space Complexity of 2-Dimensional Approximate Range Counting.</title>
+    <pages>252-264</pages>
+    <year>2013</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973105.19</ee>
+    <crossref>conf/soda/2013</crossref>
+    <url>db/conf/soda/soda2013.html#WeiY13</url>
+  </inproceedings>
   <inproceedings mdate="2021-02-02" key="conf/soda/GawrychowskiK17">
     <author>Pawel Gawrychowski</author>
     <author>Tomasz Kociumaka</author>
@@ -22577,6 +22950,18 @@
     <ee>https://dl.acm.org/citation.cfm?id=3310584</ee>
     <crossref>conf/soda/2019</crossref>
     <url>db/conf/soda/soda2019.html#JacobLN19</url>
+  </inproceedings>
+  <inproceedings mdate="2021-02-02" key="conf/soda/GuillemotM14">
+    <author>Sylvain Guillemot</author>
+    <author>Dániel Marx</author>
+    <title>Finding small patterns in permutations in linear time.</title>
+    <pages>82-101</pages>
+    <year>2014</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611973402.7</ee>
+    <ee>https://www.wikidata.org/entity/Q60638484</ee>
+    <crossref>conf/soda/2014</crossref>
+    <url>db/conf/soda/soda2014.html#GuillemotM14</url>
   </inproceedings>
   <inproceedings mdate="2021-02-02" key="conf/soda/KociumakaRRW15">
     <author>Tomasz Kociumaka</author>
@@ -41669,6 +42054,52 @@
     <crossref>conf/wia/2009</crossref>
     <url>db/conf/wia/ciaa2009.html#Navarro09</url>
   </inproceedings>
+  <inproceedings mdate="2019-05-29" key="conf/ccp/Kulekci11">
+    <author orcid="0000-0002-4583-6261">M. Oguzhan Külekci</author>
+    <title>A Method to Ensure the Confidentiality of the Compressed Data.</title>
+    <pages>203-209</pages>
+    <year>2011</year>
+    <booktitle>CCP</booktitle>
+    <ee>https://doi.org/10.1109/CCP.2011.28</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/CCP.2011.28</ee>
+    <crossref>conf/ccp/2011</crossref>
+    <url>db/conf/ccp/ccp2011.html#Kulekci11</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/ccp/ConstantinescuL11">
+    <author>Cornel Constantinescu</author>
+    <author>Maohua Lu</author>
+    <title>Quick Estimation of Data Compression and De-duplication for Large Storage Systems.</title>
+    <pages>98-102</pages>
+    <year>2011</year>
+    <booktitle>CCP</booktitle>
+    <ee>https://doi.org/10.1109/CCP.2011.41</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/CCP.2011.41</ee>
+    <crossref>conf/ccp/2011</crossref>
+    <url>db/conf/ccp/ccp2011.html#ConstantinescuL11</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/ccp/Mattern11">
+    <author>Christopher Mattern</author>
+    <title>Combining Non-stationary Prediction, Optimization and Mixing for Data Compression.</title>
+    <pages>29-37</pages>
+    <year>2011</year>
+    <booktitle>CCP</booktitle>
+    <ee>https://doi.org/10.1109/CCP.2011.22</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/CCP.2011.22</ee>
+    <crossref>conf/ccp/2011</crossref>
+    <url>db/conf/ccp/ccp2011.html#Mattern11</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/ccp/BurmistrovK11">
+    <author>Ivan Burmistrov 0002</author>
+    <author>Lesha Khvorost</author>
+    <title>Straight-Line Programs: A Practical Test.</title>
+    <pages>76-81</pages>
+    <year>2011</year>
+    <booktitle>CCP</booktitle>
+    <ee>https://doi.org/10.1109/CCP.2011.8</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/CCP.2011.8</ee>
+    <crossref>conf/ccp/2011</crossref>
+    <url>db/conf/ccp/ccp2011.html#BurmistrovK11</url>
+  </inproceedings>
   <inproceedings mdate="2019-10-15" key="conf/ccp/KolpakovKS11">
     <author>Roman Kolpakov</author>
     <author orcid="0000-0001-5899-5424">Gregory Kucherov</author>
@@ -41697,6 +42128,41 @@
     <crossref>conf/ccp/2011</crossref>
     <url>db/conf/ccp/ccp2011.html#PetriNCP11</url>
   </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/ccp/Yokoo11">
+    <author>Hidetoshi Yokoo</author>
+    <title>Asymptotic Optimal Lossless Compression via the CSE Technique.</title>
+    <pages>11-18</pages>
+    <year>2011</year>
+    <booktitle>CCP</booktitle>
+    <ee>https://doi.org/10.1109/CCP.2011.32</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/CCP.2011.32</ee>
+    <crossref>conf/ccp/2011</crossref>
+    <url>db/conf/ccp/ccp2011.html#Yokoo11</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/ccp/CohenM11">
+    <author>Gérard D. Cohen</author>
+    <author>Sihem Mesnager</author>
+    <title>Generalized Witness Sets.</title>
+    <pages>255-256</pages>
+    <year>2011</year>
+    <booktitle>CCP</booktitle>
+    <ee>https://doi.org/10.1109/CCP.2011.12</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/CCP.2011.12</ee>
+    <crossref>conf/ccp/2011</crossref>
+    <url>db/conf/ccp/ccp2011.html#CohenM11</url>
+  </inproceedings>
+  <inproceedings mdate="2018-07-07" key="conf/ccp/ProchazkaH11">
+    <author>Petr Procházka</author>
+    <author orcid="0000-0003-3022-2694">Jan Holub 0001</author>
+    <title>Natural Language Compression per Blocks.</title>
+    <pages>67-75</pages>
+    <year>2011</year>
+    <booktitle>CCP</booktitle>
+    <ee>https://doi.org/10.1109/CCP.2011.25</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/CCP.2011.25</ee>
+    <crossref>conf/ccp/2011</crossref>
+    <url>db/conf/ccp/ccp2011.html#ProchazkaH11</url>
+  </inproceedings>
   <inproceedings mdate="2017-05-23" key="conf/ccp/MaruyamaTNS11">
     <author>Shirou Maruyama</author>
     <author>Masayuki Takeda</author>
@@ -41711,6 +42177,30 @@
     <crossref>conf/ccp/2011</crossref>
     <url>db/conf/ccp/ccp2011.html#MaruyamaTNS11</url>
   </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/ccp/GrossiVX11">
+    <author>Roberto Grossi</author>
+    <author>Jeffrey Scott Vitter</author>
+    <author>Bojian Xu</author>
+    <title>Wavelet Trees: From Theory to Practice.</title>
+    <pages>210-221</pages>
+    <year>2011</year>
+    <booktitle>CCP</booktitle>
+    <ee>https://doi.org/10.1109/CCP.2011.16</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/CCP.2011.16</ee>
+    <crossref>conf/ccp/2011</crossref>
+    <url>db/conf/ccp/ccp2011.html#GrossiVX11</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/ccp/Agostino11">
+    <author>Sergio De Agostino</author>
+    <title>Lempel-Ziv Data Compression on Parallel and Distributed Systems.</title>
+    <pages>193-202</pages>
+    <year>2011</year>
+    <booktitle>CCP</booktitle>
+    <ee>https://doi.org/10.1109/CCP.2011.11</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/CCP.2011.11</ee>
+    <crossref>conf/ccp/2011</crossref>
+    <url>db/conf/ccp/ccp2011.html#Agostino11</url>
+  </inproceedings>
   <inproceedings mdate="2017-05-23" key="conf/ccp/KarkkainenP11">
     <author>Juha Kärkkäinen</author>
     <author>Simon J. Puglisi</author>
@@ -41722,6 +42212,17 @@
     <ee>http://doi.ieeecomputersociety.org/10.1109/CCP.2011.15</ee>
     <crossref>conf/ccp/2011</crossref>
     <url>db/conf/ccp/ccp2011.html#KarkkainenP11</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/ccp/Pizzolante11">
+    <author>Raffaele Pizzolante</author>
+    <title>Lossless Compression of Hyperspectral Imagery.</title>
+    <pages>157-162</pages>
+    <year>2011</year>
+    <booktitle>CCP</booktitle>
+    <ee>https://doi.org/10.1109/CCP.2011.31</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/CCP.2011.31</ee>
+    <crossref>conf/ccp/2011</crossref>
+    <url>db/conf/ccp/ccp2011.html#Pizzolante11</url>
   </inproceedings>
   <inproceedings mdate="2017-05-26" key="conf/dlt/Blanchet-SadriR15">
     <author>Francine Blanchet-Sadri</author>
