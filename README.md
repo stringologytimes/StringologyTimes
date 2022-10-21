@@ -28,6 +28,27 @@
 
 ## Recent accepted papers for stringologist
 
+### 2022/10/19 [SODA 2023](https://www.siam.org/conferences/cm/program/accepted-papers/soda23-accepted-papers)
+1. Quantum Speed-ups for String Synchronizing Sets, Longest Common Substring, and k-mismatch Matching  
+Ce Jin; Jakob Nogler  
+2. Tight Bounds for Monotone Minimal Perfect Hashing  
+Sepehr Assadi and Martin Farach-Colton; William Kuszmaul  
+3. Breaking the O(n)-Barrier in the Construction of Compressed Suffix Arrays and Suffix Trees  
+Dominik Kempa; Tomasz Kociumaka  
+4. Tiny Pointers  
+Michael Bender; Alex Conway; Martin Farach-Colton; William Kuszmaul; Guido Tagliavini  
+5. Simplex Range Searching Revisited: How to Shave Logs in Multi-Level Data Structures  
+Timothy M. Chan and Da Wei Zheng  
+6. Simple, deterministic, fast (but weak) approximations to edit distance and Dyck edit distance  
+Michal Koucký; Michael Saks  
+7. Optimal Square Detection Over General Alphabets  
+Jonas Ellert; Pawel Gawrychowski; Garance Gourdel  
+8. A Nearly-tight Analysis of Multipass Pairing Heaps  
+Corwin Sinnamon and Robert E. Tarjan  
+9. A Tight Analysis of Slim Heaps and Smooth Heaps  
+Corwin Sinnamon and Robert Tarjan  
+10. 4D Range Reporting in the Pointer Machine Model in Almost-Optimal Time  
+Yakov Nekrich; Rahul Saladi  
 ### 2022/09/30 [SOFSEM 2023](https://ics.science.upjs.sk/sofsem2023/accepted-papers/)
 
 1. The k-center Problem for Classes of Cyclic Words  
