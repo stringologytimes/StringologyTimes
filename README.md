@@ -28,7 +28,31 @@
 
 ## Recent accepted papers for stringologist
 
-### 2022/10/19 [SODA 2023](https://www.siam.org/conferences/cm/program/accepted-papers/soda23-accepted-papers)
+### 2022/10/20 [ALENEX 2023](https://www.siam.org/Portals/0/Conferences/ALENEX/ALENEX23/ALENEX23%20-%20List%20of%20Accepted%20Papers.pdf)  
+
+1. PaCHash: Packed and Compressed Hash Tables  
+Florian Kurpicz, Hans-Peter Lehmann and Peter Sanders  
+2. Multiway Powersort  
+William Cawley Gelling, Benjamin Smith, Markus Nebel and Sebastian Wild  
+3. LZ77 via Prefix-Free Parsing  
+Aaron Hong, Massimiliano Rossi and Christina Boucher  
+4. SicHash - Small Irregular Cuckoo Tables for Perfect Hashing  
+Hans-Peter Lehmann, Peter Sanders and Stefan Walzer  
+5. Lower Bounds for Sorting 16, 17, and 18 Elements  
+Florian Stober and Armin Weiss  
+
+
+### 2022/10/20 [SOSA 2023](https://www.siam.org/Portals/0/Conferences/SOSA/SOSA23/SOSA23%20-%20List%20of%20Accepted%20Papers.pdf)  
+
+1. An Optimal Lower Bound for Simplex Range Reporting  
+Peyman Afshani and Pingan Cheng  
+2. Optimal resizable arrays  
+Robert E. Tarjan and Uri Zwick  
+3. Splay Top Trees  
+Jacob Holm, Eva Rotenberg, and Alice Ryhl  
+
+### 2022/10/19 [SODA 2023](https://www.siam.org/conferences/cm/program/accepted-papers/soda23-accepted-papers)  
+
 1. Quantum Speed-ups for String Synchronizing Sets, Longest Common Substring, and k-mismatch Matching  
 Ce Jin; Jakob Nogler  
 2. Tight Bounds for Monotone Minimal Perfect Hashing  
@@ -96,50 +120,6 @@ Panagiotis Charalampopoulos (Reichman University, Herzliya, Israel and Birkbeck,
 Elazar Goldenberg (The Academic College of Tel Aviv-Yafo), Tomasz Kociumaka (UC Berkeley), Robert Krauthgamer (Weizmann Institute of Science), Barna Saha (University of California San Diego).  
 6. Strong XOR Lemma for Communication with Bounded Rounds.  
 Huacheng Yu (Princeton University).  
-
-### 2022/06/21 [MFCS 2022](https://www.ac.tuwien.ac.at/mfcs2022/accepted/)
-
-1. Streaming word problems  
-Markus Lohrey and Lukas Lück  
-2. On Uniformization in the Full Binary Tree  
-Alexander Rabinovich  
-
-### 2022/06/18 [ESA 2022](https://algo2022.eu/esa/#papers)
-
-1. An Improved Algorithm for Finding the Shortest Synchronizing Words  
-Marek Szykuła and Adam Zyzik.  
-2. Lyndon Arrays Simplified  
-Jonas Ellert.  
-3. Simple worst-case optimal adaptive prefix-free coding  
-Travis Gagie.  
-4. Approximate Circular Pattern Matching  
-Panagiotis Charalampopoulos, Tomasz Kociumaka, Jakub Radoszewski, Solon Pissis, Wojciech Rytter, Tomasz Walen and Wiktor Zuba.  
-5. Distinct Elements in Streams: An Algorithm for the (Text) Book  
-Sourav Chakraborty, Kuldeep S. Meel and N.V. Vinodchandran.   
-6. Insertion Time of Random Walk Cuckoo Hashing below the Peeling Threshold (extended abstract)  
-Stefan Walzer.   
-7. Approximating Dynamic Time Warping Distance Between Run-Length Encoded Strings  
-Zoe Xi and William Kuszmaul.   
-8. Computing NP-hard Repetitiveness Measures via MAX-SAT  
-Hideo Bannai, Keisuke Goto, Masakazu Ishihata, Shunsuke Kanda, Dominik Köppl and Takaaki Nishimoto.   
-
-### 2022/06/14 [WABI 2022](https://algo2022.eu/wabi/)
-1. Haplotype Threading Using the Positional Burrows-Wheeler Transform   
-Ahsan Sanaullah, Degui Zhi and Shaojie Zhang.   
-2. On Weighted K-Mer Dictionaries  
-Giulio Ermanno Pibiri.   
-3. Fast gapped k-mer counting with subdivided multi-way bucketed Cuckoo hash tables  
-Jens Zentgraf and Sven Rahmann.  
-4. Prefix-free parsing for building large tunnelled Wheeler graphs  
-Adrián Goga and Andrej Baláž.  
-5. Suffix sorting via matching statistics  
-Zsuzsanna Liptak, Francesco Masillo and Simon J. Puglisi.  
-6. phyBWT: Alignment-free phylogeny via eBWT positional clustering  
-Veronica Guerrini, Alessio Conte, Roberto Grossi, Gianni Liti, Giovanna Rosone and Lorenzo Tattini.  
-7. Eulertigs: minimum plain text representation of k-mer sets without repetitions in linear time  
-Sebastian Schmidt and Jarno Alanko.  
-8. Toward optimal fingerprint indexing for large scale genomics  
-Clément Agret, Bastien Cazaux and Antoine Limasset.  
 
 ## Links
 [arXivTimes](https://github.com/arXivTimes/arXivTimes)
