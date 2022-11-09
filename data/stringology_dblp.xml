@@ -174,6 +174,18 @@
     <ee type="oa">https://doi.org/10.1016/j.ipl.2019.02.003</ee>
     <url>db/journals/ipl/ipl146.html#MakinenN19</url>
   </article>
+  <article mdate="2017-10-16" key="journals/ipl/AmirIR17">
+    <author>Amihood Amir</author>
+    <author>Costas S. Iliopoulos</author>
+    <author>Jakub Radoszewski</author>
+    <title>Two strings at Hamming distance 1 cannot be both quasiperiodic.</title>
+    <pages>54-57</pages>
+    <year>2017</year>
+    <volume>128</volume>
+    <journal>Inf. Process. Lett.</journal>
+    <ee>https://doi.org/10.1016/j.ipl.2017.08.005</ee>
+    <url>db/journals/ipl/ipl128.html#AmirIR17</url>
+  </article>
   <article mdate="2021-07-25" key="journals/ipl/BannaiGIILL12">
     <author>Hideo Bannai</author>
     <author orcid="0000-0003-3689-327X">Travis Gagie</author>
@@ -1606,6 +1618,22 @@
     <ee>https://doi.org/10.1007/s00453-017-0333-1</ee>
     <url>db/journals/algorithmica/algorithmica80.html#FischerIKS18</url>
   </article>
+  <article mdate="2022-06-23" key="journals/algorithmica/Charalampopoulos22">
+    <author>Panagiotis Charalampopoulos</author>
+    <author>Costas S. Iliopoulos</author>
+    <author>Tomasz Kociumaka</author>
+    <author orcid="0000-0002-1445-1932">Solon P. Pissis</author>
+    <author orcid="0000-0002-0067-6401">Jakub Radoszewski</author>
+    <author orcid="0000-0003-2207-0053">Juliusz Straszynski</author>
+    <title>Efficient Computation of Sequence Mappability.</title>
+    <pages>1418-1440</pages>
+    <year>2022</year>
+    <volume>84</volume>
+    <journal>Algorithmica</journal>
+    <number>5</number>
+    <ee type="oa">https://doi.org/10.1007/s00453-022-00934-y</ee>
+    <url>db/journals/algorithmica/algorithmica84.html#Charalampopoulos22</url>
+  </article>
   <article mdate="2018-11-30" key="journals/algorithmica/RaskhodnikovaRRS13">
     <author>Sofya Raskhodnikova</author>
     <author orcid="0000-0001-6576-7200">Dana Ron</author>
@@ -1631,6 +1659,22 @@
     <number>4</number>
     <ee>https://doi.org/10.1007/s00453-010-9400-6</ee>
     <url>db/journals/algorithmica/algorithmica57.html#NavarroP10</url>
+  </article>
+  <article mdate="2019-05-31" key="journals/algorithmica/AmirKLPPS19">
+    <author>Amihood Amir</author>
+    <author>Tsvi Kopelowitz</author>
+    <author orcid="0000-0002-1686-0094">Avivit Levy</author>
+    <author>Seth Pettie</author>
+    <author>Ely Porat</author>
+    <author>B. Riva Shalom</author>
+    <title>Mind the Gap! - Online Dictionary Matching with One Gap.</title>
+    <pages>2123-2157</pages>
+    <year>2019</year>
+    <volume>81</volume>
+    <journal>Algorithmica</journal>
+    <number>6</number>
+    <ee>https://doi.org/10.1007/s00453-018-0526-2</ee>
+    <url>db/journals/algorithmica/algorithmica81.html#AmirKLPPS19</url>
   </article>
   <article mdate="2018-11-30" key="journals/algorithmica/BartonP18">
     <author orcid="0000-0003-1589-0432">Carl Barton</author>
@@ -2143,6 +2187,21 @@
     <number>7</number>
     <ee type="oa">https://doi.org/10.1007/s00453-019-00560-1</ee>
     <url>db/journals/algorithmica/algorithmica81.html#KociumakaRS19a</url>
+  </article>
+  <article mdate="2019-05-31" key="journals/algorithmica/AmirLLLP19">
+    <author>Amihood Amir</author>
+    <author orcid="0000-0002-1686-0094">Avivit Levy</author>
+    <author>Moshe Lewenstein</author>
+    <author>Ronit Lubin</author>
+    <author>Benny Porat</author>
+    <title>Can We Recover the Cover?</title>
+    <pages>2857-2875</pages>
+    <year>2019</year>
+    <volume>81</volume>
+    <journal>Algorithmica</journal>
+    <number>7</number>
+    <ee>https://doi.org/10.1007/s00453-019-00559-8</ee>
+    <url>db/journals/algorithmica/algorithmica81.html#AmirLLLP19</url>
   </article>
   <article mdate="2022-01-03" key="journals/algorithmica/BilleGGLW21">
     <author orcid="0000-0002-1120-5154">Philip Bille</author>
@@ -2873,6 +2932,34 @@
     <ee type="oa">https://doi.org/10.1016/S0304-3975(02)00777-6</ee>
     <url>db/journals/tcs/tcs302.html#Rytter03</url>
   </article>
+  <article mdate="2021-02-17" key="journals/tcs/AmirAELLL14">
+    <author>Amihood Amir</author>
+    <author>Alberto Apostolico</author>
+    <author>Estrella Eisenberg</author>
+    <author>Gad M. Landau</author>
+    <author>Avivit Levy</author>
+    <author>Noa Lewenstein</author>
+    <title>Detecting approximate periodic patterns.</title>
+    <pages>60-67</pages>
+    <year>2014</year>
+    <volume>525</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee type="oa">https://doi.org/10.1016/j.tcs.2013.05.001</ee>
+    <url>db/journals/tcs/tcs525.html#AmirAELLL14</url>
+  </article>
+  <article mdate="2020-02-24" key="journals/tcs/AmirLMS20">
+    <author>Amihood Amir</author>
+    <author>Gad M. Landau</author>
+    <author>Shoshana Marcus</author>
+    <author>Dina Sokol</author>
+    <title>Two-dimensional maximal repetitions.</title>
+    <pages>49-61</pages>
+    <year>2020</year>
+    <volume>812</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2019.07.006</ee>
+    <url>db/journals/tcs/tcs812.html#AmirLMS20</url>
+  </article>
   <article mdate="2021-02-17" key="journals/tcs/FarzanM11">
     <author>Arash Farzan</author>
     <author>J. Ian Munro</author>
@@ -3043,6 +3130,19 @@
     <ee type="oa">https://doi.org/10.1016/j.tcs.2007.07.013</ee>
     <url>db/journals/tcs/tcs387.html#MakinenN07</url>
   </article>
+  <article mdate="2018-02-12" key="journals/tcs/AmirALS18">
+    <author>Amihood Amir</author>
+    <author>Mika Amit</author>
+    <author>Gad M. Landau</author>
+    <author>Dina Sokol</author>
+    <title>Period recovery of strings over the Hamming and edit distances.</title>
+    <pages>2-18</pages>
+    <year>2018</year>
+    <volume>710</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2017.10.026</ee>
+    <url>db/journals/tcs/tcs710.html#AmirALS18</url>
+  </article>
   <article mdate="2021-02-17" key="journals/tcs/SzwarcfiterNBOCZ03">
     <author>Jayme Luiz Szwarcfiter</author>
     <author>Gonzalo Navarro</author>
@@ -3159,6 +3259,19 @@
     <ee type="oa">https://doi.org/10.1016/j.tcs.2015.03.026</ee>
     <url>db/journals/tcs/tcs582.html#LarsenMNT15</url>
   </article>
+  <article mdate="2021-02-17" key="journals/tcs/AmirELL14">
+    <author>Amihood Amir</author>
+    <author>Estrella Eisenberg</author>
+    <author>Avivit Levy</author>
+    <author>Noa Lewenstein</author>
+    <title>Closest periodic vectors in L<sub>p</sub> spaces.</title>
+    <pages>26-36</pages>
+    <year>2014</year>
+    <volume>533</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee type="oa">https://doi.org/10.1016/j.tcs.2014.03.019</ee>
+    <url>db/journals/tcs/tcs533.html#AmirELL14</url>
+  </article>
   <article mdate="2021-02-17" key="journals/tcs/ButmanLM16">
     <author>Ayelet Butman</author>
     <author>Noa Lewenstein</author>
@@ -3247,6 +3360,35 @@
     <journal>Theor. Comput. Sci.</journal>
     <ee type="oa">https://doi.org/10.1016/j.tcs.2012.03.005</ee>
     <url>db/journals/tcs/tcs438.html#MunroRRR12</url>
+  </article>
+  <article mdate="2021-02-17" key="journals/tcs/AmirLPS15">
+    <author>Amihood Amir</author>
+    <author>Avivit Levy</author>
+    <author>Ely Porat</author>
+    <author>B. Riva Shalom</author>
+    <title>Dictionary matching with a few gaps.</title>
+    <pages>34-46</pages>
+    <year>2015</year>
+    <volume>589</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee type="oa">https://doi.org/10.1016/j.tcs.2015.04.011</ee>
+    <url>db/journals/tcs/tcs589.html#AmirLPS15</url>
+  </article>
+  <article mdate="2022-06-23" key="journals/tcs/KidaMSTSA03">
+    <author>Takuya Kida</author>
+    <author>Tetsuya Matsumoto</author>
+    <author>Yusuke Shibata</author>
+    <author orcid="0000-0002-6138-1607">Masayuki Takeda</author>
+    <author orcid="0000-0002-4978-8316">Ayumi Shinohara</author>
+    <author>Setsuo Arikawa</author>
+    <title>Collage system: a unifying framework for compressed pattern matching.</title>
+    <pages>253-272</pages>
+    <year>2003</year>
+    <number>1</number>
+    <journal>Theor. Comput. Sci.</journal>
+    <volume>298</volume>
+    <ee type="oa">https://doi.org/10.1016/S0304-3975(02)00426-7</ee>
+    <url>db/journals/tcs/tcs298.html#KidaMSTSA03</url>
   </article>
   <article mdate="2022-06-23" key="journals/tcs/BilleGS22">
     <author orcid="0000-0002-1120-5154">Philip Bille</author>
@@ -3714,6 +3856,21 @@
     <ee>https://doi.org/10.1016/j.tcs.2015.12.010</ee>
     <url>db/journals/tcs/tcs656.html#FiciKLLP16</url>
   </article>
+  <article mdate="2021-02-17" key="journals/tcs/AmirEKLP11">
+    <author>Amihood Amir</author>
+    <author>Estrella Eisenberg</author>
+    <author>Orgad Keller</author>
+    <author>Avivit Levy</author>
+    <author>Ely Porat</author>
+    <title>Approximate string matching with stuck address bits.</title>
+    <pages>3537-3544</pages>
+    <year>2011</year>
+    <volume>412</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <number>29</number>
+    <ee type="oa">https://doi.org/10.1016/j.tcs.2011.02.044</ee>
+    <url>db/journals/tcs/tcs412.html#AmirEKLP11</url>
+  </article>
   <article mdate="2017-12-28" key="journals/tcs/MatsuokaAIBT16">
     <author>Yoshiaki Matsuoka</author>
     <author>Takahiro Aoki</author>
@@ -3839,6 +3996,20 @@
     <ee type="oa">https://doi.org/10.1016/j.tcs.2015.12.032</ee>
     <url>db/journals/tcs/tcs616.html#Jez16</url>
   </article>
+  <article mdate="2020-11-04" key="journals/tcs/ParkBALP20">
+    <author>Sung Gwan Park</author>
+    <author>Magsarjav Bataa</author>
+    <author>Amihood Amir</author>
+    <author>Gad M. Landau</author>
+    <author>Kunsoo Park</author>
+    <title>Finding patterns and periods in Cartesian tree matching.</title>
+    <pages>181-197</pages>
+    <year>2020</year>
+    <volume>845</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2020.09.014</ee>
+    <url>db/journals/tcs/tcs845.html#ParkBALP20</url>
+  </article>
   <article mdate="2021-02-17" key="journals/tcs/NavarroT14">
     <author>Gonzalo Navarro</author>
     <author>Sharma V. Thankachan</author>
@@ -3904,6 +4075,19 @@
     <journal>Theor. Comput. Sci.</journal>
     <ee type="oa">https://doi.org/10.1016/j.tcs.2012.08.004</ee>
     <url>db/journals/tcs/tcs483.html#GagieKNP13</url>
+  </article>
+  <article mdate="2019-10-15" key="journals/tcs/AmirLLP19">
+    <author>Amihood Amir</author>
+    <author>Avivit Levy</author>
+    <author>Ronit Lubin</author>
+    <author>Ely Porat</author>
+    <title>Approximate cover of strings.</title>
+    <pages>59-69</pages>
+    <year>2019</year>
+    <volume>793</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2019.05.020</ee>
+    <url>db/journals/tcs/tcs793.html#AmirLLP19</url>
   </article>
   <article mdate="2021-02-17" key="journals/tcs/FredrikssonNU05">
     <author>Kimmo Fredriksson</author>
@@ -4087,6 +4271,22 @@
     <url>db/journals/jcss/jcss21.html#MunroS80</url>
     <ee type="oa">https://doi.org/10.1016/0022-0000(80)90037-9</ee>
     <ee>https://www.wikidata.org/entity/Q27077565</ee>
+  </article>
+  <article mdate="2021-02-16" key="journals/jcss/AmirALLLP14">
+    <author>Amihood Amir</author>
+    <author>Alberto Apostolico</author>
+    <author>Gad M. Landau</author>
+    <author>Avivit Levy</author>
+    <author>Moshe Lewenstein</author>
+    <author>Ely Porat</author>
+    <title>Range LCP.</title>
+    <pages>1245-1253</pages>
+    <year>2014</year>
+    <volume>80</volume>
+    <journal>J. Comput. Syst. Sci.</journal>
+    <number>7</number>
+    <ee type="oa">https://doi.org/10.1016/j.jcss.2014.02.010</ee>
+    <url>db/journals/jcss/jcss80.html#AmirALLLP14</url>
   </article>
   <article mdate="2021-09-23" key="journals/jcss/BelazzouguiCGGK21">
     <author>Djamal Belazzougui</author>
@@ -5303,6 +5503,17 @@
     <journal>J. Discrete Algorithms</journal>
     <ee type="oa">https://doi.org/10.1016/j.jda.2012.07.009</ee>
     <url>db/journals/jda/jda18.html#MaruyamaNKS13</url>
+  </article>
+  <article mdate="2021-02-16" key="journals/jda/YoshidaK15">
+    <author>Satoshi Yoshida</author>
+    <author>Takuya Kida</author>
+    <title>An efficient Variable-to-Fixed length encoding using multiplexed parse trees.</title>
+    <pages>75-86</pages>
+    <year>2015</year>
+    <volume>32</volume>
+    <journal>J. Discrete Algorithms</journal>
+    <ee type="oa">https://doi.org/10.1016/j.jda.2014.10.005</ee>
+    <url>db/journals/jda/jda32.html#YoshidaK15</url>
   </article>
   <article mdate="2020-05-30" key="journals/bioinformatics/GhaffaariM19">
     <author>Ali Ghaffaari</author>
@@ -7310,6 +7521,20 @@
     <ee type="oa">http://arxiv.org/abs/1911.04198</ee>
     <url>db/journals/corr/corr1911.html#abs-1911-04198</url>
   </article>
+  <article mdate="2022-03-16" key="journals/corr/abs-2203-02763" publtype="informal">
+    <author>Michael A. Bender</author>
+    <author>Alexander Conway</author>
+    <author>Martin Farach-Colton</author>
+    <author>Hanna Komlós</author>
+    <author>William Kuszmaul</author>
+    <author>Nicole Wein</author>
+    <title>Online List Labeling: Breaking the log<sup>2</sup>n Barrier.</title>
+    <year>2022</year>
+    <volume>abs/2203.02763</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">https://doi.org/10.48550/arXiv.2203.02763</ee>
+    <url>db/journals/corr/corr2203.html#abs-2203-02763</url>
+  </article>
   <article mdate="2019-07-17" key="journals/corr/abs-1907-06310" publtype="informal">
     <author>Caleb C. Levy</author>
     <author>Robert E. Tarjan</author>
@@ -7821,6 +8046,18 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1802.10347</ee>
     <url>db/journals/corr/corr1802.html#abs-1802-10347</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/AmirCLL14" publtype="informal">
+    <author>Amihood Amir</author>
+    <author>Timothy M. Chan</author>
+    <author>Moshe Lewenstein</author>
+    <author>Noa Lewenstein</author>
+    <title>On Hardness of Jumbled Indexing.</title>
+    <year>2014</year>
+    <volume>abs/1405.0189</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1405.0189</ee>
+    <url>db/journals/corr/corr1405.html#AmirCLL14</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/PoyiasPR17" publtype="informal">
     <author>Andreas Poyias</author>
@@ -10178,6 +10415,18 @@
     <volume>abs/1110.2893</volume>
     <url>db/journals/corr/corr1110.html#abs-1110-2893</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/AmirLPS14" publtype="informal">
+    <author>Amihood Amir</author>
+    <author>Avivit Levy</author>
+    <author>Ely Porat</author>
+    <author>B. Riva Shalom</author>
+    <title>Dictionary Matching with One Gap.</title>
+    <year>2014</year>
+    <volume>abs/1408.2350</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1408.2350</ee>
+    <url>db/journals/corr/corr1408.html#AmirLPS14</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1110-5236" publtype="informal">
     <author>Philip Bille</author>
     <author>Inge Li Gørtz</author>
@@ -10655,6 +10904,17 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1702.07458</ee>
     <url>db/journals/corr/corr1702.html#TanimuraNBIT17</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/LewensteinNV14" publtype="informal">
+    <author>Moshe Lewenstein</author>
+    <author>Yakov Nekrich</author>
+    <author>Jeffrey Scott Vitter</author>
+    <title>Space-Efficient String Indexing for Wildcard Pattern Matching.</title>
+    <year>2014</year>
+    <volume>abs/1401.0625</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1401.0625</ee>
+    <url>db/journals/corr/corr1401.html#LewensteinNV14</url>
   </article>
   <article mdate="2019-05-21" key="journals/corr/abs-1902-04785" publtype="informal">
     <author>Lorraine A. K. Ayad</author>
@@ -11228,6 +11488,17 @@
     <ee type="oa">http://arxiv.org/abs/1705.01720</ee>
     <url>db/journals/corr/corr1705.html#KaneLM17</url>
   </article>
+  <article mdate="2022-06-13" key="journals/corr/abs-2206-00781" publtype="informal">
+    <author>Tomasz Kociumaka</author>
+    <author>Gonzalo Navarro</author>
+    <author>Francisco Olivares</author>
+    <title>Near-Optimal Search Time in δ-Optimal Space.</title>
+    <year>2022</year>
+    <volume>abs/2206.00781</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">https://doi.org/10.48550/arXiv.2206.00781</ee>
+    <url>db/journals/corr/corr2206.html#abs-2206-00781</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1711-08217" publtype="informal">
     <author>Anders Roy Christiansen</author>
     <author>Mikko Berggren Ettienne</author>
@@ -11328,6 +11599,15 @@
     <journal>CoRR</journal>
     <volume>abs/0907.0741</volume>
     <url>db/journals/corr/corr0907.html#abs-0907-0741</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1006-4093" publtype="informal">
+    <author>Yakov Nekrich</author>
+    <title>Dynamic Range Reporting in External Memory</title>
+    <ee type="oa">http://arxiv.org/abs/1006.4093</ee>
+    <year>2010</year>
+    <journal>CoRR</journal>
+    <volume>abs/1006.4093</volume>
+    <url>db/journals/corr/corr1006.html#abs-1006-4093</url>
   </article>
   <article mdate="2020-02-14" key="journals/corr/abs-2002-04979" publtype="informal">
     <author>Mario Szegedy</author>
@@ -11483,6 +11763,20 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1908.02741</ee>
     <url>db/journals/corr/corr1908.html#abs-1908-02741</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/AmirKLPPS15" publtype="informal">
+    <author>Amihood Amir</author>
+    <author>Tsvi Kopelowitz</author>
+    <author>Avivit Levy</author>
+    <author>Seth Pettie</author>
+    <author>Ely Porat</author>
+    <author>B. Riva Shalom</author>
+    <title>Online Dictionary Matching with One Gap.</title>
+    <year>2015</year>
+    <volume>abs/1503.07563</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1503.07563</ee>
+    <url>db/journals/corr/corr1503.html#AmirKLPPS15</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/FischerIK15" publtype="informal">
     <author>Johannes Fischer 0001</author>
@@ -12443,6 +12737,15 @@
     <volume>abs/0907.3135</volume>
     <url>db/journals/corr/corr0907.html#abs-0907-3135</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1109-3890" publtype="informal">
+    <author>Yakov Nekrich</author>
+    <title>A Dynamic Stabbing-Max Data Structure with Sub-Logarithmic Query Time</title>
+    <ee type="oa">http://arxiv.org/abs/1109.3890</ee>
+    <year>2011</year>
+    <journal>CoRR</journal>
+    <volume>abs/1109.3890</volume>
+    <url>db/journals/corr/corr1109.html#abs-1109-3890</url>
+  </article>
   <article mdate="2019-12-02" key="journals/corr/abs-1911-05060" publtype="informal">
     <author>Ioana Oriana Bercea</author>
     <author>Guy Even</author>
@@ -12981,6 +13284,16 @@
     <ee type="oa">http://arxiv.org/abs/1605.09558</ee>
     <url>db/journals/corr/corr1605.html#NishimotoIIBT16a</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/FuruyaK17" publtype="informal">
+    <author>Isamu Furuya</author>
+    <author>Takuya Kida</author>
+    <title>Compaction of Church Numerals for Higher-Order Compression.</title>
+    <year>2017</year>
+    <volume>abs/1706.10061</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1706.10061</ee>
+    <url>db/journals/corr/corr1706.html#FuruyaK17</url>
+  </article>
   <article mdate="2019-03-30" key="journals/corr/abs-1903-01387" publtype="informal">
     <author>Gaurav Menghani</author>
     <author>Dhruv Mátáni</author>
@@ -13122,6 +13435,16 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2010.08840</ee>
     <url>db/journals/corr/corr2010.html#abs-2010-08840</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/NekrichV13" publtype="informal">
+    <author>Yakov Nekrich</author>
+    <author>Jeffrey Scott Vitter</author>
+    <title>Optimal Color Range Reporting in One Dimension.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1306.5029</ee>
+    <volume>abs/1306.5029</volume>
+    <url>db/journals/corr/corr1306.html#NekrichV13</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1209-5441" publtype="informal">
     <author>Djamal Belazzougui</author>
@@ -13294,6 +13617,16 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2106.06249</ee>
     <url>db/journals/corr/corr2106.html#abs-2106-06249</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1007-1361" publtype="informal">
+    <author>Marek Karpinski</author>
+    <author>Yakov Nekrich</author>
+    <title>Top-K Color Queries for Document Retrieval</title>
+    <ee type="oa">http://arxiv.org/abs/1007.1361</ee>
+    <year>2010</year>
+    <journal>CoRR</journal>
+    <volume>abs/1007.1361</volume>
+    <url>db/journals/corr/corr1007.html#abs-1007-1361</url>
   </article>
   <article mdate="2020-02-03" key="journals/corr/abs-2001-11732" publtype="informal">
     <author>Marie Lejeune</author>
@@ -14181,6 +14514,15 @@
     <ee type="oa">http://arxiv.org/abs/1810.05303</ee>
     <url>db/journals/corr/corr1810.html#abs-1810-05303</url>
   </article>
+  <article mdate="2020-07-28" key="journals/corr/abs-2007-11094" publtype="informal">
+    <author>Yakov Nekrich</author>
+    <title>New Data Structures for Orthogonal Range Reporting and Range Minima Queries.</title>
+    <year>2020</year>
+    <volume>abs/2007.11094</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">https://arxiv.org/abs/2007.11094</ee>
+    <url>db/journals/corr/corr2007.html#abs-2007-11094</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1804-02906" publtype="informal">
     <author>Philip Bille</author>
     <author>Inge Li Gørtz</author>
@@ -14382,6 +14724,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1607.06660</ee>
     <url>db/journals/corr/corr1607.html#PolicritiP16</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1106-6261" publtype="informal">
+    <author>Yakov Nekrich</author>
+    <title>External Memory Orthogonal Range Reporting with Fast Updates</title>
+    <ee type="oa">http://arxiv.org/abs/1106.6261</ee>
+    <year>2011</year>
+    <journal>CoRR</journal>
+    <volume>abs/1106.6261</volume>
+    <url>db/journals/corr/corr1106.html#abs-1106-6261</url>
   </article>
   <article mdate="2020-11-12" key="journals/corr/abs-2011-04010" publtype="informal">
     <author>Anand Natrajan</author>
@@ -19391,6 +19742,17 @@
     <ee>https://doi.org/10.1109/5.286191</ee>
     <url>db/journals/pieee/pieee82.html#WynerZ94</url>
   </article>
+  <article mdate="2020-06-04" key="journals/ijcga/Nekrich13">
+    <author orcid="0000-0003-3771-5088">Yakov Nekrich</author>
+    <title>External Memory orthogonal Range Reporting with Fast Updates.</title>
+    <pages>141-</pages>
+    <year>2013</year>
+    <volume>23</volume>
+    <journal>Int. J. Comput. Geom. Appl.</journal>
+    <number>2</number>
+    <ee>https://doi.org/10.1142/S0218195913600042</ee>
+    <url>db/journals/ijcga/ijcga23.html#Nekrich13</url>
+  </article>
   <article mdate="2020-10-26" key="journals/rsa/Baeza-YatesN02">
     <author orcid="0000-0003-3208-9778">Ricardo A. Baeza-Yates</author>
     <author>Gonzalo Navarro</author>
@@ -19889,6 +20251,19 @@
     <ee>https://doi.org/10.1016/j.ic.2020.104515</ee>
     <url>db/journals/iandc/iandc273.html#GagieN20</url>
   </article>
+  <article mdate="2020-12-15" key="journals/iandc/AmirLPS20">
+    <author>Amihood Amir</author>
+    <author>Avivit Levy</author>
+    <author>Ely Porat</author>
+    <author>B. Riva Shalom</author>
+    <title>Online recognition of dictionary with one gap.</title>
+    <pages>104633</pages>
+    <year>2020</year>
+    <volume>275</volume>
+    <journal>Inf. Comput.</journal>
+    <ee>https://doi.org/10.1016/j.ic.2020.104633</ee>
+    <url>db/journals/iandc/iandc275.html#AmirLPS20</url>
+  </article>
   <article mdate="2021-02-12" key="journals/iandc/CuntoGMP91">
     <title>Fringe Analysis for Extquick: An in Situ Distributive External Sorting Algorithm</title>
     <author>Walter Cunto</author>
@@ -19917,6 +20292,18 @@
     <ee type="oa">https://doi.org/10.1016/j.ic.2014.12.012</ee>
     <ee>https://www.wikidata.org/entity/Q60554381</ee>
     <url>db/journals/iandc/iandc243.html#BilleGLW15</url>
+  </article>
+  <article mdate="2021-02-12" key="journals/iandc/AmirEL15">
+    <author>Amihood Amir</author>
+    <author>Estrella Eisenberg</author>
+    <author>Avivit Levy</author>
+    <title>Approximate periodicity.</title>
+    <pages>215-226</pages>
+    <year>2015</year>
+    <volume>241</volume>
+    <journal>Inf. Comput.</journal>
+    <ee type="oa">https://doi.org/10.1016/j.ic.2015.02.004</ee>
+    <url>db/journals/iandc/iandc241.html#AmirEL15</url>
   </article>
   <article mdate="2021-02-12" key="journals/iandc/DurocherHMNS13">
     <author>Stephane Durocher</author>
@@ -20021,6 +20408,21 @@
     <journal>Inf. Comput.</journal>
     <ee>https://doi.org/10.1016/j.ic.2020.104518</ee>
     <url>db/journals/iandc/iandc273.html#NishimotoTT20</url>
+  </article>
+  <article mdate="2022-06-13" key="journals/iandc/KociumakaRRSWZ22">
+    <author>Tomasz Kociumaka</author>
+    <author>Jakub Radoszewski</author>
+    <author>Wojciech Rytter</author>
+    <author>Juliusz Straszynski</author>
+    <author>Tomasz Walen</author>
+    <author>Wiktor Zuba</author>
+    <title>Efficient representation and counting of antipower factors in words.</title>
+    <pages>104779</pages>
+    <year>2022</year>
+    <volume>286</volume>
+    <journal>Inf. Comput.</journal>
+    <ee>https://doi.org/10.1016/j.ic.2021.104779</ee>
+    <url>db/journals/iandc/iandc286.html#KociumakaRRSWZ22</url>
   </article>
   <article mdate="2021-07-25" key="journals/cj/FarruggiaGNPS18">
     <author>Andrea Farruggia</author>
@@ -21833,6 +22235,16 @@
     <ee>https://doi.org/10.1145/266714.266719</ee>
     <url>db/conf/cikm/cikm97.html#Baeza-YatesN97</url>
   </inproceedings>
+  <inproceedings mdate="2017-05-19" key="conf/dagstuhl/Kida05">
+    <author>Takuya Kida</author>
+    <title>Faster Pattern Matching Algorithm for Arc-Annotated Sequences.</title>
+    <pages>25-39</pages>
+    <year>2005</year>
+    <booktitle>Federation over the Web</booktitle>
+    <ee>https://doi.org/10.1007/11605126_2</ee>
+    <crossref>conf/dagstuhl/2005fed</crossref>
+    <url>db/conf/dagstuhl/fed2005.html#Kida05</url>
+  </inproceedings>
   <inproceedings mdate="2020-12-29" key="conf/ercimdl/BrisaboaFNP05">
     <author orcid="0000-0001-8025-3048">Nieves R. Brisaboa</author>
     <author>Antonio Fariña</author>
@@ -22178,6 +22590,17 @@
     <ee>https://dl.acm.org/citation.cfm?id=2095167</ee>
     <crossref>conf/soda/2012</crossref>
     <url>db/conf/soda/soda2012.html#BrodalTST12</url>
+  </inproceedings>
+  <inproceedings mdate="2021-07-15" key="conf/soda/ChanN20">
+    <author>Timothy M. Chan</author>
+    <author orcid="0000-0003-3771-5088">Yakov Nekrich</author>
+    <title>Better Data Structures for Colored Orthogonal Range Reporting.</title>
+    <pages>627-636</pages>
+    <year>2020</year>
+    <booktitle>SODA</booktitle>
+    <ee type="oa">https://doi.org/10.1137/1.9781611975994.38</ee>
+    <crossref>conf/soda/2020</crossref>
+    <url>db/conf/soda/soda2020.html#ChanN20</url>
   </inproceedings>
   <inproceedings mdate="2021-02-02" key="conf/soda/MunroS18">
     <author>J. Ian Munro</author>
@@ -36746,6 +37169,18 @@
     <crossref>conf/birthday/2009mehlhorn</crossref>
     <url>db/conf/birthday/mehlhorn2009.html#Munro09</url>
   </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/birthday/AmirLL14">
+    <author>Amihood Amir</author>
+    <author>Moshe Lewenstein</author>
+    <author>Noa Lewenstein</author>
+    <title>Hypertext Searching - A Survey.</title>
+    <pages>364-381</pages>
+    <year>2014</year>
+    <booktitle>Language, Culture, Computation (1)</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-45321-2_15</ee>
+    <crossref>conf/birthday/2014choueka1</crossref>
+    <url>db/conf/birthday/choueka2014-1.html#AmirLL14</url>
+  </inproceedings>
   <inproceedings mdate="2020-03-19" key="conf/birthday/IlieNY04">
     <author>Lucian Ilie</author>
     <author>Gonzalo Navarro</author>
@@ -36826,6 +37261,28 @@
     <booktitle>SCG</booktitle>
     <ee>https://doi.org/10.1145/10515.10547</ee>
     <url>db/conf/compgeom/compgeom86.html#ChazelleE86</url>
+  </inproceedings>
+  <inproceedings mdate="2021-06-16" key="conf/compgeom/Nekrich20">
+    <author orcid="0000-0003-3771-5088">Yakov Nekrich</author>
+    <title>Four-Dimensional Dominance Range Reporting in Linear Space.</title>
+    <pages>59:1-59:14</pages>
+    <year>2020</year>
+    <booktitle>SoCG</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.SoCG.2020.59</ee>
+    <crossref>conf/compgeom/2020</crossref>
+    <url>db/conf/compgeom/compgeom2020.html#Nekrich20</url>
+  </inproceedings>
+  <inproceedings mdate="2021-06-16" key="conf/compgeom/ChanHN20">
+    <author orcid="0000-0002-8093-0675">Timothy M. Chan</author>
+    <author>Qizheng He</author>
+    <author orcid="0000-0003-3771-5088">Yakov Nekrich</author>
+    <title>Further Results on Colored Range Searching.</title>
+    <pages>28:1-28:15</pages>
+    <year>2020</year>
+    <booktitle>SoCG</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.SoCG.2020.28</ee>
+    <crossref>conf/compgeom/2020</crossref>
+    <url>db/conf/compgeom/compgeom2020.html#ChanHN20</url>
   </inproceedings>
   <inproceedings mdate="2022-04-09" key="conf/ifip12/AlzamelCIKKRRW18">
     <author>Mai Alzamel</author>
@@ -42920,6 +43377,17 @@
     <crossref>conf/dcc/2019</crossref>
     <url>db/conf/dcc/dcc2019.html#GuercioOSW19</url>
   </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/dcc/Kida09">
+    <author>Takuya Kida</author>
+    <title>Suffix Tree Based VF-Coding for Compressed Pattern Matching.</title>
+    <pages>449</pages>
+    <year>2009</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2009.58</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2009.58</ee>
+    <crossref>conf/dcc/2009</crossref>
+    <url>db/conf/dcc/dcc2009.html#Kida09</url>
+  </inproceedings>
   <inproceedings mdate="2022-07-14" key="conf/dcc/FrosiniMRRS22">
     <author>Andrea Frosini</author>
     <author>Ilaria Mancini</author>
@@ -44673,6 +45141,21 @@
     <crossref>conf/dcc/2011</crossref>
     <url>db/conf/dcc/dcc2011.html#ZhaoL11</url>
   </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/dcc/KidaTSMA98">
+    <author>Takuya Kida</author>
+    <author>Masayuki Takeda</author>
+    <author>Ayumi Shinohara</author>
+    <author>Masamichi Miyazaki</author>
+    <author>Setsuo Arikawa</author>
+    <title>Multiple Pattern Matching in LZW Compressed Text.</title>
+    <pages>103-112</pages>
+    <year>1998</year>
+    <crossref>conf/dcc/1998</crossref>
+    <booktitle>Data Compression Conference</booktitle>
+    <ee>https://doi.org/10.1109/DCC.1998.672136</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.1998.672136</ee>
+    <url>db/conf/dcc/dcc98.html#KidaTSMA98</url>
+  </inproceedings>
   <inproceedings mdate="2021-07-25" key="conf/dcc/AlankoGNB19">
     <author orcid="0000-0002-8003-9225">Jarno N. Alanko</author>
     <author orcid="0000-0003-3689-327X">Travis Gagie</author>
@@ -46133,6 +46616,22 @@
     <ee>https://doi.org/10.1007/3-540-45884-0_18</ee>
     <url>db/conf/dsp/dsp2002.html#OkazakiSI02</url>
   </inproceedings>
+  <inproceedings mdate="2022-06-23" key="conf/ciac/ShibataKFTSSA00">
+    <author>Yusuke Shibata</author>
+    <author>Takuya Kida</author>
+    <author>Shuichi Fukamachi</author>
+    <author>Masayuki Takeda</author>
+    <author orcid="0000-0002-4978-8316">Ayumi Shinohara</author>
+    <author>Takeshi Shinohara</author>
+    <author>Setsuo Arikawa</author>
+    <title>Speeding Up Pattern Matching by Text Compression.</title>
+    <pages>306-315</pages>
+    <year>2000</year>
+    <crossref>conf/ciac/2000</crossref>
+    <booktitle>CIAC</booktitle>
+    <ee>https://doi.org/10.1007/3-540-46521-9_25</ee>
+    <url>db/conf/ciac/ciac2000.html#ShibataKFTSSA00</url>
+  </inproceedings>
   <inproceedings mdate="2017-05-24" key="conf/ciac/BelazzouguiR13">
     <author>Djamal Belazzougui</author>
     <author>Mathieu Raffinot</author>
@@ -46317,6 +46816,18 @@
     <booktitle>WADS</booktitle>
     <url>db/conf/wads/wads97.html#Baeza-YatesN97</url>
     <ee>https://doi.org/10.1007/3-540-63307-3_57</ee>
+  </inproceedings>
+  <inproceedings mdate="2019-07-31" key="conf/wads/ChanNS19">
+    <author>Timothy M. Chan</author>
+    <author>Yakov Nekrich</author>
+    <author>Michiel H. M. Smid</author>
+    <title>Orthogonal Range Reporting and Rectangle Stabbing for Fat Rectangles.</title>
+    <pages>283-295</pages>
+    <year>2019</year>
+    <booktitle>WADS</booktitle>
+    <ee>https://doi.org/10.1007/978-3-030-24766-9_21</ee>
+    <crossref>conf/wads/2019</crossref>
+    <url>db/conf/wads/wads2019.html#ChanNS19</url>
   </inproceedings>
   <inproceedings mdate="2017-09-16" key="conf/wads/BrodnikMM97">
     <author orcid="0000-0001-9773-0664">Andrej Brodnik</author>
@@ -46747,6 +47258,18 @@
     <ee type="oa">https://doi.org/10.4230/LIPIcs.STACS.2013.245</ee>
     <crossref>conf/stacs/2013</crossref>
     <url>db/conf/stacs/stacs2013.html#KociumakaRR13</url>
+  </inproceedings>
+  <inproceedings mdate="2018-11-30" key="conf/stacs/LewensteinNV14">
+    <author>Moshe Lewenstein</author>
+    <author orcid="0000-0003-3771-5088">Yakov Nekrich</author>
+    <author>Jeffrey Scott Vitter</author>
+    <title>Space-Efficient String Indexing for Wildcard Pattern Matching.</title>
+    <pages>506-517</pages>
+    <year>2014</year>
+    <booktitle>STACS</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.STACS.2014.506</ee>
+    <crossref>conf/stacs/2014</crossref>
+    <url>db/conf/stacs/stacs2014.html#LewensteinNV14</url>
   </inproceedings>
   <inproceedings mdate="2018-08-23" key="conf/stacs/OnoderaS18">
     <author>Taku Onodera</author>
@@ -53638,6 +54161,21 @@
     <booktitle>SPIRE</booktitle>
     <url>db/conf/spire/spire2004.html#Fredriksson04</url>
   </inproceedings>
+  <inproceedings mdate="2022-06-23" key="conf/spire/KidaSTSA99">
+    <author>Takuya Kida</author>
+    <author>Yusuke Shibata</author>
+    <author>Masayuki Takeda</author>
+    <author orcid="0000-0002-4978-8316">Ayumi Shinohara</author>
+    <author>Setsuo Arikawa</author>
+    <title>A Unifying Framework for Compressed Pattern Matching.</title>
+    <pages>89-96</pages>
+    <year>1999</year>
+    <crossref>conf/spire/1999</crossref>
+    <booktitle>SPIRE/CRIWG</booktitle>
+    <ee>https://doi.org/10.1109/SPIRE.1999.796582</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/SPIRE.1999.796582</ee>
+    <url>db/conf/spire/spire99.html#KidaSTSA99</url>
+  </inproceedings>
   <inproceedings mdate="2017-05-24" key="conf/spire/ElmasryKT12">
     <author>Amr Elmasry</author>
     <author>Jyrki Katajainen</author>
@@ -58432,6 +58970,20 @@
     <ee>https://doi.org/10.1007/978-3-642-54423-1_63</ee>
     <crossref>conf/latin/2014</crossref>
     <url>db/conf/latin/latin2014.html#GagieGKNP14</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/latin/AmirFKRS14">
+    <author>Amihood Amir</author>
+    <author>Jessica Ficler</author>
+    <author>Robert Krauthgamer</author>
+    <author>Liam Roditty</author>
+    <author>Oren Sar Shalom</author>
+    <title>Multiply Balanced k -Partitioning.</title>
+    <pages>586-597</pages>
+    <year>2014</year>
+    <booktitle>LATIN</booktitle>
+    <ee>https://doi.org/10.1007/978-3-642-54423-1_51</ee>
+    <crossref>conf/latin/2014</crossref>
+    <url>db/conf/latin/latin2014.html#AmirFKRS14</url>
   </inproceedings>
   <inproceedings mdate="2021-07-25" key="conf/latin/BelazzouguiGMPP16">
     <author>Djamal Belazzougui</author>
