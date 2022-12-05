@@ -1,5 +1,5 @@
 import * as fs from 'fs'
-import { DBLPArticle, DBLPElement, DBLPInproceedings, DBLPElementClass } from "../basic_functions/dblp_element"
+import { DBLPArticle, DBLPElement, DBLPInproceedings, DBLPElementClass, to_url_string } from "../basic_functions/dblp_element"
 import { ArxivArticle } from "../basic_functions/arxiv_xml"
 import { createArxivMD } from "./create_arxiv_md"
 import { createCompleteMD, createMD, createYearProceedingMD, ProceedingsInfo } from "./create_list_md"
@@ -56,9 +56,8 @@ export function write_list_by_book(dblpElements: DBLPElementClass[], outputFolde
     const titlePageLines: string[] = new Array();
     titlePageLines.push("# Proceedings for Stringologist")
     bookTitles.forEach((bookTitle, i) => {
-        const urlstr = bookTitle.replace(/\s/g, '-')
 
-        titlePageLines.push(`${i+1}. [${bookTitle} (${inproceedingMapper.get(bookTitle)!.length} articles)](./proceedings/${urlstr})  `)
+        titlePageLines.push(`${i+1}. [${bookTitle} (${inproceedingMapper.get(bookTitle)!.length} articles)](./proceedings/${to_url_string(bookTitle)})  `)
     })
 
     const titlePage = titlePageLines.join("\n");
@@ -78,7 +77,7 @@ export function write_list_by_book(dblpElements: DBLPElementClass[], outputFolde
         const contentLines = write_list_conference(bookTitle, inproceedingMapper.get(bookTitle)!, 2)
         lines.push(topLine);
         contentLines.forEach((v) => lines.push(v))
-        const filePath = outputFolderPath + "/" + bookTitle.replace("/", "_") + ".md";
+        const filePath = outputFolderPath + "/" + to_url_string(bookTitle) + ".md";
 
         try {
             fs.writeFileSync(filePath, lines.join("\n"));

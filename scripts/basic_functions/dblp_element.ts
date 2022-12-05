@@ -14,6 +14,10 @@ function get_formal_ee(ee: string) : string {
         return ee;
     }
 }
+export function to_url_string(value : string) : string {
+    return value.replace(/\s/g, '_').replace(/\//g, '_');
+
+}
 export class DBLPInproceedings {
     public authors: string[] = [];
     public title: string = "";
