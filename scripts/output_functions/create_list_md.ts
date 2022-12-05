@@ -1,6 +1,6 @@
 import { DBLPArticle, DBLPElement, DBLPInproceedings, DBLPElementClass } from "../basic_functions/dblp_element"
 
-type ProceedingsInfo = {
+export type ProceedingsInfo = {
     name: string,
     inproceedings: DBLPInproceedings[];
     dblp_url: string;
@@ -15,19 +15,31 @@ type YearPaperCollection = {
     papers: DBLPElementClass[];
 }
 
+export function createYearProceedingMD(_proceedings: ProceedingsInfo, year: number): string[] {
+    const lines: string[] = new Array();
+
+    lines.push(`#### [${_proceedings.name} ${year}](${_proceedings.dblp_url})`);
+    _proceedings.inproceedings.forEach((w, i) => {
+        if (w.ee.length > 0) {
+            lines.push(`  ${i + 1}. [${w.title}](${w.ee[0]})  `);
+        } else {
+            lines.push(`  ${i + 1}. ${w.title}  `);
+        }
+    })
+    lines.push(`  `);
+
+    return lines;
+}
+
+
 function createInproceedingsMD(_proceedings: ProceedingsInfo[], year: number): string[] {
     const lines: string[] = new Array();
     //lines.push(`### Proceedings  `);
     //lines.push(`  `);
 
     _proceedings.forEach((v) => {
-        lines.push(`#### [${v.name} ${year}](${v.dblp_url})`);
-        v.inproceedings.forEach((w, i) => {
-            if (w.ee.length > 0) {
-                lines.push(`  ${i + 1}. [${w.title}](${w.ee[0]})  `);
-            } else {
-                lines.push(`  ${i + 1}. ${w.title}  `);
-            }
+        createYearProceedingMD(v, year).forEach((w) =>{
+            lines.push(w);
         })
         lines.push(`  `);
     })

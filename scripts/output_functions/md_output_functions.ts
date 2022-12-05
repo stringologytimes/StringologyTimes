@@ -2,7 +2,7 @@ import * as fs from 'fs'
 import { DBLPArticle, DBLPElement, DBLPInproceedings, DBLPElementClass } from "../basic_functions/dblp_element"
 import { ArxivArticle } from "../basic_functions/arxiv_xml"
 import { createArxivMD } from "./create_arxiv_md"
-import { createCompleteMD, createMD } from "./create_list_md"
+import { createCompleteMD, createMD, createYearProceedingMD, ProceedingsInfo } from "./create_list_md"
 
 export function write_list_year_md(yearList: number[], dblpElements: DBLPElementClass[], outputFilePathPrefix: string): void {
     yearList.forEach((year) => {
@@ -28,6 +28,67 @@ export function write_complete_md(dblpElements: DBLPElementClass[], outputFilePa
     } catch (e) {
         console.log(e);
     }
+}
+export function write_list_by_book(dblpElements: DBLPElementClass[], outputFolderPath: string){
+    if (!fs.existsSync(outputFolderPath)) {
+        fs.mkdirSync(outputFolderPath);
+    }
+    const inproceedingList = <DBLPInproceedings[]>dblpElements.filter((v) => v instanceof DBLPInproceedings);
+
+    const inproceedingMapper : Map<string, DBLPInproceedings[]> = new Map();
+    inproceedingList.forEach((v) =>{
+        if(inproceedingMapper.has(v.booktitle)){
+            inproceedingMapper.get(v.booktitle)?.push(v);
+        }else{
+            const arr : DBLPInproceedings[] = new Array();
+            arr.push(v);
+            inproceedingMapper.set(v.booktitle, arr);
+        }
+    })
+
+    inproceedingMapper.forEach((value, bookTitle) =>{
+        const lines = write_list_conference(bookTitle, value)
+        const filePath = outputFolderPath + "/" + bookTitle.replace("/", "_") + ".md";
+
+        try {
+            fs.writeFileSync(filePath, lines.join("\n"));
+            console.log(`Outputted ${filePath}`);
+    
+        } catch (e) {
+            console.log(e);
+        }
+    
+    })
+
+
+
+}
+function getSortedYears(dblpElements: DBLPElementClass[]) : number[]{
+    const years : Set<number> = new Set();
+    dblpElements.forEach((v) =>{
+        years.add(v.year);
+    })
+
+    const r : number[] = new Array();
+    years.forEach((v) => r.push(v));
+    r.sort((a,b) => b - a);
+    return r;
+}
+
+function write_list_conference(bookTitle : string, items : DBLPInproceedings[]) : string[]{
+    const years = getSortedYears(items);
+    const lines: string[] = new Array();
+
+    years.forEach((year) =>{
+        const ps = items.filter((v) => v.year == year);
+        const proceeding : ProceedingsInfo = { name : bookTitle, dblp_url : ps[0].proceedingsURL, inproceedings : ps};
+        createYearProceedingMD(proceeding, year).forEach((line) =>{
+            lines.push(line);
+        })
+    })
+    return lines;
+
+
 }
 
 export function write_arxiv_list_md(arxivArticles: ArxivArticle[], outputFilePath: string): void {

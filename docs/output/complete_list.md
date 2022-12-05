@@ -1068,6 +1068,7 @@
   29. [Using Automata and a Decision Procedure to Prove Results in Pattern Matching (Invited Talk).](https://doi.org/10.4230/LIPIcs.CPM.2022.2)  
   30. [{RePair} Grammars Are the Smallest Grammars for Fibonacci Words.](https://doi.org/10.4230/LIPIcs.CPM.2022.26)  
   
+  
 #### [DCC 2022](https://dblp.org/db/conf/dcc/dcc2022.html)
   1. [A Benchmark of Entropy Coders for the Compression of Genome Sequencing Data.](https://doi.org/10.1109/DCC52660.2022.00058)  
   2. [Burrows-Wheeler Transform on Purely Morphic Words.](https://doi.org/10.1109/DCC52660.2022.00063)  
@@ -1090,9 +1091,11 @@
   19. [Succinct Data Structure for Path Graphs.](https://doi.org/10.1109/DCC52660.2022.00034)  
   20. [x3: Lossless Data Compressor.](https://doi.org/10.1109/DCC52660.2022.00052)  
   
+  
 #### [DLT 2022](https://dblp.org/db/conf/dlt/dlt2022.html)
   1. [Logarithmic Equal-Letter Runs for BWT of Purely Morphic Words.](https://doi.org/10.1007/978-3-031-05578-2_11)  
   2. [Prefix Palindromic Length of the Sierpinski Word.](https://doi.org/10.1007/978-3-031-05578-2_6)  
+  
   
 #### [ESA 2022](https://dblp.org/db/conf/esa/esa2022.html)
   1. [An Improved Algorithm for Finding the Shortest Synchronizing Words.](https://doi.org/10.4230/LIPIcs.ESA.2022.85)  
@@ -1104,6 +1107,7 @@
   7. [Lyndon Arrays Simplified.](https://doi.org/10.4230/LIPIcs.ESA.2022.48)  
   8. [Simple Worst-Case Optimal Adaptive Prefix-Free Coding.](https://doi.org/10.4230/LIPIcs.ESA.2022.57)  
   
+  
 #### [ICALP 2022](https://dblp.org/db/conf/icalp/icalp2022.html)
   1. [An Optimal-Time RLBWT Construction in BWT-Runs Bounded Space.](https://doi.org/10.4230/LIPIcs.ICALP.2022.99)  
   2. [Fully Functional Parameterized Suffix Trees in Compact Space.](https://doi.org/10.4230/LIPIcs.ICALP.2022.65)  
@@ -1112,6 +1116,7 @@
   5. [Improved Sublinear-Time Edit Distance for Preprocessed Strings.](https://doi.org/10.4230/LIPIcs.ICALP.2022.32)  
   6. [Listing, Verifying and Counting Lowest Common Ancestors in DAGs: Algorithms and Fine-Grained Lower Bounds.](https://doi.org/10.4230/LIPIcs.ICALP.2022.94)  
   
+  
 #### [IWOCA 2022](https://dblp.org/db/conf/iwoca/iwoca2022.html)
   1. [Computing Longest (Common) Lyndon Subsequences.](https://doi.org/10.1007/978-3-031-06678-8_10)  
   2. [Linear Time Construction of Indexable Elastic Founder Graphs.](https://doi.org/10.1007/978-3-031-06678-8_35)  
@@ -1119,13 +1124,16 @@
   4. [Shortest Unique Palindromic Substring Queries in Semi-dynamic Settings.](https://doi.org/10.1007/978-3-031-06678-8_31)  
   5. [Space-Efficient B Trees via Load-Balancing.](https://doi.org/10.1007/978-3-031-06678-8_24)  
   
+  
 #### [MFCS 2022](https://dblp.org/db/conf/mfcs/mfcs2022.html)
   1. [On Uniformization in the Full Binary Tree.](https://doi.org/10.4230/LIPIcs.MFCS.2022.77)  
   2. [Streaming Word Problems.](https://doi.org/10.4230/LIPIcs.MFCS.2022.72)  
   
+  
 #### [SEA 2022](https://dblp.org/db/conf/wea/sea2022.html)
   1. [Computing Maximal Unique Matches with the r-Index.](https://doi.org/10.4230/LIPIcs.SEA.2022.22)  
   2. [RLBWT Tricks.](https://doi.org/10.4230/LIPIcs.SEA.2022.16)  
+  
   
 #### [SODA 2022](https://dblp.org/db/conf/soda/soda2022.html)
   1. [A Lower Bound for the n-queens Problem.](https://doi.org/10.1137/1.9781611977073.86)  
@@ -1141,9 +1149,11 @@
   11. [Splay trees on trees.](https://doi.org/10.1137/1.9781611977073.75)  
   12. [Streaming Regular Expression Membership and Pattern Matching.](https://doi.org/10.1137/1.9781611977073.30)  
   
+  
 #### [SOSA 2022](https://dblp.org/db/conf/sosa/sosa2022.html)
   1. [Faster Exponential Algorithm for Permutation Pattern Matching.](https://doi.org/10.1137/1.9781611977066.21)  
   2. [Simpler Adjacency Labeling for Planar Graphs with B-Trees.](https://doi.org/10.1137/1.9781611977066.3)  
+  
   
 #### [SPIRE 2022](https://dblp.org/db/conf/spire/spire2022.html)
   1. [Accessing the Suffix Array via φ -1-Forest.](https://doi.org/10.1007/978-3-031-20643-6_7)  
@@ -1170,9 +1180,11 @@
   22. [Substring Complexities on Run-Length Compressed Strings.](https://doi.org/10.1007/978-3-031-20643-6_10)  
   23. [The Complexity of the Co-occurrence Problem.](https://doi.org/10.1007/978-3-031-20643-6_4)  
   
+  
 #### [STACS 2022](https://dblp.org/db/conf/stacs/stacs2022.html)
   1. [Existential Definability over the Subword Ordering.](https://doi.org/10.4230/LIPIcs.STACS.2022.7)  
   2. [Probabilistic vs Deterministic Gamblers.](https://doi.org/10.4230/LIPIcs.STACS.2022.11)  
+  
   
 #### [STOC 2022](https://dblp.org/db/conf/stoc/stoc2022.html)
   1. [Almost-optimal sublinear-time edit distance in the low distance regime.](https://doi.org/10.1145/3519935.3519990)  
@@ -1181,9 +1193,11 @@
   4. [Improved approximation guarantees for shortest superstrings using cycle classification by overlap to length ratios.](https://doi.org/10.1145/3519935.3520001)  
   5. [On the optimal time/space tradeoff for hash tables.](https://doi.org/10.1145/3519935.3519969)  
   
+  
 #### [SWAT 2022](https://dblp.org/db/conf/swat/swat2022.html)
   1. [Predecessor on the Ultra-Wide Word RAM.](https://doi.org/10.4230/LIPIcs.SWAT.2022.18)  
   2. [Unit-Disk Range Searching and Applications.](https://doi.org/10.4230/LIPIcs.SWAT.2022.32)  
+  
   
 #### [WABI 2022](https://dblp.org/db/conf/wabi/wabi2022.html)
   1. [Eulertigs: Minimum Plain Text Representation of k-mer Sets Without Repetitions in Linear Time.](https://doi.org/10.4230/LIPIcs.WABI.2022.2)  
@@ -1195,6 +1209,7 @@
   7. [Suffix Sorting via Matching Statistics.](https://doi.org/10.4230/LIPIcs.WABI.2022.20)  
   8. [Toward Optimal Fingerprint Indexing for Large Scale Genomics.](https://doi.org/10.4230/LIPIcs.WABI.2022.25)  
   9. [phyBWT: Alignment-Free Phylogeny via eBWT Positional Clustering.](https://doi.org/10.4230/LIPIcs.WABI.2022.23)  
+  
   
 #### ACM Trans. Algorithms 2022  
   1. [A Simple Algorithm for Optimal Search Trees with Two-way Comparisons.](https://doi.org/10.1145/3477910)  
@@ -1287,11 +1302,14 @@
   1. [A "Learned" Approach to Quicken and Compress Rank/Select Dictionaries.](https://doi.org/10.1137/1.9781611976472.4)  
   2. [PFP Compressed Suffix Trees.](https://doi.org/10.1137/1.9781611976472.5)  
   
+  
 #### [CIAC 2021](https://dblp.org/db/conf/ciac/ciac2021.html)
   1. [The Parameterized Suffix Tray.](https://doi.org/10.1007/978-3-030-75242-2_18)  
   
+  
 #### [COCOA 2021](https://dblp.org/db/conf/cocoa/cocoa2021.html)
   1. [Succinct Data Structures for Series-Parallel, Block-Cactus and 3-Leaf Power Graphs.](https://doi.org/10.1007/978-3-030-92681-6_33)  
+  
   
 #### [CPM 2021](https://dblp.org/db/conf/cpm/cpm2021.html)
   1. [A Compact Index for Cartesian Tree Matching.](https://doi.org/10.4230/LIPIcs.CPM.2021.18)  
@@ -1321,6 +1339,7 @@
   25. [The k-Mappability Problem Revisited.](https://doi.org/10.4230/LIPIcs.CPM.2021.5)  
   26. [Weighted Ancestors in Suffix Trees Revisited.](https://doi.org/10.4230/LIPIcs.CPM.2021.8)  
   
+  
 #### [DCC 2021](https://dblp.org/db/conf/dcc/dcc2021.html)
   1. [A Disk-Based Index for Trajectories with an In-Memory Compressed Cache.](https://doi.org/10.1109/DCC50243.2021.00047)  
   2. [A grammar compressor for collections of reads with applications to the construction of the BWT.](https://doi.org/10.1109/DCC50243.2021.00016)  
@@ -1342,9 +1361,11 @@
   18. [Succinct representations of Intersection Graphs on a Circle.](https://doi.org/10.1109/DCC50243.2021.00020)  
   19. [ndzip: A High-Throughput Parallel Lossless Compressor for Scientific Data.](https://doi.org/10.1109/DCC50243.2021.00018)  
   
+  
 #### [DLT 2021](https://dblp.org/db/conf/dlt/dlt2021.html)
   1. [Upper Bounds on Distinct Maximal (Sub-)Repetitions in Compressed Strings.](https://doi.org/10.1007/978-3-030-81508-0_26)  
   2. [Weighted Prefix Normal Words: Mind the Gap.](https://doi.org/10.1007/978-3-030-81508-0_12)  
+  
   
 #### [ESA 2021](https://dblp.org/db/conf/esa/esa2021.html)
   1. [Bidirectional String Anchors: A New String Sampling Mechanism.](https://doi.org/10.4230/LIPIcs.ESA.2021.64)  
@@ -1357,9 +1378,11 @@
   8. [Minimum Common String Partition: Exact Algorithms.](https://doi.org/10.4230/LIPIcs.ESA.2021.35)  
   9. [Space Efficient Two-Dimensional Orthogonal Colored Range Counting.](https://doi.org/10.4230/LIPIcs.ESA.2021.46)  
   
+  
 #### [FOCS 2021](https://dblp.org/db/conf/focs/focs2021.html)
   1. [Breaking the Cubic Barrier for (Unweighted) Tree Edit Distance.](https://doi.org/10.1109/FOCS52979.2021.00082)  
   2. [Small-space and streaming pattern matching with $k$ edits.](https://doi.org/10.1109/FOCS52979.2021.00090)  
+  
   
 #### [ICALP 2021](https://dblp.org/db/conf/icalp/icalp2021.html)
   1. [A Linear-Time n0.4-Approximation for Longest Common Subsequence.](https://doi.org/10.4230/LIPIcs.ICALP.2021.39)  
@@ -1375,6 +1398,7 @@
   11. [Sorting Short Integers.](https://doi.org/10.4230/LIPIcs.ICALP.2021.88)  
   12. [Streaming and Small Space Approximation Algorithms for Edit Distance and Longest Common Subsequence.](https://doi.org/10.4230/LIPIcs.ICALP.2021.54)  
   
+  
 #### [ISAAC 2021](https://dblp.org/db/conf/isaac/isaac2021.html)
   1. [Algorithms and Complexity on Indexing Elastic Founder Graphs.](https://doi.org/10.4230/LIPIcs.ISAAC.2021.20)  
   2. [Inverse Suffix Array Queries for 2-Dimensional Pattern Matching in Near-Compact Space.](https://doi.org/10.4230/LIPIcs.ISAAC.2021.60)  
@@ -1383,19 +1407,24 @@
   5. [Resilient Level Ancestor, Bottleneck, and Lowest Common Ancestor Queries in Dynamic Trees.](https://doi.org/10.4230/LIPIcs.ISAAC.2021.66)  
   6. [Streaming Pattern Matching (Invited Talk).](https://doi.org/10.4230/LIPIcs.ISAAC.2021.1)  
   
+  
 #### [IWOCA 2021](https://dblp.org/db/conf/iwoca/iwoca2021.html)
   1. [The Tandem Duplication Distance Problem Is Hard over Bounded Alphabets.](https://doi.org/10.1007/978-3-030-79987-8_13)  
+  
   
 #### [LATA 2021](https://dblp.org/db/conf/lata/lata2021.html)
   1. [Cadences in Grammar-Compressed Strings.](https://doi.org/10.1007/978-3-030-68195-1_26)  
   2. [Succinct Representations for (Non)Deterministic Finite Automata.](https://doi.org/10.1007/978-3-030-68195-1_5)  
   
+  
 #### [MFCS 2021](https://dblp.org/db/conf/mfcs/mfcs2021.html)
   1. [Matching Patterns with Variables Under Hamming Distance.](https://doi.org/10.4230/LIPIcs.MFCS.2021.48)  
+  
   
 #### [SEA 2021](https://dblp.org/db/conf/wea/sea2021.html)
   1. [Document Retrieval Hacks.](https://doi.org/10.4230/LIPIcs.SEA.2021.12)  
   2. [Engineering Predecessor Data Structures for Dynamic Integer Sets.](https://doi.org/10.4230/LIPIcs.SEA.2021.7)  
+  
   
 #### [SODA 2021](https://dblp.org/db/conf/soda/soda2021.html)
   1. [A Lower Bound for Dynamic Fractional Cascading.](https://doi.org/10.1137/1.9781611976465.133)  
@@ -1406,14 +1435,17 @@
   6. [On Locating Paths in Compressed Tries.](https://doi.org/10.1137/1.9781611976465.47)  
   7. [Optimal Oblivious Priority Queues.](https://doi.org/10.1137/1.9781611976465.141)  
   
+  
 #### [SOFSEM 2021](https://dblp.org/db/conf/sofsem/sofsem2021.html)
   1. [A Normal Sequence Compressed by PPM* But Not by Lempel-Ziv 78.](https://doi.org/10.1007/978-3-030-67731-2_28)  
   2. [Blocksequences of k-local Words.](https://doi.org/10.1007/978-3-030-67731-2_9)  
   3. [Novel Results on the Number of Runs of the Burrows-Wheeler-Transform.](https://doi.org/10.1007/978-3-030-67731-2_18)  
   
+  
 #### [SOSA 2021](https://dblp.org/db/conf/sosa/sosa2021.html)
   1. [Modular Subset Sum, Dynamic Strings, and Zero-Sum Sets.](https://doi.org/10.1137/1.9781611976496.5)  
   2. [Soft Sequence Heaps.](https://doi.org/10.1137/1.9781611976496.2)  
+  
   
 #### [SPIRE 2021](https://dblp.org/db/conf/spire/spire2021.html)
   1. [A Separation of γ and b via Thue-Morse Words.](https://doi.org/10.1007/978-3-030-86692-1_14)  
@@ -1437,12 +1469,15 @@
   19. [findere: Fast and Precise Approximate Membership Query.](https://doi.org/10.1007/978-3-030-86692-1_13)  
   20. [r-Indexing the eBWT.](https://doi.org/10.1007/978-3-030-86692-1_1)  
   
+  
 #### [STACS 2021](https://dblp.org/db/conf/stacs/stacs2021.html)
   1. [Finding an Optimal Alphabet Ordering for Lyndon Factorization Is Hard.](https://doi.org/10.4230/LIPIcs.STACS.2021.35)  
+  
   
 #### [STOC 2021](https://dblp.org/db/conf/stoc/stoc2021.html)
   1. [Fully dynamic approximation of LIS in polylogarithmic time.](https://doi.org/10.1145/3406325.3451137)  
   2. [Improved dynamic algorithms for longest increasing subsequence.](https://doi.org/10.1145/3406325.3451026)  
+  
   
 #### [Stringology 2021](https://dblp.org/db/conf/stringology/stringology2021.html)
   1. [Automata Approach to Inexact Tree Pattern Matching Using 1-degree Edit Distance.](http://www.stringology.org/event/2021/p01.html)  
@@ -1454,9 +1489,11 @@
   7. [The n-ary Initial Literal and Literal Shuffle.](http://www.stringology.org/event/2021/p06.html)  
   8. [Towards an Efficient Text Sampling Approach for Exact and Approximate Matching.](http://www.stringology.org/event/2021/p07.html)  
   
+  
 #### [WABI 2021](https://dblp.org/db/conf/wabi/wabi2021.html)
   1. [Compressing and Indexing Aligned Readsets.](https://doi.org/10.4230/LIPIcs.WABI.2021.13)  
   2. [Space-Efficient Representation of Genomic k-Mer Count Tables.](https://doi.org/10.4230/LIPIcs.WABI.2021.8)  
+  
   
 #### ACM Comput. Surv. 2021  
   1. [Indexing Highly Repetitive String Collections, Part I: Repetitiveness Measures.](https://doi.org/10.1145/3434399)  
@@ -1660,12 +1697,15 @@
   3. [RecSplit: Minimal Perfect Hashing via Recursive Splitting.](https://doi.org/10.1137/1.9781611976007.14)  
   4. [Reverse-Safe Data Structures for Text Indexing.](https://doi.org/10.1137/1.9781611976007.16)  
   
+  
 #### [APPROX-RANDOM 2020](https://dblp.org/db/conf/approx/approx2020.html)
   1. [Improved Circular k-Mismatch Sketches.](https://doi.org/10.4230/LIPIcs.APPROX/RANDOM.2020.46)  
   2. [Lp Pattern Matching in a Stream.](https://doi.org/10.4230/LIPIcs.APPROX/RANDOM.2020.35)  
   
+  
 #### [BCB 2020](https://dblp.org/db/conf/bcb/bcb2020.html)
   1. [SMART: SuperMaximal approximate repeats tool.](https://doi.org/10.1145/3388440.3414210)  
+  
   
 #### [CPM 2020](https://dblp.org/db/conf/cpm/cpm2020.html)
   1. [Algebraic Algorithms for Finding Patterns in Graphs (Invited Talk).](https://doi.org/10.4230/LIPIcs.CPM.2020.1)  
@@ -1699,11 +1739,14 @@
   29. [Unary Words Have the Smallest Levenshtein k-Neighbourhoods.](https://doi.org/10.4230/LIPIcs.CPM.2020.10)  
   30. [k-Approximate Quasiperiodicity under Hamming and Edit Distance.](https://doi.org/10.4230/LIPIcs.CPM.2020.18)  
   
+  
 #### [CSR 2020](https://dblp.org/db/conf/csr/csr2020.html)
   1. [Optimal Skeleton Huffman Trees Revisited.](https://doi.org/10.1007/978-3-030-50026-9_20)  
   
+  
 #### [CiE 2020](https://dblp.org/db/conf/cie/cie2020.html)
   1. [Faster Online Computation of the Succinct Longest Previous Factor Array.](https://doi.org/10.1007/978-3-030-51466-2_31)  
+  
   
 #### [DCC 2020](https://dblp.org/db/conf/dcc/dcc2020.html)
   1. [Approximating Optimal Bidirectional Macro Schemes.](https://doi.org/10.1109/DCC47342.2020.00023)  
@@ -1722,6 +1765,7 @@
   14. [Towards Better Compressed Representations.](https://doi.org/10.1109/DCC47342.2020.00072)  
   15. [c-Trie++: A Dynamic Trie Tailored for Fast Prefix Searches.](https://doi.org/10.1109/DCC47342.2020.00032)  
   
+  
 #### [ESA 2020](https://dblp.org/db/conf/esa/esa2020.html)
   1. [Efficient Computation of 2-Covers of a String.](https://doi.org/10.4230/LIPIcs.ESA.2020.77)  
   2. [Fast Preprocessing for Optimal Orthogonal Range Reporting and Range Successor with Applications to Text Indexing.](https://doi.org/10.4230/LIPIcs.ESA.2020.54)  
@@ -1731,8 +1775,10 @@
   6. [The Fine-Grained Complexity of Median and Center String Problems Under Edit Distance.](https://doi.org/10.4230/LIPIcs.ESA.2020.61)  
   7. [The Number of Repetitions in 2D-Strings.](https://doi.org/10.4230/LIPIcs.ESA.2020.32)  
   
+  
 #### [Euro-Par 2020](https://dblp.org/db/conf/europar/europar2020.html)
   1. [LCP-Aware Parallel String Sorting.](https://doi.org/10.1007/978-3-030-57675-2_21)  
+  
   
 #### [FOCS 2020](https://dblp.org/db/conf/focs/focs2020.html)
   1. [Edit Distance in Near-Linear Time: it's a Constant Factor.](https://doi.org/10.1109/FOCS46700.2020.00096)  
@@ -1742,15 +1788,19 @@
   5. [Resolution of the Burrows-Wheeler Transform Conjecture.](https://doi.org/10.1109/FOCS46700.2020.00097)  
   6. [Sublinear-Time Algorithms for Computing & Embedding Gap Edit Distance.](https://doi.org/10.1109/FOCS46700.2020.00112)  
   
+  
 #### [FSTTCS 2020](https://dblp.org/db/conf/fsttcs/fsttcs2020.html)
   1. [String Indexing for Top-k Close Consecutive Occurrences.](https://doi.org/10.4230/LIPIcs.FSTTCS.2020.14)  
+  
   
 #### [ICALP 2020](https://dblp.org/db/conf/icalp/icalp2020.html)
   1. [Dynamic Longest Common Substring in Polylogarithmic Time.](https://doi.org/10.4230/LIPIcs.ICALP.2020.27)  
   2. [Space Efficient Construction of Lyndon Arrays in Linear Time.](https://doi.org/10.4230/LIPIcs.ICALP.2020.14)  
   
+  
 #### [ICDT 2020](https://dblp.org/db/conf/icdt/icdt2020.html)
   1. [Optimal Joins Using Compact Data Structures.](https://doi.org/10.4230/LIPIcs.ICDT.2020.21)  
+  
   
 #### [ISAAC 2020](https://dblp.org/db/conf/isaac/isaac2020.html)
   1. [A Faster Subquadratic Algorithm for the Longest Common Increasing Subsequence Problem.](https://doi.org/10.4230/LIPIcs.ISAAC.2020.4)  
@@ -1762,12 +1812,15 @@
   7. [Random Access in Persistent Strings.](https://doi.org/10.4230/LIPIcs.ISAAC.2020.48)  
   8. [Update Query Time Trade-Off for Dynamic Suffix Arrays.](https://doi.org/10.4230/LIPIcs.ISAAC.2020.63)  
   
+  
 #### [IWOCA 2020](https://dblp.org/db/conf/iwoca/iwoca2020.html)
   1. [Optimal In-place Algorithms for Basic Graph Problems.](https://doi.org/10.1007/978-3-030-48966-3_10)  
+  
   
 #### [LATA 2020](https://dblp.org/db/conf/lata/lata2020.html)
   1. [Lyndon Words versus Inverse Lyndon Words: Queries on Suffixes and Bordered Words.](https://doi.org/10.1007/978-3-030-40608-0_27)  
   2. [On Collapsing Prefix Normal Words.](https://doi.org/10.1007/978-3-030-40608-0_29)  
+  
   
 #### [LATIN 2020](https://dblp.org/db/conf/latin/latin2020.html)
   1. [Batched Predecessor and Sorting with Size-Priced Information in External Memory.](https://doi.org/10.1007/978-3-030-61792-9_13)  
@@ -1775,12 +1828,14 @@
   3. [Suffix Trees, DAWGs and CDAWGs for Forward and Backward Tries.](https://doi.org/10.1007/978-3-030-61792-9_16)  
   4. [Towards a Definitive Measure of Repetitiveness.](https://doi.org/10.1007/978-3-030-61792-9_17)  
   
+  
 #### [SEA 2020](https://dblp.org/db/conf/wea/sea2020.html)
   1. [Fast and Linear-Time String Matching Algorithms Based on the Distances of q-Gram Occurrences.](https://doi.org/10.4230/LIPIcs.SEA.2020.13)  
   2. [Fast and Simple Compact Hashing via Bucketing.](https://doi.org/10.4230/LIPIcs.SEA.2020.7)  
   3. [Indexing Compressed Text: A Tale of Time and Space (Invited Talk).](https://doi.org/10.4230/LIPIcs.SEA.2020.3)  
   4. [Pattern Discovery in Colored Strings.](https://doi.org/10.4230/LIPIcs.SEA.2020.12)  
   5. [Zipping Segment Trees.](https://doi.org/10.4230/LIPIcs.SEA.2020.25)  
+  
   
 #### [SODA 2020](https://dblp.org/db/conf/soda/soda2020.html)
   1. [A Lower Bound for Jumbled Indexing.](https://doi.org/10.1137/1.9781611975994.36)  
@@ -1792,14 +1847,17 @@
   7. [Reducing approximate Longest Common Subsequence to approximate Edit Distance.](https://doi.org/10.1137/1.9781611975994.98)  
   8. [Regular Languages meet Prefix Sorting.](https://doi.org/10.1137/1.9781611975994.55)  
   
+  
 #### [SOFSEM 2020](https://dblp.org/db/conf/sofsem/sofsem2020.html)
   1. [Fast Indexes for Gapped Pattern Matching.](https://doi.org/10.1007/978-3-030-38919-2_40)  
   2. [Faster STR-EC-LCS Computation.](https://doi.org/10.1007/978-3-030-38919-2_11)  
   3. [Minimal Unique Substrings and Minimal Absent Words in a Sliding Window.](https://doi.org/10.1007/978-3-030-38919-2_13)  
   4. [Parallel Duel-and-Sweep Algorithm for the Order-Preserving Pattern Matching.](https://doi.org/10.1007/978-3-030-38919-2_18)  
   
+  
 #### [SOSA 2020](https://dblp.org/db/conf/soda/sosa2020.html)
   1. [Bucket Oblivious Sort: An Extremely Simple Oblivious Sort.](https://doi.org/10.1137/1.9781611976014.2)  
+  
   
 #### [SPIRE 2020](https://dblp.org/db/conf/spire/spire2020.html)
   1. [A Comparison of Empirical Tree Entropies.](https://doi.org/10.1007/978-3-030-59212-7_17)  
@@ -1824,12 +1882,14 @@
   20. [Tailoring r-index for Document Listing Towards Metagenomics Applications.](https://doi.org/10.1007/978-3-030-59212-7_21)  
   21. [Towards Efficient Interactive Computation of Dynamic Time Warping Distance.](https://doi.org/10.1007/978-3-030-59212-7_3)  
   
+  
 #### [STACS 2020](https://dblp.org/db/conf/stacs/stacs2020.html)
   1. [A Sub-Quadratic Algorithm for the Longest Common Increasing Subsequence Problem.](https://doi.org/10.4230/LIPIcs.STACS.2020.41)  
   2. [Generalised Pattern Matching Revisited.](https://doi.org/10.4230/LIPIcs.STACS.2020.18)  
   3. [Non-Rectangular Convolutions and (Sub-)Cadences with Three Elements.](https://doi.org/10.4230/LIPIcs.STACS.2020.30)  
   4. [String Indexing with Compressed Patterns.](https://doi.org/10.4230/LIPIcs.STACS.2020.10)  
   5. [Using Statistical Encoding to Achieve Tree Succinctness Never Seen Before.](https://doi.org/10.4230/LIPIcs.STACS.2020.22)  
+  
   
 #### [STOC 2020](https://dblp.org/db/conf/stoc/stoc2020.html)
   1. [Approximating text-to-pattern Hamming distances.](https://doi.org/10.1145/3357713.3384266)  
@@ -1838,12 +1898,15 @@
   4. [Lower bound for succinct range minimum query.](https://doi.org/10.1145/3357713.3384260)  
   5. [Nearly optimal static Las Vegas succinct dictionary.](https://doi.org/10.1145/3357713.3384274)  
   
+  
 #### [SWAT 2020](https://dblp.org/db/conf/swat/swat2020.html)
   1. [Space-Efficient Data Structures for Lattices.](https://doi.org/10.4230/LIPIcs.SWAT.2020.31)  
+  
   
 #### [SoCG 2020](https://dblp.org/db/conf/compgeom/compgeom2020.html)
   1. [Four-Dimensional Dominance Range Reporting in Linear Space.](https://doi.org/10.4230/LIPIcs.SoCG.2020.59)  
   2. [Further Results on Colored Range Searching.](https://doi.org/10.4230/LIPIcs.SoCG.2020.28)  
+  
   
 #### [Stringology 2020](https://dblp.org/db/conf/stringology/stringology2020.html)
   1. [Conversion of Finite Tree Automata to Regular Tree Expressions By State Elimination.](http://www.stringology.org/event/2020/p02.html)  
@@ -1861,17 +1924,21 @@
   13. [Simple KMP Pattern-Matching on Indeterminate Strings.](http://www.stringology.org/event/2020/p11.html)  
   14. [Tune-up for the Dead-Zone Algorithm.](http://www.stringology.org/event/2020/p14.html)  
   
+  
 #### [TAMC 2020](https://dblp.org/db/conf/tamc/tamc2020.html)
   1. [Partial Sums on the Ultra-Wide Word RAM.](https://doi.org/10.1007/978-3-030-59267-7_2)  
   
+  
 #### [WABI 2020](https://dblp.org/db/conf/wabi/wabi2020.html)
   1. [Linear Time Construction of Indexable Founder Block Graphs.](https://doi.org/10.4230/LIPIcs.WABI.2020.7)  
+  
   
 #### [WALCOM 2020](https://dblp.org/db/conf/walcom/walcom2020.html)
   1. [Fast Multiple Pattern Cartesian Tree Matching.](https://doi.org/10.1007/978-3-030-39881-1_10)  
   2. [Faster Privacy-Preserving Computation of Edit Distance with Moves.](https://doi.org/10.1007/978-3-030-39881-1_26)  
   3. [Generalized Dictionary Matching Under Substring Consistent Equivalence Relations.](https://doi.org/10.1007/978-3-030-39881-1_11)  
   4. [Shortest Covers of All Cyclic Shifts of a String.](https://doi.org/10.1007/978-3-030-39881-1_7)  
+  
   
 #### ACM Comput. Surv. 2020  
   1. [Predecessor Search.](https://doi.org/10.1145/3409371)  
@@ -2162,11 +2229,14 @@
 #### [ALENEX 2019](https://dblp.org/db/conf/alenex/alenex2019.html)
   1. [Lightweight Distributed Suffix Array Construction.](https://doi.org/10.1137/1.9781611975499.3)  
   
+  
 #### [CIAC 2019](https://dblp.org/db/conf/ciac/ciac2019.html)
   1. [The Parameterized Position Heap of a Trie.](https://doi.org/10.1007/978-3-030-17402-6_20)  
   
+  
 #### [CIKM 2019](https://dblp.org/db/conf/cikm/cikm2019.html)
   1. [Improved Compressed String Dictionaries.](https://doi.org/10.1145/3357384.3357972)  
+  
   
 #### [CPM 2019](https://dblp.org/db/conf/cpm/cpm2019.html)
   1. [A 2-Approximation Algorithm for the Complementary Maximal Strip Recovery Problem.](https://doi.org/10.4230/LIPIcs.CPM.2019.5)  
@@ -2203,6 +2273,7 @@
   32. [Stringology Combats Microbiological Threats (Invited Talk).](https://doi.org/10.4230/LIPIcs.CPM.2019.3)  
   33. [Sufficient Conditions for Efficient Indexing Under Different Matchings.](https://doi.org/10.4230/LIPIcs.CPM.2019.6)  
   
+  
 #### [DCC 2019](https://dblp.org/db/conf/dcc/dcc2019.html)
   1. [A Compact Representation of Raster Time Series.](https://doi.org/10.1109/DCC.2019.00018)  
   2. [A New Technique for Lossless Compression of Color Images Based on Hierarchical Prediction, Inversion and Context Adaptive Coding.](https://doi.org/10.1109/DCC.2019.00096)  
@@ -2227,8 +2298,10 @@
   21. [Tunneling on Wheeler Graphs.](https://doi.org/10.1109/DCC.2019.00020)  
   22. [Vectorizing Fast Compression.](https://doi.org/10.1109/DCC.2019.00110)  
   
+  
 #### [DEXA (2) 2019](https://dblp.org/db/conf/dexa/dexa2019-2.html)
   1. [Succinct BWT-Based Sequence Prediction.](https://doi.org/10.1007/978-3-030-27618-8_7)  
+  
   
 #### [DLT 2019](https://dblp.org/db/conf/dlt/dlt2019.html)
   1. [Computing the k-binomial Complexity of the Thue-Morse Word.](https://doi.org/10.1007/978-3-030-24886-4_21)  
@@ -2239,8 +2312,10 @@
   6. [The Relative Edit-Distance Between Two Input-Driven Languages.](https://doi.org/10.1007/978-3-030-24886-4_9)  
   7. [k-Spectra of Weakly-c-Balanced Words.](https://doi.org/10.1007/978-3-030-24886-4_20)  
   
+  
 #### [ECML/PKDD (1) 2019](https://dblp.org/db/conf/pkdd/pkdd2019-1.html)
   1. [String Sanitization: A Combinatorial Approach.](https://doi.org/10.1007/978-3-030-46150-8_37)  
+  
   
 #### [ESA 2019](https://dblp.org/db/conf/esa/esa2019.html)
   1. [Bidirectional Text Compression in External Memory.](https://doi.org/10.4230/LIPIcs.ESA.2019.41)  
@@ -2248,8 +2323,10 @@
   3. [On the Hardness and Inapproximability of Recognizing Wheeler Graphs.](https://doi.org/10.4230/LIPIcs.ESA.2019.51)  
   4. [Repetition Detection in a Dynamic String.](https://doi.org/10.4230/LIPIcs.ESA.2019.5)  
   
+  
 #### [FCT 2019](https://dblp.org/db/conf/fct/fct2019.html)
   1. [Circular Pattern Matching with k Mismatches.](https://doi.org/10.1007/978-3-030-25027-0_15)  
+  
   
 #### [FOCS 2019](https://dblp.org/db/conf/focs/focs2019.html)
   1. [Approximation Algorithms for LCS and LIS with Truly Improved Running Times.](https://doi.org/10.1109/FOCS.2019.00071)  
@@ -2258,12 +2335,15 @@
   4. [Sublinear Algorithms for Gap Edit Distance.](https://doi.org/10.1109/FOCS.2019.00070)  
   5. [Why are Proof Complexity Lower Bounds Hard?](https://doi.org/10.1109/FOCS.2019.00080)  
   
+  
 #### [ICALP 2019](https://dblp.org/db/conf/icalp/icalp2019.html)
   1. [Dynamic Ordered Sets with Approximate Queries, Approximate Heaps and Soft Heaps.](https://doi.org/10.4230/LIPIcs.ICALP.2019.95)  
   2. [Even Faster Elastic-Degenerate String Matching via Fast Matrix Multiplication.](https://doi.org/10.4230/LIPIcs.ICALP.2019.21)  
   
+  
 #### [INNSBDDL (Tutorials) 2019](https://dblp.org/db/conf/inns/inns2019t.html)
   1. [Learned Data Structures.](https://doi.org/10.1007/978-3-030-43883-8_2)  
+  
   
 #### [ISAAC 2019](https://dblp.org/db/conf/isaac/isaac2019.html)
   1. [An Improved Data Structure for Left-Right Maximal Generic Words Problem.](https://doi.org/10.4230/LIPIcs.ISAAC.2019.40)  
@@ -2271,10 +2351,12 @@
   3. [On Approximate Range Mode and Range Selection.](https://doi.org/10.4230/LIPIcs.ISAAC.2019.57)  
   4. [Top Tree Compression of Tries.](https://doi.org/10.4230/LIPIcs.ISAAC.2019.4)  
   
+  
 #### [IWOCA 2019](https://dblp.org/db/conf/iwoca/iwoca2019.html)
   1. [Burrows-Wheeler Transform of Words Defined by Morphisms.](https://doi.org/10.1007/978-3-030-25005-8_32)  
   2. [Finding Periods in Cartesian Tree Matching.](https://doi.org/10.1007/978-3-030-25005-8_7)  
   3. [Shortest Unique Palindromic Substring Queries on Run-Length Encoded Strings.](https://doi.org/10.1007/978-3-030-25005-8_35)  
+  
   
 #### [LATA 2019](https://dblp.org/db/conf/lata/lata2019.html)
   1. [Automata over Infinite Sequences of Reals.](https://doi.org/10.1007/978-3-030-13435-8_9)  
@@ -2285,6 +2367,7 @@
   6. [Recurrence in Multidimensional Words.](https://doi.org/10.1007/978-3-030-13435-8_29)  
   7. [Regular Matching and Inclusion on Compressed Tree Patterns with Context Variables.](https://doi.org/10.1007/978-3-030-13435-8_25)  
   
+  
 #### [MFCS 2019](https://dblp.org/db/conf/mfcs/mfcs2019.html)
   1. [A Constant-Time Colored Choice Dictionary with Almost Robust Iteration.](https://doi.org/10.4230/LIPIcs.MFCS.2019.64)  
   2. [From Regular Expression Matching to Parsing.](https://doi.org/10.4230/LIPIcs.MFCS.2019.71)  
@@ -2294,11 +2377,14 @@
   6. [Uniform Random Expressions Lack Expressivity.](https://doi.org/10.4230/LIPIcs.MFCS.2019.51)  
   7. [Upper Bounds on the Length of Minimal Solutions to Certain Quadratic Word Equations.](https://doi.org/10.4230/LIPIcs.MFCS.2019.44)  
   
+  
 #### [RECOMB 2019](https://dblp.org/db/conf/recomb/recomb2019.html)
   1. [Efficient Construction of a Complete Index for Pan-Genomics Read Alignment.](https://doi.org/10.1007/978-3-030-17083-7_10)  
   
+  
 #### [SEA² 2019](https://dblp.org/db/conf/sea2/sea2019.html)
   1. [Searching for Best Karatsuba Recurrences.](https://doi.org/10.1007/978-3-030-34029-2_22)  
+  
   
 #### [SODA 2019](https://dblp.org/db/conf/soda/soda2019.html)
   1. [Efficiently Approximating Edit Distance Between Pseudorandom Strings.](https://doi.org/10.1137/1.9781611975482.71)  
@@ -2310,8 +2396,10 @@
   7. [Synchronization Strings: Highly Efficient Deterministic Constructions over Small Alphabets.](https://doi.org/10.1137/1.9781611975482.132)  
   8. [The streaming k-mismatch problem.](https://doi.org/10.1137/1.9781611975482.68)  
   
+  
 #### [SOFSEM 2019](https://dblp.org/db/conf/sofsem/sofsem2019.html)
   1. [On Infinite Prefix Normal Words.](https://doi.org/10.1007/978-3-030-10801-4_11)  
+  
   
 #### [SPIRE 2019](https://dblp.org/db/conf/spire/spire2019.html)
   1. [A New Linear-Time Algorithm for Centroid Decomposition.](https://doi.org/10.1007/978-3-030-32686-9_20)  
@@ -2351,15 +2439,18 @@
   35. [Space-Efficient Merging of Succinct de Bruijn Graphs.](https://doi.org/10.1007/978-3-030-32686-9_24)  
   36. [Weighted Shortest Common Supersequence Problem Revisited.](https://doi.org/10.1007/978-3-030-32686-9_16)  
   
+  
 #### [STACS 2019](https://dblp.org/db/conf/stacs/stacs2019.html)
   1. [Constant-Time Retrieval with O(log m) Extra Bits.](https://doi.org/10.4230/LIPIcs.STACS.2019.24)  
   2. [Depth First Search in the Semi-streaming Model.](https://doi.org/10.4230/LIPIcs.STACS.2019.42)  
   3. [Fast and Longest Rollercoasters.](https://doi.org/10.4230/LIPIcs.STACS.2019.30)  
   
+  
 #### [STOC 2019](https://dblp.org/db/conf/stoc/stoc2019.html)
   1. [Local decodability of the Burrows-Wheeler transform.](https://doi.org/10.1145/3313276.3316317)  
   2. [Optimal succinct rank data structure via approximate nonnegative tensor decomposition.](https://doi.org/10.1145/3313276.3316352)  
   3. [String synchronizing sets: sublinear-time BWT construction and optimal LCE data structure.](https://doi.org/10.1145/3313276.3316368)  
+  
   
 #### [Stringology 2019](https://dblp.org/db/conf/stringology/stringology2019.html)
   1. [
@@ -2376,12 +2467,15 @@
   11. [Selective Dynamic Compression.](http://www.stringology.org/event/2019/p10.html)  
   12. [Translating Between Wavelet Tree and Wavelet Matrix Construction.](http://www.stringology.org/event/2019/p12.html)  
   
+  
 #### [WABI 2019](https://dblp.org/db/conf/wabi/wabi2019.html)
   1. [Finding All Maximal Perfect Haplotype Blocks in Linear Time.](https://doi.org/10.4230/LIPIcs.WABI.2019.8)  
+  
   
 #### [WADS 2019](https://dblp.org/db/conf/wads/wads2019.html)
   1. [Dynamic Dictionary Matching in the Online Model.](https://doi.org/10.1007/978-3-030-24766-9_30)  
   2. [Orthogonal Range Reporting and Rectangle Stabbing for Fat Rectangles.](https://doi.org/10.1007/978-3-030-24766-9_21)  
+  
   
 #### ACM J. Exp. Algorithmics 2019  
   1. [Better External Memory LCP Array Construction.](https://doi.org/10.1145/3297723)  
@@ -2709,13 +2803,16 @@
 #### [AIAI (Workshops) 2018](https://dblp.org/db/conf/ifip12/aiai2018w.html)
   1. [How Much Different Are Two Words with Different Shortest Periods.](https://doi.org/10.1007/978-3-319-92016-0_16)  
   
+  
 #### [ALENEX 2018](https://dblp.org/db/conf/alenex/alenex2018.html)
   1. [Adaptive Cuckoo Filters.](https://doi.org/10.1137/1.9781611975055.4)  
   2. [Hybrid Indexing Revisited.](https://doi.org/10.1137/1.9781611975055.1)  
   3. [Simple, Fast and Lightweight Parallel Wavelet Tree Construction.](https://doi.org/10.1137/1.9781611975055.2)  
   
+  
 #### [COCOON 2018](https://dblp.org/db/conf/cocoon/cocoon2018.html)
   1. [A Linear-Space Data Structure for Range-LCP Queries in Poly-Logarithmic Time.](https://doi.org/10.1007/978-3-319-94776-1_51)  
+  
   
 #### [CPM 2018](https://dblp.org/db/conf/cpm/cpm2018.html)
   1. [A Simple Linear-Time Algorithm for Computing the Centroid and Canonical Form of a Plane Graph and Its Applications.](https://doi.org/10.4230/LIPIcs.CPM.2018.10)  
@@ -2744,6 +2841,7 @@
   24. [Superstrings with multiplicities.](https://doi.org/10.4230/LIPIcs.CPM.2018.21)  
   25. [The Heaviest Induced Ancestors Problem Revisited.](https://doi.org/10.4230/LIPIcs.CPM.2018.20)  
   
+  
 #### [DCC 2018](https://dblp.org/db/conf/dcc/dcc2018.html)
   1. [A Dynamic Compressed Self-Index for Highly Repetitive Text Collections.](https://doi.org/10.1109/DCC.2018.00037)  
   2. [A Grammar Compression Algorithm Based on Induced Suffix Sorting.](https://doi.org/10.1109/DCC.2018.00012)  
@@ -2767,9 +2865,11 @@
   20. [The Bits Between Proteins.](https://doi.org/10.1109/DCC.2018.00026)  
   21. [Two-Dimensional Block Trees.](https://doi.org/10.1109/DCC.2018.00031)  
   
+  
 #### [DLT 2018](https://dblp.org/db/conf/dlt/dlt2018.html)
   1. [Block Sorting-Based Transformations on Words: Beyond the Magic BWT.](https://doi.org/10.1007/978-3-319-98654-8_1)  
   2. [The Runs Theorem and Beyond.](https://doi.org/10.1007/978-3-319-98654-8_2)  
+  
   
 #### [ESA 2018](https://dblp.org/db/conf/esa/esa2018.html)
   1. [Dynamic Trees with Almost-Optimal Access Cost.](https://doi.org/10.4230/LIPIcs.ESA.2018.38)  
@@ -2781,13 +2881,16 @@
   7. [String Attractors: Verification and Optimization.](https://doi.org/10.4230/LIPIcs.ESA.2018.52)  
   8. [Two-Dimensional Maximal Repetitions.](https://doi.org/10.4230/LIPIcs.ESA.2018.2)  
   
+  
 #### [FOCS 2018](https://dblp.org/db/conf/focs/focs2018.html)
   1. [Approximating Edit Distance within Constant Factor in Truly Sub-Quadratic Time.](https://doi.org/10.1109/FOCS.2018.00096)  
   2. [Bloom Filters, Adaptivity, and the Dictionary Problem.](https://doi.org/10.1109/FOCS.2018.00026)  
   3. [PanORAMa: Oblivious RAM with Logarithmic Overhead.](https://doi.org/10.1109/FOCS.2018.00087)  
   
+  
 #### [ICALP 2018](https://dblp.org/db/conf/icalp/icalp2018.html)
   1. [Edit Distance between Unrooted Trees in Cubic Time.](https://doi.org/10.4230/LIPIcs.ICALP.2018.45)  
+  
   
 #### [ISAAC 2018](https://dblp.org/db/conf/isaac/isaac2018.html)
   1. [Encoding Two-Dimensional Range Top-k Queries Revisited.](https://doi.org/10.4230/LIPIcs.ISAAC.2018.69)  
@@ -2796,33 +2899,41 @@
   4. [Succinct Data Structures for Chordal Graphs.](https://doi.org/10.4230/LIPIcs.ISAAC.2018.67)  
   5. [Tree Path Majority Data Structures.](https://doi.org/10.4230/LIPIcs.ISAAC.2018.68)  
   
+  
 #### [IWOCA 2018](https://dblp.org/db/conf/iwoca/iwoca2018.html)
   1. [An Efficient Representation of Partitions of Integers.](https://doi.org/10.1007/978-3-319-94667-2_30)  
   2. [LZ-ABT: A Practical Algorithm for α-Balanced Grammar Compression.](https://doi.org/10.1007/978-3-319-94667-2_27)  
   3. [On the Expected Number of Distinct Gapped Palindromic Factors.](https://doi.org/10.1007/978-3-319-94667-2_14)  
   
+  
 #### [KDD 2018](https://dblp.org/db/conf/kdd/kdd2018.html)
   1. [Node Similarity with q -Grams for Real-World Labeled Networks.](https://doi.org/10.1145/3219819.3220085)  
+  
   
 #### [LATA 2018](https://dblp.org/db/conf/lata/lata2018.html)
   1. [Bubble-Flip - A New Generation Algorithm for Prefix Normal Words.](https://doi.org/10.1007/978-3-319-77313-1_16)  
   2. [On Periodicity Lemma for Partial Words.](https://doi.org/10.1007/978-3-319-77313-1_18)  
+  
   
 #### [LATIN 2018](https://dblp.org/db/conf/latin/latin2018.html)
   1. [Compressed Indexing with Signature Grammars.](https://doi.org/10.1007/978-3-319-77404-6_25)  
   2. [On the Approximation Ratio of Lempel-Ziv Parsing.](https://doi.org/10.1007/978-3-319-77404-6_36)  
   3. [Property Suffix Array with Applications.](https://doi.org/10.1007/978-3-319-77404-6_22)  
   
+  
 #### [MFCS 2018](https://dblp.org/db/conf/mfcs/mfcs2018.html)
   1. [Extra Space during Initialization of Succinct Data Structures and Dynamical Initializable Arrays.](https://doi.org/10.4230/LIPIcs.MFCS.2018.65)  
   2. [Fast Entropy-Bounded String Dictionary Look-Up with Mismatches.](https://doi.org/10.4230/LIPIcs.MFCS.2018.66)  
+  
   
 #### [SEA 2018](https://dblp.org/db/conf/wea/sea2018.html)
   1. [Dictionary Matching in Elastic-Degenerate Texts with Applications in Searching VCF Files On-line.](https://doi.org/10.4230/LIPIcs.SEA.2018.16)  
   2. [Fast matching statistics in small space.](https://doi.org/10.4230/LIPIcs.SEA.2018.17)  
   
+  
 #### [SISAP 2018](https://dblp.org/db/conf/sisap/sisap2018.html)
   1. [Privacy-Preserving String Edit Distance with Moves.](https://doi.org/10.1007/978-3-030-02224-2_18)  
+  
   
 #### [SODA 2018](https://dblp.org/db/conf/soda/soda2018.html)
   1. [Improved bounds for testing Dyck languages.](https://doi.org/10.1137/1.9781611975031.100)  
@@ -2835,13 +2946,16 @@
   8. [Time and Space Efficient Representations of Distributive Lattices.](https://doi.org/10.1137/1.9781611975031.36)  
   9. [Tree Edit Distance Cannot be Computed in Strongly Subcubic Time (unless APSP can).](https://doi.org/10.1137/1.9781611975031.77)  
   
+  
 #### [SOFSEM 2018](https://dblp.org/db/conf/sofsem/sofsem2018.html)
   1. [Duel and Sweep Algorithm for Order-Preserving Pattern Matching.](https://doi.org/10.1007/978-3-319-73117-9_44)  
   2. [Longest Common Prefixes with k-Mismatches and Applications.](https://doi.org/10.1007/978-3-319-73117-9_45)  
   3. [New Variants of Pattern Matching with Constants and Variables.](https://doi.org/10.1007/978-3-319-73117-9_43)  
   
+  
 #### [SOSA 2018](https://dblp.org/db/conf/soda/sosa2018.html)
   1. [A Simple Algorithm for Approximating the Text-To-Pattern Hamming Distance.](https://doi.org/10.4230/OASIcs.SOSA.2018.10)  
+  
   
 #### [SPIRE 2018](https://dblp.org/db/conf/spire/spire2018.html)
   1. [3DGraCT: A Grammar-Based Compressed Representation of 3D Trajectories.](https://doi.org/10.1007/978-3-030-00479-8_9)  
@@ -2873,6 +2987,7 @@
   27. [Trickier XBWT Tricks.](https://doi.org/10.1007/978-3-030-00479-8_26)  
   28. [Truncated DAWGs and Their Application to Minimal Absent Word Problem.](https://doi.org/10.1007/978-3-030-00479-8_12)  
   
+  
 #### [STACS 2018](https://dblp.org/db/conf/stacs/stacs2018.html)
   1. [An Improved Bound for Random Binary Search Trees with Concurrent Insertions.](https://doi.org/10.4230/LIPIcs.STACS.2018.37)  
   2. [Computing the Longest Common Prefix of a Context-free Language in Polynomial Time.](https://doi.org/10.4230/LIPIcs.STACS.2018.48)  
@@ -2884,14 +2999,17 @@
   8. [Sums of Palindromes: an Approach via Automata.](https://doi.org/10.4230/LIPIcs.STACS.2018.54)  
   9. [Upper and Lower Bounds for Dynamic Data Structures on Strings.](https://doi.org/10.4230/LIPIcs.STACS.2018.22)  
   
+  
 #### [STOC 2018](https://dblp.org/db/conf/stoc/stoc2018.html)
   1. [At the roots of dictionary compression: string attractors.](https://doi.org/10.1145/3188745.3188814)  
   2. [Explicit binary tree codes with polylogarithmic size alphabet.](https://doi.org/10.1145/3188745.3188928)  
   3. [Smooth heaps and a dual view of self-adjusting data structures.](https://doi.org/10.1145/3188745.3188864)  
   4. [Synchronization strings: explicit constructions, local decoding, and applications.](https://doi.org/10.1145/3188745.3188940)  
   
+  
 #### [SWAT 2018](https://dblp.org/db/conf/swat/swat2018.html)
   1. [Succinct Dynamic One-Dimensional Point Reporting.](https://doi.org/10.4230/LIPIcs.SWAT.2018.17)  
+  
   
 #### [Stringology 2018](https://dblp.org/db/conf/stringology/stringology2018.html)
   1. [A Faster V-order String Comparison Algorithm.](http://www.stringology.org/event/2018/p05.html)  
@@ -2906,8 +3024,10 @@
   10. [Synchronizing Dynamic Huffman Codes.](http://www.stringology.org/event/2018/p04.html)  
   11. [Three Strategies for the Dead-Zone String Matching Algorithm.](http://www.stringology.org/event/2018/p11.html)  
   
+  
 #### [TFPIE@TFP 2018](https://dblp.org/db/series/eptcs/eptcs295.html)
   1. [Vector Programming Using Generative Recursion.](https://doi.org/10.4204/EPTCS.295.3)  
+  
   
 #### [WABI 2018](https://dblp.org/db/conf/wabi/wabi2018.html)
   1. [A Multi-labeled Tree Edit Distance for Comparing "Clonal Trees" of Tumor Progression.](https://doi.org/10.4230/LIPIcs.WABI.2018.22)  
@@ -2918,6 +3038,7 @@
   6. [Minimum Segmentation for Pan-genomic Founder Reconstruction in Linear Time.](https://doi.org/10.4230/LIPIcs.WABI.2018.15)  
   7. [PRINCE: Accurate Approximation of the Copy Number of Tandem Repeats.](https://doi.org/10.4230/LIPIcs.WABI.2018.20)  
   8. [Prefix-Free Parsing for Building Big BWTs.](https://doi.org/10.4230/LIPIcs.WABI.2018.2)  
+  
   
 #### Algorithmica 2018  
   1. [Crochemore's Partitioning on Weighted Strings and Applications.](https://doi.org/10.1007/s00453-016-0266-0)  
@@ -3175,11 +3296,14 @@
   4. [Engineering External Memory Induced Suffix Sorting.](https://doi.org/10.1137/1.9781611974768.8)  
   5. [Engineering a Distributed Full-Text Index.](https://doi.org/10.1137/1.9781611974768.10)  
   
+  
 #### [COCOA (2) 2017](https://dblp.org/db/conf/cocoa/cocoa2017-2.html)
   1. [Faster Algorithms for 1-Mappability of a Sequence.](https://doi.org/10.1007/978-3-319-71147-8_8)  
   
+  
 #### [COCOON 2017](https://dblp.org/db/conf/cocoon/cocoon2017.html)
   1. [Efficient Enumeration of Non-Equivalent Squares in Partial Words with Few Holes.](https://doi.org/10.1007/978-3-319-62389-4_9)  
+  
   
 #### [CPM 2017](https://dblp.org/db/conf/cpm/cpm2017.html)
   1. [A Family of Approximation Algorithms for the Maximum Duo-Preservation String Mapping Problem.](https://doi.org/10.4230/LIPIcs.CPM.2017.10)  
@@ -3215,11 +3339,14 @@
   31. [Time-Space Trade-Offs for Lempel-Ziv Compressed Indexing.](https://doi.org/10.4230/LIPIcs.CPM.2017.16)  
   32. [Wheeler Graphs: Variations on a Theme by Burrows and Wheeler.](https://doi.org/10.4230/LIPIcs.CPM.2017.1)  
   
+  
 #### [CSR 2017](https://dblp.org/db/conf/csr/csr2017.html)
   1. [Palindromic Decompositions with Gaps and Errors.](https://doi.org/10.1007/978-3-319-58747-9_7)  
   
+  
 #### [CiE 2017](https://dblp.org/db/conf/cie/cie2017.html)
   1. [Flexible Indexing of Repetitive Collections.](https://doi.org/10.1007/978-3-319-58741-7_17)  
+  
   
 #### [DCC 2017](https://dblp.org/db/conf/dcc/dcc2017.html)
   1. [A Compact Index for Order-Preserving Pattern Matching.](https://doi.org/10.1109/DCC.2017.35)  
@@ -3239,12 +3366,15 @@
   15. [Streaming K-Mismatch with Error Correcting and Applications.](https://doi.org/10.1109/DCC.2017.14)  
   16. [Symmetry-Compressible Graphs.](https://doi.org/10.1109/DCC.2017.20)  
   
+  
 #### [DLT 2017](https://dblp.org/db/conf/dlt/dlt2017.html)
   1. [On the Number of Rich Words.](https://doi.org/10.1007/978-3-319-62809-7_26)  
+  
   
 #### [EANN 2017](https://dblp.org/db/conf/eann/eann2017.html)
   1. [Efficient Computation of Palindromes in Sequences with Uncertainties.](https://doi.org/10.1007/978-3-319-65172-9_52)  
   2. [Efficient Identification of k-Closed Strings.](https://doi.org/10.1007/978-3-319-65172-9_49)  
+  
   
 #### [ESA 2017](https://dblp.org/db/conf/esa/esa2017.html)
   1. [A Space-Optimal Grammar Compression.](https://doi.org/10.4230/LIPIcs.ESA.2017.67)  
@@ -3254,12 +3384,15 @@
   5. [LZ-End Parsing in Linear Time.](https://doi.org/10.4230/LIPIcs.ESA.2017.53)  
   6. [Real-Time Streaming Multi-Pattern Search for Constant Alphabet.](https://doi.org/10.4230/LIPIcs.ESA.2017.41)  
   
+  
 #### [FCT 2017](https://dblp.org/db/conf/fct/fct2017.html)
   1. [Minimal Absent Words in a Sliding Window and Applications to On-Line Pattern Matching.](https://doi.org/10.1007/978-3-662-55751-8_14)  
+  
   
 #### [ICALP 2017](https://dblp.org/db/conf/icalp/icalp2017.html)
   1. [Dynamic Time Warping and Geometric Edit Distance: Breaking the Quadratic Barrier.](https://doi.org/10.4230/LIPIcs.ICALP.2017.25)  
   2. [String Inference from Longest-Common-Prefix Array.](https://doi.org/10.4230/LIPIcs.ICALP.2017.62)  
+  
   
 #### [ISAAC 2017](https://dblp.org/db/conf/isaac/isaac2017.html)
   1. [Almost Linear Time Computation of Maximal Repetitions in Run Length Encoded Strings.](https://doi.org/10.4230/LIPIcs.ISAAC.2017.33)  
@@ -3268,21 +3401,25 @@
   4. [Structural Pattern Matching - Succinctly.](https://doi.org/10.4230/LIPIcs.ISAAC.2017.35)  
   5. [Succinct Color Searching in One Dimension.](https://doi.org/10.4230/LIPIcs.ISAAC.2017.30)  
   
+  
 #### [IWOCA 2017](https://dblp.org/db/conf/iwoca/iwoca2017.html)
   1. [A Faster Implementation of Online Run-Length Burrows-Wheeler Transform.](https://doi.org/10.1007/978-3-319-78825-8_33)  
   2. [Computing Abelian String Regularities Based on RLE.](https://doi.org/10.1007/978-3-319-78825-8_34)  
   3. [How to Answer a Small Batch of RMQs or LCA Queries in Practice.](https://doi.org/10.1007/978-3-319-78825-8_28)  
   4. [Shortest Unique Palindromic Substring Queries in Optimal Time.](https://doi.org/10.1007/978-3-319-78825-8_32)  
   
+  
 #### [LATA 2017](https://dblp.org/db/conf/lata/lata2017.html)
   1. [Efficient Pattern Matching in Elastic-Degenerate Texts.](https://doi.org/10.1007/978-3-319-53733-7_9)  
   2. [Integrated Encryption in Dynamic Arithmetic Compression.](https://doi.org/10.1007/978-3-319-53733-7_10)  
   3. [Two-Dimensional Palindromes and Their Properties.](https://doi.org/10.1007/978-3-319-53733-7_11)  
   
+  
 #### [MFCS 2017](https://dblp.org/db/conf/mfcs/mfcs2017.html)
   1. [Binary Search in Graphs Revisited.](https://doi.org/10.4230/LIPIcs.MFCS.2017.20)  
   2. [Small-Space LCE Data Structure with Constant-Time Queries.](https://doi.org/10.4230/LIPIcs.MFCS.2017.10)  
   3. [The Hardness of Solving Simple Word Equations.](https://doi.org/10.4230/LIPIcs.MFCS.2017.18)  
+  
   
 #### [SEA 2017](https://dblp.org/db/conf/wea/sea2017.html)
   1. [A Framework of Dynamic Data Structures for String Processing.](https://doi.org/10.4230/LIPIcs.SEA.2017.11)  
@@ -3293,10 +3430,12 @@
   6. [Practical Range Minimum Queries Revisited.](https://doi.org/10.4230/LIPIcs.SEA.2017.12)  
   7. [The Quantile Index - Succinct Self-Index for Top-k Document Retrieval.](https://doi.org/10.4230/LIPIcs.SEA.2017.15)  
   
+  
 #### [SISAP 2017](https://dblp.org/db/conf/sisap/sisap2017.html)
   1. [Practical Space-Efficient Data Structures for High-Dimensional Orthogonal Range Searching.](https://doi.org/10.1007/978-3-319-68474-1_16)  
   2. [Scalable Similarity Search for Molecular Descriptors.](https://doi.org/10.1007/978-3-319-68474-1_14)  
   3. [Succinct Quadtrees for Road Data.](https://doi.org/10.1007/978-3-319-68474-1_18)  
+  
   
 #### [SODA 2017](https://dblp.org/db/conf/soda/soda2017.html)
   1. [Hardness of Permutation Pattern Matching.](https://doi.org/10.1137/1.9781611974782.24)  
@@ -3304,10 +3443,12 @@
   3. [Sparse Suffix Tree Construction in Optimal Time and Space.](https://doi.org/10.1137/1.9781611974782.27)  
   4. [pBWT: Achieving Succinct Data Structures for Parameterized Pattern Matching and Related Problems.](https://doi.org/10.1137/1.9781611974782.25)  
   
+  
 #### [SOFSEM 2017](https://dblp.org/db/conf/sofsem/sofsem2017.html)
   1. [Computing Longest Single-arm-gapped Palindromes in a String.](https://doi.org/10.1007/978-3-319-51963-0_29)  
   2. [Edit-Distance Between Visibly Pushdown Languages.](https://doi.org/10.1007/978-3-319-51963-0_30)  
   3. [Longest Common Subsequence in at Least k Length Order-Isomorphic Substrings.](https://doi.org/10.1007/978-3-319-51963-0_28)  
+  
   
 #### [SPIRE 2017](https://dblp.org/db/conf/spire/spire2017.html)
   1. [A Self-index on Block Trees.](https://doi.org/10.1007/978-3-319-67428-5_24)  
@@ -3337,12 +3478,15 @@
   25. [Succinct Partial Sums and Fenwick Trees.](https://doi.org/10.1007/978-3-319-67428-5_8)  
   26. [Tight Bounds for Top Tree Compression.](https://doi.org/10.1007/978-3-319-67428-5_9)  
   
+  
 #### [STACS 2017](https://dblp.org/db/conf/stacs/stacs2017.html)
   1. [On Long Words Avoiding Zimin Patterns.](https://doi.org/10.4230/LIPIcs.STACS.2017.19)  
   2. [On the Size of Lempel-Ziv and Lyndon Factorizations.](https://doi.org/10.4230/LIPIcs.STACS.2017.45)  
   
+  
 #### [STOC 2017](https://dblp.org/db/conf/stoc/stoc2017.html)
   1. [Synchronization strings: codes for insertions and deletions approaching the Singleton bound.](https://doi.org/10.1145/3055399.3055498)  
+  
   
 #### [Stringology 2017](https://dblp.org/db/conf/stringology/stringology2017.html)
   1. [A Family of Exact Pattern Matching Algorithms with Multiple Adjacent Search Windows.](http://www.stringology.org/event/2017/p14.html)  
@@ -3360,15 +3504,19 @@
   13. [The Linear Equivalence of the Suffix Array and the Partially Sorted Lyndon Array.](http://www.stringology.org/event/2017/p08.html)  
   14. [Trade-offs in Query and Target Indexing for the Selection of Candidates in Protein Homology Searches.](http://www.stringology.org/event/2017/p12.html)  
   
+  
 #### [WABI 2017](https://dblp.org/db/conf/wabi/wabi2017.html)
   1. [Optimal Computation of Overabundant Words.](https://doi.org/10.4230/LIPIcs.WABI.2017.4)  
   2. [Rainbowfish: A Succinct Colored de Bruijn Graph Representation.](https://doi.org/10.4230/LIPIcs.WABI.2017.18)  
   
+  
 #### [WADS 2017](https://dblp.org/db/conf/wads/wads2017.html)
   1. [Optimal Query Time for Encoding Range Majority.](https://doi.org/10.1007/978-3-319-62127-2_35)  
   
+  
 #### [WALCOM 2017](https://dblp.org/db/conf/walcom/walcom2017.html)
   1. [A Space-Efficient Algorithm for the Dynamic DFS Problem in Undirected Graphs.](https://doi.org/10.1007/978-3-319-53925-6_23)  
+  
   
 #### ACM J. Exp. Algorithmics 2017  
   1. [Practical Compact Indexes for Top-k Document Retrieval.](https://doi.org/10.1145/3043958)  
@@ -3501,8 +3649,10 @@
 #### [ALENEX 2016](https://dblp.org/db/conf/alenex/alenex2016.html)
   1. [A General Framework for Dynamic Succinct and Compressed Data Structures.](https://doi.org/10.1137/1.9781611974317.14)  
   
+  
 #### [COCOA 2016](https://dblp.org/db/conf/cocoa/cocoa2016.html)
   1. [On-Line Pattern Matching on Uncertain Sequences and Applications.](https://doi.org/10.1007/978-3-319-48749-6_40)  
+  
   
 #### [CPM 2016](https://dblp.org/db/conf/cpm/cpm2016.html)
   1. [A 7/2-Approximation Algorithm for the Maximum Duo-Preservation String Mapping Problem.](https://doi.org/10.4230/LIPIcs.CPM.2016.11)  
@@ -3536,6 +3686,7 @@
   29. [Tight Tradeoffs for Real-Time Approximation of Longest Palindromes in Streams.](https://doi.org/10.4230/LIPIcs.CPM.2016.18)  
   30. [Truly Subquadratic-Time Extension Queries and Periodicity Detection in Strings with Uncertainties.](https://doi.org/10.4230/LIPIcs.CPM.2016.8)  
   
+  
 #### [DCC 2016](https://dblp.org/db/conf/dcc/dcc2016.html)
   1. [A Simple and Efficient Approach for Adaptive Entropy Coding over Large Alphabets.](https://doi.org/10.1109/DCC.2016.59)  
   2. [A Space Efficient Direct Access Data Structure.](https://doi.org/10.1109/DCC.2016.61)  
@@ -3564,25 +3715,31 @@
   25. [Timeliness in Lossless Block Coding.](https://doi.org/10.1109/DCC.2016.113)  
   26. [When Less is More - Using Restricted Repetition Search in Fast Compressors.](https://doi.org/10.1109/DCC.2016.106)  
   
+  
 #### [DLT 2016](https://dblp.org/db/conf/dlt/dlt2016.html)
   1. [Ternary Square-Free Partial Words with Many Wildcards.](https://doi.org/10.1007/978-3-662-53132-7_15)  
+  
   
 #### [ESA 2016](https://dblp.org/db/conf/esa/esa2016.html)
   1. [BlockQuicksort: Avoiding Branch Mispredictions in Quicksort.](https://doi.org/10.4230/LIPIcs.ESA.2016.38)  
   2. [Faster External Memory LCP Array Construction.](https://doi.org/10.4230/LIPIcs.ESA.2016.61)  
   3. [Streaming Pattern Matching with d Wildcards.](https://doi.org/10.4230/LIPIcs.ESA.2016.44)  
   
+  
 #### [FOCS 2016](https://dblp.org/db/conf/focs/focs2016.html)
   1. [Edit Distance: Sketching, Streaming, and Document Exchange.](https://doi.org/10.1109/FOCS.2016.15)  
+  
   
 #### [FSTTCS 2016](https://dblp.org/db/conf/fsttcs/fsttcs2016.html)
   1. [Finger Search in Grammar-Compressed Strings.](https://doi.org/10.4230/LIPIcs.FSTTCS.2016.36)  
   2. [LZ77 Factorisation of Trees.](https://doi.org/10.4230/LIPIcs.FSTTCS.2016.35)  
   
+  
 #### [ICALP 2016](https://dblp.org/db/conf/icalp/icalp2016.html)
   1. [Approximate Hamming Distance in a Stream.](https://doi.org/10.4230/LIPIcs.ICALP.2016.20)  
   2. [Data Structure Lower Bounds for Document Indexing Problems.](https://doi.org/10.4230/LIPIcs.ICALP.2016.93)  
   3. [Towards Tight Lower Bounds for Range Reporting on the RAM.](https://doi.org/10.4230/LIPIcs.ICALP.2016.92)  
+  
   
 #### [ISAAC 2016](https://dblp.org/db/conf/isaac/isaac2016.html)
   1. [Dynamic Relative Compression, Dynamic Partial Sums, and Substring Concatenation.](https://doi.org/10.4230/LIPIcs.ISAAC.2016.18)  
@@ -3590,17 +3747,21 @@
   3. [Pattern Matching and Consensus Problems on Weighted Sequences and Profiles.](https://doi.org/10.4230/LIPIcs.ISAAC.2016.46)  
   4. [Space-Time Trade-Offs for the Shortest Unique Substring Problem.](https://doi.org/10.4230/LIPIcs.ISAAC.2016.34)  
   
+  
 #### [IWOCA 2016](https://dblp.org/db/conf/iwoca/iwoca2016.html)
   1. [Finding Gapped Palindromes Online.](https://doi.org/10.1007/978-3-319-44543-4_15)  
   2. [Packed Compact Tries: A Fast and Efficient Data Structure for Online String Processing.](https://doi.org/10.1007/978-3-319-44543-4_17)  
   3. [Partial Covering Arrays: Algorithms and Asymptotics.](https://doi.org/10.1007/978-3-319-44543-4_34)  
   
+  
 #### [KDD 2016](https://dblp.org/db/conf/kdd/kdd2016.html)
   1. [Scalable Partial Least Squares Regression on Grammar-Compressed Data Matrices.](https://doi.org/10.1145/2939672.2939864)  
+  
   
 #### [LATA 2016](https://dblp.org/db/conf/lata/lata2016.html)
   1. [On Del-Robust Primitive Partial Words with One Hole.](https://doi.org/10.1007/978-3-319-30000-9_18)  
   2. [Optimal Bounds for Computing \alpha α -gapped Repeats.](https://doi.org/10.1007/978-3-319-30000-9_19)  
+  
   
 #### [LATIN 2016](https://dblp.org/db/conf/latin/latin2016.html)
   1. [Bidirectional Variable-Order de Bruijn Graphs.](https://doi.org/10.1007/978-3-662-49529-2_13)  
@@ -3610,11 +3771,13 @@
   5. [The Grandmama de Bruijn Sequence for Binary Strings.](https://doi.org/10.1007/978-3-662-49529-2_26)  
   6. [Tree Compression Using String Grammars.](https://doi.org/10.1007/978-3-662-49529-2_44)  
   
+  
 #### [MFCS 2016](https://dblp.org/db/conf/mfcs/mfcs2016.html)
   1. [Computing DAWGs and Minimal Absent Words in Linear Time for Integer Alphabets.](https://doi.org/10.4230/LIPIcs.MFCS.2016.38)  
   2. [Dividing by Zero - How Bad Is It, Really?.](https://doi.org/10.4230/LIPIcs.MFCS.2016.58)  
   3. [Fully Dynamic Data Structure for LCE Queries in Compressed Space.](https://doi.org/10.4230/LIPIcs.MFCS.2016.72)  
   4. [Shortest Unique Substring Queries on Run-Length Encoded Strings.](https://doi.org/10.4230/LIPIcs.MFCS.2016.69)  
+  
   
 #### [SEA 2016](https://dblp.org/db/conf/wea/sea2016.html)
   1. [CHICO: A Compressed Hybrid Index for Repetitive Collections.](https://doi.org/10.1007/978-3-319-38851-9_22)  
@@ -3624,14 +3787,17 @@
   5. [Practical Variable Length Gap Pattern Matching.](https://doi.org/10.1007/978-3-319-38851-9_1)  
   6. [Worst-Case-Efficient Dynamic Arrays in Practice.](https://doi.org/10.1007/978-3-319-38851-9_12)  
   
+  
 #### [SODA 2016](https://dblp.org/db/conf/soda/soda2016.html)
   1. [Range Predecessor and Lempel-Ziv Parsing.](https://doi.org/10.1137/1.9781611974331.ch143)  
   2. [The k-mismatch problem revisited.](https://doi.org/10.1137/1.9781611974331.ch142)  
   3. [Weighted dynamic finger in binary search trees.](https://doi.org/10.1137/1.9781611974331.ch49)  
   
+  
 #### [SOFSEM 2016](https://dblp.org/db/conf/sofsem/sofsem2016.html)
   1. [Compacting a Dynamic Edit Distance Table by RLE Compression.](https://doi.org/10.1007/978-3-662-49192-8_25)  
   2. [Subsequence Automata with Default Transitions.](https://doi.org/10.1007/978-3-662-49192-8_17)  
+  
   
 #### [SPIRE 2016](https://dblp.org/db/conf/spire/spire2016.html)
   1. [A Linear-Space Algorithm for the Substring Constrained Alignment Problem.](https://doi.org/10.1007/978-3-319-46049-9_2)  
@@ -3660,19 +3826,23 @@
   24. [The Smallest Grammar Problem Revisited.](https://doi.org/10.1007/978-3-319-46049-9_4)  
   25. [XBWT Tricks.](https://doi.org/10.1007/978-3-319-46049-9_8)  
   
+  
 #### [STACS 2016](https://dblp.org/db/conf/stacs/stacs2016.html)
   1. [Efficiently Finding All Maximal alpha-gapped Repeats.](https://doi.org/10.4230/LIPIcs.STACS.2016.39)  
   2. [External Memory Three-Sided Range Reporting and Top-k Queries with Sublogarithmic Updates.](https://doi.org/10.4230/LIPIcs.STACS.2016.23)  
   3. [Periods and Borders of Random Words.](https://doi.org/10.4230/LIPIcs.STACS.2016.44)  
   
+  
 #### [STOC 2016](https://dblp.org/db/conf/stoc/stoc2016.html)
   1. [Streaming algorithms for embedding and computing edit distance in the low distance regime.](https://doi.org/10.1145/2897518.2897577)  
+  
   
 #### [SWAT 2016](https://dblp.org/db/conf/swat/swat2016.html)
   1. [A Framework for Dynamic Parameterized Dictionary Matching.](https://doi.org/10.4230/LIPIcs.SWAT.2016.10)  
   2. [A Simple Mergeable Dictionary.](https://doi.org/10.4230/LIPIcs.SWAT.2016.7)  
   3. [Cuckoo Filter: Simplification and Analysis.](https://doi.org/10.4230/LIPIcs.SWAT.2016.8)  
   4. [Lower Bounds for Approximation Schemes for Closest String.](https://doi.org/10.4230/LIPIcs.SWAT.2016.12)  
+  
   
 #### [Stringology 2016](https://dblp.org/db/conf/stringology/stringology2016.html)
   1. [A Family of Data Compression Codes with Multiple Delimiters.](http://www.stringology.org/event/2016/p07.html)  
@@ -3691,10 +3861,12 @@
   14. [The Use and Usefulness of Fibonacci Codes.](http://www.stringology.org/event/2016/p01.html)  
   15. [Using Human Computation in Dead-zone based 2D Pattern Matching.](http://www.stringology.org/event/2016/p03.html)  
   
+  
 #### [WABI 2016](https://dblp.org/db/conf/wabi/wabi2016.html)
   1. [A Graph Extension of the Positional Burrows-Wheeler Transform and Its Applications.](https://doi.org/10.1007/978-3-319-43681-4_20)  
   2. [A Natural Encoding of Genetic Variation in a Burrows-Wheeler Transform to Enable Mapping and Genome Inference.](https://doi.org/10.1007/978-3-319-43681-4_18)  
   3. [Optimal Computation of Avoided Words.](https://doi.org/10.1007/978-3-319-43681-4_1)  
+  
   
 #### ACM J. Exp. Algorithmics 2016  
   1. [Faster Compressed Suffix Trees for Repetitive Collections.](https://doi.org/10.1145/2851495)  
@@ -3853,14 +4025,18 @@
   2. [Faster Linear-space Orthogonal Range Searching in Arbitrary Dimensions.](https://doi.org/10.1137/1.9781611973754.8)  
   3. [Improved Single-Term Top-k Document Retrieval.](https://doi.org/10.1137/1.9781611973754.3)  
   
+  
 #### [BCB 2015](https://dblp.org/db/conf/bcb/bcb2015.html)
   1. [Fast and efficient compression of high-throughput sequencing reads.](https://doi.org/10.1145/2808719.2808753)  
+  
   
 #### [BPOE 2015](https://dblp.org/db/conf/bpoe/bpoe2015.html)
   1. [Stream-Based Lossless Data Compression Hardware Using Adaptive Frequency Table Management.](https://doi.org/10.1007/978-3-319-29006-5_11)  
   
+  
 #### [CIAC 2015](https://dblp.org/db/conf/ciac/ciac2015.html)
   1. [An Opportunistic Text Indexing Structure Based on Run Length Encoding.](https://doi.org/10.1007/978-3-319-18173-8_29)  
+  
   
 #### [CPM 2015](https://dblp.org/db/conf/cpm/cpm2015.html)
   1. [A Framework for Space-Efficient String Kernels.](https://doi.org/10.1007/978-3-319-19929-0_2)  
@@ -3898,6 +4074,7 @@
   33. [The Approximability of Maximum Rooted Triplets Consistency with Fan Triplets and Forbidden Triplets.](https://doi.org/10.1007/978-3-319-19929-0_23)  
   34. [Tighter Bounds for the Sum of Irreducible LCP Values.](https://doi.org/10.1007/978-3-319-19929-0_27)  
   
+  
 #### [DCC 2015](https://dblp.org/db/conf/dcc/dcc2015.html)
   1. [Bi-Directional Context Modeling with Combinatorial Structuring for Genome Sequence Compression.](https://doi.org/10.1109/DCC.2015.67)  
   2. [Compressing Yahoo Mail.](https://doi.org/10.1109/DCC.2015.15)  
@@ -3921,8 +4098,10 @@
   20. [Universal Compression of Memoryless Sources over Large Alphabets via Independent Component Analysis.](https://doi.org/10.1109/DCC.2015.48)  
   21. [Variable-Order de Bruijn Graphs.](https://doi.org/10.1109/DCC.2015.70)  
   
+  
 #### [DEXA Workshops 2015](https://dblp.org/db/conf/dexaw/dexaw2015.html)
   1. [Longest Previous Non-overlapping Factors Computation.](https://doi.org/10.1109/DEXA.2015.21)  
+  
   
 #### [DLT 2015](https://dblp.org/db/conf/dlt/dlt2015.html)
   1. [Diverse Palindromic Factorization Is NP-complete.](https://doi.org/10.1007/978-3-319-21500-6_6)  
@@ -3932,24 +4111,29 @@
   5. [Transfinite Lyndon Words.](https://doi.org/10.1007/978-3-319-21500-6_14)  
   6. [Unary Patterns with Permutations.](https://doi.org/10.1007/978-3-319-21500-6_15)  
   
+  
 #### [ESA 2015](https://dblp.org/db/conf/esa/esa2015.html)
   1. [Access, Rank, and Select in Grammar-compressed Strings.](https://doi.org/10.1007/978-3-662-48350-3_13)  
   2. [Approximating LZ77 via Small-Space Multiple-Pattern Matching.](https://doi.org/10.1007/978-3-662-48350-3_45)  
   3. [Compressed Data Structures for Dynamic Sequences.](https://doi.org/10.1007/978-3-662-48350-3_74)  
   4. [Dictionary Matching in a Stream.](https://doi.org/10.1007/978-3-662-48350-3_31)  
   
+  
 #### [FCT 2015](https://dblp.org/db/conf/fct/fct2015.html)
   1. [Longest α-Gapped Repeat and Palindrome.](https://doi.org/10.1007/978-3-319-22177-9_3)  
+  
   
 #### [FOCS 2015](https://dblp.org/db/conf/focs/focs2015.html)
   1. [Pattern-Avoiding Access in Binary Search Trees.](https://doi.org/10.1109/FOCS.2015.32)  
   2. [Quadratic Conditional Lower Bounds for String Problems and Dynamic Time Warping.](https://doi.org/10.1109/FOCS.2015.15)  
   3. [Tight Hardness Results for LCS and Other Sequence Similarity Measures.](https://doi.org/10.1109/FOCS.2015.14)  
   
+  
 #### [ICALP (1) 2015](https://dblp.org/db/conf/icalp/icalp2015-1.html)
   1. [Hollow Heaps.](https://doi.org/10.1007/978-3-662-47672-7_56)  
   2. [Optimal Encodings for Range Top- k k , Selection, and Min-Max.](https://doi.org/10.1007/978-3-662-47672-7_48)  
   3. [Replacing Mark Bits with Randomness in Fibonacci Heaps.](https://doi.org/10.1007/978-3-662-47672-7_72)  
+  
   
 #### [ISAAC 2015](https://dblp.org/db/conf/isaac/isaac2015.html)
   1. [An In-place Framework for Exact and Approximate Shortest Unique Substring Queries.](https://doi.org/10.1007/978-3-662-48971-0_63)  
@@ -3958,10 +4142,12 @@
   4. [On the Succinct Representation of Unlabeled Permutations.](https://doi.org/10.1007/978-3-662-48971-0_5)  
   5. [Optimal Search Trees with 2-Way Comparisons.](https://doi.org/10.1007/978-3-662-48971-0_7)  
   
+  
 #### [IWOCA 2015](https://dblp.org/db/conf/iwoca/iwoca2015.html)
   1. [Computing the BWT and the LCP Array in Constant Space.](https://doi.org/10.1007/978-3-319-29516-9_26)  
   2. [EERTREE: An Efficient Data Structure for Processing Palindromes in Strings.](https://doi.org/10.1007/978-3-319-29516-9_27)  
   3. [Longest Common Extensions in Partial Words.](https://doi.org/10.1007/978-3-319-29516-9_5)  
+  
   
 #### [LATA 2015](https://dblp.org/db/conf/lata/lata2015.html)
   1. [Average Linear Time and Compressed Space Construction of the Burrows-Wheeler Transform.](https://doi.org/10.1007/978-3-319-15579-1_46)  
@@ -3976,21 +4162,26 @@
   10. [Online Computation of Abelian Runs.](https://doi.org/10.1007/978-3-319-15579-1_30)  
   11. [Square-Free Words over Partially Commutative Alphabets.](https://doi.org/10.1007/978-3-319-15579-1_33)  
   
+  
 #### [MFCS (1) 2015](https://dblp.org/db/conf/mfcs/mfcs2015-1.html)
   1. [Longest Gapped Repeats and Palindromes.](https://doi.org/10.1007/978-3-662-48057-1_16)  
   2. [Strong Inapproximability of the Shortest Reset Word.](https://doi.org/10.1007/978-3-662-48057-1_19)  
   
+  
 #### [MFCS (2) 2015](https://dblp.org/db/conf/mfcs/mfcs2015-2.html)
   1. [Faster Lightweight Lempel-Ziv Parsing.](https://doi.org/10.1007/978-3-662-48054-0_36)  
   
+  
 #### [PPAM (2) 2015](https://dblp.org/db/conf/ppam/ppam2015-2.html)
   1. [Parallelising the Computation of Minimal Absent Words.](https://doi.org/10.1007/978-3-319-32152-3_23)  
+  
   
 #### [SEA 2015](https://dblp.org/db/conf/wea/sea2015.html)
   1. [A Bulk-Parallel Priority Queue in External Memory with STXXL.](https://doi.org/10.1007/978-3-319-20086-6_3)  
   2. [Huffman Codes versus Augmented Non-Prefix-Free Codes.](https://doi.org/10.1007/978-3-319-20086-6_24)  
   3. [Parallel Construction of Succinct Trees.](https://doi.org/10.1007/978-3-319-20086-6_1)  
   4. [Tree Compression with Top Trees Revisited.](https://doi.org/10.1007/978-3-319-20086-6_2)  
+  
   
 #### [SODA 2015](https://dblp.org/db/conf/soda/soda2015.html)
   1. [A new characterization of maximal repetitions by Lyndon trees.](https://doi.org/10.1137/1.9781611973730.38)  
@@ -3999,6 +4190,7 @@
   4. [Internal Pattern Matching Queries in a Text and Applications.](https://doi.org/10.1137/1.9781611973730.36)  
   5. [The amortized cost of finding the minimum.](https://doi.org/10.1137/1.9781611973730.51)  
   6. [Wavelet Trees Meet Suffix Trees.](https://doi.org/10.1137/1.9781611973730.39)  
+  
   
 #### [SPIRE 2015](https://dblp.org/db/conf/spire/spire2015.html)
   1. [A Compact RDF Store Using Suffix Arrays.](https://doi.org/10.1007/978-3-319-23826-5_11)  
@@ -4036,13 +4228,16 @@
   33. [Tight Bound for the Number of Distinct Palindromes in a Tree.](https://doi.org/10.1007/978-3-319-23826-5_26)  
   34. [Transforming XML Streams with References.](https://doi.org/10.1007/978-3-319-23826-5_4)  
   
+  
 #### [STACS 2015](https://dblp.org/db/conf/stacs/stacs2015.html)
   1. [Lempel-Ziv Factorization May Be Harder Than Computing All Runs.](https://doi.org/10.4230/LIPIcs.STACS.2015.582)  
   2. [Pattern Matching with Variables: Fast Algorithms and New Hardness Results.](https://doi.org/10.4230/LIPIcs.STACS.2015.302)  
   3. [Space-efficient Basic Graph Algorithms.](https://doi.org/10.4230/LIPIcs.STACS.2015.288)  
   
+  
 #### [STOC 2015](https://dblp.org/db/conf/stoc/stoc2015.html)
   1. [Edit Distance Cannot Be Computed in Strongly Subquadratic Time (unless SETH is false).](https://doi.org/10.1145/2746539.2746612)  
+  
   
 #### [Stringology 2015](https://dblp.org/db/conf/stringology/stringology2015.html)
   1. [A Faster Longest Common Extension Algorithm on Compressed Strings and its Applications.](http://www.stringology.org/event/2015/p01.html)  
@@ -4059,23 +4254,29 @@
   12. [Refined Tagging of Complex Verbal Phrases for the Italian Language.](http://www.stringology.org/event/2015/p13.html)  
   13. [Tuning Algorithms for Jumbled Matching.](http://www.stringology.org/event/2015/p07.html)  
   
+  
 #### [WABI 2015](https://dblp.org/db/conf/wabi/wabi2015.html)
   1. [Bloom Filter Trie - A Data Structure for Pan-Genome Storage.](https://doi.org/10.1007/978-3-662-48221-6_16)  
   2. [Circular Sequence Comparison with q-grams.](https://doi.org/10.1007/978-3-662-48221-6_15)  
   3. [Optimizing Read Reversals for Sequence Compression - (Extended Abstract).](https://doi.org/10.1007/978-3-662-48221-6_14)  
   
+  
 #### [WADS 2015](https://dblp.org/db/conf/wads/wads2015.html)
   1. [Universal Reconstruction of a String.](https://doi.org/10.1007/978-3-319-21840-3_32)  
   
+  
 #### [WALCOM 2015](https://dblp.org/db/conf/walcom/walcom2015.html)
   1. [A Practical Succinct Data Structure for Tree-Like Graphs.](https://doi.org/10.1007/978-3-319-15612-5_7)  
+  
   
 #### [WORDS 2015](https://dblp.org/db/conf/cwords/words2015.html)
   1. [Arithmetics on Suffix Arrays of Fibonacci Words.](https://doi.org/10.1007/978-3-319-23660-5_12)  
   2. [Linear-Time Computation of Prefix Table for Weighted Strings.](https://doi.org/10.1007/978-3-319-23660-5_7)  
   
+  
 #### [WWW 2015](https://dblp.org/db/conf/www/www2015.html)
   1. [Compressed Indexes for String Searching in Labeled Graphs.](https://doi.org/10.1145/2736277.2741140)  
+  
   
 #### ACM Trans. Algorithms 2015  
   1. [Optimal Lower and Upper Bounds for Representing Sequences.](https://doi.org/10.1145/2629339)  
@@ -4177,6 +4378,7 @@
   1. [Multi-Pivot Quicksort: Theory and Experiments.](https://doi.org/10.1137/1.9781611973198.6)  
   2. [Top-k Substring Matching for Auto-Completion.](https://doi.org/10.1137/1.9781611973198.5)  
   
+  
 #### [CPM 2014](https://dblp.org/db/conf/cpm/cpm2014.html)
   1. [A really Simple Approximation of Smallest Grammar.](https://doi.org/10.1007/978-3-319-07566-2_19)  
   2. [An Improved Query Time for Succinct Dynamic Dictionary Matching.](https://doi.org/10.1007/978-3-319-07566-2_13)  
@@ -4207,6 +4409,7 @@
   27. [String Range Matching.](https://doi.org/10.1007/978-3-319-07566-2_24)  
   28. [The Worst Case Complexity of Maximum Parsimony.](https://doi.org/10.1007/978-3-319-07566-2_9)  
   
+  
 #### [DCC 2014](https://dblp.org/db/conf/dcc/dcc2014.html)
   1. [A Practical Implementation of Compressed Suffix Arrays with Applications to Self-Indexing.](https://doi.org/10.1109/DCC.2014.49)  
   2. [Adaptive Dictionary Sharing Method for Re-Pair Algorithm.](https://doi.org/10.1109/DCC.2014.73)  
@@ -4231,9 +4434,11 @@
   21. [Towards Markup-Aware Text Compression.](https://doi.org/10.1109/DCC.2014.80)  
   22. [Universal Text Preprocessing and Postprocessing for PPM Using Alphabet Adjustment.](https://doi.org/10.1109/DCC.2014.12)  
   
+  
 #### [Developments in Language Theory 2014](https://dblp.org/db/conf/dlt/dlt2014.html)
   1. [On k-Abelian Palindromic Rich and Poor Words.](https://doi.org/10.1007/978-3-319-09698-8_17)  
   2. [k-Abelian Pattern Matching.](https://doi.org/10.1007/978-3-319-09698-8_16)  
+  
   
 #### [ESA 2014](https://dblp.org/db/conf/esa/esa2014.html)
   1. [Amortized Bounds for Dynamic Orthogonal Range Reporting.](https://doi.org/10.1007/978-3-662-44777-2_69)  
@@ -4244,19 +4449,24 @@
   6. [The Batched Predecessor Problem in External Memory.](https://doi.org/10.1007/978-3-662-44777-2_10)  
   7. [Weighted Ancestors in Suffix Trees.](https://doi.org/10.1007/978-3-662-44777-2_38)  
   
+  
 #### [FOCS 2014](https://dblp.org/db/conf/focs/focs2014.html)
   1. [Dynamic Integer Sets with Optimal Rank, Select, and Predecessor Search.](https://doi.org/10.1109/FOCS.2014.26)  
   2. [The Dyck Language Edit Distance Problem in Near-Linear Time.](https://doi.org/10.1109/FOCS.2014.71)  
   
+  
 #### [FSTTCS 2014](https://dblp.org/db/conf/fsttcs/fsttcs2014.html)
   1. [Asymptotically Optimal Encodings for Range Selection.](https://doi.org/10.4230/LIPIcs.FSTTCS.2014.291)  
+  
   
 #### [HPCA 2014](https://dblp.org/db/conf/hpca/hpca2014.html)
   1. [MemZip: Exploring unconventional benefits from memory compression.](https://doi.org/10.1109/HPCA.2014.6835972)  
   
+  
 #### [ICALP (1) 2014](https://dblp.org/db/conf/icalp/icalp2014-1.html)
   1. [Deterministic Rectangle Enclosure and Offline Dominance Reporting on the RAM.](https://doi.org/10.1007/978-3-662-43948-7_7)  
   2. [On Hardness of Jumbled Indexing.](https://doi.org/10.1007/978-3-662-43948-7_10)  
+  
   
 #### [ISAAC 2014](https://dblp.org/db/conf/isaac/isaac2014.html)
   1. [Depth-First Search Using O(n) Bits.](https://doi.org/10.1007/978-3-319-13075-0_44)  
@@ -4264,13 +4474,16 @@
   3. [The Power and Limitations of Static Binary Search Trees with Lazy Finger.](https://doi.org/10.1007/978-3-319-13075-0_15)  
   4. [Top- k Term-Proximity in Succinct Space.](https://doi.org/10.1007/978-3-319-13075-0_14)  
   
+  
 #### [IWOCA 2014](https://dblp.org/db/conf/iwoca/iwoca2014.html)
   1. [A Suffix Tree Or Not a Suffix Tree?](https://doi.org/10.1007/978-3-319-19315-1_30)  
   2. [Computing Primitively-Rooted Squares and Runs in Partial Words.](https://doi.org/10.1007/978-3-319-19315-1_8)  
   3. [Fast and Simple Computations Using Prefix Tables Under Hamming and Edit Distance.](https://doi.org/10.1007/978-3-319-19315-1_5)  
   
+  
 #### [JSAI-isAI Workshops 2014](https://dblp.org/db/conf/jsai/jsai2014.html)
   1. [Finding Ambiguous Patterns on Grammar Compressed String.](https://doi.org/10.1007/978-3-662-48119-6_25)  
+  
   
 #### [LATIN 2014](https://dblp.org/db/conf/latin/latin2014.html)
   1. [Biased Predecessor Search.](https://doi.org/10.1007/978-3-642-54423-1_65)  
@@ -4278,15 +4491,19 @@
   3. [Multiply Balanced k -Partitioning.](https://doi.org/10.1007/978-3-642-54423-1_51)  
   4. [Quad-K-d Trees.](https://doi.org/10.1007/978-3-642-54423-1_64)  
   
+  
 #### [Language, Culture, Computation (1) 2014](https://dblp.org/db/conf/birthday/choueka2014-1.html)
   1. [Hypertext Searching - A Survey.](https://doi.org/10.1007/978-3-642-45321-2_15)  
+  
   
 #### [MFCS (1) 2014](https://dblp.org/db/conf/mfcs/mfcs2014-1.html)
   1. [Universal Lyndon Words.](https://doi.org/10.1007/978-3-662-44522-8_12)  
   
+  
 #### [MFCS (2) 2014](https://dblp.org/db/conf/mfcs/mfcs2014-2.html)
   1. [Document Retrieval with One Wildcard.](https://doi.org/10.1007/978-3-662-44465-8_45)  
   2. [Inferring Strings from Lyndon Factorization.](https://doi.org/10.1007/978-3-662-44465-8_48)  
+  
   
 #### [SEA 2014](https://dblp.org/db/conf/wea/sea2014.html)
   1. [Approximate Online Matching of Circular Strings.](https://doi.org/10.1007/978-3-319-07959-2_27)  
@@ -4301,8 +4518,10 @@
   10. [Order-Preserving Matching with Filtration.](https://doi.org/10.1007/978-3-319-07959-2_26)  
   11. [Retrieval and Perfect Hashing Using Fingerprinting.](https://doi.org/10.1007/978-3-319-07959-2_12)  
   
+  
 #### [SISAP 2014](https://dblp.org/db/conf/sisap/sisap2014.html)
   1. [Dynamic List of Clusters in Secondary Memory.](https://doi.org/10.1007/978-3-319-11988-5_9)  
+  
   
 #### [SODA 2014](https://dblp.org/db/conf/soda/soda2014.html)
   1. [Bicriteria data compression.](https://doi.org/10.1137/1.9781611973402.115)  
@@ -4311,8 +4530,10 @@
   4. [Near-optimal labeling schemes for nearest common ancestors.](https://doi.org/10.1137/1.9781611973402.72)  
   5. [Selection and Sorting in the "Restore" Model.](https://doi.org/10.1137/1.9781611973402.74)  
   
+  
 #### [SOFSEM 2014](https://dblp.org/db/conf/sofsem/sofsem2014.html)
   1. [Shortest Unique Substrings Queries in Optimal Time.](https://doi.org/10.1007/978-3-319-04298-5_44)  
+  
   
 #### [SPIRE 2014](https://dblp.org/db/conf/spire/spire2014.html)
   1. [A 3-Approximation Algorithm for the Multiple Spliced Alignment Problem and Its Application to the Gene Prediction Task.](https://doi.org/10.1007/978-3-319-11918-2_13)  
@@ -4342,6 +4563,7 @@
   25. [Strategic Pattern Search in Factor-Compressed Text.](https://doi.org/10.1007/978-3-319-11918-2_1)  
   26. [Succinct Indexes for Reporting Discriminating and Generic Words.](https://doi.org/10.1007/978-3-319-11918-2_9)  
   
+  
 #### [STACS 2014](https://dblp.org/db/conf/stacs/stacs2014.html)
   1. [Data-Oblivious Data Structures.](https://doi.org/10.4230/LIPIcs.STACS.2014.554)  
   2. [Faster Compact On-Line Lempel-Ziv Factorization.](https://doi.org/10.4230/LIPIcs.STACS.2014.675)  
@@ -4350,15 +4572,18 @@
   5. [Testing Generalised Freeness of Words.](https://doi.org/10.4230/LIPIcs.STACS.2014.337)  
   6. [Weighted Coloring in Trees.](https://doi.org/10.4230/LIPIcs.STACS.2014.75)  
   
+  
 #### [STOC 2014](https://dblp.org/db/conf/stoc/stoc2014.html)
   1. [Linear time construction of compressed text indices in compact space.](https://doi.org/10.1145/2591796.2591885)  
   2. [Zig-zag sort: a simple deterministic data-oblivious sorting algorithm running in O(n log n) time.](https://doi.org/10.1145/2591796.2591830)  
+  
   
 #### [SWAT 2014](https://dblp.org/db/conf/swat/swat2014.html)
   1. [B-slack Trees: Space Efficient B-Trees.](https://doi.org/10.1007/978-3-319-08404-6_11)  
   2. [Colored Range Searching in Linear Space.](https://doi.org/10.1007/978-3-319-08404-6_20)  
   3. [Expected Linear Time Sorting for Word Size Ω(log2 n loglogn).](https://doi.org/10.1007/978-3-319-08404-6_3)  
   4. [Ranked Document Selection.](https://doi.org/10.1007/978-3-319-08404-6_30)  
+  
   
 #### [Stringology 2014](https://dblp.org/db/conf/stringology/stringology2014.html)
   1. [A Process-Oriented Implementation of Brzozowski's DFA Construction Algorithm.](http://www.stringology.org/event/2014/p03.html)  
@@ -4381,9 +4606,11 @@
   18. [Two Squares Canonical Factorization.](http://www.stringology.org/event/2014/p06.html)  
   19. [Using Correctness-by-Construction to Derive Dead-zone Algorithms.](http://www.stringology.org/event/2014/p09.html)  
   
+  
 #### [WABI 2014](https://dblp.org/db/conf/wabi/wabi2014.html)
   1. [Constructing String Graphs in External Memory.](https://doi.org/10.1007/978-3-662-44753-6_23)  
   2. [Manifold de Bruijn Graphs.](https://doi.org/10.1007/978-3-662-44753-6_22)  
+  
   
 #### ACM J. Exp. Algorithmics 2014  
   1. [General Document Retrieval in Compact Space.](https://doi.org/10.1145/2670128)  
@@ -4530,11 +4757,14 @@
   2. [Inducing Suffix and Lcp Arrays in External Memory.](https://doi.org/10.1137/1.9781611972931.8)  
   3. [Lempel-Ziv factorization: Simple, fast, practical.](https://doi.org/10.1137/1.9781611972931.9)  
   
+  
 #### [CIAA 2013](https://dblp.org/db/conf/wia/ciaa2013.html)
   1. [Compressed Automata for Dictionary Matching.](https://doi.org/10.1007/978-3-642-39274-0_28)  
   
+  
 #### [CIAC 2013](https://dblp.org/db/conf/ciac/ciac2013.html)
   1. [Average Optimal String Matching in Packed Strings.](https://doi.org/10.1007/978-3-642-38233-8_4)  
+  
   
 #### [CPM 2013](https://dblp.org/db/conf/cpm/cpm2013.html)
   1. [A Bit-Parallel, General Integer-Scoring Sequence Alignment Algorithm.](https://doi.org/10.1007/978-3-642-38905-4_7)  
@@ -4562,11 +4792,14 @@
   23. [Space-Efficient Construction Algorithm for the Circular Suffix Tree.](https://doi.org/10.1007/978-3-642-38905-4_15)  
   24. [Time-Space Trade-Offs for the Longest Common Substring Problem.](https://doi.org/10.1007/978-3-642-38905-4_22)  
   
+  
 #### [CSR 2013](https://dblp.org/db/conf/csr/csr2013.html)
   1. [Alphabetic Minimax Trees in Linear Time.](https://doi.org/10.1007/978-3-642-38536-0_4)  
   
+  
 #### [CiE 2013](https://dblp.org/db/conf/cie/cie2013.html)
   1. [Discovering Hidden Repetitions in Words.](https://doi.org/10.1007/978-3-642-39053-1_24)  
+  
   
 #### [DCC 2013](https://dblp.org/db/conf/dcc/dcc2013.html)
   1. [A Simple Online Competitive Adaptation of Lempel-Ziv Compression with Efficient Random Access Support.](https://doi.org/10.1109/DCC.2013.19)  
@@ -4589,11 +4822,13 @@
   18. [The Rightmost Equal-Cost Position Problem.](https://doi.org/10.1109/DCC.2013.50)  
   19. [Variable-to-Fixed-Length Encoding for Large Texts Using Re-Pair Algorithm with Shared Dictionaries.](https://doi.org/10.1109/DCC.2013.97)  
   
+  
 #### [Developments in Language Theory 2013](https://dblp.org/db/conf/dlt/dlt2013.html)
   1. [Abelian Repetitions in Sturmian Words.](https://doi.org/10.1007/978-3-642-38771-5_21)  
   2. [On the Number of Abelian Bordered Words.](https://doi.org/10.1007/978-3-642-38771-5_37)  
   3. [Repetition Avoidance in Circular Factors.](https://doi.org/10.1007/978-3-642-38771-5_34)  
   4. [Suffixes, Conjugates and Lyndon Words.](https://doi.org/10.1007/978-3-642-38771-5_13)  
+  
   
 #### [ESA 2013](https://dblp.org/db/conf/esa/esa2013.html)
   1. [Binary Jumbled Pattern Matching on Trees and Tree-Like Structures.](https://doi.org/10.1007/978-3-642-40450-4_44)  
@@ -4605,17 +4840,21 @@
   7. [The Encoding Complexity of Two Dimensional Range Minimum Data Structures.](https://doi.org/10.1007/978-3-642-40450-4_20)  
   8. [Versatile Succinct Representations of the Bidirectional Burrows-Wheeler Transform.](https://doi.org/10.1007/978-3-642-40450-4_12)  
   
+  
 #### [ICALP (1) 2013](https://dblp.org/db/conf/icalp/icalp2013-1.html)
   1. [Combining Binary Search Trees.](https://doi.org/10.1007/978-3-642-39206-1_33)  
   2. [Dynamic Compressed Strings with Random Access.](https://doi.org/10.1007/978-3-642-39206-1_43)  
   3. [Sparse Suffix Tree Construction in Small Space.](https://doi.org/10.1007/978-3-642-39206-1_13)  
   4. [Tree Compression with Top Trees.](https://doi.org/10.1007/978-3-642-39206-1_14)  
   
+  
 #### [ICCS 2013](https://dblp.org/db/conf/iccS/iccS2013.html)
   1. [n-step FM-Index for Faster Pattern Matching.](https://doi.org/10.1016/j.procs.2013.05.170)  
   
+  
 #### [IEEE BigData 2013](https://dblp.org/db/conf/bigdataconf/bigdataconf2013.html)
   1. [A reconfigurable stream compression hardware based on static symbol-lookup table.](https://doi.org/10.1109/BigData.2013.6691702)  
+  
   
 #### [ISAAC 2013](https://dblp.org/db/conf/isaac/isaac2013.html)
   1. [Beating $\mathcal{O}(nm)$ in Approximate LZW-Compressed Pattern Matching.](https://doi.org/10.1007/978-3-642-45030-3_8)  
@@ -4628,6 +4867,7 @@
   8. [Succinct Data Structures for Representing Equivalence Classes.](https://doi.org/10.1007/978-3-642-45030-3_47)  
   9. [Top-k Document Retrieval in Compact Space and Near-Optimal Time.](https://doi.org/10.1007/978-3-642-45030-3_37)  
   
+  
 #### [IWOCA 2013](https://dblp.org/db/conf/iwoca/iwoca2013.html)
   1. [An Optimal Algorithm for Computing All Subtree Repeats in Trees.](https://doi.org/10.1007/978-3-642-45278-9_23)  
   2. [Deciding Representability of Sets of Words of Equal Length in Polynomial Time.](https://doi.org/10.1007/978-3-642-45278-9_4)  
@@ -4635,29 +4875,37 @@
   4. [Prefix Table Construction and Conversion.](https://doi.org/10.1007/978-3-642-45278-9_5)  
   5. [Suffix Tree of Alignment: An Efficient Index for Similar Data.](https://doi.org/10.1007/978-3-642-45278-9_29)  
   
+  
 #### [Information Theory, Combinatorics, and Search Theory 2013](https://dblp.org/db/conf/birthday/ahlswede2013.html)
   1. [On the Value of Multiple Read/Write Streams for Data Compression.](https://doi.org/10.1007/978-3-642-36899-8_12)  
+  
   
 #### [LATA 2013](https://dblp.org/db/conf/lata/lata2013.html)
   1. [Linear-Time Version of Holub's Algorithm for Morphic Imprimitivity Testing.](https://doi.org/10.1007/978-3-642-37064-9_34)  
   2. [On the Number of Unbordered Factors.](https://doi.org/10.1007/978-3-642-37064-9_27)  
   
+  
 #### [MFCS 2013](https://dblp.org/db/conf/mfcs/mfcs2013.html)
   1. [Detecting Regularities on Grammar-Compressed Strings.](https://doi.org/10.1007/978-3-642-40313-2_51)  
+  
   
 #### [MICRO 2013](https://dblp.org/db/conf/micro/micro2013.html)
   1. [Decoupled compressed cache: exploiting spatial locality for energy-optimized compressed caching.](https://doi.org/10.1145/2540708.2540715)  
   2. [Linearly compressed pages: a low-complexity, low-latency main memory compression framework.](https://doi.org/10.1145/2540708.2540724)  
   
+  
 #### [PPAM (2) 2013](https://dblp.org/db/conf/ppam/ppam2013-2.html)
   1. [Accelerating String Matching on MIC Architecture for Motif Extraction.](https://doi.org/10.1007/978-3-642-55195-6_24)  
+  
   
 #### [SEA 2013](https://dblp.org/db/conf/wea/sea2013.html)
   1. [Lightweight Lempel-Ziv Parsing.](https://doi.org/10.1007/978-3-642-38527-8_14)  
   2. [Space-Efficient, High-Performance Rank and Select Structures on Uncompressed Bit Sequences.](https://doi.org/10.1007/978-3-642-38527-8_15)  
   
+  
 #### [SIGIR 2013](https://dblp.org/db/conf/sigir/sigir2013.html)
   1. [Faster and smaller inverted indices with treaps.](https://doi.org/10.1145/2484028.2484088)  
+  
   
 #### [SODA 2013](https://dblp.org/db/conf/soda/soda2013.html)
   1. [Adaptive and Approximate Orthogonal Range Counting.](https://doi.org/10.1137/1.9781611973105.18)  
@@ -4668,8 +4916,10 @@
   6. [The Space Complexity of 2-Dimensional Approximate Range Counting.](https://doi.org/10.1137/1.9781611973105.19)  
   7. [Twisted Tabulation Hashing.](https://doi.org/10.1137/1.9781611973105.16)  
   
+  
 #### [SOFSEM 2013](https://dblp.org/db/conf/sofsem/sofsem2013.html)
   1. [Permuted Pattern Matching on Multi-track Strings.](https://doi.org/10.1007/978-3-642-35843-2_25)  
+  
   
 #### [SPIRE 2013](https://dblp.org/db/conf/spire/spire2013.html)
   1. [A Lempel-Ziv Compressed Structure for Document Listing.](https://doi.org/10.1007/978-3-319-02432-5_16)  
@@ -4705,11 +4955,13 @@
   31. [Using Mutual Influence to Improve Recommendations.](https://doi.org/10.1007/978-3-319-02432-5_6)  
   32. [You Are What You Eat: Learning User Tastes for Rating Prediction.](https://doi.org/10.1007/978-3-319-02432-5_19)  
   
+  
 #### [STACS 2013](https://dblp.org/db/conf/stacs/stacs2013.html)
   1. [Fast Algorithms for Abelian Periods in Words and Greatest Common Divisor Queries.](https://doi.org/10.4230/LIPIcs.STACS.2013.245)  
   2. [Finding Pseudo-repetitions.](https://doi.org/10.4230/LIPIcs.STACS.2013.257)  
   3. [Parameterized Matching in the Streaming Model.](https://doi.org/10.4230/LIPIcs.STACS.2013.400)  
   4. [Recompression: a simple and powerful technique for word equations.](https://doi.org/10.4230/LIPIcs.STACS.2013.233)  
+  
   
 #### [Stringology 2013](https://dblp.org/db/conf/stringology/stringology2013.html)
   1. [Compact Complete Inverted Files for Texts and Directed Acyclic Graphs Based on Sequence Binary Decision Diagrams .](http://www.stringology.org/event/2013/p14.html)  
@@ -4730,16 +4982,19 @@
   16. [Towards a Very Fast Multiple String Matching Algorithm for Short Patterns.](http://www.stringology.org/event/2013/p08.html)  
   17. [Weak Factor Automata: Comparing (Failure) Oracles and Storacles.](http://www.stringology.org/event/2013/p16.html)  
   
+  
 #### [WABI 2013](https://dblp.org/db/conf/wabi/wabi2013.html)
   1. [A Fixed-Parameter Algorithm for Minimum Common String Partition with Few Duplications.](https://doi.org/10.1007/978-3-642-40453-5_19)  
   2. [Probabilistic Approaches to Alignment with Tandem Repeats.](https://doi.org/10.1007/978-3-642-40453-5_22)  
   3. [Using Cascading Bloom Filters to Improve the Memory Usage for de Brujin Graphs.](https://doi.org/10.1007/978-3-642-40453-5_28)  
+  
   
 #### [WADS 2013](https://dblp.org/db/conf/wads/wads2013.html)
   1. [Better Space Bounds for Parameterized Range Majority and Minority.](https://doi.org/10.1007/978-3-642-40104-6_11)  
   2. [Compressed Persistent Index for Efficient Rank/Select Queries.](https://doi.org/10.1007/978-3-642-40104-6_35)  
   3. [Fingerprints in Compressed Strings.](https://doi.org/10.1007/978-3-642-40104-6_13)  
   4. [On (Dynamic) Range Minimum Queries in External Memory.](https://doi.org/10.1007/978-3-642-40104-6_4)  
+  
   
 #### ACM Comput. Surv. 2013  
   1. [Spaces, Trees, and Colors: The algorithmic landscape of document retrieval on sequences.](https://doi.org/10.1145/2535933)  
@@ -4841,23 +5096,29 @@
 #### [AIAI (2) 2012](https://dblp.org/db/conf/ifip12/aiai2012-2.html)
   1. [GapMis-OMP: Pairwise Short-Read Alignment on Multi-core Architectures.](https://doi.org/10.1007/978-3-642-33412-2_61)  
   
+  
 #### [ALENEX 2012](https://dblp.org/db/conf/alenex/alenex2012.html)
   1. [Computing a Consensus of Multilabeled Trees.](https://doi.org/10.1137/1.9781611972924.9)  
   2. [Fast Compressed Tries through Path Decompositions.](https://doi.org/10.1137/1.9781611972924.7)  
   3. [Solving the Minimum String Cover Problem.](https://doi.org/10.1137/1.9781611972924.8)  
   4. [The Complexity of Partial Orders.](https://doi.org/10.1137/1.9781611972924.6)  
   
+  
 #### [ANALCO 2012](https://dblp.org/db/conf/analco/analco2012.html)
   1. [The Complexity of Partial Orders.](https://doi.org/10.1137/1.9781611973020.5)  
+  
   
 #### [BCB 2012](https://dblp.org/db/conf/bcb/bcb2012.html)
   1. [ERNE-BS5: aligning BS-treated sequences by multiple hits on a 5-letters alphabet.](https://doi.org/10.1145/2382936.2382938)  
   
+  
 #### [BIBM Workshops 2012](https://dblp.org/db/conf/bibm/bibmw2012.html)
   1. [Libgapmis: An ultrafast library for short-read single-gap alignment.](https://doi.org/10.1109/BIBMW.2012.6470221)  
   
+  
 #### [COCOON 2012](https://dblp.org/db/conf/cocoon/cocoon2012.html)
   1. [Multi-pattern Matching with Bidirectional Indexes.](https://doi.org/10.1007/978-3-642-32241-9_33)  
+  
   
 #### [CPM 2012](https://dblp.org/db/conf/cpm/cpm2012.html)
   1. [A Linear Kernel for the Complementary Maximal Strip Recovery Problem.](https://doi.org/10.1007/978-3-642-31265-6_28)  
@@ -4896,6 +5157,7 @@
   34. [Towards an Optimal Space-and-Query-Time Index for Top-k Document Retrieval.](https://doi.org/10.1007/978-3-642-31265-6_14)  
   35. [Wavelet Trees for All.](https://doi.org/10.1007/978-3-642-31265-6_2)  
   
+  
 #### [DCC 2012](https://dblp.org/db/conf/dcc/dcc2012.html)
   1. [A Cuckoo Hashing Variant with Improved Memory Utilization and Insertion Time.](https://doi.org/10.1109/DCC.2012.41)  
   2. [Adaptive Context Tree Weighting.](https://doi.org/10.1109/DCC.2012.38)  
@@ -4907,13 +5169,16 @@
   8. [Mixing Strategies in Data Compression.](https://doi.org/10.1109/DCC.2012.40)  
   9. [Slashing the Time for BWT Inversion.](https://doi.org/10.1109/DCC.2012.18)  
   
+  
 #### [Developments in Language Theory 2012](https://dblp.org/db/conf/dlt/dlt2012.html)
   1. [Fine and Wilf's Theorem for k-Abelian Periods.](https://doi.org/10.1007/978-3-642-31653-1_27)  
   2. [Pseudoperiodic Words.](https://doi.org/10.1007/978-3-642-31653-1_28)  
   3. [Squares in Binary Partial Words.](https://doi.org/10.1007/978-3-642-31653-1_36)  
   
+  
 #### [ECML/PKDD (2) 2012](https://dblp.org/db/conf/pkdd/pkdd2012-2.html)
   1. [General Algorithms for Mining Closed Flexible Patterns under Various Equivalence Relations.](https://doi.org/10.1007/978-3-642-33486-3_28)  
+  
   
 #### [ESA 2012](https://dblp.org/db/conf/esa/esa2012.html)
   1. [Efficient Communication Protocols for Deciding Edit Distance.](https://doi.org/10.1007/978-3-642-33090-2_56)  
@@ -4921,17 +5186,21 @@
   3. [Succinct Data Structures for Path Queries.](https://doi.org/10.1007/978-3-642-33090-2_50)  
   4. [Succinct Posets.](https://doi.org/10.1007/978-3-642-33090-2_64)  
   
+  
 #### [FAW-AAIM 2012](https://dblp.org/db/conf/aaim/aaim2012.html)
   1. [Fast Relative Lempel-Ziv Self-index for Similar Sequences.](https://doi.org/10.1007/978-3-642-29700-7_27)  
   
+  
 #### [FOCS 2012](https://dblp.org/db/conf/focs/focs2012.html)
   1. [On-Line Indexing for General Alphabets via Predecessor Queries on Subsets of an Ordered List.](https://doi.org/10.1109/FOCS.2012.79)  
+  
   
 #### [ICALP (1) 2012](https://dblp.org/db/conf/icalp/icalp2012-1.html)
   1. [CRAM: Compressed Random Access Memory.](https://doi.org/10.1007/978-3-642-31594-7_43)  
   2. [De-amortizing Binary Search Trees.](https://doi.org/10.1007/978-3-642-31594-7_11)  
   3. [Faster Fully Compressed Pattern Matching by Recompression.](https://doi.org/10.1007/978-3-642-31594-7_45)  
   4. [Succinct Indices for Range Queries with Applications to Orthogonal Range Maxima.](https://doi.org/10.1007/978-3-642-31594-7_28)  
+  
   
 #### [ISAAC 2012](https://dblp.org/db/conf/isaac/isaac2012.html)
   1. [A Framework for Succinct Labeled Ordinal Trees over Large Alphabets.](https://doi.org/10.1007/978-3-642-35261-4_56)  
@@ -4941,6 +5210,7 @@
   5. [Efficient Counting of Square Substrings in a Tree.](https://doi.org/10.1007/978-3-642-35261-4_24)  
   6. [Finger Search in the Implicit Model.](https://doi.org/10.1007/978-3-642-35261-4_55)  
   
+  
 #### [IWOCA 2012](https://dblp.org/db/conf/iwoca/iwoca2012.html)
   1. [A Sequential Recursive Implementation of Dead-Zone Single Keyword Pattern Matching.](https://doi.org/10.1007/978-3-642-35926-2_26)  
   2. [Border Array for Structural Strings.](https://doi.org/10.1007/978-3-642-35926-2_22)  
@@ -4948,19 +5218,23 @@
   4. [Indexing Highly Repetitive Collections.](https://doi.org/10.1007/978-3-642-35926-2_29)  
   5. [Range Extremum Queries.](https://doi.org/10.1007/978-3-642-35926-2_30)  
   
+  
 #### [LATA 2012](https://dblp.org/db/conf/lata/lata2012.html)
   1. [A Faster Grammar-Based Self-index.](https://doi.org/10.1007/978-3-642-28332-1_21)  
   2. [Longest Common Extensions via Fingerprinting.](https://doi.org/10.1007/978-3-642-28332-1_11)  
   
+  
 #### [LATIN 2012](https://dblp.org/db/conf/latin/latin2012.html)
   1. [Forbidden Patterns.](https://doi.org/10.1007/978-3-642-29344-3_28)  
   2. [Indexed Multi-pattern Matching.](https://doi.org/10.1007/978-3-642-29344-3_34)  
+  
   
 #### [MFCS 2012](https://dblp.org/db/conf/mfcs/mfcs2012.html)
   1. [Abelian Pattern Avoidance in Partial Words.](https://doi.org/10.1007/978-3-642-32589-2_21)  
   2. [Computing Lempel-Ziv Factorization Online.](https://doi.org/10.1007/978-3-642-32589-2_68)  
   3. [Fine and Wilf's Theorem and Pseudo-repetitions.](https://doi.org/10.1007/978-3-642-32589-2_58)  
   4. [How to Reconstruct a Genome.](https://doi.org/10.1007/978-3-642-32589-2_5)  
+  
   
 #### [SEA 2012](https://dblp.org/db/conf/wea/sea2012.html)
   1. [Branch Mispredictions Don't Affect Mergesort.](https://doi.org/10.1007/978-3-642-30850-5_15)  
@@ -4969,6 +5243,7 @@
   4. [Space Efficient Modifications to Structator - A Fast Index-Based Search Tool for RNA Sequence-Structure Patterns.](https://doi.org/10.1007/978-3-642-30850-5_4)  
   5. [Space-Efficient Top-k Document Retrieval.](https://doi.org/10.1007/978-3-642-30850-5_27)  
   
+  
 #### [SODA 2012](https://dblp.org/db/conf/soda/soda2012.html)
   1. [A linear time algorithm for seeds computation.](https://doi.org/10.1137/1.9781611973099.86)  
   2. [Fully persistent B-trees.](https://doi.org/10.1137/1.9781611973099.51)  
@@ -4976,8 +5251,10 @@
   4. [Top-k document retrieval in optimal time and linear space.](https://doi.org/10.1137/1.9781611973099.84)  
   5. [Using hashing to solve the dictionary problem.](https://doi.org/10.1137/1.9781611973099.48)  
   
+  
 #### [SOFSEM 2012](https://dblp.org/db/conf/sofsem/sofsem2012.html)
   1. [Computing q-Gram Non-overlapping Frequencies on SLP Compressed Texts.](https://doi.org/10.1007/978-3-642-27660-6_25)  
+  
   
 #### [SPIRE 2012](https://dblp.org/db/conf/spire/spire2012.html)
   1. [A Study on Novelty Evaluation in Biomedical Information Retrieval.](https://doi.org/10.1007/978-3-642-34109-0_7)  
@@ -5023,19 +5300,23 @@
   41. [Usage Data in Web Search: Benefits and Limitations.](https://doi.org/10.1007/978-3-642-34109-0_2)  
   42. [Variable-Length Codes for Space-Efficient Grammar-Based Compression.](https://doi.org/10.1007/978-3-642-34109-0_42)  
   
+  
 #### [STACS 2012](https://dblp.org/db/conf/stacs/stacs2012.html)
   1. [Linear-Space Data Structures for Range Mode Query in Arrays.](https://doi.org/10.4230/LIPIcs.STACS.2012.290)  
   2. [Tying up the loose ends in fully LZW-compressed pattern matching.](https://doi.org/10.4230/LIPIcs.STACS.2012.624)  
   
+  
 #### [STOC 2012](https://dblp.org/db/conf/stoc/stoc2012.html)
   1. [Strict fibonacci heaps.](https://doi.org/10.1145/2213977.2214082)  
   2. [Tight lower bounds for the online labeling problem.](https://doi.org/10.1145/2213977.2214083)  
+  
   
 #### [SWAT 2012](https://dblp.org/db/conf/swat/swat2012.html)
   1. [A Fast Algorithm for Permutation Pattern Matching Based on Alternating Runs.](https://doi.org/10.1007/978-3-642-31155-0_23)  
   2. [Linear-Space Data Structures for Range Minority Query in Arrays.](https://doi.org/10.1007/978-3-642-31155-0_26)  
   3. [Sorted Range Reporting.](https://doi.org/10.1007/978-3-642-31155-0_24)  
   4. [String Indexing for Patterns with Wildcards.](https://doi.org/10.1007/978-3-642-31155-0_25)  
+  
   
 #### [Stringology 2012](https://dblp.org/db/conf/stringology/stringology2012.html)
   1. [A Computational Framework for Determining Square-maximal Strings.](http://www.stringology.org/event/2012/p11.html)  
@@ -5050,11 +5331,13 @@
   10. [Similarity Based Deduplication with Small Data Chunks.](http://www.stringology.org/event/2012/p02.html)  
   11. [The Number of Cubes in Sturmian Words.](http://www.stringology.org/event/2012/p09.html)  
   
+  
 #### [WABI 2012](https://dblp.org/db/conf/wabi/wabi2012.html)
   1. [Comparing DNA Sequence Collections by Direct Comparison of Compressed Text Indexes.](https://doi.org/10.1007/978-3-642-33122-0_17)  
   2. [Distributed String Mining for High-Throughput Sequencing Data.](https://doi.org/10.1007/978-3-642-33122-0_35)  
   3. [Space-Efficient and Exact de Bruijn Graph Representation Based on a Bloom Filter.](https://doi.org/10.1007/978-3-642-33122-0_19)  
   4. [Succinct de Bruijn Graphs.](https://doi.org/10.1007/978-3-642-33122-0_18)  
+  
   
 #### ACM Comput. Surv. 2012  
   1. [A comparison of index-based lempel-Ziv LZ77 factorization algorithms.](https://doi.org/10.1145/2379776.2379781)  
@@ -5155,9 +5438,11 @@
   3. [Exact Pattern Matching with Feed-Forward Bloom Filters.](https://doi.org/10.1137/1.9781611972917.1)  
   4. [Fast and Lightweight LCP-Array Construction Algorithms.](https://doi.org/10.1137/1.9781611972917.3)  
   
+  
 #### [BCB 2011](https://dblp.org/db/conf/bcb/bcb2011.html)
   1. [Approximate string-matching with a single gap for sequence alignment.](https://doi.org/10.1145/2147805.2147879)  
   2. [DynMap: mapping short reads to multiple related genomes.](https://doi.org/10.1145/2147805.2147845)  
+  
   
 #### [CCP 2011](https://dblp.org/db/conf/ccp/ccp2011.html)
   1. [A Method to Ensure the Confidentiality of the Compressed Data.](https://doi.org/10.1109/CCP.2011.28)  
@@ -5175,15 +5460,19 @@
   13. [Straight-Line Programs: A Practical Test.](https://doi.org/10.1109/CCP.2011.8)  
   14. [Wavelet Trees: From Theory to Practice.](https://doi.org/10.1109/CCP.2011.16)  
   
+  
 #### [CIAA 2011](https://dblp.org/db/conf/wia/ciaa2011.html)
   1. [Chrobak Normal Form Revisited, with Applications.](https://doi.org/10.1007/978-3-642-22256-6_14)  
   2. [Tree Template Matching in Ranked Ordered Trees by Pushdown Automata.](https://doi.org/10.1007/978-3-642-22256-6_25)  
   
+  
 #### [CIKM 2011](https://dblp.org/db/conf/cikm/cikm2011.html)
   1. [Indexes for highly repetitive document collections.](https://doi.org/10.1145/2063576.2063646)  
   
+  
 #### [COCOON 2011](https://dblp.org/db/conf/cocoon/cocoon2011.html)
   1. [On the Right-Seed Array of a String.](https://doi.org/10.1007/978-3-642-22685-4_43)  
+  
   
 #### [CPM 2011](https://dblp.org/db/conf/cpm/cpm2011.html)
   1. [A Coarse-to-Fine Approach to Computing the k-Best Viterbi Paths.](https://doi.org/10.1007/978-3-642-21458-5_32)  
@@ -5226,6 +5515,7 @@
   38. [Tractability and Approximability of Maximal Strip Recovery.](https://doi.org/10.1007/978-3-642-21458-5_29)  
   39. [Unique Perfect Phylogeny Is NP-Hard.](https://doi.org/10.1007/978-3-642-21458-5_13)  
   
+  
 #### [DCC 2011](https://dblp.org/db/conf/dcc/dcc2011.html)
   1. [Coding of Sets of Words.](https://doi.org/10.1109/DCC.2011.12)  
   2. [Color Image Compression Using a Learned Dictionary of Pairs of Orthonormal Bases.](https://doi.org/10.1109/DCC.2011.62)  
@@ -5244,25 +5534,31 @@
   15. [The String-to-Dictionary Matching Problem.](https://doi.org/10.1109/DCC.2011.21)  
   16. [Tree Structure Compression with RePair.](https://doi.org/10.1109/DCC.2011.42)  
   
+  
 #### [Developments in Language Theory 2011](https://dblp.org/db/conf/dlt/dlt2011.html)
   1. [Abelian Primitive Words.](https://doi.org/10.1007/978-3-642-22321-1_18)  
   2. [Avoiding Abelian Powers in Partial Words.](https://doi.org/10.1007/978-3-642-22321-1_7)  
   3. [On Highly Repetitive and Power Free Words.](https://doi.org/10.1007/978-3-642-22321-1_38)  
   4. [On Prefix Normal Words.](https://doi.org/10.1007/978-3-642-22321-1_20)  
   
+  
 #### [Discovery Science 2011](https://dblp.org/db/conf/dis/dis2011.html)
   1. [Scalable Detection of Frequent Substrings by Grammar-Based Compression.](https://doi.org/10.1007/978-3-642-24477-3_20)  
+  
   
 #### [ESA 2011](https://dblp.org/db/conf/esa/esa2011.html)
   1. [Alphabet-Independent Compressed Text Indexing.](https://doi.org/10.1007/978-3-642-23719-5_63)  
   2. [Distribution-Aware Compressed Full-Text Indexes.](https://doi.org/10.1007/978-3-642-23719-5_64)  
   3. [Pattern Matching in Lempel-Ziv Compressed Strings: Fast, Simple, and Deterministic.](https://doi.org/10.1007/978-3-642-23719-5_36)  
   
+  
 #### [FSTTCS 2011](https://dblp.org/db/conf/fsttcs/fsttcs2011.html)
   1. [Optimal Packed String Matching.](https://doi.org/10.4230/LIPIcs.FSTTCS.2011.423)  
   
+  
 #### [ICALP (1) 2011](https://dblp.org/db/conf/icalp/icalp2011-1.html)
   1. [Range Majority in Constant Time and Linear Space.](https://doi.org/10.1007/978-3-642-22006-7_21)  
+  
   
 #### [ISAAC 2011](https://dblp.org/db/conf/isaac/isaac2011.html)
   1. [A Dynamic Stabbing-Max Data Structure with Sub-Logarithmic Query Time.](https://doi.org/10.1007/978-3-642-25591-5_19)  
@@ -5278,6 +5574,7 @@
   11. [Space-Efficient Data-Analysis Queries on Grids.](https://doi.org/10.1007/978-3-642-25591-5_34)  
   12. [Succinct Indexes for Circular Patterns.](https://doi.org/10.1007/978-3-642-25591-5_69)  
   
+  
 #### [IWOCA 2011](https://dblp.org/db/conf/iwoca/iwoca2011.html)
   1. [A Unifying Property for Distribution-Sensitive Priority Queues.](https://doi.org/10.1007/978-3-642-25011-8_17)  
   2. [Parameterized Longest Previous Factor.](https://doi.org/10.1007/978-3-642-25011-8_3)  
@@ -5285,9 +5582,11 @@
   4. [Two Constant-Factor-Optimal Realizations of Adaptive Heapsort.](https://doi.org/10.1007/978-3-642-25011-8_16)  
   5. [p-Suffix Sorting as Arithmetic Coding.](https://doi.org/10.1007/978-3-642-25011-8_4)  
   
+  
 #### [LATA 2011](https://dblp.org/db/conf/lata/lata2011.html)
   1. [Improved Alignment Based Algorithm for Multilingual Text Compression.](https://doi.org/10.1007/978-3-642-21254-3_18)  
   2. [Unary Pattern Avoidance in Partial Words Dense with Holes.](https://doi.org/10.1007/978-3-642-21254-3_11)  
+  
   
 #### [MFCS 2011](https://dblp.org/db/conf/mfcs/mfcs2011.html)
   1. [Compressed Word Problems for Inverse Monoids.](https://doi.org/10.1007/978-3-642-22993-0_41)  
@@ -5295,17 +5594,21 @@
   3. [Periodicity Algorithms for Partial Words.](https://doi.org/10.1007/978-3-642-22993-0_43)  
   4. [The Bounded Search Tree Algorithm for the Closest String Problem Has Quadratic Smoothed Complexity.](https://doi.org/10.1007/978-3-642-22993-0_17)  
   
+  
 #### [SEA 2011](https://dblp.org/db/conf/wea/sea2011.html)
   1. [An Empirical Evaluation of Extendible Arrays.](https://doi.org/10.1007/978-3-642-20662-7_38)  
   2. [Compressed String Dictionaries.](https://doi.org/10.1007/978-3-642-20662-7_12)  
   3. [Online Dictionary Matching with Variable-Length Gaps.](https://doi.org/10.1007/978-3-642-20662-7_7)  
   4. [Practical Compressed Document Retrieval.](https://doi.org/10.1007/978-3-642-20662-7_17)  
   
+  
 #### [SIGIR 2011](https://dblp.org/db/conf/sigir/sigir2011.html)
   1. [Sample selection for dictionary-based corpus compression.](https://doi.org/10.1145/2009916.2010087)  
   
+  
 #### [SISAP 2011](https://dblp.org/db/conf/sisap/sisap2011.html)
   1. [Succinct nearest neighbor search.](https://doi.org/10.1145/1995412.1995420)  
+  
   
 #### [SODA 2011](https://dblp.org/db/conf/soda/soda2011.html)
   1. [Improved Space Bounds for Cache-Oblivious Range Reporting.](https://doi.org/10.1137/1.9781611973082.134)  
@@ -5315,9 +5618,11 @@
   5. [Random Access to grammar-Compressed Strings.](https://doi.org/10.1137/1.9781611973082.30)  
   6. [Top-K Color Queries for Document Retrieval.](https://doi.org/10.1137/1.9781611973082.32)  
   
+  
 #### [SOFSEM 2011](https://dblp.org/db/conf/sofsem/sofsem2011.html)
   1. [An Improved B+ Tree for Flash File Systems.](https://doi.org/10.1007/978-3-642-18381-2_25)  
   2. [In-Place Sorting.](https://doi.org/10.1007/978-3-642-18381-2_21)  
+  
   
 #### [SPIRE 2011](https://dblp.org/db/conf/spire/spire2011.html)
   1. [A Knowledge-Based Semantic Kernel for Text Classification.](https://doi.org/10.1007/978-3-642-24583-1_25)  
@@ -5362,11 +5667,14 @@
   40. [Weighted Shortest Common Supersequence.](https://doi.org/10.1007/978-3-642-24583-1_6)  
   41. [When Was It Written? Automatically Determining Publication Dates.](https://doi.org/10.1007/978-3-642-24583-1_22)  
   
+  
 #### [STACS 2011](https://dblp.org/db/conf/stacs/stacs2011.html)
   1. [On Minimal Sturmian Partial Words.](https://doi.org/10.4230/LIPIcs.STACS.2011.225)  
   
+  
 #### [STOC 2011](https://dblp.org/db/conf/stoc/stoc2011.html)
   1. [The power of simple tabulation hashing.](https://doi.org/10.1145/1993636.1993638)  
+  
   
 #### [Stringology 2011](https://dblp.org/db/conf/stringology/stringology2011.html)
   1. [2001-2010: Ten Years of Exact String Matching Algorithms.](http://www.stringology.org/event/2011/p01.html)  
@@ -5390,8 +5698,10 @@
   19. [On Compile Time Knuth-Morris-Pratt Precomputation.](http://www.stringology.org/event/2011/p03.html)  
   20. [Variations of Forward-SBNDM.](http://www.stringology.org/event/2011/p02.html)  
   
+  
 #### [WADS 2011](https://dblp.org/db/conf/wads/wads2011.html)
   1. [Space Efficient Data Structures for Dynamic Orthogonal Range Counting.](https://doi.org/10.1007/978-3-642-22300-6_42)  
+  
   
 #### ACM J. Exp. Algorithmics 2011  
   1. [Theory and practice of monotone minimal perfect hashing.](https://doi.org/10.1145/1963190.2025378)  
@@ -5481,16 +5791,20 @@
 #### [ALENEX 2010](https://dblp.org/db/conf/alenex/alenex2010.html)
   1. [Succinct Trees in Practice.](https://doi.org/10.1137/1.9781611972900.9)  
   
+  
 #### [Algorithms and Applications 2010](https://dblp.org/db/conf/birthday/ukkonen2010.html)
   1. [A Parallel Algorithm for Fixed-Length Approximate String-Matching with k-mismatches.](https://doi.org/10.1007/978-3-642-12476-1_6)  
   2. [Extended Compact Web Graph Representations.](https://doi.org/10.1007/978-3-642-12476-1_5)  
   3. [Unified View of Backward Backtracking in Short Read Mapping.](https://doi.org/10.1007/978-3-642-12476-1_13)  
   
+  
 #### [BIBE 2010](https://dblp.org/db/conf/bibe/bibe2010.html)
   1. [Compressed q-Gram Indexing for Highly Repetitive Biological Sequences.](https://doi.org/10.1109/BIBE.2010.22)  
   
+  
 #### [BIBM 2010](https://dblp.org/db/conf/bibm/bibm2010.html)
   1. [An algorithm for mapping short reads to a dynamically changing genomic sequence.](https://doi.org/10.1109/BIBM.2010.5706551)  
+  
   
 #### [CPM 2010](https://dblp.org/db/conf/cpm/cpm2010.html)
   1. [A Compact Representation of Nondeterministic (Suffix) Automata for the Bit-Parallel Approach.](https://doi.org/10.1007/978-3-642-13509-5_26)  
@@ -5525,11 +5839,14 @@
   30. [The Property Suffix Tree with Dynamic Properties.](https://doi.org/10.1007/978-3-642-13509-5_7)  
   31. [Verifying a Parameterized Border Array in O(n1.5) Time.](https://doi.org/10.1007/978-3-642-13509-5_22)  
   
+  
 #### [CSR 2010](https://dblp.org/db/conf/csr/csr2010.html)
   1. [Validating the Knuth-Morris-Pratt Failure Function, Fast and Online.](https://doi.org/10.1007/978-3-642-13182-0_13)  
   
+  
 #### [DASFAA Workshops 2010](https://dblp.org/db/conf/dasfaa/dasfaa2010w.html)
   1. [An Improved Algorithm for Extracting Research Communities from Bibliographic Data.](https://doi.org/10.1007/978-3-642-14589-6_34)  
+  
   
 #### [DCC 2010](https://dblp.org/db/conf/dcc/dcc2010.html)
   1. [A New Searchable Variable-to-Variable Compressor.](https://doi.org/10.1109/DCC.2010.25)  
@@ -5551,11 +5868,14 @@
   17. [Xampling: Analog Data Compression.](https://doi.org/10.1109/DCC.2010.39)  
   18. [gFPC: A Self-Tuning Compression Algorithm.](https://doi.org/10.1109/DCC.2010.42)  
   
+  
 #### [Discovery Science 2010](https://dblp.org/db/conf/dis/dis2010.html)
   1. [Sparse Substring Pattern Set Discovery Using Linear Programming Boosting.](https://doi.org/10.1007/978-3-642-16184-1_10)  
   
+  
 #### [ER Workshops 2010](https://dblp.org/db/conf/er/erw2010.html)
   1. [Range Queries over a Compact Representation of Minimum Bounding Rectangles.](https://doi.org/10.1007/978-3-642-16385-2_5)  
+  
   
 #### [ESA (1) 2010](https://dblp.org/db/conf/esa/esa2010-1.html)
   1. [A Fully Compressed Algorithm for Computing the Edit Distance of Run-Length Encoded Strings.](https://doi.org/10.1007/978-3-642-15775-2_36)  
@@ -5563,28 +5883,35 @@
   3. [Medium-Space Algorithms for Inverse BWT.](https://doi.org/10.1007/978-3-642-15775-2_39)  
   4. [On the Huffman and Alphabetic Tree Problem with General Cost Functions.](https://doi.org/10.1007/978-3-642-15775-2_38)  
   
+  
 #### [ESA (2) 2010](https://dblp.org/db/conf/esa/esa2010-2.html)
   1. [Data Structures: Time, I/Os, Entropy, Joules!](https://doi.org/10.1007/978-3-642-15781-3_1)  
   2. [On Space Efficient Two Dimensional Range Minimum Data Structures.](https://doi.org/10.1007/978-3-642-15781-3_15)  
   3. [Top-k Ranked Document Search in General Text Databases.](https://doi.org/10.1007/978-3-642-15781-3_17)  
   
+  
 #### [FOCS 2010](https://dblp.org/db/conf/focs/focs2010.html)
   1. [A Lower Bound for Dynamic Approximate Membership Data Structures.](https://doi.org/10.1109/FOCS.2010.81)  
   
+  
 #### [FUN 2010](https://dblp.org/db/conf/fun/fun2010.html)
   1. [A Fun Application of Compact Data Structures to Indexing Geographic Data.](https://doi.org/10.1007/978-3-642-13122-6_10)  
+  
   
 #### [ICALP (1) 2010](https://dblp.org/db/conf/icalp/icalp2010-1.html)
   1. [Interval Sorting.](https://doi.org/10.1007/978-3-642-14165-2_21)  
   2. [Mergeable Dictionaries.](https://doi.org/10.1007/978-3-642-14165-2_15)  
   3. [Optimal Trade-Offs for Succinct String Indexes.](https://doi.org/10.1007/978-3-642-14165-2_57)  
   
+  
 #### [ICDE 2010](https://dblp.org/db/conf/icde/icde2010.html)
   1. [Fast in-memory XPath search using compressed indexes.](https://doi.org/10.1109/ICDE.2010.5447858)  
+  
   
 #### [ISAAC (1) 2010](https://dblp.org/db/conf/isaac/isaac2010-1.html)
   1. [Priority Range Trees.](https://doi.org/10.1007/978-3-642-17517-6_11)  
   2. [Should Static Search Trees Ever Be Unbalanced?](https://doi.org/10.1007/978-3-642-17517-6_12)  
+  
   
 #### [ISAAC (2) 2010](https://dblp.org/db/conf/isaac/isaac2010-2.html)
   1. [Alphabet Partitioning for Compressed Rank/Select and Applications.](https://doi.org/10.1007/978-3-642-17514-5_27)  
@@ -5593,12 +5920,14 @@
   4. [Entropy-Bounded Representation of Point Grids.](https://doi.org/10.1007/978-3-642-17514-5_28)  
   5. [Identifying Approximate Palindromes in Run-Length Encoded Strings.](https://doi.org/10.1007/978-3-642-17514-5_29)  
   
+  
 #### [IWOCA 2010](https://dblp.org/db/conf/iwoca/iwoca2010.html)
   1. [Dictionary-Symbolwise Flexible Parsing.](https://doi.org/10.1007/978-3-642-19222-7_38)  
   2. [Minimum Number of Holes in Unavoidable Sets of Partial Words of Size Three.](https://doi.org/10.1007/978-3-642-19222-7_6)  
   3. [On the Maximal Sum of Exponents of Runsin a String.](https://doi.org/10.1007/978-3-642-19222-7_2)  
   4. [Skip Lift: A Probabilistic Alternative to Red-Black Trees.](https://doi.org/10.1007/978-3-642-19222-7_23)  
   5. [Worst Case Efficient Single and Multiple String Matching in the RAM Model.](https://doi.org/10.1007/978-3-642-19222-7_10)  
+  
   
 #### [LATA 2010](https://dblp.org/db/conf/lata/lata2010.html)
   1. [A Fast Longest Common Subsequence Algorithm for Similar Strings.](https://doi.org/10.1007/978-3-642-13089-2_7)  
@@ -5609,6 +5938,7 @@
   6. [Grammar-Based Compression in a Streaming Model.](https://doi.org/10.1007/978-3-642-13089-2_23)  
   7. [Hard Counting Problems for Partial Words.](https://doi.org/10.1007/978-3-642-13089-2_36)  
   
+  
 #### [LATIN 2010](https://dblp.org/db/conf/latin/latin2010.html)
   1. [Compact Rich-Functional Binary Relation Representations.](https://doi.org/10.1007/978-3-642-12200-2_17)  
   2. [Fast Set Intersection and Two-Patterns Matching.](https://doi.org/10.1007/978-3-642-12200-2_22)  
@@ -5616,13 +5946,16 @@
   4. [Optimal Succinctness for Range Minimum Queries.](https://doi.org/10.1007/978-3-642-12200-2_16)  
   5. [Sharp Separation and Applications to Exact and Parameterized Algorithms.](https://doi.org/10.1007/978-3-642-12200-2_8)  
   
+  
 #### [MFCS 2010](https://dblp.org/db/conf/mfcs/mfcs2010.html)
   1. [Counting Dependent and Independent Strings.](https://doi.org/10.1007/978-3-642-15155-2_60)  
+  
   
 #### [SEA 2010](https://dblp.org/db/conf/wea/sea2010.html)
   1. [Bit-Parallel Search Algorithms for Long Patterns.](https://doi.org/10.1007/978-3-642-13193-6_12)  
   2. [Experiments on Union-Find Algorithms for the Disjoint-Set Data Structure.](https://doi.org/10.1007/978-3-642-13193-6_35)  
   3. [Practical Compressed Suffix Trees.](https://doi.org/10.1007/978-3-642-13193-6_9)  
+  
   
 #### [SODA 2010](https://dblp.org/db/conf/soda/soda2010.html)
   1. [Cache-Oblivious Dynamic Dictionaries with Update/Query Tradeoffs.](https://doi.org/10.1137/1.9781611973075.117)  
@@ -5637,11 +5970,13 @@
   10. [Randomized Shellsort: A Simple Oblivious Sorting Algorithm.](https://doi.org/10.1137/1.9781611973075.101)  
   11. [Regular Expression Matching with Multi-Strings and Intervals.](https://doi.org/10.1137/1.9781611973075.104)  
   
+  
 #### [SOFSEM 2010](https://dblp.org/db/conf/sofsem/sofsem2010.html)
   1. [Dynamic Edit Distance Table under a General Weighted Cost Function.](https://doi.org/10.1007/978-3-642-11266-9_43)  
   2. [Efficient Algorithms for Two Extensions of LPF Table: The Power of Suffix Arrays.](https://doi.org/10.1007/978-3-642-11266-9_25)  
   3. [Fast Arc-Annotated Subsequence Matching in Linear Space.](https://doi.org/10.1007/978-3-642-11266-9_16)  
   4. [Fast and Compact Prefix Codes.](https://doi.org/10.1007/978-3-642-11266-9_35)  
+  
   
 #### [SPIRE 2010](https://dblp.org/db/conf/spire/spire2010.html)
   1. [A PTAS for the Square Tiling Problem.](https://doi.org/10.1007/978-3-642-16321-0_11)  
@@ -5686,11 +6021,14 @@
   40. [Using Related Queries to Improve Web Search Results Ranking.](https://doi.org/10.1007/978-3-642-16321-0_22)  
   41. [Why Large Closest String Instances Are Easy to Solve in Practice.](https://doi.org/10.1007/978-3-642-16321-0_10)  
   
+  
 #### [STACS 2010](https://dblp.org/db/conf/stacs/stacs2010.html)
   1. [On Equations over Sets of Integers.](https://doi.org/10.4230/LIPIcs.STACS.2010.2478)  
   
+  
 #### [SWAT 2010](https://dblp.org/db/conf/swat/swat2010.html)
   1. [An O(log log n)-Competitive Binary Search Tree with Optimal Worst-Case Access Times.](https://doi.org/10.1007/978-3-642-13731-0_5)  
+  
   
 #### [Stringology 2010](https://dblp.org/db/conf/stringology/stringology2010.html)
   1. [(In)approximability Results for Pattern Matching Problems.](http://www.stringology.org/event/2010/p05.html)  
@@ -5711,11 +6049,14 @@
   16. [Tight and Simple Web Graph Compression.](http://www.stringology.org/event/2010/p11.html)  
   17. [Tiling Binary Matrices in Haplotyping: Complexity, Models and Algorithms.](http://www.stringology.org/event/2010/p08.html)  
   
+  
 #### [WABI 2010](https://dblp.org/db/conf/wabi/wabi2010.html)
   1. [Swiftly Computing Center Strings.](https://doi.org/10.1007/978-3-642-15294-8_27)  
   
+  
 #### [WSDM 2010](https://dblp.org/db/conf/wsdm/wsdm2010.html)
   1. [On compressing the textual web.](https://doi.org/10.1145/1718487.1718536)  
+  
   
 #### ACM J. Exp. Algorithmics 2010  
   1. [Practical approaches to reduce the space requirement of lempel-ziv-based compressed text indices.](https://doi.org/10.1145/1671970.1883684)  
@@ -5777,11 +6118,14 @@
 #### [ACISP 2009](https://dblp.org/db/conf/acisp/acisp2009.html)
   1. [Testing Stream Ciphers by Finding the Longest Substring of a Given Density.](https://doi.org/10.1007/978-3-642-02620-1_9)  
   
+  
 #### [ALENEX 2009](https://dblp.org/db/conf/alenex/alenex2009.html)
   1. [Theory and Practise of Monotone Minimal Perfect Hashing.](https://doi.org/10.1137/1.9781611972894.13)  
   
+  
 #### [CIAA 2009](https://dblp.org/db/conf/wia/ciaa2009.html)
   1. [Implementation and Application of Automata in String Processing.](https://doi.org/10.1007/978-3-642-02979-0_1)  
+  
   
 #### [CPM 2009](https://dblp.org/db/conf/cpm/cpm2009.html)
   1. [An Efficient Matching Algorithm for Encoded DNA Sequences and Binary Strings.](https://doi.org/10.1007/978-3-642-02441-2_10)  
@@ -5816,31 +6160,40 @@
   30. [Text Indexing, Suffix Sorting, and Data Compression: Common Problems and Techniques.](https://doi.org/10.1007/978-3-642-02441-2_4)  
   31. [The Structure of Level-k Phylogenetic Networks.](https://doi.org/10.1007/978-3-642-02441-2_26)  
   
+  
 #### [DASFAA 2009](https://dblp.org/db/conf/dasfaa/dasfaa2009.html)
   1. [Reducing Space Requirements for Disk Resident Suffix Arrays.](https://doi.org/10.1007/978-3-642-00887-0_63)  
+  
   
 #### [DCC 2009](https://dblp.org/db/conf/dcc/dcc2009.html)
   1. [Low-Memory Adaptive Prefix Coding.](https://doi.org/10.1109/DCC.2009.61)  
   2. [Suffix Tree Based VF-Coding for Compressed Pattern Matching.](https://doi.org/10.1109/DCC.2009.58)  
   
+  
 #### [ECDL 2009](https://dblp.org/db/conf/ercimdl/ecdl2009.html)
   1. [A Compressed Self-indexed Representation of XML Documents.](https://doi.org/10.1007/978-3-642-04346-8_27)  
+  
   
 #### [ER Workshops 2009](https://dblp.org/db/conf/er/erw2009.html)
   1. [A New Point Access Method Based on Wavelet Trees.](https://doi.org/10.1007/978-3-642-04947-7_36)  
   
+  
 #### [ESA 2009](https://dblp.org/db/conf/esa/esa2009.html)
   1. [On Optimally Partitioning a Text to Improve Its Compression.](https://doi.org/10.1007/978-3-642-04128-0_38)  
   
+  
 #### [Efficient Algorithms 2009](https://dblp.org/db/conf/birthday/mehlhorn2009.html)
   1. [Reflections on Optimal and Nearly Optimal Binary Search Trees.](https://doi.org/10.1007/978-3-642-03456-5_7)  
+  
   
 #### [ICALP (1) 2009](https://dblp.org/db/conf/icalp/icalp2009-1.html)
   1. [Dynamic Succinct Ordered Trees.](https://doi.org/10.1007/978-3-642-02927-1_37)  
   2. [Faster Regular Expression Matching.](https://doi.org/10.1007/978-3-642-02927-1_16)  
   
+  
 #### [IJCBS 2009](https://dblp.org/db/conf/ijcbs/ijcbs2009.html)
   1. [Practical and Efficient Algorithms for Degenerate and Weighted Sequences Derived from High Throughput Sequencing Technologies.](https://doi.org/10.1109/IJCBS.2009.48)  
+  
   
 #### [ISAAC 2009](https://dblp.org/db/conf/isaac/isaac2009.html)
   1. [Data Structures for Approximate Orthogonal Range Counting.](https://doi.org/10.1007/978-3-642-10631-6_20)  
@@ -5851,8 +6204,10 @@
   6. [Range Non-overlapping Indexing.](https://doi.org/10.1007/978-3-642-10631-6_105)  
   7. [Succinct Index for Dynamic Dictionary Matching.](https://doi.org/10.1007/978-3-642-10631-6_104)  
   
+  
 #### [ITW 2009](https://dblp.org/db/conf/itw/itw2009.html)
   1. [Constructing optimal whole-bit recycling codes.](https://doi.org/10.1109/ITWNIT.2009.5158535)  
+  
   
 #### [IWOCA 2009](https://dblp.org/db/conf/iwoca/iwoca2009.html)
   1. [LPF Computation Revisited.](https://doi.org/10.1007/978-3-642-10217-2_18)  
@@ -5860,25 +6215,32 @@
   3. [Minimax Trees in Linear Time with Applications.](https://doi.org/10.1007/978-3-642-10217-2_28)  
   4. [Succinct Representations of Trees.](https://doi.org/10.1007/978-3-642-10217-2_3)  
   
+  
 #### [LATA 2009](https://dblp.org/db/conf/lata/lata2009.html)
   1. [A Series of Run-Rich Strings.](https://doi.org/10.1007/978-3-642-00982-2_49)  
   2. [Counting Parameterized Border Arrays for a Binary Alphabet.](https://doi.org/10.1007/978-3-642-00982-2_36)  
   
+  
 #### [MFCS 2009](https://dblp.org/db/conf/mfcs/mfcs2009.html)
   1. [Self-indexed Text Compression Using Straight-Line Programs.](https://doi.org/10.1007/978-3-642-03816-7_21)  
+  
   
 #### [PARCO 2009](https://dblp.org/db/conf/parco/parco2009.html)
   1. [A Parallel Algorithm for the Fixed-length Approximate String Matching Problem for High Throughput Sequencing Technologies.](https://doi.org/10.3233/978-1-60750-530-3-150)  
   
+  
 #### [RECOMB 2009](https://dblp.org/db/conf/recomb/recomb2009.html)
   1. [Storage and Retrieval of Individual Genomes.](https://doi.org/10.1007/978-3-642-02008-7_9)  
+  
   
 #### [SEA 2009](https://dblp.org/db/conf/wea/sea2009.html)
   1. [An Application of Self-organizing Data Structures to Compression.](https://doi.org/10.1007/978-3-642-02011-7_14)  
   
+  
 #### [SISAP 2009](https://dblp.org/db/conf/sisap/sisap2009.html)
   1. [Analyzing Metric Space Indexes: What For?](https://doi.org/10.1109/SISAP.2009.17)  
   2. [Dynamic Spatial Approximation Trees for Massive Data.](https://doi.org/10.1109/SISAP.2009.28)  
+  
   
 #### [SPIRE 2009](https://dblp.org/db/conf/spire/spire2009.html)
   1. [A Comparison of Data-Driven Automatic Syllabification Methods.](https://doi.org/10.1007/978-3-642-03784-9_17)  
@@ -5916,8 +6278,10 @@
   33. [Use of Co-occurrences for Temporal Expressions Annotation.](https://doi.org/10.1007/978-3-642-03784-9_15)  
   34. [k2-Trees for Compact Web Graph Representation.](https://doi.org/10.1007/978-3-642-03784-9_3)  
   
+  
 #### [STACS 2009](https://dblp.org/db/conf/stacs/stacs2009.html)
   1. [Compressed Representations of Permutations, and Applications.](https://doi.org/10.4230/LIPIcs.STACS.2009.1814)  
+  
   
 #### [Stringology 2009](https://dblp.org/db/conf/stringology/stringology2009.html)
   1. [Adapting Boyer-Moore-Like Algorithms for Searching Huffman Encoded Texts.](http://www.stringology.org/event/2009/p04.html)  
@@ -5945,11 +6309,14 @@
   23. [Taxonomies of Regular Tree Algorithms.](http://www.stringology.org/event/2009/p14.html)  
   24. [Validation and Decomposition of Partially Occluded Images with Holes.](http://www.stringology.org/event/2009/p12.html)  
   
+  
 #### [WABI 2009](https://dblp.org/db/conf/wabi/wabi2009.html)
   1. [Linear-Time Protein 3-D Structure Searching with Insertions and Deletions.](https://doi.org/10.1007/978-3-642-04241-6_26)  
   
+  
 #### [WADS 2009](https://dblp.org/db/conf/wads/wads2009.html)
   1. [Worst-Case Optimal Adaptive Prefix Coding.](https://doi.org/10.1007/978-3-642-03367-4_28)  
+  
   
 #### ACM J. Exp. Algorithmics 2009  
   1. [Engineering a compressed suffix tree implementation.](https://doi.org/10.1145/1498698.1594228)  
@@ -6047,8 +6414,10 @@
   27. [Two-Dimensional Pattern Matching with Combined Scaling and Rotation.](https://doi.org/10.1007/978-3-540-69068-9_4)  
   28. [Why Greed Works for Shortest Common Superstring Problem.](https://doi.org/10.1007/978-3-540-69068-9_23)  
   
+  
 #### [CSR 2008](https://dblp.org/db/conf/csr/csr2008.html)
   1. [Computing Longest Common Substrings Via Suffix Arrays.](https://doi.org/10.1007/978-3-540-79709-8_10)  
+  
   
 #### [DCC 2008](https://dblp.org/db/conf/dcc/dcc2008.html)
   1. [All-Match LZ77 Bit Recycling.](https://doi.org/10.1109/DCC.2008.101)  
@@ -6057,34 +6426,44 @@
   4. [Re-pair Achieves High-Order Entropy.](https://doi.org/10.1109/DCC.2008.79)  
   5. [Word-Based Statistical Compressors as Natural Language Compression Boosters.](https://doi.org/10.1109/DCC.2008.14)  
   
+  
 #### [DNA 2008](https://dblp.org/db/conf/dna/dna2008.html)
   1. [Speeding Up Local-Search Type Algorithms for Designing DNA Sequences under Thermodynamical Constraints.](https://doi.org/10.1007/978-3-642-03076-5_14)  
   
+  
 #### [Discovery Science 2008](https://dblp.org/db/conf/dis/dis2008.html)
   1. [String Kernels Based on Variable-Length-Don't-Care Patterns.](https://doi.org/10.1007/978-3-540-88411-8_29)  
+  
   
 #### [ESA 2008](https://dblp.org/db/conf/esa/esa2008.html)
   1. [An Online Algorithm for Finding the Longest Previous Factors.](https://doi.org/10.1007/978-3-540-87744-8_58)  
   2. [Succinct Representations of Arbitrary Graphs.](https://doi.org/10.1007/978-3-540-87744-8_33)  
   
+  
 #### [ISAAC 2008](https://dblp.org/db/conf/isaac/isaac2008.html)
   1. [Space-Time Tradeoffs for Longest-Common-Prefix Array Computation.](https://doi.org/10.1007/978-3-540-92182-0_14)  
   
+  
 #### [LATA 2008](https://dblp.org/db/conf/lata/lata2008.html)
   1. [2-Synchronizing Words.](https://doi.org/10.1007/978-3-540-88282-4_21)  
+  
   
 #### [LATIN 2008](https://dblp.org/db/conf/latin/latin2008.html)
   1. [Fully-Compressed Suffix Trees.](https://doi.org/10.1007/978-3-540-78773-0_32)  
   2. [Improved Dynamic Rank-Select Entropy-Bound Structures.](https://doi.org/10.1007/978-3-540-78773-0_33)  
   
+  
 #### [SIGIR 2008](https://dblp.org/db/conf/sigir/sigir2008.html)
   1. [Reorganizing compressed text.](https://doi.org/10.1145/1390334.1390360)  
+  
   
 #### [SIGMOD Conference 2008](https://dblp.org/db/conf/sigmod/sigmod2008.html)
   1. [Improving suffix array locality for fast pattern matching on disk.](https://doi.org/10.1145/1376616.1376683)  
   
+  
 #### [SOFSEM 2008](https://dblp.org/db/conf/sofsem/sofsem2008.html)
   1. [Computing Longest Common Substring and All Palindromes from Compressed Strings.](https://doi.org/10.1007/978-3-540-77566-9_31)  
+  
   
 #### [SPIRE 2008](https://dblp.org/db/conf/spire/spire2008.html)
   1. ["Search Is a Solved Problem" and Other Annoying Fallacies.](https://doi.org/10.1007/978-3-540-89097-3_1)  
@@ -6115,8 +6494,10 @@
   26. [The Effect of Weighted Term Frequencies on Probabilistic Latent Semantic Term Relationships.](https://doi.org/10.1007/978-3-540-89097-3_8)  
   27. [delta-gamma-Parameterized Matching.](https://doi.org/10.1007/978-3-540-89097-3_23)  
   
+  
 #### [SWAT 2008](https://dblp.org/db/conf/swat/swat2008.html)
   1. [A Uniform Approach Towards Succinct Representation of Trees.](https://doi.org/10.1007/978-3-540-69903-3_17)  
+  
   
 #### [Stringology 2008](https://dblp.org/db/conf/stringology/stringology2008.html)
   1. [A Concurrent Specification of an Incremental DFA Minimisation Algorithm.](http://www.stringology.org/event/2008/p20.html)  
@@ -6140,6 +6521,7 @@
   19. [The Road Coloring and Cerny Conjecture.](http://www.stringology.org/event/2008/p01.html)  
   20. [The Virtual Suffix Tree: An Efficient Data Structure for Suffix Trees and Suffix Arrays.](http://www.stringology.org/event/2008/p07.html)  
   21. [Usefulness of Directed Acyclic Subword Graphs in Problems Related to Standard Sturmian Words.](http://www.stringology.org/event/2008/p18.html)  
+  
   
 #### ACM J. Exp. Algorithmics 2008  
   1. [Compressed text indexes: From theory to practice.](https://doi.org/10.1145/1412228.1455268)  
@@ -6184,6 +6566,7 @@
 #### [ALENEX 2007](https://dblp.org/db/conf/alenex/alenex2007.html)
   1. [Practical Entropy-Compressed Rank/Select Dictionary.](https://doi.org/10.1137/1.9781611972870.6)  
   
+  
 #### [CPM 2007](https://dblp.org/db/conf/cpm/cpm2007.html)
   1. [A Combinatorial Approach to Genome-Wide Ortholog Assignment: Beyond Sequence Similarity Search.](https://doi.org/10.1007/978-3-540-73437-6_1)  
   2. [A Lempel-Ziv Text Index on Secondary Storage.](https://doi.org/10.1007/978-3-540-73437-6_11)  
@@ -6221,33 +6604,43 @@
   34. [Tiling Periodicity.](https://doi.org/10.1007/978-3-540-73437-6_30)  
   35. [Two-Dimensional Range Minimum Queries.](https://doi.org/10.1007/978-3-540-73437-6_29)  
   
+  
 #### [DCC 2007](https://dblp.org/db/conf/dcc/dcc2007.html)
   1. [Bit Recycling with Prefix Codes.](https://doi.org/10.1109/DCC.2007.18)  
   2. [Simple Linear-Time Off-Line Text Compression by Longest-First Substitution.](https://doi.org/10.1109/DCC.2007.70)  
   
+  
 #### [DNA 2007](https://dblp.org/db/conf/dna/dna2007.html)
   1. [Dynamic Neighborhood Searches for Thermodynamically Designing DNA Sequence.](https://doi.org/10.1007/978-3-540-77962-9_13)  
+  
   
 #### [FSTTCS 2007](https://dblp.org/db/conf/fsttcs/fsttcs2007.html)
   1. [Compressed Dynamic Tries with Applications to LZ-Compression in Sublinear Time and Space.](https://doi.org/10.1007/978-3-540-77050-3_35)  
   
+  
 #### [ICALP 2007](https://dblp.org/db/conf/icalp/icalp2007.html)
   1. [Succinct Ordinal Trees Based on Tree Covering.](https://doi.org/10.1007/978-3-540-73420-8_45)  
+  
   
 #### [ICESS 2007](https://dblp.org/db/conf/icess/icess2007.html)
   1. [A Unified Compressed Cache Hierarchy Using Simple Frequent Pattern Compression and Partial Cache Line Prefetching.](https://doi.org/10.1007/978-3-540-72685-2_14)  
   
+  
 #### [ISAAC 2007](https://dblp.org/db/conf/isaac/isaac2007.html)
   1. [Succinct Representation of Labeled Graphs.](https://doi.org/10.1007/978-3-540-77120-3_29)  
+  
   
 #### [MDAI 2007](https://dblp.org/db/conf/mdai/mdai2007.html)
   1. [Algorithms for String Pattern Discovery.](https://doi.org/10.1007/978-3-540-73729-2_3)  
   
+  
 #### [MFCS 2007](https://dblp.org/db/conf/mfcs/mfcs2007.html)
   1. [Space-Conscious Compression.](https://doi.org/10.1007/978-3-540-74456-6_20)  
   
+  
 #### [SIGIR 2007](https://dblp.org/db/conf/sigir/sigir2007.html)
   1. [Compressed permuterm index.](https://doi.org/10.1145/1277741.1277833)  
+  
   
 #### [SPIRE 2007](https://dblp.org/db/conf/spire/spire2007.html)
   1. [A Chaining Algorithm for Mapping cDNA Sequences to Multiple Genomic Sequences.](https://doi.org/10.1007/978-3-540-75530-2_1)  
@@ -6278,8 +6671,10 @@
   26. [Prefix-Shuffled Geometric Suffix Tree.](https://doi.org/10.1007/978-3-540-75530-2_27)  
   27. [Tuning Approximate Boyer-Moore for Gene Sequences.](https://doi.org/10.1007/978-3-540-75530-2_16)  
   
+  
 #### [WEA 2007](https://dblp.org/db/conf/wea/wea2007.html)
   1. [Engineering a Compressed Suffix Tree Implementation.](https://doi.org/10.1007/978-3-540-72845-0_17)  
+  
   
 #### ACM Comput. Surv. 2007  
   1. [A taxonomy of suffix array construction algorithms.](https://doi.org/10.1145/1242471.1242472)  
@@ -6343,8 +6738,10 @@
 #### [ALENEX 2006](https://dblp.org/db/conf/alenex/alenex2006.html)
   1. [Optimal Incremental Sorting.](https://doi.org/10.1137/1.9781611972863.16)  
   
+  
 #### [CIAC 2006](https://dblp.org/db/conf/ciac/ciac2006.html)
   1. [Matching Subsequences in Trees.](https://doi.org/10.1007/11758471_25)  
+  
   
 #### [CPM 2006](https://dblp.org/db/conf/cpm/cpm2006.html)
   1. [A Compact Mathematical Programming Formulation for DNA Motif Finding.](https://doi.org/10.1007/11780441_22)  
@@ -6384,36 +6781,47 @@
   35. [Theoretical and Practical Improvements on the RMQ-Problem, with Applications to LCA and LCE.](https://doi.org/10.1007/11780441_5)  
   36. [Tiling an Interval of the Discrete Line.](https://doi.org/10.1007/11780441_12)  
   
+  
 #### [DCC 2006](https://dblp.org/db/conf/dcc/dcc2006.html)
   1. [Compressed Data Structures: Dictionaries and Data-Aware Measures.](https://doi.org/10.1109/DCC.2006.12)  
+  
   
 #### [ESA 2006](https://dblp.org/db/conf/esa/esa2006.html)
   1. [The Engineering of a Compression Boosting Library: Theory vs Practice in BWT Compression.](https://doi.org/10.1007/11841036_67)  
   
+  
 #### [Ershov Memorial Conference 2006](https://dblp.org/db/conf/ershov/ershov2006.html)
   1. [Improving Semistatic Compression Via Pair-Based Coding.](https://doi.org/10.1007/978-3-540-70881-0_13)  
+  
   
 #### [ICALP (1) 2006](https://dblp.org/db/conf/icalp/icalp2006-1.html)
   1. [New Algorithms for Regular Expression Matching.](https://doi.org/10.1007/11786986_56)  
   2. [The Myriad Virtues of Wavelet Trees.](https://doi.org/10.1007/11786986_49)  
   
+  
 #### [IFIP TCS 2006](https://dblp.org/db/conf/ifipTCS/ifipTCS2006.html)
   1. [An O(1) Solution to the Prefix Sum Problem on a Specialized Memory Architecture.](https://doi.org/10.1007/978-0-387-34735-6_12)  
+  
   
 #### [ISAAC 2006](https://dblp.org/db/conf/isaac/isaac2006.html)
   1. [Improving Time and Space Complexity for Compressed Pattern Matching.](https://doi.org/10.1007/11940128_49)  
   
+  
 #### [ISSAC 2006](https://dblp.org/db/conf/issac/issac2006.html)
   1. [Succinct representation of finite abelian groups.](https://doi.org/10.1145/1145768.1145788)  
+  
   
 #### [International Conference on Computational Science (1) 2006](https://dblp.org/db/conf/iccS/iccS2006-1.html)
   1. [An Index Data Structure for Searching in Metric Space Databases.](https://doi.org/10.1007/11758501_82)  
   
+  
 #### [LATIN 2006](https://dblp.org/db/conf/latin/latin2006.html)
   1. [Position-Restricted Substring Searching.](https://doi.org/10.1007/11682462_64)  
   
+  
 #### [MFCS 2006](https://dblp.org/db/conf/mfcs/mfcs2006.html)
   1. [A Combinatorial Approach to Collapsing Words.](https://doi.org/10.1007/11821069_23)  
+  
   
 #### [SPIRE 2006](https://dblp.org/db/conf/spire/spire2006.html)
   1. [A Compressed Self-index Using a Ziv-Lempel Dictionary.](https://doi.org/10.1007/11880561_14)  
@@ -6448,6 +6856,7 @@
   30. [Using String Comparison in Context for Improved Relevance Feedback in Different Text Media.](https://doi.org/10.1007/11880561_19)  
   31. [Word-Based Correction for Retrieval of Arabic OCR Degraded Documents.](https://doi.org/10.1007/11880561_17)  
   
+  
 #### [Stringology 2006](https://dblp.org/db/conf/stringology/stringology2006.html)
   1. [2D context-free grammars: Mathematical formulae recognition.](http://www.stringology.org/event/2006/p09.html)  
   2. [A Markovian approach for the analysis of the gene structure.](http://www.stringology.org/event/2006/p13.html)  
@@ -6471,8 +6880,10 @@
   20. [Using alignment for multilingual text compression.](http://www.stringology.org/event/2006/p15.html)  
   21. [Working with compressed concordances.](http://www.stringology.org/event/2006/p17.html)  
   
+  
 #### [WWW 2006](https://dblp.org/db/conf/www/www2006.html)
   1. [Compressing and searching XML data via two zips.](https://doi.org/10.1145/1135777.1135891)  
+  
   
 #### CoRR 2006  
   1. [An O(1) Solution to the Prefix Sum Problem on a Specialized Memory Architecture](https://arxiv.org/abs/cs/0601081)  
@@ -6500,8 +6911,10 @@
 #### [AMT 2005](https://dblp.org/db/conf/amt/amt2005.html)
   1. [A simple extension of queriable compression for XML data.](https://doi.org/10.1109/AMT.2005.1505276)  
   
+  
 #### [CONIELECOMP 2005](https://dblp.org/db/conf/conielecomp/conielecomp2005.html)
   1. [Approximate Searching on Compressed Text.](https://doi.org/10.1109/CONIEL.2005.23)  
+  
   
 #### [CPM 2005](https://dblp.org/db/conf/cpm/cpm2005.html)
   1. [A Fast Algorithm for Approximate String Matching on Gene Sequences.](https://doi.org/10.1007/11496656_8)  
@@ -6542,39 +6955,51 @@
   36. [Using PQ Trees for Comparative Genomics.](https://doi.org/10.1007/11496656_12)  
   37. [Weighted Directed Word Graph.](https://doi.org/10.1007/11496656_14)  
   
+  
 #### [DCC 2005](https://dblp.org/db/conf/dcc/dcc2005.html)
   1. [The Performance of Linear Time Suffix Sorting Algorithms.](https://doi.org/10.1109/DCC.2005.87)  
+  
   
 #### [Discovery Science 2005](https://dblp.org/db/conf/dis/dis2005.html)
   1. [Practical Algorithms for Pattern Based Linear Regression.](https://doi.org/10.1007/11563983_6)  
   
+  
 #### [ECDL 2005](https://dblp.org/db/conf/ercimdl/ecdl2005.html)
   1. [Compressing Dynamic Text Collections via Phrase-Based Coding.](https://doi.org/10.1007/11551362_41)  
+  
   
 #### [ENC 2005](https://dblp.org/db/conf/enc/enc2005.html)
   1. [Combining Structural and Textual Contexts for Compressing Semistructured Databases.](https://doi.org/10.1109/ENC.2005.15)  
   
+  
 #### [ESA 2005](https://dblp.org/db/conf/esa/esa2005.html)
   1. [Space Efficient Algorithms for the Burrows-Wheeler Backtransformation.](https://doi.org/10.1007/11561071_28)  
+  
   
 #### [FCT 2005](https://dblp.org/db/conf/fct/fct2005.html)
   1. [Fully Incremental LCS Computation.](https://doi.org/10.1007/11537311_49)  
   
+  
 #### [FOCS 2005](https://dblp.org/db/conf/focs/focs2005.html)
   1. [Structuring labeled trees for optimal succinctness, and beyond.](https://doi.org/10.1109/SFCS.2005.69)  
   
+  
 #### [Federation over the Web 2005](https://dblp.org/db/conf/dagstuhl/fed2005.html)
   1. [Faster Pattern Matching Algorithm for Arc-Annotated Sequences.](https://doi.org/10.1007/11605126_2)  
+  
   
 #### [ICALP 2005](https://dblp.org/db/conf/icalp/icalp2005.html)
   1. [The Tree Inclusion Problem: In Optimal Space and Faster.](https://doi.org/10.1007/11523468_6)  
   2. [Towards Optimal Multiple Selection.](https://doi.org/10.1007/11523468_9)  
   
+  
 #### [ISAAC 2005](https://dblp.org/db/conf/isaac/isaac2005.html)
   1. [Space-Efficient Construction of LZ-Index.](https://doi.org/10.1007/11602613_113)  
   
+  
 #### [SIGIR 2005](https://dblp.org/db/conf/sigir/sigir2005.html)
   1. [Efficiently decodable and searchable natural language adaptive compression.](https://doi.org/10.1145/1076034.1076076)  
+  
   
 #### [SPIRE 2005](https://dblp.org/db/conf/spire/spire2005.html)
   1. [
@@ -6623,6 +7048,7 @@
   43. [XML Multimedia Retrieval.](https://doi.org/10.1007/11575832_24)  
   44. [XML Retrieval with a Natural Language Interface.](https://doi.org/10.1007/11575832_4)  
   
+  
 #### [Stringology 2005](https://dblp.org/db/conf/stringology/stringology2005.html)
   1. [A missing link in root-to-frontier tree pattern matching.](http://www.stringology.org/event/2005/p17.html)  
   2. [A simple alphabet-independent FM-index.](http://www.stringology.org/event/2005/p18.html)  
@@ -6642,6 +7068,7 @@
   16. [Incremental string correction: Towards correction of XML documents.](http://www.stringology.org/event/2005/p16.html)  
   17. [Reconstructing a suffix array.](http://www.stringology.org/event/2005/p4.html)  
   18. [Reordering finite automata states for fast string recognition.](http://www.stringology.org/event/2005/p5.html)  
+  
   
 #### ACM J. Exp. Algorithmics 2005  
   1. [Increased bit-parallelism for approximate and multiple string matching.](https://doi.org/10.1145/1064546.1180617)  
@@ -6704,6 +7131,7 @@
 #### [CATS 2004](https://dblp.org/db/journals/entcs/entcs91.html)
   1. [Succinct Data Structures.](https://doi.org/10.1016/j.entcs.2003.12.002)  
   
+  
 #### [CPM 2004](https://dblp.org/db/conf/cpm/cpm2004.html)
   1. [A Combinatorial Shape Matching Algorithm for Rigid Protein Docking.](https://doi.org/10.1007/978-3-540-27801-6_21)  
   2. [A Computational Model for RNA Multiple Structural Alignment..](https://doi.org/10.1007/978-3-540-27801-6_19)  
@@ -6742,33 +7170,42 @@
   35. [The Protein Sequence Design Problem in Canonical Model on 2D and 3D Lattices.](https://doi.org/10.1007/978-3-540-27801-6_18)  
   36. [Two Algorithms for LCS Consecutive Suffix Alignment.](https://doi.org/10.1007/978-3-540-27801-6_13)  
   
+  
 #### [Data Compression Conference 2004](https://dblp.org/db/conf/dcc/dcc2004.html)
   1. [Compressed Index for Dynamic Text.](https://doi.org/10.1109/DCC.2004.1281455)  
   2. [Dynamic Shannon Coding.](https://doi.org/10.1109/DCC.2004.1281516)  
   3. [Lempel-Ziv Compression of Structured Text.](https://doi.org/10.1109/DCC.2004.1281456)  
   4. [Merging Prediction by Partial Matching with Structural Contexts Model.](https://doi.org/10.1109/DCC.2004.1281498)  
   
+  
 #### [Developments in Language Theory 2004](https://dblp.org/db/conf/dlt/dlt2004.html)
   1. [An Efficient Pattern Matching Algorithm on a Subclass of Context Free Grammars.](https://doi.org/10.1007/978-3-540-30550-7_19)  
+  
   
 #### [ECCV (2) 2004](https://dblp.org/db/conf/eccv/eccv2004-2.html)
   1. [From a 2D Shape to a String Structure Using the Symmetry Set.](https://doi.org/10.1007/978-3-540-24671-8_25)  
   
+  
 #### [ESA 2004](https://dblp.org/db/conf/esa/esa2004.html)
   1. [Dynamic Shannon Coding.](https://doi.org/10.1007/978-3-540-30140-0_33)  
+  
   
 #### [ICALP 2004](https://dblp.org/db/conf/icalp/icalp2004.html)
   1. [Succinct Representations of Functions.](https://doi.org/10.1007/978-3-540-27836-8_84)  
   
+  
 #### [ISAAC 2004](https://dblp.org/db/conf/isaac/isaac2004.html)
   1. [Advantages of Backward Searching - Efficient Secondary Memory and Distributed Implementation of Compressed Suffix Arrays.](https://doi.org/10.1007/978-3-540-30551-4_59)  
+  
   
 #### [LATIN 2004](https://dblp.org/db/conf/latin/latin2004.html)
   1. [Rooted Maximum Agreement Supertrees.](https://doi.org/10.1007/978-3-540-24698-5_53)  
   2. [Rotation and Lighting Invariant Template Matching.](https://doi.org/10.1007/978-3-540-24698-5_8)  
   
+  
 #### [PVM/MPI 2004](https://dblp.org/db/conf/pvm/pvm2004.html)
   1. [Neighborhood Composition: A Parallelization of Local Search Algorithms.](https://doi.org/10.1007/978-3-540-30218-6_26)  
+  
   
 #### [SPIRE 2004](https://dblp.org/db/conf/spire/spire2004.html)
   1. [A New Feature Normalization Scheme Based on Eigenspace for Noisy Speech Recognition.](https://doi.org/10.1007/978-3-540-30213-1_11)  
@@ -6816,6 +7253,7 @@
   43. [Simple, Fast, and Efficient Natural Language Adaptive Compression..](https://doi.org/10.1007/978-3-540-30213-1_34)  
   44. [Techniques for Efficient Query Expansion.](https://doi.org/10.1007/978-3-540-30213-1_4)  
   
+  
 #### [Stringology 2004](https://dblp.org/db/conf/stringology/stringology2004.html)
   1. [A First Approach to Finding Common Motifs With Gaps.](http://www.stringology.org/event/2004/p8.html)  
   2. [A Framework for the Dynamic Implementation of Finite Automata for Performance Enhancement.](http://www.stringology.org/event/2004/p13.html)  
@@ -6832,18 +7270,23 @@
   13. [Sorting suffixes of two-pattern strings.](http://www.stringology.org/event/2004/p6.html)  
   14. [Theoretical Issues of Searching Aerial Photographs: A Bird's Eye View.](http://www.stringology.org/event/2004/p1.html)  
   
+  
 #### [Theory Is Forever 2004](https://dblp.org/db/conf/birthday/salomaa2004.html)
   1. [On NFA Reductions.](https://doi.org/10.1007/978-3-540-27812-2_11)  
+  
   
 #### [WABI 2004](https://dblp.org/db/conf/wabi/wabi2004.html)
   1. [Finding Missing Patterns.](https://doi.org/10.1007/978-3-540-30219-3_39)  
   2. [Finding Optimal Pairs of Patterns.](https://doi.org/10.1007/978-3-540-30219-3_38)  
   
+  
 #### [WEA 2004](https://dblp.org/db/conf/wea/wea2004.html)
   1. [Increased Bit-Parallelism for Approximate String Matching.](https://doi.org/10.1007/978-3-540-24838-5_21)  
   
+  
 #### [WMPI 2004](https://dblp.org/db/conf/wmpi/wmpi2004.html)
   1. [A compressed memory hierarchy using an indirect index cache.](https://doi.org/10.1145/1054943.1054945)  
+  
   
 #### ACM J. Exp. Algorithmics 2004  
   1. [Average-optimal single and multiple approximate string matching.](https://doi.org/10.1145/1005813.1041513)  
@@ -6871,6 +7314,7 @@
   
 #### [CIAA 2003](https://dblp.org/db/conf/wia/ciaa2003.html)
   1. [Ternary Directed Acyclic Word Graphs.](https://doi.org/10.1007/3-540-45089-0_12)  
+  
   
 #### [CPM 2003](https://dblp.org/db/conf/cpm/cpm2003.html)
   1. [A Fully Linear-Time Approximation Algorithm for Grammar-Based Compression.](https://doi.org/10.1007/3-540-44888-8_25)  
@@ -6902,33 +7346,42 @@
   27. [Two-Dimensional Pattern Matching with Rotations.](https://doi.org/10.1007/3-540-44888-8_2)  
   28. [Working on the Problem of Sorting by Transpositions on Genome Rearrangements.](https://doi.org/10.1007/3-540-44888-8_27)  
   
+  
 #### [ECIR 2003](https://dblp.org/db/conf/ecir/ecir2003.html)
   1. [An Efficient Compression Code for Text Databases.](https://doi.org/10.1007/3-540-36618-0_33)  
   2. [Compressing Semistructured Text Databases.](https://doi.org/10.1007/3-540-36618-0_34)  
   
+  
 #### [ENC 2003](https://dblp.org/db/conf/enc/enc2003.html)
   1. [Current Challenges in Textual Databases.](https://doi.org/10.1109/ENC.2003.1232865)  
+  
   
 #### [Euro-Par 2003](https://dblp.org/db/conf/europar/europar2003.html)
   1. [Compression in Data Caches with Compressible Field Isolation for Recursive Data Structures.](https://doi.org/10.1007/978-3-540-45209-6_86)  
   2. [Suffix Arrays in Parallel.](https://doi.org/10.1007/978-3-540-45209-6_50)  
   
+  
 #### [FOCS 2003](https://dblp.org/db/conf/focs/focs2003.html)
   1. [Breaking a Time-and-Space Barrier in Constructing Full-Text Indices.](https://doi.org/10.1109/SFCS.2003.1238199)  
   
+  
 #### [ICALP 2003](https://dblp.org/db/conf/icalp/icalp2003.html)
   1. [Succinct Representations of Permutations.](https://doi.org/10.1007/3-540-45061-0_29)  
+  
   
 #### [ISAAC 2003](https://dblp.org/db/conf/isaac/isaac2003.html)
   1. [Constructing Compressed Suffix Arrays with Large Alphabets.](https://doi.org/10.1007/978-3-540-24587-2_26)  
   2. [New Ways to Construct Binary Search Trees.](https://doi.org/10.1007/978-3-540-24587-2_55)  
   3. [Succinct Data Structures for Searchable Partial Sums.](https://doi.org/10.1007/978-3-540-24587-2_52)  
   
+  
 #### [ISLPED 2003](https://dblp.org/db/conf/islped/islped2003.html)
   1. [Non redundant data cache.](https://doi.org/10.1145/871506.871574)  
   
+  
 #### [MFCS 2003](https://dblp.org/db/conf/mfcs/mfcs2003.html)
   1. [Inferring Strings from Graphs and Arrays.](https://doi.org/10.1007/978-3-540-45138-9_15)  
+  
   
 #### [SPIRE 2003](https://dblp.org/db/conf/spire/spire2003.html)
   1. [(S, C)-Dense Coding: An Optimized Compression Code for Natural Language Text Databases.](https://doi.org/10.1007/978-3-540-39984-1_10)  
@@ -6961,8 +7414,10 @@
   28. [Using WordNet for Word Sense Disambiguation to Support Concept Map Construction.](https://doi.org/10.1007/978-3-540-39984-1_27)  
   29. [What's Changed? Measuring Document Change in Web Crawling for Search Engines.](https://doi.org/10.1007/978-3-540-39984-1_3)  
   
+  
 #### [STACS 2003](https://dblp.org/db/conf/stacs/stacs2003.html)
   1. [Algorithms for Transposition Invariant String Matching.](https://doi.org/10.1007/3-540-36494-3_18)  
+  
   
 #### [Stringology 2003](https://dblp.org/db/conf/stringology/stringology2003.html)
   1. [A Linear Algorithm for the Detection of Evolutive Tandem Repeats.](http://www.stringology.org/event/2003/p7.html)  
@@ -6976,6 +7431,7 @@
   9. [Matching Numeric Strings under Noise.](http://www.stringology.org/event/2003/p9.html)  
   10. [Operation L-INSERT on Factor Automaton.](http://www.stringology.org/event/2003/p10.html)  
   11. [The Transformation Distance Problem Revisited.](http://www.stringology.org/event/2003/p1.html)  
+  
   
 #### Algorithmica 2003  
   1. [Approximate Matching of Run-Length Compressed Strings.](https://doi.org/10.1007/s00453-002-1005-2)  
@@ -7004,8 +7460,10 @@
 #### [CC 2002](https://dblp.org/db/conf/cc/cc2002.html)
   1. [Data Compression Transformations for Dynamically Allocated Data Structures.](https://doi.org/10.1007/3-540-45937-5_4)  
   
+  
 #### [COCOON 2002](https://dblp.org/db/conf/cocoon/cocoon2002.html)
   1. [A Space and Time Efficient Algorithm for Constructing Compressed Suffix Arrays.](https://doi.org/10.1007/3-540-45655-4_43)  
+  
   
 #### [CPM 2002](https://dblp.org/db/conf/cpm/cpm2002.html)
   1. [A Better Method for Length Distribution Modeling in HMMs and Its Application to Gene Finding.](https://doi.org/10.1007/3-540-45452-7_17)  
@@ -7032,32 +7490,41 @@
   22. [Towards Optimally Solving the LONGEST COMMON SUBSEQUENCE Problem for Sequences with Nested Arc Annotations in Linear Time.](https://doi.org/10.1007/3-540-45452-7_10)  
   23. [Two-Pattern Strings.](https://doi.org/10.1007/3-540-45452-7_8)  
   
+  
 #### [Discovery Science 2002](https://dblp.org/db/conf/dis/dis2002.html)
   1. [Discovering Best Variable-Length-Don't-Care Patterns.](https://doi.org/10.1007/3-540-36182-0_10)  
   
+  
 #### [ESA 2002](https://dblp.org/db/conf/esa/esa2002.html)
   1. [Engineering a Lightweight Suffix Array Construction Algorithm.](https://doi.org/10.1007/3-540-45749-6_61)  
+  
   
 #### [FOCS 2002](https://dblp.org/db/conf/focs/focs2002.html)
   1. [Implicit B-Trees: New Results for the Dictionary Problem.](https://doi.org/10.1109/SFCS.2002.1181891)  
   2. [Static Optimality Theorem for External Memory String Access.](https://doi.org/10.1109/SFCS.2002.1181945)  
   
+  
 #### [ISAAC 2002](https://dblp.org/db/conf/isaac/isaac2002.html)
   1. [Space-Efficient Data Structures for Flexible Text Retrieval Systems.](https://doi.org/10.1007/3-540-36136-7_2)  
+  
   
 #### [LATIN 2002](https://dblp.org/db/conf/latin/latin2002.html)
   1. [A Metric Index for Approximate String Matching.](https://doi.org/10.1007/3-540-45995-2_20)  
   
+  
 #### [MFCS 2002](https://dblp.org/db/conf/mfcs/mfcs2002.html)
   1. [Space-Economical Construction of Index Structures for All Suffixes of a String.](https://doi.org/10.1007/3-540-45687-2_28)  
+  
   
 #### [Progress in Discovery Science 2002](https://dblp.org/db/conf/dsp/dsp2002.html)
   1. [Data Compression Method Combining Properties of PPM and CTW.](https://doi.org/10.1007/3-540-45884-0_18)  
   2. [Efficient Data Mining from Large Text Databases.](https://doi.org/10.1007/3-540-45884-0_6)  
   3. [Finding Best Patterns Practically.](https://doi.org/10.1007/3-540-45884-0_21)  
   
+  
 #### [SCCC 2002](https://dblp.org/db/conf/sccc/sccc2002.html)
   1. [Improved Antidictionary Based Compression.](https://doi.org/10.1109/SCCC.2002.1173168)  
+  
   
 #### [SPIRE 2002](https://dblp.org/db/conf/spire/spire2002.html)
   1. [A Framework for Generating Attribute Extractors for Web Data Sources.](https://doi.org/10.1007/3-540-45735-6_19)  
@@ -7089,6 +7556,7 @@
   27. [Web Structure, Dynamics and Page Quality.](https://doi.org/10.1007/3-540-45735-6_12)  
   28. [t-Spanners as a Data Structure for Metric Space Searching.](https://doi.org/10.1007/3-540-45735-6_26)  
   
+  
 #### [Stringology 2002](https://dblp.org/db/conf/stringology/stringology2002.html)
   1. [A Bit-Vector Algorithm for Computing Levenshtein and Damerau Edit Distances.](http://www.stringology.org/event/2002/p6.html)  
   2. [A Note on Crochemore's Repetitions Algorithm a Fast Space-Efficient Approach.](http://www.stringology.org/event/2002/p5.html)  
@@ -7102,6 +7570,7 @@
   10. [String Matching with Gaps for Musical Melodic Recognition.](http://www.stringology.org/event/2002/p7.html)  
   11. [String Regularities with Don't Cares.](http://www.stringology.org/event/2002/p8.html)  
   
+  
 #### Algorithmica 2002  
   1. [A Theoretical and Experimental Study on the Construction of Suffix Arrays in External Memory.](https://doi.org/10.1007/s00453-001-0051-5)  
   
@@ -7114,6 +7583,7 @@
 #### [ALENEX 2001](https://dblp.org/db/conf/alenex/alenex2001.html)
   1. [Experiments on Adaptive Set Intersections for Text Retrieval Systems.](https://doi.org/10.1007/3-540-44808-X_7)  
   2. [Trade Off Between Compression and Search Times in Compact Suffix Array.](https://doi.org/10.1007/3-540-44808-X_16)  
+  
   
 #### [CPM 2001](https://dblp.org/db/conf/cpm/cpm2001.html)
   1. [A Fast Algorithm for Optimal Alignment between Similar Ordered Trees.](https://doi.org/10.1007/3-540-48194-X_22)  
@@ -7141,18 +7611,23 @@
   23. [Tandem Cyclic Alignment.](https://doi.org/10.1007/3-540-48194-X_10)  
   24. [What to Do with All this Hardware? (Invited Lecture).](https://doi.org/10.1007/3-540-48194-X_4)  
   
+  
 #### [Data Compression Conference 2001](https://dblp.org/db/conf/dcc/dcc2001.html)
   1. [Faster Approximate String Matching over Compressed Text.](https://doi.org/10.1109/DCC.2001.917177)  
   2. [Space-Time Tradeoffs in the Inverse B-W Transform.](https://doi.org/10.1109/DCC.2001.917175)  
   
+  
 #### [Discovery Science 2001](https://dblp.org/db/conf/dis/dis2001.html)
   1. [A Practical Algorithm to Find the Best Episode Patterns.](https://doi.org/10.1007/3-540-45650-3_37)  
+  
   
 #### [PODS 2001](https://dblp.org/db/conf/pods/pods2001.html)
   1. [Two-dimensional Substring Indexing.](https://doi.org/10.1145/375551.375610)  
   
+  
 #### [RECOMB 2001](https://dblp.org/db/conf/recomb/recomb2001.html)
   1. [Fast and simple character classes and bounded gaps pattern matching, with application to protein searching.](https://doi.org/10.1145/369133.369220)  
+  
   
 #### [SPIRE 2001](https://dblp.org/db/conf/spire/spire2001.html)
   1. [A Comparative Study of Topic Identification on Newspaper and E-mail.](https://doi.org/10.1109/SPIRE.2001.989770)  
@@ -7184,12 +7659,14 @@
   27. [Using Edit Distance in Point-Pattern Matching.](https://doi.org/10.1109/SPIRE.2001.989751)  
   28. [Using Semantics for Paragraph Selection in Question Answering Systems.](https://doi.org/10.1109/SPIRE.2001.989765)  
   
+  
 #### [Stringology 2001](https://dblp.org/db/conf/stringology/stringology2001.html)
   1. [A linear time string matching algorithm on average with efficient text storage.](http://www.stringology.org/event/2001/p2.html)  
   2. [Approximate String Matching in Musical Sequences.](http://www.stringology.org/event/2001/p3.html)  
   3. [Bioinformatics: tools for analysis of biological sequences.](http://www.stringology.org/event/2001/p5.html)  
   4. [Construction of the CDAWG for a Trie.](http://www.stringology.org/event/2001/p4.html)  
   5. [Searching in an Efficiently Stored DNA Text Using a Hardware Solution.](http://www.stringology.org/event/2001/p1.html)  
+  
   
 #### ACM Comput. Surv. 2001  
   1. [A guided tour to approximate string matching.](https://doi.org/10.1145/375360.375365)  
@@ -7215,6 +7692,7 @@
   
 #### [CIAC 2000](https://dblp.org/db/conf/ciac/ciac2000.html)
   1. [Speeding Up Pattern Matching by Text Compression.](https://doi.org/10.1007/3-540-46521-9_25)  
+  
   
 #### [CPM 2000](https://dblp.org/db/conf/cpm/cpm2000.html)
   1. [A Boyer-Moore Type Algorithm for Compressed Pattern Matching.](https://doi.org/10.1007/3-540-45123-4_17)  
@@ -7252,26 +7730,34 @@
   33. [Tsukuba BB: A Branch and Bound Algorithm for Local Multiple Sequence Alignment.](https://doi.org/10.1007/3-540-45123-4_9)  
   34. [Using Suffix Trees for Gapped Motif Discovery.](https://doi.org/10.1007/3-540-45123-4_28)  
   
+  
 #### [Data Compression Conference 2000](https://dblp.org/db/conf/dcc/dcc2000.html)
   1. [Implementing the Context Tree Weighting Method for Text Compression.](https://doi.org/10.1109/DCC.2000.838152)  
+  
   
 #### [ESA 2000](https://dblp.org/db/conf/esa/esa2000.html)
   1. [On the Competitiveness of Linear Search.](https://doi.org/10.1007/3-540-45253-2_31)  
   
+  
 #### [FOCS 2000](https://dblp.org/db/conf/focs/focs2000.html)
   1. [Opportunistic Data Structures with Applications.](https://doi.org/10.1109/SFCS.2000.892127)  
+  
   
 #### [IFIP TCS 2000](https://dblp.org/db/conf/ifipTCS/ifipTCS2000.html)
   1. [An Index for Two Dimensional String Matching Allowing Rotations.](https://doi.org/10.1007/3-540-44929-9_5)  
   
+  
 #### [ISAAC 2000](https://dblp.org/db/conf/isaac/isaac2000.html)
   1. [Compressed Text Databases with Efficient Query Algorithms Based on the Compressed Suffix Array.](https://doi.org/10.1007/3-540-40996-3_35)  
+  
   
 #### [RECOMB 2000](https://dblp.org/db/conf/recomb/recomb2000.html)
   1. [A compression algorithm for DNA sequences and its applications in genome comparison.](https://doi.org/10.1145/332306.332352)  
   
+  
 #### [Recent Advances in Intrusion Detection 2000](https://dblp.org/db/conf/raid/raid2000.html)
   1. [A Pattern Matching Based Filter for Audit Reduction and Fast Detection of Potential Intrusions.](https://doi.org/10.1007/3-540-39945-3_2)  
+  
   
 #### [SPIRE 2000](https://dblp.org/db/conf/spire/spire2000.html)
   1. [A Model and Software Architecture for Search Results Visualization on the WWW.](https://doi.org/10.1109/SPIRE.2000.878175)  
@@ -7306,6 +7792,7 @@
   30. [Speeding up Parallel Decoding of LZ Compressed Text on the PRAM EREW.](https://doi.org/10.1109/SPIRE.2000.878174)  
   31. [Virtual Test Tubes: A New Methodology for Computing.](https://doi.org/10.1109/SPIRE.2000.878186)  
   
+  
 #### [Stringology 2000](https://dblp.org/db/conf/stringology/stringology2000.html)
   1. [A new family of Commentz-Walter-style multiple-keyword pattern matching algorithms.](http://www.stringology.org/event/2000/p7.html)  
   2. [Computing Approximate Repetitions in Musical Sequences.](http://www.stringology.org/event/2000/p5.html)  
@@ -7314,6 +7801,7 @@
   5. [Repetitions in two-pattern strings.](http://www.stringology.org/event/2000/p4.html)  
   6. [The Set-Set Closest Common Subsequence Problem.](http://www.stringology.org/event/2000/p1.html)  
   7. [Word-based Compression Method with Direct Access.](http://www.stringology.org/event/2000/p3.html)  
+  
   
 #### ACM J. Exp. Algorithmics 2000  
   1. [An Experimental Study of Priority Queues in External Memory.](https://doi.org/10.1145/351827.384259)  
@@ -7363,23 +7851,29 @@
   20. [The Compression of Subsegments of Images Described by Finite Automata.](https://doi.org/10.1007/3-540-48452-3_14)  
   21. [Ziv Lempel Compression of Huge Natural Language Data Tries Using Suffix Arrays.](https://doi.org/10.1007/3-540-48452-3_15)  
   
+  
 #### [ESA 1999](https://dblp.org/db/conf/esa/esa99.html)
   1. [Efficient Algorithms foe On-Line Symbol Ranking Compression.](https://doi.org/10.1007/3-540-48481-7_25)  
   2. [On Constructing Suffix Arrays in External Memory.](https://doi.org/10.1007/3-540-48481-7_20)  
   
+  
 #### [MFCS 1999](https://dblp.org/db/conf/mfcs/mfcs99.html)
   1. [Invited Lecture: The Burrows-Wheeler Transform: Theory and Practice.](https://doi.org/10.1007/3-540-48340-3_4)  
+  
   
 #### [RECOMB 1999](https://dblp.org/db/conf/recomb/recomb1999.html)
   1. [
       q-gram based database searching using a suffix array (QUASAR).](https://doi.org/10.1145/299432.299460)  
   
+  
 #### [SPIRE/CRIWG 1999](https://dblp.org/db/conf/spire/spire99.html)
   1. [A Fast Distributed Suffix Array Generation Algorithm.](https://doi.org/10.1109/SPIRE.1999.796583)  
   2. [A Unifying Framework for Compressed Pattern Matching.](https://doi.org/10.1109/SPIRE.1999.796582)  
   
+  
 #### [STOC 1999](https://dblp.org/db/conf/stoc/stoc1999.html)
   1. [Multi-Method Dispatching: A Geometric Approach With Applications to String Matching Problems.](https://doi.org/10.1145/301250.301378)  
+  
   
 #### [Stringology 1999](https://dblp.org/db/conf/stringology/stringology1999.html)
   1. [A Fast String Matching Algorithm and Experimental Results.](http://www.stringology.org/event/1999/p2.html)  
@@ -7388,13 +7882,16 @@
   4. [On Procedures for Multiple-string Match with Respect to Two Sets.](http://www.stringology.org/event/1999/p3.html)  
   5. [The Closest Common Subsequence Problems.](http://www.stringology.org/event/1999/p1.html)  
   
+  
 #### [WADS 1999](https://dblp.org/db/conf/wads/wads99.html)
   1. [Representing Trees of Higer Degree.](https://doi.org/10.1007/3-540-48447-7_18)  
   2. [Resizable Arrays in Optimal Time and Space.](https://doi.org/10.1007/3-540-48447-7_4)  
   
+  
 #### [WAE 1999](https://dblp.org/db/conf/wae/wae1999.html)
   1. [An Experimental Study of Priority Queues in External Memory.](https://doi.org/10.1007/3-540-48318-7_27)  
   2. [Fast Regular Expression Search.](https://doi.org/10.1007/3-540-48318-7_17)  
+  
   
 #### Algorithmica 1999  
   1. [Faster Approximate String Matching.](https://doi.org/10.1007/PL00009253)  
@@ -7438,22 +7935,28 @@
   16. [Reporting Exact and Approximate Regular Expression Matches.](https://doi.org/10.1007/BFb0030783)  
   17. [Simple and Flexible Detection of Contiguous Repeats Using a Suffix Tree (Preliminary Version).](https://doi.org/10.1007/BFb0030787)  
   
+  
 #### [Data Compression Conference 1998](https://dblp.org/db/conf/dcc/dcc98.html)
   1. [Multiple Pattern Matching in LZW Compressed Text.](https://doi.org/10.1109/DCC.1998.672136)  
   2. [Some Theory and Practice of Greedy Off-Line Textual Substitution.](https://doi.org/10.1109/DCC.1998.672138)  
   
+  
 #### [FOCS 1998](https://dblp.org/db/conf/focs/focs98.html)
   1. [Overcoming the Memory Bottleneck in Suffix Tree Construction.](https://doi.org/10.1109/SFCS.1998.743441)  
   
+  
 #### [FSTTCS 1998](https://dblp.org/db/conf/fsttcs/fsttcs98.html)
   1. [Space Efficient Suffix Trees.](https://doi.org/10.1007/978-3-540-49382-2_17)  
+  
   
 #### [LATIN 1998](https://dblp.org/db/conf/latin/latin98.html)
   1. [Fast Two-Dimensional Approximate Pattern Matching](https://doi.org/10.1007/BFb0054334)  
   2. [Improved Approximate Pattern Matching on Hypertext.](https://doi.org/10.1007/BFb0054335)  
   
+  
 #### [SIGIR 1998](https://dblp.org/db/conf/sigir/sigir98.html)
   1. [Fast Searching on Compressed Text Allowing Errors.](https://doi.org/10.1145/290941.291013)  
+  
   
 #### [SPIRE 1998](https://dblp.org/db/conf/spire/spire98.html)
   1. [A Linear Time Lower Bound on Updating Algorithms for Suffix Trees.](https://doi.org/10.1109/SPIRE.1998.712976)  
@@ -7471,6 +7974,7 @@
   13. [SST versus EST in Gene Recognition (Invited Paper).](https://doi.org/10.1109/SPIRE.1998.712983)  
   14. [Searching the Web: Challenges and Partial Solutions (Invited Paper).](https://doi.org/10.1109/SPIRE.1998.712979)  
   
+  
 #### [Stringology 1998](https://dblp.org/db/conf/stringology/stringology1998.html)
   1. [A Fast Morphological Analysis Using the Extended AC Machine for Oriental Languages.](http://www.stringology.org/event/1998/p01.html)  
   2. [A Highly Parallel Finite State Automaton Processor for Biological Pattern Matching.](http://www.stringology.org/event/1998/p07.html)  
@@ -7487,6 +7991,7 @@
   13. [The Longest Restricted Common Subsequence Problem.](http://www.stringology.org/event/1998/p02.html)  
   14. [Validating and Decomposing Partially Occluded Two-Dimensional Images (Extended Abstract).](http://www.stringology.org/event/1998/p09.html)  
   
+  
 #### CLEI Electron. J. 1998  
   1. [A Practical q -Gram Index for Text Retrieval Allowing Errors.](https://doi.org/10.19153/cleiej.1.2.3)  
   
@@ -7502,8 +8007,10 @@
 #### [CIAC 1997](https://dblp.org/db/conf/ciac/ciac1997.html)
   1. [A Note on Updating Suffix Tree Labels.](https://doi.org/10.1007/3-540-62592-5_71)  
   
+  
 #### [CIKM 1997](https://dblp.org/db/conf/cikm/cikm97.html)
   1. [Block Addressing Indices for Approximate Text Retrieval.](https://doi.org/10.1145/266714.266719)  
+  
   
 #### [CPM 1997](https://dblp.org/db/conf/cpm/cpm97.html)
   1. [A Filter Method for the Weighted Local Similarity Search Problem.](https://doi.org/10.1007/3-540-63220-4_60)  
@@ -7529,16 +8036,20 @@
   21. [Space- and Time-Efficient Decoding with Canonical Huffman Trees.](https://doi.org/10.1007/3-540-63220-4_50)  
   22. [Trie-Based Data Structures for Sequence Assembly.](https://doi.org/10.1007/3-540-63220-4_61)  
   
+  
 #### [FOCS 1997](https://dblp.org/db/conf/focs/focs97.html)
   1. [Succinct Representation of Balanced Parentheses, Static Trees and Planar Graphs.](https://doi.org/10.1109/SFCS.1997.646100)  
+  
   
 #### [SEQUENCES 1997](https://dblp.org/db/conf/sequences/sequences1997.html)
   1. [Compression of low entropy strings with Lempel-Ziv algorithms.](https://doi.org/10.1109/SEQUEN.1997.666907)  
   2. [Multi-string search in BSP.](https://doi.org/10.1109/SEQUEN.1997.666919)  
   3. [Sequence sorting in secondary storage.](https://doi.org/10.1109/SEQUEN.1997.666927)  
   
+  
 #### [STOC 1997](https://dblp.org/db/conf/stoc/stoc1997.html)
   1. [On Sorting Strings in External Memory (Extended Abstract).](https://doi.org/10.1145/258533.258647)  
+  
   
 #### [Stringology 1997](https://dblp.org/db/conf/stringology/stringology1997.html)
   1. [6D Classification of Pattern Matching Problems.](http://www.stringology.org/event/1997/p3.html)  
@@ -7549,9 +8060,11 @@
   6. [SPARE Parts: A C++ Toolkit for String PAttern REcognition.](http://www.stringology.org/event/1997/p6.html)  
   7. [Simulation of NFA in Approximate String and Sequence Matching.](http://www.stringology.org/event/1997/p5.html)  
   
+  
 #### [WADS 1997](https://dblp.org/db/conf/wads/wads97.html)
   1. [Multiple Approximate String Matching.](https://doi.org/10.1007/3-540-63307-3_57)  
   2. [Trans-Dichotomous Algorithms Without Multiplication - Some Upper and Lower Bounds.](https://doi.org/10.1007/3-540-63307-3_80)  
+  
   
 #### ACM Trans. Inf. Syst. 1997  
   1. [Proximal Nodes: A Model to Query Document Databases by Content and Structure.](https://doi.org/10.1145/263479.263482)  
@@ -7595,6 +8108,7 @@
   27. [The Asymmetric Median Tree - A New model for Building Consensus Trees.](https://doi.org/10.1007/3-540-61258-0_18)  
   28. [The suffix Tree of a Tree and Minimizing Sequential Transducers.](https://doi.org/10.1007/3-540-61258-0_10)  
   
+  
 #### [Stringology 1996](https://dblp.org/db/conf/stringology/stringology1996.html)
   1. [A Collection of New Regular Grammar Pattern Matching Algorithms.](http://www.stringology.org/event/1996/p7.html)  
   2. [An Efficient Multi-Attribute Pattern Matching Machine.](http://www.stringology.org/event/1996/p1.html)  
@@ -7603,6 +8117,7 @@
   5. [Fast Full Text Search Using Tree Structured[TS] File.](http://www.stringology.org/event/1996/p6.html)  
   6. [Reduced Nondeterministic Finite Automata for Approximate String Matching.](http://www.stringology.org/event/1996/p3.html)  
   7. [Space Complexity of Linear Time Approximate String Matching.](http://www.stringology.org/event/1996/p4.html)  
+  
   
 #### Algorithmica 1996  
   1. [Fast Stable In-Place Sorting with O (n) Data Moves.](https://doi.org/10.1007/BF01940644)  
@@ -7644,15 +8159,19 @@
   28. [Suffix Cactus: A Cross between Suffix Tree and Suffix Array.](https://doi.org/10.1007/3-540-60044-2_43)  
   29. [Three-Dimensional Pattern Matching in Protein Structure Analysis.](https://doi.org/10.1007/3-540-60044-2_47)  
   
+  
 #### [ESA 1995](https://dblp.org/db/conf/esa/esa95.html)
   1. [Optimized Binary Search and Text Retrieval.](https://doi.org/10.1007/3-540-60313-1_152)  
   2. [The Binomial Transform and its Application to the Analysis of Skip Lists.](https://doi.org/10.1007/3-540-60313-1_170)  
   
+  
 #### [IWMM 1995](https://dblp.org/db/conf/iwmm/iwmm95.html)
   1. [Dynamic Storage Allocation: A Survey and Critical Review](https://doi.org/10.1007/3-540-60368-9_19)  
   
+  
 #### [SIGIR 1995](https://dblp.org/db/conf/sigir/sigir95.html)
   1. [A Language for Queries on Structure and Contents of Textual.](https://doi.org/10.1145/215206.215336)  
+  
   
 #### SIAM J. Comput. 1995  
   1. [Permuting in Place.](https://doi.org/10.1137/S0097539792238649)  
@@ -7685,8 +8204,10 @@
   25. [The Parameterized Complexity of Sequence Alignment and Consensus.](https://doi.org/10.1007/3-540-58094-8_2)  
   26. [Unit Route Upper Bound for String-Matching on Hypercube.](https://doi.org/10.1007/3-540-58094-8_12)  
   
+  
 #### [ESA 1994](https://dblp.org/db/conf/esa/esa94.html)
   1. [Membership in Constant Time and Minimum Space.](https://doi.org/10.1007/BFb0049398)  
+  
   
 #### Inf. Process. Manag. 1994  
   1. [A New Challenge for Compression Algorithms: Genetic Sequences.](https://doi.org/10.1016/0306-4573(94)90014-0)  
@@ -7715,6 +8236,7 @@
   18. [Tight Comparison Bounds for the String Prefix-Matching Problem.](https://doi.org/10.1007/BFb0029793)  
   19. [Two Dimensional Pattern Matching in a Digitized Image.](https://doi.org/10.1007/BFb0029802)  
   
+  
 #### [CPM 1992](https://dblp.org/db/conf/cpm/cpm92.html)
   1. [3-D Substructure Matching in Protein Molecules.](https://doi.org/10.1007/3-540-56024-6_11)  
   2. [A Language Approach to String Searching Evaluation.](https://doi.org/10.1007/3-540-56024-6_2)  
@@ -7739,8 +8261,10 @@
   21. [Theoretical and Empirical Comparisons of Approximate String Matching Algorithms.](https://doi.org/10.1007/3-540-56024-6_14)  
   22. [Two Algorithms for the Longest Common Subsequence of Three (or More) Strings.](https://doi.org/10.1007/3-540-56024-6_18)  
   
+  
 #### [FSTTCS 1992](https://dblp.org/db/conf/fsttcs/fsttcs92.html)
   1. [Selection from Read-Only Memory and Sorting with Optimum Data Movement.](https://doi.org/10.1007/3-540-56287-7_120)  
+  
   
 #### BIT 1992  
   1. [Average Search and Update Costs in Skip Lists.](https://doi.org/10.1007/BF01994884)  
@@ -7751,9 +8275,11 @@
 #### [FSTTCS 1991](https://dblp.org/db/conf/fsttcs/fsttcs91.html)
   1. [Fast Sorting In-Place Sorting with O(n) Data.](https://doi.org/10.1007/3-540-54967-6_74)  
   
+  
 #### [WADS 1991](https://dblp.org/db/conf/wads/wads91.html)
   1. [A Case Study in Comparison Based Complexity: Finding the Nearest Value(s).](https://doi.org/10.1007/BFb0028244)  
   2. [Sorting Multisets and Vectors In-Place.](https://doi.org/10.1007/BFb0028285)  
+  
   
 #### Inf. Comput. 1991  
   1. [Fringe Analysis for Extquick: An in Situ Distributive External Sorting Algorithm](https://doi.org/10.1016/0890-5401(91)90007-O)  
@@ -7764,8 +8290,10 @@
 #### [FOCS 1990](https://dblp.org/db/conf/focs/focs90.html)
   1. [Permuting](https://doi.org/10.1109/FSCS.1990.89556)  
   
+  
 #### [SWAT 1990](https://dblp.org/db/conf/swat/swat90.html)
   1. [Analysis of the Expected Search Cost in Skip Lists.](https://doi.org/10.1007/3-540-52846-6_86)  
+  
   
 #### Algorithmica 1990  
   1. [Analysis of the Standard Deletion Algorithms in Exact Fit Domain Binary Search Trees.](https://doi.org/10.1007/BF01840390)  
@@ -7779,11 +8307,13 @@
 #### [SWAT 1988](https://dblp.org/db/conf/swat/swat88.html)
   1. [An Implicit Binomial Queue with Constant Insertion Time.](https://doi.org/10.1007/3-540-19487-8_1)  
   
+  
 #### SIAM J. Comput. 1988  
   1. [A Functional Approach to Data Structures and Its Use in Multidimensional Searching.](https://doi.org/10.1137/0217026)  
   
 #### [STOC 1987](https://dblp.org/db/conf/stoc/stoc87.html)
   1. [Searching a Two Key Table Under a Single Key](https://doi.org/10.1145/28395.28436)  
+  
   
 #### BIT 1987  
   1. [Searchability in Merging and Implicit Data Structures.](https://doi.org/10.1007/BF01933727)  
@@ -7791,8 +8321,10 @@
 #### [MFCS 1986](https://dblp.org/db/conf/mfcs/mfcs86.html)
   1. [Developing Implicit Data Structures.](https://doi.org/10.1007/BFb0016241)  
   
+  
 #### [SCG 1986](https://dblp.org/db/conf/compgeom/compgeom86.html)
   1. [Linear Data Structures for Two Types of Range Search.](https://doi.org/10.1145/10515.10547)  
+  
   
 #### Algorithmica 1986  
   1. [Fractional Cascading: I. A Data Structuring Technique.](https://doi.org/10.1007/BF01840440)  
@@ -7808,11 +8340,13 @@
 #### [FOCS 1985](https://dblp.org/db/conf/focs/focs85.html)
   1. [Robin Hood Hashing (Preliminary Report)](https://doi.org/10.1109/SFCS.1985.48)  
   
+  
 #### J. Algorithms 1985  
   1. [The Analysis of a Fringe Heuristic for Binary Search Trees.](https://doi.org/10.1016/0196-6774(85)90003-3)  
   
 #### [PODS 1983](https://dblp.org/db/conf/pods/pods83.html)
   1. [A Discipline for Robustness or Storage Reduction in Binary Search Trees.](https://doi.org/10.1145/588058.588069)  
+  
   
 #### Comput. Vis. Graph. Image Process. 1983  
   1. [Direct dynamic structures for some line segment problems.](https://doi.org/10.1016/0734-189X(83)90111-1)  
@@ -7820,11 +8354,13 @@
 #### [ICALP 1982](https://dblp.org/db/conf/icalp/icalp82.html)
   1. [Heaps on Heaps.](https://doi.org/10.1007/BFb0012776)  
   
+  
 #### J. ACM 1982  
   1. [Data compression via textual substitution.](https://doi.org/10.1145/322344.322346)  
   
 #### [STOC 1981](https://dblp.org/db/conf/stoc/stoc81.html)
   1. [A Linear Probing Sort and its Analysis (Preliminary Draft)](https://doi.org/10.1145/800076.802461)  
+  
   
 #### SIAM J. Comput. 1981  
   1. [Exegesis of Self-Organizing Linear Search.](https://doi.org/10.1137/0210046)  
@@ -7835,8 +8371,10 @@
 #### [FOCS 1979](https://dblp.org/db/conf/focs/focs79.html)
   1. [Toward Self-Organizing Linear Search (Preliminary Draught)](https://doi.org/10.1109/SFCS.1979.45)  
   
+  
 #### [STOC 1979](https://dblp.org/db/conf/stoc/stoc79.html)
   1. [Implicit Data Structures (Preliminary Draft)](https://doi.org/10.1145/800135.804404)  
+  
   
 #### SIAM J. Comput. 1979  
   1. [Efficient Ordering of Hash Tables.](https://doi.org/10.1137/0208038)  
@@ -7844,14 +8382,17 @@
 #### [FOCS 1978](https://dblp.org/db/conf/focs/focs78.html)
   1. [Selection and Sorting with Limited Storage](https://doi.org/10.1109/SFCS.1978.32)  
   
+  
 #### J. ACM 1978  
   1. [Self-Organizing Binary Search Trees.](https://doi.org/10.1145/322092.322094)  
   
 #### [STOC 1977](https://dblp.org/db/conf/stoc/stoc77.html)
   1. [The Analysis of an Improved Hashing Technique](https://doi.org/10.1145/800105.803401)  
   
+  
 #### [FOCS 1976](https://dblp.org/db/conf/focs/focs76.html)
   1. [Self-Organizing Binary Search Trees](https://doi.org/10.1109/SFCS.1976.26)  
+  
   
 #### SIAM J. Comput. 1976  
   1. [Sorting and Searching in Multisets.](https://doi.org/10.1137/0205001)  

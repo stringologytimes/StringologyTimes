@@ -10,7 +10,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "md": "ts-node scripts/md/make_conference_list_md.ts data/spreadsheets/Conference_Site.tsv data/dblp data/paper_list.txt docs/conference"
+    "md": "ts-node scripts/md/make_conference_list_md.ts data/spreadsheets/Conference_Site.tsv data/dblp data/paper_list.txt docs/conference",
+    "url": "ts-node scripts/url_extract.ts"
   },
   "repository": {
     "type": "git",
