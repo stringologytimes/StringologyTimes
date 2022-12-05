@@ -58,7 +58,7 @@ export function write_list_by_book(dblpElements: DBLPElementClass[], outputFolde
     bookTitles.forEach((bookTitle, i) => {
         const urlstr = bookTitle.replace(/\s/g, '-')
 
-        titlePageLines.push(`${i+1}. [${bookTitle} (${inproceedingMapper.get(bookTitle)!.length} papers)](./conference/${urlstr})  `)
+        titlePageLines.push(`${i+1}. [${bookTitle} (${inproceedingMapper.get(bookTitle)!.length} articles)](./conference/${urlstr})  `)
     })
 
     const titlePage = titlePageLines.join("\n");
