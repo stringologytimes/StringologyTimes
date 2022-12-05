@@ -15,10 +15,17 @@ type YearPaperCollection = {
     papers: DBLPElementClass[];
 }
 
-export function createYearProceedingMD(_proceedings: ProceedingsInfo, year: number): string[] {
+export function createYearProceedingMD(_proceedings: ProceedingsInfo, year: number, sharpCount : number): string[] {
     const lines: string[] = new Array();
 
-    lines.push(`#### [${_proceedings.name} ${year}](${_proceedings.dblp_url})`);
+    let str = "";
+    for(let i = 0;i<sharpCount;i++){
+        str += "#";
+    }
+    str += ` [${_proceedings.name} ${year}](${_proceedings.dblp_url})`;
+
+
+    lines.push(str);
     _proceedings.inproceedings.forEach((w, i) => {
         if (w.ee.length > 0) {
             lines.push(`  ${i + 1}. [${w.title}](${w.ee[0]})  `);
@@ -38,7 +45,7 @@ function createInproceedingsMD(_proceedings: ProceedingsInfo[], year: number): s
     //lines.push(`  `);
 
     _proceedings.forEach((v) => {
-        createYearProceedingMD(v, year).forEach((w) =>{
+        createYearProceedingMD(v, year, 4).forEach((w) =>{
             lines.push(w);
         })
         lines.push(`  `);

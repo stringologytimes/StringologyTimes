@@ -20,7 +20,7 @@ for(let i= 2010;i<=2022;i++){
 write_list_year_md(yearList, dblpElements, "docs/output/list");
 write_complete_md(dblpElements, `docs/output/complete_list.md`);
 
-write_list_by_book(dblpElements, `docs/output/conference`);
+write_list_by_book(dblpElements, `docs/output/proceedings`, `docs/output/list_of_proceedings.md`);
 
 write_arxiv_list_md(arxivArticles, `docs/output/arxiv_list.md`);
 append_registered_papers_info(dblpElements, arxivArticles, `data/stringology_times_history.csv`);

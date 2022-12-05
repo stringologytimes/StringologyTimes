@@ -29,60 +29,91 @@ export function write_complete_md(dblpElements: DBLPElementClass[], outputFilePa
         console.log(e);
     }
 }
-export function write_list_by_book(dblpElements: DBLPElementClass[], outputFolderPath: string){
+export function write_list_by_book(dblpElements: DBLPElementClass[], outputFolderPath: string, titlePagePath: string) {
     if (!fs.existsSync(outputFolderPath)) {
         fs.mkdirSync(outputFolderPath);
     }
     const inproceedingList = <DBLPInproceedings[]>dblpElements.filter((v) => v instanceof DBLPInproceedings);
 
-    const inproceedingMapper : Map<string, DBLPInproceedings[]> = new Map();
-    inproceedingList.forEach((v) =>{
-        if(inproceedingMapper.has(v.booktitle)){
+    const inproceedingMapper: Map<string, DBLPInproceedings[]> = new Map();
+    inproceedingList.forEach((v) => {
+        if (inproceedingMapper.has(v.booktitle)) {
             inproceedingMapper.get(v.booktitle)?.push(v);
-        }else{
-            const arr : DBLPInproceedings[] = new Array();
+        } else {
+            const arr: DBLPInproceedings[] = new Array();
             arr.push(v);
             inproceedingMapper.set(v.booktitle, arr);
         }
     })
 
-    inproceedingMapper.forEach((value, bookTitle) =>{
-        const lines = write_list_conference(bookTitle, value)
+    const bookTitles : string[] = new Array();
+    inproceedingMapper.forEach((value, bookTitle) => {
+        bookTitles.push(bookTitle);
+    }
+    );
+    bookTitles.sort();
+
+    const titlePageLines: string[] = new Array();
+    titlePageLines.push("# Proceedings for Stringologist")
+    bookTitles.forEach((bookTitle, i) => {
+        const urlstr = bookTitle.replace(/\s/g, '-')
+
+        titlePageLines.push(`${i+1}. [${bookTitle} (${inproceedingMapper.get(bookTitle)!.length} papers)](./conference/${urlstr})  `)
+    })
+
+    const titlePage = titlePageLines.join("\n");
+    try {
+        fs.writeFileSync(titlePagePath, titlePage );
+        console.log(`Outputted ${titlePagePath}`);
+
+    } catch (e) {
+        console.log(e);
+    }
+
+
+
+    bookTitles.forEach((bookTitle) => {
+        const lines : string[] = new Array();
+        const topLine = `# ${bookTitle} for Stringologist`;
+        const contentLines = write_list_conference(bookTitle, inproceedingMapper.get(bookTitle)!, 2)
+        lines.push(topLine);
+        contentLines.forEach((v) => lines.push(v))
         const filePath = outputFolderPath + "/" + bookTitle.replace("/", "_") + ".md";
 
         try {
             fs.writeFileSync(filePath, lines.join("\n"));
             console.log(`Outputted ${filePath}`);
-    
+
         } catch (e) {
             console.log(e);
         }
-    
+
     })
 
 
 
 }
-function getSortedYears(dblpElements: DBLPElementClass[]) : number[]{
-    const years : Set<number> = new Set();
-    dblpElements.forEach((v) =>{
+function getSortedYears(dblpElements: DBLPElementClass[]): number[] {
+    const years: Set<number> = new Set();
+    dblpElements.forEach((v) => {
         years.add(v.year);
     })
 
-    const r : number[] = new Array();
+    const r: number[] = new Array();
     years.forEach((v) => r.push(v));
-    r.sort((a,b) => b - a);
+    r.sort((a, b) => b - a);
     return r;
 }
 
-function write_list_conference(bookTitle : string, items : DBLPInproceedings[]) : string[]{
+function write_list_conference(bookTitle: string, items: DBLPInproceedings[], sharpCount : number): string[] {
     const years = getSortedYears(items);
     const lines: string[] = new Array();
 
-    years.forEach((year) =>{
+
+    years.forEach((year) => {
         const ps = items.filter((v) => v.year == year);
-        const proceeding : ProceedingsInfo = { name : bookTitle, dblp_url : ps[0].proceedingsURL, inproceedings : ps};
-        createYearProceedingMD(proceeding, year).forEach((line) =>{
+        const proceeding: ProceedingsInfo = { name: bookTitle, dblp_url: ps[0].proceedingsURL, inproceedings: ps };
+        createYearProceedingMD(proceeding, year, sharpCount).forEach((line) => {
             lines.push(line);
         })
     })
