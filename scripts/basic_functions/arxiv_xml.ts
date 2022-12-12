@@ -1,7 +1,5 @@
-const request = require('sync-request');
-const fs = require('fs');
 import { DOMParser } from 'xmldom'
-
+import * as fs from 'fs' 
 
 export type ArxivXMLInfo = {
     document: XMLDocument,

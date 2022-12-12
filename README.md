@@ -3,8 +3,8 @@
 
 ## Contents
 - [List of arXiv's articles for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/arxiv_list)
+- [Log of arXiv's articles in the cs.DS category](https://stringologytimes.github.io/StringologyTimes/docs/output/weekly_arxiv_top)
 - [List of Proceedings for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/list_of_proceedings)
-
 - [Papers for Stringologist (2010)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2010)
 - [Papers for Stringologist (2011)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2011)
 - [Papers for Stringologist (2012)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2012)

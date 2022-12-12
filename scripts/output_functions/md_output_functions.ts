@@ -1,8 +1,8 @@
-import * as fs from 'fs'
 import { DBLPArticle, DBLPElement, DBLPInproceedings, DBLPElementClass, to_url_string } from "../basic_functions/dblp_element"
 import { ArxivArticle } from "../basic_functions/arxiv_xml"
 import { createArxivMD } from "./create_arxiv_md"
 import { createCompleteMD, createMD, createYearProceedingMD, ProceedingsInfo } from "./create_list_md"
+import * as fs from 'fs' 
 
 export function write_list_year_md(yearList: number[], dblpElements: DBLPElementClass[], outputFilePathPrefix: string): void {
     yearList.forEach((year) => {

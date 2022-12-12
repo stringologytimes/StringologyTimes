@@ -1,7 +1,9 @@
-const request = require('sync-request');
-const fs = require('fs');
 import { DOMParser } from 'xmldom'
 import { ArxivXMLInfo } from "./arxiv_xml"
+import * as fs from 'fs' 
+//import * as request from 'sync-request' 
+
+const request = require('sync-request');
 
 function sleep(time) {
     return new Promise((resolve, reject) => {

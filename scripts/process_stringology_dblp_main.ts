@@ -1,10 +1,8 @@
 import { DOMParser } from 'xmldom'
-import * as fs from 'fs'
-import { DBLPArticle, DBLPElement, DBLPInproceedings, DBLPElementClass } from "./basic_functions/dblp_element"
+import { DBLPElement } from "./basic_functions/dblp_element"
 import { ArxivArticle } from "./basic_functions/arxiv_xml"
-
 import {write_list_year_md, write_complete_md, write_arxiv_list_md, append_registered_papers_info, writeGenrePaperNumberPerYearFile, write_list_by_book} from "./output_functions/md_output_functions"
-
+import * as fs from 'fs' 
 
 const stringology_dblp_raw_text = fs.readFileSync("data/stringology_dblp.xml", 'utf8');
 const doc = new DOMParser().parseFromString(stringology_dblp_raw_text, 'text/xml');

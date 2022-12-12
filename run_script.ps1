@@ -31,9 +31,15 @@ cd ..
 
 
 $dblpProcessor = "./dblp_processor/bin/Release/net6.0/dblp_processor.exe"
-$dblpProcessorArg = "./data/external/dblp.xml ./data/paper_list.txt ./data/stringology_dblp.xml"
+$dblpProcessorArg = "dblp --x ./data/external/dblp.xml --u ./data/paper_list.txt --o ./data/stringology_dblp.xml"
 
 $dblpProc = Start-Process -FilePath $dblpProcessor -ArgumentList $dblpProcessorArg -Wait
+
+$arxivProcessor = "./dblp_processor/bin/Release/net6.0/dblp_processor.exe"
+$arxivProcessorArg = "arxiv --i ./data/external/arxiv-metadata-oai-snapshot.json --o ./data/cs.DS_arxiv_articles.tsv"
+$arxivProc = Start-Process -FilePath $arxivProcessor -ArgumentList $arxivProcessorArg -Wait
+
+
 
 ts-node ./scripts/download_arxiv_xml_main.ts
 ts-node ./scripts/process_stringology_dblp_main.ts

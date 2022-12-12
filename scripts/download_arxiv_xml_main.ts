@@ -1,6 +1,6 @@
-const fs = require('fs');
 import { loadArxivXML, ArxivXMLInfo } from "./basic_functions/arxiv_xml"
 import { load_arxiv_ids, downloadAllArxivInfomation } from "./basic_functions/download_arxiv_xml"
+import * as fs from 'fs' 
 
 
 const arxivXMLPath = "data/arxiv.xml";

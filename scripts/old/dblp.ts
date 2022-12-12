@@ -1,6 +1,5 @@
 
 import { PaperArticle } from "./article"
-import { DOMParser } from 'xmldom'
 const fs = require('fs');
 
 
