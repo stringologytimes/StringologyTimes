@@ -37,8 +37,11 @@ class WeekArticleList {
 
     }
     public static getDaysString(weekNumber: number) : string{
-        var maxDay = Math.min(31, ((weekNumber+1)*7));
-        return `${(weekNumber*7)+1}-${maxDay}`;
+        const minDay = (weekNumber*7)+1;
+        const minDayStr = minDay < 10 ? `0${minDay}` : `${minDay}`
+        const maxDay = Math.min(31, ((weekNumber+1)*7));
+        const maxDayStr = maxDay < 10 ? `0${maxDay}` : `${maxDay}`; 
+        return `${minDayStr}-${maxDayStr}`;
     }
     public static build(year : number, month : number, weekNumber : number, articles: ArxivSimpleArticle[]) : WeekArticleList{
         const list = new WeekArticleList();
