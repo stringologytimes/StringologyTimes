@@ -123,7 +123,7 @@ class WeekArticleSuperList {
         for (let y = minYear; y <= maxYear; y++) {
             const monthEnd = y == maxYear ? maxMonth : 12;
             const monthStart = y == minYear ? minMonth : 1;
-            const yearArticles = articles.filter((v) => v.year = y);
+            const yearArticles = articles.filter((v) => v.year == y);
             const yearList = WeekArticleListByYear.build(y, monthStart, monthEnd, yearArticles);
             r.lists.push(yearList);
         }
