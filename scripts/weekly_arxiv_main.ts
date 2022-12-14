@@ -173,9 +173,16 @@ function write_weekly_arxiv_list(superList : WeekArticleSuperList, outputFolderP
         yearList.lists.forEach((monthList) =>{            
             monthList.lists.forEach((weekList) =>{
                 const monthStr = monthList.month < 10 ? `0${monthList.month}` : `${monthList.month}`;
-                const str = `[${monthStr}/${WeekArticleList.getDaysString(weekList.weekNumber)}](./weekly_arxiv/${weekList.getHashKey()}.md) (${weekList.articles.length} articles)  `
+                let str = "";
+                if(weekList.articles.length > 0){
+                    str = `[${monthStr}/${WeekArticleList.getDaysString(weekList.weekNumber)}](./weekly_arxiv/${weekList.getHashKey()}.md) (${weekList.articles.length} articles)  `
+                }else{
+                    str = `${monthStr}/${WeekArticleList.getDaysString(weekList.weekNumber)} (${weekList.articles.length} articles)  `
+                }
                 lines.push(`- ${str}  `);
-                write_weekly_arxiv_list_sub(weekList, outputFolderPath); 
+                if(weekList.articles.length > 0){
+                    write_weekly_arxiv_list_sub(weekList, outputFolderPath); 
+                }
             }
             )
         })

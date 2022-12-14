@@ -43,5 +43,6 @@ $arxivProc = Start-Process -FilePath $arxivProcessor -ArgumentList $arxivProcess
 
 ts-node ./scripts/download_arxiv_xml_main.ts
 ts-node ./scripts/process_stringology_dblp_main.ts
+ts-node ./scripts/weekly_arxiv_main.ts
 
 
