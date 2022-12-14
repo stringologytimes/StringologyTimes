@@ -12,7 +12,7 @@
   
     "content_scripts": [
       {
-        "matches": ["*://dblp.org/*"],
+        "matches": ["*://dblp.org/*", "*://stringologytimes.github.io/StringologyTimes/docs/output/weekly_arxiv/*"],
         "js": ["dist/main.js"]
       }
     ], 

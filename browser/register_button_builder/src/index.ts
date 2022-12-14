@@ -1,13 +1,13 @@
 //document.body.style.border = "5px solid red";
-
-console.log("Hello");
-
-
 import {preprocessDBLP} from "./dblp_preprocessor"
+import {preprocessStringologyTimes} from "./stringology_times_processor"
 
-const dblpElements: HTMLElement[] = []
+if(window.location.host == "dblp.org"){
+    preprocessDBLP();
+}else if(window.location.pathname.indexOf("weekly_arxiv") != -1){
+    preprocessStringologyTimes();
+}
 
-preprocessDBLP(dblpElements);
 
 
 
