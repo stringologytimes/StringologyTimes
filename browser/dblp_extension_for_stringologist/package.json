@@ -1,0 +1,16 @@
+{
+    "name": "test",
+    "version": "0.0.129",
+    "description": "",
+    "scripts": {
+        "dev": "webpack --mode development && webpack-dev-server --mode development",
+        "product": "webpack --mode production && webpack-dev-server --mode production",
+        "compile": "tsc -p . && webpack"
+    },
+    "devDependencies": {
+        "ts-loader": "^9.4.2",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.1",
+        "webpack-dev-server": "^4.11.1"
+    }
+}

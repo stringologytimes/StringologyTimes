@@ -4,14 +4,13 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "outDir" : "./dist",
-        "sourceMap": true,
+        "sourceMap": false,
         "target": "ES6",
-        "declaration": true,
+        "declaration": false,
         "strict": true,
         "module": "commonjs"    
     }, 
     "include": [
         "src"
     ]
-
 }
