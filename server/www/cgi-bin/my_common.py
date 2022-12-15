@@ -60,3 +60,16 @@ def listup_url(cursor):
     cursor.execute('select * from paper_url_list')
     result = cursor.fetchall()
     return result
+
+def add_weekly_arxiv_data(cursor, wid): 
+    hit = cursor.execute(f'select * from weekly_arxiv where wid="{wid}"')
+    if hit == 0: 
+        cursor.execute(f'INSERT INTO weekly_arxiv VALUE (null, {wid}, DEFAULT)')
+        return "SUCCESS"
+    else:
+        return "DUPLICATION"
+
+def listup_weekly_arxiv_data(cursor): 
+    cursor.execute('select wid from weekly_arxiv')
+    result = cursor.fetchall()
+    return result

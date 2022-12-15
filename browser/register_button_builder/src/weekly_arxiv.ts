@@ -19,17 +19,14 @@ function createPaperCreateInfoArray() : PaperElementInfo[] {
         }
     }
     return r;
-
 }
 
-export function preprocessStringologyTimes() {
+export function preprocessWeeklyArxiv() {
     const paperCreateInfoArray = createPaperCreateInfoArray();
     
     const collections = createCollections(paperCreateInfoArray);
     collections.forEach((v) => {
         processPaperElementInfoCollection(v);
     })
-    
-
-
 }
+

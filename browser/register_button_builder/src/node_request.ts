@@ -25,6 +25,7 @@ export function processPaperElementInfoCollectionSub(parent: HTMLElement, button
     let button_request = new XMLHttpRequest();
     button_request.open('GET', `http://lampin.sakura.ne.jp/cgi-bin/paper_check.cgi?mode=register&url=${encodeURI(url!)}`, true);
     button_request.onload = function () {
+
         const json = JSON.parse(this.responseText);
         const json_line = json["result"][0];
         const result: string = json_line[1];
@@ -88,9 +89,6 @@ export function processPaperElementInfoWithATag(info: PaperElementInfo, check_re
         }
     
     }
-
-
-
 }
 export function getURLForNodeRequest(url: string): string | null {
     let doi: string | null = null;

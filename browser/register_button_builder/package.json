@@ -3,8 +3,6 @@
     "version": "0.0.129",
     "description": "",
     "scripts": {
-        "dev": "webpack --mode development && webpack-dev-server --mode development",
-        "product": "webpack --mode production && webpack-dev-server --mode production",
         "compile": "tsc -p . && webpack"
     },
     "devDependencies": {
