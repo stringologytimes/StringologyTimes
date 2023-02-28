@@ -1,4 +1,11 @@
 # ISAAC for Stringologist
+## [ISAAC 2022](https://dblp.org/db/conf/isaac/isaac2022.html)
+  1. [Simple Order-Isomorphic Matching Index with Expected Compact Space.](https://doi.org/10.4230/LIPIcs.ISAAC.2022.61)  
+  2. [External-Memory Dictionaries with Worst-Case Update Cost.](https://doi.org/10.4230/LIPIcs.ISAAC.2022.21)  
+  3. [Computing Palindromes on a Trie in Linear Time.](https://doi.org/10.4230/LIPIcs.ISAAC.2022.15)  
+  4. [On the Complexity of Tree Edit Distance with Variables.](https://doi.org/10.4230/LIPIcs.ISAAC.2022.44)  
+  5. [Succinct List Indexing in Optimal Time.](https://doi.org/10.4230/LIPIcs.ISAAC.2022.65)  
+  
 ## [ISAAC 2021](https://dblp.org/db/conf/isaac/isaac2021.html)
   1. [Streaming Pattern Matching (Invited Talk).](https://doi.org/10.4230/LIPIcs.ISAAC.2021.1)  
   2. [Repetition- and Linearity-Aware Rank/Select Dictionaries.](https://doi.org/10.4230/LIPIcs.ISAAC.2021.64)  

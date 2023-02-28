@@ -30,6 +30,50 @@
 
 ## Recent accepted papers for stringologist
 
+### 2022/02/21 [STOC 2023](http://acm-stoc.org/stoc2023/accepted.html)
+1. Approximating binary longest common subsequence in almost-linear time  
+Xiaoyu He; Ray Li   
+2. External Memory Fully Persistent Search Trees  
+Gerth Stølting Brodal, Casper Moldrup Rysgaard, Rolf Svenning  
+3. Weighted Edit Distance Computation: Strings, Trees, and Dyck  
+Debarati Das; Jacob Gilbert, MohammadTaghi Hajiaghayi; Tomasz Kociumaka; Barna Saha  
+4. Locally consistent decomposition of strings with applications to edit distance sketching  
+Sudatta Bhattacharya, Michal Koucký  
+
+### 2022/02/21 [DCC 2023](https://www.cs.brandeis.edu/~dcc/Programs/Program2023.pdf)
+
+1. Recursive Prefix-Free Parsing for Building Big BWTs  
+Marco Oliva, Travis Gagie, and Christina Boucher  
+2. Computing the Optimal BWT of very Large String Collections  
+Davide Cenzato, Veronica Guerrini, Zsuzsanna Lipták, and Giovanna Rosone  
+3. Bit-Parallel (Compressed) Wavelet Tree Construction  
+Patrick Dinklage, Johannes Fischer, Florian Kurpicz, and Jan-Philipp Tarnowski  
+4. Computing Matching Statistics on Wheeler DFAs  
+Alessio Conte, Nicola Cotumaccio, Travis Gagie, Giovanni Manzini, Nicola Prezza, and Marinella Sciortino  
+5. Contextual Pattern Matching in Less Space  
+Paniz Abedin, Oliver Chubet, Daniel Gibney, and Sharma V. Thankachan, Florida Polytechnic  
+6. Practical Implementations of Compressed RAM  
+Seungbum Jo, Wooyoung Park, Kunihiko Sadakane, and Srinivasa Rao Satti  
+7. Constructing the CDAWG CFG Using LCP-Intervals  
+Alan Cleary and Jordan Dood  
+8. Augmented Thresholds for MONI  
+César Martínez-Guardiola, Nathaniel K. Brown, Fernando Silva-Coira, Dominik Köppl, Travis Gagie, and Susana Ladra  
+9. RNA Secondary Structures: From ab Initio Prediction to Better Compression, and Back  
+Evarista Onokpasa, Sebastian Wild, and Prudence W.H. Wong  
+10. JARVIS2: A Data Compressor for Large Genome Sequences  
+Diogo Pratas and Armando J. Pinho  
+
+### 2022/12/24 [STACS 2023](https://www.conferences.uni-hamburg.de/event/272/page/183-list-of-accepted-papers)
+
+1. Guessing words using queries on subwords or factors  
+Richomme Gwenaël and Matthieu Rosenfeld  
+2. Real numbers equally compressible in every base  
+Satyadev Nandakumar and Subin Pulari  
+3. Dynamic data structures for parameterized string problems  
+Jędrzej Olkowski, Michał Pilipczuk, Mateusz Rychlicki, Karol Węgrzycki and Anna Zych-Pawlewicz 
+4. Improved Lower Bounds for the Greedy-Future Algorithm  
+Yaniv Sadeh, Haim Kaplan. Dynamic Binary Search Trees
+
 ### 2022/10/20 [ALENEX 2023](https://www.siam.org/Portals/0/Conferences/ALENEX/ALENEX23/ALENEX23%20-%20List%20of%20Accepted%20Papers.pdf)  
 
 1. PaCHash: Packed and Compressed Hash Tables  
@@ -82,46 +126,7 @@ Duncan Adamson, Argyrios Deligkas, Vladimir Gusev and Igor Potapov.
 2. Yuuki Yonemoto, Yuto Nakashima, Shunsuke Inenaga and Hideo Bannai.  
 Space-Efficient STR-IC-LCS Computation  
 
-### 2022/09/07 [ISAAC 2022](https://isa.hanyang.ac.kr/isaac2022/apl.html)
 
-1. On the Complexity of Tree Edit Distance with Variables  
-Tatsuya Akutsu, Tomoya Mori, Naotoshi Nakamura, Satoshi Kozawa, Yuhei Ueno and Thomas N. Sato  
-2. Succinct List Indexing in Optimal Time  
-William Holland  
-3. Simple Order-isomorphic Matching Index with Expected Compact Space  
-Sung-Hwan Kim and Hwan-Gue Cho  
-4. Computing palindromes on a trie in linear time  
-Takuya Mieno, Mitsuru Funakoshi and Shunsuke Inenaga  
-5. External-memory dictionaries with worst-case update cost  
-Rathish Das, John Iacono and Yakov Nekrich  
-
-### 2022/08/31 [LATIN 2022](https://pakal.cs.cinvestav.mx/latin2022/accepted_latin_2022.html)
-
-1. Elastic Degenerate String Matching with 1 Edit  
-Giulia Bernardini, Estéban Gabory, Solon Pissis, Leen Stougie,  Michelle Sweering and Wiktor Zuba  
-2. String Attractors and Infinite Words  
-Antonio Restivo, Giuseppe Romana and Marinella Sciortino  
-3. Near-Optimal Search Time in $\delta$-Optimal Space  
-Tomasz Kociumaka, Gonzalo Navarro and Francisco Olivares  
-4. Space-efficient data structure for next/previous larger/smaller value queries  
-Seungbum Jo and Geunho Kim  
-5. Patterns in ordered (random) matchings  
-Andrzej Dudek, Jaroslaw Grytczuk and Andrzej Rucinski  
-
-### 2022/07/04 [FOCS 2022](https://focs2022.eecs.berkeley.edu/accepted_papers.html)
-
-1. Online List Labeling: Breaking the $\log^2 n$ Barrier.  
-Michael A. Bender (Stony Brook University), Alex Conway (VMWare Research), Martin Farach-Colton (Rutgers University), Hanna Komlos (Rutgers University), William Kuszmaul (MIT), Nicole Wein (DIMACS).  
-2. Estimating the Longest Increasing Subsequence in Nearly Optimal Time.  
-Alexandr Andoni (Columbia University), Negev Shekel Nosatzki (Columbia University), Sandip Sinha (Columbia University), Clifford Stein (Columbia University).  
-3. Õ(n + poly(k))-time Algorithm for Distance k Tree Edit Distance.  
-Debarati Das (Penn State University), Jacob Gilbert (University of Maryland), MohammadTaghi Hajiaghayi (University of Maryland), Tomasz Kociumaka (UC Berkeley), Barna Saha (University of California San Diego), Hamed Saleh (University of Maryland).  
-4. Faster Pattern Matching under Edit Distance.  
-Panagiotis Charalampopoulos (Reichman University, Herzliya, Israel and Birkbeck, University of London), Tomasz Kociumaka (UC Berkeley and Max Planck Institute for Informatics, SIC, Germany), Philip Wellnitz (Max Planck Institute for Informatics, SIC, Germany).  
-5. Gap Edit Distance via Non-Adaptive Queries: Simple and Optimal.  
-Elazar Goldenberg (The Academic College of Tel Aviv-Yafo), Tomasz Kociumaka (UC Berkeley), Robert Krauthgamer (Weizmann Institute of Science), Barna Saha (University of California San Diego).  
-6. Strong XOR Lemma for Communication with Bounded Rounds.  
-Huacheng Yu (Princeton University).  
 
 ## Links
 [arXivTimes](https://github.com/arXivTimes/arXivTimes)

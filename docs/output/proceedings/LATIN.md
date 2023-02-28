@@ -1,4 +1,10 @@
 # LATIN for Stringologist
+## [LATIN 2022](https://dblp.org/db/conf/latin/latin2022.html)
+  1. [Elastic-Degenerate String Matching with 1 Error.](https://doi.org/10.1007/978-3-031-20624-5_2)  
+  2. [Near-Optimal Search Time in δ-Optimal Space.](https://doi.org/10.1007/978-3-031-20624-5_6)  
+  3. [String Attractors and Infinite Words.](https://doi.org/10.1007/978-3-031-20624-5_26)  
+  4. [Space-Efficient Data Structure for Next/Previous Larger/Smaller Value Queries.](https://doi.org/10.1007/978-3-031-20624-5_5)  
+  
 ## [LATIN 2020](https://dblp.org/db/conf/latin/latin2020.html)
   1. [Batched Predecessor and Sorting with Size-Priced Information in External Memory.](https://doi.org/10.1007/978-3-030-61792-9_13)  
   2. [On the Collection of Fringe Subtrees in Random Binary Trees.](https://doi.org/10.1007/978-3-030-61792-9_43)  

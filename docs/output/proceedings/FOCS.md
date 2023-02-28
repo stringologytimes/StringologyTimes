@@ -1,4 +1,12 @@
 # FOCS for Stringologist
+## [FOCS 2022](https://dblp.org/db/conf/focs/focs2022.html)
+  1. [Faster Pattern Matching under Edit Distance : A Reduction to Dynamic Puzzle Matching and the Seaweed Monoid of Permutation Matrices.](https://doi.org/10.1109/FOCS54457.2022.00072)  
+  2. [Estimating the Longest Increasing Subsequence in Nearly Optimal Time.](https://doi.org/10.1109/FOCS54457.2022.00073)  
+  3. [Gap Edit Distance via Non-Adaptive Queries: Simple and Optimal.](https://doi.org/10.1109/FOCS54457.2022.00070)  
+  4. [Online List Labeling: Breaking the log2n Barrier.](https://doi.org/10.1109/FOCS54457.2022.00096)  
+  5. [Strong XOR Lemma for Communication with Bounded Rounds : (extended abstract).](https://doi.org/10.1109/FOCS54457.2022.00114)  
+  6. [Õ(n+poly(k))-time Algorithm for Bounded Tree Edit Distance.](https://doi.org/10.1109/FOCS54457.2022.00071)  
+  
 ## [FOCS 2021](https://dblp.org/db/conf/focs/focs2021.html)
   1. [Small-space and streaming pattern matching with $k$ edits.](https://doi.org/10.1109/FOCS52979.2021.00090)  
   2. [Breaking the Cubic Barrier for (Unweighted) Tree Edit Distance.](https://doi.org/10.1109/FOCS52979.2021.00082)  

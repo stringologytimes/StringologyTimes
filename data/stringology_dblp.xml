@@ -340,6 +340,19 @@
     <ee>https://www.wikidata.org/entity/Q56767309</ee>
     <url>db/journals/ipl/ipl106.html#CrochemoreI08</url>
   </article>
+  <article mdate="2023-01-15" key="journals/ipl/KimKNS23">
+    <author orcid="0000-0002-0438-1985">Youngho Kim</author>
+    <author>Munseong Kang</author>
+    <author>Joong Chae Na</author>
+    <author orcid="0000-0002-6609-8384">Jeong Seop Sim</author>
+    <title>Order-preserving pattern matching with scaling.</title>
+    <pages>106333</pages>
+    <year>2023</year>
+    <volume>180</volume>
+    <journal>Inf. Process. Lett.</journal>
+    <ee>https://doi.org/10.1016/j.ipl.2022.106333</ee>
+    <url>db/journals/ipl/ipl180.html#KimKNS23</url>
+  </article>
   <article mdate="2020-03-27" key="journals/ipl/KosolobovS19">
     <author orcid="0000-0002-2909-2952">Dmitry Kosolobov</author>
     <author>Arseny M. Shur</author>
@@ -449,9 +462,9 @@
     <ee>https://doi.org/10.1016/j.ipl.2009.04.012</ee>
     <url>db/journals/ipl/ipl109.html#AmirN09</url>
   </article>
-  <article mdate="2021-04-09" key="journals/tkdd/BernardiniCCGLP21">
+  <article mdate="2022-12-07" key="journals/tkdd/BernardiniCCGLP21">
     <author orcid="0000-0001-6647-088X">Giulia Bernardini 0001</author>
-    <author>Huiping Chen</author>
+    <author orcid="0000-0003-1782-667X">Huiping Chen</author>
     <author>Alessio Conte</author>
     <author>Roberto Grossi</author>
     <author>Grigorios Loukides</author>
@@ -741,6 +754,18 @@
     <ee type="oa">https://doi.org/10.1186/1748-7188-5-7</ee>
     <ee>https://www.wikidata.org/entity/Q33698219</ee>
     <url>db/journals/almob/almob5.html#ShibuyaJS10</url>
+  </article>
+  <article mdate="2022-12-05" key="journals/access/FerraginaMV22">
+    <author orcid="0000-0003-1353-360X">Paolo Ferragina</author>
+    <author orcid="0000-0002-5047-0196">Giovanni Manzini</author>
+    <author orcid="0000-0003-0328-7791">Giorgio Vinciguerra</author>
+    <title>Compressing and Querying Integer Dictionaries Under Linearities and Repetitions.</title>
+    <pages>118831-118848</pages>
+    <year>2022</year>
+    <volume>10</volume>
+    <journal>IEEE Access</journal>
+    <ee type="oa">https://doi.org/10.1109/ACCESS.2022.3221520</ee>
+    <url>db/journals/access/access10.html#FerraginaMV22</url>
   </article>
   <article mdate="2019-01-24" key="journals/dagstuhl-reports/BarbayFKS18" publtype="informal">
     <author>Jérémy Barbay</author>
@@ -2505,6 +2530,18 @@
     <ee>https://www.wikidata.org/entity/Q61677857</ee>
     <url>db/journals/ejc/ejc34.html#CrochemoreIIKRW13</url>
   </article>
+  <article mdate="2020-09-05" key="journals/ipm/Shapira05">
+    <author orcid="0000-0002-9478-3303">Shmuel Tomi Klein</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <title>Pattern matching in Huffman encoded texts.</title>
+    <pages>829-841</pages>
+    <year>2005</year>
+    <volume>41</volume>
+    <journal>Inf. Process. Manag.</journal>
+    <number>4</number>
+    <ee>https://doi.org/10.1016/j.ipm.2003.08.008</ee>
+    <url>db/journals/ipm/ipm41.html#Shapira05</url>
+  </article>
   <article mdate="2020-02-21" key="journals/ipm/GrumbachT94">
     <author>Stéphane Grumbach</author>
     <author>Fariza Tahi</author>
@@ -2516,6 +2553,18 @@
     <number>6</number>
     <url>db/journals/ipm/ipm30.html#GrumbachT94</url>
     <ee>https://doi.org/10.1016/0306-4573(94)90014-0</ee>
+  </article>
+  <article mdate="2020-02-21" key="journals/ipm/ShapiraK12">
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <author>Michael Kats</author>
+    <title>Bidirectional delta files.</title>
+    <pages>587-597</pages>
+    <year>2012</year>
+    <volume>48</volume>
+    <journal>Inf. Process. Manag.</journal>
+    <number>3</number>
+    <ee>https://doi.org/10.1016/j.ipm.2011.08.007</ee>
+    <url>db/journals/ipm/ipm48.html#ShapiraK12</url>
   </article>
   <article mdate="2020-02-21" key="journals/ipm/AdiegoNF07">
     <author>Joaquín Adiego</author>
@@ -2556,6 +2605,18 @@
     <number>4</number>
     <ee>https://doi.org/10.1016/j.ipm.2011.01.006</ee>
     <url>db/journals/ipm/ipm47.html#BrisaboaFNP11</url>
+  </article>
+  <article mdate="2020-02-21" key="journals/ipm/ShapiraD06">
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <author>Ajay H. Daptardar</author>
+    <title>Adapting the Knuth-Morris-Pratt algorithm for pattern matching in Huffman encoded texts.</title>
+    <pages>429-439</pages>
+    <year>2006</year>
+    <volume>42</volume>
+    <journal>Inf. Process. Manag.</journal>
+    <number>2</number>
+    <ee>https://doi.org/10.1016/j.ipm.2005.02.003</ee>
+    <url>db/journals/ipm/ipm42.html#ShapiraD06</url>
   </article>
   <article mdate="2022-05-17" key="journals/tcs/DoJSS14">
     <author>Huy Hoang Do</author>
@@ -2638,6 +2699,22 @@
     <journal>Theor. Comput. Sci.</journal>
     <ee type="oa">https://doi.org/10.1016/j.tcs.2012.06.011</ee>
     <url>db/journals/tcs/tcs483.html#Ferragina13</url>
+  </article>
+  <article mdate="2022-08-25" key="journals/tcs/AkagiKMNIBT22">
+    <author>Tooru Akagi</author>
+    <author>Yuki Kuhara</author>
+    <author>Takuya Mieno</author>
+    <author>Yuto Nakashima</author>
+    <author>Shunsuke Inenaga</author>
+    <author orcid="0000-0002-6856-5185">Hideo Bannai</author>
+    <author>Masayuki Takeda</author>
+    <title>Combinatorics of minimal absent words for a sliding window.</title>
+    <pages>109-119</pages>
+    <year>2022</year>
+    <volume>927</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2022.06.002</ee>
+    <url>db/journals/tcs/tcs927.html#AkagiKMNIBT22</url>
   </article>
   <article mdate="2018-11-30" key="journals/tcs/CrochemoreIKRRW17">
     <author>Maxime Crochemore</author>
@@ -3033,7 +3110,7 @@
     <ee type="oa">https://doi.org/10.1016/j.tcs.2016.08.010</ee>
     <url>db/journals/tcs/tcs648.html#KociumakaRRW16</url>
   </article>
-  <article mdate="2022-10-21" key="journals/tcs/GuptaHSV07">
+  <article mdate="2022-12-29" key="journals/tcs/GuptaHSV07">
     <author>Ankur Gupta 0003</author>
     <author orcid="0000-0002-0570-2904">Wing-Kai Hon</author>
     <author>Rahul Shah</author>
@@ -3628,6 +3705,18 @@
     <ee>https://doi.org/10.1016/j.tcs.2020.05.039</ee>
     <url>db/journals/tcs/tcs833.html#GagieHNO20</url>
   </article>
+  <article mdate="2022-12-05" key="journals/tcs/FaroS23">
+    <author orcid="0000-0001-5937-5796">Simone Faro</author>
+    <author>Stefano Scafiti</author>
+    <title>Compact suffix automata representations for searching long patterns.</title>
+    <pages>254-268</pages>
+    <year>2023</year>
+    <volume>940</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <number>Part</number>
+    <ee>https://doi.org/10.1016/j.tcs.2022.11.005</ee>
+    <url>db/journals/tcs/tcs940.html#FaroS23</url>
+  </article>
   <article mdate="2021-02-17" key="journals/tcs/PobleteMP06">
     <author>Patricio V. Poblete</author>
     <author>J. Ian Munro</author>
@@ -3847,6 +3936,24 @@
     <number>2</number>
     <url>db/journals/tcs/tcs165.html#MunroR96</url>
     <ee type="oa">https://doi.org/10.1016/0304-3975(95)00225-1</ee>
+  </article>
+  <article mdate="2022-10-04" key="journals/tcs/NakashimaFHNYIB22">
+    <author>Katsuhito Nakashima</author>
+    <author>Noriki Fujisato</author>
+    <author>Diptarama Hendrian</author>
+    <author>Yuto Nakashima</author>
+    <author>Ryo Yoshinaka</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Hideo Bannai</author>
+    <author>Ayumi Shinohara</author>
+    <author>Masayuki Takeda</author>
+    <title>Parameterized DAWGs: Efficient constructions and bidirectional pattern searches.</title>
+    <pages>21-42</pages>
+    <year>2022</year>
+    <volume>933</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.tcs.2022.09.008</ee>
+    <url>db/journals/tcs/tcs933.html#NakashimaFHNYIB22</url>
   </article>
   <article mdate="2021-06-29" key="journals/tcs/BrankovicIKMPV16">
     <author orcid="0000-0002-5056-4627">Ljiljana Brankovic</author>
@@ -4199,6 +4306,19 @@
     <ee>https://doi.org/10.1007/s10791-006-9001-9</ee>
     <url>db/journals/ir/ir10.html#BrisaboaFNP07</url>
   </article>
+  <article mdate="2022-12-05" key="journals/ir/FerreiraMS22">
+    <author orcid="0000-0001-8985-5045">Berg Ferreira</author>
+    <author>Edleno Silva de Moura</author>
+    <author>Altigran Soares da Silva</author>
+    <title>Applying burst-tries for error-tolerant prefix search.</title>
+    <pages>481-518</pages>
+    <year>2022</year>
+    <volume>25</volume>
+    <journal>Inf. Retr. J.</journal>
+    <number>4</number>
+    <ee>https://doi.org/10.1007/s10791-022-09416-9</ee>
+    <url>db/journals/ir/ir25.html#FerreiraMS22</url>
+  </article>
   <article mdate="2020-10-02" key="journals/tpds/MittalV16a">
     <author orcid="0000-0002-2908-993X">Sparsh Mittal</author>
     <author>Jeffrey S. Vetter</author>
@@ -4212,6 +4332,18 @@
     <ee>http://doi.ieeecomputersociety.org/10.1109/TPDS.2015.2435788</ee>
     <ee>https://www.wikidata.org/entity/Q57694360</ee>
     <url>db/journals/tpds/tpds27.html#MittalV16a</url>
+  </article>
+  <article mdate="2020-07-09" key="journals/information/KleinS20">
+    <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <title>On the Randomness of Compressed Data.</title>
+    <pages>196</pages>
+    <year>2020</year>
+    <volume>11</volume>
+    <journal>Inf.</journal>
+    <number>4</number>
+    <ee type="oa">https://doi.org/10.3390/info11040196</ee>
+    <url>db/journals/information/information11.html#KleinS20</url>
   </article>
   <article mdate="2021-10-14" key="journals/information/MarumoYMS16">
     <author>Koichi Marumo</author>
@@ -5158,9 +5290,21 @@
     <ee type="oa">https://doi.org/10.1016/j.jda.2013.07.004</ee>
     <url>db/journals/jda/jda25.html#Navarro14</url>
   </article>
-  <article mdate="2021-02-16" key="journals/jda/BelazzouguiKR13">
+  <article mdate="2020-09-05" key="journals/jda/BaruchKS17">
+    <author>Gilad Baruch</author>
+    <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <title>A space efficient direct access data structure.</title>
+    <pages>26-37</pages>
+    <year>2017</year>
+    <volume>43</volume>
+    <journal>J. Discrete Algorithms</journal>
+    <ee>https://doi.org/10.1016/j.jda.2016.12.001</ee>
+    <url>db/journals/jda/jda43.html#BaruchKS17</url>
+  </article>
+  <article mdate="2022-12-07" key="journals/jda/BelazzouguiKR13">
     <author>Djamal Belazzougui</author>
-    <author>Roman Kolpakov</author>
+    <author orcid="0000-0003-1800-853X">Roman Kolpakov</author>
     <author>Mathieu Raffinot</author>
     <title>Various improvements to text fingerprinting.</title>
     <pages>1-18</pages>
@@ -5234,6 +5378,18 @@
     <journal>J. Discrete Algorithms</journal>
     <ee type="oa">https://doi.org/10.1016/j.jda.2012.10.003</ee>
     <url>db/journals/jda/jda17.html#FlouriIJMP12</url>
+  </article>
+  <article mdate="2021-02-16" key="journals/jda/ShapiraS07">
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <author>James A. Storer</author>
+    <title>Edit distance with move operations.</title>
+    <pages>380-392</pages>
+    <year>2007</year>
+    <volume>5</volume>
+    <journal>J. Discrete Algorithms</journal>
+    <number>2</number>
+    <ee type="oa">https://doi.org/10.1016/j.jda.2005.01.010</ee>
+    <url>db/journals/jda/jda5.html#ShapiraS07</url>
   </article>
   <article mdate="2021-07-25" key="journals/jda/GagieN11">
     <author orcid="0000-0003-3689-327X">Travis Gagie</author>
@@ -5899,7 +6055,7 @@
     <ee>https://doi.org/10.1007/s002240000125</ee>
     <url>db/journals/mst/mst32.html#Baeza-YatesGNS99</url>
   </article>
-  <article mdate="2021-10-14" key="journals/mst/AyadBFHP21">
+  <article mdate="2023-01-05" key="journals/mst/AyadBFHP21">
     <author>Lorraine A. K. Ayad</author>
     <author>Golnaz Badkobeh</author>
     <author orcid="0000-0002-3536-327X">Gabriele Fici</author>
@@ -5911,7 +6067,7 @@
     <volume>65</volume>
     <journal>Theory Comput. Syst.</journal>
     <number>5</number>
-    <ee>https://doi.org/10.1007/s00224-020-10018-5</ee>
+    <ee type="oa">https://doi.org/10.1007/s00224-020-10018-5</ee>
     <url>db/journals/mst/mst65.html#AyadBFHP21</url>
   </article>
   <article mdate="2019-10-19" key="journals/mst/GawrychowskiJJ14">
@@ -7425,6 +7581,32 @@
     <ee type="oa">http://arxiv.org/abs/1608.00865</ee>
     <url>db/journals/corr/corr1608.html#GawrychowskiK16a</url>
   </article>
+  <article mdate="2022-03-01" key="journals/corr/abs-2202-08066" publtype="informal">
+    <author>Karl Bringmann</author>
+    <author>Alejandro Cassis</author>
+    <author>Nick Fischer</author>
+    <author>Vasileios Nakos</author>
+    <title>Almost-Optimal Sublinear-Time Edit Distance in the Low Distance Regime.</title>
+    <year>2022</year>
+    <volume>abs/2202.08066</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">https://arxiv.org/abs/2202.08066</ee>
+    <url>db/journals/corr/corr2202.html#abs-2202-08066</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/DhulipalaKKOPS16" publtype="informal">
+    <author>Laxman Dhulipala</author>
+    <author>Igor Kabiljo</author>
+    <author>Brian Karrer</author>
+    <author>Giuseppe Ottaviano</author>
+    <author>Sergey Pupyrev</author>
+    <author>Alon Shalita</author>
+    <title>Compressing Graphs and Indexes with Recursive Graph Bisection.</title>
+    <year>2016</year>
+    <volume>abs/1602.08820</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1602.08820</ee>
+    <url>db/journals/corr/corr1602.html#DhulipalaKKOPS16</url>
+  </article>
   <article mdate="2021-02-22" key="journals/corr/GotoB13" publtype="informal">
     <author>Keisuke Goto 0001</author>
     <author>Hideo Bannai</author>
@@ -7596,11 +7778,11 @@
     <ee type="oa">http://arxiv.org/abs/1811.01248</ee>
     <url>db/journals/corr/corr1811.html#abs-1811-01248</url>
   </article>
-  <article mdate="2022-10-02" key="journals/corr/abs-2112-09971" publtype="informal">
+  <article mdate="2022-12-17" key="journals/corr/abs-2112-09971" publtype="informal">
     <author>Ryan Gabrys</author>
     <author>Venkatesan Guruswami</author>
     <author orcid="0000-0002-9870-0501">João L. Ribeiro 0001</author>
-    <author>Ke Wu</author>
+    <author>Ke Wu 0001</author>
     <title>Beyond Single-Deletion Correcting Codes: Substitutions and Transpositions.</title>
     <year>2021</year>
     <volume>abs/2112.09971</volume>
@@ -7874,6 +8056,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1710.01896</ee>
     <url>db/journals/corr/corr1710.html#abs-1710-01896</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Grimm15a" publtype="informal">
+    <author>Carsten Grimm</author>
+    <title>A Lower Bound on Supporting Predecessor Search in k sorted Arrays.</title>
+    <year>2015</year>
+    <volume>abs/1507.03823</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1507.03823</ee>
+    <url>db/journals/corr/corr1507.html#Grimm15a</url>
   </article>
   <article mdate="2022-05-30" key="journals/corr/abs-2205-12421" publtype="informal">
     <author>Akiyoshi Kawamoto</author>
@@ -9113,6 +9304,20 @@
     <ee type="oa">https://arxiv.org/abs/2006.00216</ee>
     <url>db/journals/corr/corr2006.html#abs-2006-00216</url>
   </article>
+  <article mdate="2022-10-07" key="journals/corr/abs-2210-02067" publtype="informal">
+    <author>Mitsuru Funakoshi</author>
+    <author>Takuya Mieno</author>
+    <author>Yuto Nakashima</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Hideo Bannai</author>
+    <author>Masayuki Takeda</author>
+    <title>Computing maximal generalized palindromes.</title>
+    <year>2022</year>
+    <volume>abs/2210.02067</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">https://doi.org/10.48550/arXiv.2210.02067</ee>
+    <url>db/journals/corr/corr2210.html#abs-2210-02067</url>
+  </article>
   <article mdate="2021-09-27" key="journals/corr/abs-2109-09306" publtype="informal">
     <author>Elena A. Petrova</author>
     <author>Arseny M. Shur</author>
@@ -9616,6 +9821,18 @@
     <ee type="oa">https://arxiv.org/abs/2009.01353</ee>
     <url>db/journals/corr/corr2009.html#abs-2009-01353</url>
   </article>
+  <article mdate="2022-10-18" key="journals/corr/abs-2210-07979" publtype="informal">
+    <author>Yuuki Yonemoto</author>
+    <author>Yuto Nakashima</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Hideo Bannai</author>
+    <title>Space-Efficient STR-IC-LCS Computation.</title>
+    <year>2022</year>
+    <volume>abs/2210.07979</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">https://doi.org/10.48550/arXiv.2210.07979</ee>
+    <url>db/journals/corr/corr2210.html#abs-2210-07979</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1104-5517" publtype="informal">
     <author>Meng He 0001</author>
     <author>J. Ian Munro</author>
@@ -9968,11 +10185,11 @@
     <ee type="oa">http://arxiv.org/abs/1901.06493</ee>
     <url>db/journals/corr/corr1901.html#abs-1901-06493</url>
   </article>
-  <article mdate="2019-07-08" key="journals/corr/abs-1804-05776" publtype="informal">
+  <article mdate="2022-12-17" key="journals/corr/abs-1804-05776" publtype="informal">
     <author>Kuan Cheng</author>
     <author>Zhengzhong Jin</author>
     <author>Xin Li 0006</author>
-    <author>Ke Wu</author>
+    <author>Ke Wu 0001</author>
     <title>Deterministic Document Exchange Protocols, and Almost Optimal Binary Codes for Edit Errors.</title>
     <year>2018</year>
     <volume>abs/1804.05776</volume>
@@ -10469,6 +10686,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1412.4471</ee>
     <url>db/journals/corr/corr1412.html#Kosolobov14b</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Hartmann15" publtype="informal">
+    <author>Guido Hartmann</author>
+    <title>A numerical analysis of Quicksort: How many cases are bad cases?</title>
+    <year>2015</year>
+    <volume>abs/1507.04220</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1507.04220</ee>
+    <url>db/journals/corr/corr1507.html#Hartmann15</url>
   </article>
   <article mdate="2018-09-02" key="journals/corr/abs-1808-03553" publtype="informal">
     <author>Amir Carmel</author>
@@ -11333,6 +11559,18 @@
     <ee type="oa">http://arxiv.org/abs/1901.07502</ee>
     <url>db/journals/corr/corr1901.html#abs-1901-07502</url>
   </article>
+  <article mdate="2022-07-13" key="journals/corr/abs-2207-04194" publtype="informal">
+    <author>Laurentius Leonard</author>
+    <author>Shunsuke Inenaga</author>
+    <author>Hideo Bannai</author>
+    <author>Takuya Mieno</author>
+    <title>Online algorithms for finding distinct substrings with length and multiple prefix and suffix conditions.</title>
+    <year>2022</year>
+    <volume>abs/2207.04194</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">https://doi.org/10.48550/arXiv.2207.04194</ee>
+    <url>db/journals/corr/corr2207.html#abs-2207-04194</url>
+  </article>
   <article mdate="2019-05-21" key="journals/corr/abs-1902-08744" publtype="informal">
     <author>Zuling Chang</author>
     <author>Martianus Frederic Ezerman</author>
@@ -11356,8 +11594,8 @@
     <ee type="oa">https://arxiv.org/abs/2111.04332</ee>
     <url>db/journals/corr/corr2111.html#abs-2111-04332</url>
   </article>
-  <article mdate="2021-03-04" key="journals/corr/abs-2103-00713" publtype="informal">
-    <author>Xin Li</author>
+  <article mdate="2023-02-04" key="journals/corr/abs-2103-00713" publtype="informal">
+    <author>Xin Li 0006</author>
     <author>Yu Zheng</author>
     <title>Lower Bounds and Improved Algorithms for Asymmetric Streaming Edit Distance and Longest Common Subsequence.</title>
     <year>2021</year>
@@ -11886,10 +12124,10 @@
     <ee type="oa">http://arxiv.org/abs/1611.05359</ee>
     <url>db/journals/corr/corr1611.html#I16</url>
   </article>
-  <article mdate="2021-11-10" key="journals/corr/abs-2111-03968" publtype="informal">
+  <article mdate="2022-11-29" key="journals/corr/abs-2111-03968" publtype="informal">
     <author>Matthias Englert</author>
     <author>Nicolaos Matsakis</author>
-    <author>Pavel Veselý</author>
+    <author>Pavel Veselý 0001</author>
     <title>Improved Approximation Guarantees for Shortest Superstrings using Cycle Classification by Overlap to Length Ratios.</title>
     <year>2021</year>
     <volume>abs/2111.03968</volume>
@@ -11989,6 +12227,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/2001.02139</ee>
     <url>db/journals/corr/corr2001.html#abs-2001-02139</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Kociumaka16" publtype="informal">
+    <author>Tomasz Kociumaka</author>
+    <title>Minimal Suffix and Rotation of a Substring in Optimal Time.</title>
+    <year>2016</year>
+    <volume>abs/1601.08051</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1601.08051</ee>
+    <url>db/journals/corr/corr1601.html#Kociumaka16</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1805-06869" publtype="informal">
     <author>Benjamin Paaßen</author>
@@ -12132,6 +12379,18 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1907.05369</ee>
     <url>db/journals/corr/corr1907.html#abs-1907-05369</url>
+  </article>
+  <article mdate="2022-02-18" key="journals/corr/abs-2202-04185" publtype="informal">
+    <author>Aneesh Raman</author>
+    <author>Subhadeep Sarkar</author>
+    <author>Matthaios Olma</author>
+    <author>Manos Athanassoulis</author>
+    <title>OSM-tree: A Sortedness-Aware Index.</title>
+    <year>2022</year>
+    <volume>abs/2202.04185</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">https://arxiv.org/abs/2202.04185</ee>
+    <url>db/journals/corr/corr2202.html#abs-2202-04185</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/Siren15" publtype="informal">
     <author>Jouni Sirén</author>
@@ -13097,6 +13356,20 @@
     <ee type="oa">https://arxiv.org/abs/2003.11604</ee>
     <url>db/journals/corr/corr2003.html#abs-2003-11604</url>
   </article>
+  <article mdate="2022-07-13" key="journals/corr/abs-2207-02571" publtype="informal">
+    <author>Hideo Bannai</author>
+    <author>Keisuke Goto 0001</author>
+    <author>Masakazu Ishihata</author>
+    <author>Shunsuke Kanda</author>
+    <author>Dominik Köppl</author>
+    <author>Takaaki Nishimoto</author>
+    <title>Computing NP-hard Repetitiveness Measures via MAX-SAT.</title>
+    <year>2022</year>
+    <volume>abs/2207.02571</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">https://doi.org/10.48550/arXiv.2207.02571</ee>
+    <url>db/journals/corr/corr2207.html#abs-2207-02571</url>
+  </article>
   <article mdate="2021-09-14" key="journals/corr/abs-1804-07575" publtype="informal">
     <author>Barbara Geissmann</author>
     <author>Stefano Leucci 0001</author>
@@ -13431,6 +13704,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1808.05879</ee>
     <url>db/journals/corr/corr1808.html#abs-1808-05879</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-0706-2893" publtype="informal">
+    <author>Greg Sepesi</author>
+    <title>Dualheap Sort Algorithm: An Inherently Parallel Generalization of Heapsort</title>
+    <ee type="oa">http://arxiv.org/abs/0706.2893</ee>
+    <year>2007</year>
+    <journal>CoRR</journal>
+    <volume>abs/0706.2893</volume>
+    <url>db/journals/corr/corr0706.html#abs-0706-2893</url>
   </article>
   <article mdate="2019-04-02" key="journals/corr/abs-1903-07775" publtype="informal">
     <author>James Allen Fill</author>
@@ -14795,6 +15077,17 @@
     <ee type="oa">https://arxiv.org/abs/2011.04010</ee>
     <url>db/journals/corr/corr2011.html#abs-2011-04010</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1201-2969" publtype="informal">
+    <author>Ghazi Al-Naymat</author>
+    <author>Sanjay Chawla</author>
+    <author>Javid Taheri</author>
+    <title>SparseDTW: A Novel Approach to Speed up Dynamic Time Warping</title>
+    <ee type="oa">http://arxiv.org/abs/1201.2969</ee>
+    <year>2012</year>
+    <journal>CoRR</journal>
+    <volume>abs/1201.2969</volume>
+    <url>db/journals/corr/corr1201.html#abs-1201-2969</url>
+  </article>
   <article mdate="2019-06-24" key="journals/corr/abs-1906-07874" publtype="informal">
     <author>Sankardeep Chakraborty</author>
     <author>Anish Mukherjee 0001</author>
@@ -14916,12 +15209,12 @@
     <ee type="oa">http://arxiv.org/abs/1801.04425</ee>
     <url>db/journals/corr/corr1801.html#abs-1801-04425</url>
   </article>
-  <article mdate="2019-07-08" key="journals/corr/abs-1803-03530" publtype="informal">
+  <article mdate="2022-12-17" key="journals/corr/abs-1803-03530" publtype="informal">
     <author>Kuan Cheng</author>
     <author>Bernhard Haeupler</author>
     <author>Xin Li 0006</author>
     <author>Amirbehshad Shahrasbi</author>
-    <author>Ke Wu</author>
+    <author>Ke Wu 0001</author>
     <title>Synchronization Strings: Efficient and Fast Deterministic Constructions over Small Alphabets.</title>
     <year>2018</year>
     <volume>abs/1803.03530</volume>
@@ -15698,6 +15991,15 @@
     <ee type="oa">http://arxiv.org/abs/1808.03561</ee>
     <url>db/journals/corr/corr1808.html#abs-1808-03561</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1801-00776" publtype="informal">
+    <author>Yijie Han</author>
+    <title>Sorting Real Numbers in O(n√(log n)) Time and Linear Space.</title>
+    <year>2018</year>
+    <volume>abs/1801.00776</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1801.00776</ee>
+    <url>db/journals/corr/corr1801.html#abs-1801-00776</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1803-04282" publtype="informal">
     <author>Frank Kammer</author>
     <author>Andrej Sajenko</author>
@@ -15877,6 +16179,18 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2102.11797</ee>
     <url>db/journals/corr/corr2102.html#abs-2102-11797</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/PetriMNW16" publtype="informal">
+    <author>Matthias Petri</author>
+    <author>Alistair Moffat</author>
+    <author>P. C. Nagesh</author>
+    <author>Anthony Wirth</author>
+    <title>Access Time Tradeoffs in Archive Compression.</title>
+    <year>2016</year>
+    <volume>abs/1602.08829</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1602.08829</ee>
+    <url>db/journals/corr/corr1602.html#PetriMNW16</url>
   </article>
   <article mdate="2020-06-23" key="journals/corr/abs-2006-11978" publtype="informal">
     <author>Younan Gao</author>
@@ -17922,6 +18236,15 @@
     <ee type="oa">https://arxiv.org/abs/2103.01084</ee>
     <url>db/journals/corr/corr2103.html#abs-2103-01084</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Barbay16" publtype="informal">
+    <author>Jérémy Barbay</author>
+    <title>Optimal Prefix Free Codes With Partial Sorting.</title>
+    <year>2016</year>
+    <volume>abs/1602.00023</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1602.00023</ee>
+    <url>db/journals/corr/corr1602.html#Barbay16</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/NavarroT14" publtype="informal">
     <author>Gonzalo Navarro</author>
     <author>Sharma V. Thankachan</author>
@@ -18311,11 +18634,21 @@
     <volume>abs/1303.6872</volume>
     <url>db/journals/corr/corr1303.html#abs-1303-6872</url>
   </article>
-  <article mdate="2022-01-08" key="journals/csur/Navarro21">
+  <article mdate="2022-12-05" key="journals/jocs/Ferrada22">
+    <author orcid="0000-0002-8334-4540">Héctor Ferrada</author>
+    <title>A sorting algorithm based on ordered block insertions.</title>
+    <pages>101866</pages>
+    <year>2022</year>
+    <volume>64</volume>
+    <journal>J. Comput. Sci.</journal>
+    <ee>https://doi.org/10.1016/j.jocs.2022.101866</ee>
+    <url>db/journals/jocs/jocs64.html#Ferrada22</url>
+  </article>
+  <article mdate="2022-11-23" key="journals/csur/Navarro21">
     <author orcid="0000-0002-2286-741X">Gonzalo Navarro</author>
     <title>Indexing Highly Repetitive String Collections, Part II: Compressed Indexes.</title>
     <pages>26:1-26:32</pages>
-    <year>2021</year>
+    <year>2022</year>
     <volume>54</volume>
     <journal>ACM Comput. Surv.</journal>
     <number>2</number>
@@ -18354,12 +18687,12 @@
     <ee>https://www.wikidata.org/entity/Q61677864</ee>
     <url>db/journals/csur/csur45.html#Al-HafeedhCIKSTY12</url>
   </article>
-  <article mdate="2020-11-17" key="journals/csur/NavarroR20">
+  <article mdate="2022-11-23" key="journals/csur/NavarroR20">
     <author>Gonzalo Navarro</author>
     <author>Javiel Rojas-Ledesma</author>
     <title>Predecessor Search.</title>
     <pages>105:1-105:35</pages>
-    <year>2020</year>
+    <year>2021</year>
     <volume>53</volume>
     <journal>ACM Comput. Surv.</journal>
     <number>5</number>
@@ -18416,11 +18749,11 @@
     <ee>https://www.wikidata.org/entity/Q55881592</ee>
     <url>db/journals/csur/csur33.html#Navarro01</url>
   </article>
-  <article mdate="2021-05-19" key="journals/csur/Navarro21a">
+  <article mdate="2022-11-23" key="journals/csur/Navarro21a">
     <author>Gonzalo Navarro</author>
     <title>Indexing Highly Repetitive String Collections, Part I: Repetitiveness Measures.</title>
     <pages>29:1-29:31</pages>
-    <year>2021</year>
+    <year>2022</year>
     <volume>54</volume>
     <journal>ACM Comput. Surv.</journal>
     <number>2</number>
@@ -19514,6 +19847,18 @@
     <ee>https://doi.org/10.1142/S0129054108005590</ee>
     <url>db/journals/ijfcs/ijfcs19.html#HigaBIT08</url>
   </article>
+  <article mdate="2020-09-05" key="journals/ijfcs/KleinS06">
+    <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <title>Compressed Pattern Matching in Jpeg Images.</title>
+    <pages>1297-1306</pages>
+    <year>2006</year>
+    <volume>17</volume>
+    <journal>Int. J. Found. Comput. Sci.</journal>
+    <number>6</number>
+    <ee>https://doi.org/10.1142/S012905410600442X</ee>
+    <url>db/journals/ijfcs/ijfcs17.html#KleinS06</url>
+  </article>
   <article mdate="2017-06-14" key="journals/ijfcs/FredrikssonMN06">
     <author>Kimmo Fredriksson</author>
     <author orcid="0000-0003-4454-1493">Veli Mäkinen</author>
@@ -19969,6 +20314,18 @@
     <ee type="oa">https://doi.org/10.3390/a13090234</ee>
     <url>db/journals/algorithms/algorithms13.html#BannaiGHPR20</url>
   </article>
+  <article mdate="2019-09-25" key="journals/algorithms/KleinS11">
+    <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <title>Compressed Matching in Dictionaries.</title>
+    <pages>61-74</pages>
+    <year>2011</year>
+    <volume>4</volume>
+    <journal>Algorithms</journal>
+    <number>1</number>
+    <ee type="oa">https://doi.org/10.3390/a4010061</ee>
+    <url>db/journals/algorithms/algorithms4.html#KleinS11</url>
+  </article>
   <article mdate="2021-10-14" key="journals/algorithms/AbeliukCN13">
     <author>Andrés Abeliuk</author>
     <author orcid="0000-0003-3987-8884">Rodrigo Cánovas</author>
@@ -19997,6 +20354,18 @@
     <number>4</number>
     <ee type="oa">https://doi.org/10.3390/a13040103</ee>
     <url>db/journals/algorithms/algorithms13.html#FuruyaTNIBK20</url>
+  </article>
+  <article mdate="2019-09-25" key="journals/algorithms/ShapiraS11">
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <author>James A. Storer</author>
+    <title>Edit Distance with Block Deletions.</title>
+    <pages>40-60</pages>
+    <year>2011</year>
+    <volume>4</volume>
+    <journal>Algorithms</journal>
+    <number>1</number>
+    <ee type="oa">https://doi.org/10.3390/a4010040</ee>
+    <url>db/journals/algorithms/algorithms4.html#ShapiraS11</url>
   </article>
   <article mdate="2019-09-23" key="journals/algorithms/FuruyaK19">
     <author orcid="0000-0003-1918-5802">Isamu Furuya</author>
@@ -20055,8 +20424,8 @@
     <ee type="oa">https://doi.org/10.3390/a2041429</ee>
     <url>db/journals/algorithms/algorithms2.html#NakamuraIBFTS09</url>
   </article>
-  <article mdate="2019-10-22" key="journals/algorithms/NakamuraS19">
-    <author orcid="0000-0002-9615-3479">Kengo Nakamura</author>
+  <article mdate="2023-02-10" key="journals/algorithms/NakamuraS19">
+    <author orcid="0000-0002-9615-3479">Kengo Nakamura 0001</author>
     <author orcid="0000-0002-8212-3682">Kunihiko Sadakane</author>
     <title>Space-Efficient Fully Dynamic DFS in Undirected Graphs.</title>
     <pages>52</pages>
@@ -20164,6 +20533,21 @@
     <journal>Inf. Comput.</journal>
     <ee>https://doi.org/10.1016/j.ic.2019.104461</ee>
     <url>db/journals/iandc/iandc270.html#CrochemoreHKMPR20</url>
+  </article>
+  <article mdate="2022-12-25" key="journals/iandc/RussoCHBF22">
+    <author orcid="0000-0002-1966-1808">Luís M. S. Russo</author>
+    <author>Diogo M. Costa</author>
+    <author orcid="0000-0002-3993-0171">Rui Henriques</author>
+    <author orcid="0000-0002-6856-5185">Hideo Bannai</author>
+    <author>Alexandre P. Francisco</author>
+    <title>Order-preserving pattern matching indeterminate strings.</title>
+    <pages>104924</pages>
+    <year>2022</year>
+    <volume>289</volume>
+    <journal>Inf. Comput.</journal>
+    <number>Part</number>
+    <ee>https://doi.org/10.1016/j.ic.2022.104924</ee>
+    <url>db/journals/iandc/iandc289.html#RussoCHBF22</url>
   </article>
   <article mdate="2021-07-25" key="journals/iandc/GourdelKRRSW20">
     <author>Garance Gourdel</author>
@@ -20475,6 +20859,19 @@
     <ee>https://doi.org/10.1016/j.ic.2021.104779</ee>
     <url>db/journals/iandc/iandc286.html#KociumakaRRSWZ22</url>
   </article>
+  <article mdate="2019-05-31" key="journals/cj/GonenSS19">
+    <author>Mira Gonen</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <author>James A. Storer</author>
+    <title>Edit Distance with Multiple Block Operations†.</title>
+    <pages>657-669</pages>
+    <year>2019</year>
+    <volume>62</volume>
+    <journal>Comput. J.</journal>
+    <number>5</number>
+    <ee>https://doi.org/10.1093/comjnl/bxy066</ee>
+    <url>db/journals/cj/cj62.html#GonenSS19</url>
+  </article>
   <article mdate="2021-07-25" key="journals/cj/FarruggiaGNPS18">
     <author>Andrea Farruggia</author>
     <author orcid="0000-0003-3689-327X">Travis Gagie</author>
@@ -20502,6 +20899,55 @@
     <number>1</number>
     <url>db/journals/cj/cj32.html#CulbersonM89</url>
     <ee>https://doi.org/10.1093/comjnl/32.1.68</ee>
+  </article>
+  <article mdate="2020-09-05" key="journals/cj/KleinS12">
+    <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <title>The String-to-Dictionary Matching Problem.</title>
+    <pages>1347-1356</pages>
+    <year>2012</year>
+    <volume>55</volume>
+    <journal>Comput. J.</journal>
+    <number>11</number>
+    <ee>https://doi.org/10.1093/comjnl/bxs004</ee>
+    <url>db/journals/cj/cj55.html#KleinS12</url>
+  </article>
+  <article mdate="2022-04-09" key="journals/cj/BenzaKS21">
+    <author>Ekaterina Benza</author>
+    <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
+    <author>Dana Shapira</author>
+    <title>Smaller Compressed Suffix Arrays†.</title>
+    <pages>721-730</pages>
+    <year>2021</year>
+    <volume>64</volume>
+    <journal>Comput. J.</journal>
+    <number>5</number>
+    <ee>https://doi.org/10.1093/comjnl/bxaa016</ee>
+    <url>db/journals/cj/cj64.html#BenzaKS21</url>
+  </article>
+  <article mdate="2019-09-25" key="journals/cj/ShapiraS05">
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <author>James A. Storer</author>
+    <title>In Place Differential File Compression.</title>
+    <pages>677-691</pages>
+    <year>2005</year>
+    <volume>48</volume>
+    <journal>Comput. J.</journal>
+    <number>6</number>
+    <ee>https://doi.org/10.1093/comjnl/bxh128</ee>
+    <url>db/journals/cj/cj48.html#ShapiraS05</url>
+  </article>
+  <article mdate="2019-02-13" key="journals/cj/KleinS19">
+    <author>Shmuel T. Klein</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <title>Context Sensitive Rewriting Codes for Flash Memory†.</title>
+    <pages>20-29</pages>
+    <year>2019</year>
+    <volume>62</volume>
+    <journal>Comput. J.</journal>
+    <number>1</number>
+    <ee>https://doi.org/10.1093/comjnl/bxy020</ee>
+    <url>db/journals/cj/cj62.html#KleinS19</url>
   </article>
   <article mdate="2022-01-03" key="journals/cj/FarinaNP12">
     <author orcid="0000-0001-8263-3298">Antonio Fariña</author>
@@ -21125,6 +21571,17 @@
     <crossref>conf/isaac/2017</crossref>
     <url>db/conf/isaac/isaac2017.html#FujishigeNIBT17</url>
   </inproceedings>
+  <inproceedings mdate="2022-12-14" key="conf/isaac/KimC22">
+    <author>Sung-Hwan Kim</author>
+    <author>Hwan-Gue Cho</author>
+    <title>Simple Order-Isomorphic Matching Index with Expected Compact Space.</title>
+    <pages>61:1-61:17</pages>
+    <year>2022</year>
+    <booktitle>ISAAC</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ISAAC.2022.61</ee>
+    <crossref>conf/isaac/2022</crossref>
+    <url>db/conf/isaac/isaac2022.html#KimC22</url>
+  </inproceedings>
   <inproceedings mdate="2021-10-14" key="conf/isaac/DulebaGJ20">
     <author>Maciej Duleba</author>
     <author orcid="0000-0002-6993-5440">Pawel Gawrychowski</author>
@@ -21217,6 +21674,18 @@
     <ee>https://doi.org/10.1007/978-3-642-45030-3_7</ee>
     <crossref>conf/isaac/2013</crossref>
     <url>db/conf/isaac/isaac2013.html#BelazzouguiPRV13</url>
+  </inproceedings>
+  <inproceedings mdate="2022-12-14" key="conf/isaac/DasIN22">
+    <author>Rathish Das</author>
+    <author>John Iacono</author>
+    <author>Yakov Nekrich</author>
+    <title>External-Memory Dictionaries with Worst-Case Update Cost.</title>
+    <pages>21:1-21:13</pages>
+    <year>2022</year>
+    <booktitle>ISAAC</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ISAAC.2022.21</ee>
+    <crossref>conf/isaac/2022</crossref>
+    <url>db/conf/isaac/isaac2022.html#DasIN22</url>
   </inproceedings>
   <inproceedings mdate="2017-05-19" key="conf/isaac/LewensteinMRT13">
     <author>Moshe Lewenstein</author>
@@ -21831,6 +22300,18 @@
     <crossref>conf/isaac/2013</crossref>
     <url>db/conf/isaac/isaac2013.html#ArgeT13</url>
   </inproceedings>
+  <inproceedings mdate="2022-12-14" key="conf/isaac/MienoFI22">
+    <author>Takuya Mieno</author>
+    <author>Mitsuru Funakoshi</author>
+    <author>Shunsuke Inenaga</author>
+    <title>Computing Palindromes on a Trie in Linear Time.</title>
+    <pages>15:1-15:15</pages>
+    <year>2022</year>
+    <booktitle>ISAAC</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ISAAC.2022.15</ee>
+    <crossref>conf/isaac/2022</crossref>
+    <url>db/conf/isaac/isaac2022.html#MienoFI22</url>
+  </inproceedings>
   <inproceedings mdate="2021-11-30" key="conf/isaac/PatelS21">
     <author>Dhrumil Patel</author>
     <author>Rahul Shah</author>
@@ -22218,6 +22699,31 @@
     <crossref>conf/isaac/2016</crossref>
     <url>db/conf/isaac/isaac2016.html#0002HST16</url>
   </inproceedings>
+  <inproceedings mdate="2022-12-14" key="conf/isaac/AkutsuMNKUS22">
+    <author>Tatsuya Akutsu</author>
+    <author>Tomoya Mori</author>
+    <author>Naotoshi Nakamura</author>
+    <author>Satoshi Kozawa</author>
+    <author>Yuhei Ueno</author>
+    <author>Thomas N. Sato</author>
+    <title>On the Complexity of Tree Edit Distance with Variables.</title>
+    <pages>44:1-44:14</pages>
+    <year>2022</year>
+    <booktitle>ISAAC</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ISAAC.2022.44</ee>
+    <crossref>conf/isaac/2022</crossref>
+    <url>db/conf/isaac/isaac2022.html#AkutsuMNKUS22</url>
+  </inproceedings>
+  <inproceedings mdate="2022-12-14" key="conf/isaac/Holland22">
+    <author>William L. Holland</author>
+    <title>Succinct List Indexing in Optimal Time.</title>
+    <pages>65:1-65:17</pages>
+    <year>2022</year>
+    <booktitle>ISAAC</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ISAAC.2022.65</ee>
+    <crossref>conf/isaac/2022</crossref>
+    <url>db/conf/isaac/isaac2022.html#Holland22</url>
+  </inproceedings>
   <inproceedings mdate="2018-11-02" key="conf/pkdd/IEBT12">
     <author>Tomohiro I</author>
     <author>Yuki Enokuma</author>
@@ -22321,12 +22827,12 @@
     <crossref>conf/ercimdl/2009</crossref>
     <url>db/conf/ercimdl/ecdl2009.html#BrisaboaCN09</url>
   </inproceedings>
-  <inproceedings mdate="2021-07-15" key="conf/soda/ChengHLSW19">
+  <inproceedings mdate="2022-12-17" key="conf/soda/ChengHLSW19">
     <author>Kuan Cheng</author>
     <author>Bernhard Haeupler</author>
     <author>Xin Li 0006</author>
     <author orcid="0000-0002-4013-9096">Amirbehshad Shahrasbi</author>
-    <author>Ke Wu</author>
+    <author>Ke Wu 0001</author>
     <title>Synchronization Strings: Highly Efficient Deterministic Constructions over Small Alphabets.</title>
     <pages>2185-2204</pages>
     <year>2019</year>
@@ -22687,8 +23193,8 @@
     <crossref>conf/soda/2011</crossref>
     <url>db/conf/soda/soda2011.html#AfshaniBZ11</url>
   </inproceedings>
-  <inproceedings mdate="2022-04-12" key="conf/soda/DudekGGS22">
-    <author>Bartlomiej Dudek 0001</author>
+  <inproceedings mdate="2022-12-07" key="conf/soda/DudekGGS22">
+    <author orcid="0000-0003-2652-995X">Bartlomiej Dudek 0001</author>
     <author>Pawel Gawrychowski</author>
     <author>Garance Gourdel</author>
     <author>Tatiana Starikovskaya</author>
@@ -23497,8 +24003,8 @@
     <crossref>conf/walcom/2020</crossref>
     <url>db/conf/walcom/walcom2020.html#GuSFLP20</url>
   </inproceedings>
-  <inproceedings mdate="2017-11-06" key="conf/walcom/NakamuraS17">
-    <author>Kengo Nakamura</author>
+  <inproceedings mdate="2023-02-10" key="conf/walcom/NakamuraS17">
+    <author>Kengo Nakamura 0001</author>
     <author orcid="0000-0002-8212-3682">Kunihiko Sadakane</author>
     <title>A Space-Efficient Algorithm for the Dynamic DFS Problem in Undirected Graphs.</title>
     <pages>295-307</pages>
@@ -23625,6 +24131,37 @@
     <booktitle>RECOMB</booktitle>
     <ee>https://doi.org/10.1145/369133.369220</ee>
     <url>db/conf/recomb/recomb2001.html#NavarroR01</url>
+  </inproceedings>
+  <inproceedings mdate="2018-11-06" key="conf/innovations/BoyleN16">
+    <author>Elette Boyle</author>
+    <author>Moni Naor</author>
+    <title>Is There an Oblivious RAM Lower Bound?</title>
+    <pages>357-368</pages>
+    <year>2016</year>
+    <booktitle>ITCS</booktitle>
+    <ee>https://doi.org/10.1145/2840728.2840761</ee>
+    <crossref>conf/innovations/2016</crossref>
+    <url>db/conf/innovations/innovations2016.html#BoyleN16</url>
+  </inproceedings>
+  <inproceedings mdate="2019-05-02" key="conf/innovations/Ben-Eliezer19">
+    <author>Omri Ben-Eliezer</author>
+    <title>Testing Local Properties of Arrays.</title>
+    <pages>11:1-11:20</pages>
+    <year>2019</year>
+    <booktitle>ITCS</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ITCS.2019.11</ee>
+    <crossref>conf/innovations/2019</crossref>
+    <url>db/conf/innovations/innovations2019.html#Ben-Eliezer19</url>
+  </inproceedings>
+  <inproceedings mdate="2020-01-06" key="conf/innovations/Hirahara20">
+    <author>Shuichi Hirahara</author>
+    <title>Unexpected Power of Random Strings.</title>
+    <pages>41:1-41:13</pages>
+    <year>2020</year>
+    <booktitle>ITCS</booktitle>
+    <ee type="oa">https://doi.org/10.4230/LIPIcs.ITCS.2020.41</ee>
+    <crossref>conf/innovations/2020</crossref>
+    <url>db/conf/innovations/innovations2020.html#Hirahara20</url>
   </inproceedings>
   <inproceedings mdate="2018-11-06" key="conf/wmpi/HallnorR04">
     <author>Erik G. Hallnor</author>
@@ -24253,8 +24790,8 @@
     <crossref>conf/wea/2014</crossref>
     <url>db/conf/wea/sea2014.html#SepulvedaEFS14</url>
   </inproceedings>
-  <inproceedings mdate="2020-10-25" key="conf/wea/BaderGP16">
-    <author orcid="0000-0003-3129-3814">Johannes Bader</author>
+  <inproceedings mdate="2022-12-13" key="conf/wea/BaderGP16">
+    <author orcid="0000-0003-3129-3814">Johannes Bader 0001</author>
     <author>Simon Gog</author>
     <author>Matthias Petri</author>
     <title>Practical Variable Length Gap Pattern Matching.</title>
@@ -26461,8 +26998,8 @@
     <url>db/conf/cpm/cpm93.html#IliopoulosMP93</url>
     <ee>https://doi.org/10.1007/BFb0029796</ee>
   </inproceedings>
-  <inproceedings mdate="2017-05-26" key="conf/cpm/KolpakovR06">
-    <author>Roman Kolpakov</author>
+  <inproceedings mdate="2022-12-07" key="conf/cpm/KolpakovR06">
+    <author orcid="0000-0003-1800-853X">Roman Kolpakov</author>
     <author>Mathieu Raffinot</author>
     <title>New Algorithms for Text Fingerprinting.</title>
     <pages>342-353</pages>
@@ -27503,9 +28040,9 @@
     <crossref>conf/cpm/2015</crossref>
     <url>db/conf/cpm/cpm2015.html#BilleGKLV15</url>
   </inproceedings>
-  <inproceedings mdate="2017-05-26" key="conf/cpm/GasieniecK04">
+  <inproceedings mdate="2022-12-07" key="conf/cpm/GasieniecK04">
     <author>Leszek Gasieniec</author>
-    <author>Roman M. Kolpakov</author>
+    <author orcid="0000-0003-1800-853X">Roman M. Kolpakov</author>
     <title>Real-Time String Matching in Sublinear Space.</title>
     <pages>117-129</pages>
     <ee>https://doi.org/10.1007/978-3-540-27801-6_9</ee>
@@ -34189,8 +34726,8 @@
     <booktitle>CPM</booktitle>
     <url>db/conf/cpm/cpm2000.html#CzumajG00</url>
   </inproceedings>
-  <inproceedings mdate="2018-11-14" key="conf/cpm/KolpakovK08">
-    <author>Roman Kolpakov</author>
+  <inproceedings mdate="2022-12-07" key="conf/cpm/KolpakovK08">
+    <author orcid="0000-0003-1800-853X">Roman Kolpakov</author>
     <author orcid="0000-0001-5899-5424">Gregory Kucherov</author>
     <title>Searching for Gapped Palindromes.</title>
     <pages>18-30</pages>
@@ -35077,6 +35614,18 @@
     <ee>http://doi.ieeecomputersociety.org/10.1109/SFCS.1998.743441</ee>
     <url>db/conf/focs/focs98.html#FarachFM98</url>
   </inproceedings>
+  <inproceedings mdate="2022-12-31" key="conf/focs/Charalampopoulos22">
+    <author>Panagiotis Charalampopoulos</author>
+    <author>Tomasz Kociumaka</author>
+    <author>Philip Wellnitz</author>
+    <title>Faster Pattern Matching under Edit Distance : A Reduction to Dynamic Puzzle Matching and the Seaweed Monoid of Permutation Matrices.</title>
+    <pages>698-707</pages>
+    <year>2022</year>
+    <crossref>conf/focs/2022</crossref>
+    <booktitle>FOCS</booktitle>
+    <ee>https://doi.org/10.1109/FOCS54457.2022.00072</ee>
+    <url>db/conf/focs/focs2022.html#Charalampopoulos22</url>
+  </inproceedings>
   <inproceedings mdate="2021-05-07" key="conf/focs/FerraginaLMM05">
     <author orcid="0000-0003-1353-360X">Paolo Ferragina</author>
     <author>Fabrizio Luccio</author>
@@ -35102,6 +35651,19 @@
     <ee>https://doi.org/10.1109/FOCS46700.2020.00095</ee>
     <crossref>conf/focs/2020</crossref>
     <url>db/conf/focs/focs2020.html#Charalampopoulos20</url>
+  </inproceedings>
+  <inproceedings mdate="2022-12-31" key="conf/focs/AndoniNS022">
+    <author>Alexandr Andoni</author>
+    <author>Negev Shekel Nosatzki</author>
+    <author>Sandip Sinha</author>
+    <author>Clifford Stein 0001</author>
+    <title>Estimating the Longest Increasing Subsequence in Nearly Optimal Time.</title>
+    <pages>708-719</pages>
+    <year>2022</year>
+    <crossref>conf/focs/2022</crossref>
+    <booktitle>FOCS</booktitle>
+    <ee>https://doi.org/10.1109/FOCS54457.2022.00073</ee>
+    <url>db/conf/focs/focs2022.html#AndoniNS022</url>
   </inproceedings>
   <inproceedings mdate="2020-12-05" key="conf/focs/RubinsteinSSS19">
     <author>Aviad Rubinstein</author>
@@ -35192,6 +35754,19 @@
     <ee>https://doi.org/10.1109/SFCS.1979.45</ee>
     <ee>http://doi.ieeecomputersociety.org/10.1109/SFCS.1979.45</ee>
   </inproceedings>
+  <inproceedings mdate="2022-12-31" key="conf/focs/GoldenbergKKS22">
+    <author>Elazar Goldenberg</author>
+    <author>Tomasz Kociumaka</author>
+    <author>Robert Krauthgamer</author>
+    <author>Barna Saha</author>
+    <title>Gap Edit Distance via Non-Adaptive Queries: Simple and Optimal.</title>
+    <pages>674-685</pages>
+    <year>2022</year>
+    <crossref>conf/focs/2022</crossref>
+    <booktitle>FOCS</booktitle>
+    <ee>https://doi.org/10.1109/FOCS54457.2022.00070</ee>
+    <url>db/conf/focs/focs2022.html#GoldenbergKKS22</url>
+  </inproceedings>
   <inproceedings mdate="2017-05-19" key="conf/focs/BringmannK15">
     <author>Karl Bringmann</author>
     <author>Marvin Künnemann</author>
@@ -35203,6 +35778,21 @@
     <ee>http://doi.ieeecomputersociety.org/10.1109/FOCS.2015.15</ee>
     <crossref>conf/focs/2015</crossref>
     <url>db/conf/focs/focs2015.html#BringmannK15</url>
+  </inproceedings>
+  <inproceedings mdate="2022-12-31" key="conf/focs/BenderCFKKW22">
+    <author>Michael A. Bender</author>
+    <author>Alex Conway</author>
+    <author>Martin Farach-Colton</author>
+    <author>Hanna Komlós</author>
+    <author>William Kuszmaul</author>
+    <author>Nicole Wein</author>
+    <title>Online List Labeling: Breaking the log<sup>2</sup>n Barrier.</title>
+    <pages>980-990</pages>
+    <year>2022</year>
+    <crossref>conf/focs/2022</crossref>
+    <booktitle>FOCS</booktitle>
+    <ee>https://doi.org/10.1109/FOCS54457.2022.00096</ee>
+    <url>db/conf/focs/focs2022.html#BenderCFKKW22</url>
   </inproceedings>
   <inproceedings mdate="2021-01-25" key="conf/focs/AndoniN20">
     <author>Alexandr Andoni</author>
@@ -35289,6 +35879,16 @@
     <ee>https://doi.org/10.1109/SFCS.2003.1238199</ee>
     <ee>http://doi.ieeecomputersociety.org/10.1109/SFCS.2003.1238199</ee>
     <url>db/conf/focs/focs2003.html#HonSS03</url>
+  </inproceedings>
+  <inproceedings mdate="2022-12-31" key="conf/focs/Yu22">
+    <author>Huacheng Yu</author>
+    <title>Strong XOR Lemma for Communication with Bounded Rounds : (extended abstract).</title>
+    <pages>1186-1192</pages>
+    <year>2022</year>
+    <crossref>conf/focs/2022</crossref>
+    <booktitle>FOCS</booktitle>
+    <ee>https://doi.org/10.1109/FOCS54457.2022.00114</ee>
+    <url>db/conf/focs/focs2022.html#Yu22</url>
   </inproceedings>
   <inproceedings mdate="2017-05-19" key="conf/focs/Kopelowitz12">
     <author>Tsvi Kopelowitz</author>
@@ -35435,11 +36035,11 @@
     <crossref>conf/focs/2020</crossref>
     <url>db/conf/focs/focs2020.html#LiuP20</url>
   </inproceedings>
-  <inproceedings mdate="2020-07-02" key="conf/focs/ChakrabortyDGKS18">
+  <inproceedings mdate="2022-12-07" key="conf/focs/ChakrabortyDGKS18">
     <author>Diptarka Chakraborty</author>
     <author>Debarati Das 0001</author>
     <author>Elazar Goldenberg</author>
-    <author>Michal Koucký 0001</author>
+    <author orcid="0000-0003-0808-2269">Michal Koucký 0001</author>
     <author>Michael E. Saks</author>
     <title>Approximating Edit Distance within Constant Factor in Truly Sub-Quadratic Time.</title>
     <pages>979-990</pages>
@@ -35471,6 +36071,21 @@
     <ee>https://doi.org/10.1109/FOCS52979.2021.00082</ee>
     <crossref>conf/focs/2021</crossref>
     <url>db/conf/focs/focs2021.html#Mao21</url>
+  </inproceedings>
+  <inproceedings mdate="2022-12-31" key="conf/focs/0001GHKSS22">
+    <author>Debarati Das 0001</author>
+    <author>Jacob Gilbert</author>
+    <author>MohammadTaghi Hajiaghayi</author>
+    <author>Tomasz Kociumaka</author>
+    <author>Barna Saha</author>
+    <author>Hamed Saleh</author>
+    <title>Õ(n+poly(k))-time Algorithm for Bounded Tree Edit Distance.</title>
+    <pages>686-697</pages>
+    <year>2022</year>
+    <crossref>conf/focs/2022</crossref>
+    <booktitle>FOCS</booktitle>
+    <ee>https://doi.org/10.1109/FOCS54457.2022.00071</ee>
+    <url>db/conf/focs/focs2022.html#0001GHKSS22</url>
   </inproceedings>
   <inproceedings mdate="2020-06-15" key="conf/focs/LovettP10">
     <author orcid="0000-0003-4552-1443">Shachar Lovett</author>
@@ -35650,11 +36265,11 @@
     <url>db/conf/esa/esa2000.html#Munro00</url>
     <ee>https://doi.org/10.1007/3-540-45253-2_31</ee>
   </inproceedings>
-  <inproceedings mdate="2022-09-26" key="conf/esa/Charalampopoulos22">
+  <inproceedings mdate="2022-12-07" key="conf/esa/Charalampopoulos22">
     <author>Panagiotis Charalampopoulos</author>
     <author>Tomasz Kociumaka</author>
     <author>Jakub Radoszewski</author>
-    <author>Solon P. Pissis</author>
+    <author orcid="0000-0002-1445-1932">Solon P. Pissis</author>
     <author>Wojciech Rytter</author>
     <author>Tomasz Walen</author>
     <author>Wiktor Zuba</author>
@@ -35861,8 +36476,8 @@
     <crossref>conf/esa/2008</crossref>
     <url>db/conf/esa/esa2008.html#OkanoharaS08</url>
   </inproceedings>
-  <inproceedings mdate="2017-05-26" key="conf/esa/Jowhari12">
-    <author>Hossein Jowhari</author>
+  <inproceedings mdate="2022-12-07" key="conf/esa/Jowhari12">
+    <author orcid="0000-0001-9032-9958">Hossein Jowhari</author>
     <title>Efficient Communication Protocols for Deciding Edit Distance.</title>
     <pages>648-658</pages>
     <year>2012</year>
@@ -36008,8 +36623,8 @@
     <ee>https://doi.org/10.1007/11841036_67</ee>
     <url>db/conf/esa/esa2006.html#FerraginaGM06</url>
   </inproceedings>
-  <inproceedings mdate="2022-09-26" key="conf/esa/SzykulaZ22">
-    <author>Marek Szykula</author>
+  <inproceedings mdate="2022-12-07" key="conf/esa/SzykulaZ22">
+    <author orcid="0000-0001-5349-468X">Marek Szykula</author>
     <author>Adam Zyzik</author>
     <title>An Improved Algorithm for Finding the Shortest Synchronizing Words.</title>
     <pages>85:1-85:15</pages>
@@ -36822,8 +37437,8 @@
     <crossref>conf/icalp/2012-1</crossref>
     <url>db/conf/icalp/icalp2012-1.html#Jez12</url>
   </inproceedings>
-  <inproceedings mdate="2021-07-06" key="conf/icalp/0001021">
-    <author>Michal Koucký 0001</author>
+  <inproceedings mdate="2022-12-07" key="conf/icalp/0001021">
+    <author orcid="0000-0003-0808-2269">Michal Koucký 0001</author>
     <author>Karel Král 0002</author>
     <title>Sorting Short Integers.</title>
     <pages>88:1-88:17</pages>
@@ -37348,6 +37963,19 @@
     <ee>https://doi.org/10.1007/978-3-642-36899-8_12</ee>
     <crossref>conf/birthday/2013ahlswede</crossref>
     <url>db/conf/birthday/ahlswede2013.html#Gagie13</url>
+  </inproceedings>
+  <inproceedings mdate="2023-01-15" key="conf/iwcia/ParamasivanKAD22">
+    <author orcid="0000-0002-1509-6557">Meenakshi Paramasivan</author>
+    <author orcid="0000-0002-1802-628X">R. Krishna Kumari</author>
+    <author orcid="0000-0001-5652-4346">R. Arulprakasam</author>
+    <author>V. Rajkumar Dare</author>
+    <title>Lyndon Partial Words and Arrays with Applications.</title>
+    <pages>226-244</pages>
+    <year>2022</year>
+    <booktitle>IWCIA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-031-23612-9_14</ee>
+    <crossref>conf/iwcia/2022</crossref>
+    <url>db/conf/iwcia/iwcia2022.html#ParamasivanKAD22</url>
   </inproceedings>
   <inproceedings mdate="2020-09-05" key="conf/cc/ZhangG02">
     <author>Youtao Zhang</author>
@@ -37940,9 +38568,9 @@
     <crossref>conf/lata/2020</crossref>
     <url>db/conf/lata/lata2020.html#BonizzoniFZZ20</url>
   </inproceedings>
-  <inproceedings mdate="2018-11-14" key="conf/lata/CrochemoreKK16">
+  <inproceedings mdate="2022-12-07" key="conf/lata/CrochemoreKK16">
     <author orcid="0000-0003-1087-1419">Maxime Crochemore</author>
-    <author>Roman Kolpakov</author>
+    <author orcid="0000-0003-1800-853X">Roman Kolpakov</author>
     <author orcid="0000-0001-5899-5424">Gregory Kucherov</author>
     <title>Optimal Bounds for Computing \alpha α -gapped Repeats.</title>
     <pages>245-255</pages>
@@ -38118,11 +38746,11 @@
     <booktitle>Euro-Par</booktitle>
     <url>db/conf/europar/europar2003.html#TakagiH03</url>
   </inproceedings>
-  <inproceedings mdate="2019-11-15" key="conf/sea2/CalikDDP19">
+  <inproceedings mdate="2023-02-03" key="conf/sea2/CalikDDP19">
     <author>Çagdas Çalik</author>
     <author>Morris Dworkin</author>
     <author>Nathan Dykas</author>
-    <author>René Peralta</author>
+    <author>René Peralta 0001</author>
     <title>Searching for Best Karatsuba Recurrences.</title>
     <pages>332-342</pages>
     <year>2019</year>
@@ -42678,6 +43306,19 @@
     <crossref>conf/wia/2009</crossref>
     <url>db/conf/wia/ciaa2009.html#Navarro09</url>
   </inproceedings>
+  <inproceedings mdate="2021-07-01" key="conf/wia/ArbitmanKPS21">
+    <author>Guy Arbitman</author>
+    <author>Shmuel T. Klein</author>
+    <author>Pierre Peterlongo</author>
+    <author>Dana Shapira</author>
+    <title>Approximate Hashing for Bioinformatics.</title>
+    <pages>178-189</pages>
+    <year>2021</year>
+    <booktitle>CIAA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-030-79121-6_15</ee>
+    <crossref>conf/wia/2021</crossref>
+    <url>db/conf/wia/ciaa2021.html#ArbitmanKPS21</url>
+  </inproceedings>
   <inproceedings mdate="2019-05-29" key="conf/ccp/Kulekci11">
     <author orcid="0000-0002-4583-6261">M. Oguzhan Külekci</author>
     <title>A Method to Ensure the Confidentiality of the Compressed Data.</title>
@@ -42724,8 +43365,8 @@
     <crossref>conf/ccp/2011</crossref>
     <url>db/conf/ccp/ccp2011.html#BurmistrovK11</url>
   </inproceedings>
-  <inproceedings mdate="2019-10-15" key="conf/ccp/KolpakovKS11">
-    <author>Roman Kolpakov</author>
+  <inproceedings mdate="2022-12-07" key="conf/ccp/KolpakovKS11">
+    <author orcid="0000-0003-1800-853X">Roman Kolpakov</author>
     <author orcid="0000-0001-5899-5424">Gregory Kucherov</author>
     <author>Tatiana Starikovskaya</author>
     <title>Pattern Matching on Sparse Suffix Trees.</title>
@@ -43468,6 +44109,17 @@
     <crossref>conf/dcc/2014</crossref>
     <url>db/conf/dcc/dcc2014.html#KleinS14</url>
   </inproceedings>
+  <inproceedings mdate="2020-09-05" key="conf/dcc/KleinS16">
+    <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <title>Analysis of a Rewriting Compression System for Flash Memory.</title>
+    <pages>611</pages>
+    <year>2016</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2016.64</ee>
+    <crossref>conf/dcc/2016</crossref>
+    <url>db/conf/dcc/dcc2016.html#KleinS16</url>
+  </inproceedings>
   <inproceedings mdate="2019-09-25" key="conf/dcc/Hernandez-Illera15">
     <author>Antonio Hernández-Illera</author>
     <author>Miguel A. Martínez-Prieto</author>
@@ -43518,6 +44170,18 @@
     <ee>https://doi.org/10.1109/DCC.2007.70</ee>
     <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2007.70</ee>
     <url>db/conf/dcc/dcc2007.html#NakamuraBIT07</url>
+  </inproceedings>
+  <inproceedings mdate="2020-09-05" key="conf/dcc/BaruchSK18">
+    <author>Gilad Baruch</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
+    <title>Compressed Hierarchical Clustering.</title>
+    <pages>399</pages>
+    <year>2018</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2018.00052</ee>
+    <crossref>conf/dcc/2018</crossref>
+    <url>db/conf/dcc/dcc2018.html#BaruchSK18</url>
   </inproceedings>
   <inproceedings mdate="2022-06-23" key="conf/dcc/HashemiRC16">
     <author orcid="0000-0003-4957-4630">Ali Hashemi 0002</author>
@@ -43582,8 +44246,8 @@
     <crossref>conf/dcc/2013</crossref>
     <url>db/conf/dcc/dcc2013.html#DuttaLRR13</url>
   </inproceedings>
-  <inproceedings mdate="2022-07-14" key="conf/dcc/AlankoCP22">
-    <author>Jarno Alanko</author>
+  <inproceedings mdate="2022-12-07" key="conf/dcc/AlankoCP22">
+    <author orcid="0000-0002-8003-9225">Jarno Alanko</author>
     <author>Nicola Cotumaccio</author>
     <author>Nicola Prezza</author>
     <title>Linear-time Minimization of Wheeler DFAs.</title>
@@ -43832,6 +44496,18 @@
     <crossref>conf/dcc/2017</crossref>
     <url>db/conf/dcc/dcc2017.html#CibejM17</url>
   </inproceedings>
+  <inproceedings mdate="2020-09-05" key="conf/dcc/HerzbergKS15">
+    <author>Josh Herzberg</author>
+    <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <title>Enhanced Direct Access to Huffman Encoded Files.</title>
+    <pages>447</pages>
+    <year>2015</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2015.65</ee>
+    <crossref>conf/dcc/2015</crossref>
+    <url>db/conf/dcc/dcc2015.html#HerzbergKS15</url>
+  </inproceedings>
   <inproceedings mdate="2017-09-16" key="conf/dcc/0002HS17">
     <author>Arnab Ganguly 0002</author>
     <author orcid="0000-0002-0570-2904">Wing-Kai Hon</author>
@@ -43844,9 +44520,9 @@
     <crossref>conf/dcc/2017</crossref>
     <url>db/conf/dcc/dcc2017.html#0002HS17</url>
   </inproceedings>
-  <inproceedings mdate="2022-07-14" key="conf/dcc/DongesPR22">
+  <inproceedings mdate="2022-12-07" key="conf/dcc/DongesPR22">
     <author>Saska Dönges</author>
-    <author>Simon J. Puglisi</author>
+    <author orcid="0000-0001-7668-7636">Simon J. Puglisi</author>
     <author>Rajeev Raman</author>
     <title>On Dynamic Bitvector Implementations.</title>
     <pages>252-261</pages>
@@ -43998,6 +44674,18 @@
     <ee>https://doi.org/10.1109/DCC.2018.00040</ee>
     <crossref>conf/dcc/2018</crossref>
     <url>db/conf/dcc/dcc2018.html#SepulvedaKKP18</url>
+  </inproceedings>
+  <inproceedings mdate="2019-09-25" key="conf/dcc/ShapiraS03">
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <author>James A. Storer</author>
+    <title>In-Place Differential File Compression.</title>
+    <pages>263-272</pages>
+    <year>2003</year>
+    <crossref>conf/dcc/2003</crossref>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2003.1194017</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2003.1194017</ee>
+    <url>db/conf/dcc/dcc2003.html#ShapiraS03</url>
   </inproceedings>
   <inproceedings mdate="2019-09-25" key="conf/dcc/ShermerAS10">
     <author>Erez Shermer</author>
@@ -44157,6 +44845,18 @@
     <ee>https://doi.org/10.1109/DCC.2015.53</ee>
     <crossref>conf/dcc/2015</crossref>
     <url>db/conf/dcc/dcc2015.html#KulekciT15</url>
+  </inproceedings>
+  <inproceedings mdate="2017-05-23" key="conf/dcc/DaptardarS04">
+    <author>Ajay H. Daptardar</author>
+    <author>Dana Shapira</author>
+    <title>Adapting the Knuth-Morris-Pratt Algorithm for Pattern Matching in Huffman Encoded Texts.</title>
+    <pages>535</pages>
+    <year>2004</year>
+    <crossref>conf/dcc/2004</crossref>
+    <booktitle>Data Compression Conference</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2004.1281511</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2004.1281511</ee>
+    <url>db/conf/dcc/dcc2004.html#DaptardarS04</url>
   </inproceedings>
   <inproceedings mdate="2020-09-05" key="conf/dcc/KleinOS19">
     <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
@@ -44485,7 +45185,7 @@
     <crossref>conf/dcc/2020</crossref>
     <url>db/conf/dcc/dcc2020.html#RussoCNF20</url>
   </inproceedings>
-  <inproceedings mdate="2022-10-21" key="conf/dcc/GuptaHSV06">
+  <inproceedings mdate="2022-12-29" key="conf/dcc/GuptaHSV06">
     <author>Ankur Gupta 0003</author>
     <author orcid="0000-0002-0570-2904">Wing-Kai Hon</author>
     <author>Rahul Shah</author>
@@ -44789,6 +45489,18 @@
     <crossref>conf/dcc/2010</crossref>
     <url>db/conf/dcc/dcc2010.html#GogF10</url>
   </inproceedings>
+  <inproceedings mdate="2020-09-05" key="conf/dcc/KleinS00">
+    <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
+    <author>Dana Shapira</author>
+    <title>A New Compression Method for Compressed Matching.</title>
+    <pages>400-409</pages>
+    <year>2000</year>
+    <crossref>conf/dcc/2000</crossref>
+    <booktitle>Data Compression Conference</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2000.838180</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2000.838180</ee>
+    <url>db/conf/dcc/dcc2000.html#KleinS00</url>
+  </inproceedings>
   <inproceedings mdate="2021-04-09" key="conf/dcc/FanDLX17">
     <author>Wenjing Fan</author>
     <author>Wenrui Dai</author>
@@ -44979,6 +45691,18 @@
     <ee>https://doi.org/10.1109/DCC.2016.97</ee>
     <crossref>conf/dcc/2016</crossref>
     <url>db/conf/dcc/dcc2016.html#ProchazkaH16</url>
+  </inproceedings>
+  <inproceedings mdate="2020-09-05" key="conf/dcc/KleinS01">
+    <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
+    <author>Dana Shapira</author>
+    <title>Pattern Matching in Huffman Encoded Texts.</title>
+    <pages>449-458</pages>
+    <year>2001</year>
+    <crossref>conf/dcc/2001</crossref>
+    <booktitle>Data Compression Conference</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2001.917176</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2001.917176</ee>
+    <url>db/conf/dcc/dcc2001.html#KleinS01</url>
   </inproceedings>
   <inproceedings mdate="2017-09-16" key="conf/dcc/HonTSV13">
     <author orcid="0000-0002-0570-2904">Wing-Kai Hon</author>
@@ -45256,6 +45980,18 @@
     <ee>https://doi.org/10.1109/DCC.2014.87</ee>
     <crossref>conf/dcc/2014</crossref>
     <url>db/conf/dcc/dcc2014.html#KarkkainenKP14a</url>
+  </inproceedings>
+  <inproceedings mdate="2020-09-05" key="conf/dcc/KleinS05">
+    <author orcid="0000-0002-9478-3303">Shmuel Tomi Klein</author>
+    <author>Dana Shapira</author>
+    <title>Compressed Pattern Matching in JPEG Images.</title>
+    <pages>466</pages>
+    <year>2005</year>
+    <crossref>conf/dcc/2005</crossref>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2005.26</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2005.26</ee>
+    <url>db/conf/dcc/dcc2005.html#KleinS05</url>
   </inproceedings>
   <inproceedings mdate="2019-06-02" key="conf/dcc/PratasPF16">
     <author orcid="0000-0003-1176-552X">Diogo Pratas</author>
@@ -45865,6 +46601,19 @@
     <crossref>conf/dcc/2014</crossref>
     <url>db/conf/dcc/dcc2014.html#GotoB14</url>
   </inproceedings>
+  <inproceedings mdate="2021-05-17" key="conf/dcc/ArbitmanKPS21">
+    <author>Guy Arbitman</author>
+    <author>Shmuel T. Klein</author>
+    <author>Pierre Peterlongo</author>
+    <author>Dana Shapira</author>
+    <title>Approximate Hashing for Bioinformatics.</title>
+    <pages>337</pages>
+    <year>2021</year>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC50243.2021.00072</ee>
+    <crossref>conf/dcc/2021</crossref>
+    <url>db/conf/dcc/dcc2021.html#ArbitmanKPS21</url>
+  </inproceedings>
   <inproceedings mdate="2017-06-15" key="conf/dcc/OsorioG12">
     <author orcid="0000-0001-8768-2240">Roberto R. Osorio</author>
     <author>Patricia González</author>
@@ -46259,6 +47008,18 @@
     <crossref>conf/dcc/2021</crossref>
     <url>db/conf/dcc/dcc2021.html#MatsushitaI21</url>
   </inproceedings>
+  <inproceedings mdate="2020-09-05" key="conf/dcc/KleinS02">
+    <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <title>Searching in Compressed Dictionaries.</title>
+    <pages>142-</pages>
+    <year>2002</year>
+    <crossref>conf/dcc/2002</crossref>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2002.999952</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2002.999952</ee>
+    <url>db/conf/dcc/dcc2002.html#KleinS02</url>
+  </inproceedings>
   <inproceedings mdate="2017-05-23" key="conf/dcc/DubeB08">
     <author>Danny Dubé</author>
     <author>Vincent Beaudoin</author>
@@ -46343,6 +47104,18 @@
     <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2005.87</ee>
     <url>db/conf/dcc/dcc2005.html#PuglisiST05</url>
   </inproceedings>
+  <inproceedings mdate="2020-09-05" key="conf/dcc/KleinS07">
+    <author orcid="0000-0002-9478-3303">Shmuel T. Klein</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <title>Compressed Delta Encoding for LZSS Encoded Files.</title>
+    <pages>113-122</pages>
+    <year>2007</year>
+    <crossref>conf/dcc/2007</crossref>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2007.22</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2007.22</ee>
+    <url>db/conf/dcc/dcc2007.html#KleinS07</url>
+  </inproceedings>
   <inproceedings mdate="2021-10-14" key="conf/dcc/MaPRZ21">
     <author>Danyang Ma</author>
     <author orcid="0000-0001-7668-7636">Simon J. Puglisi</author>
@@ -46415,6 +47188,19 @@
     <ee>https://doi.org/10.1109/DCC.2018.00031</ee>
     <crossref>conf/dcc/2018</crossref>
     <url>db/conf/dcc/dcc2018.html#BrisaboaGGN18</url>
+  </inproceedings>
+  <inproceedings mdate="2020-09-05" key="conf/dcc/KleinSS06">
+    <author orcid="0000-0002-9478-3303">Shmuel Tomi Klein</author>
+    <author>Tamar C. Serebro</author>
+    <author orcid="0000-0002-2320-9064">Dana Shapira</author>
+    <title>Modeling Delta Encoding of Compressed Files.</title>
+    <pages>457</pages>
+    <year>2006</year>
+    <crossref>conf/dcc/2006</crossref>
+    <booktitle>DCC</booktitle>
+    <ee>https://doi.org/10.1109/DCC.2006.47</ee>
+    <ee>http://doi.ieeecomputersociety.org/10.1109/DCC.2006.47</ee>
+    <url>db/conf/dcc/dcc2006.html#KleinSS06</url>
   </inproceedings>
   <inproceedings mdate="2021-07-25" key="conf/dcc/Gagie0N17">
     <author orcid="0000-0003-3689-327X">Travis Gagie</author>
@@ -47086,6 +47872,17 @@
     <booktitle>Recent Advances in Intrusion Detection</booktitle>
     <ee>https://doi.org/10.1007/3-540-39945-3_2</ee>
     <url>db/conf/raid/raid2000.html#KuriNMH00</url>
+  </inproceedings>
+  <inproceedings mdate="2023-01-09" key="conf/isbra/MwanikiP22">
+    <author>Njagi Moses Mwaniki</author>
+    <author>Nadia Pisanti</author>
+    <title>Optimal Sequence Alignment to ED-Strings.</title>
+    <pages>204-216</pages>
+    <year>2022</year>
+    <booktitle>ISBRA</booktitle>
+    <ee>https://doi.org/10.1007/978-3-031-23198-8_19</ee>
+    <crossref>conf/isbra/2022</crossref>
+    <url>db/conf/isbra/isbra2022.html#MwanikiP22</url>
   </inproceedings>
   <inproceedings mdate="2017-09-16" key="conf/cwords/BartonP15">
     <author>Carl Barton</author>
@@ -49012,10 +49809,10 @@
     <crossref>conf/swat/2012</crossref>
     <url>db/conf/swat/swat2012.html#NekrichN12</url>
   </inproceedings>
-  <inproceedings mdate="2022-10-02" key="conf/swat/BilleGS22">
+  <inproceedings mdate="2023-02-12" key="conf/swat/BilleGS22">
     <author orcid="0000-0002-1120-5154">Philip Bille</author>
     <author orcid="0000-0002-8322-4952">Inge Li Gørtz</author>
-    <author>Tord Stordalen</author>
+    <author orcid="0000-0002-1525-0104">Tord Stordalen</author>
     <title>Predecessor on the Ultra-Wide Word RAM.</title>
     <pages>18:1-18:15</pages>
     <year>2022</year>
@@ -49596,9 +50393,9 @@
     <ee>https://doi.org/10.1145/258533.258647</ee>
     <url>db/conf/stoc/stoc1997.html#ArgeFGV97</url>
   </inproceedings>
-  <inproceedings mdate="2020-07-02" key="conf/stoc/BulanekKS12">
+  <inproceedings mdate="2022-12-07" key="conf/stoc/BulanekKS12">
     <author>Jan Bulánek</author>
-    <author>Michal Koucký 0001</author>
+    <author orcid="0000-0003-0808-2269">Michal Koucký 0001</author>
     <author>Michael E. Saks</author>
     <title>Tight lower bounds for the online labeling problem.</title>
     <pages>1185-1198</pages>
@@ -49608,8 +50405,8 @@
     <crossref>conf/stoc/2012</crossref>
     <url>db/conf/stoc/stoc2012.html#BulanekKS12</url>
   </inproceedings>
-  <inproceedings mdate="2020-07-02" key="conf/stoc/KouckyS20">
-    <author>Michal Koucký 0001</author>
+  <inproceedings mdate="2022-12-07" key="conf/stoc/KouckyS20">
+    <author orcid="0000-0003-0808-2269">Michal Koucký 0001</author>
     <author>Michael E. Saks</author>
     <title>Constant factor approximations to edit distance on far input pairs in nearly linear time.</title>
     <pages>699-712</pages>
@@ -49654,10 +50451,10 @@
     <crossref>conf/stoc/2014</crossref>
     <url>db/conf/stoc/stoc2014.html#Goodrich14</url>
   </inproceedings>
-  <inproceedings mdate="2022-06-14" key="conf/stoc/EnglertMV22">
+  <inproceedings mdate="2022-12-07" key="conf/stoc/EnglertMV22">
     <author>Matthias Englert</author>
     <author>Nicolaos Matsakis</author>
-    <author>Pavel Veselý</author>
+    <author orcid="0000-0003-1169-7934">Pavel Veselý 0001</author>
     <title>Improved approximation guarantees for shortest superstrings using cycle classification by overlap to length ratios.</title>
     <pages>317-330</pages>
     <year>2022</year>
@@ -51046,9 +51843,9 @@
     <crossref>conf/spire/2008</crossref>
     <url>db/conf/spire/spire2008.html#LipskyP08</url>
   </inproceedings>
-  <inproceedings mdate="2017-05-24" key="conf/spire/BirmeleCFGLMPSS12">
+  <inproceedings mdate="2023-02-12" key="conf/spire/BirmeleCFGLMPSS12">
     <author>Etienne Birmelé</author>
-    <author>Pierluigi Crescenzi</author>
+    <author orcid="0000-0001-8789-3195">Pierluigi Crescenzi</author>
     <author>Rui A. Ferreira</author>
     <author>Roberto Grossi</author>
     <author>Vincent Lacroix</author>
@@ -53919,9 +54716,9 @@
     <crossref>conf/spire/2012</crossref>
     <url>db/conf/spire/spire2012.html#HaCohen-KernerG12</url>
   </inproceedings>
-  <inproceedings mdate="2020-10-25" key="conf/spire/BoucherW10">
+  <inproceedings mdate="2022-12-22" key="conf/spire/BoucherW10">
     <author>Christina Boucher</author>
-    <author orcid="0000-0002-3226-724X">Kathleen Wilkie</author>
+    <author orcid="0000-0002-3226-724X">Kathleen P. Wilkie</author>
     <title>Why Large Closest String Instances Are Easy to Solve in Practice.</title>
     <pages>106-117</pages>
     <year>2010</year>
@@ -54340,8 +55137,8 @@
     <crossref>conf/spire/2010</crossref>
     <url>db/conf/spire/spire2010.html#ClaudeMN10</url>
   </inproceedings>
-  <inproceedings mdate="2018-11-14" key="conf/spire/KolpakovK00">
-    <author>Roman M. Kolpakov</author>
+  <inproceedings mdate="2022-12-07" key="conf/spire/KolpakovK00">
+    <author orcid="0000-0003-1800-853X">Roman M. Kolpakov</author>
     <author orcid="0000-0001-5899-5424">Gregory Kucherov</author>
     <title>Finding Repeats with Fixed Gap.</title>
     <pages>162-168</pages>
@@ -54772,8 +55569,8 @@
     <crossref>conf/spire/2019</crossref>
     <url>db/conf/spire/spire2019.html#AkloucheBS19</url>
   </inproceedings>
-  <inproceedings mdate="2017-06-05" key="conf/spire/CrestaniCFH03">
-    <author>Fabio Crestani</author>
+  <inproceedings mdate="2022-12-07" key="conf/spire/CrestaniCFH03">
+    <author orcid="0000-0001-8672-0700">Fabio Crestani</author>
     <author orcid="0000-0001-9125-1195">Luis M. de Campos</author>
     <author>Juan M. Fernández-Luna</author>
     <author>Juan F. Huete</author>
@@ -54873,9 +55670,9 @@
     <crossref>conf/spire/2015</crossref>
     <url>db/conf/spire/spire2015.html#FerreiraSSZB15</url>
   </inproceedings>
-  <inproceedings mdate="2022-11-13" key="conf/spire/BilleGS22">
+  <inproceedings mdate="2022-12-05" key="conf/spire/BilleGS22">
     <author orcid="0000-0002-1120-5154">Philip Bille</author>
-    <author>Inge Li Gørtz</author>
+    <author orcid="0000-0002-8322-4952">Inge Li Gørtz</author>
     <author orcid="0000-0002-1525-0104">Tord Stordalen</author>
     <title>The Complexity of the Co-occurrence Problem.</title>
     <pages>38-52</pages>
@@ -54931,8 +55728,8 @@
     <crossref>conf/spire/2015</crossref>
     <url>db/conf/spire/spire2015.html#BrisaboaCFN15</url>
   </inproceedings>
-  <inproceedings mdate="2017-05-24" key="conf/spire/KolpakovR08">
-    <author>Roman Kolpakov</author>
+  <inproceedings mdate="2022-12-07" key="conf/spire/KolpakovR08">
+    <author orcid="0000-0003-1800-853X">Roman Kolpakov</author>
     <author>Mathieu Raffinot</author>
     <title>Faster Text Fingerprinting.</title>
     <pages>15-26</pages>
@@ -56856,11 +57653,11 @@
     <crossref>conf/spire/2016</crossref>
     <url>db/conf/spire/spire2016.html#BadkobehGGNPS16</url>
   </inproceedings>
-  <inproceedings mdate="2019-10-19" key="conf/spire/GiachanouRMC18">
+  <inproceedings mdate="2022-12-07" key="conf/spire/GiachanouRMC18">
     <author orcid="0000-0002-7601-8667">Anastasia Giachanou</author>
     <author>Paolo Rosso</author>
     <author>Ida Mele</author>
-    <author>Fabio Crestani</author>
+    <author orcid="0000-0001-8672-0700">Fabio Crestani</author>
     <title>Early Commenting Features for Emotional Reactions Prediction.</title>
     <pages>168-182</pages>
     <year>2018</year>
@@ -57107,9 +57904,9 @@
     <crossref>conf/spire/2010</crossref>
     <url>db/conf/spire/spire2010.html#BelazzouguiBV10</url>
   </inproceedings>
-  <inproceedings mdate="2022-11-13" key="conf/spire/FertinJL22">
+  <inproceedings mdate="2022-12-05" key="conf/spire/FertinJL22">
     <author orcid="0000-0002-8251-2012">Guillaume Fertin</author>
-    <author>Géraldine Jean</author>
+    <author orcid="0000-0002-1534-2682">Géraldine Jean</author>
     <author orcid="0000-0002-9945-6774">Anthony Labarre</author>
     <title>Sorting Genomes by Prefix Double-Cut-and-Joins.</title>
     <pages>178-190</pages>
@@ -57317,9 +58114,9 @@
     <booktitle>SPIRE</booktitle>
     <url>db/conf/spire/spire2003.html#CrochemoreINP03</url>
   </inproceedings>
-  <inproceedings mdate="2017-05-24" key="conf/spire/BriniBD05">
+  <inproceedings mdate="2023-02-12" key="conf/spire/BriniBD05">
     <author>Asma Brini</author>
-    <author>Mohand Boughanem</author>
+    <author orcid="0000-0001-7004-0807">Mohand Boughanem</author>
     <author>Didier Dubois</author>
     <title>A Model for Information Retrieval Based on Possibilistic Networks.</title>
     <pages>271-282</pages>
@@ -57858,8 +58655,8 @@
     <ee>https://doi.org/10.1007/978-3-540-75530-2_26</ee>
     <url>db/conf/spire/spire2007.html#SchenkelBHTW07</url>
   </inproceedings>
-  <inproceedings mdate="2017-06-05" key="conf/spire/CrestaniFV01">
-    <author>Fabio Crestani</author>
+  <inproceedings mdate="2022-12-07" key="conf/spire/CrestaniFV01">
+    <author orcid="0000-0001-8672-0700">Fabio Crestani</author>
     <author>Pablo de la Fuente</author>
     <author orcid="0000-0001-6568-4958">Jesús Vegas</author>
     <title>Design of a Graphical User Interface for Structured Documents Retrieval.</title>
@@ -58451,9 +59248,9 @@
     <ee>https://doi.org/10.1007/11880561_22</ee>
     <url>db/conf/spire/spire2006.html#FredrikssonG06</url>
   </inproceedings>
-  <inproceedings mdate="2017-05-24" key="conf/spire/SilipoC00">
+  <inproceedings mdate="2022-12-07" key="conf/spire/SilipoC00">
     <author>Rosaria Silipo</author>
-    <author>Fabio Crestani</author>
+    <author orcid="0000-0001-8672-0700">Fabio Crestani</author>
     <title>Prosodic Stress and Topic Detection in Spoken Sentences.</title>
     <pages>243-252</pages>
     <year>2000</year>
@@ -58473,12 +59270,12 @@
     <crossref>conf/spire/2017</crossref>
     <url>db/conf/spire/spire2017.html#Hyyro17</url>
   </inproceedings>
-  <inproceedings mdate="2022-11-03" key="conf/spire/GourdelDPS22">
+  <inproceedings mdate="2022-11-21" key="conf/spire/GourdelDPS22">
     <author>Garance Gourdel</author>
     <author>Anne Driemel</author>
     <author>Pierre Peterlongo</author>
     <author>Tatiana Starikovskaya</author>
-    <title>Pattern Matching Under rmDTW Distance.</title>
+    <title>Pattern Matching Under DTW Distance.</title>
     <pages>315-330</pages>
     <year>2022</year>
     <booktitle>SPIRE</booktitle>
@@ -59392,6 +60189,21 @@
     <crossref>conf/wsdm/2010</crossref>
     <url>db/conf/wsdm/wsdm2010.html#FerraginaM10</url>
   </inproceedings>
+  <inproceedings mdate="2022-11-13" key="conf/latin/0001GPSSZ22">
+    <author orcid="0000-0001-6647-088X">Giulia Bernardini 0001</author>
+    <author orcid="0000-0002-9897-1512">Estéban Gabory</author>
+    <author orcid="0000-0002-1445-1932">Solon P. Pissis</author>
+    <author orcid="0000-0001-6938-8902">Leen Stougie</author>
+    <author>Michelle Sweering</author>
+    <author orcid="0000-0002-1988-3507">Wiktor Zuba</author>
+    <title>Elastic-Degenerate String Matching with 1 Error.</title>
+    <pages>20-37</pages>
+    <year>2022</year>
+    <booktitle>LATIN</booktitle>
+    <ee>https://doi.org/10.1007/978-3-031-20624-5_2</ee>
+    <crossref>conf/latin/2022</crossref>
+    <url>db/conf/latin/latin2022.html#0001GPSSZ22</url>
+  </inproceedings>
   <inproceedings mdate="2018-11-02" key="conf/latin/BoseFHM14">
     <author orcid="0000-0002-8906-0573">Prosenjit Bose</author>
     <author>Rolf Fagerberg</author>
@@ -59453,6 +60265,18 @@
     <ee>https://www.wikidata.org/entity/Q58884011</ee>
     <crossref>conf/latin/2008</crossref>
     <url>db/conf/latin/latin2008.html#RussoNO08</url>
+  </inproceedings>
+  <inproceedings mdate="2022-11-03" key="conf/latin/KociumakaNO22">
+    <author>Tomasz Kociumaka</author>
+    <author>Gonzalo Navarro</author>
+    <author>Francisco Olivares</author>
+    <title>Near-Optimal Search Time in δ-Optimal Space.</title>
+    <pages>88-103</pages>
+    <year>2022</year>
+    <booktitle>LATIN</booktitle>
+    <ee>https://doi.org/10.1007/978-3-031-20624-5_6</ee>
+    <crossref>conf/latin/2022</crossref>
+    <url>db/conf/latin/latin2022.html#KociumakaNO22</url>
   </inproceedings>
   <inproceedings mdate="2017-05-23" key="conf/latin/DrangeDS16">
     <author>Pål Grønås Drange</author>
@@ -59573,6 +60397,18 @@
     <crossref>conf/latin/2020</crossref>
     <url>db/conf/latin/latin2020.html#Bender0MMT20</url>
   </inproceedings>
+  <inproceedings mdate="2022-11-13" key="conf/latin/RestivoRS22">
+    <author orcid="0000-0002-1972-6931">Antonio Restivo</author>
+    <author orcid="0000-0002-3489-0684">Giuseppe Romana</author>
+    <author orcid="0000-0001-6928-0168">Marinella Sciortino</author>
+    <title>String Attractors and Infinite Words.</title>
+    <pages>426-442</pages>
+    <year>2022</year>
+    <booktitle>LATIN</booktitle>
+    <ee>https://doi.org/10.1007/978-3-031-20624-5_26</ee>
+    <crossref>conf/latin/2022</crossref>
+    <url>db/conf/latin/latin2022.html#RestivoRS22</url>
+  </inproceedings>
   <inproceedings mdate="2017-05-23" key="conf/latin/FredrikssonMN04">
     <author>Kimmo Fredriksson</author>
     <author>Veli Mäkinen</author>
@@ -59607,6 +60443,17 @@
     <ee>https://doi.org/10.1007/978-3-662-49529-2_36</ee>
     <crossref>conf/latin/2016</crossref>
     <url>db/conf/latin/latin2016.html#0001IK16</url>
+  </inproceedings>
+  <inproceedings mdate="2022-12-09" key="conf/latin/JoK22">
+    <author orcid="0000-0002-8644-3691">Seungbum Jo</author>
+    <author orcid="0000-0003-4705-0489">Geunho Kim 0001</author>
+    <title>Space-Efficient Data Structure for Next/Previous Larger/Smaller Value Queries.</title>
+    <pages>71-87</pages>
+    <year>2022</year>
+    <booktitle>LATIN</booktitle>
+    <ee>https://doi.org/10.1007/978-3-031-20624-5_5</ee>
+    <crossref>conf/latin/2022</crossref>
+    <url>db/conf/latin/latin2022.html#JoK22</url>
   </inproceedings>
   <inproceedings mdate="2017-06-15" key="conf/latin/MakinenN06">
     <author orcid="0000-0003-4454-1493">Veli Mäkinen</author>

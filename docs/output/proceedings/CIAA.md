@@ -1,4 +1,7 @@
 # CIAA for Stringologist
+## [CIAA 2021](https://dblp.org/db/conf/wia/ciaa2021.html)
+  1. [Approximate Hashing for Bioinformatics.](https://doi.org/10.1007/978-3-030-79121-6_15)  
+  
 ## [CIAA 2013](https://dblp.org/db/conf/wia/ciaa2013.html)
   1. [Compressed Automata for Dictionary Matching.](https://doi.org/10.1007/978-3-642-39274-0_28)  
   

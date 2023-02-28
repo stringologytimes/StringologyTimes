@@ -21,7 +21,7 @@
   19. [Accessing the Suffix Array via φ -1-Forest.](https://doi.org/10.1007/978-3-031-20643-6_7)  
   20. [Matching Patterns with Variables Under Edit Distance.](https://doi.org/10.1007/978-3-031-20643-6_20)  
   21. [Sorting Genomes by Prefix Double-Cut-and-Joins.](https://doi.org/10.1007/978-3-031-20643-6_13)  
-  22. [Pattern Matching Under rmDTW Distance.](https://doi.org/10.1007/978-3-031-20643-6_23)  
+  22. [Pattern Matching Under DTW Distance.](https://doi.org/10.1007/978-3-031-20643-6_23)  
   23. [Engineering Compact Data Structures for Rank and Select Queries on Bit Vectors.](https://doi.org/10.1007/978-3-031-20643-6_19)  
   
 ## [SPIRE 2021](https://dblp.org/db/conf/spire/spire2021.html)

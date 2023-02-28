@@ -1,5 +1,66 @@
 # arXiv Papers  
+## 2023  
+### 2023/2  
+  1. [Optimal Heaviest Induced Ancestors](https://arxiv.org/abs/2302.01373)  
+  2. [Order-Preserving Squares in Strings](https://arxiv.org/abs/2302.00724)  
+  3. [Faster Wavelet Trees with Quad Vectors](https://arxiv.org/abs/2302.09239)  
+  4. [Compressibility-Aware Quantum Algorithms on Strings](https://arxiv.org/abs/2302.07235)  
+  5. [A Simple Data Structure for Maintaining a Discrete Probability  Distribution](https://arxiv.org/abs/2302.05682)  
+  6. [Near-Optimal Dynamic Time Warping on Run-Length Encoded Strings](https://arxiv.org/abs/2302.06252)  
+  7. [Prefixes of the Fibonacci word](https://arxiv.org/abs/2302.04640)  
+  8. [Chaining of Maximal Exact Matches in Graphs](https://arxiv.org/abs/2302.01748)  
+  9. [Locally consistent decomposition of strings with applications to edit  distance sketching](https://arxiv.org/abs/2302.04475)  
+  10. [Storing a Trie with Compact and Predictable Space](https://arxiv.org/abs/2302.03690)  
+  11. [Weighted Edit Distance Computation: Strings, Trees and Dyck](https://arxiv.org/abs/2302.04229)  
+  12. [Optimal LZ-End Parsing is Hard](https://arxiv.org/abs/2302.02586)  
+  13. [Runs of Ones in Binary Strings](https://arxiv.org/abs/2302.11532)  
+  
+### 2023/1  
+  1. [Algorithms for Massive Data -- Lecture Notes](https://arxiv.org/abs/2301.00754)  
+  2. [The Thue-Morse sequence in base 3/2](https://arxiv.org/abs/2301.13563)  
+  3. [Succinct Planar Encoding with Minor Operations](https://arxiv.org/abs/2301.10564)  
+  4. [Sliding Window String Indexing in Streams](https://arxiv.org/abs/2301.09477)  
+  5. [Computing matching statistics on Wheeler DFAs](https://arxiv.org/abs/2301.05338)  
+  6. [Linear Time Online Algorithms for Constructing Linear-size Suffix Trie](https://arxiv.org/abs/2301.04295)  
+  7. [SeedTree: A Dynamically Optimal and Local Self-Adjusting Tree](https://arxiv.org/abs/2301.03074)  
+  8. [Reconstructing words using queries on subwords or factors](https://arxiv.org/abs/2301.01571)  
+  9. [Parameterized Lower Bounds for Problems in P via Fine-Grained  Cross-Compositions](https://arxiv.org/abs/2301.00797)  
+  
+  
 ## 2022  
+### 2022/12  
+  1. [High Performance Construction of RecSplit Based Minimal Perfect Hash  Functions](https://arxiv.org/abs/2212.09562)  
+  2. [Parameterized Algorithms for String Matching to DAGs: Funnels and Beyond](https://arxiv.org/abs/2212.07870)  
+  3. [Transcoding Unicode Characters with AVX-512 Instructions](https://arxiv.org/abs/2212.05098)  
+  4. [Pareto Optimal Compression of Genomic Dictionaries, with or without  Random Access in Main Memory](https://arxiv.org/abs/2212.03067)  
+  5. [Word Equations in Synergy with Regular Constraints (Technical Report)](https://arxiv.org/abs/2212.02317)  
+  6. [Space-efficient conversions from SLPs](https://arxiv.org/abs/2212.02327)  
+  7. [Trie-Compressed Intersectable Sets](https://arxiv.org/abs/2212.00946)  
+  8. [Computing the optimal BWT of very large string collections](https://arxiv.org/abs/2212.01156)  
+  
+### 2022/11  
+  1. [Polyominoes and graphs built from Fibonacci words](https://arxiv.org/abs/2211.05460)  
+  2. [4D Range Reporting in the Pointer Machine Model in Almost-Optimal Time](https://arxiv.org/abs/2211.03161)  
+  3. [Computing palindromes on a trie in linear time](https://arxiv.org/abs/2211.03995)  
+  4. [Comparing Two Counting Methods for Estimating the Probabilities of  Strings](https://arxiv.org/abs/2211.04024)  
+  5. [String attractors of episturmian sequences](https://arxiv.org/abs/2211.01660)  
+  6. [An Algorithmic Bridge Between Hamming and Levenshtein Distances](https://arxiv.org/abs/2211.12496)  
+  7. [String Covering: A Survey](https://arxiv.org/abs/2211.11856)  
+  8. [Reversible Programming: A Case Study of Two String-Matching Algorithms](https://arxiv.org/abs/2211.12225)  
+  9. [Optimal resizable arrays](https://arxiv.org/abs/2211.11009)  
+  10. [Some Results on Digital Segments and Balanced Words](https://arxiv.org/abs/2211.09417)  
+  11. [Genome-on-Diet: Taming Large-Scale Genomic Analyses via Sparsified  Genomics](https://arxiv.org/abs/2211.08157)  
+  12. [On the Power of Learning-Augmented BSTs](https://arxiv.org/abs/2211.09251)  
+  13. [Augmented Thresholds for MONI](https://arxiv.org/abs/2211.07794)  
+  14. [Bounds and Estimates on the Average Edit Distance](https://arxiv.org/abs/2211.07644)  
+  15. [External-memory dictionaries with worst-case update cost](https://arxiv.org/abs/2211.06044)  
+  16. [Gapped String Indexing in Subquadratic Space and Sublinear Query Time](https://arxiv.org/abs/2211.16860)  
+  17. [Approximating binary longest common subsequence in almost-linear time](https://arxiv.org/abs/2211.16660)  
+  18. [Quantum Speed-ups for String Synchronizing Sets, Longest Common  Substring, and k-mismatch Matching](https://arxiv.org/abs/2211.15945)  
+  19. [On fractal patterns in Ulam words](https://arxiv.org/abs/2211.14229)  
+  20. [A fast and simple $O (z \log n)$-space index for finding approximately  longest common substrings](https://arxiv.org/abs/2211.13434)  
+  21. [Space-efficient RLZ-to-LZ77 conversion](https://arxiv.org/abs/2211.13254)  
+  
 ### 2022/10  
   1. [Computing MEMs on Repetitive Text Collections](https://arxiv.org/abs/2210.09914)  
   2. [Space-Efficient STR-IC-LCS Computation](https://arxiv.org/abs/2210.07979)  
@@ -10,6 +71,11 @@
   7. [Double-Ended Palindromic Trees: A Linear-Time Data Structure and Its  Applications](https://arxiv.org/abs/2210.02292)  
   8. [Designing a parallel suffix sort](https://arxiv.org/abs/2210.01475)  
   9. [Finding binary words with a given number of subsequences](https://arxiv.org/abs/2210.00342)  
+  10. [The appearance function for paper-folding words](https://arxiv.org/abs/2210.14719)  
+  11. [On word-representability of simplified de Bruijn graphs](https://arxiv.org/abs/2210.14762)  
+  12. [Locality-Preserving Minimal Perfect Hashing of k-mers](https://arxiv.org/abs/2210.13097)  
+  13. [A Stack-Free Traversal Algorithm for Left-Balanced k-d Trees](https://arxiv.org/abs/2210.12859)  
+  14. [Splay Top Trees](https://arxiv.org/abs/2210.11918)  
   
 ### 2022/9  
   1. [Space-efficient data structure for next/previous larger/smaller value  queries](https://arxiv.org/abs/2209.00158)  
@@ -88,6 +154,7 @@
   21. [Prefix-free parsing for building large tunnelled Wheeler graphs](https://arxiv.org/abs/2206.15097)  
   22. [On extended boundary sequences of morphic and Sturmian words](https://arxiv.org/abs/2206.15319)  
   23. [Computing the Parameterized Burrows--Wheeler Transform Online](https://arxiv.org/abs/2206.15100)  
+  24. [Onesweep: A Faster Least Significant Digit Radix Sort for GPUs](https://arxiv.org/abs/2206.01784)  
   
 ### 2022/5  
   1. [Computing Maximal Unique Matches with the r-index](https://arxiv.org/abs/2205.01576)  
@@ -114,6 +181,7 @@
   13. [Efficient Construction of the BWT for Repetitive Text Using String  Compression](https://arxiv.org/abs/2204.05969)  
   14. [Two-dimensional Fibonacci Words: Tandem Repeats and Factor Complexity](https://arxiv.org/abs/2204.13977)  
   15. [Improved Sublinear-Time Edit Distance for Preprocessed Strings](https://arxiv.org/abs/2204.14137)  
+  16. [Prefix Filter: Practically and Theoretically Better Than Bloom](https://arxiv.org/abs/2203.17139)  
   
 ### 2022/3  
   1. [Suffix tree-based linear algorithms for multiple prefixes, single suffix  counting and listing problems](https://arxiv.org/abs/2203.16908)  
@@ -121,6 +189,8 @@
   3. [Binary codes that do not preserve primitivity](https://arxiv.org/abs/2203.11341)  
   4. [Note on a Fibonacci Parity Sequence](https://arxiv.org/abs/2203.10504)  
   5. [Numeric Lyndon-based feature embedding of sequencing reads for machine  learning approaches](https://arxiv.org/abs/2202.13884)  
+  6. [Online List Labeling: Breaking the $\log^2n$ Barrier](https://arxiv.org/abs/2203.02763)  
+  7. [Quantum jumbled pattern matching](https://arxiv.org/abs/2203.00164)  
   
 ### 2022/2  
   1. [RePair Grammars are the Smallest Grammars for Fibonacci Words](https://arxiv.org/abs/2202.08447)  
@@ -133,6 +203,8 @@
   8. [A theoretical and experimental analysis of BWT variants for string  collections](https://arxiv.org/abs/2202.13235)  
   9. [Minimal Absent Words on Run-Length Encoded Strings](https://arxiv.org/abs/2202.13591)  
   10. [LCP-dropout: Compression-based Multiple Subword Segmentation for Neural  Machine Translation](https://arxiv.org/abs/2202.13590)  
+  11. [Almost-Optimal Sublinear-Time Edit Distance in the Low Distance Regime](https://arxiv.org/abs/2202.08066)  
+  12. [OSM-tree: A Sortedness-Aware Index](https://arxiv.org/abs/2202.04185)  
   
 ### 2022/1  
   1. [X3: Lossless Data Compressor](https://arxiv.org/abs/2201.01727)  
@@ -992,6 +1064,7 @@
   1. [Optimal Construction of Compressed Indexes for Highly Repetitive Texts](https://arxiv.org/abs/1712.04886)  
   2. [Text Indexing and Searching in Sublinear Time](https://arxiv.org/abs/1712.07431)  
   3. [Longest common substring with approximately $k$ mismatches](https://arxiv.org/abs/1712.08573)  
+  4. [Sorting Real Numbers in $O(n\sqrt{\log n})$ Time and Linear Space](https://arxiv.org/abs/1801.00776)  
   
 ### 2017/11  
   1. [Compressed Indexing with Signature Grammars](https://arxiv.org/abs/1711.08217)  
@@ -1146,11 +1219,15 @@
   4. [Approximate Hamming distance in a stream](https://arxiv.org/abs/1602.07241)  
   5. [siEDM: an efficient string index and search algorithm for edit distance  with moves](https://arxiv.org/abs/1602.06688)  
   6. [Lempel-Ziv Decoding in External Memory](https://arxiv.org/abs/1602.00329)  
+  7. [Compressing Graphs and Indexes with Recursive Graph Bisection](https://arxiv.org/abs/1602.08820)  
+  8. [Access Time Tradeoffs in Archive Compression](https://arxiv.org/abs/1602.08829)  
   
 ### 2016/1  
   1. [Pachinko](https://arxiv.org/abs/1601.05706)  
   2. [Deterministic sub-linear space LCE data structures with efficient  construction](https://arxiv.org/abs/1601.07670)  
   3. [Simple and Efficient Fully-Functional Succinct Trees](https://arxiv.org/abs/1601.06939)  
+  4. [Optimal Prefix Free Codes With Partial Sorting](https://arxiv.org/abs/1602.00023)  
+  5. [Minimal Suffix and Rotation of a Substring in Optimal Time](https://arxiv.org/abs/1601.08051)  
   
   
 ## 2015  
@@ -1186,6 +1263,8 @@
   4. [Compressed Data Structures for Dynamic Sequences](https://arxiv.org/abs/1507.06866)  
   5. [Computing Runs on a General Alphabet](https://arxiv.org/abs/1507.01231)  
   6. [Online Self-Indexed Grammar Compression](https://arxiv.org/abs/1507.00805)  
+  7. [A numerical analysis of Quicksort: How many cases are bad cases?](https://arxiv.org/abs/1507.04220)  
+  8. [A Lower Bound on Supporting Predecessor Search in $k$ sorted Arrays](https://arxiv.org/abs/1507.03823)  
   
 ### 2015/6  
   1. [Relative Select](https://arxiv.org/abs/1506.03262)  
@@ -1387,6 +1466,7 @@
   
 ### 2012/1  
   1. [Compact Binary Relation Representations with Rich Functionality](https://arxiv.org/abs/1201.3602)  
+  2. [SparseDTW: A Novel Approach to Speed up Dynamic Time Warping](https://arxiv.org/abs/1201.2969)  
   
   
 ## 2011  
@@ -1548,6 +1628,7 @@
 ### 2007/6  
   1. [Radix Sorting With No Extra Space](https://arxiv.org/abs/0706.4107)  
   2. [Sublinear Algorithms for Approximating String Compressibility](https://arxiv.org/abs/0706.1084)  
+  3. [Dualheap Sort Algorithm: An Inherently Parallel Generalization of  Heapsort](https://arxiv.org/abs/0706.2893)  
   
   
 ## 2006  
