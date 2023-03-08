@@ -12995,9 +12995,9 @@
     <ee type="oa">https://arxiv.org/abs/2102.06798</ee>
     <url>db/journals/corr/corr2102.html#abs-2102-06798</url>
   </article>
-  <article mdate="2019-10-16" key="journals/corr/abs-1910-04640" publtype="informal">
+  <article mdate="2023-03-04" key="journals/corr/abs-1910-04640" publtype="informal">
     <author>Ferdinando Montecuollo</author>
-    <author>Giovannni Schmid</author>
+    <author>Giovanni Schmid</author>
     <author>Roberto Tagliaferri</author>
     <title>E2FM: an encrypted and compressed full-text index for collections of genomic sequences.</title>
     <year>2019</year>
@@ -14596,9 +14596,9 @@
     <ee type="oa">http://arxiv.org/abs/1802.10355</ee>
     <url>db/journals/corr/corr1802.html#abs-1802-10355</url>
   </article>
-  <article mdate="2019-10-09" key="journals/corr/abs-1910-02851" publtype="informal">
+  <article mdate="2023-03-04" key="journals/corr/abs-1910-02851" publtype="informal">
     <author>Ferdinando Montecuollo</author>
-    <author>Giovannni Schmid</author>
+    <author>Giovanni Schmid</author>
     <title>ER-index: a referential index for encrypted genomic databases.</title>
     <year>2019</year>
     <volume>abs/1910.02851</volume>
