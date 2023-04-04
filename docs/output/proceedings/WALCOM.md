@@ -1,4 +1,8 @@
 # WALCOM for Stringologist
+## [WALCOM 2023](https://dblp.org/db/conf/walcom/walcom2023.html)
+  1. [Finding the Cyclic Covers of a String.](https://doi.org/10.1007/978-3-031-27051-2_13)  
+  2. [Parity Permutation Pattern Matching.](https://doi.org/10.1007/978-3-031-27051-2_32)  
+  
 ## [WALCOM 2020](https://dblp.org/db/conf/walcom/walcom2020.html)
   1. [Faster Privacy-Preserving Computation of Edit Distance with Moves.](https://doi.org/10.1007/978-3-030-39881-1_26)  
   2. [Fast Multiple Pattern Cartesian Tree Matching.](https://doi.org/10.1007/978-3-030-39881-1_10)  

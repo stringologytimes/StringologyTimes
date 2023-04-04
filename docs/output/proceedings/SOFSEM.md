@@ -1,4 +1,8 @@
 # SOFSEM for Stringologist
+## [SOFSEM 2023](https://dblp.org/db/conf/sofsem/sofsem2023.html)
+  1. [The k-Centre Problem for Classes of Cyclic Words.](https://doi.org/10.1007/978-3-031-23101-8_26)  
+  2. [Space-Efficient STR-IC-LCS Computation.](https://doi.org/10.1007/978-3-031-23101-8_25)  
+  
 ## [SOFSEM 2021](https://dblp.org/db/conf/sofsem/sofsem2021.html)
   1. [A Normal Sequence Compressed by PPM* But Not by Lempel-Ziv 78.](https://doi.org/10.1007/978-3-030-67731-2_28)  
   2. [Novel Results on the Number of Runs of the Burrows-Wheeler-Transform.](https://doi.org/10.1007/978-3-030-67731-2_18)  

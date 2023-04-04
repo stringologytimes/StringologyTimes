@@ -1,4 +1,10 @@
 # STACS for Stringologist
+## [STACS 2023](https://dblp.org/db/conf/stacs/stacs2023.html)
+  1. [Reconstructing Words Using Queries on Subwords or Factors.](https://doi.org/10.4230/LIPIcs.STACS.2023.52)  
+  2. [Real Numbers Equally Compressible in Every Base.](https://doi.org/10.4230/LIPIcs.STACS.2023.48)  
+  3. [Dynamic Binary Search Trees: Improved Lower Bounds for the Greedy-Future Algorithm.](https://doi.org/10.4230/LIPIcs.STACS.2023.53)  
+  4. [Dynamic Data Structures for Parameterized String Problems.](https://doi.org/10.4230/LIPIcs.STACS.2023.50)  
+  
 ## [STACS 2022](https://dblp.org/db/conf/stacs/stacs2022.html)
   1. [Existential Definability over the Subword Ordering.](https://doi.org/10.4230/LIPIcs.STACS.2022.7)  
   2. [Probabilistic vs Deterministic Gamblers.](https://doi.org/10.4230/LIPIcs.STACS.2022.11)  

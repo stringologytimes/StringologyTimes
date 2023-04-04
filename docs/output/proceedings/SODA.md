@@ -1,4 +1,16 @@
 # SODA for Stringologist
+## [SODA 2023](https://dblp.org/db/conf/soda/soda2023.html)
+  1. [Simplex Range Searching Revisited: How to Shave Logs in Multi-Level Data Structures.](https://doi.org/10.1137/1.9781611977554.ch54)  
+  2. [Tight Bounds for Monotone Minimal Perfect Hashing.](https://doi.org/10.1137/1.9781611977554.ch20)  
+  3. [A Nearly-Tight Analysis of Multipass Pairing Heaps.](https://doi.org/10.1137/1.9781611977554.ch23)  
+  4. [4D Range Reporting in the Pointer Machine Model in Almost-Optimal Time.](https://doi.org/10.1137/1.9781611977554.ch71)  
+  5. [Optimal Square Detection Over General Alphabets.](https://doi.org/10.1137/1.9781611977554.ch189)  
+  6. [Simple, deterministic, fast (but weak) approximations to edit distance and Dyck edit distance.](https://doi.org/10.1137/1.9781611977554.ch188)  
+  7. [Breaking the 𝒪(n)-Barrier in the Construction of Compressed Suffix Arrays and Suffix Trees.](https://doi.org/10.1137/1.9781611977554.ch187)  
+  8. [Tiny Pointers.](https://doi.org/10.1137/1.9781611977554.ch21)  
+  9. [A Tight Analysis of Slim Heaps and Smooth Heaps.](https://doi.org/10.1137/1.9781611977554.ch24)  
+  10. [Quantum Speed-ups for String Synchronizing Sets, Longest Common Substring, and k-mismatch Matching.](https://doi.org/10.1137/1.9781611977554.ch186)  
+  
 ## [SODA 2022](https://dblp.org/db/conf/soda/soda2022.html)
   1. [Splay trees on trees.](https://doi.org/10.1137/1.9781611977073.75)  
   2. [Simulating a stack using queues.](https://doi.org/10.1137/1.9781611977073.76)  

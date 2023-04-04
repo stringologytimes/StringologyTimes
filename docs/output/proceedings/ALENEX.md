@@ -1,4 +1,11 @@
 # ALENEX for Stringologist
+## [ALENEX 2023](https://dblp.org/db/conf/alenex/alenex2023.html)
+  1. [PaCHash: Packed and Compressed Hash Tables.](https://doi.org/10.1137/1.9781611977561.ch14)  
+  2. [Multiway Powersort.](https://doi.org/10.1137/1.9781611977561.ch16)  
+  3. [LZ77 via Prefix-Free Parsing.](https://doi.org/10.1137/1.9781611977561.ch11)  
+  4. [SicHash - Small Irregular Cuckoo Tables for Perfect Hashing.](https://doi.org/10.1137/1.9781611977561.ch15)  
+  5. [Lower Bounds for Sorting 16, 17, and 18 Elements.](https://doi.org/10.1137/1.9781611977561.ch17)  
+  
 ## [ALENEX 2021](https://dblp.org/db/conf/alenex/alenex2021.html)
   1. [A "Learned" Approach to Quicken and Compress Rank/Select Dictionaries.](https://doi.org/10.1137/1.9781611976472.4)  
   2. [PFP Compressed Suffix Trees.](https://doi.org/10.1137/1.9781611976472.5)  

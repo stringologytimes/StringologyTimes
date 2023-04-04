@@ -1,4 +1,7 @@
 # ITCS for Stringologist
+## [ITCS 2023](https://dblp.org/db/conf/innovations/innovations2023.html)
+  1. [An Algorithmic Bridge Between Hamming and Levenshtein Distances.](https://doi.org/10.4230/LIPIcs.ITCS.2023.58)  
+  
 ## [ITCS 2020](https://dblp.org/db/conf/innovations/innovations2020.html)
   1. [Unexpected Power of Random Strings.](https://doi.org/10.4230/LIPIcs.ITCS.2020.41)  
   

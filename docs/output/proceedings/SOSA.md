@@ -1,4 +1,9 @@
 # SOSA for Stringologist
+## [SOSA 2023](https://dblp.org/db/conf/sosa/sosa2023.html)
+  1. [An Optimal Lower Bound for Simplex Range Reporting.](https://doi.org/10.1137/1.9781611977585.ch25)  
+  2. [Optimal resizable arrays.](https://doi.org/10.1137/1.9781611977585.ch27)  
+  3. [Splay Top Trees.](https://doi.org/10.1137/1.9781611977585.ch28)  
+  
 ## [SOSA 2022](https://dblp.org/db/conf/sosa/sosa2022.html)
   1. [Simpler Adjacency Labeling for Planar Graphs with B-Trees.](https://doi.org/10.1137/1.9781611977066.3)  
   2. [Faster Exponential Algorithm for Permutation Pattern Matching.](https://doi.org/10.1137/1.9781611977066.21)  
