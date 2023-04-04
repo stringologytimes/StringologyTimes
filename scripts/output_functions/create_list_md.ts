@@ -15,6 +15,14 @@ type YearPaperCollection = {
     papers: DBLPElementClass[];
 }
 
+function getLinkTagName(item : ProceedingsInfo | JournalInfo) : string{
+    const name1 = item.name.toLocaleLowerCase();
+    const name2 = name1.replace(/ /g, '-');
+    const name3 = name2.replace(/\./g, '');
+
+    return name3;
+}
+
 export function createYearProceedingMD(_proceedings: ProceedingsInfo, year: number, sharpCount : number): string[] {
     const lines: string[] = new Array();
 
@@ -146,7 +154,7 @@ function create_overview_year(item: YearPaperCollection): string[] {
     const lines: string[] = new Array();
 
     const inproceedings = <DBLPInproceedings[]>item.papers.filter((w) => w instanceof DBLPInproceedings);
-    const sorted_inproceedings = get_sorted_proceedings(inproceedings, item.year);
+    const sorted_inproceedings : ProceedingsInfo[] = get_sorted_proceedings(inproceedings, item.year);
     const journals = <DBLPArticle[]>item.papers.filter((w) => w instanceof DBLPArticle);
     const sorted_journals = get_sorted_journals(journals, item.year);
 
@@ -154,13 +162,13 @@ function create_overview_year(item: YearPaperCollection): string[] {
     //lines.push(`### Proceedings (${item.year})`);
     lines.push(`  `);
     sorted_inproceedings.forEach((w) => {
-        let s = `- [${w.name}(${item.year})](#${w.name.toLocaleLowerCase()}-${item.year}) [\[dblp\]](${w.dblp_url})  `;
+        let s = `- [${w.name}(${item.year})](#${getLinkTagName(w)}-${item.year}) [\[dblp\]](${w.dblp_url})  `;
         lines.push(s)
     })
     //lines.push(`### Journals (${item.year})`);
     lines.push(`  `);
     sorted_journals.forEach((w) => {
-        let s = `- [${w.name}(${item.year})](#${w.name.toLocaleLowerCase()}-${item.year}) [\[dblp\]](${w.dblp_url})  `;
+        let s = `- [${w.name}(${item.year})](#${getLinkTagName(w)}-${item.year}) [\[dblp\]](${w.dblp_url})  `;
         lines.push(s)
     })
     lines.push(`  `);

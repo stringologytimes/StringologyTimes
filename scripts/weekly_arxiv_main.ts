@@ -135,6 +135,11 @@ class WeekArticleSuperList {
 
     }
 }
+function getSanityzedMDTitleName(item : ArxivSimpleArticle) : string {
+    const name1 = item.title.replace(/\*/g, '(star)');
+    return name1;
+
+}
 
 
 function write_weekly_arxiv_list_sub(list : WeekArticleList, outputFolderPath: string) {
@@ -142,7 +147,7 @@ function write_weekly_arxiv_list_sub(list : WeekArticleList, outputFolderPath: s
     lines.push(`# Data Structures and Algorithms: ${list.year}/${list.month}/${WeekArticleList.getDaysString(list.weekNumber)}  `);
 
     list.articles.forEach((v, i) =>{
-        lines.push(`${i+1}: [${v.title}](https://doi.org/10.48550/arXiv.${v.id})  `)
+        lines.push(`${i+1}: [${getSanityzedMDTitleName(v)}](https://doi.org/10.48550/arXiv.${v.id})  `)
     })
 
     const page = lines.join("\n");
