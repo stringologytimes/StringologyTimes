@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/stringologytimes/StringologyTimes#readme",
   "devDependencies": {
-    "@xmldom/xmldom": "^0.7.6"
+    "@xmldom/xmldom": "^0.7.7"
   }
 }
