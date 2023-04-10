@@ -53,7 +53,11 @@
   2. [Rooted Maximum Agreement Supertrees.](https://doi.org/10.1007/978-3-540-24698-5_53)  
   
 ## [LATIN 2002](https://dblp.org/db/conf/latin/latin2002.html)
-  1. [A Metric Index for Approximate String Matching.](https://doi.org/10.1007/3-540-45995-2_20)  
+  1. [The Level Ancestor Problem Simplified.](https://doi.org/10.1007/3-540-45995-2_44)  
+  2. [A Metric Index for Approximate String Matching.](https://doi.org/10.1007/3-540-45995-2_20)  
+  
+## [LATIN 2000](https://dblp.org/db/conf/latin/latin2000.html)
+  1. [The LCA Problem Revisited.](https://doi.org/10.1007/10719839_9)  
   
 ## [LATIN 1998](https://dblp.org/db/conf/latin/latin98.html)
   1. [Fast Two-Dimensional Approximate Pattern Matching](https://doi.org/10.1007/BFb0054334)  

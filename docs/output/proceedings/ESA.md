@@ -112,6 +112,7 @@
   
 ## [ESA 2002](https://dblp.org/db/conf/esa/esa2002.html)
   1. [Engineering a Lightweight Suffix Array Construction Algorithm.](https://doi.org/10.1007/3-540-45749-6_61)  
+  2. [Two Simplified Algorithms for Maintaining Order in a List.](https://doi.org/10.1007/3-540-45749-6_17)  
   
 ## [ESA 2000](https://dblp.org/db/conf/esa/esa2000.html)
   1. [On the Competitiveness of Linear Search.](https://doi.org/10.1007/3-540-45253-2_31)  

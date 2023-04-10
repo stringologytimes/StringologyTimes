@@ -4054,6 +4054,19 @@
     <ee>https://doi.org/10.1016/j.tcs.2022.09.008</ee>
     <url>db/journals/tcs/tcs933.html#NakashimaFHNYIB22</url>
   </article>
+  <article mdate="2021-04-09" key="journals/tcs/BenderF04">
+    <author>Michael A. Bender</author>
+    <author orcid="0000-0003-3616-7788">Martin Farach-Colton</author>
+    <title>The Level Ancestor Problem simplified.</title>
+    <pages>5-12</pages>
+    <year>2004</year>
+    <volume>321</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <number>1</number>
+    <ee type="oa">https://doi.org/10.1016/j.tcs.2003.05.002</ee>
+    <ee>https://www.wikidata.org/entity/Q57311753</ee>
+    <url>db/journals/tcs/tcs321.html#BenderF04</url>
+  </article>
   <article mdate="2021-06-29" key="journals/tcs/BrankovicIKMPV16">
     <author orcid="0000-0002-5056-4627">Ljiljana Brankovic</author>
     <author>Costas S. Iliopoulos</author>
@@ -6169,6 +6182,20 @@
     <ee type="oa">https://doi.org/10.1007/s00224-020-10018-5</ee>
     <url>db/journals/mst/mst65.html#AyadBFHP21</url>
   </article>
+  <article mdate="2021-04-09" key="journals/mst/BenderFM06">
+    <author>Michael A. Bender</author>
+    <author orcid="0000-0003-3616-7788">Martin Farach-Colton</author>
+    <author>Miguel A. Mosteiro</author>
+    <title>Insertion Sort is O(n log n).</title>
+    <pages>391-397</pages>
+    <year>2006</year>
+    <volume>39</volume>
+    <journal>Theory Comput. Syst.</journal>
+    <number>3</number>
+    <ee>https://doi.org/10.1007/s00224-005-1237-z</ee>
+    <ee>https://www.wikidata.org/entity/Q30052820</ee>
+    <url>db/journals/mst/mst39.html#BenderFM06</url>
+  </article>
   <article mdate="2019-10-19" key="journals/mst/GawrychowskiJJ14">
     <author>Pawel Gawrychowski</author>
     <author orcid="0000-0003-4321-3105">Artur Jez</author>
@@ -6392,6 +6419,16 @@
     <ee type="oa">https://arxiv.org/abs/2003.08097</ee>
     <url>db/journals/corr/corr2003.html#abs-2003-08097</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/HagerupK16" publtype="informal">
+    <author>Torben Hagerup</author>
+    <author>Frank Kammer</author>
+    <title>Succinct Choice Dictionaries.</title>
+    <year>2016</year>
+    <volume>abs/1604.06058</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1604.06058</ee>
+    <url>db/journals/corr/corr1604.html#HagerupK16</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/Kosolobov14" publtype="informal">
     <author>Dmitry Kosolobov</author>
     <title>Lempel-Ziv Factorization May Be Harder Than Computing All Runs.</title>
@@ -6400,6 +6437,24 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1409.5641</ee>
     <url>db/journals/corr/corr1409.html#Kosolobov14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Kulakowski15" publtype="informal">
+    <author>Konrad Kulakowski</author>
+    <title>Dynamic concurrent van Emde Boas array.</title>
+    <year>2015</year>
+    <volume>abs/1509.06948</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1509.06948</ee>
+    <url>db/journals/corr/corr1509.html#Kulakowski15</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Vasarhelyi16" publtype="informal">
+    <author>Bálint Vásárhelyi</author>
+    <title>An Estimation of the Size of Non-Compact Suffix Trees.</title>
+    <year>2016</year>
+    <volume>abs/1604.01168</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1604.01168</ee>
+    <url>db/journals/corr/corr1604.html#Vasarhelyi16</url>
   </article>
   <article mdate="2019-11-11" key="journals/corr/abs-1911-03195" publtype="informal">
     <author>Miguel E. Coimbra</author>
@@ -6469,6 +6524,15 @@
     <ee type="oa">http://arxiv.org/abs/1910.14508</ee>
     <url>db/journals/corr/corr1910.html#abs-1910-14508</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Brodal15" publtype="informal">
+    <author>Gerth Stølting Brodal</author>
+    <title>External Memory Three-Sided Range Reporting and Top-$k$ Queries with Sublogarithmic Updates.</title>
+    <year>2015</year>
+    <volume>abs/1509.08240</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1509.08240</ee>
+    <url>db/journals/corr/corr1509.html#Brodal15</url>
+  </article>
   <article mdate="2021-06-15" key="journals/corr/abs-2106-06950" publtype="informal">
     <author>Alberto Boffi</author>
     <title>An efficient way to manage blocks of data with Wise Red-Black Trees.</title>
@@ -6477,6 +6541,17 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2106.06950</ee>
     <url>db/journals/corr/corr2106.html#abs-2106-06950</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/MinkinPM16" publtype="informal">
+    <author>Ilya Minkin</author>
+    <author>Son K. Pham</author>
+    <author>Paul Medvedev</author>
+    <title>TwoPaCo: An efficient algorithm to build the compacted de Bruijn graph from many complete genomes.</title>
+    <year>2016</year>
+    <volume>abs/1602.05856</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1602.05856</ee>
+    <url>db/journals/corr/corr1602.html#MinkinPM16</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/BelazzouguiCKM16" publtype="informal">
     <author>Djamal Belazzougui</author>
@@ -6502,6 +6577,16 @@
     <ee type="oa">http://arxiv.org/abs/1704.05660</ee>
     <url>db/journals/corr/corr1704.html#KaniwaKDS17a</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/NicolaeR16" publtype="informal">
+    <author>Marius Nicolae</author>
+    <author>Sanguthevar Rajasekaran</author>
+    <title>On pattern matching with k mismatches and few don't cares.</title>
+    <year>2016</year>
+    <volume>abs/1602.00621</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1602.00621</ee>
+    <url>db/journals/corr/corr1602.html#NicolaeR16</url>
+  </article>
   <article mdate="2021-06-02" key="journals/corr/abs-2105-14990" publtype="informal">
     <author>Giuseppa Castiglione</author>
     <author>Jia Gao</author>
@@ -6524,6 +6609,18 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1910.02151</ee>
     <url>db/journals/corr/corr1910.html#abs-1910-02151</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/MantaciRRS13" publtype="informal">
+    <author>Sabrina Mantaci</author>
+    <author>Antonio Restivo</author>
+    <author>Giovanna Rosone</author>
+    <author>Marinella Sciortino</author>
+    <title>Sorting suffixes of a text via its Lyndon Factorization.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1306.1366</ee>
+    <volume>abs/1306.1366</volume>
+    <url>db/journals/corr/corr1306.html#MantaciRRS13</url>
   </article>
   <article mdate="2020-05-22" key="journals/corr/abs-2005-09342" publtype="informal">
     <author>Veli Mäkinen</author>
@@ -6572,6 +6669,17 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1901.08544</ee>
     <url>db/journals/corr/corr1901.html#abs-1901-08544</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/VlachosFK14" publtype="informal">
+    <author>Michail Vlachos</author>
+    <author>Nikolaos M. Freris</author>
+    <author>Anastasios Kyrillidis</author>
+    <title>Compressive Mining: Fast and Optimal Data Mining in the Compressed Domain.</title>
+    <year>2014</year>
+    <volume>abs/1405.5873</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1405.5873</ee>
+    <url>db/journals/corr/corr1405.html#VlachosFK14</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/Kosolobov16" publtype="informal">
     <author>Dmitry Kosolobov</author>
@@ -6720,6 +6828,18 @@
     <ee type="oa">http://arxiv.org/abs/1509.07417</ee>
     <url>db/journals/corr/corr1509.html#0001IK15</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1303-3692" publtype="informal">
+    <author>Gang Liao</author>
+    <author>Qi Sun</author>
+    <author>Longfei Ma</author>
+    <author>Zhihui Qin</author>
+    <title>GPU Accelerated Multiple Deoxyribose Nucleic Acid Sequence Parallel Matching</title>
+    <ee type="oa">http://arxiv.org/abs/1303.3692</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1303.3692</volume>
+    <url>db/journals/corr/corr1303.html#abs-1303-3692</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/CrochemoreFMP15" publtype="informal">
     <author>Maxime Crochemore</author>
     <author>Gabriele Fici</author>
@@ -6851,6 +6971,17 @@
     <ee type="oa">https://arxiv.org/abs/2106.02309</ee>
     <url>db/journals/corr/corr2106.html#abs-2106-02309</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/BlumLD14" publtype="informal">
+    <author>Christian Blum 0001</author>
+    <author>José Antonio Lozano</author>
+    <author>Pedro Pinacho Davidson</author>
+    <title>Mathematical Programming Strategies for Solving the Minimum Common String Partition Problem.</title>
+    <year>2014</year>
+    <volume>abs/1405.5646</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1405.5646</ee>
+    <url>db/journals/corr/corr1405.html#BlumLD14</url>
+  </article>
   <article mdate="2019-01-31" key="journals/corr/abs-1901-01926" publtype="informal">
     <author>Grzegorz Guspiel</author>
     <title>An in-place, subquadratic algorithm for permutation inversion.</title>
@@ -6868,6 +6999,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1712.05020</ee>
     <url>db/journals/corr/corr1712.html#abs-1712-05020</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Brown14b" publtype="informal">
+    <author>Russell A. Brown</author>
+    <title>Building a Balanced k-d Tree in O(kn log n) Time.</title>
+    <year>2014</year>
+    <volume>abs/1410.5420</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1410.5420</ee>
+    <url>db/journals/corr/corr1410.html#Brown14b</url>
   </article>
   <article mdate="2019-06-27" key="journals/corr/abs-1906-11030" publtype="informal">
     <author>Giulia Bernardini 0001</author>
@@ -6894,6 +7034,25 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1507.07080</ee>
     <url>db/journals/corr/corr1507.html#BelazzouguiP15</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1305-4883" publtype="informal">
+    <author>Marcos A. Kiwi</author>
+    <author>Cristina G. Fernandes</author>
+    <title>Repetition-free longest common subsequence of random sequences</title>
+    <ee type="oa">http://arxiv.org/abs/1305.4883</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1305.4883</volume>
+    <url>db/journals/corr/corr1305.html#abs-1305-4883</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Sergeev16" publtype="informal">
+    <author>Igor S. Sergeev</author>
+    <title>On the circuit complexity of the standard and the Karatsuba methods of multiplying integers.</title>
+    <year>2016</year>
+    <volume>abs/1602.02362</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1602.02362</ee>
+    <url>db/journals/corr/corr1602.html#Sergeev16</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1104-4203" publtype="informal">
     <author>Pawel Gawrychowski</author>
@@ -6945,6 +7104,16 @@
     <ee type="oa">https://arxiv.org/abs/2201.05198</ee>
     <url>db/journals/corr/corr2201.html#abs-2201-05198</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/TsarevS16" publtype="informal">
+    <author>Sergey P. Tsarev</author>
+    <author>Michael G. Sadovsky</author>
+    <title>New Error Tolerant Method to Search Long Repeats in Symbol Sequences.</title>
+    <year>2016</year>
+    <volume>abs/1604.01317</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1604.01317</ee>
+    <url>db/journals/corr/corr1604.html#TsarevS16</url>
+  </article>
   <article mdate="2021-01-22" key="journals/corr/abs-2101-07360" publtype="informal">
     <author>Michael Mitzenmacher</author>
     <author>Saeed Seddighin</author>
@@ -6954,6 +7123,15 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2101.07360</ee>
     <url>db/journals/corr/corr2101.html#abs-2101-07360</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Lerma14" publtype="informal">
+    <author>Miguel A. Lerma</author>
+    <title>How inefficient can a sort algorithm be?</title>
+    <year>2014</year>
+    <volume>abs/1406.1077</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1406.1077</ee>
+    <url>db/journals/corr/corr1406.html#Lerma14</url>
   </article>
   <article mdate="2021-12-13" key="journals/corr/abs-2112-05106" publtype="informal">
     <author>Alexandr Andoni</author>
@@ -6989,6 +7167,17 @@
     <ee type="oa">http://arxiv.org/abs/1612.07475</ee>
     <url>db/journals/corr/corr1612.html#InenagaH16</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/BonnichsenPK15" publtype="informal">
+    <author>Lars F. Bonnichsen</author>
+    <author>Christian W. Probst</author>
+    <author>Sven Karlsson</author>
+    <title>Implementation of BT-trees.</title>
+    <year>2015</year>
+    <volume>abs/1505.01210</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1505.01210</ee>
+    <url>db/journals/corr/corr1505.html#BonnichsenPK15</url>
+  </article>
   <article mdate="2020-06-08" key="journals/corr/abs-2001-00218" publtype="informal">
     <author>Thiago Serra</author>
     <author>Abhinav Kumar 0004</author>
@@ -6999,6 +7188,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/2001.00218</ee>
     <url>db/journals/corr/corr2001.html#abs-2001-00218</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/IliopoulosP15" publtype="informal">
+    <author>Vasileios Iliopoulos</author>
+    <author>David B. Penman</author>
+    <title>Dual pivot Quicksort.</title>
+    <year>2015</year>
+    <volume>abs/1503.08498</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1503.08498</ee>
+    <url>db/journals/corr/corr1503.html#IliopoulosP15</url>
   </article>
   <article mdate="2020-01-08" key="journals/corr/abs-1911-13014" publtype="informal">
     <author>Andreas Kipf</author>
@@ -7014,6 +7213,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1911.13014</ee>
     <url>db/journals/corr/corr1911.html#abs-1911-13014</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/JorgensenL14" publtype="informal">
+    <author>Allan Grønlund Jørgensen</author>
+    <author>Kasper Green Larsen</author>
+    <title>Towards Tight Lower Bounds for Range Reporting on the RAM.</title>
+    <year>2014</year>
+    <volume>abs/1411.0644</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1411.0644</ee>
+    <url>db/journals/corr/corr1411.html#JorgensenL14</url>
   </article>
   <article mdate="2020-01-03" key="journals/corr/abs-1912-09783" publtype="informal">
     <author>Chundong Wang 0001</author>
@@ -7059,6 +7268,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1907.04405</ee>
     <url>db/journals/corr/corr1907.html#abs-1907-04405</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Galle16" publtype="informal">
+    <author>Matthias Gallé</author>
+    <title>Multi-view pattern matching.</title>
+    <year>2016</year>
+    <volume>abs/1607.05157</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1607.05157</ee>
+    <url>db/journals/corr/corr1607.html#Galle16</url>
   </article>
   <article mdate="2020-03-02" key="journals/corr/abs-2002-08061" publtype="informal">
     <author>Patrick Dinklage</author>
@@ -7145,6 +7363,17 @@
     <ee type="oa">https://arxiv.org/abs/2112.12678</ee>
     <url>db/journals/corr/corr2112.html#abs-2112-12678</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/AumullerDK15" publtype="informal">
+    <author>Martin Aumüller 0001</author>
+    <author>Martin Dietzfelbinger</author>
+    <author>Pascal Klaue</author>
+    <title>How Good is Multi-Pivot Quicksort?</title>
+    <year>2015</year>
+    <volume>abs/1510.04676</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1510.04676</ee>
+    <url>db/journals/corr/corr1510.html#AumullerDK15</url>
+  </article>
   <article mdate="2020-03-24" key="journals/corr/abs-2003-08211" publtype="informal">
     <author>Shoupu Wan</author>
     <title>An Efficient Implementation of Manacher's Algorithm.</title>
@@ -7153,6 +7382,17 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2003.08211</ee>
     <url>db/journals/corr/corr2003.html#abs-2003-08211</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GurskiRW13" publtype="informal">
+    <author>Frank Gurski</author>
+    <author>Jochen Rethmann</author>
+    <author>Egon Wanke</author>
+    <title>Complexity of the FIFO Stack-Up Problem.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1307.1915</ee>
+    <volume>abs/1307.1915</volume>
+    <url>db/journals/corr/corr1307.html#GurskiRW13</url>
   </article>
   <article mdate="2022-02-09" key="journals/corr/abs-2202-02609" publtype="informal">
     <author>Andrea Frosini</author>
@@ -7180,6 +7420,18 @@
     <ee type="oa">http://arxiv.org/abs/1905.02298</ee>
     <url>db/journals/corr/corr1905.html#abs-1905-02298</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/DaganFGM16" publtype="informal">
+    <author>Yuval Dagan</author>
+    <author>Yuval Filmus</author>
+    <author>Ariel Gabizon</author>
+    <author>Shay Moran</author>
+    <title>Twenty (simple) questions.</title>
+    <year>2016</year>
+    <volume>abs/1611.01655</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1611.01655</ee>
+    <url>db/journals/corr/corr1611.html#DaganFGM16</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/GagieMS14" publtype="informal">
     <author>Travis Gagie</author>
     <author>Giovanni Manzini</author>
@@ -7201,6 +7453,17 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2005.11718</ee>
     <url>db/journals/corr/corr2005.html#abs-2005-11718</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/PaveticZS14" publtype="informal">
+    <author>Filip Pavetic</author>
+    <author>Goran Zuzic</author>
+    <author>Mile Sikic</author>
+    <title>$LCSk$++: Practical similarity metric for long strings.</title>
+    <year>2014</year>
+    <volume>abs/1407.2407</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1407.2407</ee>
+    <url>db/journals/corr/corr1407.html#PaveticZS14</url>
   </article>
   <article mdate="2019-06-14" key="journals/corr/abs-1906-05266" publtype="informal">
     <author>Manuel Lafond</author>
@@ -7332,6 +7595,15 @@
     <ee type="oa">https://arxiv.org/abs/2004.02335</ee>
     <url>db/journals/corr/corr2004.html#abs-2004-02335</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Muqaddas15" publtype="informal">
+    <author>Ammar Muqaddas</author>
+    <title>Triple State QuickSort, A replacement for the C/C++ library qsort.</title>
+    <year>2015</year>
+    <volume>abs/1505.00558</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1505.00558</ee>
+    <url>db/journals/corr/corr1505.html#Muqaddas15</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1805-04151" publtype="informal">
     <author>Venkatesan Guruswami</author>
     <author>Andrii Riazanov</author>
@@ -7353,6 +7625,17 @@
     <ee type="oa">http://arxiv.org/abs/1912.02900</ee>
     <url>db/journals/corr/corr1912.html#abs-1912-02900</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/AlatabbiRS14" publtype="informal">
+    <author>Ali Alatabbi</author>
+    <author>Mohammad Sohel Rahman</author>
+    <author>William F. Smyth</author>
+    <title>Computing Covers Using Prefix Tables.</title>
+    <year>2014</year>
+    <volume>abs/1412.3016</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1412.3016</ee>
+    <url>db/journals/corr/corr1412.html#AlatabbiRS14</url>
+  </article>
   <article mdate="2019-08-19" key="journals/corr/abs-1908-05930" publtype="informal">
     <author>Simone Faro</author>
     <author>Arianna Pavone</author>
@@ -7363,6 +7646,26 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1908.05930</ee>
     <url>db/journals/corr/corr1908.html#abs-1908-05930</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/SarkarC16" publtype="informal">
+    <author>Kaushik Sarkar</author>
+    <author>Charles J. Colbourn</author>
+    <title>Two-stage algorithms for covering array construction.</title>
+    <year>2016</year>
+    <volume>abs/1606.06730</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1606.06730</ee>
+    <url>db/journals/corr/corr1606.html#SarkarC16</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/LimassetP15" publtype="informal">
+    <author>Antoine Limasset</author>
+    <author>Pierre Peterlongo</author>
+    <title>Read Mapping on de Bruijn graph.</title>
+    <year>2015</year>
+    <volume>abs/1505.04911</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1505.04911</ee>
+    <url>db/journals/corr/corr1505.html#LimassetP15</url>
   </article>
   <article mdate="2019-01-01" key="journals/corr/abs-1812-01844" publtype="informal">
     <author>Jaiyam Sharma</author>
@@ -7558,6 +7861,18 @@
     <ee type="oa">http://arxiv.org/abs/1702.01280</ee>
     <url>db/journals/corr/corr1702.html#CunhaDGWKS17</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/FarzanLNS14" publtype="informal">
+    <author>Arash Farzan</author>
+    <author>Alejandro López-Ortiz</author>
+    <author>Patrick K. Nicholson</author>
+    <author>Alejandro Salinger</author>
+    <title>Algorithms in the Ultra-Wide Word Model.</title>
+    <year>2014</year>
+    <volume>abs/1411.7359</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1411.7359</ee>
+    <url>db/journals/corr/corr1411.html#FarzanLNS14</url>
+  </article>
   <article mdate="2020-12-09" key="journals/corr/abs-2012-03996" publtype="informal">
     <author>Vincent Jugé</author>
     <author>Ghazal Khalighinejad</author>
@@ -7654,6 +7969,17 @@
     <ee type="oa">https://arxiv.org/abs/2201.01727</ee>
     <url>db/journals/corr/corr2201.html#abs-2201-01727</url>
   </article>
+  <article mdate="2021-01-23" key="journals/corr/abs-1304-0988" publtype="informal">
+    <author orcid="0000-0002-6061-9177">Sebastian Wild</author>
+    <author>Markus E. Nebel</author>
+    <author>Ralph Neininger</author>
+    <title>Average Case and Distributional Analysis of Java 7's Dual Pivot Quicksort</title>
+    <ee type="oa">http://arxiv.org/abs/1304.0988</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1304.0988</volume>
+    <url>db/journals/corr/corr1304.html#abs-1304-0988</url>
+  </article>
   <article mdate="2021-05-14" key="journals/corr/abs-2105-03028" publtype="informal">
     <author>Shyan Akmal</author>
     <author>Virginia Vassilevska Williams</author>
@@ -7694,6 +8020,17 @@
     <ee type="oa">http://arxiv.org/abs/1510.02882</ee>
     <url>db/journals/corr/corr1510.html#KopplS15</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/DrmotaMS16" publtype="informal">
+    <author>Michael Drmota</author>
+    <author>Abram Magner</author>
+    <author>Wojciech Szpankowski</author>
+    <title>Asymmetric Rényi Problem and PATRICIA Tries.</title>
+    <year>2016</year>
+    <volume>abs/1605.01814</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1605.01814</ee>
+    <url>db/journals/corr/corr1605.html#DrmotaMS16</url>
+  </article>
   <article mdate="2020-03-17" key="journals/corr/abs-2003-04629" publtype="informal">
     <author>Laura Barker</author>
     <author>Pamela Fleischmann</author>
@@ -7728,6 +8065,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1902.02889</ee>
     <url>db/journals/corr/corr1902.html#abs-1902-02889</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1301-5842" publtype="informal">
+    <author>Artur Jez</author>
+    <title>Approximation of grammar-based compression via recompression</title>
+    <ee type="oa">http://arxiv.org/abs/1301.5842</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1301.5842</volume>
+    <url>db/journals/corr/corr1301.html#abs-1301-5842</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-0811-3490" publtype="informal">
     <author>Philip Bille</author>
@@ -7807,6 +8153,17 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1907.10984</ee>
     <url>db/journals/corr/corr1907.html#abs-1907-10984</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/LarssonFK14" publtype="informal">
+    <author>N. Jesper Larsson</author>
+    <author>Kasper Fuglsang</author>
+    <author>Kenneth Karlsson</author>
+    <title>Efficient Representation for Online Suffix Tree Construction.</title>
+    <year>2014</year>
+    <volume>abs/1403.0457</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1403.0457</ee>
+    <url>db/journals/corr/corr1403.html#LarssonFK14</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/GawrychowskiK16a" publtype="informal">
     <author>Pawel Gawrychowski</author>
@@ -8044,6 +8401,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1811.01248</ee>
     <url>db/journals/corr/corr1811.html#abs-1811-01248</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/CaoL14" publtype="informal">
+    <author>Zhengjun Cao</author>
+    <author>Lihua Liu</author>
+    <title>A Fast String Matching Algorithm Based on Lowlight Characters in the Pattern.</title>
+    <year>2014</year>
+    <volume>abs/1401.7110</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1401.7110</ee>
+    <url>db/journals/corr/corr1401.html#CaoL14</url>
   </article>
   <article mdate="2020-08-07" key="journals/corr/abs-2008-01765" publtype="informal">
     <author>Gilad Asharov</author>
@@ -8308,6 +8675,19 @@
     <ee type="oa">https://arxiv.org/abs/2104.02461</ee>
     <url>db/journals/corr/corr2104.html#abs-2104-02461</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/AumullerDHKP16a" publtype="informal">
+    <author>Martin Aumüller 0001</author>
+    <author>Martin Dietzfelbinger</author>
+    <author>Clemens Heuberger</author>
+    <author>Daniel Krenn</author>
+    <author>Helmut Prodinger</author>
+    <title>Dual-Pivot Quicksort: Optimality, Analysis and Zeros of Associated Lattice Paths.</title>
+    <year>2016</year>
+    <volume>abs/1611.00258</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1611.00258</ee>
+    <url>db/journals/corr/corr1611.html#AumullerDHKP16a</url>
+  </article>
   <article mdate="2020-05-28" key="journals/corr/abs-2005-11188" publtype="informal">
     <author>Torben Hagerup</author>
     <title>Still Simpler Static Level Ancestors.</title>
@@ -8391,6 +8771,17 @@
     <ee type="oa">http://arxiv.org/abs/1603.02063</ee>
     <url>db/journals/corr/corr1603.html#BrisaboaBKNS16</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/MunroNV15" publtype="informal">
+    <author>J. Ian Munro</author>
+    <author>Yakov Nekrich</author>
+    <author>Jeffrey Scott Vitter</author>
+    <title>Dynamic Data Structures for Document Collections and Graphs.</title>
+    <year>2015</year>
+    <volume>abs/1503.05977</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1503.05977</ee>
+    <url>db/journals/corr/corr1503.html#MunroNV15</url>
+  </article>
   <article mdate="2021-10-14" key="journals/corr/abs-2001-03147" publtype="informal">
     <author>Ariel Shtul</author>
     <author orcid="0000-0002-3933-6850">Carlos Baquero</author>
@@ -8410,6 +8801,17 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2004.02781</ee>
     <url>db/journals/corr/corr2004.html#abs-2004-02781</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/AlatabbiDR15" publtype="informal">
+    <author>Ali Alatabbi</author>
+    <author>Jacqueline W. Daykin</author>
+    <author>M. Sohel Rahman</author>
+    <title>Linear Algorithms for Computing the Lyndon Border Array and the Lyndon Suffix Array.</title>
+    <year>2015</year>
+    <volume>abs/1506.06983</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1506.06983</ee>
+    <url>db/journals/corr/corr1506.html#AlatabbiDR15</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/ChrobakGMY15" publtype="informal">
     <author>Marek Chrobak</author>
@@ -8432,6 +8834,20 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1908.04686</ee>
     <url>db/journals/corr/corr1908.html#abs-1908-04686</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/AlserHXEMA16" publtype="informal">
+    <author>Mohammed Alser</author>
+    <author>Hasan Hassan</author>
+    <author>Hongyi Xin</author>
+    <author>Oguz Ergin</author>
+    <author>Onur Mutlu</author>
+    <author>Can Alkan</author>
+    <title>GateKeeper: Enabling Fast Pre-Alignment in DNA Short Read Mapping with a New Streaming Accelerator Architecture.</title>
+    <year>2016</year>
+    <volume>abs/1604.01789</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1604.01789</ee>
+    <url>db/journals/corr/corr1604.html#AlserHXEMA16</url>
   </article>
   <article mdate="2018-10-05" key="journals/corr/abs-1809-08411" publtype="informal">
     <author>Vincent Jugé</author>
@@ -8528,6 +8944,18 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2002.01178</ee>
     <url>db/journals/corr/corr2002.html#abs-2002-01178</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1301-7183" publtype="informal">
+    <author>Lei Wang 0010</author>
+    <author>Xiaodong Wang 0003</author>
+    <author>Yingjie Wu</author>
+    <author>Daxin Zhu</author>
+    <title>A Dynamic Programming Solution to a Generalized LCS Problem</title>
+    <ee type="oa">http://arxiv.org/abs/1301.7183</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1301.7183</volume>
+    <url>db/journals/corr/corr1301.html#abs-1301-7183</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/Dinklage0KLS17" publtype="informal">
     <author>Patrick Dinklage</author>
@@ -8641,6 +9069,19 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2012.07892</ee>
     <url>db/journals/corr/corr2012.html#abs-2012-07892</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/FiciKLLP15" publtype="informal">
+    <author>Gabriele Fici</author>
+    <author>Tomasz Kociumaka</author>
+    <author>Thierry Lecroq</author>
+    <author>Arnaud Lefebvre</author>
+    <author>Élise Prieur-Gaston</author>
+    <title>Fast Computation of Abelian Runs.</title>
+    <year>2015</year>
+    <volume>abs/1506.08518</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1506.08518</ee>
+    <url>db/journals/corr/corr1506.html#FiciKLLP15</url>
   </article>
   <article mdate="2020-03-10" key="journals/corr/abs-2003-01902" publtype="informal">
     <author>James Aspnes</author>
@@ -8781,6 +9222,28 @@
     <ee type="oa">http://arxiv.org/abs/1610.08111</ee>
     <url>db/journals/corr/corr1610.html#IliopoulosKP16</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Elser16" publtype="informal">
+    <author>Veit Elser</author>
+    <title>The complexity of bit retrieval.</title>
+    <year>2016</year>
+    <volume>abs/1601.03428</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1601.03428</ee>
+    <url>db/journals/corr/corr1601.html#Elser16</url>
+  </article>
+  <article mdate="2020-11-03" key="journals/corr/GuptaSWKP16" publtype="informal">
+    <author>Nitish Gupta</author>
+    <author>Komal Sanjeev</author>
+    <author>Tim Wall</author>
+    <author>Carl Kingsford</author>
+    <author>Rob Patro</author>
+    <title>Efficient Index Maintenance Under Dynamic Genome Modification.</title>
+    <year>2016</year>
+    <volume>abs/1604.03132</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1604.03132</ee>
+    <url>db/journals/corr/corr1604.html#GuptaSWKP16</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/BelazzouguiC17aa" publtype="informal">
     <author>Djamal Belazzougui</author>
     <author>Fabio Cunial</author>
@@ -8790,6 +9253,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1707.08197</ee>
     <url>db/journals/corr/corr1707.html#BelazzouguiC17aa</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1302-3481" publtype="informal">
+    <author>Artur Jez</author>
+    <title>One-variable word equations in linear time</title>
+    <ee type="oa">http://arxiv.org/abs/1302.3481</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1302.3481</volume>
+    <url>db/journals/corr/corr1302.html#abs-1302-3481</url>
   </article>
   <article mdate="2020-05-08" key="journals/corr/abs-2005-01098" publtype="informal">
     <author>Ioana Oriana Bercea</author>
@@ -8848,6 +9320,18 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1906.00809</ee>
     <url>db/journals/corr/corr1906.html#abs-1906-00809</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/FiciLLP15" publtype="informal">
+    <author>Gabriele Fici</author>
+    <author>Thierry Lecroq</author>
+    <author>Arnaud Lefebvre</author>
+    <author>Élise Prieur-Gaston</author>
+    <title>Online Computation of Abelian Runs.</title>
+    <year>2015</year>
+    <volume>abs/1501.01429</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1501.01429</ee>
+    <url>db/journals/corr/corr1501.html#FiciLLP15</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/Ben-Basat17" publtype="informal">
     <author>Ran Ben-Basat</author>
@@ -8917,6 +9401,17 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1901.05264</ee>
     <url>db/journals/corr/corr1901.html#abs-1901-05264</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/BanerjeeC016" publtype="informal">
+    <author>Niranka Banerjee</author>
+    <author>Sankardeep Chakraborty</author>
+    <author>Venkatesh Raman 0001</author>
+    <title>Improved Space efficient algorithms for BFS, DFS and applications.</title>
+    <year>2016</year>
+    <volume>abs/1606.04718</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1606.04718</ee>
+    <url>db/journals/corr/corr1606.html#BanerjeeC016</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1807-07596" publtype="informal">
     <author>Fabio Garofalo</author>
@@ -9008,6 +9503,17 @@
     <ee type="oa">https://arxiv.org/abs/2109.00287</ee>
     <url>db/journals/corr/corr2109.html#abs-2109-00287</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/HaghighiMN16" publtype="informal">
+    <author>Kaveh Geyratmand Haghighi</author>
+    <author>Mir Kamal Mirnia</author>
+    <author>Ahmad Habibizad Navin</author>
+    <title>Optimizing run-length algorithm using octonary repetition tree.</title>
+    <year>2016</year>
+    <volume>abs/1611.09664</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1611.09664</ee>
+    <url>db/journals/corr/corr1611.html#HaghighiMN16</url>
+  </article>
   <article mdate="2019-01-01" key="journals/corr/abs-1812-06177" publtype="informal">
     <author>Sixue Liu</author>
     <author>Robert E. Tarjan</author>
@@ -9090,6 +9596,19 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2009.02934</ee>
     <url>db/journals/corr/corr2009.html#abs-2009-02934</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/BurcsiFLRS14a" publtype="informal">
+    <author>Peter Burcsi</author>
+    <author>Gabriele Fici</author>
+    <author>Zsuzsanna Lipták</author>
+    <author>Frank Ruskey</author>
+    <author>Joe Sawada</author>
+    <title>Normal, Abby Normal, Prefix Normal.</title>
+    <year>2014</year>
+    <volume>abs/1404.2824</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1404.2824</ee>
+    <url>db/journals/corr/corr1404.html#BurcsiFLRS14a</url>
   </article>
   <article mdate="2019-07-08" key="journals/corr/abs-1907-02929" publtype="informal">
     <author>Nicolas Boria</author>
@@ -9287,6 +9806,16 @@
     <ee type="oa">https://arxiv.org/abs/2005.07678</ee>
     <url>db/journals/corr/corr2005.html#abs-2005-07678</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/BartonI14" publtype="informal">
+    <author>Carl Barton</author>
+    <author>Costas S. Iliopoulos</author>
+    <title>On the Average-case Complexity of Pattern Matching with Wildcards.</title>
+    <year>2014</year>
+    <volume>abs/1407.0950</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1407.0950</ee>
+    <url>db/journals/corr/corr1407.html#BartonI14</url>
+  </article>
   <article mdate="2021-08-18" key="journals/corr/abs-2108-05495" publtype="informal">
     <author>Szymon Grabowski</author>
     <author>Dominik Köppl</author>
@@ -9307,6 +9836,15 @@
     <ee type="oa">https://arxiv.org/abs/2007.12762</ee>
     <url>db/journals/corr/corr2007.html#abs-2007-12762</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Russo15" publtype="informal">
+    <author>Luís M. S. Russo</author>
+    <title>A Study on Splay Trees.</title>
+    <year>2015</year>
+    <volume>abs/1511.03148</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1511.03148</ee>
+    <url>db/journals/corr/corr1511.html#Russo15</url>
+  </article>
   <article mdate="2019-08-01" key="journals/corr/abs-1907-12034" publtype="informal">
     <author>Gabriele Fici</author>
     <author>Pawel Gawrychowski</author>
@@ -9325,6 +9863,25 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2008.02769</ee>
     <url>db/journals/corr/corr2008.html#abs-2008-02769</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1101-3448" publtype="informal">
+    <author>Johannes Fischer 0001</author>
+    <title>Inducing the LCP-Array</title>
+    <ee type="oa">http://arxiv.org/abs/1101.3448</ee>
+    <year>2011</year>
+    <journal>CoRR</journal>
+    <volume>abs/1101.3448</volume>
+    <url>db/journals/corr/corr1101.html#abs-1101-3448</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GrabowskiR14" publtype="informal">
+    <author>Szymon Grabowski</author>
+    <author>Marcin Raniszewski</author>
+    <title>Two simple full-text indexes based on the suffix array.</title>
+    <year>2014</year>
+    <volume>abs/1405.5919</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1405.5919</ee>
+    <url>db/journals/corr/corr1405.html#GrabowskiR14</url>
   </article>
   <article mdate="2021-07-20" key="journals/corr/abs-2107-03290" publtype="informal">
     <author>Ani Kristo</author>
@@ -9359,6 +9916,16 @@
     <ee type="oa">https://arxiv.org/abs/2010.13170</ee>
     <url>db/journals/corr/corr2010.html#abs-2010-13170</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1302-5851" publtype="informal">
+    <author>Matthew Felice Pace</author>
+    <author>Alexander Tiskin</author>
+    <title>Parallel Suffix Array Construction by Accelerated Sampling</title>
+    <ee type="oa">http://arxiv.org/abs/1302.5851</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1302.5851</volume>
+    <url>db/journals/corr/corr1302.html#abs-1302-5851</url>
+  </article>
   <article mdate="2020-03-03" key="journals/corr/abs-2002-11342" publtype="informal">
     <author>Alireza Farhadi 0001</author>
     <author>MohammadTaghi Hajiaghayi</author>
@@ -9380,6 +9947,17 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2011.11772</ee>
     <url>db/journals/corr/corr2011.html#abs-2011-11772</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GrabowskiRD15" publtype="informal">
+    <author>Szymon Grabowski</author>
+    <author>Marcin Raniszewski</author>
+    <author>Sebastian Deorowicz</author>
+    <title>FM-index for dummies.</title>
+    <year>2015</year>
+    <volume>abs/1506.04896</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1506.04896</ee>
+    <url>db/journals/corr/corr1506.html#GrabowskiRD15</url>
   </article>
   <article mdate="2020-05-08" key="journals/corr/abs-2005-01371" publtype="informal">
     <author>Josef Rukavicka</author>
@@ -9595,6 +10173,16 @@
     <ee type="oa">https://arxiv.org/abs/2104.00792</ee>
     <url>db/journals/corr/corr2104.html#abs-2104-00792</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/RajasekaranN13" publtype="informal">
+    <author>Sanguthevar Rajasekaran</author>
+    <author>Marius Nicolae</author>
+    <title>An Elegant Algorithm for the Construction of Suffix Arrays.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1307.1417</ee>
+    <volume>abs/1307.1417</volume>
+    <url>db/journals/corr/corr1307.html#RajasekaranN13</url>
+  </article>
   <article mdate="2020-03-03" key="journals/corr/abs-2002-11157" publtype="informal">
     <author>Dina Sokol</author>
     <title>2-Dimensional Palindromes with k Mismatches.</title>
@@ -9624,6 +10212,16 @@
     <volume>abs/1007.5406</volume>
     <url>db/journals/corr/corr1007.html#abs-1007-5406</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/CrochemoreM14" publtype="informal">
+    <author>Maxime Crochemore</author>
+    <author>Robert Mercas</author>
+    <title>Fewer runs than word length.</title>
+    <year>2014</year>
+    <volume>abs/1412.4646</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1412.4646</ee>
+    <url>db/journals/corr/corr1412.html#CrochemoreM14</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1302-3347" publtype="informal">
     <author>Johannes Fischer 0001</author>
     <author>Pawel Gawrychowski</author>
@@ -9644,6 +10242,19 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1705.10382</ee>
     <url>db/journals/corr/corr1705.html#GagieNP17</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/AcharyaDMOP14" publtype="informal">
+    <author>Jayadev Acharya</author>
+    <author>Hirakendu Das</author>
+    <author>Olgica Milenkovic</author>
+    <author>Alon Orlitsky</author>
+    <author>Shengjun Pan</author>
+    <title>String Reconstruction from Substring Compositions.</title>
+    <year>2014</year>
+    <volume>abs/1403.2439</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1403.2439</ee>
+    <url>db/journals/corr/corr1403.html#AcharyaDMOP14</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/GagieIKKPPS15" publtype="informal">
     <author>Travis Gagie</author>
@@ -9673,6 +10284,19 @@
     <ee type="oa">http://arxiv.org/abs/1806.08692</ee>
     <url>db/journals/corr/corr1806.html#abs-1806-08692</url>
   </article>
+  <article mdate="2021-06-29" key="journals/corr/CrochemoreIKMV15" publtype="informal">
+    <author>Maxime Crochemore</author>
+    <author>Costas S. Iliopoulos</author>
+    <author>Ritu Kundu</author>
+    <author>Manal Mohamed 0001</author>
+    <author>Fatima Vayani</author>
+    <title>Linear Algorithm for Conservative Degenerate Pattern Matching.</title>
+    <year>2015</year>
+    <volume>abs/1506.04559</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1506.04559</ee>
+    <url>db/journals/corr/corr1506.html#CrochemoreIKMV15</url>
+  </article>
   <article mdate="2022-01-03" key="journals/corr/abs-2112-05836" publtype="informal">
     <author>Arun Ganesh</author>
     <author>Tomasz Kociumaka</author>
@@ -9695,6 +10319,27 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1407.0522</ee>
     <url>db/journals/corr/corr1407.html#KociumakaSV14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GrabowskiR16" publtype="informal">
+    <author>Szymon Grabowski</author>
+    <author>Marcin Raniszewski</author>
+    <title>Rank and select: Another lesson learned.</title>
+    <year>2016</year>
+    <volume>abs/1605.01539</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1605.01539</ee>
+    <url>db/journals/corr/corr1605.html#GrabowskiR16</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/0002ST16" publtype="informal">
+    <author>Arnab Ganguly 0002</author>
+    <author>Rahul Shah</author>
+    <author>Sharma V. Thankachan</author>
+    <title>Parameterized Pattern Matching - Succinctly.</title>
+    <year>2016</year>
+    <volume>abs/1603.07457</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1603.07457</ee>
+    <url>db/journals/corr/corr1603.html#0002ST16</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1204-4509" publtype="informal">
     <author>Yakov Nekrich</author>
@@ -9824,6 +10469,16 @@
     <ee type="oa">https://arxiv.org/abs/2109.09306</ee>
     <url>db/journals/corr/corr2109.html#abs-2109-09306</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/EdelkampW13" publtype="informal">
+    <author>Stefan Edelkamp</author>
+    <author>Armin Weiß</author>
+    <title>QuickXsort: Efficient Sorting with n log n - 1.399n +o(n) Comparisons on Average.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1307.3033</ee>
+    <volume>abs/1307.3033</volume>
+    <url>db/journals/corr/corr1307.html#EdelkampW13</url>
+  </article>
   <article mdate="2021-01-02" key="journals/corr/abs-2012-06840" publtype="informal">
     <author>Jeffrey O. Shallit</author>
     <title>String Attractors for Automatic Sequences.</title>
@@ -9845,6 +10500,29 @@
     <volume>abs/1204.5524</volume>
     <url>db/journals/corr/corr1204.html#abs-1204-5524</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/LiuR14" publtype="informal">
+    <author>Jiamou Liu</author>
+    <author>Kostya Ross</author>
+    <title>Dynamic Partial Sorting.</title>
+    <year>2014</year>
+    <volume>abs/1402.2712</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1402.2712</ee>
+    <url>db/journals/corr/corr1402.html#LiuR14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1303-6481" publtype="informal">
+    <author>Simon Gog</author>
+    <author>Alistair Moffat</author>
+    <author>J. Shane Culpepper</author>
+    <author>Andrew Turpin</author>
+    <author>Anthony Wirth</author>
+    <title>Large-Scale Pattern Search Using Reduced-Space On-Disk Suffix Arrays</title>
+    <ee type="oa">http://arxiv.org/abs/1303.6481</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1303.6481</volume>
+    <url>db/journals/corr/corr1303.html#abs-1303-6481</url>
+  </article>
   <article mdate="2022-10-02" key="journals/corr/abs-1804-10062" publtype="informal">
     <author>Stefan Edelkamp</author>
     <author orcid="0000-0002-7645-5867">Armin Weiß</author>
@@ -9854,6 +10532,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1804.10062</ee>
     <url>db/journals/corr/corr1804.html#abs-1804-10062</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Berg14" publtype="informal">
+    <author>Ernst D. Berg</author>
+    <title>Introduction to Dynamic Unary Encoding.</title>
+    <year>2014</year>
+    <volume>abs/1405.2846</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1405.2846</ee>
+    <url>db/journals/corr/corr1405.html#Berg14</url>
   </article>
   <article mdate="2019-05-29" key="journals/corr/abs-1905-08974" publtype="informal">
     <author>Sung Gwan Park</author>
@@ -9875,6 +10562,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1902.03285</ee>
     <url>db/journals/corr/corr1902.html#abs-1902-03285</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GaitherW16" publtype="informal">
+    <author>Jeffrey Gaither</author>
+    <author>Mark Daniel Ward</author>
+    <title>Variance of the Internal Profile in Suffix Trees.</title>
+    <year>2016</year>
+    <volume>abs/1605.03390</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1605.03390</ee>
+    <url>db/journals/corr/corr1605.html#GaitherW16</url>
   </article>
   <article mdate="2020-10-26" key="journals/corr/abs-2010-09884" publtype="informal">
     <author>Gilad Asharov</author>
@@ -9962,6 +10659,16 @@
     <ee type="oa">http://arxiv.org/abs/1810.12322</ee>
     <url>db/journals/corr/corr1810.html#abs-1810-12322</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/DashN13a" publtype="informal">
+    <author>Tirtharaj Dash</author>
+    <author>Tanistha Nayak</author>
+    <title>Parallel Algorithm for Longest Common Subsequence in a String.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1306.4627</ee>
+    <volume>abs/1306.4627</volume>
+    <url>db/journals/corr/corr1306.html#DashN13a</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-cs-0506016" publtype="informal">
     <author>Travis Gagie</author>
     <title>Compressing Probability Distributions</title>
@@ -10008,6 +10715,16 @@
     <ee type="oa">https://arxiv.org/abs/2007.03402</ee>
     <url>db/journals/corr/corr2007.html#abs-2007-03402</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/GoldS16a" publtype="informal">
+    <author>Omer Gold</author>
+    <author>Micha Sharir</author>
+    <title>Dynamic Time Warping: Breaking the Quadratic Barrier.</title>
+    <year>2016</year>
+    <volume>abs/1607.05994</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1607.05994</ee>
+    <url>db/journals/corr/corr1607.html#GoldS16a</url>
+  </article>
   <article mdate="2019-10-31" key="journals/corr/abs-1910-11564" publtype="informal">
     <author>Mitsuru Funakoshi</author>
     <author>Julian Pape-Lange</author>
@@ -10017,6 +10734,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1910.11564</ee>
     <url>db/journals/corr/corr1910.html#abs-1910-11564</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/JekovecB15" publtype="informal">
+    <author>Matevz Jekovec</author>
+    <author>Andrej Brodnik</author>
+    <title>Parallel Query in the Suffix Tree.</title>
+    <year>2015</year>
+    <volume>abs/1509.06167</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1509.06167</ee>
+    <url>db/journals/corr/corr1509.html#JekovecB15</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1710-08937" publtype="informal">
     <author>Markus Brill</author>
@@ -10078,6 +10805,17 @@
     <ee type="oa">https://arxiv.org/abs/2108.04458</ee>
     <url>db/journals/corr/corr2108.html#abs-2108-04458</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/PapamichailCP14" publtype="informal">
+    <author>Dimitris P. Papamichail</author>
+    <author>Thomas Caputi</author>
+    <author>Georgios Papamichail</author>
+    <title>The Level Ancestor Problem in Practice.</title>
+    <year>2014</year>
+    <volume>abs/1402.2741</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1402.2741</ee>
+    <url>db/journals/corr/corr1402.html#PapamichailCP14</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/ClementeA17" publtype="informal">
     <author>Jhoirene B. Clemente</author>
     <author>Henry N. Adorna</author>
@@ -10099,6 +10837,17 @@
     <ee type="oa">http://arxiv.org/abs/1307.6462</ee>
     <volume>abs/1307.6462</volume>
     <url>db/journals/corr/corr1307.html#FerradaGHP13a</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/BingmannES14" publtype="informal">
+    <author>Timo Bingmann</author>
+    <author>Andreas Eberle</author>
+    <author>Peter Sanders 0001</author>
+    <title>Engineering Parallel String Sorting.</title>
+    <year>2014</year>
+    <volume>abs/1403.2056</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1403.2056</ee>
+    <url>db/journals/corr/corr1403.html#BingmannES14</url>
   </article>
   <article mdate="2019-02-03" key="journals/corr/abs-1901-10744" publtype="informal">
     <author>Pasquale De Luca</author>
@@ -10189,6 +10938,18 @@
     <ee type="oa">https://arxiv.org/abs/2105.03782</ee>
     <url>db/journals/corr/corr2105.html#abs-2105-03782</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/GanardiHLN15" publtype="informal">
+    <author>Moses Ganardi</author>
+    <author>Danny Hucke</author>
+    <author>Markus Lohrey</author>
+    <author>Eric Noeth</author>
+    <title>Tree compression using string grammars.</title>
+    <year>2015</year>
+    <volume>abs/1504.05535</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1504.05535</ee>
+    <url>db/journals/corr/corr1504.html#GanardiHLN15</url>
+  </article>
   <article mdate="2019-05-21" key="journals/corr/abs-1902-00216" publtype="informal">
     <author>Katsuhito Nakashima</author>
     <author>Diptarama Hendrian</author>
@@ -10200,6 +10961,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1902.00216</ee>
     <url>db/journals/corr/corr1902.html#abs-1902-00216</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1101-4068" publtype="informal">
+    <author>Stephane Durocher</author>
+    <author>Jason Morrison</author>
+    <title>Linear-Space Data Structures for Range Mode Query in Arrays</title>
+    <ee type="oa">http://arxiv.org/abs/1101.4068</ee>
+    <year>2011</year>
+    <journal>CoRR</journal>
+    <volume>abs/1101.4068</volume>
+    <url>db/journals/corr/corr1101.html#abs-1101-4068</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-0804-1214" publtype="informal">
     <author>Kazuhiko Kusano</author>
@@ -10336,6 +11107,16 @@
     <ee type="oa">https://arxiv.org/abs/2001.11607</ee>
     <url>db/journals/corr/corr2001.html#abs-2001-11607</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1302-0072" publtype="informal">
+    <author>Shoshana Marcus</author>
+    <author>Dina Sokol</author>
+    <title>Dynamic 2D Dictionary Matching in Small Space</title>
+    <ee type="oa">http://arxiv.org/abs/1302.0072</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1302.0072</volume>
+    <url>db/journals/corr/corr1302.html#abs-1302-0072</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-0812-3306" publtype="informal">
     <author>Travis Gagie</author>
     <author>Yakov Nekrich</author>
@@ -10369,6 +11150,15 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2005.09169</ee>
     <url>db/journals/corr/corr2005.html#abs-2005-09169</url>
+  </article>
+  <article mdate="2021-01-23" key="journals/corr/Wild16" publtype="informal">
+    <author orcid="0000-0002-6061-9177">Sebastian Wild</author>
+    <title>Sorting Discrete i.i.d. Inputs: Quicksort is Optimal.</title>
+    <year>2016</year>
+    <volume>abs/1608.04906</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1608.04906</ee>
+    <url>db/journals/corr/corr1608.html#Wild16</url>
   </article>
   <article mdate="2019-10-15" key="journals/corr/RadoszewskiS16" publtype="informal">
     <author>Jakub Radoszewski</author>
@@ -10410,6 +11200,25 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1805.04272</ee>
     <url>db/journals/corr/corr1805.html#abs-1805-04272</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Dwivedi14" publtype="informal">
+    <author>Shri Prakash Dwivedi</author>
+    <title>GCD Computation of n Integers.</title>
+    <year>2014</year>
+    <volume>abs/1407.6794</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1407.6794</ee>
+    <url>db/journals/corr/corr1407.html#Dwivedi14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/NicolaeR13a" publtype="informal">
+    <author>Marius Nicolae</author>
+    <author>Sanguthevar Rajasekaran</author>
+    <title>On string matching with k mismatches.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1307.1406</ee>
+    <volume>abs/1307.1406</volume>
+    <url>db/journals/corr/corr1307.html#NicolaeR13a</url>
   </article>
   <article mdate="2021-01-23" key="journals/corr/abs-2009-01353" publtype="informal">
     <author>Luca Versari</author>
@@ -10703,6 +11512,16 @@
     <ee type="oa">http://arxiv.org/abs/1812.07030</ee>
     <url>db/journals/corr/corr1812.html#abs-1812-07030</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/BringmannK15" publtype="informal">
+    <author>Karl Bringmann</author>
+    <author>Marvin Künnemann</author>
+    <title>Quadratic Conditional Lower Bounds for String Problems and Dynamic Time Warping.</title>
+    <year>2015</year>
+    <volume>abs/1502.01063</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1502.01063</ee>
+    <url>db/journals/corr/corr1502.html#BringmannK15</url>
+  </article>
   <article mdate="2022-02-01" key="journals/corr/abs-2201-10372" publtype="informal">
     <author>Shahbaz Khan 0004</author>
     <author>Milla Kortelainen</author>
@@ -10747,6 +11566,15 @@
     <ee type="oa">http://arxiv.org/abs/1809.09330</ee>
     <url>db/journals/corr/corr1809.html#abs-1809-09330</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Diethelm16a" publtype="informal">
+    <author>Nicolai Diethelm</author>
+    <title>Randomized Ternary Search Tries.</title>
+    <year>2016</year>
+    <volume>abs/1606.04042</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1606.04042</ee>
+    <url>db/journals/corr/corr1606.html#Diethelm16a</url>
+  </article>
   <article mdate="2019-08-29" key="journals/corr/abs-1908-10843" publtype="informal">
     <author>Bjørn Kjos-Hanssen</author>
     <title>An Incompressibility Theorem for Automatic Complexity.</title>
@@ -10755,6 +11583,17 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1908.10843</ee>
     <url>db/journals/corr/corr1908.html#abs-1908-10843</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/MohammedAC16" publtype="informal">
+    <author>Adnan Saher Mohammed</author>
+    <author>Sahin Emrah Amrahov</author>
+    <author>Fatih V. Celebi</author>
+    <title>Bidirectional Conditional Insertion Sort algorithm; An efficient progress on the classical insertion sort.</title>
+    <year>2016</year>
+    <volume>abs/1608.02615</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1608.02615</ee>
+    <url>db/journals/corr/corr1608.html#MohammedAC16</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1803-11245" publtype="informal">
     <author>Travis Gagie</author>
@@ -10994,6 +11833,15 @@
     <ee type="oa">http://arxiv.org/abs/1605.01488</ee>
     <url>db/journals/corr/corr1605.html#NishimotoIIBT16</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Fredman16" publtype="informal">
+    <author>Michael L. Fredman</author>
+    <title>Comments on Dumitrescu's "A Selectable Sloppy Heap".</title>
+    <year>2016</year>
+    <volume>abs/1610.02953</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1610.02953</ee>
+    <url>db/journals/corr/corr1610.html#Fredman16</url>
+  </article>
   <article mdate="2021-06-10" key="journals/corr/abs-2106-01595" publtype="informal">
     <author>Akio Nishimoto</author>
     <author>Noriki Fujisato</author>
@@ -11085,6 +11933,19 @@
     <ee type="oa">http://arxiv.org/abs/1807.04682</ee>
     <url>db/journals/corr/corr1807.html#abs-1807-04682</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/FiciKRRW15" publtype="informal">
+    <author>Gabriele Fici</author>
+    <author>Tomasz Kociumaka</author>
+    <author>Jakub Radoszewski</author>
+    <author>Wojciech Rytter</author>
+    <author>Tomasz Walen</author>
+    <title>On the Greedy Algorithm for the Shortest Common Superstring Problem with Reversals.</title>
+    <year>2015</year>
+    <volume>abs/1511.08431</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1511.08431</ee>
+    <url>db/journals/corr/corr1511.html#FiciKRRW15</url>
+  </article>
   <article mdate="2021-05-04" key="journals/corr/abs-2104-15003" publtype="informal">
     <author>Vitaly Aksenov</author>
     <author>Nikita Koval</author>
@@ -11095,6 +11956,15 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2104.15003</ee>
     <url>db/journals/corr/corr2104.html#abs-2104-15003</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Stassiy14" publtype="informal">
+    <author>Igor Stassiy</author>
+    <title>Analysis of String Sorting using Heapsort.</title>
+    <year>2014</year>
+    <volume>abs/1408.5422</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1408.5422</ee>
+    <url>db/journals/corr/corr1408.html#Stassiy14</url>
   </article>
   <article mdate="2020-10-21" key="journals/corr/abs-2010-09014" publtype="informal">
     <author>Michiel de Bondt</author>
@@ -11139,6 +12009,24 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1604.00054</ee>
     <url>db/journals/corr/corr1604.html#KosolobovMN16</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Tischler16" publtype="informal">
+    <author>German Tischler</author>
+    <title>Low Space External Memory Construction of the Succinct Permuted Longest Common Prefix Array.</title>
+    <year>2016</year>
+    <volume>abs/1601.05020</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1601.05020</ee>
+    <url>db/journals/corr/corr1601.html#Tischler16</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Mespotine15" publtype="informal">
+    <author>Meo Mespotine</author>
+    <title>Mespotine-RLE-basic v0.9 - An overhead-reduced and improved Run-Length-Encoding Method.</title>
+    <year>2015</year>
+    <volume>abs/1501.05542</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1501.05542</ee>
+    <url>db/journals/corr/corr1501.html#Mespotine15</url>
   </article>
   <article mdate="2022-02-18" key="journals/corr/abs-2202-06834" publtype="informal">
     <author>Amin Hosseininasab</author>
@@ -11229,6 +12117,18 @@
     <ee type="oa">https://arxiv.org/abs/2002.09041</ee>
     <url>db/journals/corr/corr2002.html#abs-2002-09041</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/BliznetsCKM14" publtype="informal">
+    <author>Ivan Bliznets</author>
+    <author>Marek Cygan</author>
+    <author>Pawel Komosa</author>
+    <author>Lukás Mach</author>
+    <title>Kernelization lower bound for Permutation Pattern Matching.</title>
+    <year>2014</year>
+    <volume>abs/1406.1158</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1406.1158</ee>
+    <url>db/journals/corr/corr1406.html#BliznetsCKM14</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1106-2587" publtype="informal">
     <author>Christopher Hoobin</author>
     <author>Simon J. Puglisi</author>
@@ -11253,6 +12153,24 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2102.12822</ee>
     <url>db/journals/corr/corr2102.html#abs-2102-12822</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Neri16" publtype="informal">
+    <author>Cassio Neri</author>
+    <title>A loopless and branchless $O(1)$ algorithm to generate the next Dyck word.</title>
+    <year>2016</year>
+    <volume>abs/1602.06426</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1602.06426</ee>
+    <url>db/journals/corr/corr1602.html#Neri16</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Divakaran15a" publtype="informal">
+    <author>Srikrishnan Divakaran</author>
+    <title>A Fast Heuristic for Exact String Matching.</title>
+    <year>2015</year>
+    <volume>abs/1512.03512</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1512.03512</ee>
+    <url>db/journals/corr/corr1512.html#Divakaran15a</url>
   </article>
   <article mdate="2020-03-17" key="journals/corr/abs-2003-06691" publtype="informal">
     <author>Pawel Gawrychowski</author>
@@ -11369,6 +12287,29 @@
     <ee type="oa">http://arxiv.org/abs/1803.00938</ee>
     <url>db/journals/corr/corr1803.html#abs-1803-00938</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/BonizzoniVPPR14" publtype="informal">
+    <author>Paola Bonizzoni</author>
+    <author>Gianluca Della Vedova</author>
+    <author>Yuri Pirola</author>
+    <author>Marco Previtali</author>
+    <author>Raffaella Rizzi</author>
+    <title>Constructing String Graphs in External Memory.</title>
+    <year>2014</year>
+    <volume>abs/1405.7520</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1405.7520</ee>
+    <url>db/journals/corr/corr1405.html#BonizzoniVPPR14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/MaruyamaT14" publtype="informal">
+    <author>Shirou Maruyama</author>
+    <author>Yasuo Tabei</author>
+    <title>Fully Online Grammar Compression in Constant Space.</title>
+    <year>2014</year>
+    <volume>abs/1401.5143</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1401.5143</ee>
+    <url>db/journals/corr/corr1401.html#MaruyamaT14</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/AmirLPS14" publtype="informal">
     <author>Amihood Amir</author>
     <author>Avivit Levy</author>
@@ -11380,6 +12321,17 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1408.2350</ee>
     <url>db/journals/corr/corr1408.html#AmirLPS14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GrabowskiSR15" publtype="informal">
+    <author>Szymon Grabowski</author>
+    <author>Robert Susik</author>
+    <author>Marcin Raniszewski</author>
+    <title>A Bloom filter based semi-index on q-grams.</title>
+    <year>2015</year>
+    <volume>abs/1507.02989</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1507.02989</ee>
+    <url>db/journals/corr/corr1507.html#GrabowskiSR15</url>
   </article>
   <article mdate="2021-01-23" key="journals/corr/abs-1905-03424" publtype="informal">
     <author>Abhinav Nellore</author>
@@ -11518,6 +12470,17 @@
     <ee type="oa">https://arxiv.org/abs/2012.10092</ee>
     <url>db/journals/corr/corr2012.html#abs-2012-10092</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/ChungLP13" publtype="informal">
+    <author>Kai-Min Chung</author>
+    <author>Zhenming Liu</author>
+    <author>Rafael Pass</author>
+    <title>Statistically-secure ORAM with $\tilde{O}(\log^2 n)$ Overhead.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1307.3699</ee>
+    <volume>abs/1307.3699</volume>
+    <url>db/journals/corr/corr1307.html#ChungLP13</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/Ertl17b" publtype="informal">
     <author>Otmar Ertl</author>
     <title>New Cardinality Estimation Methods for HyperLogLog Sketches.</title>
@@ -11526,6 +12489,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1706.07290</ee>
     <url>db/journals/corr/corr1706.html#Ertl17b</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1303-5217" publtype="informal">
+    <author>Martin Aumüller 0001</author>
+    <author>Martin Dietzfelbinger</author>
+    <title>Optimal Partitioning for Dual Pivot Quicksort</title>
+    <ee type="oa">http://arxiv.org/abs/1303.5217</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1303.5217</volume>
+    <url>db/journals/corr/corr1303.html#abs-1303-5217</url>
   </article>
   <article mdate="2020-05-22" key="journals/corr/abs-2005-09524" publtype="informal">
     <author>Kanaru Kutsukake</author>
@@ -11679,6 +12652,15 @@
     <ee type="oa">https://arxiv.org/abs/2108.10776</ee>
     <url>db/journals/corr/corr2108.html#abs-2108-10776</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Divakaran15" publtype="informal">
+    <author>Srikrishnan Divakaran</author>
+    <title>Fast Algorithms for Exact String Matching.</title>
+    <year>2015</year>
+    <volume>abs/1509.09228</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1509.09228</ee>
+    <url>db/journals/corr/corr1509.html#Divakaran15</url>
+  </article>
   <article mdate="2020-02-03" key="journals/corr/abs-2001-11763" publtype="informal">
     <author>Lucas Mol</author>
     <author>Narad Rampersad</author>
@@ -11706,6 +12688,15 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2007.13241</ee>
     <url>db/journals/corr/corr2007.html#abs-2007-13241</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Vitanyi15" publtype="informal">
+    <author>Paul M. B. Vitányi</author>
+    <title>On The Average-Case Complexity of Shellsort.</title>
+    <year>2015</year>
+    <volume>abs/1501.06461</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1501.06461</ee>
+    <url>db/journals/corr/corr1501.html#Vitanyi15</url>
   </article>
   <article mdate="2019-05-02" key="journals/corr/abs-1904-13369" publtype="informal">
     <author>Sayan Bandyapadhyay</author>
@@ -11836,6 +12827,18 @@
     <ee type="oa">http://arxiv.org/abs/1903.12525</ee>
     <url>db/journals/corr/corr1903.html#abs-1903-12525</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/IlambharathiMSS13" publtype="informal">
+    <author>K. Ilambharathi</author>
+    <author>G. S. N. V. Venkata Manik</author>
+    <author>N. Sadagopan</author>
+    <author>B. Sivaselvan</author>
+    <title>Domain Specific Hierarchical Huffman Encoding.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1307.0920</ee>
+    <volume>abs/1307.0920</volume>
+    <url>db/journals/corr/corr1307.html#IlambharathiMSS13</url>
+  </article>
   <article mdate="2021-02-22" key="journals/corr/Goto17" publtype="informal">
     <author>Keisuke Goto 0001</author>
     <title>Optimal Time and Space Construction of Suffix Arrays and LCP Arrays for Integer Alphabets.</title>
@@ -11893,6 +12896,16 @@
     <ee type="oa">http://arxiv.org/abs/1803.09520</ee>
     <url>db/journals/corr/corr1803.html#abs-1803-09520</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/FredrikssonG13" publtype="informal">
+    <author>Kimmo Fredriksson</author>
+    <author>Emanuele Giaquinta</author>
+    <title>On a compact encoding of the swap automaton.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1307.0099</ee>
+    <volume>abs/1307.0099</volume>
+    <url>db/journals/corr/corr1307.html#FredrikssonG13</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/GawrychowskiKRW16" publtype="informal">
     <author>Pawel Gawrychowski</author>
     <author>Tomasz Kociumaka</author>
@@ -11913,6 +12926,18 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2110.01111</ee>
     <url>db/journals/corr/corr2110.html#abs-2110-01111</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/ZhuWWW15" publtype="informal">
+    <author>Daxin Zhu</author>
+    <author>Lei Wang 0010</author>
+    <author>Yingjie Wu</author>
+    <author>Xiaodong Wang 0003</author>
+    <title>An efficient dynamic programming algorithm for the generalized LCS problem with multiple substring inclusive constraints.</title>
+    <year>2015</year>
+    <volume>abs/1505.06529</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1505.06529</ee>
+    <url>db/journals/corr/corr1505.html#ZhuWWW15</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/TanimuraNBIT17" publtype="informal">
     <author>Yuka Tanimura</author>
@@ -11985,6 +13010,18 @@
     <ee type="oa">https://arxiv.org/abs/2105.14903</ee>
     <url>db/journals/corr/corr2105.html#abs-2105-14903</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/DemaineLMT16" publtype="informal">
+    <author>Erik D. Demaine</author>
+    <author>Jayson Lynch</author>
+    <author>Geronimo J. Mirano</author>
+    <author>Nirvan Tyagi</author>
+    <title>Energy-Efficient Algorithms.</title>
+    <year>2016</year>
+    <volume>abs/1605.08448</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1605.08448</ee>
+    <url>db/journals/corr/corr1605.html#DemaineLMT16</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/BannaiIK16" publtype="informal">
     <author>Hideo Bannai</author>
     <author>Shunsuke Inenaga</author>
@@ -12007,6 +13044,17 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1807.03827</ee>
     <url>db/journals/corr/corr1807.html#abs-1807-03827</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/KaplanTZ14" publtype="informal">
+    <author>Haim Kaplan</author>
+    <author>Robert Endre Tarjan</author>
+    <author>Uri Zwick</author>
+    <title>Fibonacci Heaps Revisited.</title>
+    <year>2014</year>
+    <volume>abs/1407.5750</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1407.5750</ee>
+    <url>db/journals/corr/corr1407.html#KaplanTZ14</url>
   </article>
   <article mdate="2020-09-30" key="journals/corr/abs-2009-11559" publtype="informal">
     <author>Shunsuke Kanda</author>
@@ -12071,6 +13119,15 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2101.01108</ee>
     <url>db/journals/corr/corr2101.html#abs-2101-01108</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Larsson14" publtype="informal">
+    <author>N. Jesper Larsson</author>
+    <title>Integer Set Compression and Statistical Modeling.</title>
+    <year>2014</year>
+    <volume>abs/1402.1936</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1402.1936</ee>
+    <url>db/journals/corr/corr1402.html#Larsson14</url>
   </article>
   <article mdate="2018-11-23" key="journals/corr/abs-1811-04596" publtype="informal">
     <author>Isamu Furuya</author>
@@ -12312,6 +13369,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1705.09642</ee>
     <url>db/journals/corr/corr1705.html#Ros-GiraltCCLML17</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Montanaro14" publtype="informal">
+    <author>Ashley Montanaro</author>
+    <title>Quantum pattern matching fast on average.</title>
+    <year>2014</year>
+    <volume>abs/1408.1816</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1408.1816</ee>
+    <url>db/journals/corr/corr1408.html#Montanaro14</url>
   </article>
   <article mdate="2020-07-29" key="journals/corr/abs-2007-13356" publtype="informal">
     <author>Jake Pennington</author>
@@ -12557,6 +13623,29 @@
     <ee type="oa">https://doi.org/10.48550/arXiv.2206.00781</ee>
     <url>db/journals/corr/corr2206.html#abs-2206-00781</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/EppsteinGS13" publtype="informal">
+    <author>David Eppstein</author>
+    <author>Michael T. Goodrich</author>
+    <author>Joseph A. Simons</author>
+    <title>Set-Difference Range Queries.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1306.3482</ee>
+    <volume>abs/1306.3482</volume>
+    <url>db/journals/corr/corr1306.html#EppsteinGS13</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/ZhuWWW15a" publtype="informal">
+    <author>Daxin Zhu</author>
+    <author>Lei Wang 0010</author>
+    <author>Yingjie Wu</author>
+    <author>Xiaodong Wang 0003</author>
+    <title>An Efficient Dynamic Programming Algorithm for STR-IC-SEQ-EC-LCS Problem.</title>
+    <year>2015</year>
+    <volume>abs/1506.00063</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1506.00063</ee>
+    <url>db/journals/corr/corr1506.html#ZhuWWW15a</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1711-08217" publtype="informal">
     <author>Anders Roy Christiansen</author>
     <author>Mikko Berggren Ettienne</author>
@@ -12712,6 +13801,15 @@
     <ee type="oa">https://arxiv.org/abs/2002.04979</ee>
     <url>db/journals/corr/corr2002.html#abs-2002-04979</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Tsur16" publtype="informal">
+    <author>Dekel Tsur</author>
+    <title>Succinct data-structure for nearest colored node in a tree.</title>
+    <year>2016</year>
+    <volume>abs/1609.01400</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1609.01400</ee>
+    <url>db/journals/corr/corr1609.html#Tsur16</url>
+  </article>
   <article mdate="2018-10-30" key="journals/corr/abs-1810-02227" publtype="informal">
     <author>Jan Wassenberg</author>
     <author>Robert Obryk</author>
@@ -12723,6 +13821,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1810.02227</ee>
     <url>db/journals/corr/corr1810.html#abs-1810-02227</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/JelinekK16" publtype="informal">
+    <author>Vít Jelínek</author>
+    <author>Jan Kyncl</author>
+    <title>Hardness of Permutation Pattern Matching.</title>
+    <year>2016</year>
+    <volume>abs/1608.00529</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1608.00529</ee>
+    <url>db/journals/corr/corr1608.html#JelinekK16</url>
   </article>
   <article mdate="2020-06-04" key="journals/corr/abs-2005-10917" publtype="informal">
     <author>Shunsuke Kanda</author>
@@ -12790,6 +13898,16 @@
     <ee type="oa">http://arxiv.org/abs/1908.10159</ee>
     <url>db/journals/corr/corr1908.html#abs-1908-10159</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/GuillemotM13" publtype="informal">
+    <author>Sylvain Guillemot</author>
+    <author>Dániel Marx</author>
+    <title>Finding small patterns in permutations in linear time.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1307.3073</ee>
+    <volume>abs/1307.3073</volume>
+    <url>db/journals/corr/corr1307.html#GuillemotM13</url>
+  </article>
   <article mdate="2021-01-21" key="journals/corr/abs-2101-00718" publtype="informal">
     <author>Domenico Cantone</author>
     <author>Simone Faro</author>
@@ -12812,6 +13930,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1406.6341</ee>
     <url>db/journals/corr/corr1406.html#BartonHMP14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Al-Okaily15" publtype="informal">
+    <author>Anas Al-Okaily</author>
+    <title>Error Tree: A Tree Structure for Hamming &amp; Edit Distances &amp; Wildcards Matching.</title>
+    <year>2015</year>
+    <volume>abs/1506.04486</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1506.04486</ee>
+    <url>db/journals/corr/corr1506.html#Al-Okaily15</url>
   </article>
   <article mdate="2019-04-01" key="journals/corr/abs-1903-10081" publtype="informal">
     <author>Ortho Flint</author>
@@ -12861,6 +13988,19 @@
     <ee type="oa">http://arxiv.org/abs/1804.06809</ee>
     <url>db/journals/corr/corr1804.html#abs-1804-06809</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/AlatabbiIRSS15" publtype="informal">
+    <author>Ali Alatabbi</author>
+    <author>A. S. M. Sohidull Islam</author>
+    <author>Mohammad Sohel Rahman</author>
+    <author>Jamie Simpson</author>
+    <author>William F. Smyth</author>
+    <title>Enhanced Covers of Regular &amp; Indeterminate Strings using Prefix Tables.</title>
+    <year>2015</year>
+    <volume>abs/1506.06793</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1506.06793</ee>
+    <url>db/journals/corr/corr1506.html#AlatabbiIRSS15</url>
+  </article>
   <article mdate="2019-10-15" key="journals/corr/BabenkoGKS14" publtype="informal">
     <author>Maxim A. Babenko</author>
     <author>Pawel Gawrychowski</author>
@@ -12883,6 +14023,17 @@
     <ee type="oa">http://arxiv.org/abs/1307.1428</ee>
     <volume>abs/1307.1428</volume>
     <url>db/journals/corr/corr1307.html#KarkkainenKP13</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/MorinMR16" publtype="informal">
+    <author>Pat Morin</author>
+    <author>Wolfgang Mulzer</author>
+    <author>Tommy Reddad</author>
+    <title>Encoding Arguments.</title>
+    <year>2016</year>
+    <volume>abs/1603.08777</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1603.08777</ee>
+    <url>db/journals/corr/corr1603.html#MorinMR16</url>
   </article>
   <article mdate="2019-08-09" key="journals/corr/abs-1908-02741" publtype="informal">
     <author>Seth Gilbert</author>
@@ -12969,6 +14120,17 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2102.08670</ee>
     <url>db/journals/corr/corr2102.html#abs-2102-08670</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/BingmannGK16" publtype="informal">
+    <author>Timo Bingmann</author>
+    <author>Simon Gog</author>
+    <author>Florian Kurpicz</author>
+    <title>Scalable Construction of Text Indexes.</title>
+    <year>2016</year>
+    <volume>abs/1610.03007</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1610.03007</ee>
+    <url>db/journals/corr/corr1610.html#BingmannGK16</url>
   </article>
   <article mdate="2022-03-02" key="journals/corr/abs-2202-13235" publtype="informal">
     <author>Davide Cenzato</author>
@@ -13104,6 +14266,15 @@
     <ee type="oa">https://arxiv.org/abs/2104.13457</ee>
     <url>db/journals/corr/corr2104.html#abs-2104-13457</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Cislak15" publtype="informal">
+    <author>Aleksander Cislak</author>
+    <title>Full-text and Keyword Indexes for String Searching.</title>
+    <year>2015</year>
+    <volume>abs/1508.06610</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1508.06610</ee>
+    <url>db/journals/corr/corr1508.html#Cislak15</url>
+  </article>
   <article mdate="2020-01-13" key="journals/corr/abs-2001-02139" publtype="informal">
     <author>Leonard Bohnenkämper</author>
     <author>Marília D. V. Braga</author>
@@ -13143,6 +14314,18 @@
     <ee type="oa">http://arxiv.org/abs/1707.08186</ee>
     <url>db/journals/corr/corr1707.html#Twigg17</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/CohenFHK13" publtype="informal">
+    <author>Sarel Cohen</author>
+    <author>Amos Fiat</author>
+    <author>Moshe Hershcovitch</author>
+    <author>Haim Kaplan</author>
+    <title>Minimal Indices for Successor Search.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1306.3772</ee>
+    <volume>abs/1306.3772</volume>
+    <url>db/journals/corr/corr1306.html#CohenFHK13</url>
+  </article>
   <article mdate="2020-03-17" key="journals/corr/abs-2003-07285" publtype="informal">
     <author>MohammadTaghi Hajiaghayi</author>
     <author>Masoud Seddighin</author>
@@ -13154,6 +14337,20 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2003.07285</ee>
     <url>db/journals/corr/corr2003.html#abs-2003-07285</url>
+  </article>
+  <article mdate="2021-01-23" key="journals/corr/BougleuxBCFGV15" publtype="informal">
+    <author orcid="0000-0002-4581-7570">Sébastien Bougleux</author>
+    <author>Luc Brun</author>
+    <author>Vincenzo Carletti</author>
+    <author>Pasquale Foggia</author>
+    <author>Benoit Gaüzère</author>
+    <author>Mario Vento</author>
+    <title>A Quadratic Assignment Formulation of the Graph Edit Distance.</title>
+    <year>2015</year>
+    <volume>abs/1512.07494</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1512.07494</ee>
+    <url>db/journals/corr/corr1512.html#BougleuxBCFGV15</url>
   </article>
   <article mdate="2019-04-25" key="journals/corr/abs-1904-04228" publtype="informal">
     <author>Dominik Kempa</author>
@@ -13222,6 +14419,37 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1910.11993</ee>
     <url>db/journals/corr/corr1910.html#abs-1910-11993</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/SundaramC16" publtype="informal">
+    <author>Tejeswini Sundaram</author>
+    <author>Vyom Chabbra</author>
+    <title>Word Existence Algorithm.</title>
+    <year>2016</year>
+    <volume>abs/1601.04248</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1601.04248</ee>
+    <url>db/journals/corr/corr1601.html#SundaramC16</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/AbboudBW15" publtype="informal">
+    <author>Amir Abboud</author>
+    <author>Arturs Backurs</author>
+    <author>Virginia Vassilevska Williams</author>
+    <title>Quadratic-Time Hardness of LCS and other Sequence Similarity Measures.</title>
+    <year>2015</year>
+    <volume>abs/1501.07053</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1501.07053</ee>
+    <url>db/journals/corr/corr1501.html#AbboudBW15</url>
+  </article>
+  <article mdate="2019-05-10" key="journals/corr/abs-1301-6428" publtype="informal">
+    <author>Shoshana Marcus</author>
+    <author>Dina Sokol</author>
+    <title>Engineering Small Space Dictionary Matching</title>
+    <ee type="oa">http://arxiv.org/abs/1301.6428</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1301.6428</volume>
+    <url>db/journals/corr/corr1301.html#abs-1301-6428</url>
   </article>
   <article mdate="2021-10-14" key="journals/corr/abs-2012-00866" publtype="informal">
     <author>R. C. Hillyard</author>
@@ -13355,6 +14583,18 @@
     <ee type="oa">http://arxiv.org/abs/1511.00898</ee>
     <url>db/journals/corr/corr1511.html#Siren15</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/ThankachanPSB15" publtype="informal">
+    <author>Sharma V. Thankachan</author>
+    <author>Manish Patil</author>
+    <author>Rahul Shah</author>
+    <author>Sudip Biswas</author>
+    <title>Probabilistic Threshold Indexing for Uncertain Strings.</title>
+    <year>2015</year>
+    <volume>abs/1509.08608</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1509.08608</ee>
+    <url>db/journals/corr/corr1509.html#ThankachanPSB15</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/MienoIBT16" publtype="informal">
     <author>Takuya Mieno</author>
     <author>Shunsuke Inenaga</author>
@@ -13391,6 +14631,16 @@
     <journal>CoRR</journal>
     <ee type="oa">https://doi.org/10.48550/arXiv.2209.07524</ee>
     <url>db/journals/corr/corr2209.html#abs-2209-07524</url>
+  </article>
+  <article mdate="2020-05-14" key="journals/corr/Elvey-PriceG15" publtype="informal">
+    <author>Andrew Elvey Price</author>
+    <author>Anthony J. Guttmann</author>
+    <title>Permutations sortable by two stacks in series.</title>
+    <year>2015</year>
+    <volume>abs/1510.08663</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1510.08663</ee>
+    <url>db/journals/corr/corr1510.html#Elvey-PriceG15</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1804-03604" publtype="informal">
     <author>Bernhard Haeupler</author>
@@ -13515,6 +14765,15 @@
     <ee type="oa">http://arxiv.org/abs/1810.13187</ee>
     <url>db/journals/corr/corr1810.html#abs-1810-13187</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Stiffelman14a" publtype="informal">
+    <author>Oscar Stiffelman</author>
+    <title>PivotCompress: Compression by Sorting.</title>
+    <year>2014</year>
+    <volume>abs/1411.5127</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1411.5127</ee>
+    <url>db/journals/corr/corr1411.html#Stiffelman14a</url>
+  </article>
   <article mdate="2020-05-09" key="journals/corr/abs-2005-02725" publtype="informal">
     <author>Luís M. S. Russo</author>
     <author>Alexandre P. Francisco</author>
@@ -13537,6 +14796,17 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1809.07320</ee>
     <url>db/journals/corr/corr1809.html#abs-1809-07320</url>
+  </article>
+  <article mdate="2021-01-23" key="journals/corr/ChakrabortyGK16" publtype="informal">
+    <author orcid="0000-0002-0687-5823">Diptarka Chakraborty</author>
+    <author>Elazar Goldenberg</author>
+    <author>Michal Koucký 0001</author>
+    <title>Streaming Algorithms For Computing Edit Distance Without Exploiting Suffix Trees.</title>
+    <year>2016</year>
+    <volume>abs/1607.03718</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1607.03718</ee>
+    <url>db/journals/corr/corr1607.html#ChakrabortyGK16</url>
   </article>
   <article mdate="2019-10-15" key="journals/corr/StarikovskayaV14" publtype="informal">
     <author>Tatiana Starikovskaya</author>
@@ -13607,6 +14877,27 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1903.03560</ee>
     <url>db/journals/corr/corr1903.html#abs-1903-03560</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/AlbertLLV15" publtype="informal">
+    <author>Michael H. Albert</author>
+    <author>Marie-Louise Lackner</author>
+    <author>Martin Lackner</author>
+    <author>Vincent Vatter</author>
+    <title>The Complexity of Pattern Matching for 321-Avoiding and Skew-Merged Permutations.</title>
+    <year>2015</year>
+    <volume>abs/1510.06051</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1510.06051</ee>
+    <url>db/journals/corr/corr1510.html#AlbertLLV15</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Takacs15" publtype="informal">
+    <author>Kristóf Takács</author>
+    <title>Multiple sequence alignment for short sequences.</title>
+    <year>2015</year>
+    <volume>abs/1510.09037</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1510.09037</ee>
+    <url>db/journals/corr/corr1510.html#Takacs15</url>
   </article>
   <article mdate="2021-06-29" key="journals/corr/BrankovicIKMPV15" publtype="informal">
     <author>Ljiljana Brankovic</author>
@@ -13747,6 +15038,15 @@
     <ee type="oa">http://arxiv.org/abs/1811.12779</ee>
     <url>db/journals/corr/corr1811.html#abs-1811-12779</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Duda16" publtype="informal">
+    <author>Jarek Duda</author>
+    <title>Distortion-Resistant Hashing for rapid search of similar DNA subsequence.</title>
+    <year>2016</year>
+    <volume>abs/1602.05889</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1602.05889</ee>
+    <url>db/journals/corr/corr1602.html#Duda16</url>
+  </article>
   <article mdate="2019-01-01" key="journals/corr/abs-1812-02570" publtype="informal">
     <author>Marcel Wild</author>
     <title>ALLSAT compressed with wildcards: Partitionings and face-numbers of simplicial complexes.</title>
@@ -13755,6 +15055,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1812.02570</ee>
     <url>db/journals/corr/corr1812.html#abs-1812-02570</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/OrdyniakP14" publtype="informal">
+    <author>Sebastian Ordyniak</author>
+    <author>Alexandru Popa 0001</author>
+    <title>A Parameterized Study of Maximum Generalized Pattern Matching Problems.</title>
+    <year>2014</year>
+    <volume>abs/1409.2398</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1409.2398</ee>
+    <url>db/journals/corr/corr1409.html#OrdyniakP14</url>
   </article>
   <article mdate="2019-05-29" key="journals/corr/abs-1905-08977" publtype="informal">
     <author>Pinghui Wang</author>
@@ -13983,6 +15293,17 @@
     <ee type="oa">http://arxiv.org/abs/1902.08809</ee>
     <url>db/journals/corr/corr1902.html#abs-1902-08809</url>
   </article>
+  <article mdate="2021-01-23" key="journals/corr/MartinezNW14" publtype="informal">
+    <author>Conrado Martínez</author>
+    <author>Markus E. Nebel</author>
+    <author orcid="0000-0002-6061-9177">Sebastian Wild</author>
+    <title>Analysis of Branch Misses in Quicksort.</title>
+    <year>2014</year>
+    <volume>abs/1411.2059</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1411.2059</ee>
+    <url>db/journals/corr/corr1411.html#MartinezNW14</url>
+  </article>
   <article mdate="2019-06-24" key="journals/corr/abs-1906-07871" publtype="informal">
     <author>Sankardeep Chakraborty</author>
     <author>Kunihiko Sadakane</author>
@@ -14016,6 +15337,17 @@
     <ee type="oa">http://arxiv.org/abs/1712.09738</ee>
     <url>db/journals/corr/corr1712.html#abs-1712-09738</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/ChenWZ14" publtype="informal">
+    <author>Shihyen Chen</author>
+    <author>Zhuozhi Wang</author>
+    <author>Kaizhong Zhang</author>
+    <title>Pattern Matching and Local Alignment for RNA Structures.</title>
+    <year>2014</year>
+    <volume>abs/1412.8246</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1412.8246</ee>
+    <url>db/journals/corr/corr1412.html#ChenWZ14</url>
+  </article>
   <article mdate="2023-03-04" key="journals/corr/abs-1910-04640" publtype="informal">
     <author>Ferdinando Montecuollo</author>
     <author>Giovanni Schmid</author>
@@ -14036,6 +15368,19 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2105.07073</ee>
     <url>db/journals/corr/corr2105.html#abs-2105-07073</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/BonaseraFFPP15" publtype="informal">
+    <author>Biagio Bonasera</author>
+    <author>Emilio Ferrara</author>
+    <author>Giacomo Fiumara</author>
+    <author>Francesco Pagano</author>
+    <author>Alessandro Provetti</author>
+    <title>Adaptive Search over Sorted Sets.</title>
+    <year>2015</year>
+    <volume>abs/1502.03845</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1502.03845</ee>
+    <url>db/journals/corr/corr1502.html#BonaseraFFPP15</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/FarruggiaFFV13" publtype="informal">
     <author>Andrea Farruggia</author>
@@ -14076,6 +15421,18 @@
     <journal>CoRR</journal>
     <volume>abs/1109.3890</volume>
     <url>db/journals/corr/corr1109.html#abs-1109-3890</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1301-2495" publtype="informal">
+    <author>Akashnil Dutta</author>
+    <author>Reut Levi</author>
+    <author>Dana Ron</author>
+    <author>Ronitt Rubinfeld</author>
+    <title>A simple online competitive adaptation of Lempel-Ziv compression with efficient random access support</title>
+    <ee type="oa">http://arxiv.org/abs/1301.2495</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1301.2495</volume>
+    <url>db/journals/corr/corr1301.html#abs-1301-2495</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1801-04641" publtype="informal">
     <author>Sam Buss</author>
@@ -14146,6 +15503,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1907.08579</ee>
     <url>db/journals/corr/corr1907.html#abs-1907-08579</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Giaquinta14" publtype="informal">
+    <author>Emanuele Giaquinta</author>
+    <title>Run-Length Encoded Nondeterministic KMP and Suffix Automata.</title>
+    <year>2014</year>
+    <volume>abs/1412.3688</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1412.3688</ee>
+    <url>db/journals/corr/corr1412.html#Giaquinta14</url>
   </article>
   <article mdate="2021-01-23" key="journals/corr/abs-1911-03542" publtype="informal">
     <author>Philip Bille</author>
@@ -14230,6 +15596,15 @@
     <volume>abs/1001.2860</volume>
     <url>db/journals/corr/corr1001.html#abs-1001-2860</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Kuszmaul15" publtype="informal">
+    <author>William Kuszmaul</author>
+    <title>Fast Algorithms for Finding Pattern Avoiders and Counting Pattern Occurrences in Permutations.</title>
+    <year>2015</year>
+    <volume>abs/1509.08216</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1509.08216</ee>
+    <url>db/journals/corr/corr1509.html#Kuszmaul15</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/DecaroliM16" publtype="informal">
     <author>Gianni Decaroli</author>
     <author>Giovanni Manzini</author>
@@ -14283,6 +15658,18 @@
     <ee type="oa">http://arxiv.org/abs/1504.06712</ee>
     <url>db/journals/corr/corr1504.html#Kosolobov15</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/ZhuWWW15b" publtype="informal">
+    <author>Daxin Zhu</author>
+    <author>Lei Wang 0010</author>
+    <author>Yingjie Wu</author>
+    <author>Xiaodong Wang 0003</author>
+    <title>A Practical O(R<i>log log</i> n+n) time Algorithm for Computing the Longest Common Subsequence.</title>
+    <year>2015</year>
+    <volume>abs/1508.05553</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1508.05553</ee>
+    <url>db/journals/corr/corr1508.html#ZhuWWW15b</url>
+  </article>
   <article mdate="2022-03-01" key="journals/corr/abs-2202-07885" publtype="informal">
     <author>Takaaki Nishimoto</author>
     <author>Shunsuke Kanda</author>
@@ -14314,6 +15701,25 @@
     <ee type="oa">http://arxiv.org/abs/1312.3422</ee>
     <url>db/journals/corr/corr1312.html#GagieMV13</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Gorzig14" publtype="informal">
+    <author>Steffen Görzig</author>
+    <title>Data Compaction - Compression without Decompression.</title>
+    <year>2014</year>
+    <volume>abs/1402.2508</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1402.2508</ee>
+    <url>db/journals/corr/corr1402.html#Gorzig14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GawrychowskiN14" publtype="informal">
+    <author>Pawel Gawrychowski</author>
+    <author>Patrick K. Nicholson</author>
+    <title>Optimal Encodings for Range Min-Max and Top-k.</title>
+    <year>2014</year>
+    <volume>abs/1411.6581</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1411.6581</ee>
+    <url>db/journals/corr/corr1411.html#GawrychowskiN14</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/Prezza17" publtype="informal">
     <author>Nicola Prezza</author>
     <title>A Framework of Dynamic Data Structures for String Processing.</title>
@@ -14333,6 +15739,28 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2201.11550</ee>
     <url>db/journals/corr/corr2201.html#abs-2201-11550</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Cetin13" publtype="informal">
+    <author>A. Emre Cetin</author>
+    <title>The technique of in-place associative sorting.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1307.2724</ee>
+    <volume>abs/1307.2724</volume>
+    <url>db/journals/corr/corr1307.html#Cetin13</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/BurcsiFLRS14" publtype="informal">
+    <author>Peter Burcsi</author>
+    <author>Gabriele Fici</author>
+    <author>Zsuzsanna Lipták</author>
+    <author>Frank Ruskey</author>
+    <author>Joe Sawada</author>
+    <title>On Combinatorial Generation of Prefix Normal Words.</title>
+    <year>2014</year>
+    <volume>abs/1401.6346</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1401.6346</ee>
+    <url>db/journals/corr/corr1401.html#BurcsiFLRS14</url>
   </article>
   <article mdate="2022-02-18" key="journals/corr/abs-2202-05085" publtype="informal">
     <author>Travis Gagie</author>
@@ -14560,6 +15988,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1910.00901</ee>
     <url>db/journals/corr/corr1910.html#abs-1910-00901</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1301-0114" publtype="informal">
+    <author>Paul Tarau</author>
+    <title>Tree-based Arithmetic and Compressed Representations of Giant Numbers</title>
+    <ee type="oa">http://arxiv.org/abs/1301.0114</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1301.0114</volume>
+    <url>db/journals/corr/corr1301.html#abs-1301-0114</url>
   </article>
   <article mdate="2019-03-31" key="journals/corr/abs-1903-03520" publtype="informal">
     <author>Vladimir Braverman</author>
@@ -14854,6 +16291,17 @@
     <ee type="oa">http://arxiv.org/abs/1812.11244</ee>
     <url>db/journals/corr/corr1812.html#abs-1812-11244</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/PandiselvamML14" publtype="informal">
+    <author>P. Pandiselvam</author>
+    <author>T. Marimuthu</author>
+    <author>R. Lawrance</author>
+    <title>A Comparative Study on String Matching Algorithm of Biological Sequences.</title>
+    <year>2014</year>
+    <volume>abs/1401.7416</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1401.7416</ee>
+    <url>db/journals/corr/corr1401.html#PandiselvamML14</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/AdamczykACIR17" publtype="informal">
     <author>Michal Adamczyk</author>
     <author>Mai Alzamel</author>
@@ -14866,6 +16314,17 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1703.08931</ee>
     <url>db/journals/corr/corr1703.html#AdamczykACIR17</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/HuckeLN14" publtype="informal">
+    <author>Danny Hucke</author>
+    <author>Markus Lohrey</author>
+    <author>Eric Noeth</author>
+    <title>Constructing small tree grammars and small circuits for formulas.</title>
+    <year>2014</year>
+    <volume>abs/1407.4286</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1407.4286</ee>
+    <url>db/journals/corr/corr1407.html#HuckeLN14</url>
   </article>
   <article mdate="2020-01-13" key="journals/corr/abs-2001-01914" publtype="informal">
     <author>Kamil Khadiev</author>
@@ -14886,6 +16345,15 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2010.08840</ee>
     <url>db/journals/corr/corr2010.html#abs-2010-08840</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Furer14a" publtype="informal">
+    <author>Martin Fürer</author>
+    <title>How Fast Can We Multiply Large Integers on an Actual Computer?</title>
+    <year>2014</year>
+    <volume>abs/1402.1811</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1402.1811</ee>
+    <url>db/journals/corr/corr1402.html#Furer14a</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/NekrichV13" publtype="informal">
     <author>Yakov Nekrich</author>
@@ -14920,6 +16388,17 @@
     <ee type="oa">http://arxiv.org/abs/1602.00329</ee>
     <url>db/journals/corr/corr1602.html#BelazzouguiKKP16</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/LohreyMP15" publtype="informal">
+    <author>Markus Lohrey</author>
+    <author>Sebastian Maneth</author>
+    <author>Fabian Peternek</author>
+    <title>Compressed Tree Canonization.</title>
+    <year>2015</year>
+    <volume>abs/1502.04625</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1502.04625</ee>
+    <url>db/journals/corr/corr1502.html#LohreyMP15</url>
+  </article>
   <article mdate="2021-01-31" key="journals/corr/abs-2101-10890" publtype="informal">
     <author>Markus L. Schmid</author>
     <author>Nicole Schweikardt</author>
@@ -14930,6 +16409,16 @@
     <ee type="oa">https://arxiv.org/abs/2101.10890</ee>
     <url>db/journals/corr/corr2101.html#abs-2101-10890</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/HemaE16" publtype="informal">
+    <author>T. Hema</author>
+    <author>K. S. Easwarakumar</author>
+    <title>An Optimal Algorithm for Range Search on Multidimensional Points.</title>
+    <year>2016</year>
+    <volume>abs/1607.00208</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1607.00208</ee>
+    <url>db/journals/corr/corr1607.html#HemaE16</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1804-01937" publtype="informal">
     <author>Uwe Baier</author>
     <title>On Undetected Redundancy in the Burrows-Wheeler Transform.</title>
@@ -14938,6 +16427,26 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1804.01937</ee>
     <url>db/journals/corr/corr1804.html#abs-1804-01937</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Roughgarden15" publtype="informal">
+    <author>Tim Roughgarden</author>
+    <title>Communication Complexity (for Algorithm Designers).</title>
+    <year>2015</year>
+    <volume>abs/1509.06257</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1509.06257</ee>
+    <url>db/journals/corr/corr1509.html#Roughgarden15</url>
+  </article>
+  <article mdate="2021-01-23" key="journals/corr/SusikGF14" publtype="informal">
+    <author orcid="0000-0003-0653-433X">Robert Susik</author>
+    <author>Szymon Grabowski</author>
+    <author>Kimmo Fredriksson</author>
+    <title>Multiple pattern matching revisited.</title>
+    <year>2014</year>
+    <volume>abs/1405.5483</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1405.5483</ee>
+    <url>db/journals/corr/corr1405.html#SusikGF14</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1806-03102" publtype="informal">
     <author>Philip Bille</author>
@@ -14951,6 +16460,21 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1806.03102</ee>
     <url>db/journals/corr/corr1806.html#abs-1806-03102</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1305-1744" publtype="informal">
+    <author>Joong Chae Na</author>
+    <author>Heejin Park</author>
+    <author>Maxime Crochemore</author>
+    <author>Jan Holub 0001</author>
+    <author>Costas S. Iliopoulos</author>
+    <author>Laurent Mouchard</author>
+    <author>Kunsoo Park</author>
+    <title>Suffix Tree of Alignment: An Efficient Index for Similar Data</title>
+    <ee type="oa">http://arxiv.org/abs/1305.1744</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1305.1744</volume>
+    <url>db/journals/corr/corr1305.html#abs-1305-1744</url>
   </article>
   <article mdate="2021-07-07" key="journals/corr/abs-2107-02503" publtype="informal">
     <author>Jacqueline W. Daykin</author>
@@ -14983,6 +16507,16 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2201.01554</ee>
     <url>db/journals/corr/corr2201.html#abs-2201-01554</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/JacquetS16" publtype="informal">
+    <author>Philippe Jacquet</author>
+    <author>Wojciech Szpankowski</author>
+    <title>Average Size of a Suffix Tree for Markov Sources.</title>
+    <year>2016</year>
+    <volume>abs/1605.02123</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1605.02123</ee>
+    <url>db/journals/corr/corr1605.html#JacquetS16</url>
   </article>
   <article mdate="2021-10-14" key="journals/corr/abs-2105-13595" publtype="informal">
     <author>Gonzalo Navarro</author>
@@ -15045,6 +16579,15 @@
     <ee type="oa">https://arxiv.org/abs/2110.05168</ee>
     <url>db/journals/corr/corr2110.html#abs-2110-05168</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Goodrich14" publtype="informal">
+    <author>Michael T. Goodrich</author>
+    <title>Zig-zag Sort: A Simple Deterministic Data-Oblivious Sorting Algorithm Running in O(n log n) Time.</title>
+    <year>2014</year>
+    <volume>abs/1403.2777</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1403.2777</ee>
+    <url>db/journals/corr/corr1403.html#Goodrich14</url>
+  </article>
   <article mdate="2021-01-21" key="journals/corr/abs-2101-03165" publtype="informal">
     <author>Kaustubh Joshi</author>
     <title>Cantor Mapping Technique.</title>
@@ -15078,6 +16621,16 @@
     <ee type="oa">https://arxiv.org/abs/2106.06249</ee>
     <url>db/journals/corr/corr2106.html#abs-2106-06249</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/FaroK15" publtype="informal">
+    <author>Simone Faro</author>
+    <author>M. Oguzhan Külekci</author>
+    <title>Efficient Algorithms for the Order Preserving Pattern Matching Problem.</title>
+    <year>2015</year>
+    <volume>abs/1501.04001</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1501.04001</ee>
+    <url>db/journals/corr/corr1501.html#FaroK15</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1007-1361" publtype="informal">
     <author>Marek Karpinski</author>
     <author>Yakov Nekrich</author>
@@ -15107,6 +16660,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1906.11062</ee>
     <url>db/journals/corr/corr1906.html#abs-1906-11062</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1305-1157" publtype="informal">
+    <author>Timo Bingmann</author>
+    <author>Peter Sanders 0001</author>
+    <title>Parallel String Sample Sort</title>
+    <ee type="oa">http://arxiv.org/abs/1305.1157</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1305.1157</volume>
+    <url>db/journals/corr/corr1305.html#abs-1305-1157</url>
   </article>
   <article mdate="2021-12-01" key="journals/corr/abs-2111-12800" publtype="informal">
     <author>Michael A. Bender</author>
@@ -15324,6 +16887,15 @@
     <ee type="oa">http://arxiv.org/abs/1903.01465</ee>
     <url>db/journals/corr/corr1903.html#abs-1903-01465</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Iliopoulos14" publtype="informal">
+    <author>Vasileios Iliopoulos</author>
+    <title>A note on multipivot Quicksort.</title>
+    <year>2014</year>
+    <volume>abs/1407.7459</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1407.7459</ee>
+    <url>db/journals/corr/corr1407.html#Iliopoulos14</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1806-05942" publtype="informal">
     <author>Amanda Clare</author>
     <author>Jacqueline W. Daykin</author>
@@ -15333,6 +16905,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1806.05942</ee>
     <url>db/journals/corr/corr1806.html#abs-1806-05942</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Larsson14a" publtype="informal">
+    <author>N. Jesper Larsson</author>
+    <title>Most Recent Match Queries in On-Line Suffix Trees (with appendix).</title>
+    <year>2014</year>
+    <volume>abs/1403.0800</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1403.0800</ee>
+    <url>db/journals/corr/corr1403.html#Larsson14a</url>
   </article>
   <article mdate="2021-01-07" key="journals/corr/abs-2006-03198" publtype="informal">
     <author>Xiaolong Wan</author>
@@ -15352,6 +16933,18 @@
     <journal>CoRR</journal>
     <volume>abs/1011.3441</volume>
     <url>db/journals/corr/corr1011.html#abs-1011-3441</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/WuZWW14" publtype="informal">
+    <author>Yingjie Wu</author>
+    <author>Daxin Zhu</author>
+    <author>Lei Wang 0010</author>
+    <author>Xiaodong Wang 0003</author>
+    <title>A note on the largest number of red nodes in red-black trees.</title>
+    <year>2014</year>
+    <volume>abs/1406.3092</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1406.3092</ee>
+    <url>db/journals/corr/corr1406.html#WuZWW14</url>
   </article>
   <article mdate="2021-06-29" key="journals/corr/AlmirantisCGIMP16" publtype="informal">
     <author>Yannis Almirantis</author>
@@ -15382,6 +16975,29 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2006.11687</ee>
     <url>db/journals/corr/corr2006.html#abs-2006-11687</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/LohreyMR15" publtype="informal">
+    <author>Markus Lohrey</author>
+    <author>Sebastian Maneth</author>
+    <author>Carl Philipp Reh</author>
+    <title>Traversing Grammar-Compressed Trees with Constant Delay.</title>
+    <year>2015</year>
+    <volume>abs/1511.02141</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1511.02141</ee>
+    <url>db/journals/corr/corr1511.html#LohreyMR15</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/FlouriGKU14" publtype="informal">
+    <author>Tomás Flouri</author>
+    <author>Emanuele Giaquinta</author>
+    <author>Kassian Kobert</author>
+    <author>Esko Ukkonen</author>
+    <title>Longest common substrings with k mismatches.</title>
+    <year>2014</year>
+    <volume>abs/1409.1694</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1409.1694</ee>
+    <url>db/journals/corr/corr1409.html#FlouriGKU14</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/KaniwaKDS17" publtype="informal">
     <author>Freeson Kaniwa</author>
@@ -15483,6 +17099,20 @@
     <volume>abs/1101.5506</volume>
     <url>db/journals/corr/corr1101.html#abs-1101-5506</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/BliznetsFGKKS15" publtype="informal">
+    <author>Ivan Bliznets</author>
+    <author>Fedor V. Fomin</author>
+    <author>Petr A. Golovach</author>
+    <author>Nikolay Karpov</author>
+    <author>Alexander S. Kulikov</author>
+    <author>Saket Saurabh 0001</author>
+    <title>Parameterized Complexity of Superstring Problems.</title>
+    <year>2015</year>
+    <volume>abs/1502.01461</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1502.01461</ee>
+    <url>db/journals/corr/corr1502.html#BliznetsFGKKS15</url>
+  </article>
   <article mdate="2021-11-05" key="journals/corr/abs-2111-02478" publtype="informal">
     <author>Dominik Köppl</author>
     <author>Gonzalo Navarro</author>
@@ -15561,6 +17191,17 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2012.08589</ee>
     <url>db/journals/corr/corr2012.html#abs-2012-08589</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1304-0917" publtype="informal">
+    <author>Yasuo Tabei</author>
+    <author>Yoshimasa Takabatake</author>
+    <author>Hiroshi Sakamoto</author>
+    <title>A Succinct Grammar Compression</title>
+    <ee type="oa">http://arxiv.org/abs/1304.0917</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1304.0917</volume>
+    <url>db/journals/corr/corr1304.html#abs-1304-0917</url>
   </article>
   <article mdate="2019-02-04" key="journals/corr/abs-1901-11305" publtype="informal">
     <author>Mai Alzamel</author>
@@ -15687,6 +17328,36 @@
     <journal>CoRR</journal>
     <volume>abs/1109.3954</volume>
     <url>db/journals/corr/corr1109.html#abs-1109-3954</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Shun14" publtype="informal">
+    <author>Julian Shun</author>
+    <title>Parallel Wavelet Tree Construction.</title>
+    <year>2014</year>
+    <volume>abs/1407.8142</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1407.8142</ee>
+    <url>db/journals/corr/corr1407.html#Shun14</url>
+  </article>
+  <article mdate="2019-01-24" key="journals/corr/MatousekS14" publtype="informal">
+    <author>Jirí Matousek 0001</author>
+    <author>Zuzana Safernová</author>
+    <title>Multilevel polynomial partitions and simplified range searching.</title>
+    <year>2014</year>
+    <volume>abs/1406.3058</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1406.3058</ee>
+    <url>db/journals/corr/corr1406.html#MatousekS14</url>
+  </article>
+  <article mdate="2023-01-17" key="journals/corr/ZhangML16" publtype="informal">
+    <author>Hantao Zhang 0001</author>
+    <author>Baoluo Meng</author>
+    <author>Yiwen Liang</author>
+    <title>Sort Race.</title>
+    <year>2016</year>
+    <volume>abs/1609.04471</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1609.04471</ee>
+    <url>db/journals/corr/corr1609.html#ZhangML16</url>
   </article>
   <article mdate="2021-02-22" key="journals/corr/abs-1709-08900" publtype="informal">
     <author>Takashi Katoh</author>
@@ -15858,6 +17529,18 @@
     <ee type="oa">https://arxiv.org/abs/2002.05600</ee>
     <url>db/journals/corr/corr2002.html#abs-2002-05600</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/CodishCFS14" publtype="informal">
+    <author>Michael Codish</author>
+    <author>Luís Cruz-Filipe</author>
+    <author>Michael Frank 0002</author>
+    <author>Peter Schneider-Kamp</author>
+    <title>Twenty-Five Comparators is Optimal when Sorting Nine Inputs (and Twenty-Nine for Ten).</title>
+    <year>2014</year>
+    <volume>abs/1405.5754</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1405.5754</ee>
+    <url>db/journals/corr/corr1405.html#CodishCFS14</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1106-3791" publtype="informal">
     <author>Shanika Kuruppu</author>
     <author>Simon J. Puglisi</author>
@@ -15869,6 +17552,16 @@
     <volume>abs/1106.3791</volume>
     <url>db/journals/corr/corr1106.html#abs-1106-3791</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/GawrychowskiU14" publtype="informal">
+    <author>Pawel Gawrychowski</author>
+    <author>Przemyslaw Uznanski</author>
+    <title>Tight tradeoffs for approximating palindromes in streams.</title>
+    <year>2014</year>
+    <volume>abs/1410.6433</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1410.6433</ee>
+    <url>db/journals/corr/corr1410.html#GawrychowskiU14</url>
+  </article>
   <article mdate="2019-04-01" key="journals/corr/abs-1903-06570" publtype="informal">
     <author>Ripon Patgiri</author>
     <author>Sabuzima Nayak</author>
@@ -15879,6 +17572,18 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1903.06570</ee>
     <url>db/journals/corr/corr1903.html#abs-1903-06570</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/ChadhaMMC14" publtype="informal">
+    <author>Ankit R. Chadha</author>
+    <author>Rishikesh Misal</author>
+    <author>Tanaya Mokashi</author>
+    <author>Aman Chadha</author>
+    <title>ARC Sort: Enhanced and Time Efficient Sorting Algorithm.</title>
+    <year>2014</year>
+    <volume>abs/1406.2262</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1406.2262</ee>
+    <url>db/journals/corr/corr1406.html#ChadhaMMC14</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1806-10176" publtype="informal">
     <author>Max Bannach</author>
@@ -15923,6 +17628,15 @@
     <ee type="oa">https://arxiv.org/abs/2002.05599</ee>
     <url>db/journals/corr/corr2002.html#abs-2002-05599</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Saha14" publtype="informal">
+    <author>Barna Saha</author>
+    <title>Faster Language Edit Distance, Connection to All-pairs Shortest Paths and Related Problems.</title>
+    <year>2014</year>
+    <volume>abs/1411.7315</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1411.7315</ee>
+    <url>db/journals/corr/corr1411.html#Saha14</url>
+  </article>
   <article mdate="2018-11-08" key="journals/corr/abs-1810-12388" publtype="informal">
     <author>Jiecao Chen</author>
     <author>Qin Zhang 0001</author>
@@ -15942,6 +17656,28 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1904.05459</ee>
     <url>db/journals/corr/corr1904.html#abs-1904-05459</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/CliffordJS15" publtype="informal">
+    <author>Raphaël Clifford</author>
+    <author>Markus Jalsenius</author>
+    <author>Benjamin Sach</author>
+    <title>The complexity of computation in bit streams.</title>
+    <year>2015</year>
+    <volume>abs/1504.00834</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1504.00834</ee>
+    <url>db/journals/corr/corr1504.html#CliffordJS15</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/cs-DS-0407003" publtype="informal">
+    <author>Michael A. Bender</author>
+    <author>Martin Farach-Colton</author>
+    <author>Miguel A. Mosteiro</author>
+    <title>Insertion Sort is O(n log n)</title>
+    <ee type="oa">http://arxiv.org/abs/cs.DS/0407003</ee>
+    <year>2004</year>
+    <journal>CoRR</journal>
+    <volume>cs.DS/0407003</volume>
+    <url>db/journals/corr/corr0407.html#cs-DS-0407003</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1005-4652" publtype="informal">
     <author>Meng He 0001</author>
@@ -16251,6 +17987,17 @@
     <ee type="oa">http://arxiv.org/abs/1807.11702</ee>
     <url>db/journals/corr/corr1807.html#abs-1807-11702</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/BlazejSV16" publtype="informal">
+    <author>Václav Blazej</author>
+    <author>Ondrej Suchý</author>
+    <author>Tomás Valla</author>
+    <title>A Simpler Bit-parallel Algorithm for Swap Matching.</title>
+    <year>2016</year>
+    <volume>abs/1606.04763</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1606.04763</ee>
+    <url>db/journals/corr/corr1606.html#BlazejSV16</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/PolicritiP16" publtype="informal">
     <author>Alberto Policriti</author>
     <author>Nicola Prezza</author>
@@ -16302,6 +18049,36 @@
     <ee type="oa">http://arxiv.org/abs/1906.07874</ee>
     <url>db/journals/corr/corr1906.html#abs-1906-07874</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Rodionov14" publtype="informal">
+    <author>Anatoly Rodionov</author>
+    <title>Path algebra algorithm for finding longest increasing subsequence.</title>
+    <year>2014</year>
+    <volume>abs/1409.2928</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1409.2928</ee>
+    <url>db/journals/corr/corr1409.html#Rodionov14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/MeiraL14" publtype="informal">
+    <author>Luis A. A. Meira</author>
+    <author>Rogério H. B. de Lima</author>
+    <title>Fusion Tree Sorting.</title>
+    <year>2014</year>
+    <volume>abs/1411.0048</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1411.0048</ee>
+    <url>db/journals/corr/corr1411.html#MeiraL14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GogMP16" publtype="informal">
+    <author>Simon Gog</author>
+    <author>Alistair Moffat</author>
+    <author>Matthias Petri</author>
+    <title>CSA++: Fast Pattern Search for Large Alphabets.</title>
+    <year>2016</year>
+    <volume>abs/1605.05404</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1605.05404</ee>
+    <url>db/journals/corr/corr1605.html#GogMP16</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/BelazzouguiC17" publtype="informal">
     <author>Djamal Belazzougui</author>
     <author>Fabio Cunial</author>
@@ -16311,6 +18088,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1705.08640</ee>
     <url>db/journals/corr/corr1705.html#BelazzouguiC17</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GeissmannP16" publtype="informal">
+    <author>Barbara Geissmann</author>
+    <author>Paolo Penna</author>
+    <title>Sort well with energy-constrained comparisons.</title>
+    <year>2016</year>
+    <volume>abs/1610.09223</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1610.09223</ee>
+    <url>db/journals/corr/corr1610.html#GeissmannP16</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/NavarroPS14" publtype="informal">
     <author>Gonzalo Navarro</author>
@@ -16367,6 +18154,17 @@
     <volume>abs/1108.4408</volume>
     <url>db/journals/corr/corr1108.html#abs-1108-4408</url>
   </article>
+  <inproceedings mdate="2018-09-12" key="journals/corr/Ragde14">
+    <author>Prabhakar Ragde</author>
+    <title>Simple Balanced Binary Search Trees.</title>
+    <booktitle>TFPIE</booktitle>
+    <year>2014</year>
+    <pages>78-87</pages>
+    <ee type="oa">https://doi.org/10.4204/EPTCS.170.6</ee>
+    <ee type="oa">http://arxiv.org/abs/1412.4882</ee>
+    <crossref>journals/corr/CaldwellHA14</crossref>
+    <url>db/series/eptcs/eptcs170.html#Ragde14</url>
+  </inproceedings>
   <article mdate="2021-09-03" key="journals/corr/abs-2108-13968" publtype="informal">
     <author>Maria Kosche</author>
     <author>Tore Koß</author>
@@ -16390,6 +18188,26 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1803.01362</ee>
     <url>db/journals/corr/corr1803.html#abs-1803-01362</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Thorup15a" publtype="informal">
+    <author>Mikkel Thorup</author>
+    <title>Fast and Powerful Hashing using Tabulation.</title>
+    <year>2015</year>
+    <volume>abs/1505.01523</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1505.01523</ee>
+    <url>db/journals/corr/corr1505.html#Thorup15a</url>
+  </article>
+  <article mdate="2021-01-23" key="journals/corr/WildNM14" publtype="informal">
+    <author orcid="0000-0002-6061-9177">Sebastian Wild</author>
+    <author>Markus E. Nebel</author>
+    <author>Conrado Martínez</author>
+    <title>Analysis of Pivot Sampling in Dual-Pivot Quicksort.</title>
+    <year>2014</year>
+    <volume>abs/1412.0193</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1412.0193</ee>
+    <url>db/journals/corr/corr1412.html#WildNM14</url>
   </article>
   <article mdate="2018-09-02" key="journals/corr/abs-1808-00963" publtype="informal">
     <author>Timo Bingmann</author>
@@ -16484,6 +18302,26 @@
     <ee type="oa">http://arxiv.org/abs/1706.03035</ee>
     <url>db/journals/corr/corr1706.html#0001K17a</url>
   </article>
+  <article mdate="2023-02-15" key="journals/corr/Schneider16b" publtype="informal">
+    <author>Johannes Schneider 0002</author>
+    <title>Oblivious Sorting and Queues.</title>
+    <year>2016</year>
+    <volume>abs/1612.03343</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1612.03343</ee>
+    <url>db/journals/corr/corr1612.html#Schneider16b</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/IleriKX15" publtype="informal">
+    <author>Atalay Mert Ileri</author>
+    <author>M. Oguzhan Külekci</author>
+    <author>Bojian Xu</author>
+    <title>On Longest Repeat Queries.</title>
+    <year>2015</year>
+    <volume>abs/1501.06259</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1501.06259</ee>
+    <url>db/journals/corr/corr1501.html#IleriKX15</url>
+  </article>
   <article mdate="2020-02-03" key="journals/corr/abs-2001-11218" publtype="informal">
     <author>Pamela Fleischmann</author>
     <author>Marie Lejeune</author>
@@ -16515,6 +18353,18 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2007.07718</ee>
     <url>db/journals/corr/corr2007.html#abs-2007-07718</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/CoxGRS16" publtype="informal">
+    <author>Anthony J. Cox</author>
+    <author>Fabio Garofalo</author>
+    <author>Giovanna Rosone</author>
+    <author>Marinella Sciortino</author>
+    <title>Lightweight LCP Construction for Very Large Collections of Strings.</title>
+    <year>2016</year>
+    <volume>abs/1605.04098</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1605.04098</ee>
+    <url>db/journals/corr/corr1605.html#CoxGRS16</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/PrezzaP15" publtype="informal">
     <author>Nicola Prezza</author>
@@ -16569,6 +18419,27 @@
     <ee type="oa">http://arxiv.org/abs/1910.06416</ee>
     <url>db/journals/corr/corr1910.html#abs-1910-06416</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/HermelinLRW14" publtype="informal">
+    <author>Danny Hermelin</author>
+    <author>Gad M. Landau</author>
+    <author>Yuri Rabinovich</author>
+    <author>Oren Weimann</author>
+    <title>Binary Jumbled Pattern Matching via All-Pairs Shortest Paths.</title>
+    <year>2014</year>
+    <volume>abs/1401.2065</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1401.2065</ee>
+    <url>db/journals/corr/corr1401.html#HermelinLRW14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Pantaleoni14" publtype="informal">
+    <author>Jacopo Pantaleoni</author>
+    <title>A massively parallel algorithm for constructing the BWT of large string sets.</title>
+    <year>2014</year>
+    <volume>abs/1410.0562</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1410.0562</ee>
+    <url>db/journals/corr/corr1410.html#Pantaleoni14</url>
+  </article>
   <article mdate="2020-03-02" key="journals/corr/abs-2002-06796" publtype="informal">
     <author>Mitsuru Funakoshi</author>
     <author>Yuto Nakashima</author>
@@ -16582,6 +18453,16 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2002.06796</ee>
     <url>db/journals/corr/corr2002.html#abs-2002-06796</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/AfshaniN16" publtype="informal">
+    <author>Peyman Afshani</author>
+    <author>Jesper Sindahl Nielsen</author>
+    <title>Data Structure Lower Bounds for Document Indexing Problems.</title>
+    <year>2016</year>
+    <volume>abs/1604.06264</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1604.06264</ee>
+    <url>db/journals/corr/corr1604.html#AfshaniN16</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1805-00060" publtype="informal">
     <author>Tristan Braquelaire</author>
@@ -16617,6 +18498,19 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2005.06213</ee>
     <url>db/journals/corr/corr2005.html#abs-2005-06213</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/FiciLLPS15" publtype="informal">
+    <author>Gabriele Fici</author>
+    <author>Thierry Lecroq</author>
+    <author>Arnaud Lefebvre</author>
+    <author>Élise Prieur-Gaston</author>
+    <author>William F. Smyth</author>
+    <title>A Note on Easy and Efficient Computation of Full Abelian Periods of a Word.</title>
+    <year>2015</year>
+    <volume>abs/1510.00634</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1510.00634</ee>
+    <url>db/journals/corr/corr1510.html#FiciLLPS15</url>
   </article>
   <article mdate="2019-06-24" key="journals/corr/abs-1906-06965" publtype="informal">
     <author>Florin Manea</author>
@@ -16747,6 +18641,19 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1910.06437</ee>
     <url>db/journals/corr/corr1910.html#abs-1910-06437</url>
+  </article>
+  <article mdate="2020-09-28" key="journals/corr/ChalermsookG0MS15b" publtype="informal">
+    <author>Parinya Chalermsook</author>
+    <author>Mayank Goswami 0001</author>
+    <author>László Kozma 0002</author>
+    <author>Kurt Mehlhorn</author>
+    <author>Thatchaphol Saranurak</author>
+    <title>Pattern-avoiding access in binary search trees.</title>
+    <year>2015</year>
+    <volume>abs/1507.06953</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1507.06953</ee>
+    <url>db/journals/corr/corr1507.html#ChalermsookG0MS15b</url>
   </article>
   <article mdate="2019-10-15" key="journals/corr/abs-1806-09646" publtype="informal">
     <author>Pawel Gawrychowski</author>
@@ -16976,6 +18883,17 @@
     <ee type="oa">https://arxiv.org/abs/2006.00605</ee>
     <url>db/journals/corr/corr2006.html#abs-2006-00605</url>
   </article>
+  <article mdate="2021-01-23" key="journals/corr/LiuLL14" publtype="informal">
+    <author>Chi-Man Liu</author>
+    <author orcid="0000-0001-9711-6533">Ruibang Luo</author>
+    <author>Tak Wah Lam</author>
+    <title>GPU-Accelerated BWT Construction for Large Collection of Short Reads.</title>
+    <year>2014</year>
+    <volume>abs/1401.7457</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1401.7457</ee>
+    <url>db/journals/corr/corr1401.html#LiuLL14</url>
+  </article>
   <article mdate="2019-09-27" key="journals/corr/abs-1909-11600" publtype="informal">
     <author>Sayan Bhattacharya</author>
     <author>Monika Henzinger</author>
@@ -17151,6 +19069,16 @@
     <ee type="oa">http://arxiv.org/abs/1910.06169</ee>
     <url>db/journals/corr/corr1910.html#abs-1910-06169</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/DidierT16" publtype="informal">
+    <author>Gilles Didier</author>
+    <author>Laurent Tichit</author>
+    <title>Designing optimal- and fast-on-average pattern matching algorithms.</title>
+    <year>2016</year>
+    <volume>abs/1604.08860</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1604.08860</ee>
+    <url>db/journals/corr/corr1604.html#DidierT16</url>
+  </article>
   <article mdate="2019-11-11" key="journals/corr/abs-1911-01414" publtype="informal">
     <author>Chaim Even-Zohar</author>
     <author>Calvin Leng</author>
@@ -17170,6 +19098,14 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2101.11421</ee>
     <url>db/journals/corr/corr2101.html#abs-2101-11421</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Cording14" publtype="informal withdrawn">
+    <title>Optimal Time Random Access to Grammar-Compressed Strings in Small Space.</title>
+    <year>2014</year>
+    <volume>abs/1410.4701</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1410.4701</ee>
+    <url>db/journals/corr/corr1410.html#Cording14</url>
   </article>
   <article mdate="2020-03-10" key="journals/corr/abs-2003-03959" publtype="informal">
     <author>Andrew Frohmader</author>
@@ -17214,6 +19150,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1711.03205</ee>
     <url>db/journals/corr/corr1711.html#abs-1711-03205</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GhashamiA15" publtype="informal">
+    <author>Mina Ghashami</author>
+    <author>Amirali Abdullah</author>
+    <title>Binary Coding in Stream.</title>
+    <year>2015</year>
+    <volume>abs/1503.06271</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1503.06271</ee>
+    <url>db/journals/corr/corr1503.html#GhashamiA15</url>
   </article>
   <article mdate="2019-10-15" key="journals/corr/abs-1202-4076" publtype="informal">
     <author>Gregory Kucherov</author>
@@ -17314,6 +19260,17 @@
     <ee type="oa">http://arxiv.org/abs/1907.04660</ee>
     <url>db/journals/corr/corr1907.html#abs-1907-04660</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/KociumakaRR15" publtype="informal">
+    <author>Tomasz Kociumaka</author>
+    <author>Jakub Radoszewski</author>
+    <author>Wojciech Rytter</author>
+    <title>Efficient Ranking of Lyndon Words and Decoding Lexicographically Minimal de Bruijn Sequence.</title>
+    <year>2015</year>
+    <volume>abs/1510.02637</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1510.02637</ee>
+    <url>db/journals/corr/corr1510.html#KociumakaRR15</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/HuckeJL17" publtype="informal">
     <author>Danny Hucke</author>
     <author>Artur Jez</author>
@@ -17374,6 +19331,40 @@
     <ee type="oa">http://arxiv.org/abs/1907.11900</ee>
     <url>db/journals/corr/corr1907.html#abs-1907-11900</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/GiaquintaFGTU13" publtype="informal">
+    <author>Emanuele Giaquinta</author>
+    <author>Kimmo Fredriksson</author>
+    <author>Szymon Grabowski</author>
+    <author>Alexandru I. Tomescu</author>
+    <author>Esko Ukkonen</author>
+    <title>Motif matching using gapped patterns.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1306.2483</ee>
+    <volume>abs/1306.2483</volume>
+    <url>db/journals/corr/corr1306.html#GiaquintaFGTU13</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1301-0103" publtype="informal">
+    <author>Shoshana Marcus</author>
+    <author>Dina Sokol</author>
+    <title>2D Lyndon Words and Applications</title>
+    <ee type="oa">http://arxiv.org/abs/1301.0103</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1301.0103</volume>
+    <url>db/journals/corr/corr1301.html#abs-1301-0103</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GrabowskiDR14" publtype="informal">
+    <author>Szymon Grabowski</author>
+    <author>Sebastian Deorowicz</author>
+    <author>Lukasz Roguski</author>
+    <title>Disk-based genome sequencing data compression.</title>
+    <year>2014</year>
+    <volume>abs/1405.6874</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1405.6874</ee>
+    <url>db/journals/corr/corr1405.html#GrabowskiDR14</url>
+  </article>
   <article mdate="2021-11-05" key="journals/corr/abs-2111-00376" publtype="informal">
     <author>Younan Gao</author>
     <title>Computing Matching Statistics on Repetitive Texts.</title>
@@ -17413,6 +19404,16 @@
     <volume>abs/1204.4835</volume>
     <url>db/journals/corr/corr1204.html#abs-1204-4835</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/SiyariG16" publtype="informal">
+    <author>Payam Siyari</author>
+    <author>Matthias Gallé</author>
+    <title>The Generalized Smallest Grammar Problem.</title>
+    <year>2016</year>
+    <volume>abs/1608.08927</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1608.08927</ee>
+    <url>db/journals/corr/corr1608.html#SiyariG16</url>
+  </article>
   <article mdate="2020-03-09" key="journals/corr/abs-1911-11704" publtype="informal">
     <author>Lukas Fleischer</author>
     <author>Jeffrey O. Shallit</author>
@@ -17450,6 +19451,17 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1409.6780</ee>
     <url>db/journals/corr/corr1409.html#GagieHKNPS14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/KhareMY13" publtype="informal">
+    <author>Monik Khare</author>
+    <author>Claire Mathieu</author>
+    <author>Neal E. Young</author>
+    <title>First-Come-First-Served for Online Slot Allocation and Huffman Coding.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1307.5296</ee>
+    <volume>abs/1307.5296</volume>
+    <url>db/journals/corr/corr1307.html#KhareMY13</url>
   </article>
   <article mdate="2021-06-30" key="journals/corr/abs-2106-12189" publtype="informal">
     <author>Anes Abdennebi</author>
@@ -17593,6 +19605,24 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1511.07180</ee>
     <url>db/journals/corr/corr1511.html#DumitranGM15</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Chen15" publtype="informal">
+    <author>Shihyen Chen</author>
+    <title>A Review on the Tree Edit Distance Problem and Related Path-Decomposition Algorithms.</title>
+    <year>2015</year>
+    <volume>abs/1501.00611</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1501.00611</ee>
+    <url>db/journals/corr/corr1501.html#Chen15</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Huggins15" publtype="informal">
+    <author>Peter Huggins</author>
+    <title>Layered Heaps Beating Standard and Fibonacci Heaps in Practice.</title>
+    <year>2015</year>
+    <volume>abs/1510.03367</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1510.03367</ee>
+    <url>db/journals/corr/corr1510.html#Huggins15</url>
   </article>
   <article mdate="2019-02-02" key="journals/corr/abs-1901-10045" publtype="informal">
     <author>Diptarama Hendrian</author>
@@ -17747,6 +19777,15 @@
     <ee type="oa">http://arxiv.org/abs/1810.01785</ee>
     <url>db/journals/corr/corr1810.html#abs-1810-01785</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Cannizzo15" publtype="informal">
+    <author>Fabio Cannizzo</author>
+    <title>Fast and Vectorizable Alternatives to Binary Search.</title>
+    <year>2015</year>
+    <volume>abs/1506.08620</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1506.08620</ee>
+    <url>db/journals/corr/corr1506.html#Cannizzo15</url>
+  </article>
   <article mdate="2019-01-01" key="journals/corr/abs-1812-07330" publtype="informal">
     <author>Marie Lejeune</author>
     <author>Julien Leroy 0002</author>
@@ -17838,6 +19877,18 @@
     <ee type="oa">http://arxiv.org/abs/1805.10070</ee>
     <url>db/journals/corr/corr1805.html#abs-1805-10070</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/FranekIRS16" publtype="informal">
+    <author>Frantisek Franek</author>
+    <author>A. S. M. Sohidull Islam</author>
+    <author>M. Sohel Rahman</author>
+    <author>William F. Smyth</author>
+    <title>Algorithms to Compute the Lyndon Array.</title>
+    <year>2016</year>
+    <volume>abs/1605.08935</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1605.08935</ee>
+    <url>db/journals/corr/corr1605.html#FranekIRS16</url>
+  </article>
   <article mdate="2018-11-22" key="journals/corr/abs-1811-00833" publtype="informal">
     <author>Stefan Edelkamp</author>
     <author>Armin Weiß</author>
@@ -17872,6 +19923,28 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1901.01665</ee>
     <url>db/journals/corr/corr1901.html#abs-1901-01665</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GhumanGT14" publtype="informal">
+    <author>Sukhpal Singh Ghuman</author>
+    <author>Emanuele Giaquinta</author>
+    <author>Jorma Tarhio</author>
+    <title>Alternative Algorithms for Lyndon Factorization.</title>
+    <year>2014</year>
+    <volume>abs/1405.4892</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1405.4892</ee>
+    <url>db/journals/corr/corr1405.html#GhumanGT14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/BrodalNT15" publtype="informal">
+    <author>Gerth Stølting Brodal</author>
+    <author>Jesper Sindahl Nielsen</author>
+    <author>Jakob Truelsen</author>
+    <title>Strictly Implicit Priority Queues: On the Number of Moves and Worst-Case Time.</title>
+    <year>2015</year>
+    <volume>abs/1505.00147</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1505.00147</ee>
+    <url>db/journals/corr/corr1505.html#BrodalNT15</url>
   </article>
   <article mdate="2019-05-21" key="journals/corr/abs-1902-03274" publtype="informal">
     <author>Manuel Cáceres</author>
@@ -17908,6 +19981,15 @@
     <ee type="oa">http://arxiv.org/abs/1908.01263</ee>
     <url>db/journals/corr/corr1908.html#abs-1908-01263</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Zavadskyi16" publtype="informal">
+    <author>Igor O. Zavadskyi</author>
+    <title>A family of fast exact pattern matching algorithms.</title>
+    <year>2016</year>
+    <volume>abs/1608.08346</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1608.08346</ee>
+    <url>db/journals/corr/corr1608.html#Zavadskyi16</url>
+  </article>
   <article mdate="2020-06-08" key="journals/corr/abs-2006-02408" publtype="informal">
     <author>Panagiotis Charalampopoulos</author>
     <author>Pawel Gawrychowski</author>
@@ -17931,6 +20013,27 @@
     <journal>CoRR</journal>
     <volume>abs/1208.3663</volume>
     <url>db/journals/corr/corr1208.html#abs-1208-3663</url>
+  </article>
+  <article mdate="2020-05-12" key="journals/corr/LiLH16a" publtype="informal">
+    <author>Zhize Li</author>
+    <author>Jian Li 0015</author>
+    <author>Hongwei Huo</author>
+    <title>Optimal In-Place Suffix Sorting.</title>
+    <year>2016</year>
+    <volume>abs/1610.08305</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1610.08305</ee>
+    <url>db/journals/corr/corr1610.html#LiLH16a</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1302-7278" publtype="informal">
+    <author>Gregory Kucherov</author>
+    <author>Kamil Salikhov</author>
+    <title>Using cascading Bloom filters to improve the memory usage for de Brujin graphs</title>
+    <ee type="oa">http://arxiv.org/abs/1302.7278</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1302.7278</volume>
+    <url>db/journals/corr/corr1302.html#abs-1302-7278</url>
   </article>
   <article mdate="2020-10-20" key="journals/corr/abs-2010-04752" publtype="informal">
     <author>Russel L. Villacarlos</author>
@@ -17963,6 +20066,28 @@
     <journal>CoRR</journal>
     <volume>abs/1104.3810</volume>
     <url>db/journals/corr/corr1104.html#abs-1104-3810</url>
+  </article>
+  <article mdate="2019-03-06" key="journals/corr/LiZZZ16" publtype="informal">
+    <author>Youhuan Li</author>
+    <author>Lei Zou 0001</author>
+    <author>Huaming Zhang</author>
+    <author>Dongyan Zhao 0001</author>
+    <title>Computing Longest Increasing Subsequence Over Sequential Data Streams.</title>
+    <year>2016</year>
+    <volume>abs/1604.02552</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1604.02552</ee>
+    <url>db/journals/corr/corr1604.html#LiZZZ16</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/KolokolovaN14" publtype="informal">
+    <author>Antonina Kolokolova</author>
+    <author>Renesa Nizamee</author>
+    <title>Approximating solution structure of the Weighted Sentence Alignment problem.</title>
+    <year>2014</year>
+    <volume>abs/1409.2433</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1409.2433</ee>
+    <url>db/journals/corr/corr1409.html#KolokolovaN14</url>
   </article>
   <article mdate="2018-10-30" key="journals/corr/abs-1810-05313" publtype="informal">
     <author>Daniel Lemire</author>
@@ -18053,6 +20178,16 @@
     <ee type="oa">http://arxiv.org/abs/1712.09230</ee>
     <url>db/journals/corr/corr1712.html#abs-1712-09230</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/StehleJ16" publtype="informal">
+    <author>Elias Stehle</author>
+    <author>Hans-Arno Jacobsen</author>
+    <title>A Memory Bandwidth-Efficient Hybrid Radix Sort on GPUs.</title>
+    <year>2016</year>
+    <volume>abs/1611.01137</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1611.01137</ee>
+    <url>db/journals/corr/corr1611.html#StehleJ16</url>
+  </article>
   <article mdate="2018-11-25" key="journals/corr/abs-1811-06127" publtype="informal">
     <author>Roman Snytsar</author>
     <title>Vectorized Character Counting for Faster Pattern Matching.</title>
@@ -18083,6 +20218,18 @@
     <ee type="oa">http://arxiv.org/abs/1808.00643</ee>
     <url>db/journals/corr/corr1808.html#abs-1808-00643</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1305-0160" publtype="informal">
+    <author>Markus J. Bauer</author>
+    <author>Anthony J. Cox</author>
+    <author>Giovanna Rosone</author>
+    <author>Marinella Sciortino</author>
+    <title>Lightweight LCP Construction for Next-Generation Sequencing Datasets</title>
+    <ee type="oa">http://arxiv.org/abs/1305.0160</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1305.0160</volume>
+    <url>db/journals/corr/corr1305.html#abs-1305-0160</url>
+  </article>
   <article mdate="2021-08-03" key="journals/corr/abs-2107-13801" publtype="informal">
     <author>Pranav Venkatram</author>
     <title>A New Lossless Data Compression Algorithm Exploiting Positional Redundancy.</title>
@@ -18106,6 +20253,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1601.05706</ee>
     <url>db/journals/corr/corr1601.html#AkitayaDDHHKL16</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Hubschle-Schneider15a" publtype="informal">
+    <author>Lorenz Hübschle-Schneider</author>
+    <author>Rajeev Raman</author>
+    <title>Tree Compression with Top Trees Revisited.</title>
+    <year>2015</year>
+    <volume>abs/1506.04499</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1506.04499</ee>
+    <url>db/journals/corr/corr1506.html#Hubschle-Schneider15a</url>
   </article>
   <article mdate="2021-05-20" key="journals/corr/abs-2005-10800" publtype="informal">
     <author>Katarzyna Paluch 0001</author>
@@ -18567,6 +20724,18 @@
     <ee type="oa">http://arxiv.org/abs/1705.04022</ee>
     <url>db/journals/corr/corr1705.html#AlzamelCIPRS17</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/AlistarhKMS14" publtype="informal">
+    <author>Dan Alistarh</author>
+    <author>Justin Kopinsky</author>
+    <author>Alexander Matveev</author>
+    <author>Nir Shavit</author>
+    <title>The LevelArray: A Fast, Practical Long-Lived Renaming Algorithm.</title>
+    <year>2014</year>
+    <volume>abs/1405.5461</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1405.5461</ee>
+    <url>db/journals/corr/corr1405.html#AlistarhKMS14</url>
+  </article>
   <article mdate="2021-01-24" key="journals/corr/abs-2101-05329" publtype="informal">
     <author>Sven Fiergolla</author>
     <author>Petra Wolf 0002</author>
@@ -18603,6 +20772,17 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1906.05486</ee>
     <url>db/journals/corr/corr1906.html#abs-1906-05486</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/BensonLS14" publtype="informal">
+    <author>Gary Benson</author>
+    <author>Avivit Levy</author>
+    <author>B. Riva Shalom</author>
+    <title>Longest Common Subsequence in k-length substrings.</title>
+    <year>2014</year>
+    <volume>abs/1402.2097</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1402.2097</ee>
+    <url>db/journals/corr/corr1402.html#BensonLS14</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1711-02035" publtype="informal">
     <author>Kiavash Kianfar</author>
@@ -18683,6 +20863,18 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1512.01085</ee>
     <url>db/journals/corr/corr1512.html#BartonLP15</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1302-3437" publtype="informal">
+    <author>Alberto Apostolico</author>
+    <author>Péter L. Erdös</author>
+    <author>István Miklós</author>
+    <author>Johannes Siemons</author>
+    <title>Modulated String Searching</title>
+    <ee type="oa">http://arxiv.org/abs/1302.3437</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1302.3437</volume>
+    <url>db/journals/corr/corr1302.html#abs-1302-3437</url>
   </article>
   <article mdate="2019-12-03" key="journals/corr/abs-1911-08971" publtype="informal">
     <author>Diego Arroyuelo</author>
@@ -18767,6 +20959,18 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1707.06606</ee>
     <url>db/journals/corr/corr1707.html#FischerMS17</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/AxtmannBS014" publtype="informal">
+    <author>Michael Axtmann</author>
+    <author>Timo Bingmann</author>
+    <author>Peter Sanders 0001</author>
+    <author>Christian Schulz 0003</author>
+    <title>Practical Massively Parallel Sorting - Basic Algorithmic Ideas.</title>
+    <year>2014</year>
+    <volume>abs/1410.6754</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1410.6754</ee>
+    <url>db/journals/corr/corr1410.html#AxtmannBS014</url>
   </article>
   <article mdate="2019-08-19" key="journals/corr/abs-1908-04810" publtype="informal">
     <author>Jonathan Burns</author>
@@ -18861,6 +21065,15 @@
     <ee type="oa">http://arxiv.org/abs/1809.08669</ee>
     <url>db/journals/corr/corr1809.html#abs-1809-08669</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1304-7355" publtype="informal">
+    <author>Filip Proborszcz</author>
+    <title>Web graph compression with fast access</title>
+    <ee type="oa">http://arxiv.org/abs/1304.7355</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1304.7355</volume>
+    <url>db/journals/corr/corr1304.html#abs-1304-7355</url>
+  </article>
   <article mdate="2020-07-21" key="journals/corr/abs-2007-06604" publtype="informal">
     <author>Amihood Amir</author>
     <author>Itai Boneh</author>
@@ -18880,6 +21093,18 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2201.06492</ee>
     <url>db/journals/corr/corr2201.html#abs-2201-06492</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/BenoitLLR14" publtype="informal">
+    <author>Gaëtan Benoit</author>
+    <author>Claire Lemaitre</author>
+    <author>Dominique Lavenier</author>
+    <author>Guillaume Rizk</author>
+    <title>Compression of high throughput sequencing data with probabilistic de Bruijn graph.</title>
+    <year>2014</year>
+    <volume>abs/1412.5932</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1412.5932</ee>
+    <url>db/journals/corr/corr1412.html#BenoitLLR14</url>
   </article>
   <article mdate="2019-04-27" key="journals/corr/abs-1904-08343" publtype="informal">
     <author>Markus Lohrey</author>
@@ -19032,6 +21257,15 @@
     <ee type="oa">https://arxiv.org/abs/2001.06864</ee>
     <url>db/journals/corr/corr2001.html#abs-2001-06864</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Gruber15" publtype="informal">
+    <author>Jakob Gruber</author>
+    <title>Practical Concurrent Priority Queues.</title>
+    <year>2015</year>
+    <volume>abs/1509.07053</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1509.07053</ee>
+    <url>db/journals/corr/corr1509.html#Gruber15</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1204-1215" publtype="informal">
     <author>Travis Gagie</author>
     <title>On the Value of Multiple Read/Write Streams for Data Compression</title>
@@ -19054,6 +21288,15 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1711.01616</ee>
     <url>db/journals/corr/corr1711.html#abs-1711-01616</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Grabowski15" publtype="informal">
+    <author>Szymon Grabowski</author>
+    <title>A note on the longest common Abelian factor problem.</title>
+    <year>2015</year>
+    <volume>abs/1503.01093</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1503.01093</ee>
+    <url>db/journals/corr/corr1503.html#Grabowski15</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-0801-2378" publtype="informal">
     <author>Paolo Ferragina</author>
@@ -19168,6 +21411,16 @@
     <ee type="oa">http://arxiv.org/abs/1806.04890</ee>
     <url>db/journals/corr/corr1806.html#abs-1806-04890</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/GlowinskiR13" publtype="informal">
+    <author>Radoslaw Glowinski</author>
+    <author>Wojciech Rytter</author>
+    <title>Compressed Pattern-Matching with Ranked Variables in Zimin Words.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1307.1560</ee>
+    <volume>abs/1307.1560</volume>
+    <url>db/journals/corr/corr1307.html#GlowinskiR13</url>
+  </article>
   <article mdate="2018-11-22" key="journals/corr/abs-1811-02725" publtype="informal">
     <author>Zeev Dvir</author>
     <author>Alexander Golovnev</author>
@@ -19203,6 +21456,28 @@
     <ee type="oa">http://arxiv.org/abs/1403.2431</ee>
     <url>db/journals/corr/corr1403.html#FiciGKK14</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/Lewenstein13" publtype="informal">
+    <author>Moshe Lewenstein</author>
+    <title>Orthogonal Range Searching for Text Indexing.</title>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1306.0615</ee>
+    <volume>abs/1306.0615</volume>
+    <url>db/journals/corr/corr1306.html#Lewenstein13</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/CyganLPPS15" publtype="informal">
+    <author>Marek Cygan</author>
+    <author>Daniel Lokshtanov</author>
+    <author>Marcin Pilipczuk</author>
+    <author>Michal Pilipczuk</author>
+    <author>Saket Saurabh 0001</author>
+    <title>Lower bounds for approximation schemes for Closest String.</title>
+    <year>2015</year>
+    <volume>abs/1509.05809</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1509.05809</ee>
+    <url>db/journals/corr/corr1509.html#CyganLPPS15</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/TakabatakeTS14" publtype="informal">
     <author>Yoshimasa Takabatake</author>
     <author>Yasuo Tabei</author>
@@ -19213,6 +21488,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1404.4972</ee>
     <url>db/journals/corr/corr1404.html#TakabatakeTS14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/TakhanovK14" publtype="informal">
+    <author>Rustem Takhanov</author>
+    <author>Vladimir Kolmogorov</author>
+    <title>Combining pattern-based CRFs and weighted context-free grammars.</title>
+    <year>2014</year>
+    <volume>abs/1404.5475</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1404.5475</ee>
+    <url>db/journals/corr/corr1404.html#TakhanovK14</url>
   </article>
   <article mdate="2020-05-22" key="journals/corr/abs-2005-07644" publtype="informal">
     <author>Meng He 0001</author>
@@ -19257,6 +21542,19 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1811.01209</ee>
     <url>db/journals/corr/corr1811.html#abs-1811-01209</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/BonizzoniVNPR16" publtype="informal">
+    <author>Paola Bonizzoni</author>
+    <author>Gianluca Della Vedova</author>
+    <author>Serena Nicosia</author>
+    <author>Marco Previtali</author>
+    <author>Raffaella Rizzi</author>
+    <title>A New Lightweight Algorithm to compute the BWT and the LCP array of a Set of Strings.</title>
+    <year>2016</year>
+    <volume>abs/1607.08342</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1607.08342</ee>
+    <url>db/journals/corr/corr1607.html#BonizzoniVNPR16</url>
   </article>
   <article mdate="2020-01-08" key="journals/corr/abs-1903-09625" publtype="informal">
     <author>Adriana Coutinho</author>
@@ -19349,9 +21647,9 @@
     <ee type="oa">http://arxiv.org/abs/1712.05876</ee>
     <url>db/journals/corr/corr1712.html#abs-1712-05876</url>
   </article>
-  <article mdate="2018-10-30" key="journals/corr/abs-1810-07259" publtype="informal">
+  <article mdate="2023-04-05" key="journals/corr/abs-1810-07259" publtype="informal">
     <author>Jayesh Choudhari</author>
-    <author>Manoj Gupta</author>
+    <author>Manoj Gupta 0002</author>
     <author>Shivdutt Sharma</author>
     <title>Nearly Optimal Space Efficient Algorithm for Depth First Search.</title>
     <year>2018</year>
@@ -19359,6 +21657,19 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1810.07259</ee>
     <url>db/journals/corr/corr1810.html#abs-1810-07259</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/ChikhiLJSM14" publtype="informal">
+    <author>Rayan Chikhi</author>
+    <author>Antoine Limasset</author>
+    <author>Shaun Jackman</author>
+    <author>Jared T. Simpson</author>
+    <author>Paul Medvedev</author>
+    <title>On the representation of de Bruijn graphs.</title>
+    <year>2014</year>
+    <volume>abs/1401.5383</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1401.5383</ee>
+    <url>db/journals/corr/corr1401.html#ChikhiLJSM14</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/BelazzouguiC15" publtype="informal">
     <author>Djamal Belazzougui</author>
@@ -19410,6 +21721,26 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1403.1065</ee>
     <url>db/journals/corr/corr1403.html#BilleCG14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GrabowskiR14a" publtype="informal">
+    <author>Szymon Grabowski</author>
+    <author>Marcin Raniszewski</author>
+    <title>Sampling the suffix array with minimizers.</title>
+    <year>2014</year>
+    <volume>abs/1406.2348</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1406.2348</ee>
+    <url>db/journals/corr/corr1406.html#GrabowskiR14a</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/EhlersM14" publtype="informal">
+    <author>Thorsten Ehlers</author>
+    <author>Mike Müller</author>
+    <title>Faster Sorting Networks for $17$, $19$ and $20$ Inputs.</title>
+    <year>2014</year>
+    <volume>abs/1410.2736</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1410.2736</ee>
+    <url>db/journals/corr/corr1410.html#EhlersM14</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1806-01804" publtype="informal">
     <author>Travis Gagie</author>
@@ -19484,6 +21815,19 @@
     <ee type="oa">https://arxiv.org/abs/2007.08179</ee>
     <url>db/journals/corr/corr2007.html#abs-2007-08179</url>
   </article>
+  <article mdate="2020-09-28" key="journals/corr/ChalermsookG0MS16" publtype="informal">
+    <author>Parinya Chalermsook</author>
+    <author>Mayank Goswami 0001</author>
+    <author>László Kozma 0002</author>
+    <author>Kurt Mehlhorn</author>
+    <author>Thatchaphol Saranurak</author>
+    <title>The landscape of bounds for binary search trees.</title>
+    <year>2016</year>
+    <volume>abs/1603.04892</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1603.04892</ee>
+    <url>db/journals/corr/corr1603.html#ChalermsookG0MS16</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/BelazzouguiGGKPPT14" publtype="informal">
     <author>Djamal Belazzougui</author>
     <author>Travis Gagie</author>
@@ -19498,6 +21842,18 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1412.0967</ee>
     <url>db/journals/corr/corr1412.html#BelazzouguiGGKPPT14</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1303-1872" publtype="informal">
+    <author>Lei Wang 0010</author>
+    <author>Xiaodong Wang 0003</author>
+    <author>Yingjie Wu</author>
+    <author>Daxin Zhu</author>
+    <title>An Efficient Dynamic Programming Algorithm for the Generalized LCS Problem with Multiple Substring Exclusion Constrains</title>
+    <ee type="oa">http://arxiv.org/abs/1303.1872</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1303.1872</volume>
+    <url>db/journals/corr/corr1303.html#abs-1303-1872</url>
   </article>
   <article mdate="2021-01-23" key="journals/corr/abs-2001-02172" publtype="informal">
     <author orcid="0000-0002-5076-5007">Philipp Götze</author>
@@ -19518,6 +21874,18 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2001.04505</ee>
     <url>db/journals/corr/corr2001.html#abs-2001-04505</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/KowalskiGFR16" publtype="informal">
+    <author>Tomasz Marek Kowalski</author>
+    <author>Szymon Grabowski</author>
+    <author>Kimmo Fredriksson</author>
+    <author>Marcin Raniszewski</author>
+    <title>Suffix arrays with a twist.</title>
+    <year>2016</year>
+    <volume>abs/1607.08176</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1607.08176</ee>
+    <url>db/journals/corr/corr1607.html#KowalskiGFR16</url>
   </article>
   <article mdate="2021-01-23" key="journals/corr/abs-1811-01259" publtype="informal">
     <author>Stefan Edelkamp</author>
@@ -19563,6 +21931,16 @@
     <journal>CoRR</journal>
     <volume>abs/1111.4395</volume>
     <url>db/journals/corr/corr1111.html#abs-1111-4395</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/GogP14" publtype="informal">
+    <author>Simon Gog</author>
+    <author>Matthias Petri</author>
+    <title>Compact Indexes for Flexible Top-k Retrieval.</title>
+    <year>2014</year>
+    <volume>abs/1406.3170</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1406.3170</ee>
+    <url>db/journals/corr/corr1406.html#GogP14</url>
   </article>
   <article mdate="2020-01-17" key="journals/corr/abs-2001-05239" publtype="informal">
     <author>Dmitry Kosolobov</author>
@@ -19700,6 +22078,29 @@
     <volume>abs/cs/0606116</volume>
     <url>db/journals/corr/corr0606.html#abs-cs-0606116</url>
   </article>
+  <article mdate="2019-09-27" key="journals/corr/Li14f" publtype="informal">
+    <author>Heng Li 0002</author>
+    <title>Fast construction of FM-index for long sequence reads.</title>
+    <year>2014</year>
+    <volume>abs/1406.0426</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1406.0426</ee>
+    <url>db/journals/corr/corr1406.html#Li14f</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/CrochemoreIKRRW14" publtype="informal">
+    <author>Maxime Crochemore</author>
+    <author>Costas S. Iliopoulos</author>
+    <author>Tomasz Kociumaka</author>
+    <author>Jakub Radoszewski</author>
+    <author>Wojciech Rytter</author>
+    <author>Tomasz Walen</author>
+    <title>Covering Problems for Partial Words and for Indeterminate Strings.</title>
+    <year>2014</year>
+    <volume>abs/1412.3696</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1412.3696</ee>
+    <url>db/journals/corr/corr1412.html#CrochemoreIKRRW14</url>
+  </article>
   <article mdate="2019-12-03" key="journals/corr/abs-1911-11048" publtype="informal">
     <author>Mathias Weller</author>
     <title>Listing Conflicting Triples in Optimal Time.</title>
@@ -19741,6 +22142,17 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1803.02807</ee>
     <url>db/journals/corr/corr1803.html#abs-1803-02807</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/AmaniLT15" publtype="informal">
+    <author>Mahdi Amani</author>
+    <author>Kevin A. Lai</author>
+    <author>Robert Endre Tarjan</author>
+    <title>Amortized Rotation Cost in AVL Trees.</title>
+    <year>2015</year>
+    <volume>abs/1506.03528</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1506.03528</ee>
+    <url>db/journals/corr/corr1506.html#AmaniLT15</url>
   </article>
   <article mdate="2019-05-28" key="journals/corr/abs-1905-07224" publtype="informal">
     <author>Maël Kerbiriou</author>
@@ -19832,6 +22244,16 @@
     <ee type="oa">http://arxiv.org/abs/1812.08101</ee>
     <url>db/journals/corr/corr1812.html#abs-1812-08101</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/MarschallP16" publtype="informal">
+    <author>Tobias Marschall</author>
+    <author>Noemi E. Passing</author>
+    <title>Representing Pattern Matching Algorithms by Polynomial-Size Automata.</title>
+    <year>2016</year>
+    <volume>abs/1607.00138</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1607.00138</ee>
+    <url>db/journals/corr/corr1607.html#MarschallP16</url>
+  </article>
   <article mdate="2021-06-29" key="journals/corr/abs-1805-09924" publtype="informal">
     <author>Tomasz Kociumaka</author>
     <author>Ritu Kundu</author>
@@ -19855,6 +22277,16 @@
     <journal>CoRR</journal>
     <ee type="oa">http://arxiv.org/abs/1910.07819</ee>
     <url>db/journals/corr/corr1910.html#abs-1910-07819</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/abs-1302-4016" publtype="informal">
+    <author>Gregory Kucherov</author>
+    <author>Yakov Nekrich</author>
+    <title>Full-fledged Real-Time Indexing for Constant Size Alphabets</title>
+    <ee type="oa">http://arxiv.org/abs/1302.4016</ee>
+    <year>2013</year>
+    <journal>CoRR</journal>
+    <volume>abs/1302.4016</volume>
+    <url>db/journals/corr/corr1302.html#abs-1302-4016</url>
   </article>
   <article mdate="2018-08-13" key="journals/corr/LewensteinMR13" publtype="informal">
     <author>Moshe Lewenstein</author>
@@ -19889,6 +22321,17 @@
     <journal>CoRR</journal>
     <volume>abs/1212.2952</volume>
     <url>db/journals/corr/corr1212.html#abs-1212-2952</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/BoveeBT16" publtype="informal">
+    <author>Mara Bovee</author>
+    <author>Kyle Burke</author>
+    <author>Craig Tennenhouse</author>
+    <title>Games from Basic Data Structures.</title>
+    <year>2016</year>
+    <volume>abs/1605.06327</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1605.06327</ee>
+    <url>db/journals/corr/corr1605.html#BoveeBT16</url>
   </article>
   <article mdate="2021-08-27" key="journals/corr/abs-2108-11475" publtype="informal">
     <author>Pawel Gawrychowski</author>
@@ -20085,6 +22528,18 @@
     <ee type="oa">https://arxiv.org/abs/2106.06525</ee>
     <url>db/journals/corr/corr2106.html#abs-2106-06525</url>
   </article>
+  <article mdate="2018-08-13" key="journals/corr/AlatabbiILR15" publtype="informal">
+    <author>Ali Alatabbi</author>
+    <author>Costas S. Iliopoulos</author>
+    <author>Alessio Langiu</author>
+    <author>M. Sohel Rahman</author>
+    <title>Algorithms for Longest Common Abelian Factors.</title>
+    <year>2015</year>
+    <volume>abs/1503.00049</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1503.00049</ee>
+    <url>db/journals/corr/corr1503.html#AlatabbiILR15</url>
+  </article>
   <article mdate="2018-08-13" key="journals/corr/abs-1708-04381" publtype="informal">
     <author>Funda Ergün</author>
     <author>Elena Grigorescu</author>
@@ -20169,6 +22624,15 @@
     <journal>CoRR</journal>
     <ee type="oa">https://arxiv.org/abs/2004.05309</ee>
     <url>db/journals/corr/corr2004.html#abs-2004-05309</url>
+  </article>
+  <article mdate="2018-08-13" key="journals/corr/Smith16b" publtype="informal">
+    <author>Samuel L. Smith</author>
+    <title>Monte Carlo Sort for unreliable human comparisons.</title>
+    <year>2016</year>
+    <volume>abs/1612.08555</volume>
+    <journal>CoRR</journal>
+    <ee type="oa">http://arxiv.org/abs/1612.08555</ee>
+    <url>db/journals/corr/corr1612.html#Smith16b</url>
   </article>
   <article mdate="2019-08-15" key="journals/corr/abs-1804-10186" publtype="informal">
     <author>Bartlomiej Dudek 0001</author>
@@ -22205,6 +24669,19 @@
     <ee>https://doi.org/10.1016/j.ic.2019.01.006</ee>
     <url>db/journals/iandc/iandc265.html#FerradaN19</url>
   </article>
+  <article mdate="2023-03-28" key="journals/iandc/AkagiFI23">
+    <author>Tooru Akagi</author>
+    <author>Mitsuru Funakoshi</author>
+    <author orcid="0000-0002-1833-010X">Shunsuke Inenaga</author>
+    <title>Sensitivity of string compressors and repetitiveness measures.</title>
+    <pages>104999</pages>
+    <year>2023</year>
+    <month>March</month>
+    <volume>291</volume>
+    <journal>Inf. Comput.</journal>
+    <ee>https://doi.org/10.1016/j.ic.2022.104999</ee>
+    <url>db/journals/iandc/iandc291.html#AkagiFI23</url>
+  </article>
   <article mdate="2021-02-12" key="journals/iandc/FerraginaGM09">
     <author orcid="0000-0003-1353-360X">Paolo Ferragina</author>
     <author>Raffaele Giancarlo</author>
@@ -22687,6 +25164,22 @@
     <url>db/journals/jal/jal13.html#MunroR92</url>
     <ee>https://doi.org/10.1016/0196-6774(92)90045-E</ee>
   </article>
+  <article mdate="2021-04-09" key="journals/jal/BenderFPSS05">
+    <author>Michael A. Bender</author>
+    <author orcid="0000-0003-3616-7788">Martin Farach-Colton</author>
+    <author>Giridhar Pemmasani</author>
+    <author>Steven Skiena</author>
+    <author>Pavel Sumazin</author>
+    <title>Lowest common ancestors in trees and directed acyclic graphs.</title>
+    <pages>75-94</pages>
+    <year>2005</year>
+    <volume>57</volume>
+    <journal>J. Algorithms</journal>
+    <number>2</number>
+    <ee>https://doi.org/10.1016/j.jalgor.2005.08.001</ee>
+    <ee>https://www.wikidata.org/entity/Q29541159</ee>
+    <url>db/journals/jal/jal57.html#BenderFPSS05</url>
+  </article>
   <article mdate="2017-05-28" key="journals/jal/MakinenNU05">
     <author>Veli Mäkinen</author>
     <author>Gonzalo Navarro</author>
@@ -22884,6 +25377,20 @@
     <number>5</number>
     <ee>https://doi.org/10.1137/17M1121457</ee>
     <url>db/journals/siamcomp/siamcomp48.html#FarruggiaFFV19</url>
+  </article>
+  <article mdate="2021-04-09" key="journals/siamcomp/BenderDF05">
+    <author>Michael A. Bender</author>
+    <author>Erik D. Demaine</author>
+    <author orcid="0000-0003-3616-7788">Martin Farach-Colton</author>
+    <title>Cache-Oblivious B-Trees.</title>
+    <pages>341-358</pages>
+    <year>2005</year>
+    <volume>35</volume>
+    <journal>SIAM J. Comput.</journal>
+    <number>2</number>
+    <ee>https://doi.org/10.1137/S0097539701389956</ee>
+    <ee>https://www.wikidata.org/entity/Q59831031</ee>
+    <url>db/journals/siamcomp/siamcomp35.html#BenderDF05</url>
   </article>
   <article mdate="2017-05-27" key="journals/siamcomp/GonnetMS81">
     <author>Gaston H. Gonnet</author>
@@ -37480,6 +39987,19 @@
     <ee>https://doi.org/10.1109/SFCS.1976.26</ee>
     <ee>https://doi.ieeecomputersociety.org/10.1109/SFCS.1976.26</ee>
   </inproceedings>
+  <inproceedings mdate="2023-03-23" key="conf/focs/BenderDF00">
+    <author>Michael A. Bender</author>
+    <author>Erik D. Demaine</author>
+    <author orcid="0000-0003-3616-7788">Martin Farach-Colton</author>
+    <title>Cache-Oblivious B-Trees.</title>
+    <pages>399-409</pages>
+    <year>2000</year>
+    <crossref>conf/focs/2000</crossref>
+    <booktitle>FOCS</booktitle>
+    <url>db/conf/focs/focs2000.html#BenderDF00</url>
+    <ee>https://doi.org/10.1109/SFCS.2000.892128</ee>
+    <ee>https://doi.ieeecomputersociety.org/10.1109/SFCS.2000.892128</ee>
+  </inproceedings>
   <inproceedings mdate="2023-03-23" key="conf/focs/FichMP90">
     <title>Permuting</title>
     <author>Faith E. Fich</author>
@@ -38464,6 +40984,20 @@
     <ee>https://doi.org/10.1007/978-3-662-48350-3_13</ee>
     <crossref>conf/esa/2015</crossref>
     <url>db/conf/esa/esa2015.html#BelazzouguiCPT15</url>
+  </inproceedings>
+  <inproceedings mdate="2021-04-09" key="conf/esa/BenderCDFZ02">
+    <author>Michael A. Bender</author>
+    <author>Richard Cole 0001</author>
+    <author>Erik D. Demaine</author>
+    <author orcid="0000-0003-3616-7788">Martin Farach-Colton</author>
+    <author>Jack Zito</author>
+    <title>Two Simplified Algorithms for Maintaining Order in a List.</title>
+    <pages>152-164</pages>
+    <year>2002</year>
+    <crossref>conf/esa/2002</crossref>
+    <booktitle>ESA</booktitle>
+    <ee>https://doi.org/10.1007/3-540-45749-6_17</ee>
+    <url>db/conf/esa/esa2002.html#BenderCDFZ02</url>
   </inproceedings>
   <inproceedings mdate="2021-08-31" key="conf/esa/Ganardi21">
     <author>Moses Ganardi</author>
@@ -45670,6 +48204,18 @@
     <ee>https://doi.org/10.1007/978-3-642-31653-1_28</ee>
     <crossref>conf/dlt/2012</crossref>
     <url>db/conf/dlt/dlt2012.html#MasseGH12</url>
+  </inproceedings>
+  <inproceedings mdate="2021-04-09" key="conf/pods/BenderFK06">
+    <author>Michael A. Bender</author>
+    <author orcid="0000-0003-3616-7788">Martin Farach-Colton</author>
+    <author>Bradley C. Kuszmaul</author>
+    <title>Cache-oblivious string B-trees.</title>
+    <pages>233-242</pages>
+    <year>2006</year>
+    <crossref>conf/pods/2006</crossref>
+    <booktitle>PODS</booktitle>
+    <ee>https://doi.org/10.1145/1142351.1142385</ee>
+    <url>db/conf/pods/pods2006.html#BenderFK06</url>
   </inproceedings>
   <inproceedings mdate="2018-11-06" key="conf/pods/MunroP83">
     <crossref>conf/pods/83</crossref>
@@ -62313,6 +64859,29 @@
     <ee>https://doi.org/10.1007/978-3-031-20624-5_26</ee>
     <crossref>conf/latin/2022</crossref>
     <url>db/conf/latin/latin2022.html#RestivoRS22</url>
+  </inproceedings>
+  <inproceedings mdate="2021-04-09" key="conf/latin/BenderF02">
+    <author>Michael A. Bender</author>
+    <author orcid="0000-0003-3616-7788">Martin Farach-Colton</author>
+    <title>The Level Ancestor Problem Simplified.</title>
+    <pages>508-515</pages>
+    <year>2002</year>
+    <crossref>conf/latin/2002</crossref>
+    <booktitle>LATIN</booktitle>
+    <ee>https://doi.org/10.1007/3-540-45995-2_44</ee>
+    <url>db/conf/latin/latin2002.html#BenderF02</url>
+  </inproceedings>
+  <inproceedings mdate="2021-04-09" key="conf/latin/BenderF00">
+    <author>Michael A. Bender</author>
+    <author orcid="0000-0003-3616-7788">Martin Farach-Colton</author>
+    <title>The LCA Problem Revisited.</title>
+    <pages>88-94</pages>
+    <year>2000</year>
+    <crossref>conf/latin/2000</crossref>
+    <booktitle>LATIN</booktitle>
+    <url>db/conf/latin/latin2000.html#BenderF00</url>
+    <ee>https://doi.org/10.1007/10719839_9</ee>
+    <ee>https://www.wikidata.org/entity/Q29040766</ee>
   </inproceedings>
   <inproceedings mdate="2017-05-23" key="conf/latin/FredrikssonMN04">
     <author>Kimmo Fredriksson</author>

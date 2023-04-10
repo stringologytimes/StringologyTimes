@@ -60,7 +60,8 @@
   2. [Implicit B-Trees: New Results for the Dictionary Problem.](https://doi.org/10.1109/SFCS.2002.1181891)  
   
 ## [FOCS 2000](https://dblp.org/db/conf/focs/focs2000.html)
-  1. [Opportunistic Data Structures with Applications.](https://doi.org/10.1109/SFCS.2000.892127)  
+  1. [Cache-Oblivious B-Trees.](https://doi.org/10.1109/SFCS.2000.892128)  
+  2. [Opportunistic Data Structures with Applications.](https://doi.org/10.1109/SFCS.2000.892127)  
   
 ## [FOCS 1998](https://dblp.org/db/conf/focs/focs98.html)
   1. [Overcoming the Memory Bottleneck in Suffix Tree Construction.](https://doi.org/10.1109/SFCS.1998.743441)  
