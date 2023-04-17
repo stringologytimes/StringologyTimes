@@ -1,4 +1,8 @@
 # SIGIR for Stringologist
+## [SIGIR 2016](https://dblp.org/db/conf/sigir/sigir2016.html)
+  1. [Succinct Data Structures in Information Retrieval: Theory and Practice.](https://doi.org/10.1145/2911451.2914802)  
+  2. [Fast and Compact Hamming Distance Index.](https://doi.org/10.1145/2911451.2911523)  
+  
 ## [SIGIR 2013](https://dblp.org/db/conf/sigir/sigir2013.html)
   1. [Faster and smaller inverted indices with treaps.](https://doi.org/10.1145/2484028.2484088)  
   

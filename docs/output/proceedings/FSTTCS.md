@@ -2,6 +2,9 @@
 ## [FSTTCS 2020](https://dblp.org/db/conf/fsttcs/fsttcs2020.html)
   1. [String Indexing for Top-k Close Consecutive Occurrences.](https://doi.org/10.4230/LIPIcs.FSTTCS.2020.14)  
   
+## [FSTTCS 2018](https://dblp.org/db/conf/fsttcs/fsttcs2018.html)
+  1. [Sketching, Streaming, and Fine-Grained Complexity of (Weighted) LCS.](https://doi.org/10.4230/LIPIcs.FSTTCS.2018.40)  
+  
 ## [FSTTCS 2016](https://dblp.org/db/conf/fsttcs/fsttcs2016.html)
   1. [LZ77 Factorisation of Trees.](https://doi.org/10.4230/LIPIcs.FSTTCS.2016.35)  
   2. [Finger Search in Grammar-Compressed Strings.](https://doi.org/10.4230/LIPIcs.FSTTCS.2016.36)  

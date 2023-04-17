@@ -10,7 +10,9 @@
   2. [Probabilistic vs Deterministic Gamblers.](https://doi.org/10.4230/LIPIcs.STACS.2022.11)  
   
 ## [STACS 2021](https://dblp.org/db/conf/stacs/stacs2021.html)
-  1. [Finding an Optimal Alphabet Ordering for Lyndon Factorization Is Hard.](https://doi.org/10.4230/LIPIcs.STACS.2021.35)  
+  1. [Efficiently Testing Simon's Congruence.](https://doi.org/10.4230/LIPIcs.STACS.2021.34)  
+  2. [Finding an Optimal Alphabet Ordering for Lyndon Factorization Is Hard.](https://doi.org/10.4230/LIPIcs.STACS.2021.35)  
+  3. [The Edit Distance to k-Subsequence Universality.](https://doi.org/10.4230/LIPIcs.STACS.2021.25)  
   
 ## [STACS 2020](https://dblp.org/db/conf/stacs/stacs2020.html)
   1. [Non-Rectangular Convolutions and (Sub-)Cadences with Three Elements.](https://doi.org/10.4230/LIPIcs.STACS.2020.30)  

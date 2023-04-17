@@ -78,4 +78,5 @@
   
 ## [SEA 2009](https://dblp.org/db/conf/wea/sea2009.html)
   1. [An Application of Self-organizing Data Structures to Compression.](https://doi.org/10.1007/978-3-642-02011-7_14)  
+  2. [Broadword Computing and Fibonacci Code Speed Up Compressed Suffix Arrays.](https://doi.org/10.1007/978-3-642-02011-7_16)  
   

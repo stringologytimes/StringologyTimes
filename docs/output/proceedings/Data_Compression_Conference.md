@@ -15,7 +15,17 @@
   1. [A New Compression Method for Compressed Matching.](https://doi.org/10.1109/DCC.2000.838180)  
   2. [Implementing the Context Tree Weighting Method for Text Compression.](https://doi.org/10.1109/DCC.2000.838152)  
   
+## [Data Compression Conference 1999](https://dblp.org/db/conf/dcc/dcc99.html)
+  1. [A Modified Burrows-Wheeler Transformation for Case-Insensitive Search with Application to Suffix Array Compression.](https://doi.org/10.1109/DCC.1999.785705)  
+  2. [Offline Dictionary-Based Compression.](https://doi.org/10.1109/DCC.1999.755679)  
+  
 ## [Data Compression Conference 1998](https://dblp.org/db/conf/dcc/dcc98.html)
   1. [Some Theory and Practice of Greedy Off-Line Textual Substitution.](https://doi.org/10.1109/DCC.1998.672138)  
   2. [Multiple Pattern Matching in LZW Compressed Text.](https://doi.org/10.1109/DCC.1998.672136)  
+  3. [On Optimality of Varients of the Block Sorting Compression.](https://doi.org/10.1109/DCC.1998.672312)  
+  4. [The Context Trees of Block Sorting Compression.](https://doi.org/10.1109/DCC.1998.672147)  
+  5. [A Fast Algorithms for Making Suffix Arrays and for Burrows-Wheeler Transformation.](https://doi.org/10.1109/DCC.1998.672139)  
+  
+## [Data Compression Conference 1996](https://dblp.org/db/conf/dcc/dcc96.html)
+  1. [Extended Application of Suffix Trees to Data Compression.](https://doi.org/10.1109/DCC.1996.488324)  
   

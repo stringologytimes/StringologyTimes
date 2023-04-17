@@ -17,3 +17,6 @@
 ## [Discovery Science 2001](https://dblp.org/db/conf/dis/dis2001.html)
   1. [A Practical Algorithm to Find the Best Episode Patterns.](https://doi.org/10.1007/3-540-45650-3_37)  
   
+## [Discovery Science 2000](https://dblp.org/db/conf/dis/dis2000.html)
+  1. [A Practical Algorithm to Find the Best Subsequence Patterns.](https://doi.org/10.1007/3-540-44418-1_12)  
+  

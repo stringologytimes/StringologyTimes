@@ -7,6 +7,9 @@
   1. [Weighted Prefix Normal Words: Mind the Gap.](https://doi.org/10.1007/978-3-030-81508-0_12)  
   2. [Upper Bounds on Distinct Maximal (Sub-)Repetitions in Compressed Strings.](https://doi.org/10.1007/978-3-030-81508-0_26)  
   
+## [DLT 2020](https://dblp.org/db/conf/dlt/dlt2020.html)
+  1. [Scattered Factor-Universality of Words.](https://doi.org/10.1007/978-3-030-48516-0_2)  
+  
 ## [DLT 2019](https://dblp.org/db/conf/dlt/dlt2019.html)
   1. [Separating Many Words by Counting Occurrences of Factors.](https://doi.org/10.1007/978-3-030-24886-4_19)  
   2. [On Palindromic Length of Sturmian Sequences.](https://doi.org/10.1007/978-3-030-24886-4_18)  
