@@ -157,7 +157,7 @@ function write_weekly_arxiv_list_sub(list : WeekArticleList, outputFolderPath: s
     try {
         const mdPath = `${outputFolderPath}/${list.getHashKey()}.md`;
         fs.writeFileSync(mdPath, page );
-        console.log(`Outputted ${mdPath}`);
+        console.log(`Outputted weekly_arxiv_list: ${mdPath}`);
 
     } catch (e) {
         console.log(e);
@@ -175,7 +175,8 @@ function write_weekly_arxiv_list(superList : WeekArticleSuperList, outputFolderP
     for(let y = superList.lists.length - 1; y >= 0;y--){
         const yearList = superList.lists[y];
         lines.push(`## ${yearList.year}  `);
-        yearList.lists.forEach((monthList) =>{            
+        yearList.lists.forEach((monthList) =>{    
+                    
             monthList.lists.forEach((weekList) =>{
                 const monthStr = monthList.month < 10 ? `0${monthList.month}` : `${monthList.month}`;
                 let str = "";
@@ -197,7 +198,7 @@ function write_weekly_arxiv_list(superList : WeekArticleSuperList, outputFolderP
     try {
         const mdPath = `${toppagePath}`;
         fs.writeFileSync(mdPath, page);
-        console.log(`Outputted ${mdPath}`);
+        console.log(`Outputted weekly arxiv top: ${mdPath}`);
 
     } catch (e) {
         console.log(e);
