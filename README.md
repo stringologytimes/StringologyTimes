@@ -25,13 +25,86 @@
 
 ![paper_statistics_for_each_year](https://stringologytimes.github.io/StringologyTimes/docs/output/paper_statistics_for_each_year.png)
 
-![checker_table_2029_2020](https://stringologytimes.github.io/StringologyTimes/docs/output/checker_table_2029_2020.png)  
-![checker_table_2019_2010](https://stringologytimes.github.io/StringologyTimes/docs/output/checker_table_2019_2010.png)  
+| |2020|2021|2022|2023|2024|
+|:----|:----|:----|:----|:----|:----|
+|ALENEX|4|2|0|5| |
+|COCOON|0|0|0|8/15| |
+|CPM|30|26|30|26| |
+|DCC|15|19|20|16| |
+|DLT|0|2|2|1| |
+|ESA|7|9|8|6/23| |
+|FOCS|6|2|6|..| |
+|ICALP|2|12|6|..| |
+|ISAAC|8|6|5|9/4| |
+|IWOCA|1|1|5|0| |
+|LATA|2|2|?| | |
+|LATIN|4|-|5| | |
+|MFCS|4|1|2|..| |
+|SEA|5|2|2|..| |
+|SODA|7|7|12|10| |
+|SOFSEM|4|3|-|2| |
+|SOSA|1|2|2|3| |
+|SPIRE|21|20|23|7/10| |
+|STACS|5|1|2|4| |
+|STOC|5|2|5|4| |
+|SWAT|1|-|2| | |
+|Stringology|14|8|-|..| |
+|WABI|1|2|9| | |
+|WALCOM|4|0|0|6| |
+
+
+
+| |2010|2011|2012|2013|2014|2015|2016|2017|2018|2019|
+|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
+|ALENEX|1|4|4|3|2|3|1|5|3|1|
+|COCOON| | | | | | | | | | |
+|CPM|31|39|35|24|28|34|30|32|25|33|
+|DCC|18|16|9|19|22|21|26|16|21|22|
+|DLT|0|4|3|4|2|6|1|1|2|7|
+|ESA|7|3|4|8|7|4|3|6|8|4|
+|FOCS|1|0|1|0|2|3|1|0|3|5|
+|ICALP|3|1|4|4|2|3|3|2|1|2|
+|ISAAC|7|12|6|9|4|5|4|5|5|4|
+|IWOCA|5|5|5|5|3|3|3|4|3|3|
+|LATA|7|2|2|2|0|11|2|3|2|7|
+|LATIN|5|-|2|-|3|-|6|-|3|-|
+|MFCS|1|4|4|1|3|3|4|3|2|7|
+|SEA|3|4|5|2|11|4|6|7|2|-|
+|SODA|11|6|5|7|5|6|3|4|9|8|
+|SOFSEM|4|2|1|1|1|0|2|3|3|1|
+|SOSA|-|-|-|-|-|-|-|-|1|0|
+|SPIRE|41|41|42|32|26|34|25|26|28|36|
+|STACS|1|1|2|4|5|3|3|2|9|3|
+|STOC|0|1|2|0|2|1|1|1|4|3|
+|SWAT|1|-|4|-|4|-|4|-|1|-|
+|Stringology|17|20|11|17|19|13|15|14|11|12|
+|WABI|1|0|4|3|2|3|3|2|8|1|
+|WALCOM|0|2|1|0|1|2|0|1|1|1|
+
 
 
 ## Recent accepted papers for stringologist
 
-### 2022/03/27 [SEA 2023](https://cpm2023.u-pem.fr/accepted.html)
+### 2023/07/10 [FOCS 2023](https://web.cs.ucla.edu/~sahai/focs2023/FOCS-2023-Accepted-Papers.htm)
+1. Tight Cell-Probe Lower Bounds for Dynamic Succinct Dictionaries  
+Tianxiao Li and Jingxun Liang; Huacheng Yu; Renfei Zhou  
+2. Approximating Edit Distance in the Fully Dynamic Model  
+Tomasz Kociumaka; Anish Mukherjee; Barna Saha  
+3. Optimal Algorithms for Bounded Weighted Edit Distance  
+Alejandro Cassis; Tomasz Kociumaka and Philip Wellnitz  
+4. Dynamic ``Succincter''  
+Tianxiao Li and Jingxun Liang; Huacheng Yu; Renfei Zhou  
+
+
+### 2023/07/05 [PSC 2023](http://www.stringology.org/event/2023/index.html)
+See accepted papers.
+
+### 2023/04/28 [ICALP 2023](https://icalp2023.cs.upb.de/accepted-papers/)
+1. Convergence of the number of period sets in strings  
+Eric Rivals, Michelle Sweering and Pengfei Wang.  
+
+
+### 2023/03/27 [SEA 2023](https://cpm2023.u-pem.fr/accepted.html)
 1. Subset Wavelet Trees.  
 Jarno Alanko, Elena Biagi and Simon Puglisi.  
 2. Hierarchical Relative Lempel-Ziv Compression.  
@@ -40,44 +113,8 @@ Philip Bille, Inge Li Gørtz, Simon Puglisi and Simon Tarnow.
 Saska Dönges, Diego Díaz-Domínguez, Simon Puglisi and Leena Salmela.  
 
 
-### 2022/03/27 [CPM 2023](https://cpm2023.u-pem.fr/accepted.html)
-See the site.  
 
-### 2022/03/27 [IWOCA 2023](https://iwoca2023.csie.ncku.edu.tw/accepted-papers/)
-Probably, nothing.  
 
-### 2022/02/21 [STOC 2023](http://acm-stoc.org/stoc2023/accepted.html)
-1. Approximating binary longest common subsequence in almost-linear time  
-Xiaoyu He; Ray Li   
-2. External Memory Fully Persistent Search Trees  
-Gerth Stølting Brodal, Casper Moldrup Rysgaard, Rolf Svenning  
-3. Weighted Edit Distance Computation: Strings, Trees, and Dyck  
-Debarati Das; Jacob Gilbert, MohammadTaghi Hajiaghayi; Tomasz Kociumaka; Barna Saha  
-4. Locally consistent decomposition of strings with applications to edit distance sketching  
-Sudatta Bhattacharya, Michal Koucký  
-
-### 2022/02/21 [DCC 2023](https://www.cs.brandeis.edu/~dcc/Programs/Program2023.pdf)
-
-1. Recursive Prefix-Free Parsing for Building Big BWTs  
-Marco Oliva, Travis Gagie, and Christina Boucher  
-2. Computing the Optimal BWT of very Large String Collections  
-Davide Cenzato, Veronica Guerrini, Zsuzsanna Lipták, and Giovanna Rosone  
-3. Bit-Parallel (Compressed) Wavelet Tree Construction  
-Patrick Dinklage, Johannes Fischer, Florian Kurpicz, and Jan-Philipp Tarnowski  
-4. Computing Matching Statistics on Wheeler DFAs  
-Alessio Conte, Nicola Cotumaccio, Travis Gagie, Giovanni Manzini, Nicola Prezza, and Marinella Sciortino  
-5. Contextual Pattern Matching in Less Space  
-Paniz Abedin, Oliver Chubet, Daniel Gibney, and Sharma V. Thankachan, Florida Polytechnic  
-6. Practical Implementations of Compressed RAM  
-Seungbum Jo, Wooyoung Park, Kunihiko Sadakane, and Srinivasa Rao Satti  
-7. Constructing the CDAWG CFG Using LCP-Intervals  
-Alan Cleary and Jordan Dood  
-8. Augmented Thresholds for MONI  
-César Martínez-Guardiola, Nathaniel K. Brown, Fernando Silva-Coira, Dominik Köppl, Travis Gagie, and Susana Ladra  
-9. RNA Secondary Structures: From ab Initio Prediction to Better Compression, and Back  
-Evarista Onokpasa, Sebastian Wild, and Prudence W.H. Wong  
-10. JARVIS2: A Data Compressor for Large Genome Sequences  
-Diogo Pratas and Armando J. Pinho  
 
 
 
