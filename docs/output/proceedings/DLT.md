@@ -1,4 +1,7 @@
 # DLT for Stringologist
+## [DLT 2023](https://dblp.org/db/conf/dlt/dlt2023.html)
+  1. [Bit Catastrophes for the Burrows-Wheeler Transform.](https://doi.org/10.1007/978-3-031-33264-7_8)  
+  
 ## [DLT 2022](https://dblp.org/db/conf/dlt/dlt2022.html)
   1. [Logarithmic Equal-Letter Runs for BWT of Purely Morphic Words.](https://doi.org/10.1007/978-3-031-05578-2_11)  
   2. [Prefix Palindromic Length of the Sierpinski Word.](https://doi.org/10.1007/978-3-031-05578-2_6)  

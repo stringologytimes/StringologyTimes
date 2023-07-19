@@ -129,3 +129,6 @@
   10. [Randomized Shellsort: A Simple Oblivious Sorting Algorithm.](https://doi.org/10.1137/1.9781611973075.101)  
   11. [Regular Expression Matching with Multi-Strings and Intervals.](https://doi.org/10.1137/1.9781611973075.104)  
   
+## [SODA 2009](https://dblp.org/db/conf/soda/soda2009.html)
+  1. [Monotone minimal perfect hashing: searching a sorted table with O(1) accesses.](https://doi.org/10.1137/1.9781611973068.86)  
+  

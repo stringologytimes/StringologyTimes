@@ -1,4 +1,10 @@
 # STOC for Stringologist
+## [STOC 2023](https://dblp.org/db/conf/stoc/stoc2023.html)
+  1. [Locally Consistent Decomposition of Strings with Applications to Edit Distance Sketching.](https://doi.org/10.1145/3564246.3585239)  
+  2. [External Memory Fully Persistent Search Trees.](https://doi.org/10.1145/3564246.3585140)  
+  3. [Weighted Edit Distance Computation: Strings, Trees, and Dyck.](https://doi.org/10.1145/3564246.3585178)  
+  4. [Approximating Binary Longest Common Subsequence in Almost-Linear Time.](https://doi.org/10.1145/3564246.3585104)  
+  
 ## [STOC 2022](https://dblp.org/db/conf/stoc/stoc2022.html)
   1. [Almost-optimal sublinear-time edit distance in the low distance regime.](https://doi.org/10.1145/3519935.3519990)  
   2. [Dynamic suffix array with polylogarithmic queries and updates.](https://doi.org/10.1145/3519935.3520061)  
