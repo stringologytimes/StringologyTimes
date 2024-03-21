@@ -2888,6 +2888,23 @@
     <ee>https://doi.org/10.1016/j.tcs.2017.05.026</ee>
     <url>db/journals/tcs/tcs698.html#CrochemoreIKRRW17</url>
   </article>
+  <article mdate="2023-11-12" key="journals/tcs/AlzamelHILPVW23">
+    <author>Mai Alzamel</author>
+    <author>Christopher Hampson</author>
+    <author>Costas S. Iliopoulos</author>
+    <author orcid="0000-0001-6528-6060">Zara Lim</author>
+    <author orcid="0000-0002-1445-1932">Solon P. Pissis</author>
+    <author>Dimitrios Vlachakis</author>
+    <author>Steven Watts</author>
+    <title>Maximal degenerate palindromes with gaps and mismatches.</title>
+    <pages>114182</pages>
+    <year>2023</year>
+    <month>November</month>
+    <volume>978</volume>
+    <journal>Theor. Comput. Sci.</journal>
+    <ee type="oa">https://doi.org/10.1016/j.tcs.2023.114182</ee>
+    <url>db/journals/tcs/tcs978.html#AlzamelHILPVW23</url>
+  </article>
   <article mdate="2021-02-17" key="journals/tcs/PuglisiSS08">
     <author>Simon J. Puglisi</author>
     <author>Jamie Simpson</author>
@@ -4623,6 +4640,18 @@
     <ee type="oa">https://doi.org/10.3390/info7040063</ee>
     <url>db/journals/information/information7.html#MarumoYMS16</url>
   </article>
+  <article mdate="2023-03-21" key="journals/csr/FiciP23">
+    <author orcid="0000-0002-3536-327X">Gabriele Fici</author>
+    <author>Svetlana Puzynina</author>
+    <title>Abelian combinatorics on words: A survey.</title>
+    <pages>100532</pages>
+    <year>2023</year>
+    <month>February</month>
+    <volume>47</volume>
+    <journal>Comput. Sci. Rev.</journal>
+    <ee>https://doi.org/10.1016/j.cosrev.2022.100532</ee>
+    <url>db/journals/csr/csr47.html#FiciP23</url>
+  </article>
   <article mdate="2019-06-02" key="journals/jcss/BilleGCSVV17">
     <author orcid="0000-0002-1120-5154">Philip Bille</author>
     <author orcid="0000-0002-8322-4952">Inge Li Gørtz</author>
@@ -6049,6 +6078,23 @@
     <ee>https://doi.org/10.1093/bioinformatics/btp379</ee>
     <ee>https://www.wikidata.org/entity/Q33471253</ee>
     <url>db/journals/bioinformatics/bioinformatics25.html#SchroderSPSS09</url>
+  </article>
+  <article mdate="2024-03-15" key="journals/bioinformatics/CozziRRGKBB23">
+    <author>Davide Cozzi</author>
+    <author>Massimiliano Rossi 0001</author>
+    <author>Simone Rubinacci</author>
+    <author>Travis Gagie</author>
+    <author>Dominik Köppl</author>
+    <author>Christina Boucher</author>
+    <author>Paola Bonizzoni</author>
+    <title>μ- PBWT: a lightweight r-indexing of the PBWT for storing and querying UK Biobank data.</title>
+    <year>2023</year>
+    <month>September</month>
+    <volume>39</volume>
+    <journal>Bioinform.</journal>
+    <number>9</number>
+    <ee>https://doi.org/10.1093/bioinformatics/btad552</ee>
+    <url>db/journals/bioinformatics/bioinformatics39.html#CozziRRGKBB23</url>
   </article>
   <article mdate="2020-03-02" key="journals/bioinformatics/GogBO08">
     <author>Simon Gog</author>
@@ -26411,6 +26457,20 @@
     <ee>https://doi.org/10.1016/j.is.2017.05.003</ee>
     <url>db/journals/is/is69.html#BrisaboaCBN17</url>
   </article>
+  <article mdate="2024-01-13" key="journals/is/BoffaFTV24">
+    <author orcid="0000-0002-8178-135X">Antonio Boffa</author>
+    <author orcid="0000-0003-1353-360X">Paolo Ferragina</author>
+    <author orcid="0000-0001-8457-3866">Francesco Tosoni 0001</author>
+    <author orcid="0000-0003-0328-7791">Giorgio Vinciguerra</author>
+    <title>CoCo-trie: Data-aware compression and indexing of strings.</title>
+    <pages>102316</pages>
+    <year>2024</year>
+    <month>February</month>
+    <volume>120</volume>
+    <journal>Inf. Syst.</journal>
+    <ee>https://doi.org/10.1016/j.is.2023.102316</ee>
+    <url>db/journals/is/is120.html#BoffaFTV24</url>
+  </article>
   <article mdate="2024-02-28" key="journals/is/BrisaboaBKNS16">
     <author orcid="0000-0001-8025-3048">Nieves R. Brisaboa</author>
     <author orcid="0000-0002-6020-7092">Guillermo de Bernardo</author>
@@ -28128,6 +28188,21 @@
     <number>1</number>
     <ee>https://doi.org/10.1137/140998949</ee>
     <url>db/journals/siamcomp/siamcomp46.html#NavarroN17</url>
+  </article>
+  <article mdate="2024-03-16" key="journals/vldb/ArroyueloGH0R24">
+    <author>Diego Arroyuelo</author>
+    <author>Adrián Gómez-Brandón</author>
+    <author orcid="0000-0001-9482-1982">Aidan Hogan</author>
+    <author>Gonzalo Navarro 0001</author>
+    <author>Javiel Rojas-Ledesma</author>
+    <title>Optimizing RPQs over a compact graph representation.</title>
+    <pages>349-374</pages>
+    <year>2024</year>
+    <volume>33</volume>
+    <journal>VLDB J.</journal>
+    <number>2</number>
+    <ee>https://doi.org/10.1007/s00778-023-00811-2</ee>
+    <url>db/journals/vldb/vldb33.html#ArroyueloGH0R24</url>
   </article>
   <incollection mdate="2023-03-21" key="books/sp/22/BingmannD0KO022">
     <author>Timo Bingmann</author>
@@ -49105,6 +49180,17 @@
     <crossref>conf/stringology/2011</crossref>
     <url>db/conf/stringology/stringology2011.html#Berglund11</url>
   </inproceedings>
+  <proceedings mdate="2024-01-31" key="conf/stringology/2023">
+    <editor>Jan Holub 0001</editor>
+    <editor>Jan Zdárek</editor>
+    <title>Prague Stringology Conference 2023, Prague, Czech Republic, August 28-29, 2023.</title>
+    <booktitle>PSC</booktitle>
+    <publisher>Czech Technical University in Prague, Faculty of Information Technology, Department of Theoretical Computer Science</publisher>
+    <year>2023</year>
+    <isbn>978-80-01-07206-6</isbn>
+    <ee type="oa">http://www.stringology.org/event/2023/index.html</ee>
+    <url>db/conf/stringology/stringology2023.html</url>
+  </proceedings>
   <inproceedings mdate="2021-02-10" key="conf/stringology/FranekLS00">
     <author>Frantisek Franek</author>
     <author>Weilin Lu</author>
@@ -55562,6 +55648,18 @@
     <ee>https://doi.org/10.1007/3-540-39945-3_2</ee>
     <url>db/conf/raid/raid2000.html#KuriNMH00</url>
   </inproceedings>
+  <inproceedings mdate="2023-10-27" key="conf/isbra/SalgadoFF23">
+    <author orcid="0000-0002-2940-0767">André Salgado</author>
+    <author orcid="0000-0003-2546-2669">Francisco Fernandes</author>
+    <author orcid="0000-0002-2997-5990">Ana Teresa Freitas</author>
+    <title>CSA-MEM: Enhancing Circular DNA Multiple Alignment Through Text Indexing Algorithms.</title>
+    <pages>509-517</pages>
+    <year>2023</year>
+    <booktitle>ISBRA</booktitle>
+    <ee>https://doi.org/10.1007/978-981-99-7074-2_41</ee>
+    <crossref>conf/isbra/2023</crossref>
+    <url>db/conf/isbra/isbra2023.html#SalgadoFF23</url>
+  </inproceedings>
   <inproceedings mdate="2023-01-09" key="conf/isbra/MwanikiP22">
     <author>Njagi Moses Mwaniki</author>
     <author>Nadia Pisanti</author>
@@ -58108,6 +58206,28 @@
     <ee>https://doi.org/10.1007/978-3-319-48749-6_40</ee>
     <crossref>conf/cocoa/2016</crossref>
     <url>db/conf/cocoa/cocoa2016.html#BartonLP16</url>
+  </inproceedings>
+  <inproceedings mdate="2024-01-13" key="conf/cocoa/Tronicek23">
+    <author orcid="0000-0002-2737-1317">Zdenek Tronícek</author>
+    <title>On Problems Related to Absent Subsequences.</title>
+    <pages>351-363</pages>
+    <year>2023</year>
+    <booktitle>COCOA (2)</booktitle>
+    <ee>https://doi.org/10.1007/978-3-031-49614-1_26</ee>
+    <crossref>conf/cocoa/2023-2</crossref>
+    <url>db/conf/cocoa/cocoa2023-2.html#Tronicek23</url>
+  </inproceedings>
+  <inproceedings mdate="2024-01-04" key="conf/cocoa/DaykinMS23">
+    <author>Jacqueline W. Daykin</author>
+    <author>Neerja Mhaskar</author>
+    <author>W. F. Smyth</author>
+    <title>V-Words, Lyndon Words and Substring circ-UMFFs.</title>
+    <pages>471-484</pages>
+    <year>2023</year>
+    <booktitle>COCOA (1)</booktitle>
+    <ee>https://doi.org/10.1007/978-3-031-49611-0_34</ee>
+    <crossref>conf/cocoa/2023-1</crossref>
+    <url>db/conf/cocoa/cocoa2023-1.html#DaykinMS23</url>
   </inproceedings>
   <inproceedings mdate="2021-12-25" key="conf/cocoa/ChakrabortyJSS21">
     <author orcid="0000-0002-2395-4160">Sankardeep Chakraborty</author>
@@ -69828,6 +69948,18 @@
     <ee>https://doi.org/10.1007/978-3-319-11988-5_9</ee>
     <crossref>conf/sisap/2014</crossref>
     <url>db/conf/sisap/sisap2014.html#NavarroR14</url>
+  </inproceedings>
+  <inproceedings mdate="2023-11-09" key="conf/sisap/MarcusSZ23">
+    <author>Shoshana Marcus</author>
+    <author orcid="0000-0003-2478-2636">Dina Sokol</author>
+    <author>Sarah Zelikovitz</author>
+    <title>Runs of Side-Sharing Tandems in Rectangular Arrays.</title>
+    <pages>88-102</pages>
+    <year>2023</year>
+    <booktitle>SISAP</booktitle>
+    <ee>https://doi.org/10.1007/978-3-031-46994-7_8</ee>
+    <crossref>conf/sisap/2023</crossref>
+    <url>db/conf/sisap/sisap2023.html#MarcusSZ23</url>
   </inproceedings>
   <inproceedings mdate="2023-09-30" key="conf/bcb/FlouriPFPIT11">
     <author orcid="0000-0002-8474-9507">Tomás Flouri</author>

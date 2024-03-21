@@ -4,13 +4,19 @@
 - [CALDAM(2024)](#caldam-2024) [[dblp]](https://dblp.org/db/conf/caldam/caldam2024.html)  
   
 - [Algorithms(2024)](#algorithms-2024) [[dblp]](https://dblp.org/db/journals/algorithms/algorithms17.html)  
+- [Inf. Syst.(2024)](#inf-syst-2024) [[dblp]](https://dblp.org/db/journals/is/is120.html)  
+- [VLDB J.(2024)](#vldb-j-2024) [[dblp]](https://dblp.org/db/journals/vldb/vldb33.html)  
   
   
 - [ALENEX(2023)](#alenex-2023) [[dblp]](https://dblp.org/db/conf/alenex/alenex2023.html)  
+- [COCOA (1)(2023)](#cocoa-(1)-2023) [[dblp]](https://dblp.org/db/conf/cocoa/cocoa2023-1.html)  
+- [COCOA (2)(2023)](#cocoa-(2)-2023) [[dblp]](https://dblp.org/db/conf/cocoa/cocoa2023-2.html)  
 - [CPM(2023)](#cpm-2023) [[dblp]](https://dblp.org/db/conf/cpm/cpm2023.html)  
 - [DCC(2023)](#dcc-2023) [[dblp]](https://dblp.org/db/conf/dcc/dcc2023.html)  
 - [DLT(2023)](#dlt-2023) [[dblp]](https://dblp.org/db/conf/dlt/dlt2023.html)  
+- [ISBRA(2023)](#isbra-2023) [[dblp]](https://dblp.org/db/conf/isbra/isbra2023.html)  
 - [ITCS(2023)](#itcs-2023) [[dblp]](https://dblp.org/db/conf/innovations/innovations2023.html)  
+- [SISAP(2023)](#sisap-2023) [[dblp]](https://dblp.org/db/conf/sisap/sisap2023.html)  
 - [SODA(2023)](#soda-2023) [[dblp]](https://dblp.org/db/conf/soda/soda2023.html)  
 - [SOFSEM(2023)](#sofsem-2023) [[dblp]](https://dblp.org/db/conf/sofsem/sofsem2023.html)  
 - [SOSA(2023)](#sosa-2023) [[dblp]](https://dblp.org/db/conf/sosa/sosa2023.html)  
@@ -22,6 +28,8 @@
   
 - [ACM Trans. Algorithms(2023)](#acm-trans-algorithms-2023) [[dblp]](https://dblp.org/db/journals/talg/talg19.html)  
 - [Algorithmica(2023)](#algorithmica-2023) [[dblp]](https://dblp.org/db/journals/algorithmica/algorithmica85.html)  
+- [Bioinform.(2023)](#bioinform-2023) [[dblp]](https://dblp.org/db/journals/bioinformatics/bioinformatics39.html)  
+- [Comput. Sci. Rev.(2023)](#comput-sci-rev-2023) [[dblp]](https://dblp.org/db/journals/csr/csr47.html)  
 - [IEEE Trans. Commun.(2023)](#ieee-trans-commun-2023) [[dblp]](https://dblp.org/db/journals/tcom/tcom71.html)  
 - [IEEE Trans. Inf. Theory(2023)](#ieee-trans-inf-theory-2023) [[dblp]](https://dblp.org/db/journals/tit/tit69.html)  
 - [IEEE Trans. Knowl. Data Eng.(2023)](#ieee-trans-knowl-data-eng-2023) [[dblp]](https://dblp.org/db/journals/tkde/tkde35.html)  
@@ -30,7 +38,7 @@
 - [Int. J. Comput. Geom. Appl.(2023)](#int-j-comput-geom-appl-2023) [[dblp]](https://dblp.org/db/journals/ijcga/ijcga33.html)  
 - [J. Comput. Biol.(2023)](#j-comput-biol-2023) [[dblp]](https://dblp.org/db/journals/jcb/jcb30.html)  
 - [Multim. Tools Appl.(2023)](#multim-tools-appl-2023) [[dblp]](https://dblp.org/db/journals/mta/mta82.html)  
-- [Theor. Comput. Sci.(2023)](#theor-comput-sci-2023) [[dblp]](https://dblp.org/db/journals/tcs/tcs946.html)  
+- [Theor. Comput. Sci.(2023)](#theor-comput-sci-2023) [[dblp]](https://dblp.org/db/journals/tcs/tcs978.html)  
   
   
 - [CPM(2022)](#cpm-2022) [[dblp]](https://dblp.org/db/conf/cpm/cpm2022.html)  
@@ -1125,12 +1133,26 @@
 #### Algorithms 2024  
   1. [Computing RF Tree Distance over Succinct Representations.](https://doi.org/10.3390/a17010015)  
   
+#### Inf. Syst. 2024  
+  1. [CoCo-trie: Data-aware compression and indexing of strings.](https://doi.org/10.1016/j.is.2023.102316)  
+  
+#### VLDB J. 2024  
+  1. [Optimizing RPQs over a compact graph representation.](https://doi.org/10.1007/s00778-023-00811-2)  
+  
 #### [ALENEX 2023](https://dblp.org/db/conf/alenex/alenex2023.html)
   1. [LZ77 via Prefix-Free Parsing.](https://doi.org/10.1137/1.9781611977561.ch11)  
   2. [Lower Bounds for Sorting 16, 17, and 18 Elements.](https://doi.org/10.1137/1.9781611977561.ch17)  
   3. [Multiway Powersort.](https://doi.org/10.1137/1.9781611977561.ch16)  
   4. [PaCHash: Packed and Compressed Hash Tables.](https://doi.org/10.1137/1.9781611977561.ch14)  
   5. [SicHash - Small Irregular Cuckoo Tables for Perfect Hashing.](https://doi.org/10.1137/1.9781611977561.ch15)  
+  
+  
+#### [COCOA (1) 2023](https://dblp.org/db/conf/cocoa/cocoa2023-1.html)
+  1. [V-Words, Lyndon Words and Substring circ-UMFFs.](https://doi.org/10.1007/978-3-031-49611-0_34)  
+  
+  
+#### [COCOA (2) 2023](https://dblp.org/db/conf/cocoa/cocoa2023-2.html)
+  1. [On Problems Related to Absent Subsequences.](https://doi.org/10.1007/978-3-031-49614-1_26)  
   
   
 #### [CPM 2023](https://dblp.org/db/conf/cpm/cpm2023.html)
@@ -1186,8 +1208,16 @@
   1. [Bit Catastrophes for the Burrows-Wheeler Transform.](https://doi.org/10.1007/978-3-031-33264-7_8)  
   
   
+#### [ISBRA 2023](https://dblp.org/db/conf/isbra/isbra2023.html)
+  1. [CSA-MEM: Enhancing Circular DNA Multiple Alignment Through Text Indexing Algorithms.](https://doi.org/10.1007/978-981-99-7074-2_41)  
+  
+  
 #### [ITCS 2023](https://dblp.org/db/conf/innovations/innovations2023.html)
   1. [An Algorithmic Bridge Between Hamming and Levenshtein Distances.](https://doi.org/10.4230/LIPIcs.ITCS.2023.58)  
+  
+  
+#### [SISAP 2023](https://dblp.org/db/conf/sisap/sisap2023.html)
+  1. [Runs of Side-Sharing Tandems in Rectangular Arrays.](https://doi.org/10.1007/978-3-031-46994-7_8)  
   
   
 #### [SODA 2023](https://dblp.org/db/conf/soda/soda2023.html)
@@ -1283,6 +1313,12 @@
 #### Algorithmica 2023  
   1. [Fast Exact Dynamic Time Warping on Run-Length Encoded Time Series.](https://doi.org/10.1007/s00453-022-01038-3)  
   
+#### Bioinform. 2023  
+  1. [μ- PBWT: a lightweight r-indexing of the PBWT for storing and querying UK Biobank data.](https://doi.org/10.1093/bioinformatics/btad552)  
+  
+#### Comput. Sci. Rev. 2023  
+  1. [Abelian combinatorics on words: A survey.](https://doi.org/10.1016/j.cosrev.2022.100532)  
+  
 #### IEEE Trans. Commun. 2023  
   1. [Reconstruction of Sets of Strings From Prefix/Suffix Compositions.](https://doi.org/10.1109/TCOMM.2022.3222341)  
   
@@ -1314,6 +1350,7 @@
   1. [Compact suffix automata representations for searching long patterns.](https://doi.org/10.1016/j.tcs.2022.11.005)  
   2. [Improved characters distance sampling for online and offline text searching.](https://doi.org/10.1016/j.tcs.2022.12.034)  
   3. [Linear-space S-table algorithms for the longest common subsequence problem.](https://doi.org/10.1016/j.tcs.2023.113944)  
+  4. [Maximal degenerate palindromes with gaps and mismatches.](https://doi.org/10.1016/j.tcs.2023.114182)  
   
 #### [CPM 2022](https://dblp.org/db/conf/cpm/cpm2022.html)
   1. [A Theoretical and Experimental Analysis of BWT Variants for String Collections.](https://doi.org/10.4230/LIPIcs.CPM.2022.25)  

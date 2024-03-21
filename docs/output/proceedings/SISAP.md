@@ -1,4 +1,7 @@
 # SISAP for Stringologist
+## [SISAP 2023](https://dblp.org/db/conf/sisap/sisap2023.html)
+  1. [Runs of Side-Sharing Tandems in Rectangular Arrays.](https://doi.org/10.1007/978-3-031-46994-7_8)  
+  
 ## [SISAP 2018](https://dblp.org/db/conf/sisap/sisap2018.html)
   1. [Privacy-Preserving String Edit Distance with Moves.](https://doi.org/10.1007/978-3-030-02224-2_18)  
   

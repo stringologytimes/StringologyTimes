@@ -10,7 +10,7 @@ const dblpElements = DBLPElement.parseFromXML(doc);
 const arxivArticles = ArxivArticle.loadArxivArticles("data/arxiv.xml");
 
 const yearList : number[] = [];
-for(let i= 2010;i<=2023;i++){
+for(let i= 2010;i<=2024;i++){
     yearList.push(i);
 }
 

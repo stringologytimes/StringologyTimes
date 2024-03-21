@@ -79,7 +79,9 @@ export function load_arxiv_ids(urlPath : string){
             const pindex = subs.indexOf("abs");
             if(pindex != -1){
                 const id = subs.slice(pindex+1).join("/");
-                id_arr.push(id);
+                if(id.indexOf(")") == -1){
+                    id_arr.push(id);
+                }
 
             }
             //const id: string = subs[subs.length - 1];
