@@ -104,7 +104,7 @@ class WeekArticleSuperList {
     public static build(articles: ArxivSimpleArticle[]) : WeekArticleSuperList{
         const r = new WeekArticleSuperList();
         //const map: Map<string, WeekArticleList> = new Map();
-        let minYear = 2022;
+        let minYear = 2023;
         let minMonth = 12;
         let maxYear = 0;
         let maxMonth = 0;

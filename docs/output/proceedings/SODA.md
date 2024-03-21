@@ -68,9 +68,10 @@
   
 ## [SODA 2017](https://dblp.org/db/conf/soda/soda2017.html)
   1. [pBWT: Achieving Succinct Data Structures for Parameterized Pattern Matching and Related Problems.](https://doi.org/10.1137/1.9781611974782.25)  
-  2. [Hardness of Permutation Pattern Matching.](https://doi.org/10.1137/1.9781611974782.24)  
-  3. [Space-Efficient Construction of Compressed Indexes in Deterministic Linear Time.](https://doi.org/10.1137/1.9781611974782.26)  
-  4. [Sparse Suffix Tree Construction in Optimal Time and Space.](https://doi.org/10.1137/1.9781611974782.27)  
+  2. [File Maintenance: When in Doubt, Change the Layout!](https://doi.org/10.1137/1.9781611974782.98)  
+  3. [Hardness of Permutation Pattern Matching.](https://doi.org/10.1137/1.9781611974782.24)  
+  4. [Space-Efficient Construction of Compressed Indexes in Deterministic Linear Time.](https://doi.org/10.1137/1.9781611974782.26)  
+  5. [Sparse Suffix Tree Construction in Optimal Time and Space.](https://doi.org/10.1137/1.9781611974782.27)  
   
 ## [SODA 2016](https://dblp.org/db/conf/soda/soda2016.html)
   1. [The k-mismatch problem revisited.](https://doi.org/10.1137/1.9781611974331.ch142)  

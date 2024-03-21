@@ -13,8 +13,9 @@
   5. [Explicit binary tree codes with sub-logarithmic size alphabet.](https://doi.org/10.1145/3519935.3520033)  
   
 ## [STOC 2021](https://dblp.org/db/conf/stoc/stoc2021.html)
-  1. [Fully dynamic approximation of LIS in polylogarithmic time.](https://doi.org/10.1145/3406325.3451137)  
-  2. [Improved dynamic algorithms for longest increasing subsequence.](https://doi.org/10.1145/3406325.3451026)  
+  1. [Subcubic algorithms for Gomory-Hu tree in unweighted graphs.](https://doi.org/10.1145/3406325.3451073)  
+  2. [Fully dynamic approximation of LIS in polylogarithmic time.](https://doi.org/10.1145/3406325.3451137)  
+  3. [Improved dynamic algorithms for longest increasing subsequence.](https://doi.org/10.1145/3406325.3451026)  
   
 ## [STOC 2020](https://dblp.org/db/conf/stoc/stoc2020.html)
   1. [Approximating text-to-pattern Hamming distances.](https://doi.org/10.1145/3357713.3384266)  

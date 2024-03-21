@@ -31,6 +31,9 @@
   2. [Bloom Filters, Adaptivity, and the Dictionary Problem.](https://doi.org/10.1109/FOCS.2018.00026)  
   3. [Approximating Edit Distance within Constant Factor in Truly Sub-Quadratic Time.](https://doi.org/10.1109/FOCS.2018.00096)  
   
+## [FOCS 2017](https://dblp.org/db/conf/focs/focs2017.html)
+  1. [Fine-Grained Complexity of Analyzing Compressed Data: Quantifying Improvements over Decompress-and-Solve.](https://doi.org/10.1109/FOCS.2017.26)  
+  
 ## [FOCS 2016](https://dblp.org/db/conf/focs/focs2016.html)
   1. [Edit Distance: Sketching, Streaming, and Document Exchange.](https://doi.org/10.1109/FOCS.2016.15)  
   

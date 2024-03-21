@@ -8,6 +8,9 @@
 ## [ITCS 2019](https://dblp.org/db/conf/innovations/innovations2019.html)
   1. [Testing Local Properties of Arrays.](https://doi.org/10.4230/LIPIcs.ITCS.2019.11)  
   
+## [ITCS 2018](https://dblp.org/db/conf/innovations/innovations2018.html)
+  1. [Fast and Deterministic Constant Factor Approximation Algorithms for LCS Imply New Circuit Lower Bounds.](https://doi.org/10.4230/LIPIcs.ITCS.2018.35)  
+  
 ## [ITCS 2016](https://dblp.org/db/conf/innovations/innovations2016.html)
   1. [Is There an Oblivious RAM Lower Bound?](https://doi.org/10.1145/2840728.2840761)  
   
