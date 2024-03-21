@@ -19,6 +19,7 @@
 - [Papers for Stringologist (2021)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2021)
 - [Papers for Stringologist (2022)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2022)
 - [Papers for Stringologist (2023)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2023)
+- [Papers for Stringologist (2024)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2024)
 - [All papers for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/complete_list)
 
 ## Statistics
