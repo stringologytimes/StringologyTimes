@@ -1,5 +1,65 @@
 # arXiv Papers  
 ## 2024  
+### 2024/7  
+  1. [Words Avoiding Tangrams](https://arxiv.org/abs/2407.03819)  
+  
+### 2024/6  
+  1. [Linear Index for Logarithmic Search-Time for any String under any  Internal Node in Suffix Trees](https://arxiv.org/abs/2406.01174)  
+  2. [Counting on General Run-Length Grammars](https://arxiv.org/abs/2406.00221)  
+  3. [Space-efficient SLP Encoding for $O(\log N)$-time Random Access](https://arxiv.org/abs/2406.15011)  
+  4. [Implementation Of Dynamic De Bruijn Graphs Via Learned Index](https://arxiv.org/abs/2406.12339)  
+  5. [Almost Linear Size Edit Distance Sketch](https://arxiv.org/abs/2406.11225)  
+  6. [String Partition for Building Big BWTs](https://arxiv.org/abs/2406.10610)  
+  7. [The reflection complexity of sequences over finite alphabets](https://arxiv.org/abs/2406.09302)  
+  8. [Repetition Threshold for Binary Automatic Sequences](https://arxiv.org/abs/2406.06513)  
+  9. [Explicit Combinatoric Structures of Palindromes and Chromatic Number of  Restriction Graphs](https://arxiv.org/abs/2406.04507)  
+  10. [Indexing Finite-State Automata Using Forward-Stable Partitions](https://arxiv.org/abs/2406.02763)  
+  11. [Maximal number of subword occurrences in a word](https://arxiv.org/abs/2406.02971)  
+  12. [Word equations, constraints, and formal languages](https://arxiv.org/abs/2406.02160)  
+  13. [A Simple Representation of Tree Covering Utilizing Balanced Parentheses  and Efficient Implementation of Average-Case Optimal RMQs](https://arxiv.org/abs/2407.00573)  
+  14. [A Symmetry Property of Christoffel Words](https://arxiv.org/abs/2406.16408)  
+  15. [Evaluating $n$-Gram Novelty of Language Models Using Rusty-DAWG](https://arxiv.org/abs/2406.13069)  
+  16. [The Repetition Threshold for Rote Sequences](https://arxiv.org/abs/2406.17867)  
+  17. [Unveiling the connection between the Lyndon factorization and the  Canonical Inverse Lyndon factorization via a border property](https://arxiv.org/abs/2406.18473)  
+  18. [Perfectly Clustering Words and Iterated Palindromes over a Ternary  Alphabet](https://arxiv.org/abs/2406.16410)  
+  19. [Bijective BWT based compression schemes](https://arxiv.org/abs/2406.16475)  
+  
+### 2024/5  
+  1. [A Lock-free Binary Trie](https://arxiv.org/abs/2405.06208)  
+  2. [Querying in Constant Time with Learned Indexes](https://arxiv.org/abs/2405.03851)  
+  3. [Minimizing the Minimizers via Alphabet Reordering](https://arxiv.org/abs/2405.04052)  
+  4. [SPIDER: Improved Succinct Rank and Select Performance](https://arxiv.org/abs/2405.05214)  
+  5. [Finding Diverse Strings and Longest Common Subsequences in a Graph](https://arxiv.org/abs/2405.00131)  
+  6. [De Bruijn Polyominoes](https://arxiv.org/abs/2405.18543)  
+  7. [Theoretical insights and an experimental comparison of tango trees and  multi-splay trees](https://arxiv.org/abs/2405.18825)  
+  8. [Lyndon pairs and the lexicographically greatest perfect necklace](https://arxiv.org/abs/2405.17812)  
+  9. [Adaptive Dynamic Bitvectors](https://arxiv.org/abs/2405.15088)  
+  10. [String 2-Covers with No Length Restrictions](https://arxiv.org/abs/2405.11475)  
+  11. [Lock-Free Augmented Trees](https://arxiv.org/abs/2405.10506)  
+  12. [Kolmogorov complexity as a combinatorial tool](https://arxiv.org/abs/2405.09304)  
+  13. [Counting overlapping pairs of strings](https://arxiv.org/abs/2405.09393)  
+  
+### 2024/4  
+  1. [Generalized Straight-Line Programs](https://arxiv.org/abs/2404.07057)  
+  2. [Bounded Edit Distance: Optimal Static and Dynamic Algorithms for Small  Integer Weights](https://arxiv.org/abs/2404.06401)  
+  3. [Range Longest Increasing Subsequence and its Relatives: Beating  Quadratic Barrier and Approaching Optimality](https://arxiv.org/abs/2404.04795)  
+  4. [Fast and Simple Sorting Using Partial Information](https://arxiv.org/abs/2404.04552)  
+  5. [Enumerating runs, valleys, and peaks in Catalan words](https://arxiv.org/abs/2404.05672)  
+  6. [Characterization of Isometric Words based on Swap and Mismatch Distance](https://arxiv.org/abs/2404.13577)  
+  7. [On multidimensional generalization of binary search](https://arxiv.org/abs/2404.13193)  
+  8. [Computing the LCP Array of a Labeled Graph](https://arxiv.org/abs/2404.14235)  
+  9. [Hairpin Completion Distance Lower Bound](https://arxiv.org/abs/2404.11673)  
+  10. [Better space-time-robustness trade-offs for set reconciliation](https://arxiv.org/abs/2404.09607)  
+  11. [Bit catastrophes for the Burrows-Wheeler Transform](https://arxiv.org/abs/2404.10426)  
+  12. [Subsequences With Generalised Gap Constraints: Upper and Lower  Complexity Bounds](https://arxiv.org/abs/2404.10497)  
+  13. [Dynamic Suffix Array in Optimal Compressed Space](https://arxiv.org/abs/2404.07510)  
+  14. [Frogs, hats and common subsequences](https://arxiv.org/abs/2404.07285)  
+  15. [Exploring Repetitiveness Measures for Two-Dimensional Strings](https://arxiv.org/abs/2404.07030)  
+  16. [From the Lyndon factorization to the Canonical Inverse Lyndon  factorization: back and forth](https://arxiv.org/abs/2404.17969)  
+  17. [Internal Pattern Matching in Small Space and Applications](https://arxiv.org/abs/2404.17502)  
+  18. [Scalable Distributed String Sorting](https://arxiv.org/abs/2404.16517)  
+  19. [Exploiting New Properties of String Net Frequency for Efficient  Computation](https://arxiv.org/abs/2404.12701)  
+  
 ### 2024/3  
   1. [How to Find Long Maximal Exact Matches and Ignore Short Ones](https://arxiv.org/abs/2403.02008)  
   2. [String attractors and bi-infinite words](https://arxiv.org/abs/2403.13449)  
@@ -12,6 +72,10 @@
   9. [Enumeration for MSO-Queries on Compressed Trees](https://arxiv.org/abs/2403.03067)  
   10. [A Sierpinski Triangle Data Structure for Efficient Array Value Update  and Prefix Sum Calculation](https://arxiv.org/abs/2403.03990)  
   11. [Algorithms for Galois Words: Detection, Factorization, and Rotation](https://arxiv.org/abs/2403.02636)  
+  12. [On the Communication Complexity of Approximate Pattern Matching](https://arxiv.org/abs/2403.18812)  
+  13. [On the complexity and approximability of Bounded access Lempel Ziv  coding](https://arxiv.org/abs/2403.15871)  
+  14. [Exploring the Crochemore and Ziv-Lempel factorizations of some automatic  sequences with the software Walnut](https://arxiv.org/abs/2403.15215)  
+  15. [Space-Efficient Indexes for Uncertain Strings](https://arxiv.org/abs/2403.14256)  
   
 ### 2024/2  
   1. [Consecutive Power Occurrences in Sturmian Words](https://arxiv.org/abs/2402.09597)  
@@ -29,6 +93,7 @@
   13. [Regular Languages in the Sliding Window Model](https://arxiv.org/abs/2402.13385)  
   14. [Approximate Circular Pattern Matching under Edit Distance](https://arxiv.org/abs/2402.14550)  
   15. [Taxonomic classification with maximal exact matches in KATKA kernels and  minimizer digests](https://arxiv.org/abs/2402.06935)  
+  16. [Succinct Data Structure for Chordal Graphs with Bounded Vertex Leafage](https://arxiv.org/abs/2402.03748)  
   
 ### 2024/1  
   1. [Combinatorics on words and generating Dirichlet series of automatic  sequences](https://arxiv.org/abs/2401.13524)  
