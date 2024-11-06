@@ -86,41 +86,5 @@
 |WALCOM|0|2|1|0|1|2|0|1|1|1|
 
 
-
-## Recent accepted papers for stringologist
-
-### 2023/07/10 [FOCS 2023](https://web.cs.ucla.edu/~sahai/focs2023/FOCS-2023-Accepted-Papers.htm)
-1. Tight Cell-Probe Lower Bounds for Dynamic Succinct Dictionaries  
-Tianxiao Li and Jingxun Liang; Huacheng Yu; Renfei Zhou  
-2. Approximating Edit Distance in the Fully Dynamic Model  
-Tomasz Kociumaka; Anish Mukherjee; Barna Saha  
-3. Optimal Algorithms for Bounded Weighted Edit Distance  
-Alejandro Cassis; Tomasz Kociumaka and Philip Wellnitz  
-4. Dynamic ``Succincter''  
-Tianxiao Li and Jingxun Liang; Huacheng Yu; Renfei Zhou  
-
-
-### 2023/07/05 [PSC 2023](http://www.stringology.org/event/2023/index.html)
-See accepted papers.
-
-### 2023/04/28 [ICALP 2023](https://icalp2023.cs.upb.de/accepted-papers/)
-1. Convergence of the number of period sets in strings  
-Eric Rivals, Michelle Sweering and Pengfei Wang.  
-
-
-### 2023/03/27 [SEA 2023](https://cpm2023.u-pem.fr/accepted.html)
-1. Subset Wavelet Trees.  
-Jarno Alanko, Elena Biagi and Simon Puglisi.  
-2. Hierarchical Relative Lempel-Ziv Compression.  
-Philip Bille, Inge Li Gørtz, Simon Puglisi and Simon Tarnow.  
-3. Simple Runs-bounded FM-index Designs are Fast.  
-Saska Dönges, Diego Díaz-Domínguez, Simon Puglisi and Leena Salmela.  
-
-
-
-
-
-
-
 ## Links
 [arXivTimes](https://github.com/arXivTimes/arXivTimes)

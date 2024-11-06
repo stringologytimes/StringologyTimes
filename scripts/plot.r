@@ -6,11 +6,14 @@ pchs <- c(1, 4, 8, 9, 10)
 xmin <- data[1,1]
 xmax <- rev(data[,1])[1]
 
+formatted_date <- format(Sys.Date(), "%Y/%m/%d")
+print(formatted_date)
+
 #png('plot.png')
 #dev.new(width=25, height=25)
 png("docs/output/paper_statistics_for_each_year.png", width = 800, height = 500) 
 #par(pin = c(20,10))
-plot(0, 0, main="Number of registered papers per publication year",type = "n", xlim = c(xmin, xmax), ylim = c(0, 500), xlab = names(data)[1], ylab = "Count", yaxp=c(0,500,10), xaxp=c(1975,2025,10))
+plot(0, 0, main=paste("Annual Count of Registered Papers (", formatted_date, ")") ,type = "n", xlim = c(xmin, xmax), ylim = c(0, 500), xlab = names(data)[1], ylab = "Count", yaxp=c(0,500,10), xaxp=c(1975,2025,10))
 #axis(1, at=c(1980, 1985, 1990),labels=c("aaa", "bbb", "ccc"))
 
 for (i in 2:ncol(data)) {
