@@ -1,5 +1,8 @@
 # StringologyTimes
 
+## Change Log
+
+- 24/11/06 Updated arXiv's articles.
 
 ## Contents
 - [List of arXiv's articles for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/arxiv_list)
