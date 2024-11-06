@@ -2,6 +2,10 @@
 $7zip = "C:\Program Files\7-Zip\7z.exe"
 $7zipArg = "x -o./data/external/ ./data/external/dblp.xml.gz"
 
+$destinationDir = "./data/external/"
+if (!(Test-Path -Path $destinationDir)) {
+    New-Item -ItemType Directory -Path $destinationDir -Force
+}
 
 echo "Downloading... https://dblp.uni-trier.de/xml/dblp.xml.gz"
 Start-BitsTransfer -Source https://dblp.uni-trier.de/xml/dblp.xml.gz -Destination ./data/external/dblp.xml.gz

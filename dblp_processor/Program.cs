@@ -9,7 +9,8 @@ using System.CommandLine.Invocation;
 class Program
 {
     static void Main(string[] args)
-    {
+    {        
+        Console.WriteLine(String.Join(", ", args));
         var xmlPathOption = new Option<string>(
             name: "--x",
             description: "XML Path"
