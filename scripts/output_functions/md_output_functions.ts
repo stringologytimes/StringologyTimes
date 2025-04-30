@@ -7,14 +7,17 @@ import * as fs from 'fs'
 export function write_list_year_md(yearList: number[], dblpElements: DBLPElementClass[], outputFilePathPrefix: string): void {
     yearList.forEach((year) => {
         const mdlines = createMD(dblpElements, year);
-        const text = mdlines.join("\r\n");
+        if(mdlines.length > 0){
+            const text = mdlines.join("\r\n");
 
-        try {
-            fs.writeFileSync(`${outputFilePathPrefix}_${year}.md`, text);
-            console.log(`Outputted markdown file for ${year}`);
-
-        } catch (e) {
-            console.log(e);
+            try {
+                fs.writeFileSync(`${outputFilePathPrefix}_${year}.md`, text);
+                console.log(`Outputted markdown file for ${year}`);
+    
+            } catch (e) {
+                console.log(e);
+            }
+    
         }
     })
 }

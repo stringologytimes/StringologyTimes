@@ -1,24 +1,41 @@
 # Papers for stringologist
 ## Table of Contents
   
+- [CPP(2025)](#cpp-2025) [[dblp]](https://dblp.org/db/conf/cpp/cpp2025.html)  
+  
+- [Comput. J.(2025)](#comput-j-2025) [[dblp]](https://dblp.org/db/journals/cj/cj68.html)  
+- [Eur. J. Comb.(2025)](#eur-j-comb-2025) [[dblp]](https://dblp.org/db/journals/ejc/ejc126.html)  
+- [Inf. Syst.(2025)](#inf-syst-2025) [[dblp]](https://dblp.org/db/journals/is/is128.html)  
+- [J. Heuristics(2025)](#j-heuristics-2025) [[dblp]](https://dblp.org/db/journals/heuristics/heuristics31.html)  
+- [Theor. Comput. Sci.(2025)](#theor-comput-sci-2025) [[dblp]](https://dblp.org/db/journals/tcs/tcs1027.html)  
+  
+  
+- [ACIIDS (Companion 1)(2024)](#aciids-(companion-1)-2024) [[dblp]](https://dblp.org/db/conf/aciids/aciids2024c1.html)  
 - [CALDAM(2024)](#caldam-2024) [[dblp]](https://dblp.org/db/conf/caldam/caldam2024.html)  
 - [CPM(2024)](#cpm-2024) [[dblp]](https://dblp.org/db/conf/cpm/cpm2024.html)  
 - [EvoStar(2024)](#evostar-2024) [[dblp]](https://dblp.org/db/conf/evocop/evocop2024.html)  
 - [FUN(2024)](#fun-2024) [[dblp]](https://dblp.org/db/conf/fun/fun2024.html)  
 - [ICCS (5)(2024)](#iccs-(5)-2024) [[dblp]](https://dblp.org/db/conf/iccS/iccS2024-5.html)  
+- [IJTCS-FAW(2024)](#ijtcs-faw-2024) [[dblp]](https://dblp.org/db/conf/faw/faw2024.html)  
 - [SPIRE(2024)](#spire-2024) [[dblp]](https://dblp.org/db/conf/spire/spire2024.html)  
 - [TAMC(2024)](#tamc-2024) [[dblp]](https://dblp.org/db/conf/tamc/tamc2024.html)  
   
 - [ACM Trans. Algorithms(2024)](#acm-trans-algorithms-2024) [[dblp]](https://dblp.org/db/journals/talg/talg20.html)  
+- [Acta Informatica(2024)](#acta-informatica-2024) [[dblp]](https://dblp.org/db/journals/acta/acta61.html)  
 - [Algorithmica(2024)](#algorithmica-2024) [[dblp]](https://dblp.org/db/journals/algorithmica/algorithmica86.html)  
 - [Algorithms(2024)](#algorithms-2024) [[dblp]](https://dblp.org/db/journals/algorithms/algorithms17.html)  
+- [Bioinform.(2024)](#bioinform-2024) [[dblp]](https://dblp.org/db/journals/bioinformatics/bioinformatics40.html)  
+- [Comput. J.(2024)](#comput-j-2024) [[dblp]](https://dblp.org/db/journals/cj/cj67.html)  
 - [Discret. Appl. Math.(2024)](#discret-appl-math-2024) [[dblp]](https://dblp.org/db/journals/dam/dam355.html)  
 - [Inf. Comput.(2024)](#inf-comput-2024) [[dblp]](https://dblp.org/db/journals/iandc/iandc297.html)  
 - [Inf. Syst.(2024)](#inf-syst-2024) [[dblp]](https://dblp.org/db/journals/is/is120.html)  
+- [J. Comb. Theory, Ser. A(2024)](#j-comb-theory,-ser-a-2024) [[dblp]](https://dblp.org/db/journals/jcta/jcta208.html)  
 - [J. Comput. Syst. Sci.(2024)](#j-comput-syst-sci-2024) [[dblp]](https://dblp.org/db/journals/jcss/jcss144.html)  
 - [J. Supercomput.(2024)](#j-supercomput-2024) [[dblp]](https://dblp.org/db/journals/tjs/tjs80.html)  
 - [Knowl. Based Syst.(2024)](#knowl-based-syst-2024) [[dblp]](https://dblp.org/db/journals/kbs/kbs293.html)  
+- [SIAM J. Comput.(2024)](#siam-j-comput-2024) [[dblp]](https://dblp.org/db/journals/siamcomp/siamcomp53.html)  
 - [Theor. Comput. Sci.(2024)](#theor-comput-sci-2024) [[dblp]](https://dblp.org/db/journals/tcs/tcs1003.html)  
+- [Theory Comput. Syst.(2024)](#theory-comput-syst-2024) [[dblp]](https://dblp.org/db/journals/mst/mst68.html)  
 - [VLDB J.(2024)](#vldb-j-2024) [[dblp]](https://dblp.org/db/journals/vldb/vldb33.html)  
   
   
@@ -52,6 +69,7 @@
 - [Int. J. Comput. Geom. Appl.(2023)](#int-j-comput-geom-appl-2023) [[dblp]](https://dblp.org/db/journals/ijcga/ijcga33.html)  
 - [J. Comput. Biol.(2023)](#j-comput-biol-2023) [[dblp]](https://dblp.org/db/journals/jcb/jcb30.html)  
 - [Multim. Tools Appl.(2023)](#multim-tools-appl-2023) [[dblp]](https://dblp.org/db/journals/mta/mta82.html)  
+- [Proc. VLDB Endow.(2023)](#proc-vldb-endow-2023) [[dblp]](https://dblp.org/db/journals/pvldb/pvldb16.html)  
 - [Theor. Comput. Sci.(2023)](#theor-comput-sci-2023) [[dblp]](https://dblp.org/db/journals/tcs/tcs978.html)  
   
   
@@ -1140,6 +1158,29 @@
 - [SIAM J. Comput.(1976)](#siam-j-comput-1976) [[dblp]](https://dblp.org/db/journals/siamcomp/siamcomp5.html)  
   
 ## Contents
+#### [CPP 2025](https://dblp.org/db/conf/cpp/cpp2025.html)
+  1. [Formalized Burrows-Wheeler Transform.](https://doi.org/10.1145/3703595.3705883)  
+  
+  
+#### Comput. J. 2025  
+  1. [Clustering-based compression for raster time series.](https://doi.org/10.1093/comjnl/bxae090)  
+  
+#### Eur. J. Comb. 2025  
+  1. [The asymptotic repetition threshold of sequences rich in palindromes.](https://doi.org/10.1016/j.ejc.2025.104124)  
+  
+#### Inf. Syst. 2025  
+  1. [Two-level massive string dictionaries.](https://doi.org/10.1016/j.is.2024.102490)  
+  
+#### J. Heuristics 2025  
+  1. [Heuristics for the run-length encoded Burrows-Wheeler transform alphabet ordering problem.](https://doi.org/10.1007/s10732-025-09548-3)  
+  
+#### Theor. Comput. Sci. 2025  
+  1. [On the number of equal-letter runs of the bijective Burrows-Wheeler transform.](https://doi.org/10.1016/j.tcs.2024.115004)  
+  
+#### [ACIIDS (Companion 1) 2024](https://dblp.org/db/conf/aciids/aciids2024c1.html)
+  1. [The Merged Longest Common Increasing Subsequence Problem.](https://doi.org/10.1007/978-981-97-5937-8_17)  
+  
+  
 #### [CALDAM 2024](https://dblp.org/db/conf/caldam/caldam2024.html)
   1. [Consecutive Occurrences with Distance Constraints.](https://doi.org/10.1007/978-3-031-52213-0_1)  
   
@@ -1190,6 +1231,10 @@
   1. [Efficient Search Algorithms for the Restricted Longest Common Subsequence Problem.](https://doi.org/10.1007/978-3-031-63775-9_5)  
   
   
+#### [IJTCS-FAW 2024](https://dblp.org/db/conf/faw/faw2024.html)
+  1. [Longest (k]-Tuple Common Substrings.](https://doi.org/10.1007/978-981-97-7752-5_8)  
+  
+  
 #### [SPIRE 2024](https://dblp.org/db/conf/spire/spire2024.html)
   1. [2d Side-Sharing Tandems with Mismatches.](https://doi.org/10.1007/978-3-031-72200-4_23)  
   2. [Adaptive Dynamic Bitvectors.](https://doi.org/10.1007/978-3-031-72200-4_16)  
@@ -1226,11 +1271,21 @@
 #### ACM Trans. Algorithms 2024  
   1. [Generic Non-recursive Suffix Array Construction.](https://doi.org/10.1145/3641854)  
   
+#### Acta Informatica 2024  
+  1. [Serial and parallel algorithms for order-preserving pattern matching based on the duel-and-sweep paradigm.](https://doi.org/10.1007/s00236-024-00464-w)  
+  2. [The longest letter-duplicated subsequence and related problems.](https://doi.org/10.1007/s00236-024-00459-7)  
+  
 #### Algorithmica 2024  
   1. [Pattern Masking for Dictionary Matching: Theory and Practice.](https://doi.org/10.1007/s00453-024-01213-8)  
   
 #### Algorithms 2024  
   1. [Computing RF Tree Distance over Succinct Representations.](https://doi.org/10.3390/a17010015)  
+  
+#### Bioinform. 2024  
+  1. [Sigmoni: classification of nanopore signal with a compressed pangenome index.](https://doi.org/10.1093/bioinformatics/btae213)  
+  
+#### Comput. J. 2024  
+  1. [Dynamic compact data structure for temporal reachability with unsorted contact insertions.](https://doi.org/10.1093/comjnl/bxae063)  
   
 #### Discret. Appl. Math. 2024  
   1. [On arithmetically progressed suffix arrays and related Burrows-Wheeler transforms.](https://doi.org/10.1016/j.dam.2024.04.009)  
@@ -1242,6 +1297,9 @@
 #### Inf. Syst. 2024  
   1. [CoCo-trie: Data-aware compression and indexing of strings.](https://doi.org/10.1016/j.is.2023.102316)  
   
+#### J. Comb. Theory, Ser. A 2024  
+  1. [New string attractor-based complexities for infinite words.](https://doi.org/10.1016/j.jcta.2024.105936)  
+  
 #### J. Comput. Syst. Sci. 2024  
   1. [The tree-child network inference problem for line trees and the shortest common supersequence problem for permutation strings.](https://doi.org/10.1016/j.jcss.2024.103546)  
   
@@ -1251,8 +1309,15 @@
 #### Knowl. Based Syst. 2024  
   1. [Dynamic-MLCS: Fast searching for dynamic multiple longest common subsequences in sequence stream data.](https://doi.org/10.1016/j.knosys.2024.111654)  
   
+#### SIAM J. Comput. 2024  
+  1. [Internal Pattern Matching Queries in a Text and Applications.](https://doi.org/10.1137/23m1567618)  
+  
 #### Theor. Comput. Sci. 2024  
   1. [Faster space-efficient STR-IC-LCS computation.](https://doi.org/10.1016/j.tcs.2024.114607)  
+  
+#### Theory Comput. Syst. 2024  
+  1. [Elastic-Degenerate String Matching with 1 Error or Mismatch.](https://doi.org/10.1007/s00224-024-10194-8)  
+  2. [String Attractors of Some Simple-Parry Automatic Sequences.](https://doi.org/10.1007/s00224-024-10195-7)  
   
 #### VLDB J. 2024  
   1. [Optimizing RPQs over a compact graph representation.](https://doi.org/10.1007/s00778-023-00811-2)  
@@ -1463,6 +1528,9 @@
   
 #### Multim. Tools Appl. 2023  
   1. [Scalable thread based index construction using wavelet tree.](https://doi.org/10.1007/s11042-022-13906-9)  
+  
+#### Proc. VLDB Endow. 2023  
+  1. [Text Indexing for Long Patterns: Anchors are All you Need.](https://www.vldb.org/pvldb/vol16/p2117-loukides.pdf)  
   
 #### Theor. Comput. Sci. 2023  
   1. [Compact suffix automata representations for searching long patterns.](https://doi.org/10.1016/j.tcs.2022.11.005)  
@@ -3411,7 +3479,8 @@
   8. [On overabundant words and their application to biological sequence analysis.](https://doi.org/10.1016/j.tcs.2018.09.011)  
   9. [On the size of the smallest alphabet for Lyndon trees.](https://doi.org/10.1016/j.tcs.2018.06.044)  
   10. [Path queries on functions.](https://doi.org/10.1016/j.tcs.2018.10.021)  
-  11. [Universal compressed text indexing.](https://doi.org/10.1016/j.tcs.2018.09.007)  
+  11. [Succinct data structure for dynamic trees with faster queries.](https://doi.org/10.1016/j.tcs.2019.02.005)  
+  12. [Universal compressed text indexing.](https://doi.org/10.1016/j.tcs.2018.09.007)  
   
 #### Theory Comput. Syst. 2019  
   1. [Pattern Matching and Consensus Problems on Weighted Sequences and Profiles.](https://doi.org/10.1007/s00224-018-9881-2)  

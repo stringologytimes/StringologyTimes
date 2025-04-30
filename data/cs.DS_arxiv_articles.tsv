@@ -1803,7 +1803,7 @@
 2010-4-12	1004.1823	Clustering with Spectral Norm and the k-means Algorithm	cs.DS
 2010-4-12	1004.1854	Contribution Games in Social Networks	cs.GT cs.DS cs.MA
 2010-4-12	1004.1956	All Ternary Permutation Constraint Satisfaction Problems Parameterized  Above Average Have Kernels with Quadratic Numbers of Variables	cs.DS cs.DM
-2010-4-12	1004.3702	A Polynomial time Algorithm for Hamilton Cycle with maximum Degree 3,  3SAT	cs.DS
+2010-4-12	1004.3702	A Polynomial time Algorithm for 3SAT	cs.DS
 2010-4-13	1004.1986	Wedderburn rank reduction and Krylov subspace method for tensor  approximation. Part 1: Tucker case	math.NA cs.DS cs.NA
 2010-4-13	1004.2033	Feasibility Analysis of Sporadic Real-Time Multiprocessor Task Systems	cs.DS
 2010-4-13	1004.2091	An O(M(n) log n) algorithm for the Jacobi symbol	cs.DS math.NT
@@ -4215,7 +4215,7 @@
 2013-3-8	1303.1849	Revisiting the Nystrom Method for Improved Large-Scale Machine Learning	cs.LG cs.DS cs.NA
 2013-3-8	1303.1872	An Efficient Dynamic Programming Algorithm for the Generalized LCS  Problem with Multiple Substring Exclusion Constrains	cs.DS
 2013-3-8	1303.1912	Competitive-Ratio Approximation Schemes for Minimizing the Makespan in  the Online-List Model	cs.DS
-2013-3-9	1303.2033	Extended Fourier analysis of signals	cs.DS cs.IT cs.NA math.IT
+2013-3-9	1303.2033	Extended Fourier analysis of signals	cs.DS cs.IT cs.NA math.IT math.NA
 2013-3-10	1303.2285	Efficient Parallel Computation of the Estimated Covariance Matrix	cs.DS cs.DM
 2013-3-11	1303.2416	Fast Arithmetic in Algorithmic Self-Assembly	cs.DS cs.CC cs.CG
 2013-3-11	1303.2514	A local constant-factor approximation algorithm for MDS problem in  anonymous network	cs.DS
@@ -10147,7 +10147,7 @@
 2017-8-25	1708.07591	Conditional Lower Bound for Subgraph Isomorphism with a Tree Pattern	cs.DS
 2017-8-25	1708.07829	Algorithms for Big Data: Graphs and PageRank	cs.DS
 2017-8-26	1708.07786	Efficient Adaptive Implementation of the Serial Schedule Generation  Scheme using Preprocessing and Bloom Filters	cs.DS cs.PF
-2017-8-26	1708.07788	Stability of the Lanczos Method for Matrix Function Approximation	cs.DS math.NA
+2017-8-26	1708.07788	Stability of the Lanczos Method for Matrix Function Approximation	cs.DS cs.NA math.NA
 2017-8-26	1708.07821	$\ell_1$ Regression using Lewis Weights Preconditioning and Stochastic  Gradient Descent	cs.DS
 2017-8-26	1708.07883	Streaming Graph Challenge: Stochastic Block Partition	cs.DC cs.DS cs.PF cs.SI
 2017-8-26	1708.07906	Network Essence: PageRank Completion and Centrality-Conforming Markov  Chains	cs.SI cs.CG cs.DS math.CO stat.ML
@@ -11038,7 +11038,7 @@
 2018-3-13	1803.04452	(FPT-)Approximation Algorithms for the Virtual Network Embedding Problem	cs.NI cs.DS
 2018-3-13	1803.04555	Reactive Proximity Data Structures for Graphs	cs.DS
 2018-3-13	1803.04578	Spanning Trees With Edge Conflicts and Wireless Connectivity	cs.NI cs.DS
-2018-3-13	1803.04660	Certificates in P and Subquadratic-Time Computation of Radius, Diameter,  and all Eccentricities in Graphs	cs.DM cs.DS cs.NI
+2018-3-13	1803.04660	Certificates in P and Subquadratic-Time Computation of Radius, Diameter,  and all Eccentricities in Graphs	cs.DM cs.CC cs.DS cs.NI
 2018-3-13	1803.04744	On Integer Programming, Discrepancy, and Convolution	cs.DS
 2018-3-13	1803.04756	A pseudo-quasi-polynomial algorithm for solving mean-payoff parity games	cs.GT cs.DS cs.LO
 2018-3-14	1803.04865	Mathematical models and search algorithms for the capacitated $p$-center  problem	cs.DS
@@ -12482,7 +12482,7 @@
 2019-1-1	1901.00156	Cluster Editing with Vertex Splitting	cs.CC cs.DS
 2019-1-2	1901.00335	Clique-Width for Hereditary Graph Classes	math.CO cs.CC cs.DM cs.DS
 2019-1-2	1901.00717	Almost Optimal Distribution-free Junta Testing	cs.DS cs.CC
-2019-1-2	1901.04583	Platoon Forming Algorithms for Intelligent Street Intersections	cs.DS cs.SY math.PR
+2019-1-2	1901.04583	Platoon Forming Algorithms for Intelligent Street Intersections	cs.DS cs.SY eess.SY math.PR
 2019-1-3	1901.00479	Towards the Locality of Vizing's Theorem	cs.DS cs.DC
 2019-1-3	1901.00512	Real-Time EEG Classification via Coresets for BCI Applications	cs.DS cs.LG eess.SP
 2019-1-3	1901.00622	Efficient Race Detection with Futures	cs.DS cs.DC
@@ -12549,7 +12549,7 @@
 2019-1-20	1901.06581	Approximation Algorithms for the A Priori TravelingRepairman	cs.DS
 2019-1-20	1901.06628	Efficiently factoring polynomials modulo $p^4$	cs.CC cs.DS cs.SC math.NT
 2019-1-20	1901.06653	Fast algorithms at low temperatures via Markov chains	cs.DS math.CO math.PR
-2019-1-21	1901.06764	Iterative Refinement for $\ell_p$-norm Regression	cs.DS cs.NA math.OC stat.ML
+2019-1-21	1901.06764	Iterative Refinement for $\ell_p$-norm Regression	cs.DS cs.NA math.NA math.OC stat.ML
 2019-1-21	1901.06880	Mixed integer formulations using natural variables for single machine  scheduling around a common due date	cs.DS cs.DM
 2019-1-22	1901.07032	A PTAS for Bounded-Capacity Vehicle Routing in Planar Graphs	cs.DS
 2019-1-22	1901.07070	Analyzing Branch-and-Bound Algorithms for the Multiprocessor Scheduling  Problem	cs.DS
@@ -12581,7 +12581,7 @@
 2019-1-25	1901.08836	A Laplacian Approach to $\ell_1$-Norm Minimization	cs.DS math.OC
 2019-1-26	1901.09017	Finding a Mediocre Player	cs.DS math.CO
 2019-1-26	1901.09154	Star Routing: Between Vehicle Routing and Vertex Cover	cs.DS
-2019-1-26	1901.09161	Competitive Online Optimization under Inventory Constraints	cs.PF cs.DS cs.SY math.OC
+2019-1-26	1901.09161	Competitive Online Optimization under Inventory Constraints	cs.PF cs.DS cs.SY eess.SY math.OC
 2019-1-27	1901.09349	Large Minors in Expanders	cs.DS cs.DM
 2019-1-27	1901.09355	Nearly Optimal Sparse Polynomial Multiplication	cs.SC cs.DS
 2019-1-28	1901.09515	Black Box Submodular Maximization: Discrete and Continuous Settings	cs.LG cs.DS math.OC stat.ML
@@ -12611,7 +12611,7 @@
 2019-2-1	1902.00256	The Application of Bipartite Matching in Assignment Problem	cs.DS
 2019-2-1	1902.00257	An efficient sorting algorithm - Ultimate Heapsort(UHS)	cs.DS
 2019-2-1	1902.00340	Decentralized Stochastic Optimization and Gossip Algorithms with  Compressed Communication	cs.LG cs.DC cs.DS math.OC stat.ML
-2019-2-2	1902.00488	Grid Graph Reachability	cs.CC cs.DS
+2019-2-2	1902.00488	On Solving Reachability in Grid Digraphs using a Psuedoseparator	cs.CC cs.DS
 2019-2-2	1902.00490	StaTIX - Statistical Type Inference on Linked Data	stat.AP cs.DS cs.SI physics.data-an
 2019-2-2	1902.00732	Scheduling with Predictions and the Price of Misprediction	cs.DS
 2019-2-2	1902.01691	Accuracy Evaluation of Overlapping and Multi-resolution Clustering  Algorithms on Large Datasets	cs.DS physics.data-an
@@ -13588,7 +13588,7 @@
 2019-7-20	1907.08735	The Competitive Ratio of Threshold Policies for Online Unit-density  Knapsack Problems	cs.DS
 2019-7-20	1907.08743	Domain Compression and its Application to Randomness-Optimal Distributed  Goodness-of-Fit	cs.DS cs.DM cs.IT cs.LG math.IT math.ST stat.TH
 2019-7-20	1907.08813	An Iterative Vertex Enumeration Method for Objective Space Based Vector  Optimization Algorithms	math.OC cs.DS
-2019-7-20	1907.08817	NN-sort: Neural Network based Data Distribution-aware Sorting	cs.DS
+2019-7-20	1907.08817	Deep Learning Service for Efficient Data Distribution Aware Sorting	cs.DS
 2019-7-21	1907.08843	The Generalized Trust Region Subproblem: solution complexity and convex  hull results	cs.DS math.OC
 2019-7-21	1907.08865	Complexity of Modification Problems for Reciprocal Best Match Graphs	cs.CC cs.DS math.CO
 2019-7-21	1907.08906	A Constant Approximation for Colorful k-Center	cs.DS cs.CG
@@ -14536,7 +14536,7 @@
 2020-1-5	2001.01146	New lower bounds for Massively Parallel Computation from query  complexity	cs.DS cs.CC cs.DC
 2020-1-5	2001.01194	Cutoff for exact recovery of Gaussian mixture models	math.ST cs.DS cs.IT math.IT math.PR stat.ML stat.TH
 2020-1-5	2001.01230	Learning fine-grained search space pruning and heuristics for  combinatorial optimization	cs.DS cs.AI cs.SI
-2020-1-6	2001.01289	All non-trivial variants of 3-LDT are equivalent	cs.DS
+2020-1-6	2001.01289	Equivalences between Non-trivial Variants of 3LDT and Conv3LDT	cs.DS
 2020-1-6	2001.01440	Tight Localizations of Feedback Sets	cs.DM cs.DS
 2020-1-6	2001.01452	On Efficient Distance Approximation for Graph Properties	math.CO cs.DS
 2020-1-6	2001.01531	An Optimal Algorithm for 1-D Cutting Stock Problem	cs.DM cs.DS
@@ -15434,7 +15434,7 @@
 2020-6-5	2006.03399	Single-machine scheduling with an external resource	cs.DS cs.CC cs.DM
 2020-6-5	2006.03460	Optimal Sensor Placement in Power Grids: Power Domination, Set Covering,  and the Neighborhoods of Zero Forcing Forts	cs.DS cs.DM math.CO math.OC
 2020-6-5	2006.04940	An Improved and Parallel Version of a Scalable Algorithm for Analyzing  Time Series Data	cs.DC cs.DS
-2020-6-6	2006.03666	VectorTSP: A Traveling Salesperson Problem with Racetrack-like  acceleration constraints	cs.DS cs.CC math.CO
+2020-6-6	2006.03666	Vector TSP: A Traveling Salesperson Problem with Racetrack-like  Acceleration Constraints	cs.DS cs.CC math.CO
 2020-6-6	2006.03684	Differentially private partition selection	cs.CR cs.DS
 2020-6-6	2006.03746	Distributed Approximation on Power Graphs	cs.DS cs.DC
 2020-6-6	2006.03781	Attribute-Efficient Learning of Halfspaces with Malicious Noise:  Near-Optimal Label Complexity and Noise Tolerance	stat.ML cs.DS cs.LG
@@ -17775,7 +17775,7 @@
 2021-7-7	2107.03193	Oblivious Median Slope Selection	cs.CG cs.CR cs.DS
 2021-7-8	2107.03341	Burrows Wheeler Transform on a Large Scale: Algorithms Implemented in  Apache Spark	cs.DS cs.DC
 2021-7-8	2107.03485	Space-Efficient Fault-Tolerant Diameter Oracles	cs.DS
-2021-7-8	2107.03570	Fast Online Algorithms for Linear Programming	math.OC cs.DS
+2021-7-8	2107.03570	Solving Linear Programs with Fast Online Learning Algorithms	math.OC cs.DS
 2021-7-8	2107.03662	On Submodular Prophet Inequalities and Correlation Gap	cs.DS
 2021-7-8	2107.03795	An Efficient Reduction of a Gammoid to a Partition Matroid	cs.DS math.CO
 2021-7-8	2107.03821	Edge Sampling and Graph Parameter Estimation via Vertex Neighborhood  Accesses	cs.DS
@@ -17808,7 +17808,7 @@
 2021-7-13	2107.05690	Worst-Case Welfare of Item Pricing in the Tollbooth Problem	cs.GT cs.DM cs.DS
 2021-7-13	2107.05717	Sparsifying, Shrinking and Splicing for Minimum Path Cover in  Parameterized Linear Time	cs.DS
 2021-7-13	2107.05746	Computational Hardness of the Hylland-Zeckhauser Scheme	cs.GT cs.DS
-2021-7-13	2107.05753	Noisy searching: simple, fast and correct	cs.DS
+2021-7-13	2107.05753	Noisy (Binary) Searching: Simple, Fast and Correct	cs.DS
 2021-7-13	2107.05793	A Parallel Approximation Algorithm for Maximizing Submodular  $b$-Matching	cs.DS cs.DC
 2021-7-13	2107.05822	Multi-token Markov Game with Switching Costs	cs.DS
 2021-7-13	2107.05972	Polynomial delay algorithm for minimal chordal completions	cs.DS cs.DM
@@ -18412,7 +18412,7 @@
 2021-11-7	2111.03968	Improved Approximation Guarantees for Shortest Superstrings using Cycle  Classification by Overlap to Length Ratios	cs.DS
 2021-11-7	2111.03980	Dynamic Algorithms Against an Adaptive Adversary: Generic Constructions  and Lower Bounds	cs.DS
 2021-11-7	2111.04011	$k$ disjoint $st$-paths activation in polynomial time	cs.DS
-2021-11-7	2111.04044	Simple Parallel Algorithms for Single-Site Dynamics	cs.DS
+2021-11-7	2111.04044	Parallelize Single-Site Dynamics up to Dobrushin Criterion	cs.DS
 2021-11-7	2111.04066	Fast sampling via spectral independence beyond bounded-degree graphs	cs.DS
 2021-11-7	2111.04089	Sampling from Log-Concave Distributions with Infinity-Distance  Guarantees	cs.DS cs.CR cs.LG math.PR stat.ML
 2021-11-8	2111.04114	Formal Barriers to Simple Algorithms for the Matroid Secretary Problem	cs.DS cs.GT
@@ -18700,7 +18700,7 @@
 2021-12-21	2112.11020	Efficient reductions and algorithms for variants of Subset Sum	cs.DS
 2021-12-21	2112.11112	Empirically Improved Tokuda Gap Sequence in Shellsort	cs.DS math.CO
 2021-12-21	2112.11127	Optimal Gap Sequences in Shellsort for $n\leq16$ Elements	math.CO cs.DS
-2021-12-22	2112.11487	On the parallel complexity of Group Isomorphism via Weisfeiler-Leman	cs.DS cs.CC cs.LO math.GR
+2021-12-22	2112.11487	On the Parallel Complexity of Group Isomorphism via Weisfeiler-Leman	cs.DS cs.CC cs.LO math.GR
 2021-12-22	2112.11597	Rightsizing Clusters for Time-Limited Tasks	cs.DC cs.DS
 2021-12-22	2112.11602	Causal Inference Despite Limited Global Confounding via Mixture Models	cs.LG cs.DS eess.SP stat.ML
 2021-12-22	2112.11686	Parametrized Complexity of Quantum Inspired Algorithms	quant-ph cs.DS
@@ -18768,7 +18768,7 @@
 2022-1-7	2201.02248	Fixation Maximization in the Positional Moran Process	cs.DS cs.CC q-bio.PE
 2022-1-7	2201.02448	k-Center Clustering with Outliers in Sliding Windows	cs.LG cs.DS
 2022-1-7	2201.11655	BFS based distributed algorithm for parallel local directed sub-graph  enumeration	cs.DC cs.DS math.CO
-2022-1-8	2201.02514	The Efficiency of the ANS Entropy Encoding	cs.IT cs.DS math.IT
+2022-1-8	2201.02514	Efficiency of ANS Entropy Encoders	cs.IT cs.DS math.IT
 2022-1-8	2201.02670	Weighted Random Sampling over Joins	cs.DB cs.DS
 2022-1-8	2201.02728	Automatically layout and visualize the biological pathway map with  spectral graph theory	cs.DS
 2022-1-9	2201.02905	New Trade-Offs for Fully Dynamic Matching via Hierarchical EDCS	cs.DS
@@ -19213,7 +19213,7 @@
 2022-4-5	2204.01911	Almost-Linear Planted Cliques Elude the Metropolis Process	cs.DS math.PR math.ST stat.TH
 2022-4-5	2204.01923	Algorithms for the ferromagnetic Potts model on expanders	cs.DS cs.DM math.CO
 2022-4-5	2204.01936	Online matching games in bipartite expanders and applications	cs.DS
-2022-4-5	2204.01941	Randomized matrix-free quadrature for spectrum and spectral sum  approximation	math.NA cs.DS cs.NA
+2022-4-5	2204.01941	Randomized matrix-free quadrature: unified and uniform bounds for  stochastic Lanczos quadrature and the kernel polynomial method	math.NA cs.DS cs.NA
 2022-4-5	2204.01970	Streaming Algorithms for Multitasking Scheduling with Shared Processing	cs.DS
 2022-4-5	2204.01976	Streaming Approximation Scheme for Minimizing Total Completion Time on  Parallel Machines Subject to Varying Processing Capacity	cs.DS
 2022-4-5	2204.02095	Streaming Facility Location in High Dimension via Geometric Hashing	cs.DS
@@ -19329,7 +19329,7 @@
 2022-4-25	2204.11495	Graph Product Structure for h-Framed Graphs	cs.DS cs.DM math.CO
 2022-4-25	2204.11681	A Structural Investigation of the Approximability of Polynomial-Time  Problems	cs.DS cs.CC
 2022-4-26	2204.11750	Efficient Recognition of Subgraphs of Planar Cubic Bridgeless Graphs	cs.DS math.CO
-2022-4-26	2204.11753	Partitioning Problems with Splittings and Interval Targets	cs.DS cs.CC
+2022-4-26	2204.11753	Asymmetric Number Partitioning with Splitting and Interval Targets	cs.DS cs.CC
 2022-4-26	2204.11894	Properly learning monotone functions via local reconstruction	cs.DS
 2022-4-26	2204.12055	Faster Fundamental Graph Algorithms via Learned Predictions	cs.DS
 2022-4-26	2204.12129	Mirror Games Against an Open Book Player	cs.CC cs.DM cs.DS
@@ -19726,7 +19726,7 @@
 2022-7-6	2207.02344	Finding a Hidden Edge	cs.DS
 2022-7-6	2207.02476	Improving Order with Queues	cs.DS
 2022-7-6	2207.02571	Computing NP-hard Repetitiveness Measures via MAX-SAT	cs.DS
-2022-7-6	2207.02581	Learning Hierarchical Structure of Clusterable Graphs	cs.DS
+2022-7-6	2207.02581	Approximating Dasgupta Cost in Sublinear Time from a Few Random Seeds	cs.DS
 2022-7-6	2207.02609	Techniques for Generalized Colorful $k$-Center Problems	cs.DS math.OC
 2022-7-6	2207.02641	Reforming an Envy-Free Matching	cs.GT cs.AI cs.DS econ.TH math.CO
 2022-7-6	2207.02669	Distributed domination on sparse graph classes	cs.DM cs.DC cs.DS
@@ -20099,7 +20099,7 @@
 2022-9-10	2209.04673	Growing a Random Maximal Independent Set Produces a 2-approximate Vertex  Cover	cs.DS cs.DM
 2022-9-11	2209.04812	Structured $(\min,+)$-Convolution And Its Applications For The Shortest  Vector, Closest Vector, and Separable Nonlinear Knapsack Problems	cs.CC cs.DM cs.DS math.OC
 2022-9-11	2209.04824	Hard Optimization Problems have Soft Edges	cond-mat.dis-nn cond-mat.stat-mech cs.DS
-2022-9-11	2209.04825	Revolutionizing Binary Decision Tree Traversals with Arithmetical  Representations	cs.LG cs.DS cs.NA math.NA
+2022-9-11	2209.04825	Arithmetical Binary Decision Tree Traversals	cs.LG cs.DS cs.NA math.NA
 2022-9-11	2209.04870	An Improved Algorithm For Online Min-Sum Set Cover	cs.DS cs.LG
 2022-9-11	2209.04876	Subquadratic Kronecker Regression with Applications to Tensor  Decomposition	cs.DS cs.LG math.ST stat.TH
 2022-9-12	2209.04903	Cores of Games via Total Dual Integrality, with Applications to Perfect  Graphs and Polymatroids	cs.GT cs.DS econ.TH
@@ -20248,7 +20248,7 @@
 2022-10-5	2210.01897	The DAG Visit approach for Pebbling and I/O Lower Bounds	cs.DS
 2022-10-5	2210.01954	Ruler Rolling	cs.DS
 2022-10-5	2210.02000	Finding Top-k Longest Palindromes in Substrings	cs.DS
-2022-10-5	2210.02067	Computing maximal generalized palindromes	cs.DS
+2022-10-5	2210.02067	Computing maximal palindromes in non-standard matching models	cs.DS
 2022-10-5	2210.02117	Tight Lower Bounds for Problems Parameterized by Rank-width	cs.DS
 2022-10-5	2210.02167	Faster parameterized algorithms for modification problems to  minor-closed classes	cs.DS cs.CC math.CO
 2022-10-5	2210.02292	Double-Ended Palindromic Trees: A Linear-Time Data Structure and Its  Applications	cs.DS cs.DM cs.IR
@@ -20258,10 +20258,10 @@
 2022-10-6	2210.02611	$(1-\epsilon)$-approximate fully dynamic densest subgraph: linear space  and faster update time	cs.DS
 2022-10-6	2210.02628	Cooperative Coverage with a Leader and a Wingmate in  Communication-Constrained Environments	cs.RO cs.DS math.OC
 2022-10-6	2210.02638	What Can We Compute in a Single Round of the Congested Clique?	cs.DC cs.DS
-2022-10-6	2210.02672	A Novel Maximum-Entropy-Driven Technique for Low-Rank Orthogonal  Nonnegative Matrix Factorization with $\ell_0$-Norm sparsity Constraint	cs.DS cs.IT cs.LG math.IT math.PR
+2022-10-6	2210.02672	Orthogonal Nonnegative Matrix Factorization with Sparsity Constraints	cs.DS cs.IT cs.LG math.IT math.PR
 2022-10-6	2210.02775	Paging with Succinct Predictions	cs.LG cs.DS cs.OS
 2022-10-6	2210.02835	Sequentially Swapping Tokens: Further on Graph Classes	cs.DS
-2022-10-7	2210.03048	Scalable Experimental Bounds for Dicke and GHZ States Fidelities	quant-ph cs.DS
+2022-10-7	2210.03048	Scalable Experimental Bounds for Entangled Quantum State Fidelities	quant-ph cs.DS
 2022-10-7	2210.03166	The Power of Greedy for Online Minimum Cost Matching on the Line	cs.DS
 2022-10-7	2210.03211	LazyFox: Fast and parallelized overlapping community detection in large  graphs	cs.SI cs.DS
 2022-10-7	2210.03343	On the complexity of symmetric vs. functional PCSPs	cs.CC cs.DM cs.DS
@@ -20333,7 +20333,7 @@
 2022-10-19	2210.10370	On the Perturbation Function of Ranking and Balance for Weighted Online  Bipartite Matching	cs.DS
 2022-10-19	2210.10394	Near-optimal Coresets for Robust Clustering	cs.DS
 2022-10-19	2210.10583	Dense subgraphs induced by edge labels	cs.SI cs.DS
-2022-10-19	2210.11634	A Polynomial-time Algorithm to Solve Airplane Refueling Problem: the  Sequential Search Algorithm	cs.DS math.OC
+2022-10-19	2210.11634	A Polynomial-time Algorithm to Solve the Airplane Refueling Problem: the  Sequential Search Algorithm	cs.DS math.OC
 2022-10-20	2210.10677	List homomorphisms by deleting edges and vertices: tight complexity  bounds for bounded-treewidth graphs	cs.CC cs.DS
 2022-10-20	2210.10917	Substring Density Estimation from Traces	cs.IT cs.DS math.IT math.PR math.ST stat.TH
 2022-10-20	2210.10968	Identities and periodic oscillations of divide-and-conquer recurrences  splitting at half	cs.DS math.CO
@@ -20438,7 +20438,7 @@
 2022-11-5	2211.02713	A degree 4 sum-of-squares lower bound for the clique number of the Paley  graph	cs.DS cs.CC math.NT math.OC
 2022-11-5	2211.02717	A Framework for Approximation Schemes on Disk Graphs	cs.CG cs.DS
 2022-11-5	2211.02755	Extension of Simple Algorithms to the Matroid Secretary Problem	cs.DS
-2022-11-6	2211.03077	Online Nash Welfare Maximization Without Predictions	cs.DS
+2022-11-6	2211.03077	Online Nash Welfare Maximization Without Predictions	cs.DS cs.GT
 2022-11-7	2211.03146	Balancing graph Voronoi diagrams with one more vertex	cs.DS
 2022-11-7	2211.03161	4D Range Reporting in the Pointer Machine Model in Almost-Optimal Time	cs.DS cs.CG
 2022-11-7	2211.03206	On Vertex Bisection Width of Random $d$-Regular Graphs	cs.DS
@@ -21036,7 +21036,7 @@
 2023-2-20	2302.09604	Parameterized Max Min Feedback Vertex Set	cs.DS cs.CC
 2023-2-20	2302.09614	On Existence of Must-Include Paths and Cycles in Undirected Graphs	math.CO cs.DS
 2023-2-20	2302.09652	Communication-Efficient Distributed Graph Clustering and Sparsification  under Duplication Models	cs.DS
-2023-2-20	2302.09692	Classification via two-way comparisons	cs.DS
+2023-2-20	2302.09692	Classification via Two-Way Comparisons	cs.DS
 2023-2-20	2302.09737	Fully Dynamic $k$-Center in Low Dimensions via Approximate Furthest  Neighbors	cs.DS cs.CG
 2023-2-20	2302.09743	Adaptive control of dynamic networks	eess.SY cs.DS cs.SY
 2023-2-20	2302.09796	Fast Algorithms via Dynamic-Oracle Matroids	cs.DS cs.CC
@@ -21063,7 +21063,7 @@
 2023-2-22	2302.11295	Fair Correlation Clustering in Forests	cs.LG cs.CC cs.CY cs.DM cs.DS
 2023-2-22	2302.11336	Approximability of the Four-Vertex Model	cs.CC cs.DS
 2023-2-22	2302.11339	The Power of Uniform Sampling for $k$-Median	cs.DS
-2023-2-22	2302.11341	Differentially Private Data Structures under Continual Observation for  Histograms and Related Queries	cs.DS cs.CR
+2023-2-22	2302.11341	Differentially Private Continual Release of Histograms and Related  Queries	cs.DS cs.CR
 2023-2-22	2302.11390	Posets are easily testable	math.CO cs.DM cs.DS
 2023-2-23	2302.11443	Engineering a Distributed-Memory Triangle Counting Algorithm	cs.DC cs.DS cs.SI
 2023-2-23	2302.11475	Degrees and Network Design: New Problems and Approximations	cs.DS
@@ -21127,7 +21127,7 @@
 2023-3-2	2303.00709	Robust and Practical Solution of Laplacian Equations by Approximate  Elimination	math.NA cs.DS cs.MS cs.NA
 2023-3-2	2303.00745	Coordination of Multiple Robots along Given Paths with Bounded Junction  Complexity	cs.RO cs.CG cs.DS cs.MA
 2023-3-2	2303.00791	Scarf's algorithm and stable marriages	math.CO cs.DS
-2023-3-2	2303.00811	Parallel and Distributed Exact Single-Source Shortest Paths with  Negative Edge Weights	cs.DC cs.DS
+2023-3-2	2303.00811	Parallel, Distributed, and Quantum Exact Single-Source Shortest Paths  with Negative Edge Weights	cs.DC cs.DS
 2023-3-2	2303.00837	Predictive Flows for Faster Ford-Fulkerson	cs.DS
 2023-3-2	2303.01078	Pandora's Problem with Combinatorial Cost	cs.DS cs.GT
 2023-3-2	2303.01188	Quantum Channel Certification with Incoherent Strategies	quant-ph cs.DS cs.IT math.IT
@@ -21175,7 +21175,7 @@
 2023-3-9	2303.05044	Range Avoidance for Constant-Depth Circuits: Hardness and Algorithms	cs.CC cs.DS
 2023-3-9	2303.05067	Robust optimization with belief functions	cs.DS math.OC
 2023-3-9	2303.05250	Distributed Half-Integral Matching and Beyond	cs.DS cs.DC
-2023-3-10	2303.05327	Direct Access for Answers to Conjunctive Queries with Aggregation	cs.DB cs.DS
+2023-3-10	2303.05327	Direct Access for Answers to Conjunctive Queries with Aggregation	cs.DB cs.DS cs.LO
 2023-3-10	2303.05336	Elastic Founder Graphs Improved and Enhanced	cs.DS
 2023-3-10	2303.05408	Fast algorithms for Vizing's theorem on bounded degree graphs	cs.DS cs.DC cs.DM math.CO
 2023-3-10	2303.05799	Optimal-Hash Exact String Matching Algorithms	cs.DS
@@ -21205,7 +21205,7 @@
 2023-3-16	2303.08908	Online Bipartite Matching in the Probe-Commit Model	cs.DS cs.DM math.CO
 2023-3-16	2303.08937	Shortest Paths in Portalgons	cs.CG cs.DS
 2023-3-16	2303.09086	Optimal Intervention on Weighted Networks via Edge Centrality	cs.SI cs.DS math.OC
-2023-3-16	2303.09205	Addressing bias in online selection with limited budget of comparisons	cs.GT cs.DS
+2023-3-16	2303.09205	Addressing Bias in Online Selection with Limited Budget of Comparisons	cs.GT cs.DS
 2023-3-17	2303.09524	Online and Dynamic Algorithms for Geometric Set Cover and Hitting Set	cs.CG cs.DS
 2023-3-17	2303.09632	Conflict Optimization for Binary CSP Applied to Minimum Partition into  Plane Subgraphs and Graph Coloring	cs.CG cs.DS
 2023-3-17	2303.09855	High-Dimensional Approximate Nearest Neighbor Search: with Reliable and  Efficient Distance Comparison Operations	cs.DS cs.DB cs.IR
@@ -21225,7 +21225,7 @@
 2023-3-21	2303.11937	High Probability Bounds for Stochastic Continuous Submodular  Maximization	cs.DS cs.LG math.OC
 2023-3-22	2303.12277	Stochastic Nonsmooth Convex Optimization with Heavy-Tailed Noises:  High-Probability Bound, In-Expectation Rate and Initial Distance Adaptation	math.OC cs.DS cs.LG
 2023-3-22	2303.12298	A General Algorithm for Solving Rank-one Matrix Sensing	cs.DS cs.LG
-2023-3-22	2303.12325	Critical Relaxed Stable Matchings with Two-Sided Ties	cs.DS
+2023-3-22	2303.12325	Critical Relaxed Stable Matchings with Ties in the Many-to-Many Setting	cs.DS
 2023-3-22	2303.12506	Leximin Approximation: From Single-Objective to Multi-Objective	cs.GT cs.DS cs.MA
 2023-3-22	2303.12560	Degree Sequence Optimization in Bounded Treewidth	math.CO cs.DM cs.DS math.OC
 2023-3-23	2303.12768	Almost-Optimal Sublinear Additive Spanners	cs.DS
@@ -21257,7 +21257,7 @@
 2023-3-29	2303.16413	Certified Hardness vs. Randomness for Log-Space	cs.CC cs.DS
 2023-3-30	2303.17045	Training Neural Networks is NP-Hard in Fixed Dimension	cs.CC cs.DS cs.LG cs.NE stat.ML
 2023-3-30	2303.17204	A Subquadratic Time Algorithm for the Weighted $k$-Center Problem on  Cactus Graphs	cs.DS cs.CG
-2023-3-30	2303.17274	Capacity-Preserving Subgraphs of Directed Flow Networks	cs.DS cs.DM
+2023-3-30	2303.17274	Directed Capacity-Preserving Subgraphs: Hardness and Exact Polynomial  Algorithms	cs.DS cs.DM
 2023-3-30	2303.17346	Advice Complexity bounds for Online Delayed F-Node-, H-Node- and  H-Edge-Deletion Problems	cs.DS
 2023-3-31	2303.17506	Sum-of-Squares Lower Bounds for Densest $k$-Subgraph	cs.CC cs.DS
 2023-3-31	2303.17551	The Online Pause and Resume Problem: Optimal Algorithms and An  Application to Carbon-Aware Load Shifting	cs.DS cs.DC
@@ -21304,7 +21304,7 @@
 2023-4-6	2304.02700	Agnostic proper learning of monotone functions: beyond the black-box  correction barrier	cs.DS cs.LG
 2023-4-6	2304.02897	LSketch: A Label-Enabled Graph Stream Sketch Toward Time-Sensitive  Queries	cs.DB cs.DS
 2023-4-7	2304.03146	Parameterized Approximation Schemes for Clustering with General Norm  Objectives	cs.DS cs.LG
-2023-4-7	2304.03182	On the tractability of sampling from the Potts model at low temperatures  via Swendsen--Wang dynamics	math.PR cs.DS math-ph math.MP
+2023-4-7	2304.03182	On the tractability of sampling from the Potts model at low temperatures  via random-cluster dynamics	math.PR cs.DS math-ph math.MP
 2023-4-7	2304.03191	Krylov Methods are (nearly) Optimal for Low-Rank Approximation	cs.DS cs.LG cs.NA math.NA
 2023-4-7	2304.03233	Parameterized algorithms for Eccentricity Shortest Path Problem	cs.DS cs.DM
 2023-4-7	2304.03377	Leveraging Reusability: Improved Competitive Ratio of Greedy for  Reusable Resources	cs.DS
@@ -21374,7 +21374,7 @@
 2023-4-18	2304.08632	Subcubic algorithm for (Unweighted) Unrooted Tree Edit Distance	cs.DS
 2023-4-18	2304.08648	Dynamic Vector Bin Packing for Online Resource Allocation in the Cloud	cs.DS
 2023-4-18	2304.08745	Super-Logarithmic Lower Bounds for Dynamic Graph Problems	cs.DS cs.CC
-2023-4-18	2304.08746	On Approximate Reconfigurability of Label Cover	cs.DM cs.DS
+2023-4-18	2304.08746	On Approximate Reconfigurability of Label Cover	cs.DM cs.CC cs.DS
 2023-4-18	2304.08892	Parallel Greedy Spanners	cs.DS
 2023-4-19	2304.09113	Random Cuts are Optimal for Explainable k-Medians	cs.DS
 2023-4-19	2304.09167	Optimal PAC Bounds Without Uniform Convergence	cs.LG cs.DS math.ST stat.TH
@@ -22097,7 +22097,7 @@
 2023-8-1	2307.16864	Efficient Algorithms for Monroe and CC Rules in Multi-Winner Elections  with (Nearly) Structured Preferences	cs.MA cs.DS cs.GT
 2023-8-1	2308.00083	Subnetwork enumeration algorithms for multilayer networks	physics.soc-ph cs.DS cs.SI
 2023-8-1	2308.00306	Smoothed Analysis of the 2-Opt Heuristic for the TSP under Gaussian  Noise	cs.DS
-2023-8-1	2308.00334	Guarding Polyominoes under $k$-Hop Visibility	cs.CG cs.DS
+2023-8-1	2308.00334	Guarding Polyominoes Under $k$-Hop Visibility	cs.CG cs.DS
 2023-8-1	2308.00355	Conditionally Optimal Parallel Coloring of Forests	cs.DC cs.DS
 2023-8-1	2308.00501	Structural Parameterizations of the Biclique-Free Vertex Deletion  Problem	cs.DS
 2023-8-1	2308.00503	Massively Parallel Algorithms for High-Dimensional Euclidean Minimum  Spanning Tree	cs.DS
@@ -22135,7 +22135,7 @@
 2023-8-7	2308.03578	TeraHAC: Hierarchical Agglomerative Clustering of Trillion-Edge Graphs	cs.DS cs.DB cs.DC cs.IR
 2023-8-7	2308.03635	Collapsing the Hierarchy of Compressed Data Structures: Suffix Arrays in  Optimal Compressed Space	cs.DS
 2023-8-8	2308.03661	Matrix Completion in Almost-Verification Time	cs.LG cs.DS math.OC math.ST stat.TH
-2023-8-8	2308.03970	Dependent Cluster Mapping (DCMAP): Optimal clustering of directed  acyclic graphs for statistical inference	cs.DS stat.ML
+2023-8-8	2308.03970	Optimal Clustering with Dependent Costs in Bayesian Networks	cs.DS stat.ML
 2023-8-8	2308.04093	0-1 Knapsack in Nearly Quadratic Time	cs.DS
 2023-8-8	2308.04251	On the Node-Averaged Complexity of Locally Checkable Problems on Trees	cs.DS cs.DC
 2023-8-8	2308.04264	Tolerant Testing of High-Dimensional Samplers with Subcube Conditioning	cs.DS math.PR
@@ -22171,7 +22171,7 @@
 2023-8-15	2308.07721	Improved Lower Bound for Estimating the Number of Defective Items	cs.DS
 2023-8-15	2308.07746	A Tight Competitive Ratio for Online Submodular Welfare Maximization	cs.DS
 2023-8-15	2308.07809	Another virtue of wavelet forests?	cs.DS
-2023-8-15	2308.07817	Quantifying the Cost of Learning in Queueing Systems	cs.LG cs.DS cs.PF math.PR
+2023-8-15	2308.07817	The Transient Cost of Learning in Queueing Systems	cs.LG cs.DS cs.PF math.PR
 2023-8-15	2308.07821	A Nearly Quadratic-Time FPTAS for Knapsack	cs.DS
 2023-8-15	2308.08453	Tightest Admissible Shortest Path	cs.DS cs.AI cs.DM
 2023-8-16	2308.08057	A Floating-Point Secure Implementation of the Report Noisy Max with Gap  Mechanism	cs.CR cs.DS
@@ -22376,7 +22376,7 @@
 2023-9-20	2309.11175	Testing frequency distributions in a stream	cs.DS
 2023-9-20	2309.11366	Single-Exponential FPT Algorithms for Enumerating Secluded  $\mathcal{F}$-Free Subgraphs and Deleting to Scattered Graph Classes	cs.DS
 2023-9-21	2309.11657	Distribution-Independent Regression for Generalized Linear Models with  Oblivious Corruptions	cs.DS cs.LG math.ST stat.ML stat.TH
-2023-9-21	2309.11843	Temporal Network Core Decomposition and Community Search	cs.SI cs.DS
+2023-9-21	2309.11843	An Edge-Based Decomposition Framework for Temporal Networks	cs.SI cs.DS
 2023-9-21	2309.11859	BalCon -- resource balancing algorithm for VM consolidation	cs.DS cs.DC cs.DM
 2023-9-21	2309.12025	Robust Approximation Algorithms for Non-monotone $k$-Submodular  Maximization under a Knapsack Constraint	cs.DS cs.CC cs.LG math.CO
 2023-9-21	2309.12031	Simple Approximation Algorithms for Minimizing the Total Weighted  Completion Time of Precedence-Constrained Jobs	cs.DS
@@ -22388,7 +22388,7 @@
 2023-9-22	2309.12687	Fixed confidence community mode estimation	math.ST cs.DS stat.TH
 2023-9-23	2309.12950	Dynamic "Succincter"	cs.DS
 2023-9-23	2309.13225	Faster Approximate All Pairs Shortest Paths	cs.DS
-2023-9-23	2309.13287	Conjunctive Queries on Probabilistic Graphs: The Limits of  Approximability	cs.DB cs.DS
+2023-9-23	2309.13287	Approximating Queries on Probabilistic Graphs	cs.DB cs.DS
 2023-9-23	2309.14363	Infeasibility of constructing a special orthogonal matrix for the  deterministic remote preparation of arbitrary n-qubit state	quant-ph cs.DS cs.ET
 2023-9-24	2309.13647	Online Bin Covering with Exact Parameter Advice	cs.DS
 2023-9-25	2309.13766	Reserve Matching with Thresholds	econ.TH cs.DS
@@ -22472,7 +22472,7 @@
 2023-10-6	2310.04018	Testing Higher-order Clusterability on graphs	cs.DS
 2023-10-6	2310.04064	How to Capture Higher-order Correlations? Generalizing Matrix Softmax  Attention to Kronecker Computation	cs.DS cs.CC cs.CL cs.LG stat.ML
 2023-10-6	2310.04076	Deterministic Clustering in High Dimensional Spaces: Sketches and  Approximation	cs.DS
-2023-10-6	2310.04118	Enumeration and updates for conjunctive linear algebra queries through  expressibility	cs.CC cs.DB cs.DS
+2023-10-6	2310.04118	Enumeration and updates for conjunctive linear algebra queries through  expressibility	cs.CC cs.DB cs.DS cs.LO
 2023-10-6	2310.04130	Errata to: "Faster Deterministic Exponential Time Algorithm for Energy  Games and Mean Payoff Games"	cs.DS
 2023-10-6	2310.04218	A Fixed-Parameter Tractable Algorithm for Counting Markov Equivalence  Classes with the same Skeleton	cs.DS cs.AI cs.LG
 2023-10-6	2310.04236	Optimization with pattern-avoiding input	cs.DS math.CO
@@ -22501,6 +22501,7 @@
 2023-10-10	2310.06166	Threshold Policies with Tight Guarantees for Online Selection with  Convex Costs	cs.GT cs.DS
 2023-10-10	2310.06289	Better and Simpler Lower Bounds for Differentially Private Statistical  Estimation	math.ST cs.CR cs.DS cs.IT cs.LG math.IT stat.TH
 2023-10-10	2310.06333	Learning bounded-degree polytrees with known skeleton	cs.LG cs.DS math.PR math.ST stat.ML stat.TH
+2023-10-10	2310.06623	A quantum algorithm for solving 0-1 Knapsack problems	quant-ph cs.DS
 2023-10-10	2310.06663	Adaptive Cache-Friendly Priority Queue: Enhancing Heap-Tree Efficiency  for Modern Computing	cs.DS
 2023-10-11	2310.07208	Fault-tolerant $k$-Supplier with Outliers	cs.DS
 2023-10-11	2310.07362	Quantum collision circuit, quantum invariants and quantum phase  estimation procedure for fluid dynamic lattice gas automata	quant-ph cs.DS nlin.CG physics.flu-dyn
@@ -22516,7 +22517,7 @@
 2023-10-12	2310.08122	Core-sets for Fair and Diverse Data Summarization	cs.DS cs.LG
 2023-10-12	2310.08243	Computing Twin-Width Parameterized by the Feedback Edge Number	cs.DS
 2023-10-13	2310.08548	Stronger Coreset Bounds for Kernel Density Estimators via Chaining	cs.LG cs.CG cs.DS
-2023-10-13	2310.08568	Placement Optimization of Substitutable Products	cs.DS math.OC
+2023-10-13	2310.08568	When Location Shapes Choice: Placement Optimization of Substitutable  Products	cs.DS math.OC
 2023-10-13	2310.09009	The Complexity of Homomorphism Reconstructibility	cs.DS cs.DM math.CO
 2023-10-13	2310.09023	Sparse Suffix and LCP Array: Simple, Direct, Small, and Fast	cs.DS
 2023-10-14	2310.09196	A 4-approximation algorithm for min max correlation clustering	cs.DS cs.DM cs.LG
@@ -22596,7 +22597,7 @@
 2023-10-27	2310.18068	Simple and Robust Dynamic Two-Dimensional Convex Hull	cs.CG cs.DS
 2023-10-27	2310.18071	Deterministic Primal-Dual Algorithms for Online k-way Matching with  Delays	cs.DS
 2023-10-27	2310.18146	Adaptive Out-Orientations with Applications	cs.DS
-2023-10-27	2310.18388	Middle-mile optimization for next-day delivery	cs.DS
+2023-10-27	2310.18388	Last Truck Scheduling for Middle-mile Next-day Delivery Coverage	cs.DS
 2023-10-28	2310.18265	Structured Semidefinite Programming for Recovering Structured  Preconditioners	cs.DS cs.LG math.OC stat.ML
 2023-10-28	2310.18419	On nonlinear compression costs: when Shannon meets R\'enyi	cs.IT cs.DS math.IT physics.data-an
 2023-10-28	2310.18446	A Novel Skip Orthogonal List for Dynamic Optimal Transport Problem	cs.DS cs.AI cs.CG math.OC
@@ -22698,7 +22699,7 @@
 2023-11-7	2311.03977	A quantum central path algorithm for linear optimization	quant-ph cs.DS math.OC
 2023-11-7	2311.05647	On the density of primes of the form $X^2+c$	cs.DS
 2023-11-8	2311.04135	Random Natural Gradient	quant-ph cs.DS
-2023-11-8	2311.04140	A Nearly Linear-Time Distributed Algorithm for Exact Maximum Matching	cs.DC cs.DS math.CO
+2023-11-8	2311.04140	A Nearly Linear-Time Distributed Algorithm for Maximum Cardinality  Matching	cs.DC cs.DS math.CO
 2023-11-8	2311.04158	Computing Approximate $\ell_p$ Sensitivities	cs.LG cs.DS stat.ML
 2023-11-8	2311.04161	Breaking the Heavy-Tailed Noise Barrier in Stochastic Optimization  Problems	math.OC cs.DS cs.LG math.ST stat.TH
 2023-11-8	2311.04333	Practical Parallel Algorithms for Near-Optimal Densest Subgraphs on  Massive Graphs	cs.DS cs.DC
@@ -22736,7 +22737,7 @@
 2023-11-14	2311.07754	Efficient Prior-Free Mechanisms for No-Regret Agents	cs.GT cs.DS econ.TH
 2023-11-14	2311.07808	A Primal-Dual Analysis of Monotone Submodular Maximization	cs.DS
 2023-11-14	2311.07826	Adaptive Search Optimization: Dynamic Algorithm Selection and Caching  for Enhanced Database Performance	cs.DB cs.DS
-2023-11-14	2311.07889	Optimal RIP Matrices with Slightly Less Randomness	cs.IT cs.DS math.IT
+2023-11-14	2311.07889	Satisfying the Restricted Isometry Property with the Optimal Number of  Rows and Slightly Less Randomness	cs.IT cs.DS math.IT
 2023-11-14	2311.08041	ColorFloat: Constant space token coloring	cs.NI cs.DS
 2023-11-14	2311.08042	Quantum Algorithms for Graph Coloring and other Partitioning, Covering,  and Packing Problems	cs.DS quant-ph
 2023-11-14	2312.11469	An Algebraic Approach to the Longest Path Problem	cs.DS cs.DM math.CO
@@ -22862,7 +22863,7 @@
 2023-12-4	2312.01589	Euclidean Bottleneck Steiner Tree is Fixed-Parameter Tractable	cs.CG cs.DS
 2023-12-4	2312.01759	Faster Sublinear-Time Edit Distance	cs.DS
 2023-12-4	2312.01786	Output-sensitive Complexity of Multi-Objective Integer Network Flow  Problems	cs.CC cs.DM cs.DS math.CO
-2023-12-4	2312.01857	The Intractability of the Picker Routing Problem	cs.DS cs.CC math.OC
+2023-12-4	2312.01857	A note on the complexity of the picker routing problem in multi-block  warehouses and related problems	cs.DS cs.CC math.OC
 2023-12-5	2312.02048	Isomorphism for Tournaments of Small Twin Width	cs.DS cs.DM
 2023-12-5	2312.02097	Inapproximability of Maximum Diameter Clustering for Few Clusters	cs.CG cs.CC cs.DS
 2023-12-5	2312.02132	Hot PATE: Private Aggregation of Distributions for Diverse Task	cs.LG cs.AI cs.CR cs.DS
@@ -22932,7 +22933,7 @@
 2023-12-18	2312.10999	Testing Self-Reducible Samplers	cs.DS
 2023-12-18	2312.11063	A survey on algorithms for Nash equilibria in finite normal-form games	cs.GT cs.AI cs.DS cs.LG econ.TH
 2023-12-18	2312.11086	Multicut Problems in Embedded Graphs: The Dependency of Complexity on  the Demand Pattern	cs.CC cs.DS
-2023-12-18	2312.11113	An Interleaving Distance for Ordered Merge Trees	cs.CG cs.DS
+2023-12-18	2312.11113	Relating Interleaving and Fr\'echet Distances via Ordered Merge Trees	cs.CG cs.DS
 2023-12-19	2312.11390	On Computing Optimal Temporal Branchings and Spanning Subgraphs	cs.DS cs.DM
 2023-12-19	2312.11425	When can you trust feature selection? -- I: A condition-based analysis  of LASSO and generalised hardness of approximation	math.OC cs.DS cs.LG
 2023-12-19	2312.11769	Clustering Mixtures of Bounded Covariance Distributions Under Optimal  Separation	cs.LG cs.DS cs.IT math.IT math.ST stat.ML stat.TH
@@ -22974,7 +22975,7 @@
 2023-12-24	2312.15479	Weighted Proportional Allocations of Indivisible Goods and Chores:  Insights via Matchings	cs.GT cs.DS
 2023-12-24	2312.16213	Deciding the Feasibility and Minimizing the Height of Tangles	cs.CG cs.DM cs.DS
 2023-12-26	2312.15819	Viral Marketing in Social Networks with Competing Products	cs.SI cs.AI cs.DS
-2023-12-26	2312.15959	Range Entropy Queries and Partitioning	cs.DS cs.DB
+2023-12-26	2312.15959	Range (R\'enyi) Entropy Queries and Partitioning	cs.DS cs.DB
 2023-12-27	2312.16370	Nearly Tight Bounds For Differentially Private Min $s$-$t$ and Multiway  Cut	cs.DS
 2023-12-27	2312.16397	Approximate Distance and Shortest-Path Oracles for Fault-Tolerant  Geometric Spanners	cs.CG cs.DS
 2023-12-27	2312.16413	Improved Approximation Coflows Scheduling Algorithms for Minimizing the  Total Weighted Completion Time and Makespan in Heterogeneous Parallel  Networks	cs.DS
@@ -22983,7 +22984,7 @@
 2023-12-28	2312.16616	Agnostically Learning Multi-index Models with Queries	cs.LG cs.DS math.ST stat.ML stat.TH
 2023-12-28	2312.16653	Computing Balanced Solutions for Large International Kidney Exchange  Schemes When Cycle Length Is Unbounded	cs.GT cs.CC cs.DS
 2023-12-28	2312.16820	Catch Me if You Can: Effective Honeypot Placement in Dynamic AD Attack  Graphs	cs.AI cs.CR cs.DS cs.GT
-2023-12-28	2312.16896	Replication-proof Bandit Mechanism Design	cs.GT cs.AI cs.DS
+2023-12-28	2312.16896	Replication-proof Bandit Mechanism Design with Bayesian Agents	cs.GT cs.AI cs.DS
 2023-12-28	2312.16960	Adaptive Flip Graph Algorithm for Matrix Multiplication	cs.SC cs.DS
 2023-12-28	2312.16964	Algorithms for Optimally Shifting Intervals under Intersection Graph  Models	cs.DS
 2023-12-28	2312.17024	Selective Run-Length Encoding	cs.DS cs.IT eess.IV eess.SP math.IT
@@ -22996,6 +22997,7 @@
 2023-12-30	2401.00109	Joint symbolic aggregate approximation of time series	cs.DS cs.DB cs.DC cs.SC
 2023-12-31	2401.00419	Approximation algorithms for Job Scheduling with reconfigurable  resources	cs.DS
 2023-12-31	2401.00422	Interpreting the Curse of Dimensionality from Distance Concentration and  Manifold Effect	cs.LG cs.DS
+2023-12-31	2401.00474	Probabilistically Checkable Reconfiguration Proofs and Inapproximability  of Reconfiguration Problems	cs.CC cs.DM cs.DS
 2024-1-1	2401.00525	Pack and Measure: An Effective Approach for Influence Propagation in  Social Networks	cs.SI cs.AI cs.DS
 2024-1-1	2401.00710	Parallel Integer Sort: Theory and Practice	cs.DS cs.DC
 2024-1-2	2401.01019	Approximating Single-Source Personalized PageRank with Absolute Error  Guarantees	cs.DS
@@ -23042,7 +23044,7 @@
 2024-1-12	2401.06512	An Optimal Randomized Algorithm for Finding the Saddlepoint	cs.CC cs.DS math.CO
 2024-1-12	2401.06547	Are We Still Missing an Item?	cs.DS
 2024-1-13	2401.06714	FPT Approximation for Capacitated Sum of Radii	cs.DS
-2024-1-13	2401.06981	Online Matroid Intersection: Submodular Water-Filling and Matroidal  Welfare Maximization	cs.DS
+2024-1-13	2401.06981	The Online Submodular Assignment Problem	cs.DS
 2024-1-13	2401.07091	Optimization of Inter-group Criteria for Clustering with Minimum Size  Constraints	cs.LG cs.DS
 2024-1-14	2401.07242	Testing Sumsets is Hard	cs.DS cs.CC math.CO
 2024-1-15	2401.07341	Binary weights spanning trees and the $k$-red spanning tree problem in  linear time	cs.DS
@@ -23188,12 +23190,12 @@
 2024-2-13	2402.07874	Factorizing the Brauer monoid in polynomial time	math.RA cs.DS
 2024-2-13	2402.08012	Online Differentially Private Synthetic Data Generation	math.ST cs.DS cs.LG math.PR stat.TH
 2024-2-13	2402.08046	Tight Algorithm for Connected Odd Cycle Transversal Parameterized by  Clique-width	cs.DS
-2024-2-13	2402.08068	The Blocklace: A Universal, Byzantine Fault-Tolerant, Conflict-free  Replicated Data Type	cs.DC cs.DS
+2024-2-13	2402.08068	The Blocklace: A Byzantine-repelling and Universal Conflict-free  Replicated Data Type	cs.DC cs.DS
 2024-2-13	2402.08133	Detecting Low-Degree Truncation	cs.CC cs.DS
 2024-2-13	2402.08216	An Improved Approximation Algorithm for Metric Triangle Packing	cs.DS
 2024-2-13	2402.08229	Causal Discovery under Off-Target Interventions	cs.LG cs.DS stat.ME stat.ML
 2024-2-13	2402.08232	Integrating High-Dimensional Functions Deterministically	cs.DS cs.DM math.CO math.PR
-2024-2-13	2402.08332	Detecting $K_{2,3}$ as an induced minor	math.CO cs.DM cs.DS
+2024-2-13	2402.08332	Induced Minor Models. I. Structural Properties and Algorithmic  Consequences	math.CO cs.DM cs.DS
 2024-2-13	2402.08346	Tight (Double) Exponential Bounds for Identification Problems:  Locating-Dominating Set and Test Cover	cs.DS cs.CC cs.DM
 2024-2-13	2402.08701	Primal-Dual Algorithms with Predictions for Online Bounded Allocation  and Ad-Auctions Problems	cs.DS cs.DM cs.GT cs.LG
 2024-2-14	2402.08545	Polynomial-Time Algorithms for Weaver's Discrepancy Problem in a Dense  Regime	cs.DS
@@ -23222,7 +23224,7 @@
 2024-2-16	2402.10360	Transductive Learning Is Compact	cs.LG cs.CC cs.DS cs.LO stat.ML
 2024-2-16	2402.10445	Collaborative Learning with Different Labeling Functions	cs.LG cs.DS stat.ML
 2024-2-16	2402.10451	Composition Orderings for Linear Functions and Matrix Multiplication  Orderings	cs.DS
-2024-2-16	2402.10457	Learning-Augmented Skip Lists	cs.DS cs.LG
+2024-2-16	2402.10457	Learning-Augmented Search Data Structures	cs.DS cs.LG
 2024-2-16	2402.10627	Alphabet Reduction for Reconfiguration Problems	cs.CC cs.DM cs.DS
 2024-2-16	2402.14026	Probability Tools for Sequential Random Projection	math.ST cs.DS cs.IT cs.NA math.IT math.NA math.PR stat.ML stat.TH
 2024-2-17	2402.10783	On Permutation Selectors and their Applications in Ad-Hoc Radio Networks  Protocols	cs.DS cs.CC
@@ -23304,7 +23306,7 @@
 2024-2-25	2402.15837	An $O(n \log n)$-Time Approximation Scheme for Geometric Many-to-Many  Matching	cs.CG cs.DS
 2024-2-25	2402.16047	List Coloring of some Cayley graphs using Kernel perfections	math.CO cs.DM cs.DS
 2024-2-25	2402.16085	Online Drone Scheduling for Last-mile Delivery	cs.DS
-2024-2-26	2402.16201	Honeybee: Decentralized Peer Sampling with Verifiable Random Walks for  Blockchain Data Sharding	cs.NI cs.CR cs.DC cs.DS cs.MA
+2024-2-26	2402.16201	Honeybee: Byzantine Tolerant Decentralized Peer Sampling with Verifiable  Random Walks	cs.NI cs.CR cs.DC cs.DS cs.MA
 2024-2-26	2402.16205	Enhanced Graph Pattern Matching	cs.DS
 2024-2-26	2402.16259	Problems on Group-labeled Matroid Bases	cs.DM cs.DS math.CO
 2024-2-26	2402.16323	Algorithms for Halfplane Coverage and Related Problems	cs.CG cs.DS
@@ -23319,7 +23321,7 @@
 2024-2-27	2402.17108	Repeated Contracting with Multiple Non-Myopic Agents: Policy Regret and  Limited Liability	cs.GT cs.DS cs.LG
 2024-2-27	2402.17143	Energy-Efficient Scheduling with Predictions	cs.DS cs.LG
 2024-2-27	2402.17160	Choosing Behind the Veil: Tight Bounds for Identity-Blind Online  Algorithms	cs.GT cs.DS
-2024-2-27	2402.17206	Scalable Identification of Minimum Undesignable RNA Motifs on Loop-Pair  Graphs	cs.DS
+2024-2-27	2402.17206	Scalable and Interpretable Identification of Minimal Undesignable RNA  Structure Motifs with Rotational Invariance	cs.DS
 2024-2-27	2402.17220	On the probability of a Pareto record	math.PR cs.DS
 2024-2-27	2402.17221	Sharpened localization of the trailing point of the Pareto record  frontier	math.PR cs.DS
 2024-2-27	2402.17322	Enclosing Points with Geometric Objects	cs.CG cs.DS
@@ -23374,7 +23376,7 @@
 2024-3-5	2403.02140	Matching Algorithms in the Sparse Stochastic Block Model	cs.DS cs.DM
 2024-3-5	2403.02212	Constraint Satisfaction Problems with Advice	cs.DS
 2024-3-5	2403.02300	Statistical Query Lower Bounds for Learning Truncated Gaussians	cs.DS cs.LG math.ST stat.ML stat.TH
-2024-3-5	2403.02317	Contract Design for Pandora's Box	cs.GT cs.DS
+2024-3-5	2403.02317	Designing Exploration Contracts	cs.GT cs.DS
 2024-3-5	2403.02582	On Approximate Fully-Dynamic Matching and Online Matrix-Vector  Multiplication	cs.DS
 2024-3-5	2403.02636	Algorithms for Galois Words: Detection, Factorization, and Rotation	cs.DS
 2024-3-5	2403.02665	DGAP: Efficient Dynamic Graph Analysis on Persistent Memory	cs.DS cs.DC cs.PF
@@ -23398,7 +23400,7 @@
 2024-3-7	2403.04230	Equivalence Testing: The Power of Bounded Adaptivity	cs.DS
 2024-3-7	2403.04263	Switching Classes: Characterization and Computation	cs.DS math.CO
 2024-3-7	2403.04265	Conflict and Fairness in Resource Allocation	cs.GT cs.DS
-2024-3-7	2403.04542	A Simple and Near-Optimal Algorithm for Directed Expander Decompositions	cs.DS
+2024-3-7	2403.04542	Near-Optimal Algorithm for Directed Expander Decompositions	cs.DS
 2024-3-8	2403.04589	Algorithms and complexity for path covers of temporal DAGs: when is  Dilworth dynamic?	cs.DS cs.DM math.CO
 2024-3-8	2403.04598	Optimizing Inventory Placement for a Downstream Online Matching Problem	cs.DS
 2024-3-8	2403.04630	Time-Aware Projections: Truly Node-Private Graph Statistics under  Continual Observation	cs.DS cs.CR
@@ -23415,12 +23417,12 @@
 2024-3-9	2403.05697	Dynamic Convex Hulls for Simple Paths	cs.CG cs.DS
 2024-3-9	2403.05775	Scalable $k$-clique Densest Subgraph Search	cs.DS
 2024-3-9	2403.05781	Approximate Bipartite $b$-Matching using Multiplicative Auction	cs.DS
-2024-3-10	2403.05943	Hamiltonicity, Path Cover, and Independence Number: An FPT Perspective	cs.DS cs.DM
+2024-3-10	2403.05943	Path Cover, Hamiltonicity, and Independence Number: An FPT Perspective	cs.DS cs.DM
 2024-3-11	2403.06290	Revisiting Path Contraction and Cycle Contraction	cs.DS
 2024-3-11	2403.06335	Improved FPT Approximation Scheme and Approximate Kernel for  Biclique-Free Max k-Weight SAT: Greedy Strikes Back	cs.DS
 2024-3-11	2403.06348	Accelerating Sparse Tensor Decomposition Using Adaptive Linearized  Representation	cs.DC cs.DS cs.PF
 2024-3-11	2403.06547	Fun Maximizing Search, (Non) Instance Optimality, and Video Games for  Parrots	cs.DS
-2024-3-11	2403.06564	An Algorithm for Correct Computation of Reeb Spaces for PL Bivariate  Fields	cs.CG cs.DS
+2024-3-11	2403.06564	An Algorithm for Fast and Correct Computation of Reeb Spaces for PL  Bivariate Fields	cs.CG cs.DS
 2024-3-11	2403.06580	Arborescences and Shortest Path Trees when Colors Matter	cs.DS cs.CC cs.DM
 2024-3-11	2403.06608	Balanced Substructures in Bicolored Graphs	cs.DS cs.CC
 2024-3-11	2403.06667	Optimal Bounds for Distinct Quartics	cs.DS math.CO
@@ -23451,7 +23453,7 @@
 2024-3-15	2403.10116	Almost Instance-optimal Clipping for Summation Problems in the Shuffle  Model of Differential Privacy	cs.CR cs.DS
 2024-3-15	2403.10167	Efficient Detection of Exchangeable Factors in Factor Graphs	cs.AI cs.DS
 2024-3-15	2403.10184	Lifted Causal Inference in Relational Domains	cs.AI cs.DS
-2024-3-15	2403.10332	GreedyML: A Parallel Algorithm for Maximizing Submodular Functions	cs.DC cs.DS cs.LG
+2024-3-15	2403.10332	GreedyML: A Parallel Algorithm for Maximizing Constrained Submodular  Functions	cs.DC cs.DS cs.LG
 2024-3-15	2403.10365	Scalable Algorithms for Individual Preference Stable Clustering	cs.DS cs.AI cs.CY cs.LG
 2024-3-16	2403.10416	Robust Sparse Estimation for Gaussians with Optimal Error under Huber  Contamination	cs.LG cs.DS math.ST stat.ML stat.TH
 2024-3-16	2403.10444	Block Verification Accelerates Speculative Decoding	cs.LG cs.CL cs.DS cs.IT math.IT
@@ -23460,7 +23462,7 @@
 2024-3-16	2403.10868	Approximation Ratio of the Min-Degree Greedy Algorithm for Maximum  Independent Set on Interval and Chordal Graphs	cs.DS
 2024-3-16	2403.10896	Solving the Multiobjective Quasi-Clique Problem	cs.DM cs.DS
 2024-3-17	2403.11018	On the Average Runtime of an Open Source Binomial Random Variate  Generation Algorithm	cs.DS cs.MS
-2024-3-18	2403.11267	Barely Random Algorithms for Metrical Task Systems	cs.DS cs.GT math.OC
+2024-3-18	2403.11267	Barely Random Algorithms and Collective Metrical Task Systems	cs.DS cs.GT math.OC
 2024-3-18	2403.11320	A constant time complexity algorithm for the unbounded knapsack problem  with bounded coefficients	cs.DS cs.CC
 2024-3-18	2403.11426	ETH-Tight Algorithm for Cycle Packing on Unit Disk Graphs	cs.DS cs.CG
 2024-3-18	2403.11445	Budget Recycling Differential Privacy	cs.CR cs.DS eess.SP
@@ -23479,9 +23481,9 @@
 2024-3-21	2403.14332	A Differentially Private Clustering Algorithm for Well-Clustered Graphs	cs.DS cs.CR cs.LG
 2024-3-22	2403.14492	Induced Subforests and Superforests	cs.DS math.CO
 2024-3-22	2403.15224	Differentially Private Ad Conversion Measurement	cs.CR cs.DS
-2024-3-23	2403.15366	Universal Harmonic Sketching over Turnstile Streams	cs.DS cs.DB cs.DC
+2024-3-23	2403.15366	Harmonic Decomposition in Data Sketches	cs.DS cs.DB cs.DC
 2024-3-23	2403.15547	Approximation Algorithms for Network Design in Non-Uniform Fault Models	cs.DS
-2024-3-23	2403.15623	Approximation Algorithms for School Assignment: Group Fairness and  Multi-criteria Optimization	cs.DS cs.GT
+2024-3-23	2403.15623	Group Fairness and Multi-criteria Optimization in School Assignment	cs.DS cs.GT
 2024-3-23	2403.15811	Distance Adjustment of a Graph Drawing Stress Model	cs.DS
 2024-3-24	2403.15871	On the complexity and approximability of Bounded access Lempel Ziv  coding	cs.DS cs.CC
 2024-3-24	2403.15961	SAT Encoding of Partial Ordering Models for Graph Coloring Problems	cs.AI cs.DM cs.DS cs.LO
@@ -23500,7 +23502,7 @@
 2024-3-26	2403.17658	Generalising the maximum independent set algorithm via Boolean networks	cs.DS cs.DM math.CO
 2024-3-26	2403.17673	How Private are DP-SGD Implementations?	cs.LG cs.CR cs.DS
 2024-3-26	2403.17766	Counting Stars is Constant-Degree Optimal For Detecting Any Planted  Subgraph	math.ST cs.CC cs.DS stat.TH
-2024-3-27	2403.18059	Online Submodular Welfare Maximization Meets Post-Allocation  Stochasticity and Reusability	cs.DS
+2024-3-27	2403.18059	Optimality of Non-Adaptive Algorithms in Online Submodular Welfare  Maximization with Stochastic Outcomes	cs.DS
 2024-3-27	2403.18497	Minimum sum vertex cover: kernelization and parameterized algorithms	cs.DS
 2024-3-27	2403.18513	Realizing temporal transportation trees	cs.DS
 2024-3-28	2403.18682	JumpBackHash: Say Goodbye to the Modulo Operation to Distribute Keys  Uniformly to Buckets	cs.DS cs.DB cs.DC
@@ -23512,11 +23514,11 @@
 2024-3-28	2403.19300	Random Multi-Type Spanning Forests for Synchronization on Sparse Graphs	math.PR cs.DS math.ST stat.TH
 2024-3-28	2403.19401	Hardness of Learning Boolean Functions from Label Proportions	cs.CC cs.DS cs.LG
 2024-3-29	2403.19512	Quantum Realization of the Finite Element Method	quant-ph cs.DS cs.NA math.NA
-2024-3-29	2403.19867	Finding Decision Tree Splits in Streaming and Massively Parallel Models	cs.DS cs.AI cs.LG
+2024-3-29	2403.19867	Constructing Decision Trees from Data Streams	cs.DS cs.AI cs.LG
 2024-3-29	2403.19878	Algorithmic strategies for finding the best TSP 2-OPT move in average  sub-quadratic time	cs.DS
 2024-3-29	2403.19911	Computing a Fixed Point of Contraction Maps in Polynomial Queries	cs.CC cs.DS cs.GT
 2024-3-29	2403.20165	A Simple and Efficient Algorithm for Sorting Signed Permutations by  Reversals	cs.DS
-2024-3-30	2403.20256	Weighted Reservoir Sampling with Replacement from Multiple Data Streams	cs.DS
+2024-3-30	2403.20256	Investigating Methods for Weighted Reservoir Sampling with Replacement	cs.DS
 2024-3-30	2403.20283	A New Information Complexity Measure for Multi-pass Streaming with  Applications	cs.CC cs.DS
 2024-3-30	2403.20307	Optimal Communication for Classic Functions in the Coordinator Model and  Beyond	cs.DS
 2024-3-30	2403.20326	Shaving Logs via Large Sieve Inequality: Faster Algorithms for Sparse  Convolution and More	cs.DS
@@ -23553,7 +23555,7 @@
 2024-4-5	2404.03958	Minor Containment and Disjoint Paths in almost-linear time	cs.DS math.CO
 2024-4-5	2404.03979	Stability in Graphs with Matroid Constraints	cs.DS cs.DM
 2024-4-5	2404.04124	An Objective Improvement Approach to Solving Discounted Payoff Games	cs.DS
-2024-4-6	2404.04158	Hardness of circuit and monotone diameters of polytopes	math.OC cs.DM cs.DS math.CO
+2024-4-6	2404.04158	Complexity of polytope diameters via perfect matchings	math.OC cs.DM cs.DS math.CO
 2024-4-6	2404.04369	A Fine-grained Classification of Subquadratic Patterns for Subgraph  Listing and Friends	cs.DS
 2024-4-6	2404.04535	Quantum Speedup for Some Geometric 3SUM-Hard Problems and Beyond	cs.CG cs.DS
 2024-4-6	2404.04552	Fast and Simple Sorting Using Partial Information	cs.DS
@@ -23563,7 +23565,7 @@
 2024-4-7	2404.04713	Faster Algorithms for Fair Max-Min Diversification in $\mathbb{R}^d$	cs.DB cs.DS
 2024-4-7	2404.04773	Approximating Unrelated Machine Weighted Completion Time Using Iterative  Rounding and Computer Assisted Proofs	cs.DS
 2024-4-7	2404.04795	Range Longest Increasing Subsequence and its Relatives: Beating  Quadratic Barrier and Approaching Optimality	cs.DS
-2024-4-8	2404.04987	Chromatic number in $1.9999^n$ time? Fast deterministic set partitioning  under the asymptotic rank conjecture	cs.DS
+2024-4-8	2404.04987	Fast Deterministic Chromatic Number under the Asymptotic Rank Conjecture	cs.DS
 2024-4-8	2404.05045	Spanners in Planar Domains via Steiner Spanners and non-Steiner Tree  Covers	cs.CG cs.DS
 2024-4-8	2404.05172	Directed Buy-at-Bulk Spanners	cs.DS
 2024-4-8	2404.05271	Scheduling Multi-Server Jobs is Not Easy	cs.DS cs.IT math.IT
@@ -23580,7 +23582,7 @@
 2024-4-9	2404.06280	Algorithms for Caching and MTS with reduced number of predictions	cs.LG cs.DS
 2024-4-9	2404.06282	Simple algorithms to test and learn local Hamiltonians	quant-ph cs.CC cs.DS cs.IT cs.LG math.IT
 2024-4-9	2404.06293	Optimal Stopping with Interdependent Values	cs.GT cs.DS
-2024-4-9	2404.06327	Characterizations of Sparsifiability for Affine CSPs and Symmetric CSPs	cs.DS
+2024-4-9	2404.06327	Efficient Algorithms and New Characterizations for CSP Sparsification	cs.DS
 2024-4-10	2404.06401	Bounded Edit Distance: Optimal Static and Dynamic Algorithms for Small  Integer Weights	cs.DS
 2024-4-10	2404.06427	A universal sequence of tensors for the asymptotic rank conjecture	cs.CC cs.DS math.AG
 2024-4-10	2404.06447	The Central Spanning Tree Problem	cs.DM cs.CV cs.DS math.CO math.OC
@@ -23601,7 +23603,7 @@
 2024-4-11	2404.07615	Glauber dynamics for the hard-core model on bounded-degree $H$-free  graphs	math.PR cs.DS math.CO
 2024-4-11	2404.07624	An improvement of degree-based hashing (DBH) graph partition method,  using a novel metric	cs.DS
 2024-4-11	2404.07801	An efficient uniqueness theorem for overcomplete tensor decomposition	cs.DS cs.CC cs.DM math.CO
-2024-4-12	2404.07881	Diagram Analysis of Iterative Algorithms	cs.CC cs.DS math.CO
+2024-4-12	2404.07881	Fourier Analysis of Iterative Algorithms	cs.CC cs.DS math.CO
 2024-4-12	2404.08085	Matrix Multiplication Reductions	cs.DS
 2024-4-12	2404.08158	On the Power of Interactive Proofs for Learning	cs.CC cs.DS cs.LG
 2024-4-12	2404.08162	Naively Sorting Evolving Data is Optimal and Robust	cs.DS
@@ -23829,7 +23831,7 @@
 2024-5-15	2405.08787	Explicit Orthogonal Arrays and Universal Hashing with Arbitrary  Parameters	cs.DS cs.CC math.CO math.ST stat.TH
 2024-5-15	2405.08927	Expanderizing Higher Order Random Walks	cs.DS
 2024-5-15	2405.08931	A QPTAS for Facility Location on Unit Disk graphs	cs.DS
-2024-5-15	2405.08938	Pointwise Lipschitz Continuous Graph Algorithms via Proximal Gradient  Analysis	cs.DS
+2024-5-15	2405.08938	Pointwise Lipschitz Continuous Graph Algorithms via Proximal Gradient  Trajectory Analysis	cs.DS
 2024-5-15	2405.09011	Symmetric-Difference (Degeneracy) and Signed Tree Models	cs.DS cs.CC cs.DM math.CO
 2024-5-15	2405.09141	Tree-Packing Revisited: Faster Fully Dynamic Min-Cut and Arboricity	cs.DS
 2024-5-15	2405.09157	A Primal-Dual Framework for Symmetric Cone Programming	math.OC cs.CG cs.DC cs.DS
@@ -23987,7 +23989,7 @@
 2024-6-6	2406.03802	Continual Counting with Gradual Privacy Expiration	cs.CR cs.DS
 2024-6-6	2406.03922	Engineering Semi-streaming DFS algorithms	cs.DS
 2024-6-6	2406.03972	Eigenpath traversal by Poisson-distributed phase randomisation	quant-ph cs.DS
-2024-6-6	2406.04385	L'algorithme: pourquoi et comment le d\'efinir pour l'enseigner	cs.DS math.HO
+2024-6-6	2406.04385	L'algorithme : pourquoi et comment le d{\'e}finir pour l'enseigner	cs.DS math.HO
 2024-6-7	2406.04179	On the zeros of partition functions with multi-spin interactions	math.PR cs.DS math-ph math.CO math.MP
 2024-6-7	2406.04229	The CLRS-Text Algorithmic Reasoning Language Benchmark	cs.LG cs.AI cs.CL cs.DS stat.ML
 2024-6-7	2406.04336	On the Expressive Power of Spectral Invariant Graph Neural Networks	cs.LG cs.DM cs.DS math.CO math.SP
@@ -23998,7 +24000,7 @@
 2024-6-7	2406.04857	A Near-Linear Time Approximation Algorithm for Beyond-Worst-Case Graph  Clustering	cs.DS cs.LG
 2024-6-7	2406.04860	Multi-View Stochastic Block Models	cs.LG cs.DS stat.ML
 2024-6-7	2406.04868	Perturb-and-Project: Differentially Private Similarities and Marginals	cs.LG cs.CR cs.DS
-2024-6-7	2406.05162	Improved Deletion From an AVL Tree	cs.DS
+2024-6-7	2406.05162	Comparative Performance of the AVL Tree and Three Variants of the  Red-Black Tree	cs.DS
 2024-6-7	2407.07096	Spectral Toolkit of Algorithms for Graphs: Technical Report (2)	cs.DS cs.LG cs.MS cs.SI
 2024-6-8	2406.05066	Efficient Centroid-Linkage Clustering	cs.DS
 2024-6-8	2406.05077	Improved Mechanisms and Prophet Inequalities for Graphical Dependencies	cs.GT cs.DS
@@ -24155,7 +24157,7 @@
 2024-7-3	2407.02958	Finding Spanning Trees with Perfect Matchings	cs.DS math.CO
 2024-7-3	2407.03176	An Improved Algorithm for Shortest Paths in Weighted Unit-Disk Graphs	cs.CG cs.DS
 2024-7-4	2407.03229	Matroid Intersection under Minimum Rank Oracle	cs.DS math.CO
-2024-7-4	2407.03262	Nearly Linear Sparsification of $\ell_p$ Subspace Approximation	cs.DS cs.LG
+2024-7-4	2407.03262	Ridge Leverage Score Sampling for $\ell_p$ Subspace Approximation	cs.DS cs.LG
 2024-7-4	2407.03666	Greedy on Preorder is Linear for Preorder Initial Tree	cs.DS
 2024-7-4	2407.03812	Algorithmic Results for Weak Roman Domination Problem in Graphs	cs.DM cs.DS
 2024-7-4	2407.03833	Quantum spectral method for gradient and Hessian estimation	quant-ph cs.DS
@@ -24197,7 +24199,7 @@
 2024-7-9	2407.06493	Algorithmic aspects of semistability of quiver representations	math.OC cs.DM cs.DS math.CO math.RT
 2024-7-9	2407.06801	From Graph Properties to Graph Parameters: Tight Bounds for Counting on  Small Subgraphs	cs.CC cs.DS
 2024-7-9	2407.06881	Efficient Stochastic Routing in Path-Centric Uncertain Road Networks --  Extended Version	cs.DS
-2024-7-9	2407.06911	Differentially Private Multiway and $k$-Cut	cs.CR cs.DS
+2024-7-9	2407.06911	Differentially Private Algorithms for Graph Cuts: A Shifting Mechanism  Approach and More	cs.CR cs.DS
 2024-7-9	2407.06912	Optimal Neighborhood Exploration for Dynamic Independent Sets	cs.DS
 2024-7-9	2407.06913	A Simple, Nearly-Optimal Algorithm for Differentially Private All-Pairs  Shortest Distances	cs.DS
 2024-7-10	2407.07051	Counting Small Induced Subgraphs: Hardness via Fourier Analysis	cs.CC cs.DS
@@ -24229,7 +24231,7 @@
 2024-7-13	2407.09651	Fine-Grained Optimality of Partially Dynamic Shortest Paths and More	cs.DS cs.CC
 2024-7-13	2407.09671	Obstructions to Erd\H{o}s-P\'osa Dualities for Minors	math.CO cs.DS
 2024-7-13	2407.09676	An efficient algorithm to compute the minimum free energy of interacting  nucleic acid strands	cs.DS cs.CC cs.DM physics.bio-ph q-bio.BM
-2024-7-13	2407.09776	Orientability of undirected phylogenetic networks to a desired class:  Practical algorithms and application to tree-child orientation	cs.DS
+2024-7-13	2407.09776	Orientability of Undirected Phylogenetic Networks to a Desired Class:  Practical Algorithms and Application to Tree-Child Orientation	cs.DS
 2024-7-13	2407.18956	MIOV: Reordering MOVI for even better locality	cs.DS
 2024-7-14	2407.10003	A Dynamic Algorithm for Weighted Submodular Cover Problem	cs.DS cs.LG
 2024-7-14	2407.10034	Partial Implementation of Max Flow and Min Cost Flow in Almost-Linear  Time	cs.DS cs.DM
@@ -24280,7 +24282,7 @@
 2024-7-22	2407.15261	Pandora's Box Problem Over Time	cs.GT cs.DS math.PR
 2024-7-22	2407.15278	Minimizing the Number of Roles in Bottom-Up Role-Mining using Maximal  Biclique Enumeration	cs.CR cs.DS
 2024-7-22	2407.15285	New Philosopher Inequalities for Online Bayesian Matching, via Pivotal  Sampling	cs.DS
-2024-7-22	2407.15462	Efficient Retrieval with Learned Similarities	cs.IR cs.DB cs.DS cs.LG
+2024-7-22	2407.15462	Retrieval with Learned Similarities	cs.IR cs.DB cs.DS cs.LG
 2024-7-22	2407.15514	Twin-Width Meets Feedback Edges and Vertex Integrity	cs.DS
 2024-7-22	2407.15599	Online String Attractors	cs.DS
 2024-7-23	2407.15737	Scheduling on a Stochastic Number of Machines	cs.DS
@@ -24302,24 +24304,24 @@
 2024-7-24	2407.16850	Covering a Graph with Dense Subgraph Families, via Triangle-Rich Sets	cs.SI cs.DS cs.IR
 2024-7-24	2407.17208	Simple Grid Polygon Online Exploration Revisited	cs.CG cs.DS
 2024-7-25	2407.17376	Distance Reconstruction of Sparse Random Graphs	math.CO cs.DS
-2024-7-25	2407.17619	The Power of Graph Sparsification in the Continual Release Model	cs.DS cs.CR
+2024-7-25	2407.17619	Sublinear Space Graph Algorithms in the Continual Release Model	cs.DS cs.CR
 2024-7-25	2407.17712	Improving Online Algorithms via ML Predictions	cs.DS cs.LG
-2024-7-25	2407.17814	All-Pairs Suffix-Prefix on Dynamic Set of Strings	cs.DS
+2024-7-25	2407.17814	All-Pairs Suffix-Prefix on Fully Dynamic Set of Strings	cs.DS
 2024-7-25	2407.18006	The Existential Theory of the Reals as a Complexity Class: A Compendium	cs.CC cs.CG cs.DS cs.FL cs.LO
 2024-7-25	2407.18031	$k$-Center Clustering in Distributed Models	cs.DC cs.DS
 2024-7-25	2407.18036	Multi-View Structural Graph Summaries	cs.DS
-2024-7-26	2407.18216	Fast computation of the period and of the shortest cover of a string  using its Character-Distance-Sampling representation	cs.DS
+2024-7-26	2407.18216	Efficient Computation of Periods and Covers Using Sampling	cs.DS
 2024-7-26	2407.18228	Parameterized Algorithms on Integer Sets with Small Doubling: Integer  Programming, Subset Sum and k-SUM	cs.DS
 2024-7-26	2407.18436	A Model for Combinatorial Dictionary Learning and Inference	cs.LG cs.DS
 2024-7-26	2407.18591	Reconstruction of geometric random graphs with the Simple algorithm	cs.DS math.PR
 2024-7-26	2407.18620	Rollercoasters with Plateaus	cs.DS math.CO
-2024-7-26	2407.18753	On Computing the Smallest Suffixient Set	cs.DS
+2024-7-26	2407.18753	Suffixient Arrays: a New Efficient Suffix Array Compression Technique	cs.DS
 2024-7-26	2407.18758	On Approximating the Weighted Region Problem in Square Tessellations	cs.CG cs.DS
 2024-7-27	2407.19195	Obstacle-Aware Length-Matching Routing for Any-Direction Traces in  Printed Circuit Board	cs.AR cs.CG cs.DS
 2024-7-28	2408.03465	On the geometry of $k$-SAT solutions: what more can PPZ and Sch\"oning's  algorithms do?	cs.CC cs.DS
 2024-7-29	2407.19575	Bridging Classical and Quantum: Group-Theoretic Approach to Quantum  Circuit Simulation	quant-ph cs.CC cs.DS math-ph math.GR math.MP
 2024-7-29	2407.19777	Revisiting Agnostic PAC Learning	cs.LG cs.DS math.ST stat.ML stat.TH
-2024-7-29	2407.19796	Subsequence Pattern Matching with Segment Number Constraint	cs.DS
+2024-7-29	2407.19796	Subsequence Matching and LCS with Segment Number Constraints	cs.DS
 2024-7-29	2407.19905	The Bidirected Cut Relaxation for Steiner Tree has Integrality Gap  Smaller than 2	cs.DS cs.DM
 2024-7-29	2407.19946	Engineering an Efficient Approximate DNF-Counter	cs.DS
 2024-7-29	2407.20036	Planning For Edge Failure in Fixed-Charge Flow Networks	cs.DS cs.CE
@@ -24365,7 +24367,7 @@
 2024-8-8	2408.04253	Simple Linear-time Repetition Factorization	cs.DS
 2024-8-8	2408.04445	On some randomized algorithms and their evaluation	cs.DM cs.DS math.CO
 2024-8-9	2408.04517	Approximating $\delta$-Covering	cs.DS
-2024-8-9	2408.04537	Constant-time $\psi$ queries in $O \left( r \log \frac{n}{r} + r \log  \sigma \right)$ bits	cs.DS
+2024-8-9	2408.04537	Faster run-length compressed suffix arrays	cs.DS
 2024-8-9	2408.04613	Core-Sparse Monge Matrix Multiplication: Improved Algorithm and  Applications	cs.DS
 2024-8-9	2408.04615	SSD Set System, Graph Decomposition and Hamiltonian Cycle	cs.DS cs.DM math.CO
 2024-8-9	2408.04620	Regularized Unconstrained Weakly Submodular Maximization	cs.DS
@@ -24387,23 +24389,23 @@
 2024-8-12	2408.06395	Fast John Ellipsoid Computation with Differential Privacy Optimization	cs.DS cs.CR cs.LG
 2024-8-13	2408.06213	Batched Ranged Random Integer Generation	cs.DS
 2024-8-13	2408.06241	Sequential non-determinism in tile self-assembly: a general framework  and an application to efficient temperature-1 self-assembly of squares	cs.DS cs.CG
-2024-8-13	2408.06289	Towards tolerant testing stabilizer states	quant-ph cs.CC cs.DS
+2024-8-13	2408.06289	Polynomial-time tolerant testing stabilizer states	quant-ph cs.CC cs.DS
 2024-8-13	2408.06308	Dynamic Traffic Assignment for Public Transport with Vehicle Capacities	cs.DS cs.DM
 2024-8-13	2408.06324	Online Vehicle Routing with Pickups and Deliveries under Time-Dependent  Travel-Time Constraints	cs.CE cs.DS
 2024-8-13	2408.06455	Massively Parallel Minimum Spanning Tree in General Metric Spaces	cs.DS
 2024-8-13	2408.06475	Quasi-Monte Carlo Beyond Hardy-Krause	cs.DS cs.CG cs.DM cs.NA math.NA
 2024-8-13	2408.06489	Path Partitions of Phylogenetic Networks	cs.DS
-2024-8-13	2408.06685	Faster Lattice Basis Computation -- The Generalization of the Euclidean  Algorithm	cs.DS cs.DM math.AG
+2024-8-13	2408.06685	Faster Lattice Basis Computation via a Natural Generalization of the  Euclidean Algorithm	cs.DS cs.DM math.AG
 2024-8-13	2408.06853	Better Gaussian Mechanism using Correlated Noise	cs.CR cs.DS
 2024-8-13	2408.06924	Engineering Hypergraph $b$-Matching Algorithms	cs.DS
 2024-8-14	2408.06967	Stabilizer bootstrapping: A recipe for efficient agnostic tomography and  magic estimation	quant-ph cs.CC cs.DS cs.LG
 2024-8-14	2408.06997	Faster Private Minimum Spanning Trees	cs.DS cs.CR cs.LG
-2024-8-14	2408.07019	A $5/4$ Approximation for Two-Edge-Connectivity	cs.DS math.CO
+2024-8-14	2408.07019	A $5/4$-Approximation for Two-Edge Connectivity	cs.DS math.CO
 2024-8-14	2408.07021	Count on Your Elders: Laplace vs Gaussian Noise	cs.CR cs.DS
-2024-8-14	2408.07161	Fast and Accurate Algorithms to Calculate Expected Modularity in  Probabilistic Networks	cs.DS cs.SI
+2024-8-14	2408.07161	On the accurate computation of expected modularity in probabilistic  networks	cs.DS cs.SI
 2024-8-15	2408.07616	Prophet Inequalities: Competing with the Top $\ell$ Items is Easy	cs.DS cs.GT math.OC
 2024-8-15	2408.07650	Exact Trajectory Similarity Search With N-tree: An Efficient Metric  Index for kNN and Range Queries	cs.DB cs.DS cs.IR
-2024-8-15	2408.07831	CarbonClipper: Optimal Algorithms for Carbon-Aware Spatiotemporal  Workload Management	cs.DS cs.DC cs.LG
+2024-8-15	2408.07831	Learning-Augmented Competitive Algorithms for Spatiotemporal Online  Allocation with Deadline Constraints	cs.DS cs.DC cs.LG
 2024-8-15	2408.07978	Coupling without Communication and Drafter-Invariant Speculative  Decoding	cs.DS cs.CL cs.LG
 2024-8-16	2408.08227	Evolving A* to Efficiently Solve the k Shortest-Path Problem (Extended  Version)	cs.DS cs.AI
 2024-8-16	2408.08256	Palette Sparsification for Graphs with Sparse Neighborhoods	cs.DS cs.DM math.CO
@@ -24447,7 +24449,7 @@
 2024-8-23	2408.12524	Stochastic Online Correlated Selection	cs.DS cs.GT
 2024-8-23	2408.12931	Exponent-Strings and Their Edit Distance	cs.FL cs.DS
 2024-8-23	2408.12967	Single-Machine Scheduling to Minimize the Number of Tardy Jobs with  Release Dates	cs.DS cs.DM
-2024-8-23	2408.12997	Encoding Semi-Directed Phylogenetic Networks with Quarnets	q-bio.PE cs.DS math.CO
+2024-8-23	2408.12997	When are quarnets sufficient to reconstruct semi-directed phylogenetic  networks?	q-bio.PE cs.DS math.CO
 2024-8-23	2408.12998	Tight Bounds for Constant-Round Domination on Graphs of High Girth and  Low Expansion	cs.DC cs.DS
 2024-8-23	2408.13045	Adaptive complexity of log-concave sampling	cs.DS
 2024-8-24	2408.13178	The Power of Migrations in Dynamic Bin Packing	cs.DS
@@ -24528,7 +24530,7 @@
 2024-9-6	2409.04212	Improving the Parameter Dependency for High-Multiplicity Scheduling on  Uniform Machines	cs.DS
 2024-9-6	2409.04225	FPT Algorithms using Minimal Parameters for a Generalized Version of  Maximin Shares	cs.DS
 2024-9-6	2409.04320	Faster Sampling from Log-Concave Densities over Polytopes via Efficient  Linear Solvers	cs.DS cs.LG stat.ML
-2024-9-6	2409.05901	Fast ($\sim N$) Diffusion Map Algorithm	cs.DS cs.LG
+2024-9-6	2409.05901	Diffusion Map Autoencoder	cs.DS cs.LG
 2024-9-6	2409.15318	On the Complexity of Neural Computation in Superposition	cs.CC cs.AI cs.DS cs.NE
 2024-9-7	2409.04402	MATWA: A Web Toolkit for Matching under Preferences	cs.DS cs.GT
 2024-9-7	2409.04786	Subexponential Parameterized Algorithms for Hitting Subgraphs	cs.DS
@@ -24537,7 +24539,7 @@
 2024-9-8	2409.04897	Centralized Selection with Preferences in the Presence of Biases	cs.DS cs.CY cs.LG econ.TH stat.ML
 2024-9-8	2409.04984	FPT approximations for Capacitated Sum of Radii and Diameters	cs.DS
 2024-9-8	2409.05020	A Performance Bound for the Greedy Algorithm in a Generalized Class of  String Optimization Problems	eess.SY cs.DS cs.SY
-2024-9-9	2409.05284	Efficiently Learning Markov Random Fields from Dynamics	cs.LG cs.DS stat.ML
+2024-9-9	2409.05284	Bypassing the Noisy Parity Barrier: Learning Higher-Order Markov Random  Fields from Dynamics	cs.LG cs.DS stat.ML
 2024-9-10	2409.06008	OciorCOOL: Faster Byzantine Agreement and Reliable Broadcast	cs.DC cs.CR cs.DS cs.IT math.IT
 2024-9-10	2409.06014	Robust Max Selection	cs.DS
 2024-9-10	2409.06034	Reconstructing semi-directed level-1 networks using few quarnets	q-bio.PE cs.DS math.CO
@@ -24549,7 +24551,7 @@
 2024-9-10	2409.06486	Coordinated Motion Planning: Multi-Agent Path Finding in a Densely  Packed, Bounded Domain	cs.CG cs.DS
 2024-9-10	2409.06556	Adversary Resilient Learned Bloom Filters	cs.CR cs.DS
 2024-9-11	2409.07187	A Simple Linear Space Data Structure for ANN with Application in  Differential Privacy	cs.DS
-2024-9-11	2409.07201	Improved Hardness Results of the Cardinality-Based Minimum s-t Cut  Problem in Hypergraphs	cs.CC cs.DS
+2024-9-11	2409.07201	Improved Hardness and Approximations for Cardinality-Based Minimum  $s$-$t$ Cuts Problems in Hypergraphs	cs.CC cs.DS
 2024-9-11	2409.07222	Dual-Step Optimization for Binary Sequences with High Merit Factors	cs.DS
 2024-9-11	2409.07283	Deterministic approximation for the volume of the truncated fractional  matching polytope	cs.DS cs.DM math.CO
 2024-9-12	2409.07719	Static Pricing for Single Sample Multi-unit Prophet Inequalities	cs.GT cs.DS
@@ -24557,7 +24559,7 @@
 2024-9-12	2409.07840	Computing the LZ-End parsing: Easy to implement and practically  efficient	cs.DS
 2024-9-12	2409.07868	An Optimal Algorithm for Sorting Pattern-Avoiding Sequences	cs.DS
 2024-9-12	2409.08037	Fine-Grained Complexity of Multiple Domination and Dominating Patterns  in Sparse Graphs	cs.DS
-2024-9-13	2409.08219	Graph Inspection for Robotic Motion Planning: Do Arithmetic Circuits  Help?	cs.RO cs.DS
+2024-9-13	2409.08219	A Space-Efficient Algebraic Approach to Robotic Motion Planning	cs.RO cs.DS
 2024-9-13	2409.08227	Towards Instance-Optimal Euclidean Spanners	cs.CG cs.DS
 2024-9-13	2409.08350	An efficient heuristic for approximate maximum flow computations	cs.DS stat.ME
 2024-9-13	2409.08363	Compression with wildcards: All induced metric subgraphs	math.CO cs.DS
@@ -24664,7 +24666,7 @@
 2024-10-1	2409.20362	TwinArray Sort: An Ultrarapid Conditional Non-Comparison Based Sorting  Algorithm	cs.DS cs.CC
 2024-10-1	2409.20460	The Secretary Problem with Predicted Additive Gap	cs.DS cs.GT
 2024-10-1	2410.00209	Closed Repeats	cs.DS
-2024-10-1	2410.00568	A Note on Approximation of Spanning Tree Congestion	cs.DS cs.DM
+2024-10-1	2410.00568	Approximation of Spanning Tree Congestion using Hereditary Bisection	cs.DS cs.DM
 2024-10-1	2410.00598	FPT Approximations for Fair $k$-Min-Sum-Radii	cs.DS
 2024-10-1	2410.00601	$k$-local Graphs	math.CO cs.DS cs.SI
 2024-10-1	2410.00656	Circuit and Graver Walks and Linear and Integer Programming	math.OC cs.DM cs.DS math.CO
@@ -24676,7 +24678,7 @@
 2024-10-2	2410.01186	Efficient PAC Learning of Halfspaces with Constant Malicious Noise Rate	cs.LG cs.DS stat.ML
 2024-10-2	2410.01368	Theoretical Lower Bounds for the Oven Scheduling Problem	cs.AI cs.DC cs.DS
 2024-10-3	2410.01656	Efficient Statistics With Unknown Truncation, Polynomial Time  Algorithms, Beyond Gaussians	math.ST cs.DS cs.LG stat.CO stat.ML stat.TH
-2024-10-3	2410.01686	Positional Attention: Out-of-Distribution Generalization and  Expressivity for Neural Algorithmic Reasoning	cs.LG cs.AI cs.DS
+2024-10-3	2410.01686	Positional Attention: Expressivity and Learnability of Algorithmic  Computation	cs.LG cs.AI cs.DS
 2024-10-3	2410.01961	Characterizing and Testing Principal Minor Equivalence of Matrices	cs.CC cs.DS math.CO
 2024-10-3	2410.02021	On the Resilience of Fast Failover Routing Against Dynamic Link Failures	cs.NI cs.DC cs.DS
 2024-10-3	2410.02234	GORAM: Graph-oriented ORAM for Efficient Ego-centric Queries on  Federated Graphs	cs.DB cs.DS
@@ -24685,12 +24687,12 @@
 2024-10-4	2410.02634	When is local search both effective and efficient?	cs.DS cs.DM q-bio.PE
 2024-10-4	2410.03213	Computing largest minimum color-spanning intervals of imprecise points	cs.CG cs.DS
 2024-10-4	2410.03309	Small Space Encoding and Recognition of $k$-Palindromic Prefixes	cs.DS
-2024-10-4	2410.03416	Asymptotic Inapproximability of Reconfiguration Problems: Maxmin $k$-Cut  and Maxmin E$k$-SAT	cs.CC cs.DM cs.DS
+2024-10-4	2410.03416	Asymptotically Optimal Inapproximability of Maxmin $k$-Cut  Reconfiguration	cs.CC cs.DM cs.DS
 2024-10-5	2410.03609	Subexponential Algorithms for Clique Cover on Unit Disk and Unit Ball  Graphs	cs.DS cs.CG
 2024-10-5	2410.04071	Pseudo-Deterministic Construction of Irreducible Polynomials over Finite  Fields	cs.DS cs.CC math.NT
 2024-10-5	2410.04122	A branch-&-price approach to the unrooted maximum agreement forest  problem	cs.DS math.OC q-bio.PE
 2024-10-6	2410.04317	Enabling Asymptotic Truth Learning in a Social Network	cs.SI cs.DS
-2024-10-6	2410.04409	Quantum Approximate Optimization Algorithms for Maxmimum Cut on  Low-Girth Graphs	quant-ph cs.DS math.OC
+2024-10-6	2410.04409	Quantum Approximate Optimization Algorithms for Maximum Cut on Low-Girth  Graphs	quant-ph cs.DS math.OC
 2024-10-7	2410.04611	The $Z$-Curve as an $n$-Dimensional Hypersphere: Properties and Analysis	cs.DM cs.DS math.GR
 2024-10-7	2410.04909	Gibbs state preparation for commuting Hamiltonian: Mapping to classical  Gibbs sampling	quant-ph cs.CC cs.DS
 2024-10-7	2410.05001	Quantum property testing in sparse directed graphs	quant-ph cs.DS
@@ -24698,7 +24700,7 @@
 2024-10-8	2410.05414	Positive bias makes tensor-network contraction tractable	quant-ph cs.CC cs.DS
 2024-10-8	2410.05462	LevAttention: Time, Space, and Streaming Efficient Algorithm for Heavy  Attentions	cs.LG cs.DS
 2024-10-8	2410.05533	Information Design with Unknown Prior	cs.GT cs.DS cs.LG econ.TH
-2024-10-8	2410.05700	Log-concave Sampling over a Convex Body with a Barrier: a Robust and  Unified Dikin Walk	cs.DS cs.LG stat.ML
+2024-10-8	2410.05700	Log-concave Sampling from a Convex Body with a Barrier: a Robust and  Unified Dikin Walk	cs.DS cs.LG stat.ML
 2024-10-8	2410.05807	Extended convexity and smoothness and their applications in deep  learning	cs.LG cs.DS math.OC
 2024-10-8	2410.05902	Mini-Batch Kernel $k$-means	cs.LG cs.AI cs.DS
 2024-10-8	2410.06042	Weighted Embeddings for Low-Dimensional Graph Representation	cs.LG cs.DS cs.SI
@@ -24755,8 +24757,8 @@
 2024-10-14	2410.10440	Routing on Sparse Graphs with Non-metric Costs for the Prize-collecting  Travelling Salesperson Problem	cs.DS
 2024-10-14	2410.10475	From Donkeys to Kings in Tournaments	cs.DS cs.CC
 2024-10-14	2410.10517	Stochastic Rounding 2.0, with a View towards Complexity Analysis	math.NA cs.DS cs.NA
-2024-10-14	2410.10572	Regularized Robustly Reliable Learners and Instance Targeted Attacks	cs.LG cs.CR cs.DS
-2024-10-15	2410.10613	From Chinese Postman to Salesman and Beyond: Shortest Tour  $\delta$-Covering All Points on All Edges	cs.DS cs.CC
+2024-10-14	2410.10572	Regularized Robustly Reliable Learners and Instance Targeted Attacks	cs.LG cs.CR cs.DS stat.ML
+2024-10-15	2410.10613	From Chinese Postman to Salesman and Beyond I: Approximating Shortest  Tours $\delta$-Covering All Points on All Edges	cs.DS cs.CC
 2024-10-15	2410.10706	Exact Exploration	cs.LO cs.DS cs.SE math.LO
 2024-10-15	2410.10767	A Generalization of von Neumann's Reduction from the Assignment Problem  to Zero-Sum Games	cs.GT cs.DS econ.TH
 2024-10-15	2410.11090	The Lanczos algorithm for matrix functions: a handbook for scientists	math.NA cs.DS cs.NA
@@ -24787,7 +24789,7 @@
 2024-10-18	2410.14080	FORWARD: Feasibility Oriented Random-Walk Inspired Algorithm for Radial  Reconfiguration in Distribution Networks	cs.DS
 2024-10-18	2410.14421	Fair Division in a Variable Setting	cs.GT cs.DS
 2024-10-18	2410.14756	Packing-Inspired Algorithms for Periodic Scheduling Problems with  Harmonic Periods	cs.DS
-2024-10-19	2410.14566	Nonadaptive Noisy Group Testing with Optimal Tests and Decoding	cs.IT cs.DM cs.DS math.IT
+2024-10-19	2410.14566	Noisy Nonadaptive Group Testing with Binary Splitting: New Test Design  and Improvement on Price-Scarlett-Tan's Scheme	cs.IT cs.DM cs.DS math.IT
 2024-10-19	2410.14638	Bidirectional Dijkstra's Algorithm is Instance-Optimal	cs.DS
 2024-10-19	2410.14643	Instance-Optimality in I/O-Efficient Sampling and Sequential Estimation	cs.DS
 2024-10-19	2410.14658	A subquadratic certification scheme for P5-free graphs	cs.DC cs.DM cs.DS
@@ -24806,6 +24808,7 @@
 2024-10-22	2410.16964	The Parameterized Complexity Landscape of the Unsplittable Flow Problem	cs.DS
 2024-10-22	2410.17002	EFX Allocations and Orientations on Bipartite Multi-graphs: A Complete  Picture	cs.GT cs.DS
 2024-10-22	2410.19849	Deep Learning and Machine Learning -- Python Data Structures and  Mathematics Fundamental: From Theory to Practice	cs.LG cs.DS cs.PL
+2024-10-22	2411.02422	About the Kannan-Bachem algorithm	cs.DS
 2024-10-23	2410.17147	Covariance estimation using Markov chain Monte Carlo	math.ST cs.DS cs.LG stat.ML stat.TH
 2024-10-23	2410.17179	Faster Approximation Algorithms for Restricted Shortest Paths in  Directed Graphs	cs.DS
 2024-10-23	2410.17226	Parallel Cluster-BFS and Applications to Shortest Paths	cs.DS cs.DC
@@ -24819,6 +24822,7 @@
 2024-10-23	2410.17777	Tight Bounds for Online Balanced Partitioning in the Generalized  Learning Model	cs.DS
 2024-10-23	2410.17821	On the formalization of the notion of a concurrent algorithm	cs.CC cs.DS cs.LO
 2024-10-23	2410.19012	Privacy-Computation trade-offs in Private Repetition and Metaselection	cs.CR cs.DS cs.LG
+2024-10-23	2411.03331	Hypergraphs as Weighted Directed Self-Looped Graphs: Spectral  Properties, Clustering, Cheeger Inequality	cs.SI cs.DM cs.DS cs.LG
 2024-10-24	2410.17945	Theoretically Grounded Pruning of Large Ground Sets for Constrained,  Discrete Optimization	cs.DS cs.LG
 2024-10-24	2410.17958	Lower Bounds for Convexity Testing	cs.CC cs.DS
 2024-10-24	2410.18178	Quantum linear system algorithm with optimal queries to initial state  preparation	quant-ph cs.DS cs.NA math.NA
@@ -24828,7 +24832,7 @@
 2024-10-24	2410.18650	Counting Locally Optimal Tours in the TSP	cs.DS cs.CC cs.DM
 2024-10-24	2410.18661	Recognizing Sumsets is NP-Complete	cs.DS cs.CC cs.DM
 2024-10-24	2410.18704	Deterministic Edge Connectivity and Max Flow using Subquadratic Cut  Queries	cs.DS
-2024-10-25	2410.18820	Deterministic $(2/3-\varepsilon)$-Approximation of Matroid Intersection  using Nearly-Linear Independence-Oracle Queries	cs.DS
+2024-10-25	2410.18820	Deterministic $(2/3-\varepsilon)$-Approximation of Matroid Intersection  Using Nearly-Linear Independence-Oracle Queries	cs.DS
 2024-10-25	2410.18878	Packing Short Cycles	cs.DS
 2024-10-25	2410.18885	Connectivity Labeling Schemes for Edge and Vertex Faults via Expander  Hierarchies	cs.DS
 2024-10-25	2410.18915	Testing Support Size More Efficiently Than Learning Histograms	cs.DS cs.LG
@@ -24838,7 +24842,7 @@
 2024-10-25	2410.19066	Min-CSPs on Complete Instances	cs.DS
 2024-10-25	2410.19119	Tera-Scale Multilevel Graph Partitioning	cs.DS
 2024-10-25	2410.19163	Fairness and Efficiency in Online Class Matching	cs.GT cs.DS
-2024-10-25	2410.19205	Overcoming Non-Submodularity: Constant Approximation for Network  Immunization	cs.DS cs.SI
+2024-10-25	2410.19205	Overcoming Non-Submodularity: Towards Constant Approximation for Network  Immunization	cs.DS cs.SI
 2024-10-25	2410.19246	Paths and Intersections: Characterization of Quasi-metrics in Directed  Okamura-Seymour Instances	cs.DS cs.DM math.CO
 2024-10-25	2410.19516	Near-Optimal Deterministic Network Decomposition and Ruling Set, and  Improved MIS	cs.DS cs.DC
 2024-10-25	2410.19536	Dynamic O(arboricity) coloring in polylogarithmic worst-case time	cs.DS
@@ -24866,10 +24870,11 @@
 2024-10-29	2410.21690	Improved Spectral Density Estimation via Explicit and Implicit Deflation	cs.DS cs.NA math.NA
 2024-10-29	2410.21727	Edge Arrival Online Matching: The Power of Free Disposal on Acyclic  Graphs	cs.DS
 2024-10-29	2410.21833	Classical Algorithms for Constant Approximation of the Ground State  Energy of Local Hamiltonians	quant-ph cs.CC cs.DS
-2024-10-29	2410.21919	On Eigenvector Approximation of Diagonalizable Random Matrices with  Random Perturbations: Properties and Applications	cs.IT cs.DS cs.NA math.IT math.NA math.ST stat.TH
+2024-10-29	2410.21919	The Empirical Spectral Distribution of i.i.d. Random Matrices with  Random Perturbations	cs.IT cs.DS cs.NA math.IT math.NA math.ST stat.TH
 2024-10-29	2410.21931	Random zero sets with local growth guarantees	math.MG cs.DS math.FA
 2024-10-29	2410.21942	Beating Bellman's Algorithm for Subset Sum	cs.DS
 2024-10-29	2410.21953	Sumsets, 3SUM, Subset Sum: Now for Real!	cs.DS
+2024-10-29	2411.00819	A Bellman-Ford algorithm for the path-length-weighted distance in graphs	cs.DS cs.DM cs.MS
 2024-10-30	2410.22102	Ideal Membership Problem for Boolean Minority and Dual Discriminator	cs.DS cs.CC cs.CG
 2024-10-30	2410.22109	Faster two-dimensional pattern matching with $k$ mismatches	cs.DS
 2024-10-30	2410.22123	Testing Identity of Distributions under Kolmogorov Distance in  Polylogarithmic Space	cs.DS cs.IR
@@ -24884,7 +24889,7 @@
 2024-10-30	2410.22951	Sampling and counting triangle-free graphs near the critical density	cs.DS math.CO
 2024-10-30	2410.22992	Dynamic Matching with Post-allocation Service and its Application to  Refugee Resettlement	cs.DS cs.GT cs.LG math.OC
 2024-10-30	2410.23056	The Days On Days Off Scheduling Problem	cs.DS cs.CC cs.DM
-2024-10-30	2410.23900	An Algorithm for a Modification of the Shortest Common Superstring  Problem	cs.DS cs.CC
+2024-10-30	2410.23900	An Algorithm for a Variation of the Shortest Common Superstring Problem	cs.DS cs.CC
 2024-10-31	2410.23087	Statistical-Computational Trade-offs for Density Estimation	cs.DS cs.LG stat.ML
 2024-10-31	2410.23225	Deterministic counting from coupling independence	cs.DS cs.DM
 2024-10-31	2410.23270	Generalized Short Path Algorithms: Towards Super-Quadratic Speedup over  Markov Chain Search for Combinatorial Optimization	quant-ph cs.DS math.OC
@@ -24892,10 +24897,1088 @@
 2024-10-31	2410.23439	An algebraic interpretation of Pauli flow, leading to faster  flow-finding algorithms	quant-ph cs.DS
 2024-10-31	2410.23542	Coach Reservation for Groups Requests	math.OC cs.DS
 2024-10-31	2410.23617	All-Hops Shortest Paths	cs.DS
-2024-10-31	2410.23637	Anytime-Constrained Multi-Agent Reinforcement Learning	cs.LG cs.AI cs.DS cs.GT
+2024-10-31	2410.23637	Anytime-Constrained Equilibria in Polynomial Time	cs.LG cs.AI cs.DS cs.GT
 2024-10-31	2410.23826	Lightweight Near-Additive Spanners	cs.DS math.CO
 2024-10-31	2410.23878	Feedback Vertex Set for pseudo-disk graphs in subexponential FPT time	cs.DS cs.DM
 2024-10-31	2410.23937	Robust Sparse Regression with Non-Isotropic Designs	cs.LG cs.DS stat.ML
 2024-10-31	2410.23969	Interactive proofs for verifying (quantum) learning and testing	quant-ph cs.CC cs.DS cs.LG
 2024-11-1	2410.24104	Clustering to Minimize Cluster-Aware Norm Objectives	cs.DS cs.LG
 2024-11-1	2410.24158	Convex optimization with $p$-norm oracles	math.OC cs.DS
+2024-11-1	2411.00082	Testing and learning structured quantum Hamiltonians	quant-ph cs.CC cs.DS
+2024-11-1	2411.00216	Embedding Planar Graphs into Graphs of Treewidth $O(\log^{3} n)$	cs.DS
+2024-11-1	2411.00242	Certified binary search tree on W-types	cs.SE cs.DS math.CT
+2024-11-1	2411.00255	Dynamic Accountable Storage: An Efficient Protocol for Real-time Cloud  Storage Auditing	cs.CR cs.DS
+2024-11-1	2411.00384	Perfect Matchings and Popularity in the Many-to-Many Setting	cs.DS
+2024-11-2	2411.01090	An Implementation and Experimental Comparison of Dynamic Ordered Sets	cs.DC cs.DS
+2024-11-2	2411.01115	Relax and Merge: A Simple Yet Effective Framework for Solving Fair  $k$-Means and $k$-sparse Wasserstein Barycenter Problems	cs.LG cs.DS stat.ML
+2024-11-2	2411.01191	Prophet Secretary and Matching: the Significance of the Largest Item	cs.DS cs.GT
+2024-11-2	2411.01246	CAMP: A Cost Adaptive Multi-Queue Eviction Policy for Key-Value Stores	cs.DB cs.DS cs.PF
+2024-11-3	2411.01384	Near-Optimal Relative Error Streaming Quantile Estimation via Elastic  Compactors	cs.DS
+2024-11-3	2411.01405	Computing Experiment-Constrained D-Optimal Designs	cs.DS
+2024-11-3	2411.01486	The Gap Between Greedy Algorithm and Minimum Multiplicative Spanner	cs.DS cs.DM math.CO
+2024-11-4	2411.01836	Some easy optimization problems have the overlap-gap property	cs.CC cs.DS math.CO math.PR
+2024-11-4	2411.02087	An Exponential Separation Between Quantum and Quantum-Inspired Classical  Algorithms for Linear Systems	quant-ph cs.CC cs.DS cs.LG
+2024-11-5	2411.02148	Optimality of Frequency Moment Estimation	cs.DS cs.CC cs.IT math.IT
+2024-11-5	2411.02298	Sample-Efficient Private Learning of Mixtures of Gaussians	cs.LG cs.DS math.ST stat.ML stat.TH
+2024-11-5	2411.02585	A Linear Time Gap-ETH-Tight Approximation Scheme for Euclidean TSP	cs.DS
+2024-11-5	2411.02658	Linear-Time Algorithms for k-Edge-Connected Components, k-Lean Tree  Decompositions, and More	cs.DS math.CO
+2024-11-5	2411.02744	Sensitivity Lower Bounds for Approximaiton Algorithms	cs.DS cs.CC
+2024-11-5	2411.02750	Sampling permutations satisfying constraints within the lopsided local  lemma regime	cs.DS
+2024-11-5	2411.02764	Fast, robust approximate message passing	cs.DS cs.LG stat.ML
+2024-11-5	2411.02782	Practical, optimal preparation of general quantum state with  exponentially improved robustness	quant-ph cs.CC cs.DS physics.comp-ph
+2024-11-5	2411.02821	Faster Exact and Parameterized Algorithm for Feedback Vertex Set in  Bipartite Tournaments	cs.DS
+2024-11-5	2411.02845	Max-Distance Sparsification for Diversification and Clustering	cs.DS
+2024-11-5	2411.02942	Constant Approximation for Weighted Nash Social Welfare with Submodular  Valuations	cs.GT cs.DS
+2024-11-5	2411.02980	Counting random $k$-SAT near the satisfiability threshold	cs.DS cs.DM
+2024-11-5	2411.03037	Top-k Stabbing Interval Queries	cs.DS cs.CG
+2024-11-5	2411.03071	Multi-dimensional Approximate Counting	cs.DS
+2024-11-5	2411.03087	On Differentially Private Linear Algebra	cs.DS
+2024-11-5	2411.03121	Fully Dynamic $k$-Median with Near-Optimal Update Time and Recourse	cs.DS
+2024-11-5	2411.03133	Reconstructing edge-deleted unicyclic graphs	math.CO cs.DS
+2024-11-6	2411.03227	Tight Sampling Bounds for Eigenvalue Approximation	cs.DS
+2024-11-6	2411.03253	Discovering Data Structures: Nearest Neighbor Search and Beyond	cs.LG cs.AI cs.DS
+2024-11-6	2411.03255	Error Interference in Quantum Simulation	quant-ph cs.DS
+2024-11-6	2411.03299	Concurrent Composition for Differentially Private Continual Mechanisms	cs.DS
+2024-11-6	2411.03390	Six Candidates Suffice to Win a Voter Majority	cs.GT cs.DM cs.DS math.CO
+2024-11-6	2411.03393	A refined graph container lemma and applications to the hard-core model  on bipartite expanders	math.CO cs.DS
+2024-11-6	2411.03413	Rapid Mixing at the Uniqueness Threshold	cs.DS math.PR
+2024-11-6	2411.03451	Redundancy Is All You Need	cs.DS cs.DM cs.IT cs.LO math.CO math.IT
+2024-11-6	2411.03570	Learning Constant-Depth Circuits in Malicious Noise Models	cs.DS cs.CR cs.LG
+2024-11-6	2411.03784	Optimal prefix-suffix queries with applications	cs.DS
+2024-11-6	2411.03871	Safe Paths and Sequences for Scalable ILPs in RNA Transcript Assembly  Problems	cs.DS math.OC q-bio.GN
+2024-11-7	2411.04013	$k$NN Attention Demystified: A Theoretical Exploration for Scalable  Transformers	cs.LG cs.DS
+2024-11-7	2411.04057	A unified approach to quantum de Finetti theorems and SoS rounding via  geometric quantization	quant-ph cs.DS
+2024-11-7	2411.04124	On the (Classical and Quantum) Fine-Grained Complexity of  Log-Approximate CVP and Max-Cut	cs.CC cs.DS quant-ph
+2024-11-7	2411.04205	Scalable DP-SGD: Shuffling vs. Poisson Subsampling	cs.LG cs.CR cs.DS
+2024-11-7	2411.04394	Statistical-Computational Trade-offs for Recursive Adaptive Partitioning  Estimators	stat.ML cs.DS cs.LG math.ST stat.TH
+2024-11-7	2411.04418	Fully Dynamic (\Delta+1) Coloring Against Adaptive Adversaries	cs.DS
+2024-11-7	2411.04454	Mixing time of quantum Gibbs sampling for random sparse Hamiltonians	quant-ph cs.DS math-ph math.MP
+2024-11-7	2411.04564	A Generalisation of Voter Model: Influential Nodes and Convergence  Properties	cs.SI cs.AI cs.DS
+2024-11-7	2411.04718	Approximate counting of permutation patterns	cs.DS
+2024-11-8	2411.04803	Unbounded Error Correcting Codes	cs.DS cs.IT math.CO math.IT
+2024-11-8	2411.04846	On the Complexity of 2-club Cluster Editing with Vertex Splitting	cs.DS cs.CC
+2024-11-8	2411.04906	Faster feasibility for dynamic flows and transshipments on temporal  networks	cs.DS
+2024-11-8	2411.04972	Uniformity testing when you have the source code	quant-ph cs.CC cs.DS
+2024-11-8	2411.04979	Quantum speedups in solving near-symmetric optimization problems by  low-depth QAOA	quant-ph cs.DS
+2024-11-8	2411.05097	On the cohesion and separability of average-link for hierarchical  agglomerative clustering	cs.LG cs.DS
+2024-11-8	2411.05156	Average-Distortion Sketching	cs.DS
+2024-11-8	2411.05255	Monotone Submodular Multiway Partition	cs.DS
+2024-11-8	2411.05318	Fairness in Monotone $k$-submodular Maximization: Algorithms and  Applications	cs.LG cs.DS
+2024-11-8	2411.05432	Near-Optimal Dimension Reduction for Facility Location	cs.DS
+2024-11-8	2411.05458	Recursive and iterative approaches to generate rotation Gray codes for  stamp foldings and semi-meanders	cs.DS
+2024-11-8	2411.05553	Separating Coverage and Submodular: Maximization Subject to a  Cardinality Constraint	cs.DS
+2024-11-9	2411.05736	Unstructured Adiabatic Quantum Optimization: Optimality with Limitations	quant-ph cs.CC cs.DS
+2024-11-9	2411.05750	On Differentially Private String Distances	cs.DS cs.AI cs.CR cs.LG stat.ML
+2024-11-9	2411.06200	Weak to Strong Learning from Aggregate Labels	cs.LG cs.DS stat.ML
+2024-11-10	2411.06292	Simple approximation algorithms for Polyamorous Scheduling	cs.DS cs.CC
+2024-11-10	2411.06360	An Efficient Matrix Multiplication Algorithm for Accelerating Inference  in Binary and Ternary Neural Networks	cs.LG cs.DS
+2024-11-10	2411.06370	One Attack to Rule Them All: Tight Quadratic Bounds for Adaptive Queries  on Cardinality Sketches	cs.DS
+2024-11-10	2411.06405	Parallel Higher-order Truss Decomposition	cs.DS
+2024-11-10	2411.16696	A New 0(klog n) Algorithm for Josephus Problem	cs.DS
+2024-11-11	2411.06502	Faster Weighted and Unweighted Tree Edit Distance and APSP Equivalence	cs.DS
+2024-11-11	2411.06541	Counterexamples to a Weitz-Style Reduction for Multispin Systems	cs.DS math.PR
+2024-11-11	2411.06546	Lower Bounds for Adaptive Relaxation-Based Algorithms for Single-Source  Shortest Paths	cs.DS
+2024-11-11	2411.06697	Learning a Single Neuron Robustly to Distributional Shifts and  Adversarial Label Noise	cs.LG cs.DS math.OC stat.ML
+2024-11-11	2411.06822	Efficient Classical Computation of Single-Qubit Marginal Measurement  Probabilities to Simulate Certain Classes of Quantum Algorithms	quant-ph cs.DM cs.DS
+2024-11-11	2411.06857	Phase Transitions via Complex Extensions of Markov Chains	cs.DS cs.DM math.PR
+2024-11-11	2411.07006	Estimating Causal Effects in Partially Directed Parametric Causal Factor  Graphs	cs.AI cs.DS cs.LG
+2024-11-11	2411.07030	Hyperplanes Avoiding Problem and Integer Points Counting in Polyhedra	cs.CC cs.CG cs.DM cs.DS math.CO
+2024-11-11	2411.07273	Compressed Game Solving	cs.DS
+2024-11-12	2411.07389	An Improved Algorithm for Sparse Instances of SAT	cs.DS
+2024-11-12	2411.07499	Listing 6-Cycles in Sparse Graphs	cs.DS
+2024-11-12	2411.07505	Subsetwise and Multi-Level Additive Spanners with Lightness Guarantees	cs.DS
+2024-11-12	2411.07526	QR Sort: A Novel Non-Comparative Sorting Algorithm	cs.DS
+2024-11-12	2411.07536	Model Stealing for Any Low-Rank Language Model	cs.LG cs.AI cs.DS stat.ML
+2024-11-12	2411.07553	A Simple Algorithm for Dynamic Carpooling with Recourse	cs.DS
+2024-11-12	2411.07782	Elastic-Degenerate String Comparison	cs.DS
+2024-11-12	2411.07809	Pirogov--Sinai Theory Beyond Lattices	math.PR cs.DS math-ph math.MP
+2024-11-13	2411.08151	New Separations and Reductions for Directed Preservers and Hopsets	cs.DS
+2024-11-13	2411.08218	Improved Approximations for Stationary Bipartite Matching: Beyond  Probabilistic Independence	cs.DS
+2024-11-13	2411.08332	Learning-Augmented Algorithms for Online Concave Packing and Convex  Covering Problems	cs.DS cs.LG math.OC
+2024-11-13	2411.08355	Optimal Decentralized Smoothed Online Convex Optimization	math.OC cs.DS cs.LG
+2024-11-14	2411.08671	Theoretical Analysis of Byte-Pair Encoding	cs.DS cs.CL
+2024-11-14	2411.08765	Tolerant Testing of Stabilizer States with Mixed State Inputs	quant-ph cs.DS
+2024-11-14	2411.08773	Optimal Oblivious Subspace Embeddings with Near-optimal Sparsity	cs.DS cs.LG cs.NA math.NA math.PR stat.ML
+2024-11-14	2411.08792	An alignment problem	cs.DS cs.CC
+2024-11-14	2411.08805	Stochastic Matching via In-n-Out Local Computation Algorithms	cs.DS
+2024-11-14	2411.08972	Designing Automated Market Makers for Combinatorial Securities: A  Geometric Viewpoint	cs.GT cs.CG cs.DS
+2024-11-14	2411.08987	Non-Euclidean High-Order Smooth Convex Optimization	math.OC cs.DS cs.LG stat.ML
+2024-11-14	2411.08989	Nearly Tight Bounds on Testing of Metric Properties	cs.DM cs.DS
+2024-11-14	2411.09059	Sublinear Metric Steiner Tree via Improved Bounds for Set Cover	cs.DS
+2024-11-14	2411.09075	Weak Poincar\'e Inequalities, Simulated Annealing, and Sampling from  Spherical Spin Glasses	math.PR cond-mat.dis-nn cs.DS math-ph math.MP
+2024-11-14	2411.09114	Comparative genomics with succinct colored de Bruijn graphs	cs.DS
+2024-11-14	2411.09117	Efficiently learning and sampling multimodal distributions with  data-based initialization	cs.LG cs.DS math.PR stat.ML
+2024-11-14	2411.09205	FlexFlood: Efficiently Updatable Learned Multi-dimensional Index	cs.DS
+2024-11-14	2411.09275	Parallel $k$d-tree with Batch Updates	cs.DS cs.DB cs.DC cs.PF
+2024-11-14	2411.09472	An Algorithm for the Longest Common Subsequence and Substring Problem  for Multiple Strings	cs.DS
+2024-11-14	2411.09473	Enhancing Scalability and Performance in Influence Maximization with  Optimized Parallel Processing	cs.DC cs.DS
+2024-11-14	2411.10484	iFlow: An Interactive Max-Flow/Min-Cut Algorithms Visualizer	cs.HC cs.DS
+2024-11-15	2411.09531	Efficient top-down updates in AVL trees	cs.DS
+2024-11-15	2411.09642	On the Limits of Language Generation: Trade-Offs Between Hallucination  and Mode Collapse	cs.LG cs.AI cs.CL cs.DS stat.ML
+2024-11-15	2411.09854	Fair Secretaries with Unfair Predictions	cs.LG cs.DS
+2024-11-15	2411.09979	Fully Dynamic Adversarially Robust Correlation Clustering in  Polylogarithmic Update Time	cs.DS cs.LG
+2024-11-16	2411.10284	Optimal Capacity Modification for Stable Matchings with Ties	cs.DS cs.GT
+2024-11-16	2411.10319	Ranking and Unranking of the Planar Embeddings of a Planar Graph	cs.CG cs.DS
+2024-11-16	2411.10653	Hardness Results on Characteristics for Elastic-Degenerated Strings	cs.DS cs.CC
+2024-11-16	2411.10707	Differentiable Extensions with Rounding Guarantees for Combinatorial  Optimization over Permutations	cs.DS math.OC
+2024-11-16	2411.10719	Computational Complexity of Envy-free and Exchange-stable Seat  Arrangement Problems on Grid Graphs	cs.GT cs.CC cs.DS
+2024-11-16	2411.10737	Classical optimization with imaginary time block encoding on quantum  computers: The MaxCut problem	quant-ph cs.DS cs.ET math.OC
+2024-11-17	2411.10870	Near-Optimal Averaging Samplers and Matrix Samplers	cs.CC cs.DS
+2024-11-17	2411.10906	Efficient, Low-Regret, Online Reinforcement Learning for Linear MDPs	cs.LG cs.DS
+2024-11-17	2411.10908	The Conflict Graph Design: Estimating Causal Effects under Arbitrary  Neighborhood Interference	stat.ME cs.DS math.ST stat.TH
+2024-11-17	2411.10949	Maximization of Approximately Submodular Functions	cs.DS cs.CC
+2024-11-17	2411.11049	Fault-Equivalent Lowest Common Ancestors	cs.DS
+2024-11-17	2411.11051	Amortized Analysis of Leftist Heaps	cs.DS
+2024-11-17	2411.11054	Connectivity Certificate against Bounded-Degree Faults: Simpler, Better  and Supporting Vertex Faults	cs.DS
+2024-11-18	2411.11136	Approximation algorithms for non-sequential star packing problems	cs.DS cs.DM
+2024-11-18	2411.11174	Learning the Sherrington-Kirkpatrick Model Even at Low Temperature	cs.LG cs.DS math.ST stat.ML stat.TH
+2024-11-18	2411.11238	Reliable Learning of Halfspaces under Gaussian Marginals	cs.LG cs.DS stat.ML
+2024-11-18	2411.11277	Massively Parallel Maximum Coverage Revisited	cs.DS cs.DC
+2024-11-18	2411.11298	On the compressiveness of the Burrows-Wheeler transform	cs.DM cs.DS
+2024-11-18	2411.11426	SpiderDAN: Matching Augmentation in Demand-Aware Networks	cs.DS cs.NI
+2024-11-18	2411.11516	Efficient Sample-optimal Learning of Gaussian Tree Models via  Sample-optimal Testing of Gaussian Mutual Information	cs.LG cs.DS stat.ML
+2024-11-18	2411.11544	The Complexity Landscape of Dynamic Distributed Subgraph Finding	cs.DS
+2024-11-18	2411.11627	Explicit Two-Sided Vertex Expanders Beyond the Spectral Barrier	math.CO cs.CC cs.DM cs.DS
+2024-11-19	2411.11665	Hash & Adjust: Competitive Demand-Aware Consistent Hashing	cs.DC cs.DS
+2024-11-19	2411.11718	Distributed Maximum Flow in Planar Graphs	cs.DC cs.DS
+2024-11-19	2411.11722	Solving convex QPs with structured sparsity under indicator conditions	math.OC cs.CC cs.DS
+2024-11-19	2411.11741	A Bicriterion Concentration Inequality and Prophet Inequalities for  $k$-Fold Matroid Unions	cs.DS math.PR
+2024-11-19	2411.11781	Towards Scalable and Practical Batch-Dynamic Connectivity	cs.DS cs.DB cs.DC
+2024-11-19	2411.12035	Parsing Millions of DNS Records per Second	cs.DS
+2024-11-19	2411.12069	Matroid Secretary via Labeling Schemes	cs.DS
+2024-11-19	2411.12099	Sorted Consecutive Occurrence Queries in Substrings	cs.DS cs.CG
+2024-11-19	2411.12160	Space-Efficient Online Computation of String Net Occurrences	cs.DS
+2024-11-19	2411.12241	Extending the Burrows-Wheeler Transform for Cartesian Tree Matching and  Constructing It	cs.DS
+2024-11-19	2411.12360	An Affine Equivalence Algorithm for S-boxes based on Matrix Invariants	cs.CR cs.DS
+2024-11-19	2411.12365	Brief Announcement: Parallel Construction of Bumped Ribbon Retrieval	cs.DS
+2024-11-19	2411.12438	Dimension Reduction via Sum-of-Squares and Improved Clustering  Algorithms for Non-Spherical Mixtures	cs.DS cs.LG stat.ML
+2024-11-19	2411.12439	Efficient terabyte-scale text compression via stable local consistency  and parallel grammar processing	cs.DS
+2024-11-19	2411.13601	Error Analysis of Sum-Product Algorithms under Stochastic Rounding	stat.CO cs.DS
+2024-11-19	2411.19885	Statistical inference of a ranked community in a directed graph	math.ST cs.CC cs.DS math.CO math.PR stat.TH
+2024-11-20	2411.12582	Reconfiguration Using Generalized Token Jumping	math.CO cs.DS
+2024-11-20	2411.12694	Local Density and its Distributed Approximation	cs.DS cs.DC
+2024-11-20	2411.12696	Weighted Envy Freeness With Bounded Subsidies	cs.GT cs.DS
+2024-11-20	2411.12700	Learning multivariate Gaussians with imperfect advice	cs.LG cs.DS cs.IT math.IT stat.ML
+2024-11-20	2411.12730	Testing classical properties from quantum data	quant-ph cs.CC cs.DS cs.LG
+2024-11-20	2411.12976	Oblivious Algorithms for Maximum Directed Cut: New Upper and Lower  Bounds	cs.DS
+2024-11-20	2411.13083	Omnipredicting Single-Index Models with Multi-Index Models	cs.LG cs.DS math.OC stat.ML
+2024-11-20	2411.13141	(Independent) Roman Domination Parameterized by Distance to Cluster	cs.CC cs.DM cs.DS math.CO
+2024-11-20	2411.13171	Parameterized Geometric Graph Modification with Disk Scaling	cs.CG cs.DS
+2024-11-20	2411.13374	On the structure of normalized models of circular-arc graphs -- Hsu's  approach revisited	cs.DS
+2024-11-21	2411.13462	Sampling and Integration of Logconcave Functions by Algorithmic  Diffusion	cs.DS cs.LG math.ST stat.ML stat.TH
+2024-11-21	2411.13513	Procurement Auctions via Approximately Optimal Submodular Optimization	cs.GT cs.DS cs.LG
+2024-11-21	2411.13682	Differentially Private Learning Beyond the Classical Dimensionality  Regime	cs.LG cs.CR cs.DS
+2024-11-21	2411.13708	Comments on "$\mathcal{O}(m\cdot n)$ algorithms for the recognition and  isomorphism problems on circular-arc graphs"	cs.DS math.CO
+2024-11-21	2411.13728	Distributed Distance Sensitivity Oracles	cs.DS
+2024-11-21	2411.13817	Dynamic Structural Clustering Unleashed: Flexible Similarities,  Versatile Updates and for All Parameters	cs.DS
+2024-11-21	2411.14006	Experimental comparison of graph-based approximate nearest neighbor  search algorithms on edge devices	cs.DS cs.AR cs.CV cs.DC cs.PF
+2024-11-22	2411.14305	Outlier-robust Mean Estimation near the Breakdown Point via  Sum-of-Squares	cs.DS cs.LG stat.ML
+2024-11-22	2411.14336	Finding the root in random nearest neighbor trees	math.PR cs.DS cs.SI
+2024-11-22	2411.14344	Overcomplete Tensor Decomposition via Koszul-Young Flattenings	cs.DS cs.LG
+2024-11-22	2411.14349	Agnostic Learning of Arbitrary ReLU Activation under Gaussian Marginals	cs.LG cs.DS stat.ML
+2024-11-22	2411.14387	Hardness Amplification for Dynamic Binary Search Trees	cs.DS
+2024-11-22	2411.14431	On Optimal Testing of Linearity	cs.CC cs.DS
+2024-11-22	2411.14655	Construction and Preliminary Validation of a Dynamic Programming Concept  Inventory	cs.DS cs.CY
+2024-11-22	2411.14664	Sparsifying Suprema of Gaussian Processes	stat.ML cs.CC cs.DS cs.LG math.PR
+2024-11-22	2411.14745	Approximating the Held-Karp Bound for Metric TSP in Nearly Linear Work  and Polylogarithmic Depth	cs.DS
+2024-11-22	2411.14825	Distributed Model Checking in Graphs Classes of Bounded Expansion	cs.DS
+2024-11-22	2411.14850	Quantum Algorithm for the Multiple String Matching Problem	quant-ph cs.DS
+2024-11-23	2411.14994	Approximating Prize-Collecting Variants of TSP	cs.DS
+2024-11-23	2411.15282	Totally $\Delta$-modular IPs with two non-zeros in most rows	cs.DS cs.DM math.CO math.OC
+2024-11-23	2411.15291	Tag arrays	cs.DS
+2024-11-23	2411.15306	Heavy-tailed Contamination is Easier than Adversarial Contamination	math.ST cs.DS cs.LG stat.ME stat.ML stat.TH
+2024-11-23	2411.15363	The Polymatroid Representation of a Greedoid, and Associated Galois  Connections	math.CO cs.DM cs.DS
+2024-11-23	2411.15364	Exploring Facets of Language Generation in the Limit	cs.DS cs.AI cs.CL cs.LG
+2024-11-24	2411.15669	Implicit High-Order Moment Tensor Estimation and Learning Latent  Variable Models	cs.DS cs.LG math.ST stat.ML stat.TH
+2024-11-24	2411.15727	Revenue Maximization in Choice-Based Matching Markets	cs.GT cs.DS math.OC
+2024-11-25	2411.16030	Binary Search with Distributional Predictions	cs.LG cs.DS
+2024-11-25	2411.16149	Directed Token Sliding	cs.DS
+2024-11-25	2411.16195	On the Robustness of the Successive Projection Algorithm	math.NA cs.DS cs.LG cs.NA stat.ML
+2024-11-25	2411.16255	Scalable Fault-Tolerant MapReduce	cs.DC cs.DS
+2024-11-25	2411.16281	Dynamic Range Minimum Queries on the Ultra-Wide Word RAM	cs.DS
+2024-11-26	2411.16548	Bow Metrics and Hyperbolicity	math.CO cs.DM cs.DS
+2024-11-26	2411.16578	Forest Covers and Bounded Forest Covers	cs.DS cs.CC math.CO
+2024-11-26	2411.16600	Approximation Algorithms for Combinatorial Optimization with Predictions	cs.DS cs.LG
+2024-11-26	2411.16624	Leakage-Robust Bayesian Persuasion	cs.GT cs.DS cs.MA
+2024-11-26	2411.16667	OPMOS: Ordered Parallel Algorithm for Multi-Objective Shortest-Paths	cs.DC cs.AI cs.AR cs.DS cs.PF
+2024-11-26	2411.16918	Optimized 2-Approximation of Treewidth	cs.DS
+2024-11-26	2411.16947	Online $b$-Matching with Stochastic Rewards	cs.DS
+2024-11-26	2411.16990	Enabling Skip Graphs to Process K-Dimensional Range Queries in a Mobile  Sensor Network	cs.IT cs.DM cs.DS cs.NI math.IT
+2024-11-26	2411.17245	Smoothed Analysis of the k-Swap Neighborhood for Makespan Scheduling	cs.DS
+2024-11-26	2411.17250	Weakly acyclic diagrams: A data structure for infinite-state symbolic  verification	cs.LO cs.DS
+2024-11-26	2411.17271	Broadcasting in Heterogeneous Tree Networks with Edge Weight Uncertainty	cs.DS
+2024-11-26	2412.07789	Dynamic data summarization for hierarchical spatial clustering	cs.DB cs.DS cs.LG
+2024-11-27	2411.17596	Arcee: An OCM-Solver	cs.DS
+2024-11-27	2411.17887	A Parallel Scan Algorithm in the Tensor Core Unit Model	cs.DC cs.DS
+2024-11-27	2411.17948	Structural Parameterization of Locating-Dominating Set and Test Cover	cs.DS
+2024-11-27	2411.18028	Improved Parallel Derandomization via Finite Automata with Applications	cs.DS
+2024-11-27	2411.18292	A Faster Deterministic Algorithm for Mader's $\mathcal{S}$-Path Packing	cs.DS cs.DM math.CO
+2024-11-27	2411.18312	Undirected 3-Fault Replacement Path in Nearly Cubic Time	cs.DS
+2024-11-27	2411.18655	Extraction Theorems With Small Extraction Numbers	cs.CG cs.DS
+2024-11-28	2411.18581	Parallel Token Swapping for Qubit Routing	cs.DS cs.DM quant-ph
+2024-11-28	2411.18614	Optimal root recovery for uniform attachment trees and $d$-regular  growing trees	cs.DS cs.SI math.PR math.ST stat.TH
+2024-11-28	2411.18617	Online versus Offline Adversaries in Property Testing	cs.DS
+2024-11-28	2411.18765	Near-Optimal Trace Reconstruction for Mildly Separated Strings	cs.DS
+2024-11-28	2411.18790	Fast Schulze Voting Using Quickselect	cs.DS
+2024-11-28	2411.18809	Improved Approximation Algorithms for Flexible Graph Connectivity and  Capacitated Network Design	cs.DS
+2024-11-28	2411.18829	Streaming Algorithms via Local Algorithms for Maximum Directed Cut	cs.DS
+2024-11-28	2411.19098	A Simple and Fast Algorithm for Fair Cuts	cs.DS
+2024-11-29	2411.19365	Strongly-Linearizable Bags	cs.DC cs.DS
+2024-11-29	2411.19366	Better Approximation for Weighted $k$-Matroid Intersection	cs.DS cs.DM
+2024-11-29	2411.19394	Hashing for Sampling-Based Estimation	cs.DS
+2024-11-29	2411.19419	A Simple Sparse Matrix Vector Multiplication Approach to Padded  Convolution	cs.LG cs.DS
+2024-11-29	2411.19449	A Bottom-Up Algorithm for Negative-Weight SSSP with Integrated Negative  Cycle Finding	cs.DS
+2024-11-29	2411.19473	Complexity of Paired Domination Problems on Circle and $k$-Polygon  Graphs	cs.DS cs.CC math.CO
+2024-11-29	2411.19476	Optimal Algorithm for Paired-Domination in Distance-Hereditary Graphs	cs.DS math.CO
+2024-11-29	2411.19511	Scalable Order-Preserving Pattern Mining	cs.DS cs.DB
+2024-11-29	2411.19724	A rounding and clustering-based exact algorithm for the p-center problem	cs.DS math.OC
+2024-11-29	2412.01852	Communication efficient application of sequences of planar rotations to  a matrix	cs.PF cs.DS
+2024-11-30	2411.19791	Tractable Agreement Protocols	cs.LG cs.DS cs.GT
+2024-11-30	2411.19851	Minimization I.I.D. Prophet Inequality via Extreme Value Theory: A  Unified Approach	cs.GT cs.DS
+2024-11-30	2411.19906	Classical and Quantum Algorithms for the Deterministic L-system  Inductive Inference Problem	quant-ph cs.CL cs.DS cs.FL cs.LG
+2024-11-30	2412.00222	Algorithms for Parameterized String Matching with Mismatches	cs.DS
+2024-11-30	2412.00284	Enumeration algorithms for combinatorial problems using Ising machines	cs.DS quant-ph
+2024-11-30	2412.00292	PACE Solver Description: Exact Solution of the One-sided Crossing  Minimization Problem by the MPPEG Team	cs.DS
+2024-12-1	2412.00567	Quantum algorithm for approximating the expected value of a random-exist  quantified oracle	quant-ph cs.DS
+2024-12-1	2412.00674	A Generalized Trace Reconstruction Problem: Recovering a String of  Probabilities	cs.DS cs.IT math.IT
+2024-12-1	2412.00704	Efficient Kernelization Algorithm for Bipartite Graph Matching	cs.DS
+2024-12-1	2412.00717	Data-Driven Solution Portfolios	cs.DS
+2024-12-1	2412.00802	HT-HEDL: High-Throughput Hypothesis Evaluation in Description Logic	cs.AI cs.DC cs.DS cs.LG
+2024-12-1	2412.00830	SPILDL: A Scalable and Parallel Inductive Learner in Description Logic	cs.AI cs.DC cs.DS cs.LG
+2024-12-2	2412.00974	Optimal Algorithms for Augmented Testing of Discrete Distributions	cs.LG cs.DS stat.ML
+2024-12-2	2412.01143	Space Complexity of Minimum Cut Problems in Single-Pass Streams	cs.DS
+2024-12-3	2412.01614	Edge-Minimum Walk of Modular Length in Polynomial Time	cs.DS
+2024-12-3	2412.01628	Near-Optimal Resilient Labeling Schemes	cs.DS cs.DC
+2024-12-3	2412.01696	Nonlinear functions of quantum states	quant-ph cs.DS
+2024-12-3	2412.02217	You (Almost) Can't Beat Brute Force for 3-Matroid Intersection	cs.DS
+2024-12-3	2412.02235	Testing vs Estimation for Index-Invariant Properties in the Huge Object  Model	cs.DS
+2024-12-3	2412.02448	UNIFY: Unified Index for Range Filtered Approximate Nearest Neighbors  Search	cs.DS cs.DB
+2024-12-4	2412.02492	The Cost of Consistency: Submodular Maximization with Constant Recourse	cs.DS cs.LG stat.ML
+2024-12-4	2412.02554	Simple Construction of Greedy Trees and Greedy Permutations	cs.CG cs.DS
+2024-12-4	2412.02559	The Two-Center Problem of Uncertain Points on Cactus Graphs	cs.DS
+2024-12-4	2412.02580	The Two-Center Problem of Uncertain Points on Trees	cs.DS
+2024-12-4	2412.02639	The Space Complexity of Approximating Logistic Loss	cs.DS cs.LG
+2024-12-4	2412.02661	Efficient Graph Matching for Correlated Stochastic Block Models	cs.DS cs.SI math.PR math.ST stat.ML stat.TH
+2024-12-4	2412.02670	The Broader Landscape of Robustness in Algorithmic Statistics	stat.ML cs.CR cs.DS cs.IT math.IT math.ST stat.TH
+2024-12-4	2412.02828	Computing the Center of Uncertain Points on Cactus Graphs	cs.DS
+2024-12-4	2412.02840	Improved Differentially Private Continual Observation Using Group  Algebra	cs.DS
+2024-12-4	2412.02949	Extracting Dual Solutions via Primal Optimizers	math.OC cs.DS
+2024-12-4	2412.02975	Theoretical limitations of multi-layer Transformer	cs.LG cs.AI cs.CC cs.DS
+2024-12-4	2412.03008	Provably Extending PageRank-based Local Clustering Algorithm to Weighted  Directed Graphs with Self-Loops and to Hypergraphs	cs.SI cs.DS cs.LG
+2024-12-4	2412.03120	Sinkhorn Algorithm for Sequentially Composed Optimal Transports	cs.DS cs.LG cs.NA math.NA
+2024-12-4	2412.03138	Optimal bounds on a tree inference algorithm	cs.DS
+2024-12-4	2412.03238	Dynamic Consistent $k$-Center Clustering with Optimal Recourse	cs.DS cs.LG
+2024-12-4	2412.03332	On Approximability of $\ell_2^2$ Min-Sum Clustering	cs.DS cs.CC cs.CG cs.LG
+2024-12-5	2412.03680	Classic Round-Up Variant of Fast Unsigned Division by Constants:  Algorithm and Full Proof	cs.DS
+2024-12-5	2412.03826	The Online Submodular Assignment Problem	cs.DS
+2024-12-5	2412.03860	Combinatorial Selection with Costly Information	cs.DS
+2024-12-5	2412.04016	Computing diverse pair of solutions for tractable SAT	cs.DS
+2024-12-5	2412.04042	Recognizing 2-Layer and Outer $k$-Planar Graphs	cs.DS cs.CC cs.CG
+2024-12-5	2412.04145	Robust Contraction Decomposition for Minor-Free Graphs and its  Applications	cs.DS cs.DM math.CO
+2024-12-6	2412.04767	Towards counterfactual fairness through auxiliary variables	cs.LG cs.DS stat.ML
+2024-12-6	2412.04771	Overlay Network Construction: Improved Overall and Node-Wise Message  Complexity	cs.DC cs.DS
+2024-12-6	2412.04943	A Subquadratic Time Approximation Algorithm for Individually Fair  k-Center	cs.DS cs.CG
+2024-12-6	2412.04965	Succinct Data Structures for Segments	cs.DS
+2024-12-7	2412.05182	Integer and Unsplittable Multiflows in Series-Parallel Digraphs	math.CO cs.DS
+2024-12-7	2412.05497	Accelerating Proximal Gradient Descent via Silver Stepsizes	math.OC cs.DS
+2024-12-7	2412.05523	Sliding Squares in Parallel	cs.CG cs.DS
+2024-12-7	2412.05526	Multicriteria Spanners -- A New Tool for Network Design	cs.DS
+2024-12-7	2412.05545	Convergence analysis of wide shallow neural operators within the  framework of Neural Tangent Kernel	cs.LG cs.DS math.OC
+2024-12-7	2412.05674	No-Free-Lunch Theories for Tensor-Network Machine Learning Models	quant-ph cs.AI cs.DS cs.LG stat.ML
+2024-12-8	2412.05790	Acceleration by Random Stepsizes: Hedging, Equalization, and the Arcsine  Stepsize Schedule	math.OC cs.DS
+2024-12-8	2412.05804	TRAPP: An Efficient Point-to-Point Path Planning Algorithm for Road  Networks with Restrictions	cs.DS
+2024-12-8	2412.05807	Adversarially Robust Dense-Sparse Tradeoffs via Heavy-Hitters	cs.DS
+2024-12-9	2412.06026	A Dynamic Tree Structure for Hierarchical On-Chain Asset Management	cs.CR cs.CY cs.DS cs.ET
+2024-12-9	2412.06063	On Socially Fair Low-Rank Approximation and Column Subset Selection	cs.LG cs.DS stat.ML
+2024-12-9	2412.06121	Verifying Shortest Paths in Linear Time	cs.DS
+2024-12-9	2412.06361	weberknecht -- a One-Sided Crossing Minimization solver	cs.DS
+2024-12-9	2412.06518	On the Bidirected Cut Relaxation for Steiner Forest	cs.DS cs.DM
+2024-12-10	2412.06730	A subgradient splitting algorithm for optimization on nonpositively  curved metric spaces	math.OC cs.CG cs.DS cs.NA math.NA
+2024-12-10	2412.06952	Massively Parallel Algorithms for Approximate Shortest Paths	cs.DS cs.DC
+2024-12-10	2412.07046	NP-hardness and a PTAS for the Euclidean Steiner Line Problem	cs.CG cs.DS
+2024-12-10	2412.07093	Streaming Private Continual Counting via Binning	cs.LG cs.CR cs.DS
+2024-12-10	2412.07106	Covered Forest: Fine-grained generalization analysis of graph neural  networks	cs.LG cs.DM cs.DS cs.NE stat.ML
+2024-12-10	2412.07435	Parallel simulation for sampling under isoperimetry and score-based  diffusion models	cs.DS cs.DC cs.LG cs.NA math.NA
+2024-12-11	2412.07685	Automated Discovery of Branching Rules with Optimal Complexity for the  Maximum Independent Set Problem	math.OC cs.DS math.CO
+2024-12-11	2412.07964	Geometry helps in routing scalability	cs.DS cs.CG cs.NI
+2024-12-11	2412.16181	Minimum Weighted Feedback Arc Sets for Ranking from Pairwise Comparisons	cs.IR cs.AI cs.DS cs.LG
+2024-12-12	2412.09256	Differentially Private Release of Hierarchical Origin/Destination Data  with a TopDown Approach	cs.DS
+2024-12-12	2412.09303	A Comprehensive Survey of Data Reduction Rules for the Maximum Weighted  Independent Set Problem	cs.DS
+2024-12-13	2412.09567	Temporal Triadic Closure: Finding Dense Structures in Social Networks  That Evolve	cs.DS cs.DM cs.SI
+2024-12-13	2412.09717	On the Parameterized Complexity of Diverse SAT	cs.DS
+2024-12-13	2412.09756	Private Synthetic Data Generation in Small Memory	cs.CR cs.DS
+2024-12-13	2412.09773	Learning-Augmented Streaming Algorithms for Approximating MAX-CUT	cs.DS
+2024-12-13	2412.10082	Fast FPT Algorithms for Grundy Number on Dense Graphs	cs.DS
+2024-12-13	2412.10130	Optimal Bounds for Private Minimum Spanning Trees via Input Perturbation	cs.DS cs.CR cs.LG
+2024-12-13	2412.10160	Fast and Lightweight Distributed Suffix Array Construction -- First  Results	cs.DS
+2024-12-13	2412.16187	HashEvict: A Pre-Attention KV Cache Eviction Strategy using  Locality-Sensitive Hashing	cs.LG cs.AI cs.CL cs.DS cs.PF
+2024-12-14	2412.10287	Single-Source Regular Path Querying in Terms of Linear Algebra	cs.DS
+2024-12-14	2412.10357	The Correlated Gaussian Sparse Histogram Mechanism	cs.DS cs.CR cs.LG
+2024-12-14	2412.10370	Computational Explorations of Total Variation Distance	cs.DS cs.CC
+2024-12-14	2412.10512	Differentially Private Multi-Sampling from Distributions	cs.CR cs.DS cs.LG stat.ML
+2024-12-14	2412.10612	Meeting Utility Constraints in Differential Privacy: A Privacy-Boosting  Approach	cs.CR cs.DS cs.IT math.IT
+2024-12-14	2412.10655	Optimal Static Dictionary with Worst-Case Constant Query Time	cs.DS
+2024-12-14	2412.10671	Bi-Criteria Metric Distortion	cs.GT cs.DS
+2024-12-14	2412.10682	Stochastic $k$-Submodular Bandits with Full Bandit Feedback	cs.LG cs.DS stat.ML
+2024-12-14	2412.10744	Breaking the Barrier: A Polynomial-Time Polylogarithmic Approximation  for Directed Steiner Tree	cs.DS cs.DM
+2024-12-14	2412.10760	Fixed Order Scheduling with Deadlines	cs.DS
+2024-12-14	2412.10789	Scaling Up Graph Propagation Computation on Large Graphs: A Local  Chebyshev Approximation Approach	cs.LG cs.DS
+2024-12-15	2412.10877	Catch Me If You Can: Finding the Source of Infections in Temporal  Networks	cs.DS cs.SI
+2024-12-15	2412.10881	Dynamic Network Discovery via Infection Tracing	cs.DS
+2024-12-15	2412.10923	Linear Programming based Approximation to Individually Fair k-Clustering  with Outliers	cs.LG cs.DS stat.ML
+2024-12-15	2412.10944	Sequential Diversification with Provable Guarantees	cs.DS
+2024-12-15	2412.11184	New Approximation Guarantees for The Economic Warehouse Lot Scheduling  Problem	cs.DS math.OC
+2024-12-15	2412.11195	Deterministic Even-Cycle Detection in Broadcast CONGEST	cs.DC cs.DS
+2024-12-16	2412.11234	New results for the detection of bicliques	cs.DS
+2024-12-16	2412.11236	Logarithmic Positional Partition Interval Encoding	cs.DS cs.IT eess.SP math.IT
+2024-12-16	2412.11238	Proportionally Fair Matching via Randomized Rounding	cs.DS
+2024-12-16	2412.11303	Regularized Dikin Walks for Sampling Truncated Logconcave Measures,  Mixed Isoperimetry and Beyond Worst-Case Analysis	cs.DS cs.LG stat.CO stat.ML
+2024-12-16	2412.11422	Quantum search in a dictionary based on fingerprinting-hashing	quant-ph cs.DS cs.IT math.IT
+2024-12-16	2412.11488	Counting Butterflies over Streaming Bipartite Graphs with Duplicate  Edges	cs.DS
+2024-12-16	2412.11799	Adaptive Manipulation for Coalitions in Knockout Tournaments	cs.DS cs.GT cs.MA
+2024-12-16	2412.12221	Parallel Greedy Best-First Search with a Bound on the Number of  Expansions Relative to Sequential Search	cs.DS cs.AI
+2024-12-17	2412.11954	Witty: An Efficient Solver for Computing Minimum-Size Decision Trees	cs.DS
+2024-12-17	2412.11963	Approximating the Top Eigenvector in Random Order Streams	cs.DS
+2024-12-17	2412.12454	Cluster Editing on Cographs and Related Classes	cs.DS cs.CC
+2024-12-17	2412.12589	Round and Communication Efficient Graph Coloring	cs.DS cs.DC
+2024-12-17	2412.12599	Convergence of the QuickVal Residual	math.PR cs.DS
+2024-12-17	2412.12873	Cuckoo Heavy Keeper and the balancing act of maintaining heavy-hitters  in stream processing	cs.DS cs.DC
+2024-12-18	2412.13092	Computing crossing numbers with topological and geometric restrictions	cs.CG cs.DS
+2024-12-18	2412.13274	Assessing fault-tolerant quantum advantage for $k$-SAT with structure	quant-ph cs.DS
+2024-12-18	2412.13358	Stable Approximation Algorithms for Dominating Set and Independent Set	cs.DS cs.DM math.CO
+2024-12-18	2412.13813	Differentially Private Substring and Document Counting	cs.DS cs.CR
+2024-12-19	2412.14315	On the Robustness of Spectral Algorithms for Semirandom Stochastic Block  Models	stat.ML cs.DS cs.LG cs.SI
+2024-12-19	2412.14396	Fingerprinting Codes Meet Geometry: Improved Lower Bounds for Private  Query Release and Adaptive Data Analysis	cs.DS cs.CR cs.LG
+2024-12-19	2412.14441	Fine-Grained Computation in 3-Space: Matrix Multiplication and Graph  Problems	cs.DS
+2024-12-19	2412.14583	Loss Minimization for Electrical Flows over Spanning Trees on Grids	cs.DS math.OC
+2024-12-19	2412.14836	Sparse induced subgraphs in $P_7$-free graphs of bounded clique number	cs.DS math.CO
+2024-12-19	2412.15295	Log-Time K-Means Clustering for 1D Data: Novel Approaches with Proof and  Implementation	cs.DS cs.LG
+2024-12-20	2412.15069	Fully Dynamic Approximate Minimum Cut in Subpolynomial Time per  Operation	cs.DS
+2024-12-20	2412.15122	Solving the all pairs shortest path problem after minor update of a  large dense graph	cs.DS
+2024-12-20	2412.15130	Continuous Flattening and Reversing of Convex Polyhedral Linkages	cs.CG cs.CC cs.DM cs.DS
+2024-12-20	2412.15210	Tokenisation is NP-Complete	cs.DS cs.CL cs.FL
+2024-12-20	2412.15457	Rainbow Arborescence Conjecture	math.CO cs.DM cs.DS
+2024-12-20	2412.15663	Distance Vector Domination	cs.CC cs.DM cs.DS math.CO
+2024-12-20	2412.15671	Parameterized Complexity of (d,r)-Domination via Modular Decomposition	cs.CC cs.DM cs.DS math.CO
+2024-12-21	2412.16327	Approximation Algorithms for Clustering with Minimum Sum of Radii,  Diameters, and Squared Radii	cs.DS
+2024-12-21	2412.16370	Faster Positional-Population Counts for AVX2, AVX-512, and ASIMD	cs.DS
+2024-12-21	2412.16398	Chorba: A novel CRC32 implementation	cs.DS
+2024-12-21	2412.16448	Lower bounds for the universal TSP on the plane	math.MG cs.DS
+2024-12-21	2412.16457	Robust random graph matching in dense graphs via vector approximate  message passing	stat.ML cs.DS cs.LG math.PR math.ST stat.TH
+2024-12-21	2412.16485	Fast Biclique Counting on Bipartite Graphs: A Node Pivot-based Approach	cs.DS
+2024-12-21	2412.16566	Carbonyl4: A Sketch for Set-Increment Mixed Updates	cs.DS
+2024-12-22	2412.16802	Balls-and-Bins Sampling for DP-SGD	cs.LG cs.CR cs.DS stat.ML
+2024-12-22	2412.16830	Algorithm Design for Continual Learning in IoT Networks	cs.LG cs.DS cs.NI
+2024-12-22	2412.16934	Efficiently Solving Turn-Taking Stochastic Games with Extensive-Form  Correlation	cs.GT cs.AI cs.DS cs.LG
+2024-12-23	2412.17107	Grams: Gradient Descent with Adaptive Momentum Scaling	cs.LG cs.AI cs.DS math.OC
+2024-12-23	2412.17115	Sparsest cut and eigenvalue multiplicities on low degree Abelian Cayley  graphs	cs.DS cs.DM math.CO
+2024-12-23	2412.17193	Online coloring of short interval graphs and two-count interval graphs	cs.DS math.CO
+2024-12-23	2412.17307	On the complexity of finding a spanning even tree in a graph	cs.DS cs.DM math.CO
+2024-12-23	2412.17492	On the number of $k$-mers admitting a given lexicographical minimizer	cs.DS cs.DM math.CO
+2024-12-24	2412.17776	Efficient Fault-Tolerant Search by Fast Indexing of Subnetworks	cs.DS
+2024-12-24	2412.17786	Hiding, Shuffling, and Triangle Finding: Quantum Algorithms on Edge  Lists	quant-ph cs.CC cs.DS
+2024-12-24	2412.17899	A mixing time bound for Gibbs sampling from log-smooth log-concave  distributions	math.ST cs.DS stat.ML stat.TH
+2024-12-24	2412.17997	Shifted Composition III: Local Error Framework for KL Divergence	math.ST cs.DS cs.LG cs.NA math.NA stat.ML stat.TH
+2024-12-24	2412.18001	The Connected k-Vertex One-Center Problem on Graphs	cs.DS
+2024-12-24	2412.18008	Parallel Contraction Hierarchies Can Be Efficient and Scalable	cs.DS cs.DC
+2024-12-24	2412.18014	Algorithmic Universality, Low-Degree Polynomials, and Max-Cut in Sparse  Random Graphs	cs.DS math.PR
+2024-12-24	2412.18070	On the occupancy fraction of the antiferromagnetic Ising model	math.CO cs.DS
+2024-12-24	2412.18375	A Many Objective Problem Where Crossover is Provably Indispensable	cs.NE cs.AI cs.DS
+2024-12-25	2412.18530	Characterizations of Language Generation With Breadth	cs.LG cs.AI cs.CL cs.DS stat.ML
+2024-12-26	2412.19057	Faster Semi-streaming Matchings via Alternating Trees	cs.DS
+2024-12-27	2412.19249	A Space Lower Bound for Approximate Membership with Duplicate Insertions  or Deletions of Nonelements	cs.DS
+2024-12-27	2412.19420	A Matrix Logic Approach to Efficient Frequent Itemset Discovery in Large  Data Sets	cs.DB cs.DS
+2024-12-27	2412.19649	Distributed Download from an External Data Source in Faulty Majority  Settings	cs.DC cs.DS
+2024-12-30	2412.20490	Highway Dimension: a Metric View	cs.DS
+2024-12-30	2412.20700	Optimal rolling of fair dice using fair coins	cs.DS math.PR stat.CO
+2024-12-30	2412.20703	The Restricted Inverse Optimal Value Problem under Weighted Bottle-neck  Hamming distance on trees	cs.DS math.OC
+2024-12-30	2412.20711	How to Balance the Load Online When Jobs and Machines Are Both Selfish?	cs.DS cs.GT
+2024-12-30	2412.20878	A Formal Correctness Proof of Edmonds' Blossom Shrinking Algorithm	cs.LO cs.DS
+2024-12-31	2412.21134	On the Complexity of the Bilevel Shortest Path Problem	cs.DS
+2024-12-31	2412.21155	Low coordinate degree algorithms II: Categorical signals and generalized  stochastic block models	math.ST cs.DS math.CO math.PR stat.ML stat.TH
+2024-12-31	2412.21203	SoS Certificates for Sparse Singular Values and Their Applications:  Robust Statistics, Subspace Distortion, and More	cs.DS cs.LG
+2024-12-31	2501.00111	Binary Jumbled Indexing: Suffix tree histogram	cs.DS
+2024-12-31	2501.00120	Dynamic Unit-Disk Range Reporting	cs.CG cs.DS
+2024-12-31	2501.00161	Sufficient conditions for polynomial-time detection of induced minors	cs.DS cs.CC cs.DM math.CO
+2024-12-31	2501.00337	Constant Degree Networks for Almost-Everywhere Reliable Transmission	cs.DC cs.CR cs.DS
+2025-1-1	2501.00614	An Algorithmic Approach to Finding Degree-Doubling Nodes in Oriented  Graphs	math.CO cs.DS
+2025-1-2	2501.00860	On the Parameterized Complexity of Controlling Amendment and Successive  Winners	cs.GT cs.DS
+2025-1-2	2501.00926	Differentially Private Matchings	cs.DS
+2025-1-2	2501.00991	Twin-width one	cs.DM cs.DS math.CO
+2025-1-2	2501.01071	Submodular Maximization Subject to Uniform and Partition Matroids: From  Theory to Practical Applications and Distributed Solutions	cs.DS
+2025-1-2	2501.01099	A fast algorithm for the Frobenius problem in three variables	cs.DS math.CO
+2025-1-3	2501.01716	Beyond Non-Degeneracy: Revisiting Certainty Equivalent Heuristic for  Online Linear Programming	math.OC cs.DS cs.LG math.PR
+2025-1-3	2501.01801	John Ellipsoids via Lazy Updates	cs.DS cs.LG
+2025-1-4	2501.02136	Locally computing edge orientations	cs.DS
+2025-1-4	2501.02195	An Optimal Algorithm for Half-plane Hitting Set	cs.CG cs.DS
+2025-1-4	2501.02305	Optimal Bounds for Open Addressing Without Reordering	cs.DS math.CO
+2025-1-5	2501.02312	Efficient $d$-ary Cuckoo Hashing at High Load Factors by Bubbling Up	cs.DS math.CO
+2025-1-6	2501.02612	Chameleon2++: An Efficient Chameleon2 Clustering with Approximate  Nearest Neighbors	cs.LG cs.DS
+2025-1-6	2501.02886	Local Enumeration: The Not-All-Equal Case	cs.CC cs.DS
+2025-1-7	2501.03154	A Faster Algorithm for Constrained Correlation Clustering	cs.DS
+2025-1-7	2501.03363	On the non-submodularity of the problem of adding links to minimize the  effective graph resistance	cs.DS math-ph math.MP
+2025-1-7	2501.03488	A Simple and Combinatorial Approach to Proving Chernoff Bounds and Their  Generalizations	cs.DS math.CO
+2025-1-7	2501.03649	On the Locality of Hall's Theorem	cs.DS cs.DC
+2025-1-7	2501.03663	Dimension-Free Parameterized Approximation Schemes for Hybrid Clustering	cs.DS cs.CG
+2025-1-7	2501.03688	On Beating $2^n$ for the Closest Vector Problem	cs.DS
+2025-1-7	2501.03788	Young domination on Hamming rectangles	math.CO cs.DM cs.DS
+2025-1-8	2501.04072	Multi-armed Bandit and Backbone boost Lin-Kernighan-Helsgaun Algorithm  for the Traveling Salesman Problems	cs.DS cs.AI
+2025-1-8	2501.04166	Graph classes through the lens of logic	math.CO cs.DM cs.DS cs.LO
+2025-1-8	2501.04540	Protecting the Connectivity of a Graph Under Non-Uniform Edge Failures	cs.DS
+2025-1-9	2501.04813	Improved Approximation Algorithms for (1,2)-TSP and Max-TSP Using Path  Covers in the Semi-Streaming Model	cs.DS
+2025-1-9	2501.04859	ETH-Tight FPT Algorithm for Makespan Minimization on Uniform Machines	cs.DS
+2025-1-9	2501.05024	Sampling Unlabeled Chordal Graphs in Expected Polynomial Time	cs.DS
+2025-1-9	2501.05048	Approximate Minimum Tree Cover in All Symmetric Monotone Norms  Simultaneously	cs.DS
+2025-1-9	2501.05267	Distributed Graph Algorithms with Predictions	cs.DC cs.DS
+2025-1-9	2501.06246	A partition cover approach to tokenization	cs.CL cs.AI cs.DS
+2025-1-9	2501.06247	A Survey on Algorithmic Developments in Optimal Transport Problem with  Applications	cs.DS cs.AI cs.LG math.OC stat.ML
+2025-1-9	2503.18951	Bernstein-Vazirani Algorithm with A CCNOT-Based Oracle	cs.DS quant-ph
+2025-1-10	2501.05309	Private Selection with Heterogeneous Sensitivities	cs.CR cs.DS cs.LG
+2025-1-10	2501.05425	Entangled Mean Estimation in High-Dimensions	cs.DS cs.LG math.ST stat.ML stat.TH
+2025-1-10	2501.05570	Faster Edge Coloring by Partition Sieving	cs.DS
+2025-1-10	2501.05638	Mim-Width is paraNP-complete	cs.CC cs.DM cs.DS math.CO
+2025-1-10	2501.05796	Colorful Vertex Recoloring of Bipartite Graphs	cs.DS
+2025-1-11	2501.06417	DiscQuant: A Quantization Method for Neural Networks Inspired by  Discrepancy Theory	cs.LG cs.AI cs.DS
+2025-1-11	2501.06452	Faster parameterized algorithm for 3-Hitting Set	cs.DS
+2025-1-12	2501.06588	A Tight VC-Dimension Analysis of Clustering Coresets with Applications	cs.CG cs.DS cs.LG
+2025-1-12	2501.06647	TUCKET: A Tensor Time Series Data Structure for Efficient and Accurate  Factor Analysis over Time Ranges	cs.DS
+2025-1-13	2501.06872	On Optimizing Locality of Graph Transposition on Modern Architectures	cs.DC cs.AR cs.DS cs.PF
+2025-1-13	2501.06949	Algorithmical Aspects of Some Bio Inspired Operations	cs.DS
+2025-1-14	2501.07503	Big Atomics	cs.DC cs.DS
+2025-1-14	2501.07745	DynHAC: Fully Dynamic Approximate Hierarchical Agglomerative Clustering	cs.DS
+2025-1-14	2501.07903	Optimal Classification Trees for Continuous Feature Data Using Dynamic  Programming with Branch-and-Bound	cs.LG cs.AI cs.DS
+2025-1-15	2501.08449	A Refreshment Stirred, Not Shaken (II): Invariant-Preserving Deployments  of Differential Privacy for the US Decennial Census	cs.CR cs.CY cs.DS stat.ME
+2025-1-15	2501.08663	Efficient Shape Reconfiguration by Hybrid Programmable Matter	cs.DS cs.ET
+2025-1-15	2501.08775	Adaptive Approximation Schemes for Matching Queues	cs.DS
+2025-1-15	2501.08846	Beating Competitive Ratio 4 for Graphic Matroid Secretary	cs.DS
+2025-1-16	2501.09091	A simpler QPTAS for scheduling jobs with precedence constraints	cs.DS
+2025-1-16	2501.09189	Testing Noise Assumptions of Learning Algorithms	cs.LG cs.DS
+2025-1-16	2501.09293	Scheduling Coflows for Minimizing the Maximum Completion Time in  Heterogeneous Parallel Networks	cs.DS
+2025-1-17	2501.09691	A Near-optimal Algorithm for Learning Margin Halfspaces with Massart  Noise	cs.LG cs.DS math.ST stat.ML stat.TH
+2025-1-17	2501.09851	Learning Noisy Halfspaces with a Margin: Massart is No Harder than  Random	cs.LG cs.DS
+2025-1-17	2501.09856	Efficient Sampling of Temporal Networks with Preserved Causality  Structure	cs.SI cs.DS
+2025-1-17	2501.10102	An Efficient Algorithm for Permutation Iteration Using a Singly Linked  List	cs.DS cs.DM math.CO
+2025-1-17	2501.10183	Cutwidth and Crossings	cs.DS math.CO
+2025-1-17	2501.10230	Streaming Graph Algorithms in the Massively Parallel Computation Model	cs.DS
+2025-1-18	2501.10632	Local Sherman's Algorithm for Multi-commodity Flow	cs.DS
+2025-1-18	2501.10633	Answering Related Questions	cs.DS cs.CC cs.DM math.CO
+2025-1-19	2501.10810	Convergence and Running Time of Time-dependent Ant Colony Algorithms	cs.DS cs.NE
+2025-1-19	2501.10884	Fixed Point Computation: Beating Brute Force with Smoothed Analysis	cs.GT cs.DS cs.LG
+2025-1-19	2501.10918	Packing Dijoins in Weighted Chordal Digraphs	math.CO cs.DS math.OC
+2025-1-20	2501.11129	Optimal Binary Variable-Length Codes with a Bounded Number of 1's per  Codeword: Design, Analysis, and Applications	cs.IT cs.DS math.IT
+2025-1-20	2501.11157	On the thinness of trees	cs.DS cs.DM
+2025-1-20	2501.11226	Local Limits of Small World Networks	math.PR cs.DS cs.SI math.CO
+2025-1-20	2501.11380	On the Complexity of Computing a Fastest Temporal Path in Interval  Temporal Graphs	cs.DS math.CO
+2025-1-21	2501.11541	An algorithmic Vizing's theorem: toward efficient edge-coloring sampling  with an optimal number of colors	cs.DS cs.DM
+2025-1-21	2501.11582	Tight Analyses of Ordered and Unordered Linear Probing	cs.DS
+2025-1-21	2501.11673	Randomized Kaczmarz Methods with Beyond-Krylov Convergence	math.NA cs.DS cs.LG cs.NA math.OC stat.ML
+2025-1-21	2501.12044	$O(1)$-Round MPC Algorithms for Multi-dimensional Grid Graph  Connectivity, EMST and DBSCAN	cs.DS cs.CC cs.CG cs.DC
+2025-1-22	2501.12261	On Diverse Solutions to Packing and Covering Problems	cs.CG cs.DS
+2025-1-22	2501.12293	Improved Decoding of Tanner Codes	cs.IT cs.CC cs.DS math.IT
+2025-1-22	2501.12316	On the Complexity of Telephone Broadcasting: From Cacti to Bounded  Pathwidth Graphs	cs.DS
+2025-1-22	2501.12490	A Fast Counting-Free Algorithm for Computing Atomic Sets in Feature  Models	cs.DS
+2025-1-22	2501.12503	Stable Matching with Interviews	cs.DS cs.GT
+2025-1-22	2501.12549	An O(log n)-Approximation Algorithm for (p,q)-Flexible Graph  Connectivity via Independent Rounding	cs.DM cs.DS
+2025-1-22	2501.12708	Making Temporal Betweenness Computation Faster and Restless	cs.DS cs.NI
+2025-1-22	2501.12725	Online Rack Placement in Large-Scale Data Centers	math.OC cs.DS
+2025-1-22	2501.12770	On Tradeoffs in Learning-Augmented Algorithms	cs.DS cs.AI cs.LG
+2025-1-22	2501.12771	Non-adaptive Learning of Random Hypergraphs with Queries	cs.IT cs.DM cs.DS cs.LG math.IT stat.ML
+2025-1-22	2501.12848	A Note on Deterministic FPTAS for Partition	cs.DS
+2025-1-22	2501.12929	QuaRs: A Transform for Better Lossless Compression of Integers	cs.DS
+2025-1-23	2501.13093	Guaranteed Recovery of Unambiguous Clusters	cs.IT cs.AI cs.DS cs.LG math.IT math.ST stat.TH
+2025-1-23	2501.13194	Corecursive Coding of High Computational Derivatives and Power Series	cs.PL cs.DS
+2025-1-23	2501.13217	Complexity and Algorithm for the Matching vertex-cutset Problem	cs.DS math.CO
+2025-1-23	2501.13346	Markovian Search with Socially Aware Constraints	cs.DS cs.GT econ.TH math.OC
+2025-1-23	2501.13596	New Oracles and Labeling Schemes for Vertex Cut Queries	cs.DS
+2025-1-24	2501.13907	Graphs with no long claws: An improved bound for the analog of the  Gy\'{a}rf\'{a}s' path argument	math.CO cs.DM cs.DS
+2025-1-24	2501.14010	On Extended Concentration Inequalities for Fast JL Embeddings of  Infinite Sets	cs.DS math.PR
+2025-1-24	2501.14336	RadiK: Scalable and Optimized GPU-Parallel Radix Top-K Selection	cs.DS cs.DC
+2025-1-24	2501.14450	Changing Induced Subgraph Isomorphisms Under Extended Reconfiguration  Rules	cs.DS
+2025-1-24	2501.14461	Efficient parameterized approximation	cs.DS
+2025-1-24	2501.14537	Forbidden Subgraph Problems with Predictions	cs.DS
+2025-1-25	2501.14658	Tree independence number V. Walls and claws	math.CO cs.DM cs.DS
+2025-1-27	2501.15782	Online Allocation with Multi-Class Arrivals: Group Fairness vs  Individual Welfare	cs.GT cs.DS
+2025-1-27	2501.15952	Polynomial Kernel and Incompressibility for Prison-Free Edge Deletion  and Completion	cs.DS
+2025-1-27	2501.16039	Complexity of Minimal Faithful Permutation Degree for Fitting-free  Groups	cs.DS cs.CC math.GR
+2025-1-28	2501.16419	Near-Optimal Parameter Tuning of Level-1 QAOA for Ising Models	quant-ph cs.DS cs.ET math.OC
+2025-1-28	2501.16535	Latency Guarantees for Caching with Delayed Hits	cs.DS
+2025-1-28	2501.16680	Differentially Private Set Representations	cs.CR cs.DS
+2025-1-28	2501.17205	Near-Optimal Algorithms for Omniprediction	stat.ML cs.DS cs.LG
+2025-1-29	2501.17277	Hardness and Approximation Algorithms for Balanced Districting Problems	cs.DS
+2025-1-29	2501.17379	Stable Tree Labelling for Accelerating Distance Queries on Dynamic Road  Networks	cs.DS cs.DB
+2025-1-29	2501.17563	Search Trees on Trees via LP	cs.DS
+2025-1-29	2501.17638	Better and Simpler Reducibility Bounds over the Integers	math.OC cs.DM cs.DS
+2025-1-29	2501.17682	Unifying Scheduling Algorithms for Group Completion Time	cs.DS
+2025-1-30	2501.17701	Decision-Theoretic Approaches in Learning-Augmented Algorithms	cs.DS cs.LG
+2025-1-30	2501.17708	Improved fixed-parameter bounds for Min-Sum-Radii and Diameters  $k$-clustering and their fair variants	cs.DS
+2025-1-30	2501.17836	Matrix Product Sketching via Coordinated Sampling	cs.DS cs.DB cs.LG
+2025-1-30	2501.18010	Sequential Testing with Subadditive Costs	cs.DS
+2025-1-30	2501.18105	Facility Location on High-dimensional Euclidean Spaces	cs.DS
+2025-1-31	2501.18496	Graph Exploration with Edge Weight Estimates	cs.DS
+2025-1-31	2501.18522	Digital Quantum Simulations of the Non-Resonant Open Tavis-Cummings  Model	quant-ph cs.DS physics.comp-ph physics.optics
+2025-1-31	2501.18977	Blocked Bloom Filters with Choices	cs.DB cs.DS
+2025-1-31	2501.18987	Better late, then? The hardness of choosing delays to meet passenger  demands in temporal graphs	cs.DS cs.CC cs.DM
+2025-1-31	2501.19148	Constant-Factor Distortion Mechanisms for $k$-Committee Election	cs.GT cs.DS cs.MA
+2025-2-1	2502.00316	The Kernighan-Lin Search Algorithm	cs.DS
+2025-2-1	2504.13842	The Model Counting Competitions 2021-2023	cs.AI cs.DS cs.LO
+2025-2-2	2502.00484	Satisfactory Budget Division	cs.GT cs.CC cs.DS
+2025-2-2	2502.00607	PAC Learning is just Bipartite Matching (Sort of)	cs.LG cs.DS stat.ML
+2025-2-2	2502.00676	Optimal local certification on graphs of bounded pathwidth	cs.DC cs.DS
+2025-2-2	2502.00767	Learning-Based TSP-Solvers Tend to Be Overly Greedy	cs.LG cs.AI cs.DS
+2025-2-3	2502.00841	Polynomial Time Learning-Augmented Algorithms for NP-hard Permutation  Problems	cs.DS
+2025-2-3	2502.00951	Graph parameters that are coarsely equivalent to tree-length	math.CO cs.DS
+2025-2-3	2502.01067	Nearly Tight Bounds for Exploration in Streaming Multi-armed Bandits  with Known Optimality Gap	cs.LG cs.DS
+2025-2-3	2502.01163	Minimum Riesz s-Energy Subset Selection in Ordered Point Sets via  Dynamic Programming	cs.DS
+2025-2-3	2502.01265	On Exact Learning of $d$-Monotone Functions	cs.LG cs.DS
+2025-2-3	2502.01327	IBB: Fast Burrows-Wheeler Transform Construction for Length-Diverse DNA  Data	cs.DS
+2025-2-3	2502.01381	Fair densest subgraph across multiple graphs	cs.DS
+2025-2-3	2502.01400	Fair Vertex Problems Parameterized by Cluster Vertex Deletion	cs.DS cs.CC cs.LO
+2025-2-3	2502.01408	Node ranking in labeled networks	cs.DS
+2025-2-4	2502.01421	Fully Dynamic Spectral Sparsification of Hypergraphs	cs.DS
+2025-2-4	2502.01435	Dense Subgraph Discovery Meets Strong Triadic Closure	cs.DS
+2025-2-4	2502.01551	Reductions in local certification	cs.DC cs.DM cs.DS math.CO
+2025-2-4	2502.01603	Southwest Tree: A Low-Memory Data Structure for Partial Accumulations by  Non-Commutative Invertible Operations	cs.DS
+2025-2-4	2502.02085	A New Rejection Sampling Approach to $k$-$\mathtt{means}$++ With  Improved Trade-Offs	cs.DS cs.LG
+2025-2-4	2502.02115	Efficient and Practical Approximation Algorithms for Advertising in  Content Feeds	cs.DS
+2025-2-4	2502.02193	Extending the Applicability of Bloom Filters by Relaxing their Parameter  Constraints	cs.DS
+2025-2-5	2502.02455	A note on Ordered Ruzsa-Szemer\'edi graphs	cs.DS math.CO
+2025-2-5	2502.02477	A Clique Partitioning-Based Algorithm for Graph Compression	cs.DS
+2025-2-5	2502.02530	Max-Min Diversification with Asymmetric Distances	cs.DS
+2025-2-5	2502.02543	Posted Price Mechanisms for Online Allocation with Diseconomies of Scale	cs.GT cs.DS
+2025-2-5	2502.02572	Algorithms and Hardness Results for the $(k,\ell)$-Cover Problem	cs.DS
+2025-2-5	2502.02680	Improving polynomial bounds for the Graphical Traveling Salesman Problem  with release dates on paths	cs.DS
+2025-2-5	2502.02688	Efficient Implementation of the Global Cardinality Constraint with Costs	cs.AI cs.DS
+2025-2-5	2502.02799	Unweighted Code Sparsifiers and Thin Subgraphs	math.CO cs.DS
+2025-2-5	2502.02861	Algorithms with Calibrated Machine Learning Predictions	stat.ML cs.DS cs.LG
+2025-2-5	2502.03144	Group Trip Planning Query Problem with Multimodal Journey	cs.MA cs.DB cs.DS
+2025-2-6	2502.03309	Optimal Orthogonal Drawings in Linear Time	cs.CG cs.DS
+2025-2-6	2502.03313	Near-optimal Linear Sketches and Fully-Dynamic Algorithms for Hypergraph  Spectral Sparsification	cs.DS
+2025-2-6	2502.03574	Pandora with Inaccurate Priors	cs.DS
+2025-2-6	2502.03663	Fast Geographic Routing in Fixed-Growth Graphs	cs.DS
+2025-2-6	2502.03696	Cascaded Learned Bloom Filter for Optimal Model-Filter Size Balance and  Fast Rejection	cs.DS cs.CC cs.LG
+2025-2-6	2502.03702	Tensor Decomposition Meets Knowledge Compilation: A Study Comparing  Tensor Trains with OBDDs	cs.DS
+2025-2-6	2502.03817	Knowing When to Stop Matters: A Unified Algorithm for Online Conversion  under Horizon Uncertainty	cs.DS cs.LG
+2025-2-7	2502.04182	Fast In-Spectrum Graph Watermarks	cs.DS
+2025-2-7	2502.04477	Near-Optimal Sample Complexity for MDPs via Anchoring	math.OC cs.DS
+2025-2-7	2502.04632	Tight Bounds for Noisy Computation of High-Influence Functions,  Connectivity, and Threshold	cs.DS cs.CC cs.IT math.IT
+2025-2-7	2502.04677	LLM Query Scheduling with Prefix Reuse and Latency Constraints	cs.DS
+2025-2-8	2502.05019	$O(\sqrt{T})$ Static Regret and Instance Dependent Constraint Violation  for Constrained Online Convex Optimization	cs.LG cs.DS
+2025-2-8	2502.05059	Exact Algorithms for Distance to Unique Vertex Cover	cs.DS cs.CC
+2025-2-8	2502.05063	Computing and Learning on Combinatorial Data	cs.AI cs.DM cs.DS
+2025-2-8	2502.05082	A Randomised Approach to Distributed Sorting	cs.DS cs.DC cs.DM math.PR
+2025-2-8	2502.05157	Efficient distributional regression trees learning algorithms for  calibrated non-parametric probabilistic forecasts	cs.LG cs.DS
+2025-2-8	2502.05373	Algorithmic Problems in Categories of Partitions	cs.DS math.QA
+2025-2-8	2502.05437	Approximating the total variation distance between spin systems	cs.DS cs.LG math.PR
+2025-2-8	2502.05511	New and Improved Bounds for Markov Paging	cs.DS
+2025-2-8	2502.05599	Online Bidding Algorithms with Strict Return on Spend (ROS) Constraint	cs.GT cs.DS cs.LG
+2025-2-9	2502.05613	Combined Search and Encoding for Seeds, with an Application to Minimal  Perfect Hashing	cs.DS
+2025-2-9	2502.05687	Near-Optimal Directed Low-Diameter Decompositions	cs.DS
+2025-2-9	2502.05720	Pareto-Optimality, Smoothness, and Stochasticity in Learning-Augmented  One-Max-Search	cs.DS cs.AI
+2025-2-9	2502.05723	Breaking the Quadratic Barrier: Robust Cardinality Sketches for Adaptive  Queries	cs.DS
+2025-2-9	2502.05730	Attainability of Two-Point Testing Rates for Finite-Sample Location  Estimation	math.ST cs.DS stat.ML stat.TH
+2025-2-9	2502.05877	Sink-free orientations: a local sampler with applications	cs.DS cs.DM math.PR
+2025-2-9	2502.05888	Faster Approximation Algorithms for k-Center via Data Reduction	cs.DS
+2025-2-9	2502.05915	Constant sensitivity on the CDAWGs	cs.DS
+2025-2-10	2502.06001	Amnesiac Flooding: Easy to break, hard to escape	cs.DC cs.DM cs.DS
+2025-2-10	2502.06024	Improved Sublinear Algorithms for Classical and Quantum Graph Coloring	cs.DS
+2025-2-10	2502.06112	Pcodec: Better Compression for Numerical Sequences	cs.IT cs.DS math.IT
+2025-2-10	2502.06200	On the query complexity of sampling from non-log-concave distributions	cs.DS cs.LG stat.ML
+2025-2-10	2502.06459	Maximum Coverage $k$-Antichains and Chains: A Greedy Approach	cs.DS
+2025-2-10	2502.06461	New simple and fast quicksort algorithm for equal keys	cs.DS
+2025-2-10	2502.06464	A Quadratic Lower Bound for Stable Roommates Solvability	cs.CC cs.DS cs.GT
+2025-2-10	2502.06477	ARRIVAL: Recursive Framework & $\ell_1$-Contraction	cs.DS
+2025-2-10	2502.06522	Approximation Algorithms for Optimal Hopsets	cs.DS cs.DM
+2025-2-11	2502.06558	On the FirstFit Algorithm for Online Unit-Interval Coloring	cs.DS
+2025-2-11	2502.06564	Nearly Optimal Robust Covariance and Scatter Matrix Estimation Beyond  Gaussians	cs.DS cs.LG math.ST stat.ML stat.TH
+2025-2-11	2502.06586	Decay of correlation for edge colorings when $q>3\Delta$	cs.DS math.PR
+2025-2-11	2502.06730	Engineering Insights into Biclique Partitions and Fractional Binary  Ranks of Matrices	cs.DS
+2025-2-11	2502.07062	Breaking Barriers: Combinatorial Algorithms for Non-monotone Submodular  Maximization with Sublinear Adaptivity and $1/e$ Approximation	cs.DS
+2025-2-11	2502.07135	One-Shot Learning for k-SAT	cs.DS cs.LG math.ST stat.ML stat.TH
+2025-2-11	2502.07214	Pareto Optimal Algorithmic Recourse in Multi-cost Function	cs.LG cs.AI cs.DS
+2025-2-11	2502.07416	Quantum Communication Advantage for Leader Election and Agreement	cs.DC cs.DS quant-ph
+2025-2-11	2502.07496	Exploring Word-Representable Temporal Graphs	cs.DS
+2025-2-11	2502.07501	Faster diameter computation in graphs of bounded Euler genus	cs.DS math.CO
+2025-2-12	2502.07653	Robust-Sorting and Applications to Ulam-Median	cs.DS
+2025-2-12	2502.07657	Private Low-Rank Approximation for Covariance Matrices, Dyson Brownian  Motion, and Eigenvalue-Gap Bounds for Gaussian Perturbations	cs.DS cs.CR cs.LG cs.NA math.NA math.PR
+2025-2-12	2502.07669	Coresets for Robust Clustering via Black-box Reductions to Vanilla Case	cs.DS
+2025-2-12	2502.07731	Online matching and market imbalance	cs.DS math.OC
+2025-2-12	2502.07764	Polynomial-Time Approximability of Constrained Reinforcement Learning	cs.DS cs.AI cs.LG
+2025-2-12	2502.07861	BalanceKV: KV Cache Compression through Discrepancy Theory	cs.LG cs.AI cs.DS
+2025-2-12	2502.08029	Understanding the Kronecker Matrix-Vector Complexity of Linear Algebra	cs.DS cs.NA math.NA
+2025-2-12	2502.08032	Shortcuts and Transitive-Closure Spanners Approximation	cs.DS
+2025-2-12	2502.08042	Parallel $k$-Core Decomposition: Theory and Practice	cs.DS cs.DC
+2025-2-12	2502.08125	Incremental Approximate Single-Source Shortest Paths with Predictions	cs.DS cs.LG
+2025-2-12	2502.08267	Cost Preserving Dependent Rounding for Allocation Problems	cs.DS
+2025-2-12	2502.08272	Weighted Pseudorandom Generators for Read-Once Branching Programs via  Weighted Pseudorandom Reductions	cs.CC cs.DS
+2025-2-12	2502.08326	Model-Free Counterfactual Subset Selection at Scale	cs.LG cs.DB cs.DS cs.IR
+2025-2-13	2502.08790	The Planted Spanning Tree Problem	cs.DS cs.DM
+2025-2-13	2502.08827	Stable Hypergraph Matching in Unimodular Hypergraphs	cs.GT cs.DS
+2025-2-13	2502.08878	Scalable Private Partition Selection via Adaptive Weighting	cs.DS cs.CR
+2025-2-13	2502.08889	Linear-Time User-Level DP-SCO via Robust Statistics	cs.LG cs.CR cs.DS stat.ML
+2025-2-13	2502.09105	Incremental Approximate Maximum Flow via Residual Graph Sparsification	cs.DS
+2025-2-13	2502.09189	Data Structures for Finite Downsets of Natural Vectors: Theory and  Practice	cs.LO cs.DS cs.FL
+2025-2-13	2502.09249	Space-Efficient Quantum Error Reduction without log Factors	quant-ph cs.DS
+2025-2-13	2502.09299	Moving Matter: Efficient Reconfiguration of Tile Arrangements by a  Single Active Robot	cs.CG cs.DS cs.RO
+2025-2-14	2502.09412	A LP-rounding based algorithm for soft capacitated facility location  problem with submodular penalties	cs.DS math.CO
+2025-2-14	2502.09440	Deterministic Independent Sets in the Semi-Streaming Model	cs.DS cs.CC
+2025-2-14	2502.09521	Forward-backward Contention Resolution Schemes for Fair Rationing	cs.DS cs.DM
+2025-2-14	2502.09525	Robust Learning of Multi-index Models via Iterative Subspace  Approximation	cs.LG cs.DS math.ST stat.ML stat.TH
+2025-2-14	2502.09534	Fast Tensor Completion via Approximate Richardson Iteration	cs.DS cs.LG math.ST stat.TH
+2025-2-14	2502.09832	Algorithmic contiguity from low-degree conjecture and applications in  correlated random graphs	stat.ML cs.DS cs.LG math.PR math.ST stat.TH
+2025-2-14	2502.09834	Optimal $k$-Secretary with Logarithmic Memory	cs.DS
+2025-2-15	2502.10279	Emit As You Go: Enumerating Edges of a Spanning Tree	cs.DS cs.CC
+2025-2-15	2502.10314	Interval Selection with Binary Predictions	cs.DS
+2025-2-15	2502.10348	On Incremental Approximate Shortest Paths in Directed Graphs	cs.DS
+2025-2-15	2502.10519	Customizable Contraction Hierarchies -- A Survey	cs.DS
+2025-2-15	2502.10527	Algorithms and Hardness for Estimating Statistical Similarity	cs.DS cs.CC
+2025-2-15	2502.10795	Local Gibbs sampling beyond local uniformity	cs.DS
+2025-2-16	2502.10890	Light Edge Fault Tolerant Graph Spanners	cs.DS cs.DM math.CO
+2025-2-16	2502.10909	Exponential-Time Approximation (Schemes) for Vertex-Ordering Problems	cs.DS
+2025-2-16	2502.10935	Probabilistic analysis of arithmetic coding showing its robustness	cs.DS
+2025-2-16	2502.10977	The Bathroom Model: A Realistic Approach to Hash Table Algorithm  Optimization	cs.DS
+2025-2-16	2502.10997	New Rates in Stochastic Decision-Theoretic Online Learning under  Differential Privacy	cs.LG cs.CR cs.DS
+2025-2-17	2502.11557	Fast Maximum Common Subgraph Search: A Redundancy-Reduced Backtracking  Approach	cs.DB cs.DS
+2025-2-17	2502.11561	A linear-time algorithm computing the resident fitness in interacting  trajectories	cs.DS math.PR
+2025-2-17	2502.11602	Cheesemap: A High-Performance Point-Indexing Data Structure for Neighbor  Search in LiDAR Data	cs.DS cs.PF
+2025-2-17	2502.11674	On a tree-based variant of bandwidth and forbidding simple topological  minors	cs.DM cs.CC cs.DS math.CO
+2025-2-17	2502.11690	On the Locality of the Lov\'asz Local Lemma	cs.DS cs.DC math.PR
+2025-2-17	2502.11778	Private Synthetic Graph Generation and Fused Gromov-Wasserstein Distance	stat.ML cs.DS cs.LG math.PR
+2025-2-18	2502.11961	Parameterised algorithms for temporal reconfiguration problems	cs.DS cs.DM math.CO
+2025-2-18	2502.11979	Logarithmic Approximation for Road Pricing on Grids	cs.DS cs.GT
+2025-2-18	2502.11999	Algorithm Engineering of SSSP With Negative Edge Weights	cs.DS
+2025-2-18	2502.12000	\~Optimal Algorithm for Fully Dynamic LZ77	cs.DS
+2025-2-18	2502.12465	Computational-Statistical Tradeoffs at the Next-Token Prediction  Barrier: Autoregressive and Imitation Learning under Misspecification	cs.LG cs.DS
+2025-2-18	2502.12499	GPU Memory Usage Optimization for Backward Propagation in Deep Network  Training	cs.LG cs.DS
+2025-2-18	2502.12519	Min-Max Correlation Clustering via Neighborhood Similarity	cs.DS cs.DC
+2025-2-18	2502.12569	Maximizing Value in Challenge the Champ Tournaments	cs.DS cs.GT cs.MA
+2025-2-18	2502.12749	Revisiting Token Sliding on Chordal Graphs	cs.DS
+2025-2-18	2502.12844	Generalized De Bruijn Words, Invertible Necklaces, and the  Burrows-Wheeler Transform	math.CO cs.DM cs.DS cs.FL
+2025-2-18	2502.12856	Finding Maximum Weight 2-Packing Sets on Arbitrary Graphs	cs.DS
+2025-2-18	2502.12903	On the Complexity of Minimising the Moving Distance for Dispersing  Objects	cs.DS
+2025-2-19	2502.12993	Approximate Tree Completion and Learning-Augmented Algorithms for Metric  Minimum Spanning Trees	cs.DS cs.DM cs.LG
+2025-2-19	2502.13000	Edge-Colored Clustering in Hypergraphs: Beyond Minimizing Unsatisfied  Edges	cs.DS cs.DM cs.LG
+2025-2-19	2502.13007	Smoothed Analysis of Dynamic Graph Algorithms	cs.DS
+2025-2-19	2502.13065	Improving Algorithmic Efficiency using Cryptography	cs.CR cs.DS
+2025-2-19	2502.13292	Sum-Of-Squares To Approximate Knapsack	cs.DS math.OC
+2025-2-19	2502.13336	Graph-Based Algorithms for Diverse Similarity Search	cs.DS
+2025-2-19	2502.13536	Slant/Gokigen Naname is NP-complete, and Some Variations are in P	cs.DM cs.CG cs.DS
+2025-2-19	2502.13631	Faster Minimization of Total Weighted Completion Time on Parallel  Machines	cs.DS
+2025-2-19	2502.13636	Semi-Streaming Algorithms for Hypergraph Matching	cs.DS
+2025-2-19	2502.13653	A Query-Driven Approach to Space-Efficient Range Searching	cs.DS cs.CG cs.LG
+2025-2-19	2502.13654	FPT algorithms over linear delta-matroids with applications	cs.DS
+2025-2-20	2502.14087	Learning from End User Data with Shuffled Differential Privacy over  Kernel Densities	cs.LG cs.CR cs.DS
+2025-2-20	2502.14161	Structural Parameterizations for Induced and Acyclic Matching	cs.DS cs.CC
+2025-2-20	2502.14379	Achieving adaptivity and optimality for multi-armed bandits using  Exponential-Kullback Leiblier Maillard Sampling	cs.LG cs.DS
+2025-2-20	2502.14407	Sharp Phase Transitions in Estimation with Low-Degree Polynomials	math.ST cs.CC cs.DS math.PR stat.TH
+2025-2-20	2502.14446	LEIT-motifs: Scalable Motif Mining in Multidimensional Time Series	cs.DS
+2025-2-20	2502.14488	U-index: A Universal Indexing Framework for Matching Long Patterns	cs.DS
+2025-2-20	2502.14532	OptiRefine: Densest subgraphs and maximum cuts with $k$ refinements	cs.DS
+2025-2-20	2502.14611	Enumerating minimal dominating sets and variants in chordal bipartite  graphs	cs.DS cs.DM math.CO
+2025-2-21	2502.14624	Online Envy Minimization and Multicolor Discrepancy: Equivalences and  Separations	cs.GT cs.DS
+2025-2-21	2502.14639	Condorcet Winners and Anscombes Paradox Under Weighted Binary Voting	cs.GT cs.DS
+2025-2-21	2502.14772	Efficient Multivariate Robust Mean Estimation Under Mean-Shift  Contamination	cs.DS cs.LG math.ST stat.ML stat.TH
+2025-2-21	2502.14812	Byzantine Game Theory: Sun Tzus Boxes	cs.GT cs.DC cs.DS
+2025-2-21	2502.15320	Adversarially-Robust Gossip Algorithms for Approximate Quantile and Mean  Computations	cs.DS cs.DC math.OC
+2025-2-21	2502.15330	Streaming Maximal Matching with Bounded Deletions	cs.DS
+2025-2-21	2502.15333	Improved Sublinear-time Moment Estimation using Weighted Sampling	cs.DS
+2025-2-21	2502.15372	Efficient and Provable Algorithms for Covariate Shift	cs.LG cs.DS
+2025-2-21	2502.15378	Optimal Distributed Replacement Paths	cs.DS cs.DC
+2025-2-21	2502.15379	Arboricity and Random Edge Queries Matter for Triangle Counting using  Sublinear Queries	cs.DS
+2025-2-22	2502.15539	PtrHash: Minimal Perfect Hashing at RAM Throughput	cs.DS
+2025-2-22	2502.15884	Tight Bounds for some Classical Problems Parameterized by Cutwidth	cs.DS
+2025-2-22	2502.15955	Compression Barriers for Autoregressive Transformers	cs.DS cs.AI cs.CC cs.LG
+2025-2-22	2502.15962	Towards Efficient Contrastive PAC Learning	cs.LG cs.DS stat.ML
+2025-2-22	2502.16021	Learning Neural Networks with Distribution Shift: Efficiently  Certifiable Guarantees	cs.DS cs.LG
+2025-2-22	2502.16096	The Parameterized Landscape of Labeled Graph Contractions	cs.DS cs.CC
+2025-2-22	2502.16193	Testing whether a subgraph is convex or isometric	cs.DS
+2025-2-23	2502.16260	Assortment optimization given basket shopping behavior using the Ising  model	math.OC cs.DS
+2025-2-23	2502.16352	Verifying Classification with Limited Disclosure	cs.LG cs.CR cs.CY cs.DS
+2025-2-23	2502.16355	Monotonicity Testing of High-Dimensional Distributions with Subcube  Conditioning	math.ST cs.CC cs.DM cs.DS cs.LG stat.TH
+2025-2-23	2502.16387	Simultaneous Swap Regret Minimization via KL-Calibration	cs.LG cs.DS cs.GT
+2025-2-23	2502.16388	Worst-case Error Bounds for Online Learning of Smooth Functions	cs.LG cs.DM cs.DS stat.ML
+2025-2-23	2502.16462	Improved Margin Generalization Bounds for Voting Classifiers	cs.LG cs.DS math.ST stat.ML stat.TH
+2025-2-24	2502.16714	Planar Network Diversion	cs.DS cs.CG
+2025-2-24	2502.16723	A Parameterized Complexity Analysis of Bounded Height Depth-first Search  Trees	cs.DS cs.CC
+2025-2-24	2502.16862	Potential-Based Greedy Matching for Dynamic Delivery Pooling	cs.DS
+2025-2-24	2502.16960	Efficiency in the Roommates Problem	cs.GT cs.DS econ.TH
+2025-2-24	2502.17199	Minimizers in Semi-Dynamic Strings	cs.DS
+2025-2-25	2502.17600	Tight Bounds on the Number of Closest Pairs in Vertical Slabs	cs.CG cs.DS
+2025-2-25	2502.17629	Simple Sublinear Algorithms for $(\Delta+1)$ Vertex Coloring via  Asymmetric Palette Sparsification	cs.DS
+2025-2-25	2502.17940	Optimal Approximate Matrix Multiplication over Sliding Window	cs.DS
+2025-2-25	2502.18019	An unconditional lower bound for the active-set method on the hypercube	cs.DM cs.CC cs.DS math.CO
+2025-2-25	2502.18065	Merge-width and First-Order Model Checking	math.CO cs.DM cs.DS cs.LO
+2025-2-25	2502.18213	Near-optimal Active Regression of Single-Index Models	cs.DS cs.LG
+2025-2-25	2502.18265	A Competitive Posted-Price Mechanism for Online Budget-Feasible Auctions	cs.GT cs.DS
+2025-2-25	2502.18541	From Chinese Postman to Salesman and Beyond II: Inapproximability and  Parameterized Complexity	cs.DS cs.CC
+2025-2-26	2502.18350	Graph Inference with Effective Resistance Queries	cs.DS cs.DM cs.LG
+2025-2-26	2502.18390	Unbent Collections of Orthogonal Drawings	cs.CG cs.DM cs.DS math.CO
+2025-2-26	2502.18393	Learning sparse generalized linear models with binary outcomes via  iterative hard thresholding	math.ST cs.DS cs.IT cs.LG math.IT stat.ML stat.TH
+2025-2-26	2502.18779	Towards Optimal Multi-draft Speculative Decoding	cs.CL cs.DS
+2025-2-26	2502.18803	On Aggregation Queries over Predicted Nearest Neighbors	cs.DS cs.DB cs.IR
+2025-2-26	2502.18830	Optimal Approximate Matrix Multiplication over Sliding Windows	cs.DS cs.LG
+2025-2-27	2502.19205	Approximate $2$-hop neighborhoods on incremental graphs: An efficient  lazy approach	cs.DS
+2025-2-27	2502.19865	Beyond Worst-Case Dimensionality Reduction for Sparse Vectors	cs.DS cs.LG
+2025-2-27	2502.20148	Quantum algorithms and lower bounds for eccentricity, radius, and  diameter in undirected graphs	quant-ph cs.DS
+2025-2-28	2502.20207	Differentially-private frugal estimation of quantiles	cs.DS cs.CR
+2025-2-28	2502.20338	KeBaB: $k$-mer based breaking for finding super-maximal exact matches	cs.DS
+2025-2-28	2502.20708	A fast and slightly robust covariance estimator	cs.DS
+2025-2-28	2502.20725	Optimizing Quotient Filters using Graveyard Hashing	cs.DS
+2025-2-28	2502.20889	A Faster Algorithm for Maximum Weight Matching on Unrestricted Bipartite  Graphs	cs.DS
+2025-2-28	2502.20896	Layered Graph Drawing with Few Gaps and Few Crossings	cs.DS
+2025-2-28	2502.20905	GridOT -- a discrete optimal transport solver on grids	cs.DS
+2025-2-28	2502.21031	When MIS and Maximal Matching are Easy in the Congested Clique	cs.DC cs.DS
+2025-3-1	2502.21197	3.415-Approximation for Coflow Scheduling via Iterated Rounding	cs.DS math.OC
+2025-3-1	2502.21240	The Structural Complexity of Matrix-Vector Multiplication	cs.DS cs.CC cs.CG cs.LG
+2025-3-1	2503.00263	On the time complexity of finding a well-spread perfect matching in  bridgeless cubic graphs	cs.DS cs.DM math.CO
+2025-3-1	2503.00281	An FPT Constant-Factor Approximation Algorithm for Correlation  Clustering	cs.DS
+2025-3-2	2503.00672	Interval H-graphs : Recognition and forbidden obstructions	cs.DM cs.DS math.CO
+2025-3-2	2503.00712	Streaming Algorithms for Network Design	cs.DS
+2025-3-3	2503.00937	Learning-Augmented Frequent Directions	cs.LG cs.DS
+2025-3-3	2503.01005	Optimal Trickle-Down Theorems for Path Complexes via C-Lorentzian  Polynomials with Applications to Sampling and Log-Concave Sequences	math.CO cs.CC cs.DS
+2025-3-3	2503.01147	A framework for boosting matching approximation: parallel, distributed,  and dynamic	cs.DS
+2025-3-3	2503.01368	The Complexity of Extending Fair Allocations of Indivisible Goods	cs.GT cs.DS
+2025-3-3	2503.01388	Faster ED-String Matching with $k$ Mismatches	cs.DS
+2025-3-3	2503.01445	Binary $k$-Center with Missing Entries: Structure Leads to Tractability	cs.DS
+2025-3-3	2503.01455	Provably optimal decision trees with arbitrary splitting rules in  polynomial time	cs.LG cs.DS
+2025-3-4	2503.01662	Scanning HTML at Tens of Gigabytes per Second on ARM Processors	cs.DS cs.AR
+2025-3-4	2503.01762	Noisy-enhanced quantum search on complex networks	quant-ph cs.DS
+2025-3-4	2503.01766	Optimal Differentially Private Sampling of Unbounded Gaussians	cs.DS cs.CR cs.IT cs.LG math.IT stat.ML
+2025-3-4	2503.02088	Online Fair Division: Towards Ex-Post Constant MMS Guarantees	cs.GT cs.DS cs.MA
+2025-3-4	2503.02089	Improved MMS Approximations for Few Agent Types	cs.GT cs.DS cs.MA
+2025-3-4	2503.02319	Boosting Rectilinear Steiner Minimum Tree Algorithms with Augmented  Bounding Volume Hierarchy	cs.DS cs.CG cs.DM
+2025-3-4	2503.02415	On the sensitivity of CDAWG-grammars	cs.DS
+2025-3-4	2503.02428	Tight Gap-Dependent Memory-Regret Trade-Off for Single-Pass Streaming  Stochastic Multi-Armed Bandits	cs.LG cs.DS stat.ML
+2025-3-4	2503.02513	Mixing Time Matters: Accelerating Effective Resistance Estimation via  Bidirectional Method	cs.SI cs.DS
+2025-3-5	2503.02798	Spike-and-Slab Posterior Sampling in High Dimensions	stat.ML cs.DS cs.LG stat.ME
+2025-3-5	2503.02952	A Theoretical Model for Grit in Pursuing Ambitious Ends	cs.CY cs.DS cs.GT stat.AP
+2025-3-5	2503.02997	Enabling Fast, Accurate, and Efficient Real-Time Genome Analysis via New  Algorithms and Techniques	q-bio.GN cs.AR cs.DS cs.ET
+2025-3-5	2503.03079	Sublinear Data Structures for Nearest Neighbor in Ultra High Dimensions	cs.DS cs.CG
+2025-3-5	2503.03488	Logarithmic-Time Internal Pattern Matching Queries in Compressed and  Dynamic Texts	cs.DS
+2025-3-5	2503.03553	A Graph Width Perspective on Partially Ordered Hamiltonian Paths	cs.DM cs.CC cs.DS math.CO
+2025-3-5	2503.03568	Novel Complexity Results for Temporal Separators with Deadlines	cs.DS cs.CC
+2025-3-6	2503.03642	Improved FPT Approximation Algorithms for TSP	cs.DS
+2025-3-6	2503.03923	Improved Robust Estimation for Erd\H{o}s-R\'enyi Graphs: The Sparse  Regime and Optimal Breakdown Point	cs.DS stat.ML
+2025-3-6	2503.04010	Greedy Algorithm for Structured Bandits: A Sharp Characterization of  Asymptotic Success / Failure	cs.LG cs.DS
+2025-3-6	2503.04146	Image Computation for Quantum Transition Systems	cs.DS cs.ET quant-ph
+2025-3-6	2503.04196	Revisiting Ranking for Online Bipartite Matching with Random Arrivals:  the Primal-Dual Analysis	cs.DS cs.GT
+2025-3-6	2503.04320	Faster Distributed $\Delta$-Coloring via Ruling Subgraphs	cs.DC cs.DS
+2025-3-6	2503.04419	Cost-Distance Steiner Trees for Timing-Constrained Global Routing	cs.DS
+2025-3-6	2503.04511	Source-Oblivious Broadcast	cs.DS cs.DM
+2025-3-7	2503.04633	Quickly Avoiding a Random Catastrophe	cs.DS
+2025-3-7	2503.04986	Efficient Algorithms for Verifying Kruskal Rank in Sparse Linear  Regression and Related Applications	cs.DS cs.LG
+2025-3-7	2503.05004	Faster Global Minimum Cut with Predictions	cs.DS
+2025-3-7	2503.05007	Dynamic Indexing Through Learned Indices with Worst-case Guarantees	cs.CG cs.DS
+2025-3-7	2503.05173	Fair Clustering in the Sliding Window Model	cs.DS
+2025-3-7	2503.05260	Fair Center Clustering in Sliding Windows	cs.DS
+2025-3-7	2503.05312	On the Parameterized Complexity of Odd Coloring	cs.DS cs.CC
+2025-3-7	2503.05467	Strassen's algorithm via orbit flip graphs	cs.DS
+2025-3-8	2503.05589	Time-Optimal $k$-Server	cs.DS
+2025-3-8	2503.05596	Bridging Classical and Quantum String Matching: A Computational  Reformulation of Bit-Parallelism	cs.DS cs.IR
+2025-3-8	2503.05661	Graph parameters that are coarsely equivalent to path-length	math.CO cs.DM cs.DS
+2025-3-8	2503.05695	On Almost Fair and Equitable Allocations of Indivisible Items for  Non-monotone Valuations	cs.GT cs.DM cs.DS
+2025-3-8	2503.05934	Improving Merge Sort and Quick Sort Performance by Utilizing Alphadev's  Sorting Networks as Base Cases	cs.DS cs.CC
+2025-3-8	2503.06017	Welfare Approximation in Additively Separable Hedonic Games	cs.GT cs.DS
+2025-3-9	2503.06266	The connectivity carcass of a vertex subset in a graph: both odd and  even case	cs.DS math.CO
+2025-3-9	2503.06341	Digital Zero-Noise Extrapolation with Quantum Circuit Unoptimization	quant-ph cs.DS
+2025-3-9	2503.06459	Deterministically approximating the volume of a Kostka polytope	math.CO cs.DS
+2025-3-9	2503.06464	Detecting correlation efficiently in stochastic block models: breaking  Otter's threshold by counting decorated trees	cs.DS math.PR math.ST stat.TH
+2025-3-9	2503.07665	The Computational Complexity of Positive Non-Clashing Teaching in Graphs	cs.CC cs.DM cs.DS cs.LG stat.ML
+2025-3-10	2503.06737	Faster and Space Efficient Indexing for Locality Sensitive Hashing	cs.DS cs.LG
+2025-3-10	2503.06917	Combinatorial Optimization via LLM-driven Iterated Fine-tuning	cs.LG cs.DS stat.ML
+2025-3-10	2503.06970	Inverting Parameterized Burrows-Wheeler Transform	cs.DS
+2025-3-10	2503.06999	Encoding Schemes for Parallel In-Place Algorithms	cs.DS cs.DC
+2025-3-10	2503.07061	Encoding Co-Lex Orders of Finite-State Automata in Linear Space	cs.DS cs.CC
+2025-3-10	2503.07208	A Quadratic Vertex Kernel and a Subexponential Algorithm for Subset-FAST	cs.DM cs.DS math.CO
+2025-3-10	2503.07227	Coreset Spectral Clustering	cs.LG cs.DS
+2025-3-10	2503.07361	Geometric realizations of dichotomous ordinal graphs	cs.CG cs.DM cs.DS math.CO
+2025-3-11	2503.07545	Queueing, Predictions, and LLMs: Challenges and Open Problems	cs.AI cs.DS
+2025-3-11	2503.07720	Counting with the quantum alternating operator ansatz	quant-ph cond-mat.stat-mech cs.DS
+2025-3-11	2503.07769	Algorithms for Distance Problems in Continuous Graphs	cs.CG cs.DS
+2025-3-11	2503.07775	Sublinear Algorithms for Wasserstein and Total Variation Distances:  Applications to Fairness and Privacy Auditing	cs.LG cs.CY cs.DS stat.CO
+2025-3-11	2503.08211	Buffered Partially-Persistent External-Memory Search Trees	cs.DS
+2025-3-11	2503.08246	Dynamic DBSCAN with Euler Tour Sequences	cs.LG cs.DS
+2025-3-11	2503.08262	Cost-driven prunings for iterative solving of constrained routing  problem with SRLG-disjoint protection	cs.DS cs.NI
+2025-3-12	2503.08828	On Deleting Vertices to Reduce Density in Graphs and Supermodular  Functions	cs.DS
+2025-3-12	2503.08863	Improved Approximation Algorithms for Three-Dimensional Bin Packing	cs.CG cs.DS
+2025-3-12	2503.17372	Duality between Lines and Points	cs.CG cs.DS
+2025-3-13	2503.09468	Beyond 2-approximation for k-Center in Graphs	cs.DS
+2025-3-13	2503.09508	Bounding the Optimal Performance of Online Randomized Primal-Dual  Methods	cs.DS
+2025-3-13	2503.09530	Revisiting Karp, Vazirani, and Vazirani (STOC 1990): A Simple Yet  Rigorous Fix to the $1 - 1/e$ Upper-Bound Analysis	cs.DS
+2025-3-13	2503.09762	Achieving constant regret for dynamic matching via state-independent  policies	cs.DS math.OC math.PR
+2025-3-13	2503.09802	Batch List-Decodable Linear Regression via Higher Moments	cs.LG cs.DS math.ST stat.ML stat.TH
+2025-3-13	2503.09810	Approximately Counting and Sampling Hamiltonian Motifs in Sublinear Time	cs.DS
+2025-3-13	2503.09908	Parallel Batch-Dynamic Maximal Matching with Constant Work per Update	cs.DS cs.DC
+2025-3-13	2503.10158	Solving Modular Linear Systems with a Constraint by parallel  decomposition of the Smith form and extended Euclidean division modulo powers  of primes divisors	math.NT cs.DM cs.DS
+2025-3-13	2503.10161	MorphisHash: Improving Space Efficiency of ShockHash for Minimal Perfect  Hashing	cs.DS
+2025-3-13	2503.10416	Super-Linear Speedup by Generalizing Runtime Repeated Recursion  Unfolding in Prolog	cs.PL cs.DS cs.PF cs.SC
+2025-3-14	2503.10447	An Almost Quadratic Vertex Kernel for Subset Feedback Arc Set in  Tournaments	cs.DS
+2025-3-14	2503.10541	Towards Transitive-free Digraphs	cs.DM cs.DS math.CO
+2025-3-14	2503.10780	Matrix Scaling: a New Heuristic for the Feedback Vertex Set Problem	cs.DS cs.DM math.CO
+2025-3-14	2503.10972	A $(2+\varepsilon)$-Approximation Algorithm for Metric $k$-Median	cs.DS
+2025-3-14	2503.11099	Approximating the Total Variation Distance between Gaussians	cs.DS cs.LG math.PR
+2025-3-14	2503.11107	Discrete Effort Distribution via Regrettable Greedy Algorithm	cs.DS
+2025-3-14	2503.11722	A Quantum Algorithm for the Classification of Patterns of Boolean  Functions	quant-ph cs.DS
+2025-3-15	2503.11526	Sum-of-Max Chain Partition of a Tree	cs.DS
+2025-3-15	2503.11575	Finding a Fair Scoring Function for Top-$k$ Selection: Hardness,  Algorithms, and Experiments	cs.DB cs.CC cs.CY cs.DC cs.DS
+2025-3-15	2503.11850	Local Pan-Privacy for Federated Analytics	cs.CR cs.DS cs.LG
+2025-3-15	2503.11897	PREAMBLE: Private and Efficient Aggregation of Block Sparse Vectors and  Applications	cs.CR cs.DS cs.LG
+2025-3-16	2503.12211	Changing Base Without Losing Pace: A GPU-Efficient Alternative to MatMul  in DNNs	cs.LG cs.AI cs.DS
+2025-3-16	2503.12502	Enhanced Approximation Algorithms for the Capacitated Location Routing  Problem	cs.DS
+2025-3-16	2503.12518	Optimal mass estimation in the conditional sampling model	cs.DS
+2025-3-17	2503.12746	Constant Approximation of Fr\'echet Distance in Strongly Subquadratic  Time	cs.CG cs.DS
+2025-3-17	2503.12996	Semi-Streaming Algorithms for Graph Property Certification	cs.CC cs.DS
+2025-3-17	2503.13100	Impact of Knowledge on the Cost of Treasure Hunt in Trees	cs.DS
+2025-3-17	2503.13112	Connected Partitions via Connected Dominating Sets	math.CO cs.DS
+2025-3-17	2503.13567	Graph Discovery and Source Detection in Temporal Graphs	cs.DS cs.SI
+2025-3-18	2503.13274	Parallel Minimum Cost Flow in Near-Linear Work and Square Root Depth for  Dense Instances	cs.DS
+2025-3-18	2503.13314	Hierarchical Multicriteria Shortest Path Search	cs.DS
+2025-3-18	2503.13366	Optimal Bounds for Adversarial Constrained Online Convex Optimization	cs.LG cs.DS math.OC stat.ML
+2025-3-18	2503.13398	Deciding if a DAG is Interesting is Hard	cs.CC cs.DS math.CO
+2025-3-18	2503.13409	A $(1+\epsilon)$-Approximation for Ultrametric Embedding in Subquadratic  Time	cs.DS
+2025-3-18	2503.13628	Optimal Non-Oblivious Open Addressing	cs.DS
+2025-3-18	2503.13644	Quantum EigenGame for excited state calculation	quant-ph cs.DS cs.LG math.OC
+2025-3-18	2503.13694	Branch Prediction Analysis of Morris-Pratt and Knuth-Morris-Pratt  Algorithms	cs.DS
+2025-3-18	2503.13984	Color-Constrained Arborescences in Edge-Colored Digraphs	cs.DS cs.CC cs.DM math.CO
+2025-3-18	2503.14115	Efficient Greedy Discrete Subtrajectory Clustering	cs.CG cs.DS
+2025-3-19	2503.14362	Streaming and Massively Parallel Algorithms for Euclidean Max-Cut	cs.DS
+2025-3-19	2503.14709	Better Private Distribution Testing by Leveraging Unverified Auxiliary  Data	cs.LG cs.CR cs.DS
+2025-3-19	2503.14820	A Variational-Calculus Approach to Online Algorithm Design and Analysis	cs.DS math.OC
+2025-3-19	2503.15011	On $G^p$-unimodality of radius functions in graphs: structure and  algorithms	cs.DS math.CO
+2025-3-19	2503.15226	Fine-Grained Complexity of Computing Degree-Constrained Spanning Trees	cs.DS
+2025-3-20	2503.15399	Online Matching under KIID: Enhanced Competitive Analysis through  Ordinary Differential Equation Systems	cs.DS
+2025-3-20	2503.15442	A Space-Efficient Algorithm for Longest Common Almost Increasing  Subsequence of Two Sequences	cs.DS
+2025-3-21	2503.16216	Dispersion is (Almost) Optimal under (A)synchrony	cs.DC cs.DS cs.MA cs.RO
+2025-3-21	2503.16312	Near-Linear Runtime for a Classical Matrix Preconditioning Algorithm	math.OC cs.DS cs.NA math.NA
+2025-3-21	2503.16336	A parallel algorithm for the odd two-face shortest k-disjoint path  problem	cs.DS cs.DC
+2025-3-21	2503.16755	Fast online node labeling with graph subsampling	cs.DS cs.LG
+2025-3-21	2503.16794	Local Ratio based Real-time Job Offloading and Resource Allocation in  Mobile Edge Computing	cs.DC cs.DM cs.DS
+2025-3-21	2503.17113	Fast Quantum Amplitude Encoding of Typical Classical Data	quant-ph cs.DS
+2025-3-22	2503.17264	A 3.3904-Competitive Online Algorithm for List Update with Uniform Costs	cs.DS
+2025-3-22	2503.17521	The Entropy and Crossentropy of Generalized Mallows Models	math.ST cs.DS stat.CO stat.TH
+2025-3-22	2503.18974	An Efficient Frequency-Based Approach for Maximal Square Detection in  Binary Matrices	cs.DS math.OC
+2025-3-23	2503.17802	On the Approximability of Unsplittable Flow on a Path with Time Windows	cs.DS
+2025-3-24	2503.18241	Approximation Schemes for k-Subset Sum Ratio and Multiway Number  Partitioning Ratio	cs.DS
+2025-3-24	2503.18397	{\epsilon}-Cost Sharding: Scaling Hypergraph-Based Static Functions and  Filters to Trillions of Keys	cs.DS
+2025-3-24	2503.18425	Faster Construction of a Planar Distance Oracle with \~{O}(1) Query Time	cs.DS
+2025-3-24	2503.18472	A Graph-based Approach to Variant Extraction	q-bio.GN cs.DS
+2025-3-24	2503.18474	\~Optimal Fault-Tolerant Labeling for Reachability and Approximate  Distances in Directed Planar Graphs	cs.DS cs.DC
+2025-3-24	2503.18508	The Power of Recursive Embeddings for $\ell_p$ Metrics	cs.CG cs.DS math.MG
+2025-3-24	2503.18611	$k$-Universality of Regular Languages Revisited	cs.FL cs.DS
+2025-3-25	2503.19093	When Distances Lie: Euclidean Embeddings in the Presence of Outliers and  Distance Violations	cs.CG cs.DM cs.DS
+2025-3-25	2503.19173	Graph neural networks extrapolate out-of-distribution for shortest paths	cs.LG cs.DS
+2025-3-25	2503.19268	Privately Evaluating Untrusted Black-Box Functions	cs.DS
+2025-3-25	2503.19299	Long Arithmetic Progressions in Sumsets and Subset Sums: Constructive  Proofs and Efficient Witnesses	cs.DS
+2025-3-25	2503.19365	Improved Approximation Algorithms for Three-Dimensional Knapsack	cs.DS
+2025-3-25	2503.19456	Online Stochastic Matching with Unknown Arrival Order: Beating $0.5$  against the Online Optimum	cs.DS
+2025-3-25	2503.19553	Approximating $q \rightarrow p$ Norms of Non-Negative Matrices in  Nearly-Linear Time	cs.DS math.OC
+2025-3-25	2503.19629	Lifting Linear Sketches: Optimal Bounds and Adversarial Robustness	cs.DS
+2025-3-25	2503.19631	Multiplication of 0-1 matrices via clustering	cs.DS
+2025-3-25	2503.19671	A Tight Meta-theorem for LOCAL Certification of MSO$_2$ Properties  within Bounded Treewidth Graphs	cs.DC cs.DM cs.DS
+2025-3-26	2503.19999	Online Disjoint Spanning Trees and Polymatroid Bases	cs.DS
+2025-3-26	2503.20162	Beyond Worst-Case Subset Sum: An Adaptive, Structure-Aware Solver with  Sub-$2^{n/2}$ Enumeration	cs.DS cs.CC cs.DM
+2025-3-26	2503.20299	Finding Near-Optimal Maximum Set of Disjoint $k$-Cliques in Real-World  Social Networks	cs.SI cs.DB cs.DS
+2025-3-26	2503.20366	Global vs. s-t Vertex Connectivity Beyond Sequential: Almost-Perfect  Reductions & Near-Optimal Separations	cs.DS
+2025-3-26	2503.20438	Factorised Representations of Join Queries: Tight Bounds and a New  Dichotomy	cs.DB cs.DS cs.LO
+2025-3-26	2503.20488	Adaptive Local Clustering over Attributed Graphs	cs.SI cs.DS cs.LG
+2025-3-27	2503.20883	Solving the Correlation Cluster LP in Sublinear Time	cs.DS
+2025-3-27	2503.20985	Deterministic Vertex Connectivity via Common-Neighborhood Clustering and  Pseudorandomness	cs.DS
+2025-3-27	2503.21016	History-Independent Concurrent Hash Tables	cs.DC cs.DS
+2025-3-27	2503.21049	On the Hardness Hierarchy for the $O(n \sqrt{\log n})$ Complexity in the  Word RAM	cs.DS
+2025-3-27	2503.21222	A Quantum Constraint Generation Framework for Binary Linear Programs	cs.DS quant-ph
+2025-3-27	2503.21235	A Theoretical Framework for Distribution-Aware Dataset Search	cs.DB cs.DS
+2025-3-27	2503.21441	A Tolerant Independent Set Tester	cs.DS
+2025-3-28	2503.21655	Output-sensitive approximate counting via a measure-bounded hyperedge  oracle, or: How asymmetry helps estimate $k$-clique counts faster	cs.DS
+2025-3-28	2503.21733	Fully dynamic biconnectivity in $\tilde{\mathcal{O}}(\log^2 n)$ time	cs.DS
+2025-3-28	2503.22368	On Finding All Connected Maximum-Sized Common Subgraphs in Multiple  Labeled Graphs	cs.DS cs.DM math.CO q-bio.MN
+2025-3-29	2503.22521	Distributed Freeze Tag: a Sustainable Solution to Discover and Wake-up a  Robot Swarm	cs.DS
+2025-3-29	2503.22613	Randomized $\tilde{O}(m\sqrt{n})$ Bellman-Ford from Fineman and the  Boilermakers	cs.DS cs.CC
+2025-3-29	2503.22669	Light Tree Covers, Routing, and Path-Reporting Oracles via Spanning Tree  Covers in Doubling Graphs	cs.DS
+2025-3-30	2503.23217	Length-Constrained Directed Expander Decomposition and  Length-Constrained Vertex-Capacitated Flow Shortcuts	cs.DS
+2025-3-30	2503.23238	Wagner's Algorithm Provably Runs in Subexponential Time for SIS$^\infty$	cs.CR cs.DS
+2025-3-30	2503.23273	Improved algorithms for single machine serial-batch scheduling to  minimize makespan and maximum cost	cs.DS
+2025-3-30	2503.23328	Generalized Capacity Planning for the Hospital-Residents Problem	cs.DS
+2025-3-30	2503.23397	FB$^+$-tree: A Memory-Optimized B$^+$-tree with Latch-Free Update	cs.DB cs.DS cs.PF
+2025-3-30	2503.23404	Multi-Pass Streaming Lower Bounds for Approximating Max-Cut	cs.DS cs.CC cs.DM
+2025-3-31	2503.23526	Network Unreliability in Almost-Linear Time	cs.DS
+2025-3-31	2503.23602	Space of Data through the Lens of Multilevel Graph	cs.DS cs.LG
+2025-3-31	2503.23759	Word Break on SLP-Compressed Texts	cs.DS
+2025-4-1	2503.24321	Sample-Optimal Private Regression in Polynomial Time	cs.DS cs.IT cs.LG math.IT stat.ML
+2025-4-1	2503.24332	On Speedups for Convex Optimization via Quantum Dynamics	quant-ph cs.DS math.OC
+2025-4-1	2503.24373	Accelerated Approximate Optimization of Multi-Commodity Flows on  Directed Graphs	cs.DS math.OC
+2025-4-1	2504.00278	How to Protect Yourself from Threatening Skeletons: Optimal Padded  Decompositions for Minor-Free Graphs	cs.DS
+2025-4-1	2504.00544	Expander Pruning with Polylogarithmic Worst-Case Recourse and Update  Time	cs.DS
+2025-4-1	2504.00828	Linked Array Tree: A Constant-Time Search Structure for Big Data	cs.DB cs.DS cs.IR
+2025-4-2	2504.01168	LimTDD: A Compact Decision Diagram Integrating Tensor and Local  Invertible Map Representations	cs.DS
+2025-4-2	2504.01206	SplineSketch: Even More Accurate Quantiles with Error Guarantees	cs.DS cs.DB stat.CO
+2025-4-2	2504.01339	Computing Time-varying Network Reliability using Binary Decision  Diagrams	cs.DS
+2025-4-2	2504.01485	Diameter Shortcut Sets on Temporal Graphs	cs.DS
+2025-4-2	2504.01486	Generalized Assignment and Knapsack Problems in the Random-Order Model	cs.DS math.OC
+2025-4-2	2504.01543	Local Computation Algorithms for Knapsack: impossibility results, and  how to avoid them	cs.DS
+2025-4-2	2504.01574	Cutwidth Bounds via Vertex Partitions	cs.DS cs.DM
+2025-4-2	2504.01726	Shared-Memory Hierarchical Process Mapping	cs.DC cs.DS
+2025-4-3	2504.01802	Distributed Triangle Detection is Hard in Few Rounds	cs.DS cs.CC cs.DC
+2025-4-3	2504.02190	A PTAS for Travelling Salesman Problem with Neighbourhoods Over Parallel  Line Segments of Similar Length	cs.DS cs.CG
+2025-4-3	2504.02208	Quantum Gibbs states are locally Markovian	quant-ph cond-mat.stat-mech cs.DS math-ph math.MP
+2025-4-3	2504.02271	Efficient Computation of Hyper-triangles on Hypergraphs	cs.DS cs.DB
+2025-4-3	2504.02299	Asymmetric graph alignment and the phase transition for asymmetric tree  correlation testing	cs.IT cs.DS math.IT
+2025-4-3	2504.02342	On the twin-width of near-regular graphs	math.CO cs.DS
+2025-4-3	2504.02353	Interval Graphs are Reconstructible	math.CO cs.DM cs.DS
+2025-4-3	2504.02369	Finding Diverse Solutions in Combinatorial Problems with a Distributive  Lattice Structure	cs.DS cs.CC
+2025-4-3	2504.02385	Quantum singular value transformation without block encodings:  Near-optimal complexity with minimal ancilla	quant-ph cs.DS
+2025-4-3	2504.02421	Edge-weighted balanced connected partitions: Hardness and formulations	cs.DS cs.DM
+2025-4-4	2504.02695	Mind the Gap? Not for SVP Hardness under ETH!	cs.CC cs.CR cs.DS
+2025-4-4	2504.02723	Computing High-dimensional Confidence Sets for Arbitrary Distributions	cs.DS cs.LG math.ST stat.ML stat.TH
+2025-4-4	2504.02740	Faster Mixing of the Jerrum-Sinclair Chain	cs.DS cs.DM math.PR
+2025-4-4	2504.02770	Efficient Algorithms for Cardinality Estimation and Conjunctive Query  Evaluation With Simple Degree Constraints	cs.DB cs.DS
+2025-4-4	2504.02785	Beating full state tomography for unentangled spectrum estimation	quant-ph cs.CC cs.DS
+2025-4-4	2504.02790	Dynamic Treewidth in Logarithmic Time	cs.DS
+2025-4-4	2504.03080	Towards Optimal Distributed Delta Coloring	cs.DC cs.DS
+2025-4-4	2504.03259	An Extended Symbolic-Arithmetic Model for Teaching Double-Black Removal  with Rotation in Red-Black Trees	cs.DS cs.AI
+2025-4-4	2504.03354	A Generalized Binary Tree Mechanism for Differentially Private  Approximation of All-Pair Distances	cs.DS
+2025-4-4	2504.03394	Improved Circular Dictionary Matching	cs.DS
+2025-4-4	2504.03406	Rapid Mixing on Random Regular Graphs beyond Uniqueness	cs.DS math.PR
+2025-4-5	2504.03513	Local Search for Clustering in Almost-linear Time	cs.DS
+2025-4-5	2504.03605	Constant Rate Isometric Embeddings of Hamming Metric into Edit Metric	cs.DM cs.CC cs.DS cs.IT math.CO math.IT
+2025-4-5	2504.03620	Quantum Search with In-Place Queries	quant-ph cs.CC cs.DS
+2025-4-5	2504.03910	Tight analysis of the primal-dual method for edge-covering pliable set  families	cs.DS
+2025-4-5	2504.04091	Operational research approaches and mathematical models for kidney  exchange: A literature survey and empirical evaluation	cs.DS
+2025-4-6	2504.04197	Optimal Smoothed Analysis of the Simplex Method	cs.DS
+2025-4-6	2504.04258	Correlation Clustering and (De)Sparsification: Graph Sketches Can Match  Classical Algorithms	cs.DS
+2025-4-6	2504.04267	Efficient Rejection Sampling in the Entropy-Optimal Range	cs.DS cs.DM cs.IT math.IT math.PR stat.CO
+2025-4-6	2504.04302	AbsInf: A Lightweight Object to Represent float('inf') in Dijkstra's  Algorithm	cs.PL cs.DS
+2025-4-6	2504.04398	Binned Group Algebra Factorization for Differentially Private Continual  Counting	cs.DS cs.LG
+2025-4-6	2504.04412	Minimum Non-Obtuse Triangulations: The CG:SHOP Challenge 2025	cs.CG cs.DS
+2025-4-7	2504.04556	Online Facility Assignments on Polygons	cs.DS
+2025-4-7	2504.04619	New Algorithms for Incremental Minimum Spanning Trees and Temporal Graph  Applications	cs.DS
+2025-4-7	2504.04632	Tight Low Degree Hardness for Optimizing Pure Spherical Spin Glasses	math.PR cond-mat.dis-nn cs.DS math-ph math.MP
+2025-4-7	2504.04639	Ineffectiveness for Search and Undecidability of PCSP Meta-Problems	cs.CC cs.CL cs.DS cs.LO
+2025-4-7	2504.04738	Automating the Search for Small Hard Examples to Approximation  Algorithms	cs.DS
+2025-4-7	2504.04757	The Complexity of Maximal Common Subsequence Enumeration	cs.DS cs.CC
+2025-4-7	2504.04821	A Customized SAT-based Solver for Graph Coloring	cs.DM cs.AI cs.DS cs.LO
+2025-4-7	2504.04897	The Minimum Eternal Vertex Cover Problem on a Subclass of  Series-Parallel Graphs	math.CO cs.CC cs.DM cs.DS
+2025-4-7	2504.07133	Can SGD Select Good Fishermen? Local Convergence under Self-Selection  Biases and Beyond	stat.ML cs.DS cs.LG math.ST stat.TH
+2025-4-8	2504.05161	DDPM Score Matching and Distribution Learning	stat.ML cs.DS cs.LG math.ST stat.TH
+2025-4-8	2504.05202	Infinitely Divisible Noise for Differential Privacy: Nearly Optimal  Error in the High $\varepsilon$ Regime	cs.CR cs.DS
+2025-4-8	2504.05624	Binary Tree Block Encoding of Classical Matrix	quant-ph cs.DS
+2025-4-8	2504.05687	Radial Isotropic Position via an Implicit Newton's Method	cs.DS math.OC
+2025-4-8	2504.05742	Linear-space LCS enumeration with quadratic-time delay for two strings	cs.DS
+2025-4-8	2504.05772	Kronecker scaling of tensors with applications to arithmetic circuits  and algorithms	cs.DS cs.CC
+2025-4-8	2504.05907	A Method for Generating Connected Erdos-Renyi Random Graphs	cs.DS cs.DM cs.IT math.CO math.IT math.PR
+2025-4-8	2504.05917	Indexing Strings with Utilities	cs.DS cs.DB
+2025-4-8	2504.05923	Uncovering Fairness through Data Complexity as an Early Indicator	cs.LG cs.AI cs.DS
+2025-4-8	2504.05959	Old and New Results on Alphabetic Codes	cs.IT cs.DS math.IT
+2025-4-8	2504.06033	Parallel Small Vertex Connectivity in Near-Linear Work and  Polylogarithmic Depth	cs.DS
+2025-4-8	2504.06075	Collaborative Prediction: Tractable Information Aggregation via  Agreement	cs.LG cs.DS cs.GT
+2025-4-9	2504.06434	Faster Algorithms for Reverse Shortest Path in Unit-Disk Graphs and  Related Geometric Optimization Problems: Improving the Shrink-and-Bifurcate  Technique	cs.DS cs.CG
+2025-4-9	2504.06533	Flexible Graph Similarity Computation With A Proactive Optimization  Strategy	cs.LG cs.AI cs.DS
+2025-4-9	2504.06534	Single-Source Shortest Path Problem in Weighted Disk Graphs	cs.DS cs.CG
+2025-4-9	2504.06700	Handling LP-Rounding for Hierarchical Clustering and Fitting Distances  by Ultrametrics	cs.DS
+2025-4-9	2504.06762	Matching and Edge Cover in Temporal Graphs	cs.DS cs.CC
+2025-4-9	2504.06869	Grouping Strategies on Two-Phase Methods for Bi-objective Combinatorial  Optimization	cs.DS cs.DM
+2025-4-9	2504.06889	Mixed-Precision in High-Order Methods: the Impact of Floating-Point  Precision on the ADER-DG Algorithm	math.NA cs.DS cs.NA
+2025-4-10	2504.06980	Coreset Strikes Back: Improved Parameterized Approximation Schemes for  (Constrained) k-Median/Means	cs.DS
+2025-4-10	2504.07237	Perfect Sampling in Turnstile Streams Beyond Small Moments	cs.DS
+2025-4-10	2504.07264	Fast algorithms for complex-valued discrete Fourier transform with  separate real and imaginary inputs/outputs	cs.DS
+2025-4-10	2504.07366	Incremental Planar Nearest Neighbor Queries with Optimal Query Time	cs.DS cs.CG
+2025-4-10	2504.07663	Multiplicative assignment with upgrades	cs.DS cs.DM math.OC
+2025-4-10	2504.07725	Approximation Algorithms for Connected Maximum Coverage, Minimum  Connected Set Cover, and Node-Weighted Group Steiner Tree	cs.DS
+2025-4-10	2504.07800	A Systematic Approach to Hyperbolic Quantum Error Correction Codes	quant-ph cs.DS math.AG math.DG math.GR
+2025-4-11	2504.07920	Directed Temporal Tree Realization for Periodic Public Transport: Easy  and Hard Cases	cs.DS cs.CC cs.DM
+2025-4-11	2504.08063	Deterministic factorization of constant-depth algebraic circuits in  subexponential time	cs.CC cs.DS
+2025-4-11	2504.08376	String Problems in the Congested Clique Model	cs.DS cs.DC
+2025-4-11	2504.15292	Range Counting Oracles for Geometric Problems	cs.CG cs.DS
+2025-4-12	2504.08667	Faster shortest-path algorithms using the acyclic-connected tree	cs.DS
+2025-4-12	2504.08722	Deriving the Gradients of Some Popular Optimal Transport Algorithms	math.OC cs.DS
+2025-4-12	2504.08987	Relative-error testing of conjunctions and decision lists	cs.CC cs.DM cs.DS
+2025-4-12	2504.09096	High dimensional online calibration in polynomial time	cs.LG cs.DS cs.GT stat.ML
+2025-4-13	2504.09312	Testing Juntas and Junta Subclasses with Relative Error	cs.CC cs.DM cs.DS
+2025-4-13	2504.09331	Adaptive Robustness of Hypergrid Johnson-Lindenstrauss	stat.CO cs.CC cs.DS
+2025-4-13	2504.09339	Towards Optimal Differentially Private Regret Bounds in Linear MDPs	cs.LG cs.DS stat.ML
+2025-4-14	2504.09669	Nash Social Welfare with Submodular Valuations: Approximation Algorithms  and Integrality Gaps	cs.GT cs.DS
+2025-4-14	2504.09892	Vermilion: A Traffic-Aware Reconfigurable Optical Interconnect with  Formal Throughput Guarantees	cs.NI cs.DS
+2025-4-14	2504.09991	Bipartite Matching is in Catalytic Logspace	cs.CC cs.DS
+2025-4-14	2504.10232	Fairness and Efficiency in Two-Sided Matching Markets	cs.GT cs.DS
+2025-4-15	2504.10389	Diversity-Fair Online Selection	econ.TH cs.DS math.OC
+2025-4-15	2504.10399	Unique Decoding of Reed-Solomon and Related Codes for Semi-Adversarial  Errors	cs.IT cs.DS math.IT
+2025-4-15	2504.10428	Learning with Positive and Imperfect Unlabeled Data	stat.ML cs.DS cs.LG math.ST stat.TH
+2025-4-15	2504.10657	Balanced TSP partitioning	cs.CG cs.DS
+2025-4-15	2504.10703	The Trie Measure, Revisited	cs.DS
+2025-4-15	2504.10712	Improved approximation algorithms for the EPR Hamiltonian	quant-ph cs.DS
+2025-4-15	2504.10743	Robust Gittins for Stochastic Scheduling	cs.DS math.OC
+2025-4-15	2504.10748	An Improved Fully Dynamic Algorithm for Counting 4-Cycles in General  Graphs using Fast Matrix Multiplication	cs.DS
+2025-4-15	2504.10945	Tighter Bounds on Non-clairvoyant Parallel Machine Scheduling with  Prediction to Minimize Makespan	cs.DS
+2025-4-15	2504.10948	BEACON: A Benchmark for Efficient and Accurate Counting of Subgraphs	cs.DS cs.AI cs.DB cs.SI
+2025-4-15	2504.11256	Covering Approximate Shortest Paths with DAGs	cs.DS
+2025-4-15	2504.15294	Determining Implication of Fixed Matrix Prenex Normal Forms Can Be  Decided in Linear Time	cs.DS cs.DM
+2025-4-16	2504.11318	Mildly-Interacting Fermionic Unitaries are Efficiently Learnable	quant-ph cs.DS cs.LG
+2025-4-16	2504.11398	Breaking a Long-Standing Barrier: 2-$\varepsilon$ Approximation for  Steiner Forest	cs.DS
+2025-4-16	2504.11450	Optimal Hardness of Online Algorithms for Large Independent Sets	cs.DS cs.CC cs.DM math.CO math.PR
+2025-4-16	2504.11652	Engineering MultiQueues: Fast Relaxed Concurrent Priority Queues	cs.DS cs.DC cs.PF
+2025-4-16	2504.11728	Enumeration of Bases in Matroid with Exponentially Large Ground Set	cs.DS cs.DM
+2025-4-16	2504.11866	On the Problem of Best Arm Retention	cs.LG cs.DS
+2025-4-16	2504.12060	Static to Dynamic Correlation Clustering	cs.DS
+2025-4-17	2504.12274	Kernels for Storage Capacity and Dual Index Coding	cs.DS cs.IT math.IT
+2025-4-17	2504.12281	A Near-Optimal Kernel for a Coloring Problem	cs.DS
+2025-4-17	2504.12551	Fast Computation of the Discrete Fourier Transform Rectangular Index  Coefficients	eess.SP cs.CC cs.DS
+2025-4-17	2504.12586	Quantum Search on Bipartite Multigraphs	quant-ph cs.DS
+2025-4-17	2504.12823	Trading Prophets: How to Trade Multiple Stocks Optimally	cs.DS cs.GT
+2025-4-17	2504.16106	Updating Lower and Upper Bounds for the Job-Shop Scheduling Problem Test  Instances	cs.DS cs.DM
+2025-4-18	2504.13003	Towards Optimal Distributed Edge Coloring with Small Palettes	cs.DS cs.DC
+2025-4-18	2504.13105	A Bad Example for Jain's Iterative Rounding Theorem for the Cover Small  Cuts Problem	cs.DS
+2025-4-18	2504.13430	The Long Arm of Nashian Allocation in Online $p$-Mean Welfare  Maximization	cs.GT cs.DS
+2025-4-18	2504.13489	New Results on a General Class of Minimum Norm Optimization Problems	cs.DS
+2025-4-18	2504.13669	Broadcasting under Structural Restrictions	cs.DS cs.CC
+2025-4-19	2504.13757	Robust Distributed Arrays: Provably Secure Networking for Data  Availability Sampling	cs.DS cs.DC
+2025-4-19	2504.14251	A New Impossibility Result for Online Bipartite Matching Problems	cs.DS
+2025-4-19	2504.14258	Temporal Graph Realization With Bounded Stretch	cs.DS cs.DM
+2025-4-21	2504.14683	Polynomial-Time Constant-Approximation for Fair Sum-of-Radii Clustering	cs.DS
+2025-4-21	2504.14696	Reveal-or-Obscure: A Differentially Private Sampling Algorithm for  Discrete Distributions	cs.IT cs.CR cs.DS cs.LG math.IT
+2025-4-21	2504.14723	Approximate all-pairs Hamming distances and 0-1 matrix multiplication	cs.DS cs.CC
+2025-4-21	2504.14803	The k-Center Problem of Uncertain Points on Graphs	cs.DS
+2025-4-21	2504.15001	Weakly Approximating Knapsack in Subquadratic Time	cs.DS
+2025-4-21	2504.15087	Explicit Lossless Vertex Expanders	math.CO cs.CC cs.DM cs.DS math.GR
+2025-4-21	2504.15115	Deterministic $k$-Median Clustering in Near-Optimal Time	cs.DS
+2025-4-21	2504.15153	Distribution Testing Meets Sum Estimation	cs.DS
+2025-4-22	2504.15244	Faster Algorithms for Agnostically Learning Disjunctions and their  Implications	cs.LG cs.DS stat.ML
+2025-4-22	2504.15251	On Learning Parallel Pancakes with Mostly Uniform Weights	cs.LG cs.DS math.ST stat.ML stat.TH
+2025-4-22	2504.15445	Prize-Collecting Forest with Submodular Penalties: Improved  Approximation	cs.DS
+2025-4-22	2504.15547	Adaptivity Gaps for Stochastic Probing with Subadditive Functions	cs.DS
+2025-4-22	2504.15580	On the Price of Differential Privacy for Hierarchical Clustering	cs.DS cs.CR cs.LG
+2025-4-22	2504.15582	Smooth Calibration and Decision Making	cs.LG cs.DS stat.ML
+2025-4-22	2504.15603	Quantum Speedup for Sampling Random Spanning Trees	quant-ph cs.DS
+2025-4-22	2504.15700	Towards True Work-Efficiency in Parallel Derandomization: MIS, Maximal  Matching, and Hitting Set	cs.DS cs.DC
+2025-4-22	2504.15885	Branch-and-Bound Algorithms as Polynomial-time Approximation Schemes	cs.DS math.OC
+2025-4-23	2504.16065	A Mysterious Connection Between Tolerant Junta Testing and Agnostically  Learning Conjunctions	cs.DS
+2025-4-23	2504.16206	A Theory of Spectral CSP Sparsification	cs.DS
+2025-4-23	2504.16229	Fast, Space-Optimal Streaming Algorithms for Clustering and Subspace  Embeddings	cs.DS
+2025-4-23	2504.16288	Linear Time Subsequence and Supersequence Regex Matching	cs.DS cs.FL
+2025-4-23	2504.16321	Near-optimal Hypergraph Sparsification in Insertion-only and  Bounded-deletion Streams	cs.DS
+2025-4-23	2504.16327	Universal Online Contention Resolution with Preselected Order	cs.DS cs.GT
+2025-4-23	2504.16382	Fully Scalable MPC Algorithms for Euclidean k-Center	cs.DS cs.DC
+2025-4-23	2504.16393	An Explicit and Efficient $O(n^2)$-Time Algorithm for Sorting Sumsets	cs.DS cs.DM
+2025-4-23	2504.16437	Hardness of Median and Center in the Ulam Metric	cs.DS cs.CC cs.CG
+2025-4-23	2504.16463	Multiplicative Spanners in Minor-Free Graphs	cs.DS
+2025-4-23	2504.16470	Improved Streaming Edge Coloring	cs.DS
+2025-4-23	2504.16481	Estimating Random-Walk Probabilities in Directed Graphs	cs.DS
+2025-4-23	2504.16507	Streaming algorithms for products of probabilities	cs.DS
+2025-4-23	2504.16706	Sorting as Gradient Flow on the Permutohedron	cs.DS
+2025-4-23	2504.16720	From Theory to Practice: Engineering Approximation Algorithms for  Dynamic Orientation	cs.DS
+2025-4-23	2504.16744	Traffic-Oblivious Multi-Commodity Flow Network Design	cs.DS
+2025-4-24	2504.16803	Graph modification of bounded size to minor-closed classes as fast as  vertex deletion	cs.DS
+2025-4-24	2504.16837	Approximating Optimal Labelings for Temporal Connectivity	cs.DS cs.AI
+2025-4-24	2504.17019	Identifying Approximate Minimizers under Stochastic Uncertainty	cs.DS
+2025-4-24	2504.17033	Breaking the Sorting Barrier for Directed Single-Source Shortest Paths	cs.DS
+2025-4-24	2504.17097	Parallelizing the Approximate Minimum Degree Ordering Algorithm:  Strategies and Evaluation	cs.DC cs.DM cs.DS
+2025-4-24	2504.17297	Knapsack on Graphs with Relaxed Neighborhood Constraints	cs.DS cs.CC
+2025-4-24	2504.17327	Simple Universally Optimal Dijkstra	cs.DS
+2025-4-24	2504.17338	Dynamic Approximate Maximum Matching in the Distributed Vertex Partition  Model	cs.DC cs.DS
+2025-4-24	2504.17392	Edge-weighted Online Stochastic Matching Under Jaillet-Lu LP	cs.DS cs.GT
+2025-4-24	2504.17443	Morphisms and BWT-run Sensitivity	cs.FL cs.DM cs.DS math.CO
+2025-4-24	2504.17536	Dynamic Membership for Regular Tree Languages	cs.FL cs.DS
+2025-4-24	2504.17563	The Case for External Graph Sketching	cs.DS
+2025-4-24	2504.17615	Linear-Time Multilevel Graph Partitioning via Edge Sparsification	cs.DS
+2025-4-25	2504.17633	A general framework for finding diverse solutions via network flow and  its applications	cs.DS cs.CC
+2025-4-25	2504.17708	Pushing the frontiers of subexponential FPT time for Feedback Vertex Set	cs.DS
+2025-4-25	2504.17716	Online metric TSP	cs.DS
+2025-4-25	2504.17743	Realization of Temporally Connected Graphs Based on Degree Sequences	cs.DS
+2025-4-25	2504.17776	Fitting Tree Metrics and Ultrametrics in Data Streams	cs.DS

@@ -77,11 +77,11 @@ dotnet build -c Release
 cd ..
 
 
-$dblpProcessor = "./dblp_processor/bin/Release/net6.0/dblp_processor"
+$dblpProcessor = "./dblp_processor/bin/Release/net9.0/dblp_processor"
 $dblpProcessorArgs = @("dblp", "--x", "./data/external/dblp.xml", "--u", "./data/paper_list.txt", "--o", "./data/stringology_dblp.xml")
 $dblpProc = Start-Process -FilePath $dblpProcessor -ArgumentList $dblpProcessorArgs -Wait
 
-$arxivProcessor = "./dblp_processor/bin/Release/net6.0/dblp_processor"
+$arxivProcessor = "./dblp_processor/bin/Release/net9.0/dblp_processor"
 $arxivProcessorArgs = @("arxiv", "--i", "./data/external/arxiv-metadata-oai-snapshot.json", "--o", "./data/cs.DS_arxiv_articles.tsv")
 $arxivProc = Start-Process -FilePath $arxivProcessor -ArgumentList $arxivProcessorArgs -Wait
 

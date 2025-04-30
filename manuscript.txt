@@ -1,3 +1,3 @@
-
 1. paper_list.txtを更新する。
-2. run_script.ps1を実行する。
+2. arxiv-metadata-oai-snapshot.jsonを更新する。
+3. run_script.ps1を実行する。

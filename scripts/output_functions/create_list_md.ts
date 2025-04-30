@@ -218,27 +218,31 @@ export function createCompleteMD(_papers: DBLPElementClass[]): string[] {
 
 export function createMD(papers: DBLPElementClass[], year : number): string[] {
     const spapers = get_sorted_papers_by_year(papers);
-    const xp = spapers.filter((w) => w.year == year); 
+    const xp = spapers.filter((w) => w.year == year);     
     const lines: string[] = new Array();
-    lines.push(`# Papers for stringologist (${year})`)
+    if(xp.length == 0){
+        return lines;
+    }else{
+        lines.push(`# Papers for stringologist (${year})`)
 
-    if(xp.length > 0){
-        const item = xp[0];
-
-        const overview_lines = create_overview_year(item);
-        overview_lines.forEach((v) => lines.push(v));
+        if(xp.length > 0){
+            const item = xp[0];
     
-        const inproceedings = <DBLPInproceedings[]>item.papers.filter((w) => w instanceof DBLPInproceedings);
-        const sorted_inproceedings = get_sorted_proceedings(inproceedings, item.year);
-        const journals = <DBLPArticle[]>item.papers.filter((w) => w instanceof DBLPArticle);
-        const sorted_journals = get_sorted_journals(journals, item.year);
-
-        lines.push("## Contents")
-        createInproceedingsMD(sorted_inproceedings, item.year).forEach((v) => lines.push(v));
-        createArticleMD(sorted_journals, item.year).forEach((v) => lines.push(v));
+            const overview_lines = create_overview_year(item);
+            overview_lines.forEach((v) => lines.push(v));
+        
+            const inproceedings = <DBLPInproceedings[]>item.papers.filter((w) => w instanceof DBLPInproceedings);
+            const sorted_inproceedings = get_sorted_proceedings(inproceedings, item.year);
+            const journals = <DBLPArticle[]>item.papers.filter((w) => w instanceof DBLPArticle);
+            const sorted_journals = get_sorted_journals(journals, item.year);
     
+            lines.push("## Contents")
+            createInproceedingsMD(sorted_inproceedings, item.year).forEach((v) => lines.push(v));
+            createArticleMD(sorted_journals, item.year).forEach((v) => lines.push(v));
+        
+        }
+        return lines;    
     }
 
 
-    return lines;
 }
