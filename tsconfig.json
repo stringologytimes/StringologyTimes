@@ -6,5 +6,5 @@
     "strictNullChecks": true,
     "outDir" : "dist",
     "declaration" : true
-},
+}
 }
