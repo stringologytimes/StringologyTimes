@@ -1,13 +1,34 @@
 # Papers for stringologist
 ## Table of Contents
   
-- [CPP(2025)](#cpp-2025) [[dblp]](https://dblp.org/db/conf/cpp/cpp2025.html)  
   
+- [Inf. Process. Lett.(2026)](#inf-process-lett-2026) [[dblp]](https://dblp.org/db/journals/ipl/ipl191.html)  
+  
+  
+- [ACNS (1)(2025)](#acns-(1)-2025) [[dblp]](https://dblp.org/db/conf/acns/acns2025-1.html)  
+- [COCOON (2)(2025)](#cocoon-(2)-2025) [[dblp]](https://dblp.org/db/conf/cocoon/cocoon2025-2.html)  
+- [CPM(2025)](#cpm-2025) [[dblp]](https://dblp.org/db/conf/cpm/cpm2025.html)  
+- [CPP(2025)](#cpp-2025) [[dblp]](https://dblp.org/db/conf/cpp/cpp2025.html)  
+- [ICIC (26)(2025)](#icic-(26)-2025) [[dblp]](https://dblp.org/db/conf/icic/icic2025-26.html)  
+- [IJTCS-FAW(2025)](#ijtcs-faw-2025) [[dblp]](https://dblp.org/db/conf/faw/faw2025.html)  
+- [RECOMB(2025)](#recomb-2025) [[dblp]](https://dblp.org/db/conf/recomb/recomb2025.html)  
+- [STOC(2025)](#stoc-2025) [[dblp]](https://dblp.org/db/conf/stoc/stoc2025.html)  
+  
+- [Acta Informatica(2025)](#acta-informatica-2025) [[dblp]](https://dblp.org/db/journals/acta/acta62.html)  
+- [Algorithms Mol. Biol.(2025)](#algorithms-mol-biol-2025) [[dblp]](https://dblp.org/db/journals/almob/almob20.html)  
 - [Comput. J.(2025)](#comput-j-2025) [[dblp]](https://dblp.org/db/journals/cj/cj68.html)  
 - [Eur. J. Comb.(2025)](#eur-j-comb-2025) [[dblp]](https://dblp.org/db/journals/ejc/ejc126.html)  
+- [Geo spatial Inf. Sci.(2025)](#geo-spatial-inf-sci-2025) [[dblp]](https://dblp.org/db/journals/gsis/gsis28.html)  
+- [Inf. Comput.(2025)](#inf-comput-2025) [[dblp]](https://dblp.org/db/journals/iandc/iandc305.html)  
+- [Inf. Process. Lett.(2025)](#inf-process-lett-2025) [[dblp]](https://dblp.org/db/journals/ipl/ipl190.html)  
 - [Inf. Syst.(2025)](#inf-syst-2025) [[dblp]](https://dblp.org/db/journals/is/is128.html)  
+- [Int. J. Found. Comput. Sci.(2025)](#int-j-found-comput-sci-2025) [[dblp]](https://dblp.org/db/journals/ijfcs/ijfcs36.html)  
 - [J. Heuristics(2025)](#j-heuristics-2025) [[dblp]](https://dblp.org/db/journals/heuristics/heuristics31.html)  
-- [Theor. Comput. Sci.(2025)](#theor-comput-sci-2025) [[dblp]](https://dblp.org/db/journals/tcs/tcs1027.html)  
+- [J. Syst. Softw.(2025)](#j-syst-softw-2025) [[dblp]](https://dblp.org/db/journals/jss/jss227.html)  
+- [Pattern Anal. Appl.(2025)](#pattern-anal-appl-2025) [[dblp]](https://dblp.org/db/journals/paa/paa28.html)  
+- [SoftwareX(2025)](#softwarex-2025) [[dblp]](https://dblp.org/db/journals/softx/softx31.html)  
+- [Theor. Comput. Sci.(2025)](#theor-comput-sci-2025) [[dblp]](https://dblp.org/db/journals/tcs/tcs1043.html)  
+- [VLDB J.(2025)](#vldb-j-2025) [[dblp]](https://dblp.org/db/journals/vldb/vldb34.html)  
   
   
 - [ACIIDS (Companion 1)(2024)](#aciids-(companion-1)-2024) [[dblp]](https://dblp.org/db/conf/aciids/aciids2024c1.html)  
@@ -1076,6 +1097,7 @@
   
 - [BIT(1992)](#bit-1992) [[dblp]](https://dblp.org/db/journals/bit/bit32.html)  
 - [J. Algorithms(1992)](#j-algorithms-1992) [[dblp]](https://dblp.org/db/journals/jal/jal13.html)  
+- [J. Autom. Reason.(1992)](#j-autom-reason-1992) [[dblp]](https://dblp.org/db/journals/jar/jar9.html)  
   
   
 - [FSTTCS(1991)](#fsttcs-1991) [[dblp]](https://dblp.org/db/conf/fsttcs/fsttcs91.html)  
@@ -1158,9 +1180,77 @@
 - [SIAM J. Comput.(1976)](#siam-j-comput-1976) [[dblp]](https://dblp.org/db/journals/siamcomp/siamcomp5.html)  
   
 ## Contents
+#### Inf. Process. Lett. 2026  
+  1. [Finding the cyclic covers of a string.](https://doi.org/10.1016/j.ipl.2025.106594)  
+  
+#### [ACNS (1) 2025](https://dblp.org/db/conf/acns/acns2025-1.html)
+  1. [Oblivious Suffix Sorting: A Multi-Party Computation Scheme for Secure and Efficient Suffix Sorting.](https://doi.org/10.1007/978-3-031-95761-1_10)  
+  
+  
+#### [COCOON (2) 2025](https://dblp.org/db/conf/cocoon/cocoon2025-2.html)
+  1. [Revisit the Partial Coloring Method: Prefix Spencer and Sampling.](https://doi.org/10.1007/978-981-95-0218-9_23)  
+  
+  
+#### [CPM 2025](https://dblp.org/db/conf/cpm/cpm2025.html)
+  1. [A Family of Partial Cubes with Minimal Fibonacci Dimension.](https://doi.org/10.4230/LIPIcs.CPM.2025.10)  
+  2. [Branch Prediction Analysis of Morris-Pratt and Knuth-Morris-Pratt Algorithms.](https://doi.org/10.4230/LIPIcs.CPM.2025.8)  
+  3. [Compressed Dictionary Matching on Run-Length Encoded Strings.](https://doi.org/10.4230/LIPIcs.CPM.2025.21)  
+  4. [Counting on General Run-Length Grammars.](https://doi.org/10.4230/LIPIcs.CPM.2025.3)  
+  5. [Covers in Optimal Space.](https://doi.org/10.4230/LIPIcs.CPM.2025.5)  
+  6. [Doubly-Periodic String Comparison.](https://doi.org/10.4230/LIPIcs.CPM.2025.13)  
+  7. [Encoding Co-Lex Orders of Finite-State Automata in Linear Space.](https://doi.org/10.4230/LIPIcs.CPM.2025.15)  
+  8. [Encodings for Range Minimum Queries over Bounded Alphabets.](https://doi.org/10.4230/LIPIcs.CPM.2025.25)  
+  9. [Extending the Burrows-Wheeler Transform for Cartesian Tree Matching and Constructing It.](https://doi.org/10.4230/LIPIcs.CPM.2025.26)  
+  10. [FL-RMQ: A Learned Approach to Range Minimum Queries.](https://doi.org/10.4230/LIPIcs.CPM.2025.7)  
+  11. [Faster Approximate Elastic-Degenerate String Matching - Part A.](https://doi.org/10.4230/LIPIcs.CPM.2025.28)  
+  12. [Faster Approximate Elastic-Degenerate String Matching - Part B.](https://doi.org/10.4230/LIPIcs.CPM.2025.29)  
+  13. [Front Matter, Table of Contents, Preface, Conference Organization.](https://doi.org/10.4230/LIPIcs.CPM.2025.0)  
+  14. [Generating a Cyclic 2-Gray Code for Lucas Words in Constant Amortized Time.](https://doi.org/10.4230/LIPIcs.CPM.2025.22)  
+  15. [Improved Circular Dictionary Matching.](https://doi.org/10.4230/LIPIcs.CPM.2025.18)  
+  16. [Linear-Space LCS Enumeration for Two Strings.](https://doi.org/10.4230/LIPIcs.CPM.2025.2)  
+  17. [Minimal Generators in Optimal Time.](https://doi.org/10.4230/LIPIcs.CPM.2025.14)  
+  18. [Net Occurrences in Fibonacci and Thue-Morse Words.](https://doi.org/10.4230/LIPIcs.CPM.2025.16)  
+  19. [On Palindromic Periodicities.](https://doi.org/10.4230/LIPIcs.CPM.2025.11)  
+  20. [On the Compressiveness of the Burrows-Wheeler Transform.](https://doi.org/10.4230/LIPIcs.CPM.2025.17)  
+  21. [Pattern Matching on Run-Length Grammar-Compressed Strings in Linear Time.](https://doi.org/10.4230/LIPIcs.CPM.2025.9)  
+  22. [Representing Paths in Digraphs.](https://doi.org/10.4230/LIPIcs.CPM.2025.1)  
+  23. [Shortest Undirected Paths in de Bruijn Graphs.](https://doi.org/10.4230/LIPIcs.CPM.2025.12)  
+  24. [Sorted Consecutive Occurrence Queries in Substrings.](https://doi.org/10.4230/LIPIcs.CPM.2025.24)  
+  25. [Space-Efficient Online Computation of String Net Occurrences.](https://doi.org/10.4230/LIPIcs.CPM.2025.23)  
+  26. [String Problems in the Congested Clique Model.](https://doi.org/10.4230/LIPIcs.CPM.2025.6)  
+  27. [Succinct Data Structures for Segments.](https://doi.org/10.4230/LIPIcs.CPM.2025.27)  
+  28. [Text Indexing for Simple Regular Expressions.](https://doi.org/10.4230/LIPIcs.CPM.2025.20)  
+  29. [The Equivalence Problem of E-Pattern Languages with Length Constraints Is Undecidable.](https://doi.org/10.4230/LIPIcs.CPM.2025.4)  
+  30. [The Trie Measure, Revisited.](https://doi.org/10.4230/LIPIcs.CPM.2025.19)  
+  
+  
 #### [CPP 2025](https://dblp.org/db/conf/cpp/cpp2025.html)
   1. [Formalized Burrows-Wheeler Transform.](https://doi.org/10.1145/3703595.3705883)  
   
+  
+#### [ICIC (26) 2025](https://dblp.org/db/conf/icic/icic2025-26.html)
+  1. [Enough Consecutive Matches in k-Tuple Common Substrings.](https://doi.org/10.1007/978-981-95-0030-7_40)  
+  
+  
+#### [IJTCS-FAW 2025](https://dblp.org/db/conf/faw/faw2025.html)
+  1. [Finding a Set of Long Common Substrings with Repeats from m Input Strings.](https://doi.org/10.1007/978-981-96-8312-3_14)  
+  2. [k-Universality of Regular Languages Revisited.](https://doi.org/10.1007/978-981-96-8312-3_2)  
+  
+  
+#### [RECOMB 2025](https://dblp.org/db/conf/recomb/recomb2025.html)
+  1. [Prokrustean Graph: A Substring Index for Rapid K-Mer Size Analysis.](https://doi.org/10.1007/978-3-031-90252-9_14)  
+  
+  
+#### [STOC 2025](https://dblp.org/db/conf/stoc/stoc2025.html)
+  1. [On the Hardness Hierarchy for the O(n√log n) Complexity in the Word RAM.](https://doi.org/10.1145/3717823.3718291)  
+  
+  
+#### Acta Informatica 2025  
+  1. [The Primitive Deficiency of two Primitive Strings.](https://doi.org/10.1007/s00236-025-00494-y)  
+  
+#### Algorithms Mol. Biol. 2025  
+  1. [Faster computation of left-bounded shortest unique substrings.](https://doi.org/10.1186/s13015-025-00287-5)  
+  2. [sc McDag: indexing maximal common subsequences for k strings.](https://doi.org/10.1186/s13015-025-00271-z)  
   
 #### Comput. J. 2025  
   1. [Clustering-based compression for raster time series.](https://doi.org/10.1093/comjnl/bxae090)  
@@ -1168,14 +1258,41 @@
 #### Eur. J. Comb. 2025  
   1. [The asymptotic repetition threshold of sequences rich in palindromes.](https://doi.org/10.1016/j.ejc.2025.104124)  
   
+#### Geo spatial Inf. Sci. 2025  
+  1. [Stronger compact representations of object trajectories.](https://doi.org/10.1080/10095020.2024.2310590)  
+  
+#### Inf. Comput. 2025  
+  1. [The generalized constrained longest common subsequence in the run-length encoded format.](https://doi.org/10.1016/j.ic.2025.105311)  
+  2. [The longest subsequence-duplicated subsequence and related problems.](https://doi.org/10.1016/j.ic.2025.105313)  
+  
+#### Inf. Process. Lett. 2025  
+  1. [The longest common subsequence problem for small alphabets in the word RAM model.](https://doi.org/10.1016/j.ipl.2025.106579)  
+  
 #### Inf. Syst. 2025  
-  1. [Two-level massive string dictionaries.](https://doi.org/10.1016/j.is.2024.102490)  
+  1. [Substring compression variations and LZ78-Derivates.](https://doi.org/10.1016/j.is.2025.102553)  
+  2. [Two-level massive string dictionaries.](https://doi.org/10.1016/j.is.2024.102490)  
+  
+#### Int. J. Found. Comput. Sci. 2025  
+  1. [Repetition Factorization of Automatic Sequences.](https://doi.org/10.1142/S0129054124430019)  
   
 #### J. Heuristics 2025  
   1. [Heuristics for the run-length encoded Burrows-Wheeler transform alphabet ordering problem.](https://doi.org/10.1007/s10732-025-09548-3)  
   
+#### J. Syst. Softw. 2025  
+  1. [On the compressibility of large-scale source code datasets.](https://doi.org/10.1016/j.jss.2025.112429)  
+  
+#### Pattern Anal. Appl. 2025  
+  1. [NEONATE: a bi-directional search strategy for non-overlapping pattern matching with gap constraint.](https://doi.org/10.1007/s10044-025-01505-x)  
+  
+#### SoftwareX 2025  
+  1. [SDSL-Mobile: Enabling space-efficient data structures for mobile applications.](https://doi.org/10.1016/j.softx.2025.102234)  
+  
 #### Theor. Comput. Sci. 2025  
   1. [On the number of equal-letter runs of the bijective Burrows-Wheeler transform.](https://doi.org/10.1016/j.tcs.2024.115004)  
+  2. [Repetitiveness measures based on string morphisms.](https://doi.org/10.1016/j.tcs.2025.115259)  
+  
+#### VLDB J. 2025  
+  1. [Text indexing for long patterns using locally consistent anchors.](https://doi.org/10.1007/s00778-025-00935-7)  
   
 #### [ACIIDS (Companion 1) 2024](https://dblp.org/db/conf/aciids/aciids2024c1.html)
   1. [The Merged Longest Common Increasing Subsequence Problem.](https://doi.org/10.1007/978-981-97-5937-8_17)  
@@ -9625,6 +9742,9 @@
   
 #### J. Algorithms 1992  
   1. [Sorting with Minimum Data Movement.](https://doi.org/10.1016/0196-6774(92)90045-E)  
+  
+#### J. Autom. Reason. 1992  
+  1. [Formally Verified Suffix Array Construction.](https://doi.org/10.1007/s10817-025-09735-8)  
   
 #### [FSTTCS 1991](https://dblp.org/db/conf/fsttcs/fsttcs91.html)
   1. [Fast Sorting In-Place Sorting with O(n) Data.](https://doi.org/10.1007/3-540-54967-6_74)  

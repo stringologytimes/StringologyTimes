@@ -1,4 +1,7 @@
 # STOC for Stringologist
+## [STOC 2025](https://dblp.org/db/conf/stoc/stoc2025.html)
+  1. [On the Hardness Hierarchy for the O(n√log n) Complexity in the Word RAM.](https://doi.org/10.1145/3717823.3718291)  
+  
 ## [STOC 2023](https://dblp.org/db/conf/stoc/stoc2023.html)
   1. [Weighted Edit Distance Computation: Strings, Trees, and Dyck.](https://doi.org/10.1145/3564246.3585178)  
   2. [External Memory Fully Persistent Search Trees.](https://doi.org/10.1145/3564246.3585140)  

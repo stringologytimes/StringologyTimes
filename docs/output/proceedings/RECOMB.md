@@ -1,4 +1,7 @@
 # RECOMB for Stringologist
+## [RECOMB 2025](https://dblp.org/db/conf/recomb/recomb2025.html)
+  1. [Prokrustean Graph: A Substring Index for Rapid K-Mer Size Analysis.](https://doi.org/10.1007/978-3-031-90252-9_14)  
+  
 ## [RECOMB 2019](https://dblp.org/db/conf/recomb/recomb2019.html)
   1. [Efficient Construction of a Complete Index for Pan-Genomics Read Alignment.](https://doi.org/10.1007/978-3-030-17083-7_10)  
   
