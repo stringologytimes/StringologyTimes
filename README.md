@@ -27,6 +27,7 @@
 - [Papers for Stringologist (2023)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2023)
 - [Papers for Stringologist (2024)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2024)
 - [Papers for Stringologist (2025)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2025)
+- [Papers for Stringologist (2026)](https://stringologytimes.github.io/StringologyTimes/docs/output/list_2026)
 - [All papers for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/complete_list)
 
 ## Statistics
