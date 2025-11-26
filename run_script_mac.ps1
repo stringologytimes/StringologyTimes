@@ -33,7 +33,7 @@ if (!(Test-Path -Path $destinationDir)) {
 }
 
 # Download dblp.xml file if needed.
-$remoteUrl = "https://dblp.uni-trier.de/xml/dblp.xml.gz"
+$remoteUrl = "https://dblp.org/xml/dblp.xml.gz"
 $localFile = "./data/external/dblp.xml.gz"
 try {
     Write-Output "Retrieving the last modified date of dblp.xml.gz on the web"
@@ -65,11 +65,11 @@ Expand-Gzip -sourceFile $sourceFile -destinationFile $destinationFile
 
 
 if (!(Test-Path ./data/external/dblp.dtd)){
-    echo "Downloading... https://dblp.uni-trier.de/xml/dblp.dtd"
-    Invoke-WebRequest -Uri https://dblp.uni-trier.de/xml/dblp.dtd -OutFile ./data/external/dblp.dtd    
+    echo "Downloading... https://dblp.org/xml/dblp.dtd"
+    Invoke-WebRequest -Uri https://dblp.org/xml/dblp.dtd -OutFile ./data/external/dblp.dtd    
 }
 else{
-    echo "Skipped the download of the file from https://dblp.uni-trier.de/xml/dblp.dtd"
+    echo "Skipped the download of the file from https://dblp.org/xml/dblp.dtd"
 }
 
 cd dblp_processor

@@ -9,6 +9,6 @@
   1. [ERNE-BS5: aligning BS-treated sequences by multiple hits on a 5-letters alphabet.](https://doi.org/10.1145/2382936.2382938)  
   
 ## [BCB 2011](https://dblp.org/db/conf/bcb/bcb2011.html)
-  1. [Approximate string-matching with a single gap for sequence alignment.](https://doi.org/10.1145/2147805.2147879)  
-  2. [DynMap: mapping short reads to multiple related genomes.](https://doi.org/10.1145/2147805.2147845)  
+  1. [DynMap: mapping short reads to multiple related genomes.](https://doi.org/10.1145/2147805.2147845)  
+  2. [Approximate string-matching with a single gap for sequence alignment.](https://doi.org/10.1145/2147805.2147879)  
   

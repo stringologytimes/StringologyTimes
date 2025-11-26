@@ -2,6 +2,7 @@
 
 ## Change Log
 
+- 25/11/26 Updated articles.
 - 25/08/27 Updated articles.
 - 25/04/30 Updated articles.
 - 24/11/06 Updated arXiv's articles.

@@ -6,8 +6,8 @@
   1. [Sketching, Streaming, and Fine-Grained Complexity of (Weighted) LCS.](https://doi.org/10.4230/LIPIcs.FSTTCS.2018.40)  
   
 ## [FSTTCS 2016](https://dblp.org/db/conf/fsttcs/fsttcs2016.html)
-  1. [Finger Search in Grammar-Compressed Strings.](https://doi.org/10.4230/LIPIcs.FSTTCS.2016.36)  
-  2. [LZ77 Factorisation of Trees.](https://doi.org/10.4230/LIPIcs.FSTTCS.2016.35)  
+  1. [LZ77 Factorisation of Trees.](https://doi.org/10.4230/LIPIcs.FSTTCS.2016.35)  
+  2. [Finger Search in Grammar-Compressed Strings.](https://doi.org/10.4230/LIPIcs.FSTTCS.2016.36)  
   
 ## [FSTTCS 2014](https://dblp.org/db/conf/fsttcs/fsttcs2014.html)
   1. [Asymptotically Optimal Encodings for Range Selection.](https://doi.org/10.4230/LIPIcs.FSTTCS.2014.291)  

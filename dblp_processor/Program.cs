@@ -61,7 +61,7 @@ class Program
             },
             xmlPathOption, urlPathOption, outputPathOption);
 
-        rootCommand.InvokeAsync(args);
+        //rootCommand.InvokeAsync(args);
 
         arXivCommand.SetHandler((_arxivPath, _outputPath) =>
             {
@@ -70,7 +70,7 @@ class Program
             },
             arXivPathOption, outputPathOption);
 
-        arXivCommand.InvokeAsync(args);
+        rootCommand.InvokeAsync(args);
 
 
         /*

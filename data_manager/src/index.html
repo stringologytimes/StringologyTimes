@@ -1,10 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World</title>
-  </head>
-  <body>
-    <h1>Hello World from Electron + TypeScript!</h1>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>DBLP Title Counter</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 16px; }
+    #log { white-space: pre; font-family: ui-monospace, SFMono-Regular, monospace; border: 1px solid #444; padding: 8px; height: 240px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <h1>Count &lt;title&gt; (stream)</h1>
+  <div>
+    <input id="path" placeholder="../data/external/dblp.xml" style="width: 520px;">
+    <label><input id="recordOnly" type="checkbox"> recordOnly</label>
+    <button id="run" onclick="onRunButtonClick()">Run</button>
+    <button id="search" onclick="onSearchButtonClick()">Search</button>
+  </div>
+  <p>
+    <progress id="prog" max="1" value="0" style="width:520px;"></progress>
+    <span id="status"></span>
+  </p>
+  <div id="log"></div>
+
+  <script src="renderer.js"></script>
+</body>
 </html>

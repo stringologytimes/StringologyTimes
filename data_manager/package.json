@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && cp -f src/index.html dist/index.html", 
+    "build": "tsc && cp -f src/index.html dist/index.html",
     "start": "npm run build && electron ./dist/main.js"
   },
   "keywords": [],
@@ -15,5 +15,9 @@
     "electron": "^37.3.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "entities": "^6.0.1",
+    "saxes": "^6.0.0"
   }
 }

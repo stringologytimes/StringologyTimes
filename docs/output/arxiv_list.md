@@ -1,5 +1,27 @@
 # arXiv Papers  
 ## 2025  
+### 2025/11  
+  1. [Attractors of sequences coding $β$-integers](https://arxiv.org/abs/2511.00650)  
+  2. [Subtree Mode and Applications](https://arxiv.org/abs/2511.01376)  
+  3. [The TAG array of a multiple sequence alignment](https://arxiv.org/abs/2511.19068)  
+  4. [Reconstructing Sets of Strings from Their k-way Projections: Algorithms & Complexity](https://arxiv.org/abs/2511.17707)  
+  5. [Maximal Palindromes in MPC: Simple and Optimal](https://arxiv.org/abs/2511.13014)  
+  6. [R-enum Revisited: Speedup and Extension for Context-Sensitive Repeats and Net Frequencies](https://arxiv.org/abs/2511.11057)  
+  7. [Hardness of Dynamic Tree Edit Distance and Friends](https://arxiv.org/abs/2511.09842)  
+  
+### 2025/10  
+  1. [Online computation of normalized substring complexity](https://arxiv.org/abs/2510.16454)  
+  2. [Asymptotics of the Longest Increasing Subsequence in Random Permutations](https://arxiv.org/abs/2511.00009)  
+  3. [On a sequence of Kimberling and its relationship to the Tribonacci word](https://arxiv.org/abs/2510.11318)  
+  4. [Simple Quantum Algorithm for Approximate $k$-Mismatch Problem](https://arxiv.org/abs/2510.02399)  
+  5. [Static Retrieval Revisited: To Optimality and Beyond](https://arxiv.org/abs/2510.18237)  
+  6. [Efficient k-mer Dataset Compression Using Eulerian Covers of de Bruijn Graphs and BWT](https://arxiv.org/abs/2510.22404)  
+  
+### 2025/9  
+  1. [Checking and producing word attractors](https://arxiv.org/abs/2509.08503)  
+  2. [Engineering Select Support for Hybrid Bitvectors](https://arxiv.org/abs/2509.06900)  
+  3. [Balanced Fibonacci word rectangles, and beyond](https://arxiv.org/abs/2509.25994)  
+  
 ### 2025/8  
   1. [Compact representation of maximal palindromes](https://arxiv.org/abs/2508.14384)  
   2. [Improved Online Sorting](https://arxiv.org/abs/2508.14361)  
@@ -59,6 +81,7 @@
   25. [A Framework for Building Data Structures from Communication Protocols](https://arxiv.org/abs/2506.20761)  
   26. [Review of Three Algorithms That Build k-d Trees](https://arxiv.org/abs/2506.20687)  
   27. [Adaptive Hybrid Sort: Dynamic Strategy Selection for Optimal Sorting  Across Diverse Data Distributions](https://arxiv.org/abs/2506.20677)  
+  28. [OSTRICH2: Solver for Complex String Constraints](https://arxiv.org/abs/2506.14363)  
   
 ### 2025/5  
   1. [Fast Pattern Matching with Epsilon Transitions](https://arxiv.org/abs/2505.04549)  

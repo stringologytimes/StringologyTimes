@@ -6,9 +6,9 @@
   1. [Privacy-Preserving String Edit Distance with Moves.](https://doi.org/10.1007/978-3-030-02224-2_18)  
   
 ## [SISAP 2017](https://dblp.org/db/conf/sisap/sisap2017.html)
-  1. [Scalable Similarity Search for Molecular Descriptors.](https://doi.org/10.1007/978-3-319-68474-1_14)  
+  1. [Practical Space-Efficient Data Structures for High-Dimensional Orthogonal Range Searching.](https://doi.org/10.1007/978-3-319-68474-1_16)  
   2. [Succinct Quadtrees for Road Data.](https://doi.org/10.1007/978-3-319-68474-1_18)  
-  3. [Practical Space-Efficient Data Structures for High-Dimensional Orthogonal Range Searching.](https://doi.org/10.1007/978-3-319-68474-1_16)  
+  3. [Scalable Similarity Search for Molecular Descriptors.](https://doi.org/10.1007/978-3-319-68474-1_14)  
   
 ## [SISAP 2014](https://dblp.org/db/conf/sisap/sisap2014.html)
   1. [Dynamic List of Clusters in Secondary Memory.](https://doi.org/10.1007/978-3-319-11988-5_9)  
