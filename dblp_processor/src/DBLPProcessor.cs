@@ -52,7 +52,8 @@ namespace DBLPProcessor
                 {
                     Console.WriteLine(counter);
                 }
-                var b1 = v.Name == "inproceedings" && ProceedingNameHashSet.Contains(v.Element("booktitle")!.Value);
+                var booktitleElement = v.Element("booktitle");
+                var b1 = v.Name == "inproceedings" && booktitleElement != null && ProceedingNameHashSet.Contains(booktitleElement.Value);
                 var urlNode = v.Element("url");
                 var b2 = false;
                 if (urlNode != null)

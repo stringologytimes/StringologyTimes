@@ -4,14 +4,14 @@ import { createArxivMD } from "./create_arxiv_md"
 import { createCompleteMD, createMD, createYearProceedingMD, ProceedingsInfo } from "./create_list_md"
 import * as fs from 'fs' 
 
-export function write_list_year_md(yearList: number[], dblpElements: DBLPElementClass[], outputFilePathPrefix: string): void {
+export function write_list_year_md(yearList: number[], dblpElements: DBLPElementClass[], outputFolderPath: string): void {
     yearList.forEach((year) => {
         const mdlines = createMD(dblpElements, year);
         if(mdlines.length > 0){
             const text = mdlines.join("\r\n");
 
             try {
-                fs.writeFileSync(`${outputFilePathPrefix}_${year}.md`, text);
+                fs.writeFileSync(`${outputFolderPath}/list_${year}.md`, text);
                 console.log(`Outputted markdown file for ${year}`);
     
             } catch (e) {
@@ -21,11 +21,11 @@ export function write_list_year_md(yearList: number[], dblpElements: DBLPElement
         }
     })
 }
-export function write_complete_md(dblpElements: DBLPElementClass[], outputFilePath: string): void {
+export function write_complete_md(dblpElements: DBLPElementClass[], outputFolderPath: string, outputFileName : string): void {
     const complete_MD_lines = createCompleteMD(dblpElements);
     const complete_MD_text = complete_MD_lines.join("\r\n");
     try {
-        fs.writeFileSync(outputFilePath, complete_MD_text);
+        fs.writeFileSync(`${outputFolderPath}/${outputFileName}`, complete_MD_text);
         console.log(`Outputted markdown file for the complete list`);
 
     } catch (e) {
@@ -36,6 +36,8 @@ export function write_list_by_book(dblpElements: DBLPElementClass[], outputFolde
     if (!fs.existsSync(outputFolderPath)) {
         fs.mkdirSync(outputFolderPath);
     }
+    console.log("Generating inproceedings and journal pages...");
+
     const inproceedingList = <DBLPInproceedings[]>dblpElements.filter((v) => v instanceof DBLPInproceedings);
 
     const inproceedingMapper: Map<string, DBLPInproceedings[]> = new Map();
@@ -73,6 +75,7 @@ export function write_list_by_book(dblpElements: DBLPElementClass[], outputFolde
     }
 
 
+    const result_list : string[] = new Array();
 
     bookTitles.forEach((bookTitle) => {
         const lines : string[] = new Array();
@@ -84,13 +87,12 @@ export function write_list_by_book(dblpElements: DBLPElementClass[], outputFolde
 
         try {
             fs.writeFileSync(filePath, lines.join("\n"));
-            console.log(`Outputted ${filePath}`);
-
+            result_list.push(filePath);
         } catch (e) {
             console.log(e);
         }
-
     })
+    console.log("The number of created pages for inproceedings and journal: " + result_list.length);
 
 
 
@@ -124,10 +126,10 @@ function write_list_conference(bookTitle: string, items: DBLPInproceedings[], sh
 
 }
 
-export function write_arxiv_list_md(arxivArticles: ArxivArticle[], outputFilePath: string): void {
+export function write_arxiv_list_md(arxivArticles: ArxivArticle[], doi_tag_mapper : Map<string, Set<string>>, outputFilePath: string): void {
     //const arxivPapers = (<DBLPArticle[]>dblpElements.filter((v) => v instanceof DBLPArticle)).filter((v) => v.journal == "CoRR");
 
-    const arxivMDText = createArxivMD(arxivArticles).join("\r\n");
+    const arxivMDText = createArxivMD(arxivArticles, doi_tag_mapper).join("\r\n");
     try {
         fs.writeFileSync(outputFilePath, arxivMDText);
         console.log(`Outputted markdown file for arXiv / ${outputFilePath}`);

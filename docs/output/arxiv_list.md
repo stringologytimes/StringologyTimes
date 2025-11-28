@@ -4,6 +4,7 @@
   1. [Attractors of sequences coding $β$-integers](https://arxiv.org/abs/2511.00650)  
   2. [Subtree Mode and Applications](https://arxiv.org/abs/2511.01376)  
   3. [The TAG array of a multiple sequence alignment](https://arxiv.org/abs/2511.19068)  
+    ![BWT](https://img.shields.io/badge/BWT-493ec5) ![BWT1](https://img.shields.io/badge/BWT1-2b8806) ![BWT2](https://img.shields.io/badge/BWT2-ae5a21) ![BWT3](https://img.shields.io/badge/BWT3-303834) ![BWT4](https://img.shields.io/badge/BWT4-a9c7ae) ![BWT5](https://img.shields.io/badge/BWT5-de4885)  
   4. [Reconstructing Sets of Strings from Their k-way Projections: Algorithms & Complexity](https://arxiv.org/abs/2511.17707)  
   5. [Maximal Palindromes in MPC: Simple and Optimal](https://arxiv.org/abs/2511.13014)  
   6. [R-enum Revisited: Speedup and Extension for Context-Sensitive Repeats and Net Frequencies](https://arxiv.org/abs/2511.11057)  

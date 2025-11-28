@@ -1,0 +1,37 @@
+library(tcltk)
+install.packages("tcltk")
+library(tcltk)
+df <- read.csv(“/Users/nishimoto/Documents/github/StringologyTimes/data/stringology_times_history.csv”,header=T,row.names=1)
+df
+setwd("/Users/nishimoto/Documents/github/StringologyTimes/data")
+ls
+df <- read.csv(“paper_statistics_for_each_year.csv”,header=T,row.names=1)
+df
+df[,1]
+df[1,]
+df <- read.csv(“paper_statistics_for_each_year.csv”,header=T)
+df
+df <- read.csv(“paper_statistics_for_each_year.csv”)
+df
+df <- read.csv(“paper_statistics_for_each_year.csv”)
+df
+setwd("/Users/nishimoto/Documents/github/StringologyTimes/data/")
+df <- read.csv(“paper_statistics_for_each_year.csv”)
+df
+plot(data[,1],data[,2],type="l")
+data
+data <- read.csv(“paper_statistics_for_each_year.csv”)
+data
+data <- read.csv(“paper_statistics_for_each_year.csv”)
+data
+rm(data)
+data
+data <- read.csv(“paper_statistics_for_each_year.csv”)
+data
+getwd()
+data <- read.csv(“paper_statistics_for_each_year.csvaa”)
+data <- read.csv("paper_statistics_for_each_year.csv", fileEncoding = "utf8")
+data
+data <- read.csv("paper_statistics_for_each_year.csv", fileEncoding = "utf8", header = T)
+data
+plot(data[,1],data[,2],type="l")

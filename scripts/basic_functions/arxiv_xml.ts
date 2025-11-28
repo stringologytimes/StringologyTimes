@@ -46,6 +46,9 @@ export class ArxivArticle {
         this.title = this.node.getElementsByTagName("title").item(0)!.textContent!;
         this.url = `https://arxiv.org/abs/${this.id}`;
     }
+    public get doi() : string {
+        return `10.48550/arXiv.${this.id}`;
+    }
 
     public static loadArxivArticles(arxivXMLPath : string): ArxivArticle[] {
         const arxivInfo: ArxivXMLInfo = loadArxivXML(arxivXMLPath);
