@@ -32,9 +32,12 @@ if (!(Test-Path -Path $destinationDir)) {
     New-Item -ItemType Directory -Path $destinationDir -Force
 }
 
+$skipDownload = $true;
+$localFile = "./data/external/dblp.xml.gz"
+
+if(!$skipDownload){
 # Download dblp.xml file if needed.
 $remoteUrl = "https://dblp.org/xml/dblp.xml.gz"
-$localFile = "./data/external/dblp.xml.gz"
 try {
     Write-Host "Retrieving the last modified date of dblp.xml.gz on the web" -ForegroundColor Yellow
     
@@ -44,6 +47,8 @@ try {
 } catch {
     Write-Host "Failed to retrieve the last modified date of the remote file." -ForegroundColor Red
     exit
+}
+
 }
 
 if (Test-Path $localFile) {
@@ -137,38 +142,39 @@ Write-Host "Is dblp.xml updated? $DBLPUpdated" -ForegroundColor Yellow
 Write-Host "Is arxiv-metadata-oai-snapshot.json updated? $arxivUpdated" -ForegroundColor Yellow
 
 $dblpProcessor = "./dblp_processor/bin/Release/net9.0/dblp_processor"
-$dblpProcessorArgs = @("dblp", "--x", "./data/external/dblp.xml", "--u", "./data/auto_generated/url.csv", "--o", "./data/auto_generated/stringology_dblp.xml")
+$dblpProcessorArgs = @("dblp", "--x", "./data/external/dblp.xml", "--u", "./data/auto_generated/url.csv", "--o", "./data/auto_generated/stringology_dblp.jsonl")
 
-if ($urlUpdated -or $DBLPUpdated -or $arxivUpdated) {
+#if ($urlUpdated -or $DBLPUpdated -or $arxivUpdated) {
     Write-Host "Compile: $dblpProcessor" -ForegroundColor Yellow
     cd dblp_processor
     dotnet build -c Release
     cd ..    
-}
+#}
 
-if ($urlUpdated -or $DBLPUpdated) {
+#if ($urlUpdated -or $DBLPUpdated) {
     Write-Host "Execute: $dblpProcessor $dblpProcessorArgs" -ForegroundColor Yellow
     $dblpProc = Start-Process -FilePath $dblpProcessor -ArgumentList $dblpProcessorArgs -Wait    
-}else{
-    Write-Host "Skip: $dblpProcessor $dblpProcessorArgs" -ForegroundColor Green
-}
+#}else{
+#    Write-Host "Skip: $dblpProcessor $dblpProcessorArgs" -ForegroundColor Green
+#}
 
-$arxivProcessor = "./dblp_processor/bin/Release/net9.0/dblp_processor"
-$arxivProcessorArgs = @("arxiv", "--i", "./data/external/arxiv-metadata-oai-snapshot.json", "--o", "./data/auto_generated/cs.DS_arxiv_articles.tsv")
-if ($urlUpdated -or $DBLPUpdated -or $arxivUpdated) {
-    Write-Host "Execute: $arxivProcessor $arxivProcessorArgs" -ForegroundColor Yellow
-    $arxivProc = Start-Process -FilePath $arxivProcessor -ArgumentList $arxivProcessorArgs -Wait
-}else{
-    Write-Host "Skip: $arxivProcessor $arxivProcessorArgs" -ForegroundColor Green
-}
-
-Write-Host "Execute: ts-node ./scripts/download_arxiv_xml_main.ts" -ForegroundColor Yellow
-ts-node ./scripts/download_arxiv_xml_main.ts
-
-Write-Host "Execute: ts-node ./scripts/process_stringology_dblp_main.ts" -ForegroundColor Yellow
-ts-node ./scripts/process_stringology_dblp_main.ts
-
-Write-Host "Execute: ts-node ./scripts/weekly_arxiv_main.ts" -ForegroundColor Yellow
-ts-node ./scripts/weekly_arxiv_main.ts
+##
+## $arxivProcessor = "./dblp_processor/bin/Release/net9.0/dblp_processor"
+## $arxivProcessorArgs = @("arxiv", "--i", "./data/external/arxiv-metadata-oai-snapshot.json", "--o", "./data/auto_generated/cs.DS_arxiv_articles.tsv")
+## if ($urlUpdated -or $DBLPUpdated -or $arxivUpdated) {
+##     Write-Host "Execute: $arxivProcessor $arxivProcessorArgs" -ForegroundColor Yellow
+##     $arxivProc = Start-Process -FilePath $arxivProcessor -ArgumentList $arxivProcessorArgs -Wait
+## }else{
+##     Write-Host "Skip: $arxivProcessor $arxivProcessorArgs" -ForegroundColor Green
+## }
+## 
+## Write-Host "Execute: ts-node ./scripts/download_arxiv_xml_main.ts" -ForegroundColor Yellow
+## ts-node ./scripts/download_arxiv_xml_main.ts
+## 
+## Write-Host "Execute: ts-node ./scripts/process_stringology_dblp_main.ts" -ForegroundColor Yellow
+## ts-node ./scripts/process_stringology_dblp_main.ts
+## 
+## Write-Host "Execute: ts-node ./scripts/weekly_arxiv_main.ts" -ForegroundColor Yellow
+## ts-node ./scripts/weekly_arxiv_main.ts
 
 

@@ -33,7 +33,14 @@ export class URLConverter{
             if(urlBody != null){
                 if(URLConverter.isArxivAbsURL(urlBody)){
                     const parse = urlBody.split("/");
-                    return "10.48550/arXiv." + parse[parse.length - 1];
+                    let suf = "";
+                    for(let i = 2; i < parse.length; i++){
+                        suf += parse[i];
+                        if(i < parse.length - 1){
+                            suf += "/";
+                        }
+                    }
+                    return "10.48550/arXiv." + suf;
                 }else if (URLConverter.isDOIURL(urlBody)){
                     return urlBody.substring("doi.org/".length);
                 }else{

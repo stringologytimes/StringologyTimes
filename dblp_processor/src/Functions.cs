@@ -67,6 +67,7 @@ namespace DBLPProcessor
     }
     class URLTypeFunctions
     {
+        /*
         public static URLType getURLType(string url)
         {
             if (url.IndexOf("http://arxiv.org/") == 0)
@@ -114,8 +115,8 @@ namespace DBLPProcessor
             {
                 return dblpURL.ToLower();
             }
-
         }
+        */
 
     }
 
