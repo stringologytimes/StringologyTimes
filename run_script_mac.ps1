@@ -142,7 +142,7 @@ Write-Host "Is dblp.xml updated? $DBLPUpdated" -ForegroundColor Yellow
 Write-Host "Is arxiv-metadata-oai-snapshot.json updated? $arxivUpdated" -ForegroundColor Yellow
 
 $dblpProcessor = "./dblp_processor/bin/Release/net9.0/dblp_processor"
-$dblpProcessorArgs = @("dblp", "--x", "./data/external/dblp.xml", "--u", "./data/auto_generated/url.csv", "--o", "./data/auto_generated/stringology_dblp.jsonl")
+$dblpProcessorArgs = @("-x", "./data/external/dblp.xml", "-u", "./data/auto_generated/url.csv", "-t", "./data/auto_generated/tag.csv" , "-o", "./data/auto_generated/stringology_dblp.jsonl" , "-j", "./data/external/arxiv-metadata-oai-snapshot.json")
 
 #if ($urlUpdated -or $DBLPUpdated -or $arxivUpdated) {
     Write-Host "Compile: $dblpProcessor" -ForegroundColor Yellow

@@ -5,6 +5,7 @@ using System.Text.Unicode;
 using System.Text.Json.Serialization;
 using System.Text;
 using System.IO;
+using DBLPProcessor;
 
 namespace ArxivProcessor
 {
@@ -35,10 +36,15 @@ namespace ArxivProcessor
         public string? update_date { get; set; }
         public VersionInfo[]? versions { get; set; }
 
+
         public string toTSV()
         {
             var newTitle = this.title!.Replace("\r", "").Replace("\n", "");
             return $"{this.YearMonthDayString}\t{this.id}\t{newTitle}\t{this.categories}";
+        }
+        public string getArxivDOI()
+        {
+            return "10.48550/arXiv." + this.id;
         }
 
         public long getUnixTime()
@@ -96,6 +102,56 @@ namespace ArxivProcessor
                 return item1.id!.CompareTo(item2.id!);
             }
         }
+        public static string RemoveNewLines(string s)
+        {
+            return s
+                .Replace("\r\n", "") // Windows の改行
+                .Replace("\n", "")   // Unix系の改行
+                .Replace("\r", "");  // 古い Mac の改行
+        }
+
+        public static DBLPElement toDBLPElement(ArxivArticle article, List<string> tags)
+        {
+            var dblpElement = new DBLPElement();
+            var authorsStr = RemoveNewLines(article.authors!);
+            var authors = authorsStr.Split(",").ToList();
+            authors.ForEach((v) =>
+            {
+                v.Split("and").ToList().ForEach((w) =>
+                {
+                    var w2 = w.Trim();
+                    if (w2.Length > 0)
+                    {
+                        dblpElement.Authors.Add(w2.Trim());
+                    }
+                });
+            });
+
+            //dblpElement.Authors = article.authors!.Split(",").ToList();
+            dblpElement.Title = article.title!;
+            dblpElement.Year = article.getCreatedTime().Year;
+            //dblpElement.Journal = "CoRR";
+            dblpElement.DOI = article.getArxivDOI();
+            //dblpElement.Url = article.url!;
+            dblpElement.Volume = "";
+            dblpElement.PaperType = "article";
+            dblpElement.BookTitleOrJournal = "CoRR";
+            dblpElement.Tags = tags.ToList();
+            return dblpElement;
+
+            /*
+                    public List<string> Authors { get; set; } = new List<string>();
+                    public string Title { get; set; } = "";
+                    public int Year { get; set; } = 0;
+                    public string Journal { get; set; } = "";
+                    public string DOI { get; set; } = "";
+                    public string Url { get; set; } = "";
+                    public string Volume { get; set; } = "";
+                    public string PaperType { get; set; } = "";
+                    public string BookTitleOrJournal { get; set; } = "";
+                    public List<string> Tags { get; set; } = new List<string>();
+                    */
+        }
 
 
 
@@ -150,6 +206,61 @@ namespace ArxivProcessor
             var lines = csDSArticles.Select((v) => v.toTSV());
             var outputStr = String.Join(System.Environment.NewLine, lines);
             File.WriteAllText(outputFilePath, outputStr, System.Text.Encoding.UTF8);
+        }
+
+        public static List<ArxivArticle> Process2(string arxivJsonPath, Dictionary<string, List<string>> doiToTagMapper)
+        {
+            List<ArxivArticle> arxivArticles = new List<ArxivArticle>();
+
+            var options = new JsonSerializerOptions
+            {
+                // 日本語を変換するためのエンコード設定
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.All),
+                // インデントを付ける
+                WriteIndented = true
+            };
+
+            int counter = 0;
+
+            var csDSArticles = new List<ArxivArticle>();
+
+            foreach (string line in System.IO.File.ReadLines(arxivJsonPath))
+            {
+                //System.Console.WriteLine(line);
+                //Console.WriteLine(person2.ToLightString());
+                counter++;
+
+                var article = JsonSerializer.Deserialize<ArxivArticle>(line, options);
+                if (article != null)
+                {
+                    if (doiToTagMapper.ContainsKey(article.getArxivDOI()))
+                    {
+                        csDSArticles.Add(article);
+                    }
+                }
+
+                /*
+                var px = line.IndexOf("cs.DS");
+                if(px != -1){
+
+                }
+                */
+
+
+                if (counter % 100000 == 0)
+                {
+                    Console.WriteLine($"{counter}/{csDSArticles.Count}");
+                }
+
+            }
+            csDSArticles.Sort((a, b) => ArxivArticle.Compare(a, b));
+            return csDSArticles;
+
+            /*
+                                    var lines = csDSArticles.Select((v) => v.toTSV());
+                                    var outputStr = String.Join(System.Environment.NewLine, lines);
+                                    File.WriteAllText(outputFilePath, outputStr, System.Text.Encoding.UTF8);
+                                    */
         }
     }
 }

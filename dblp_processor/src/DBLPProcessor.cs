@@ -12,13 +12,13 @@ namespace DBLPProcessor
         public List<string> Authors { get; set; } = new List<string>();
         public string Title { get; set; } = "";
         public int Year { get; set; } = 0;
-        public string Journal { get; set; } = "";
+        //public string Journal { get; set; } = "";
         public string DOI { get; set; } = "";
-        public string Url { get; set; } = "";
+        //public string Url { get; set; } = "";
         public string Volume { get; set; } = "";
         public string PaperType { get; set; } = "";
         public string BookTitleOrJournal { get; set; } = "";
-
+        public List<string> Tags { get; set; } = new List<string>();
         public string to_JSON_Line()
         {
             List<string> dataList = new List<string>();
@@ -29,9 +29,11 @@ namespace DBLPProcessor
             dataList.Add(this.Year.ToString());
             string authorString = JsonSerializer.Serialize(this.Authors);
             dataList.Add(authorString);
-            dataList.Add(JsonSerializer.Serialize(this.Journal));
-            dataList.Add(JsonSerializer.Serialize(this.Url));
+            //dataList.Add(JsonSerializer.Serialize(this.Journal));
+            //dataList.Add(JsonSerializer.Serialize(this.Url));
             dataList.Add(JsonSerializer.Serialize(this.Volume));
+            dataList.Add(JsonSerializer.Serialize(this.Tags));
+
             string dataString = "[" + string.Join(",", dataList) + "]";
             return dataString;
         }
@@ -60,9 +62,13 @@ namespace DBLPProcessor
                 return null;
             }
         }
-        public static DBLPElement from_XML(XElement x)
+        public static DBLPElement from_XML(XElement x, List<string> tags)
         {
             var dblpElement = new DBLPElement();
+
+            dblpElement.Tags = tags.ToList();
+
+
             var paperType = x.Name.ToString();
             if (paperType == "article")
             {
@@ -107,11 +113,13 @@ namespace DBLPProcessor
             {
                 dblpElement.Year = int.Parse(year.Value);
             }
+            /*
             var journal = x.Element("journal");
             if (journal != null)
             {
                 dblpElement.Journal = journal.Value;
             }
+            */
             var ee = x.Element("ee");
             if (ee != null)
             {
@@ -122,11 +130,13 @@ namespace DBLPProcessor
                     dblpElement.DOI = doi;
                 }
             }
+            /*
             var url = x.Element("url");
             if (url != null)
             {
                 dblpElement.Url = url.Value;
             }
+            */
             var volume = x.Element("volume");
             if (volume != null)
             {
@@ -137,13 +147,14 @@ namespace DBLPProcessor
     }
     class Processor
     {
-        public static void Process(string xmlPath, string urlListPath, string outputPath)
+        public static List<DBLPElement> Process(string xmlPath, Dictionary<string, List<string>> doiToTagMapper)
         {
 
-            HashSet<string> doiHashSet = new HashSet<string>();
+            //HashSet<string> doiHashSet = new HashSet<string>();
             HashSet<string> journalURLHashSet = new HashSet<string>();
             HashSet<string> ProceedingNameHashSet = new HashSet<string>();
 
+            /*
             StreamReader sr = new StreamReader(urlListPath, System.Text.Encoding.UTF8);
             var urlText = sr.ReadToEnd().Replace("\r\n", "\n");
             var urlLines = urlText.Split("\n");
@@ -167,11 +178,9 @@ namespace DBLPProcessor
                 }
                 else if (line.Length > 3)
                 {
-                    //Console.WriteLine(line);
-
-                    //urlHashSet.Add(line.ToLower());
                 }
             }
+            */
 
             List<DBLPElement> dblpElements = new List<DBLPElement>();
 
@@ -204,31 +213,17 @@ namespace DBLPProcessor
                     {
                         var url = eeChild.FirstNode?.ToString() ?? "";
                         var doi = DBLPElement.getDOI(url);
-                        //var formalURL = DBLPProcessor.URLTypeFunctions.getFormalURL(url);
-                        /*
-                        if (formalURL.IndexOf(@"LIPICS.CPM.2019") != -1)
-                        {
-                            Console.WriteLine("Found: " + formalURL);
-                        }
-                        */
 
-/*
-                        if (doi == null)
-                        {
-                            Console.WriteLine("Not found: " + url);
-                        }
-                        */
-
-                        if (doi != null && doiHashSet.Contains(doi))
+                        if (doi != null && doiToTagMapper.ContainsKey(doi))
                         {
                             root.Add(v);
 
                             var dblpElement = new DBLPElement();
-                            dblpElement = DBLPElement.from_XML(v);
+                            dblpElement = DBLPElement.from_XML(v, doiToTagMapper[doi]);
                             dblpElements.Add(dblpElement);
 
 
-                            doiHashSet.Remove(doi);
+                            //doiToTagMapper.Remove(doi);
                             Console.WriteLine(doi);
                             break;
                         }
@@ -237,7 +232,17 @@ namespace DBLPProcessor
                             root.Add(v);
 
                             var dblpElement = new DBLPElement();
-                            dblpElement = DBLPElement.from_XML(v);
+                            var tags = new List<string>();
+                            if (doi != null && doiToTagMapper.ContainsKey(doi))
+                            {
+                                tags = doiToTagMapper[doi];
+                            }
+                            else
+                            {
+                                tags = new List<string>();
+                            }
+
+                            dblpElement = DBLPElement.from_XML(v, tags);
                             dblpElements.Add(dblpElement);
 
 
@@ -249,34 +254,16 @@ namespace DBLPProcessor
                 }
                 counter++;
             }
+            return dblpElements;
+
 
             /*
-            var baseDir = AppDomain.CurrentDomain.BaseDirectory;
-            var outputDir = baseDir + "output";
-            DirectoryInfo dirInfo = new DirectoryInfo(outputDir);
-            if (!dirInfo.Exists)
-            {
-                dirInfo.Create();
-            }
-            */
-
-            /*
-            root.Save(outputPath);
-            Console.WriteLine("Saved: " + outputPath);
-            */
-
-            foreach (var doi in doiHashSet)
+            foreach (var doi in doiToTagMapper.Keys)
             {
                 Console.WriteLine("Not found: " + doi);
             }
+            */
 
-            using var writer = new StreamWriter(outputPath, false, Encoding.UTF8);
-            foreach (var dblpElement in dblpElements)
-            {
-                var json = dblpElement.to_JSON_Line();
-                writer.WriteLine(json);
-            }
-            Console.WriteLine("JSON lines saved to: " + outputPath);
 
         }
     }

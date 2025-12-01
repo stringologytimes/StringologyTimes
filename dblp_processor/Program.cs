@@ -1,81 +1,82 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using CommandLine;
 
-using System.CommandLine;
-using System.CommandLine.Invocation;
-
-
-class Program
+namespace DBLPProcessor
 {
-    static void Main(string[] args)
-    {        
-        Console.WriteLine(String.Join(", ", args));
-        var xmlPathOption = new Option<string>(
-            name: "--x",
-            description: "XML Path"
-            )
-        { IsRequired = true };
+    [Verb("dblp", HelpText = "Read and display the file.")]
+    public class DBLPOptions
+    {
+        [Option('x', "xml", Required = true, HelpText = "DBLP XML Path")]
+        public string XmlPath { get; set; } = "";
+        [Option('j', "json", Required = true, HelpText = "Arxiv JSON Path")]
+        public string JsonPath { get; set; } = "";
 
-        var urlPathOption = new Option<string>(
-            name: "--u",
-            description: "URL List Path.")
-        { IsRequired = true };
-
-        var outputPathOption = new Option<string>(
-            name: "--o",
-            description: "Output Path.")
-        { IsRequired = true };
-
-        var arXivPathOption = new Option<string>(
-            name: "--i",
-            description: "arXiv Path"
-            )
-        { IsRequired = true };
+        [Option('u', "url", Required = true, HelpText = "The Path to url.csv")]
+        public string UrlPath { get; set; } = "";
 
 
-        var rootCommand = new RootCommand("Sample app for System.CommandLine");
-
-        var dblpCommand = new Command("dblp", "Read and display the file.");
-        var arXivCommand = new Command("arxiv", "Read and display the file.");
-
-        dblpCommand.AddOption(xmlPathOption);
-        dblpCommand.AddOption(urlPathOption);
-        dblpCommand.AddOption(outputPathOption);
-
-        arXivCommand.AddOption(arXivPathOption);
-        arXivCommand.AddOption(outputPathOption);
+        [Option('t', "tag", Required = true, HelpText = "The Path to tag.csv")]
+        public string TagPath { get; set; } = "";
 
 
-
-        rootCommand.AddCommand(dblpCommand);
-        rootCommand.AddCommand(arXivCommand);
-
-        dblpCommand.SetHandler((_xmlPath, _urlPath, _outputPath) =>
-            {
-                DBLPProcessor.Processor.Process(_xmlPath, _urlPath, _outputPath);
-                /*
-                var folderPath = System.AppDomain.CurrentDomain.BaseDirectory;
-                Console.WriteLine(folderPath);
-                */
-            },
-            xmlPathOption, urlPathOption, outputPathOption);
-
-        //rootCommand.InvokeAsync(args);
-
-        arXivCommand.SetHandler((_arxivPath, _outputPath) =>
-            {
-                ArxivProcessor.Processor.Process(_arxivPath, _outputPath);
-
-            },
-            arXivPathOption, outputPathOption);
-
-        rootCommand.InvokeAsync(args);
-
-
-        /*
-        return await rootCommand.InvokeAsync(args);
-        */
+        [Option('o', "output", Required = true, HelpText = "Output Path")]
+        public string OutputPath { get; set; } = "";
     }
 
+
+    class Program
+    {
+        static int Main(string[] args)
+        {
+            Console.WriteLine(String.Join(", ", args));
+
+            return Parser.Default.ParseArguments<DBLPOptions>(args)
+                .MapResult(
+                    (DBLPOptions opts) => RunDBLP(opts),
+                    errs => 1
+                );
+        }
+
+        static int RunDBLP(DBLPOptions opts)
+        {
+            var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.UrlPath, opts.TagPath);
+            var dblpElements = DBLPProcessor.Processor.Process(opts.XmlPath, doiToTagMapper);
+            var arxivArticles = ArxivProcessor.Processor.Process2(opts.JsonPath, doiToTagMapper);
+
+            var mergedArticles = new List<DBLPElement>();
+            dblpElements.Where((v) => v.BookTitleOrJournal != "CoRR").ToList().ForEach((v) => mergedArticles.Add(v));
+            arxivArticles.ForEach((v) =>
+            {
+                var arxivDOI = v.getArxivDOI();
+                var dblpElement = ArxivProcessor.ArxivArticle.toDBLPElement(v, doiToTagMapper[arxivDOI]);
+                mergedArticles.Add(dblpElement);
+            });
+
+            var FoundDois = new HashSet<string>();
+            foreach (var dblpElement in mergedArticles)
+            {
+                FoundDois.Add(dblpElement.DOI);
+            }
+
+            var notFoundDois = doiToTagMapper.Keys.ToList().Where((v) => !FoundDois.Contains(v)).ToList();
+            foreach (var doi in notFoundDois)
+            {
+                Console.WriteLine("Not found: " + doi);
+            }
+
+
+            using var writer = new StreamWriter(opts.OutputPath, false, Encoding.UTF8);
+            foreach (var dblpElement in mergedArticles)
+            {
+                var json = dblpElement.to_JSON_Line();
+                writer.WriteLine(json);
+            }
+            Console.WriteLine("JSON lines saved to: " + opts.OutputPath);
+
+            return 0;
+        }
+
+    }
 }

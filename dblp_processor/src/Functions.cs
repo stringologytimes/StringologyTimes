@@ -9,6 +9,52 @@ namespace DBLPProcessor
         DOI,
         Other
     }
+
+    class DoiToTagMapper
+    {
+        public static Dictionary<string, List<string>> CreateDoiToTagMapper(string doiListCsvPath, string doiToTagCsvPath)
+        {
+            var doiToTagMapper = new Dictionary<string, List<string>>();
+
+            var doiListCsvLines = File.ReadAllLines(doiListCsvPath);
+            foreach (var line in doiListCsvLines)
+            {
+                var cols = line.Split(",");
+                var doi = cols[0].Trim();
+                if (!doiToTagMapper.ContainsKey(doi))
+                {
+                    doiToTagMapper[doi] = new List<string>();
+                }
+            }
+
+            var doiToTagCsvLines = File.ReadAllLines(doiToTagCsvPath);
+            foreach (var line in doiToTagCsvLines)
+            {
+                var cols = line.Split(",");
+                var doi = cols[0].Trim();
+                for (int i = 1; i < cols.Length; i++)
+                {
+                    var tag = cols[i].Trim();
+                    if (doiToTagMapper.ContainsKey(doi))
+                    {
+                        doiToTagMapper[doi].Add(tag);
+                    }
+                    else
+                    {
+                        doiToTagMapper[doi] = new List<string>();
+                        doiToTagMapper[doi].Add(tag);
+                    }
+                    
+                }
+            }
+            return doiToTagMapper;
+        }
+    }
+
+
+
+
+
     class DBLPProcessorFunctions
     {
         public static string[] MainNodeType = new string[] { "article", "inproceedings", "proceedings", "book", "incollection", "phdthesis", "masterthesis", "www" };
@@ -65,62 +111,5 @@ namespace DBLPProcessor
         }
 
     }
-    class URLTypeFunctions
-    {
-        /*
-        public static URLType getURLType(string url)
-        {
-            if (url.IndexOf("http://arxiv.org/") == 0)
-            {
-                return URLType.ArXiv;
-            }
-            else if (url.IndexOf("https://arxiv.org/") == 0)
-            {
-                return URLType.ArXiv;
-            }
-            else if (url.IndexOf("https://doi.org/") == 0)
-            {
-                return URLType.DOI;
-            }
-            else if (url.IndexOf("http://doi.org/") == 0)
-            {
-                return URLType.DOI;
-            }
-            else
-            {
-                return URLType.Other;
-            }
-        }
-        public static string getFormalURL(string dblpURL)
-        {
-            if (dblpURL.IndexOf("http://arxiv.org/") == 0)
-            {
-                var i = "http://arxiv.org/".Length;
-                return ("https://arxiv.org/" + dblpURL.Substring(i)).ToLower();
-            }
-            else if (dblpURL.IndexOf("https://arxiv.org/") == 0)
-            {
-                return dblpURL.ToLower();
-            }
-            else if (dblpURL.IndexOf("https://doi.org/") == 0)
-            {
-                return dblpURL.ToLower();
-            }
-            else if (dblpURL.IndexOf("http://doi.org/") == 0)
-            {
-                var i = "http://doi.org/".Length;
-                return ("https://doi.org/" + dblpURL.Substring(i)).ToLower();
-            }
-            else
-            {
-                return dblpURL.ToLower();
-            }
-        }
-        */
-
-    }
-
-
-
 
 }
