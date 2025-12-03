@@ -144,19 +144,26 @@ Write-Host "Is arxiv-metadata-oai-snapshot.json updated? $arxivUpdated" -Foregro
 $dblpProcessor = "./dblp_processor/bin/Release/net9.0/dblp_processor"
 $dblpProcessorArgs = @("-x", "./data/external/dblp.xml", "-u", "./data/auto_generated/url.csv", "-t", "./data/auto_generated/tag.csv" , "-o", "./data/auto_generated/stringology_dblp.jsonl" , "-j", "./data/external/arxiv-metadata-oai-snapshot.json")
 
-#if ($urlUpdated -or $DBLPUpdated -or $arxivUpdated) {
+if ($urlUpdated -or $DBLPUpdated -or $arxivUpdated) {
     Write-Host "Compile: $dblpProcessor" -ForegroundColor Yellow
     cd dblp_processor
     dotnet build -c Release
     cd ..    
-#}
+}
 
-#if ($urlUpdated -or $DBLPUpdated) {
+if ($urlUpdated -or $DBLPUpdated -or $arxivUpdated) {
     Write-Host "Execute: $dblpProcessor $dblpProcessorArgs" -ForegroundColor Yellow
     $dblpProc = Start-Process -FilePath $dblpProcessor -ArgumentList $dblpProcessorArgs -Wait    
-#}else{
-#    Write-Host "Skip: $dblpProcessor $dblpProcessorArgs" -ForegroundColor Green
-#}
+}else{
+    Write-Host "Skip: $dblpProcessor $dblpProcessorArgs" -ForegroundColor Green
+}
+
+Write-Host "Copy: ./data/auto_generated/stringology_dblp.jsonl to ./docs/output/jsonl/stringology_dblp.jsonl" -ForegroundColor Yellow
+Copy-Item "./data/auto_generated/stringology_dblp.jsonl" "./docs/output/jsonl/stringology_dblp.jsonl"
+
+tsc -p ./scripts/browser/tsconfig.json
+
+
 
 ##
 ## $arxivProcessor = "./dblp_processor/bin/Release/net9.0/dblp_processor"
