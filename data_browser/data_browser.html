@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Article Info Browser</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    #controls {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .search-box {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    #searchInput {
+      flex: 1;
+      min-width: 200px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    #yearFilter, #typeFilter, #bookTitleOrJournalFilter, #tagFilter1, #tagFilter2 {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      background: white;
+    }
+
+    #clearFilters {
+      padding: 10px 20px;
+      background: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    #clearFilters:hover {
+      background: #c0392b;
+    }
+
+    #stats {
+      color: #666;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .sort-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sort-controls label {
+      font-size: 14px;
+      color: #666;
+    }
+
+    #sortOrder {
+      padding: 6px 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      background: white;
+      cursor: pointer;
+    }
+
+    .pagination-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin: 20px 0;
+      padding: 15px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .pagination-controls button {
+      padding: 8px 20px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .pagination-controls button:hover:not(:disabled) {
+      background: #2980b9;
+    }
+
+    .pagination-controls button:disabled {
+      background: #bdc3c7;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    #pageInfo {
+      font-size: 14px;
+      color: #666;
+      font-weight: 500;
+    }
+
+    #articleList {
+      display: grid;
+      gap: 20px;
+    }
+
+    .article-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s;
+      position: relative;
+    }
+
+    .article-card:hover {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .article-number {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #3498db;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .article-title {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-size: 1.3em;
+      line-height: 1.4;
+      padding-right: 80px;
+    }
+
+    .article-meta {
+      display: grid;
+      gap: 10px;
+    }
+
+    .meta-item {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .meta-item strong {
+      color: #2c3e50;
+      margin-right: 5px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #3498db;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-size: 12px;
+      margin-right: 5px;
+      margin-top: 5px;
+    }
+
+    .meta-item a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .meta-item a:hover {
+      text-decoration: underline;
+    }
+
+    #error {
+      background: #e74c3c;
+      color: white;
+      padding: 15px;
+      border-radius: 4px;
+      margin-top: 20px;
+      white-space: pre-wrap;
+    }
+
+    #output {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .search-box {
+        flex-direction: column;
+      }
+
+      #searchInput, #yearFilter, #typeFilter, #bookTitleOrJournalFilter, #tagFilter1, #tagFilter2 {
+        width: 100%;
+      }
+    }
+  </style>
+  <script type="module">
+    import { load_jsonl } from "./dist/jsonl_browser.js";
+    load_jsonl();
+  </script>
+</head>
+<body>
+  <h1>Article Info Browser</h1>
+  <div id="output"></div>
+  <div id="error"></div>
+</body>
+</html>
