@@ -161,7 +161,7 @@ if ($urlUpdated -or $DBLPUpdated -or $arxivUpdated) {
 Write-Host "Copy: ./data/auto_generated/stringology_dblp.jsonl to ./docs/output/jsonl/stringology_dblp.jsonl" -ForegroundColor Yellow
 Copy-Item "./data/auto_generated/stringology_dblp.jsonl" "./docs/output/jsonl/stringology_dblp.jsonl"
 
-tsc -p ./scripts/browser/tsconfig.json
+## tsc -p ./scripts/browser/tsconfig.json
 
 
 

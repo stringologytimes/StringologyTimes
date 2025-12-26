@@ -1,17 +1,24 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using System.Linq;
 using CommandLine;
+using System.Threading.Tasks;
+using DataProcessor;
 
 namespace DBLPProcessor
 {
     [Verb("dblp", HelpText = "Read and display the file.")]
     public class DBLPOptions
     {
+        /*
         [Option('x', "xml", Required = true, HelpText = "DBLP XML Path")]
         public string XmlPath { get; set; } = "";
-        [Option('j', "json", Required = true, HelpText = "Arxiv JSON Path")]
+        [Option('j', "json", Required = false, HelpText = "Arxiv JSON Path")]
         public string JsonPath { get; set; } = "";
+
+        [Option('c', "json-folder", Required = false, HelpText = "Arxiv JSON Folder Path")]
+        public string JsonFolderPath { get; set; } = "";
 
         [Option('u', "url", Required = true, HelpText = "The Path to url.csv")]
         public string UrlPath { get; set; } = "";
@@ -19,6 +26,10 @@ namespace DBLPProcessor
 
         [Option('t', "tag", Required = true, HelpText = "The Path to tag.csv")]
         public string TagPath { get; set; } = "";
+        */
+
+        [Option('d', "data", Required = true, HelpText = "The Path to data folder")]
+        public string DataFolderPath { get; set; } = "";
 
 
         [Option('o', "output", Required = true, HelpText = "Output Path")]
@@ -28,52 +39,102 @@ namespace DBLPProcessor
 
     class Program
     {
-        static int Main(string[] args)
+        static async Task<int> Main(string[] args)
         {
             Console.WriteLine(String.Join(", ", args));
 
-            return Parser.Default.ParseArguments<DBLPOptions>(args)
+            return await Parser.Default.ParseArguments<DBLPOptions>(args)
                 .MapResult(
-                    (DBLPOptions opts) => RunDBLP(opts),
-                    errs => 1
+                    (Func<DBLPOptions, Task<int>>)(opts => RunDBLP(opts)),
+                    (Func<IEnumerable<Error>, Task<int>>)(errs => Task.FromResult(1))
                 );
         }
 
-        static int RunDBLP(DBLPOptions opts)
+        static async Task<int> RunDBLP(DBLPOptions opts)
         {
-            var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.UrlPath, opts.TagPath);
-            var dblpElements = DBLPProcessor.Processor.Process(opts.XmlPath, doiToTagMapper);
-            var arxivArticles = ArxivProcessor.Processor.Process2(opts.JsonPath, doiToTagMapper);
+            var UrlPath = opts.DataFolderPath + "/auto_generated/url.csv";
+            var TagPath = opts.DataFolderPath + "/auto_generated/tag.csv";
+            var XmlPath = opts.DataFolderPath + "/external/dblp.xml";
+            var JsonPath = opts.DataFolderPath + "/external/arxiv-metadata-oai-snapshot.json";
+            var mailAddress = "takaaki.nishimoto@riken.jp";
 
-            var mergedArticles = new List<DBLPElement>();
-            dblpElements.Where((v) => v.BookTitleOrJournal != "CoRR").ToList().ForEach((v) => mergedArticles.Add(v));
-            arxivArticles.ForEach((v) =>
+            //var dataCiteDoiListFolderPath = opts.DataFolderPath + "/auto_generated/datacite_cache/gzfile_to_doi";
+
+
+
+
+
+
+            var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(UrlPath, TagPath);
+
+            var crossRefExternalDicPath = opts.DataFolderPath + "/auto_generated/crossref_cache/found_external_jsonl.csv";
+            var crossRefExternalDic = DataProcessor.CrossRefJSONLLoader.Load(crossRefExternalDicPath);
+
+            var dataCiteExternalDicPath = opts.DataFolderPath + "/auto_generated/datacite_cache/found_external_jsonl.csv";
+            var dataCiteExternalDic = DataProcessor.DataCiteJSONLLoader.Load(dataCiteExternalDicPath);
+
+
+            DataProcessor.DataCitePreprocessor.PreprocessAll(opts.DataFolderPath, doiToTagMapper);
+            DataProcessor.CrossRefPreprocessor.PreprocessAll(opts.DataFolderPath, doiToTagMapper, crossRefExternalDic);
+
+            var crossRefDicPath = opts.DataFolderPath + "/auto_generated/crossref_cache/found_jsonl.csv";
+            var crossRefDic = DataProcessor.CrossRefJSONLLoader.Load(crossRefDicPath);
+            var dataCiteDicPath = opts.DataFolderPath + "/auto_generated/datacite_cache/found_jsonl.csv";
+            var dataCiteDic = DataProcessor.DataCiteJSONLLoader.Load(dataCiteDicPath);
+
+
+            var crossRefDOIPrefixSet = DataProcessor.CrossRefJSONLLoader.GetDOIPrefixSet(opts.DataFolderPath);
+            var dataCiteDOIPrefixSet = DataProcessor.DataCiteJSONLLoader.GetDOIPrefixSet(opts.DataFolderPath);
+
+            var foundOrNotFoundLists = DataProcessor.CommonPreprocessors.CreateFoundOrNotFoundLists(opts.DataFolderPath, doiToTagMapper, crossRefDic, dataCiteDic, crossRefExternalDic, dataCiteExternalDic, crossRefDOIPrefixSet, dataCiteDOIPrefixSet);
+
+            DataProcessor.CommonPreprocessors.ExternalSearch(foundOrNotFoundLists, mailAddress, crossRefExternalDic, dataCiteExternalDic);
+
+            JsonLib.Save(crossRefExternalDic, crossRefExternalDicPath);
+            JsonLib.Save(dataCiteExternalDic, dataCiteExternalDicPath);
+            
+            var counter = 0;
+
+            foundOrNotFoundLists.NotFoundDois.ForEach((v) =>
             {
-                var arxivDOI = v.getArxivDOI();
-                var dblpElement = ArxivProcessor.ArxivArticle.toDBLPElement(v, doiToTagMapper[arxivDOI]);
-                mergedArticles.Add(dblpElement);
+                counter++;
+                Console.WriteLine(counter + " : Not found: " + v);
+
             });
 
-            var FoundDois = new HashSet<string>();
-            foreach (var dblpElement in mergedArticles)
+            var doiElements = new List<DOIElement>();
+            crossRefDic.ToList().ForEach((v) =>
             {
-                FoundDois.Add(dblpElement.DOI);
-            }
-
-            var notFoundDois = doiToTagMapper.Keys.ToList().Where((v) => !FoundDois.Contains(v)).ToList();
-            foreach (var doi in notFoundDois)
+                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value);
+                doiElements.Add(doiElement);
+            });
+            
+            crossRefExternalDic.ToList().ForEach((v) =>
             {
-                Console.WriteLine("Not found: " + doi);
-            }
+                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value);
+                doiElements.Add(doiElement);
+            });
 
 
-            using var writer = new StreamWriter(opts.OutputPath, false, Encoding.UTF8);
-            foreach (var dblpElement in mergedArticles)
+            dataCiteDic.ToList().ForEach((v) =>
             {
-                var json = dblpElement.to_JSON_Line();
-                writer.WriteLine(json);
+                var doiElement = DOIElement.ParseFromDataCiteJSONL(v.Value);
+                doiElements.Add(doiElement);
+            });
+
+            var doiElementsPath = opts.DataFolderPath + "/auto_generated/doi_elements.jsonl";
+            using (var writer = new StreamWriter(doiElementsPath, false, Encoding.UTF8))
+            {
+                doiElements.ForEach((v) =>
+                {
+                    writer.WriteLine(v.to_JSON_Line());
+                });
             }
-            Console.WriteLine("JSON lines saved to: " + opts.OutputPath);
+            Console.WriteLine("Saved: " + doiElementsPath);
+
+
+
+
 
             return 0;
         }

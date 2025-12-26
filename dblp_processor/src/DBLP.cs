@@ -11,7 +11,8 @@ namespace DBLPProcessor
     {
         public List<string> Authors { get; set; } = new List<string>();
         public string Title { get; set; } = "";
-        public int Year { get; set; } = 0;
+        public int? Year { get; set; } = null;
+        public int? Month { get; set; } = null;
         //public string Journal { get; set; } = "";
         public string DOI { get; set; } = "";
         //public string Url { get; set; } = "";
@@ -26,7 +27,9 @@ namespace DBLPProcessor
             dataList.Add(JsonSerializer.Serialize(this.PaperType));
             dataList.Add(JsonSerializer.Serialize(this.BookTitleOrJournal));
             dataList.Add(JsonSerializer.Serialize(this.Title));
-            dataList.Add(this.Year.ToString());
+            dataList.Add(this.Year?.ToString() ?? "");
+            dataList.Add(this.Month?.ToString() ?? "");
+
             string authorString = JsonSerializer.Serialize(this.Authors);
             dataList.Add(authorString);
             //dataList.Add(JsonSerializer.Serialize(this.Journal));

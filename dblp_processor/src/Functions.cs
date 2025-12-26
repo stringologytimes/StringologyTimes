@@ -20,7 +20,7 @@ namespace DBLPProcessor
             foreach (var line in doiListCsvLines)
             {
                 var cols = line.Split(",");
-                var doi = cols[0].Trim();
+                var doi = cols[0].Trim().ToLower();
                 if (!doiToTagMapper.ContainsKey(doi))
                 {
                     doiToTagMapper[doi] = new List<string>();
@@ -31,7 +31,7 @@ namespace DBLPProcessor
             foreach (var line in doiToTagCsvLines)
             {
                 var cols = line.Split(",");
-                var doi = cols[0].Trim();
+                var doi = cols[0].Trim().ToLower();
                 for (int i = 1; i < cols.Length; i++)
                 {
                     var tag = cols[i].Trim();

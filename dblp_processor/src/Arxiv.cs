@@ -130,6 +130,7 @@ namespace ArxivProcessor
             //dblpElement.Authors = article.authors!.Split(",").ToList();
             dblpElement.Title = article.title!;
             dblpElement.Year = article.getCreatedTime().Year;
+            dblpElement.Month = article.getCreatedTime().Month;
             //dblpElement.Journal = "CoRR";
             dblpElement.DOI = article.getArxivDOI();
             //dblpElement.Url = article.url!;
