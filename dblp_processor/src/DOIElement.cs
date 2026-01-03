@@ -9,11 +9,165 @@ using System.Globalization;
 
 namespace DataProcessor
 {
+    public class AuthorInfo
+    {
+        public string FullName { get; set; } = "";
+        public string GivenName { get; set; } = "";
+        public string FamilyName { get; set; } = "";
+        public string ORCID { get; set; } = "";
+
+        public string to_JSON_Line()
+        {
+            List<string> dataList = new List<string>();
+            dataList.Add(JsonSerializer.Serialize(this.FullName));
+            dataList.Add(JsonSerializer.Serialize(this.GivenName));
+            dataList.Add(JsonSerializer.Serialize(this.FamilyName));
+            dataList.Add(JsonSerializer.Serialize(this.ORCID));
+            string dataString = "[" + string.Join(",", dataList) + "]";
+            return dataString;
+        }
+
+        public static List<AuthorInfo> ParseFromCrossRefJSONL(Dictionary<string, string> dictFromJSONL, string doiType)
+        {
+            var authorInfoList = new List<AuthorInfo>();
+
+            if (doiType == "CrossRef:book")
+            {
+                if (!dictFromJSONL.ContainsKey("editor"))
+                {
+                    dictFromJSONL.ToList().ForEach((v) => Console.WriteLine(v.Key + " : " + v.Value));
+                    throw new Exception("Author is not found");
+                }
+                var editorArray = JsonLib.CreateArrayFromJSONL(dictFromJSONL["editor"]);
+                foreach (var editorJSON in editorArray)
+                {
+                    var authorInfo = new AuthorInfo();
+                    var editorDict = JsonLib.CreateDictionaryFromJSONL(editorJSON);
+                    if (editorDict.ContainsKey("ORCID"))
+                    {
+                        authorInfo.ORCID = editorDict["ORCID"];
+
+                    }
+                    if (editorDict.ContainsKey("given"))
+                    {
+                        authorInfo.GivenName = editorDict["given"];
+                    }
+                    if (editorDict.ContainsKey("family"))
+                    {
+                        authorInfo.FamilyName = editorDict["family"];
+                    }
+                    if (editorDict.ContainsKey("name"))
+                    {
+                        throw new Exception("Name is found!");
+                    }
+                    authorInfoList.Add(authorInfo);
+                }
+
+            }
+            else
+            {
+                if (!dictFromJSONL.ContainsKey("author"))
+                {
+                    dictFromJSONL.ToList().ForEach((v) => Console.WriteLine(v.Key + " : " + v.Value));
+                    throw new Exception("Author is not found");
+                }
+                var authorArray = JsonLib.CreateArrayFromJSONL(dictFromJSONL["author"]);
+                foreach (var authorJSON in authorArray)
+                {
+                    var authorInfo = new AuthorInfo();
+                    var authorDict = JsonLib.CreateDictionaryFromJSONL(authorJSON);
+                    if (authorDict.ContainsKey("ORCID"))
+                    {
+                        authorInfo.ORCID = authorDict["ORCID"];
+
+                    }
+                    if (authorDict.ContainsKey("given"))
+                    {
+                        authorInfo.GivenName = authorDict["given"];
+                    }
+                    if (authorDict.ContainsKey("family"))
+                    {
+                        authorInfo.FamilyName = authorDict["family"];
+                    }
+                    if (authorDict.ContainsKey("name"))
+                    {
+                        throw new Exception("Name is found!");
+                    }
+                    authorInfoList.Add(authorInfo);
+                }
+
+            }
+
+
+
+
+
+            return authorInfoList;
+        }
+        public static List<AuthorInfo> ParseFromDataCiteJSONL(Dictionary<string, string> dictFromJSONL)
+        {
+            var authorInfoList = new List<AuthorInfo>();
+            var attributeDict = JsonLib.CreateDictionaryFromJSONL(dictFromJSONL["attributes"]);
+
+
+            if (attributeDict.ContainsKey("creators"))
+            {
+                var creatorsArray = JsonLib.CreateArrayFromJSONL(attributeDict["creators"]);
+                foreach (var creator in creatorsArray)
+                {
+                    var authorInfo = new AuthorInfo();
+                    var creatorDict = JsonLib.CreateDictionaryFromJSONL(creator);
+                    if (creatorDict.ContainsKey("nameIdentifiers"))
+                    {
+                        var nameIdentifiersArray = JsonLib.CreateArrayFromJSONL(creatorDict["nameIdentifiers"]);
+                        if (nameIdentifiersArray.Length > 0)
+                        {
+                            var str = nameIdentifiersArray[0];
+                            var nameIdentifierDict = JsonLib.CreateDictionaryFromJSONL(str);
+                            if (nameIdentifierDict.ContainsKey("ORCID") && nameIdentifierDict.ContainsKey("nameIdentifier"))
+                            {
+                                authorInfo.ORCID = nameIdentifierDict["nameIdentifier"];
+                            }
+
+                        }
+
+                    }
+                    if (creatorDict.ContainsKey("givenName"))
+                    {
+                        authorInfo.GivenName = creatorDict["givenName"];
+                    }
+                    if (creatorDict.ContainsKey("familyName"))
+                    {
+                        authorInfo.FamilyName = creatorDict["familyName"];
+                    }
+                    var name = creatorDict["name"];
+                    var nameList = name.Split(',').ToList();
+                    if (nameList.Count == 2)
+                    {
+                        var fullName = nameList[1].Trim() + " " + nameList[0].Trim();
+                        authorInfo.FullName = fullName;
+
+                    }
+                    else if (nameList.Count == 1)
+                    {
+                        authorInfo.FullName = name;
+                    }
+                    else
+                    {
+                        throw new Exception("Creator name is not valid: " + name);
+                    }
+                    authorInfoList.Add(authorInfo);
+                }
+            }
+            return authorInfoList;
+        }
+
+    }
     public class DOIElement
     {
         public string DOI { get; set; } = "";
         public string Title { get; set; } = "";
-        public string Authors { get; set; } = "";
+        public List<AuthorInfo> Authors { get; set; } = new List<AuthorInfo>();
         public string ContainerTitle { get; set; } = "";
         public string Type { get; set; } = "";
         public string Volume { get; set; } = "";
@@ -133,6 +287,7 @@ namespace DataProcessor
             {
                 element.Title = $"Dummy Title: {element.DOI}";
             }
+            element.Authors = AuthorInfo.ParseFromCrossRefJSONL(dict, element.Type);
 
             var containerTitleFlag = false;
 
@@ -221,6 +376,16 @@ namespace DataProcessor
 
             return element;
         }
+        /*
+        private static int CountChar(string s, char c)
+        {
+            if (s is null) return 0;
+            int count = 0;
+            foreach (var ch in s)
+                if (ch == c) count++;
+            return count;
+        }
+        */
         public static DOIElement ParseFromDataCiteJSONL(string jsonlString)
         {
             var dict = JsonLib.CreateDictionaryFromJSONL(jsonlString);
@@ -260,6 +425,10 @@ namespace DataProcessor
             {
                 element.Title = $"Dummy Title: {element.DOI}";
             }
+
+            element.Authors = AuthorInfo.ParseFromDataCiteJSONL(dict);
+
+
 
             var currentDatePriority = 0;
 
@@ -307,7 +476,7 @@ namespace DataProcessor
                 dateArray.ToList().ForEach((v) => Console.WriteLine(v));
                 throw new Exception("Year is not found");
             }
-            
+
 
             if (dict.ContainsKey("relationships"))
             {
@@ -347,7 +516,7 @@ namespace DataProcessor
                 throw new Exception("Relationships is not found");
             }
 
-            
+
 
 
 
@@ -382,7 +551,15 @@ namespace DataProcessor
             dataList.Add(JsonSerializer.Serialize(this.ContainerTitle));
             dataList.Add(JsonSerializer.Serialize(this.Volume));
 
+            List<string> authorStringList = new List<string>();
+            this.Authors.ForEach((v) =>
+            {
+                authorStringList.Add(v.to_JSON_Line());
+            });
+            var authorString = "[" + string.Join(",", authorStringList) + "]";
 
+
+            dataList.Add(authorString);
             dataList.Add(JsonSerializer.Serialize(this.DOIReferences.ToArray()));
             dataList.Add(JsonSerializer.Serialize(this.UnknownReferences.ToArray()));
 

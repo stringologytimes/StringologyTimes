@@ -130,6 +130,7 @@ namespace DBLPProcessor
             }
 
             var primaryDOIElementPath = resultFolderPath + "/primary_doi_elements.jsonl";
+            primaryDOIElements.Sort((a, b) => a.DOI.CompareTo(b.DOI));
             using (var writer = new StreamWriter(primaryDOIElementPath, false, Encoding.UTF8))
             {
                 primaryDOIElements.ForEach((v) =>
