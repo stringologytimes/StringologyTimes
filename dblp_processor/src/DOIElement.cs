@@ -21,6 +21,7 @@ namespace DataProcessor
         public string Month { get; set; } = "";
 
         public List<string> DOIReferences { get; set; } = new List<string>();
+        public List<string> UnknownReferences { get; set; } = new List<string>();
 
 
         public static List<int>? GetDataParts(Dictionary<string, string> dict, string key)
@@ -181,9 +182,9 @@ namespace DataProcessor
                         if (referenceListLine.ContainsKey("DOI"))
                         {
                             var doi = referenceListLine["DOI"] as System.Text.Json.JsonElement?;
-                            if(doi != null && doi.Value.ValueKind == JsonValueKind.String)
+                            if (doi != null && doi.Value.ValueKind == JsonValueKind.String)
                             {
-                                element.DOIReferences.Add(doi.Value.GetString()!);
+                                element.DOIReferences.Add(doi.Value.GetString()!.ToLower());
                             }
 
                         }
@@ -281,7 +282,7 @@ namespace DataProcessor
                 }
                 else if (dataType == "Created")
                 {
-                    datePriority = 2;                    
+                    datePriority = 2;
                 }
                 else if (dataType == "Submitted")
                 {
@@ -298,7 +299,7 @@ namespace DataProcessor
                     element.Year = dateValue.Year.ToString();
                     element.Month = dateValue.Month.ToString();
                     currentDatePriority = datePriority;
-                }    
+                }
             }
 
             if (currentDatePriority == 0)
@@ -307,12 +308,53 @@ namespace DataProcessor
                 throw new Exception("Year is not found");
             }
             
+
+            if (dict.ContainsKey("relationships"))
+            {
+                var relationshipsDict = JsonLib.CreateDictionaryFromJSONL(dict["relationships"]);
+                if (relationshipsDict.ContainsKey("references"))
+                {
+                    var referencesDict = JsonLib.CreateDictionaryFromJSONL(relationshipsDict["references"]);
+
+                    if (referencesDict.ContainsKey("data"))
+                    {
+                        var dataArray = JsonLib.CreateArrayFromJSONL(referencesDict["data"]);
+                        foreach (var data in dataArray)
+                        {
+                            var dataDict = JsonLib.CreateDictionaryFromJSONL(data);
+                            var type = dataDict["type"];
+                            var id = dataDict["id"];
+                            if (type == "dois")
+                            {
+                                element.DOIReferences.Add(id.ToLower());
+                            }
+                            else
+                            {
+                                element.UnknownReferences.Add(id);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine(jsonlString);
+                    throw new Exception("References is not found");
+                }
+            }
+            else
+            {
+                Console.WriteLine(jsonlString);
+                throw new Exception("Relationships is not found");
+            }
+
             
 
-            if (attributeDict.ContainsKey("publicationYear"))
-                {
 
-                }
+
+            if (attributeDict.ContainsKey("publicationYear"))
+            {
+
+            }
 
             var resourceTypeGeneral = typesDict["resourceTypeGeneral"];
             if (resourceTypeGeneral != null)
@@ -342,6 +384,8 @@ namespace DataProcessor
 
 
             dataList.Add(JsonSerializer.Serialize(this.DOIReferences.ToArray()));
+            dataList.Add(JsonSerializer.Serialize(this.UnknownReferences.ToArray()));
+
             string dataString = "[" + string.Join(",", dataList) + "]";
             return dataString;
         }

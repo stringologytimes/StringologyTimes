@@ -177,6 +177,7 @@ namespace DataProcessor
 
         public static void Save(Dictionary<string, string> foundJSONLMap, string dicPath)
         {
+            Console.WriteLine("Saving to " + dicPath);
             var foundExternalCrossRefMapWriter = new StreamWriter(dicPath, false, Encoding.UTF8);
             foundJSONLMap.ToList().ForEach((v) =>
             {

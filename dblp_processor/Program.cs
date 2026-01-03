@@ -5,7 +5,7 @@ using System.Linq;
 using CommandLine;
 using System.Threading.Tasks;
 using DataProcessor;
-
+using System.Text.Json;
 namespace DBLPProcessor
 {
     [Verb("dblp", HelpText = "Read and display the file.")]
@@ -58,7 +58,6 @@ namespace DBLPProcessor
             var JsonPath = opts.DataFolderPath + "/external/arxiv-metadata-oai-snapshot.json";
             var mailAddress = "takaaki.nishimoto@riken.jp";
 
-            //var dataCiteDoiListFolderPath = opts.DataFolderPath + "/auto_generated/datacite_cache/gzfile_to_doi";
 
 
 
@@ -67,19 +66,19 @@ namespace DBLPProcessor
 
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(UrlPath, TagPath);
 
-            var crossRefExternalDicPath = opts.DataFolderPath + "/auto_generated/crossref_cache/found_external_jsonl.csv";
+            var crossRefExternalDicPath = opts.DataFolderPath + "/auto_generated/cache/crossref_cache/found_external_jsonl.csv";
             var crossRefExternalDic = DataProcessor.CrossRefJSONLLoader.Load(crossRefExternalDicPath);
 
-            var dataCiteExternalDicPath = opts.DataFolderPath + "/auto_generated/datacite_cache/found_external_jsonl.csv";
+            var dataCiteExternalDicPath = opts.DataFolderPath + "/auto_generated/cache/datacite_cache/found_external_jsonl.csv";
             var dataCiteExternalDic = DataProcessor.DataCiteJSONLLoader.Load(dataCiteExternalDicPath);
 
 
             DataProcessor.DataCitePreprocessor.PreprocessAll(opts.DataFolderPath, doiToTagMapper);
             DataProcessor.CrossRefPreprocessor.PreprocessAll(opts.DataFolderPath, doiToTagMapper, crossRefExternalDic);
 
-            var crossRefDicPath = opts.DataFolderPath + "/auto_generated/crossref_cache/found_jsonl.csv";
+            var crossRefDicPath = opts.DataFolderPath + "/auto_generated/cache/crossref_cache/found_jsonl.csv";
             var crossRefDic = DataProcessor.CrossRefJSONLLoader.Load(crossRefDicPath);
-            var dataCiteDicPath = opts.DataFolderPath + "/auto_generated/datacite_cache/found_jsonl.csv";
+            var dataCiteDicPath = opts.DataFolderPath + "/auto_generated/cache/datacite_cache/found_jsonl.csv";
             var dataCiteDic = DataProcessor.DataCiteJSONLLoader.Load(dataCiteDicPath);
 
 
@@ -92,7 +91,7 @@ namespace DBLPProcessor
 
             JsonLib.Save(crossRefExternalDic, crossRefExternalDicPath);
             JsonLib.Save(dataCiteExternalDic, dataCiteExternalDicPath);
-            
+
             var counter = 0;
 
             foundOrNotFoundLists.NotFoundDois.ForEach((v) =>
@@ -102,35 +101,68 @@ namespace DBLPProcessor
 
             });
 
-            var doiElements = new List<DOIElement>();
+            var primaryDOIElements = new List<DOIElement>();
             crossRefDic.ToList().ForEach((v) =>
             {
                 var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value);
-                doiElements.Add(doiElement);
+                primaryDOIElements.Add(doiElement);
             });
-            
+
             crossRefExternalDic.ToList().ForEach((v) =>
             {
                 var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value);
-                doiElements.Add(doiElement);
+                primaryDOIElements.Add(doiElement);
             });
 
 
             dataCiteDic.ToList().ForEach((v) =>
             {
                 var doiElement = DOIElement.ParseFromDataCiteJSONL(v.Value);
-                doiElements.Add(doiElement);
+                primaryDOIElements.Add(doiElement);
             });
 
-            var doiElementsPath = opts.DataFolderPath + "/auto_generated/doi_elements.jsonl";
-            using (var writer = new StreamWriter(doiElementsPath, false, Encoding.UTF8))
+            await SemanticScholarPreprocessor.PreprocessAll(primaryDOIElements, opts.DataFolderPath);
+
+            var resultFolderPath = opts.DataFolderPath + "/auto_generated/result";
+            if (!Directory.Exists(resultFolderPath))
             {
-                doiElements.ForEach((v) =>
+                Directory.CreateDirectory(resultFolderPath);
+            }
+
+            var primaryDOIElementPath = resultFolderPath + "/primary_doi_elements.jsonl";
+            using (var writer = new StreamWriter(primaryDOIElementPath, false, Encoding.UTF8))
+            {
+                primaryDOIElements.ForEach((v) =>
                 {
                     writer.WriteLine(v.to_JSON_Line());
                 });
             }
-            Console.WriteLine("Saved: " + doiElementsPath);
+            Console.WriteLine("Saved: " + primaryDOIElementPath);
+
+            var secondaryDOISet = new HashSet<string>();
+            primaryDOIElements.ForEach((v) =>
+            {
+                v.DOIReferences.ForEach((referenceDOI) =>
+                {
+                    if (!doiToTagMapper.ContainsKey(referenceDOI))
+                    {
+                        secondaryDOISet.Add(referenceDOI);
+                    }
+                });
+            });
+            var secondaryDOIList = secondaryDOISet.ToList();
+            secondaryDOIList.Sort();
+            var secondaryDOIListPath = resultFolderPath + "/secondary_doi.csv";
+            using (var writer = new StreamWriter(secondaryDOIListPath, false, Encoding.UTF8))
+            {
+                secondaryDOIList.ForEach((v) =>
+                {
+                    writer.WriteLine(v);
+                });
+            }
+            Console.WriteLine("Saved: " + secondaryDOIListPath);
+
+
 
 
 

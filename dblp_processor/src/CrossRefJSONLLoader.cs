@@ -5,11 +5,11 @@ namespace DataProcessor
     {
         public static string GetGZFileToDoiFolderPath(string dataFolderPath)
         {
-            return dataFolderPath + "/auto_generated/crossref_cache/gzfile_to_doi";
+            return dataFolderPath + "/auto_generated/cache/crossref_cache/gzfile_to_doi";
         }
         public static string GetDOIToGZFileFolderPath(string dataFolderPath)
         {
-            return dataFolderPath + "/auto_generated/crossref_cache/doi_to_gzfile";
+            return dataFolderPath + "/auto_generated/cache/crossref_cache/doi_to_gzfile";
         }
         public static HashSet<string> GetDOIPrefixSet(string dataFolderPath)
         {

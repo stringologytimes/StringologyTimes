@@ -29,11 +29,11 @@ namespace DataProcessor
         }
         public static string GetGZFileToDOIFolderPath(string dataFolderPath)
         {
-            return dataFolderPath + "/auto_generated/datacite_cache/gzfile_to_doi";
+            return dataFolderPath + "/auto_generated/cache/datacite_cache/gzfile_to_doi";
         }
         public static string GetDOIToGZFileFolderPath(string dataFolderPath)
         {
-            return dataFolderPath + "/auto_generated/datacite_cache/doi_to_gzfile";
+            return dataFolderPath + "/auto_generated/cache/datacite_cache/doi_to_gzfile";
         }
         public static HashSet<string> GetDOIPrefixSet(string dataFolderPath)
         {

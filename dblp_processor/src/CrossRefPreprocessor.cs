@@ -233,7 +233,7 @@ namespace DataProcessor
         private static void CreateFoundJSONLFile(List<string> dois, string dataFolderPath, string jsonlFolderPath, Dictionary<string, string> crossRefExternalDic)
         {
             Console.WriteLine("Creating Found JSONL File(CrossRef): ");
-            var dicPath = dataFolderPath + "/auto_generated/crossref_cache/found_jsonl.csv";
+            var dicPath = dataFolderPath + "/auto_generated/cache/crossref_cache/found_jsonl.csv";
             Dictionary<string, string> foundJSONLMap = CrossRefJSONLLoader.Load(dicPath);
             var crsosRefDOIPrefixSet = CrossRefJSONLLoader.GetDOIPrefixSet(dataFolderPath);
             Console.WriteLine("\t Found JSONL Map: " + foundJSONLMap.Count);
@@ -317,7 +317,7 @@ namespace DataProcessor
             CreateFoundJSONLFileSub(dois, gzJSONLPaths, foundJSONLMap);
 
 
-            var JSONLCacheWriter = new StreamWriter(dataFolderPath + "/auto_generated/crossref_cache/found_jsonl.csv", false, Encoding.UTF8);
+            var JSONLCacheWriter = new StreamWriter(dataFolderPath + "/auto_generated/cache/crossref_cache/found_jsonl.csv", false, Encoding.UTF8);
             foreach (var jsonl in foundJSONLMap.Values)
             {
                 JSONLCacheWriter.WriteLine(jsonl);
@@ -327,13 +327,13 @@ namespace DataProcessor
         public static void PreprocessAll(string dataFolderPath, Dictionary<string, List<string>> doiToTagMapper, Dictionary<string, string> crossRefExternalDic)
         {
             var crossrefFolderInfo = CrossRefJSONLLoader.SearchCrossRefFolder(dataFolderPath + "/external");
-            var crossRefDoiListFolderPath = dataFolderPath + "/auto_generated/crossref_cache/gzfile_to_doi";
+            var crossRefDoiListFolderPath = dataFolderPath + "/auto_generated/cache/crossref_cache/gzfile_to_doi";
             //var crossRefResultFilePath = dataFolderPath + "/auto_generated/crossref_articles.jsonl";
 
 
             DataProcessor.CrossRefPreprocessor.CreateGZFileToDOIFolder(crossrefFolderInfo.FullName, dataFolderPath);
 
-            var otherCSVPath = dataFolderPath + "/auto_generated/crossref_cache/doi_to_gzfile/others.csv";
+            var otherCSVPath = dataFolderPath + "/auto_generated/cache/crossref_cache/doi_to_gzfile/others.csv";
             var otherCSVFileInfo = new FileInfo(otherCSVPath);
             if (!otherCSVFileInfo.Exists)
             {

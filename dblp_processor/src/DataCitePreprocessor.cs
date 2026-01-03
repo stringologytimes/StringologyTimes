@@ -21,14 +21,14 @@ namespace DataProcessor
         {
             Console.WriteLine("Creating DOI List(DataCite): ");
 
-            var main_folder = new DirectoryInfo(dataFolderPath + "/auto_generated/datacite_cache");
+            var main_folder = new DirectoryInfo(dataFolderPath + "/auto_generated/cache/datacite_cache");
             if (!main_folder.Exists)
             {
                 main_folder.Create();
                 Console.WriteLine("Created: " + main_folder.FullName);
             }
 
-            var main_folder2 = new DirectoryInfo(dataFolderPath + "/auto_generated/datacite_cache/gzfile_to_doi");
+            var main_folder2 = new DirectoryInfo(dataFolderPath + "/auto_generated/cache/datacite_cache/gzfile_to_doi");
             if (!main_folder2.Exists)
             {
                 main_folder2.Create();
@@ -263,7 +263,7 @@ namespace DataProcessor
         public static void CreateFoundJSONLFile(List<string> dois, string dataFolderPath, string dataCiteFolderPath)
         {
             Console.WriteLine("Filtering JSONL(DataCite): ");
-            var foundJSONLMapFilePath = dataFolderPath + "/auto_generated/datacite_cache/found_jsonl.csv";
+            var foundJSONLMapFilePath = dataFolderPath + "/auto_generated/cache/datacite_cache/found_jsonl.csv";
             Dictionary<string, string> foundJSONLMap = DataCiteJSONLLoader.Load(foundJSONLMapFilePath);
             Console.WriteLine("\t Found JSONL Map: " + foundJSONLMap.Count);
 
@@ -352,7 +352,7 @@ namespace DataProcessor
             List<string> gzJSONLPaths = gzFilePathSet.ToList();
             CreateFoundJSONLFileSub(dois, gzJSONLPaths, foundJSONLMap);
 
-            using (var JSONLCacheWriter = new StreamWriter(dataFolderPath + "/auto_generated/datacite_cache/found_jsonl.csv", false, Encoding.UTF8))
+            using (var JSONLCacheWriter = new StreamWriter(dataFolderPath + "/auto_generated/cache/datacite_cache/found_jsonl.csv", false, Encoding.UTF8))
             {
                 foreach (var jsonl in foundJSONLMap.Values)
                 {
@@ -364,12 +364,12 @@ namespace DataProcessor
 
         public static void PreprocessAll(string dataFolderPath, Dictionary<string, List<string>> doiToTagMapper)
         {
-            var dataCiteDoiListFolderPath = dataFolderPath + "/auto_generated/datacite_cache/gzfile_to_doi";
+            var dataCiteDoiListFolderPath = dataFolderPath + "/auto_generated/cache/datacite_cache/gzfile_to_doi";
 
             var dataCiteFolderInfo = DataCiteJSONLLoader.SearchDataCiteFolder(dataFolderPath + "/external");
 
             DataProcessor.DataCitePreprocessor.CreateGZFileToDOIFolder(dataCiteFolderInfo.FullName, dataFolderPath);
-            var dataCiteOtherCSVPath = dataFolderPath + "/auto_generated/datacite_cache/doi_to_gzfile/others.csv";
+            var dataCiteOtherCSVPath = dataFolderPath + "/auto_generated/cache/datacite_cache/doi_to_gzfile/others.csv";
             var dataCiteOtherCSVFileInfo = new FileInfo(dataCiteOtherCSVPath);
             if (!dataCiteOtherCSVFileInfo.Exists)
             {
