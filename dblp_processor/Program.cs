@@ -60,88 +60,16 @@ namespace DBLPProcessor
 
 
 
-
-
-
-
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(UrlPath, TagPath);
+            var primaryDOISet = new HashSet<string>(doiToTagMapper.Keys);
 
-            var crossRefExternalDicPath = opts.DataFolderPath + "/auto_generated/cache/crossref_cache/found_external_jsonl.csv";
-            var crossRefExternalDic = DataProcessor.CrossRefJSONLLoader.Load(crossRefExternalDicPath);
-
-            var dataCiteExternalDicPath = opts.DataFolderPath + "/auto_generated/cache/datacite_cache/found_external_jsonl.csv";
-            var dataCiteExternalDic = DataProcessor.DataCiteJSONLLoader.Load(dataCiteExternalDicPath);
+            await DOIElementPreprocessor.BuildCache(opts.DataFolderPath, mailAddress, primaryDOISet);
 
 
-            DataProcessor.DataCitePreprocessor.PreprocessAll(opts.DataFolderPath, doiToTagMapper);
-            DataProcessor.CrossRefPreprocessor.PreprocessAll(opts.DataFolderPath, doiToTagMapper, crossRefExternalDic);
-
-            var crossRefDicPath = opts.DataFolderPath + "/auto_generated/cache/crossref_cache/found_jsonl.csv";
-            var crossRefDic = DataProcessor.CrossRefJSONLLoader.Load(crossRefDicPath);
-            var dataCiteDicPath = opts.DataFolderPath + "/auto_generated/cache/datacite_cache/found_jsonl.csv";
-            var dataCiteDic = DataProcessor.DataCiteJSONLLoader.Load(dataCiteDicPath);
-
-
-            var crossRefDOIPrefixSet = DataProcessor.CrossRefJSONLLoader.GetDOIPrefixSet(opts.DataFolderPath);
-            var dataCiteDOIPrefixSet = DataProcessor.DataCiteJSONLLoader.GetDOIPrefixSet(opts.DataFolderPath);
-
-            var foundOrNotFoundLists = DataProcessor.CommonPreprocessors.CreateFoundOrNotFoundLists(opts.DataFolderPath, doiToTagMapper, crossRefDic, dataCiteDic, crossRefExternalDic, dataCiteExternalDic, crossRefDOIPrefixSet, dataCiteDOIPrefixSet);
-
-            DataProcessor.CommonPreprocessors.ExternalSearch(foundOrNotFoundLists, mailAddress, crossRefExternalDic, dataCiteExternalDic);
-
-            JsonLib.Save(crossRefExternalDic, crossRefExternalDicPath);
-            JsonLib.Save(dataCiteExternalDic, dataCiteExternalDicPath);
-
-            var counter = 0;
-
-            foundOrNotFoundLists.NotFoundDois.ForEach((v) =>
-            {
-                counter++;
-                Console.WriteLine(counter + " : Not found: " + v);
-
-            });
-
-            var primaryDOIElements = new List<DOIElement>();
-            crossRefDic.ToList().ForEach((v) =>
-            {
-                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value);
-                primaryDOIElements.Add(doiElement);
-            });
-
-            crossRefExternalDic.ToList().ForEach((v) =>
-            {
-                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value);
-                primaryDOIElements.Add(doiElement);
-            });
-
-
-            dataCiteDic.ToList().ForEach((v) =>
-            {
-                var doiElement = DOIElement.ParseFromDataCiteJSONL(v.Value);
-                primaryDOIElements.Add(doiElement);
-            });
-
-            await SemanticScholarPreprocessor.PreprocessAll(primaryDOIElements, opts.DataFolderPath);
-
-            var resultFolderPath = opts.DataFolderPath + "/auto_generated/result";
-            if (!Directory.Exists(resultFolderPath))
-            {
-                Directory.CreateDirectory(resultFolderPath);
-            }
-
-            var primaryDOIElementPath = resultFolderPath + "/primary_doi_elements.jsonl";
-            primaryDOIElements.Sort((a, b) => a.DOI.CompareTo(b.DOI));
-            using (var writer = new StreamWriter(primaryDOIElementPath, false, Encoding.UTF8))
-            {
-                primaryDOIElements.ForEach((v) =>
-                {
-                    writer.WriteLine(v.to_JSON_Line());
-                });
-            }
-            Console.WriteLine("Saved: " + primaryDOIElementPath);
+            var primaryDOIElementDict = DOIElementPreprocessor.BuildDOIElementDictionary(opts.DataFolderPath, primaryDOISet);
 
             var secondaryDOISet = new HashSet<string>();
-            primaryDOIElements.ForEach((v) =>
+            primaryDOIElementDict.Values.ToList().ForEach((v) =>
             {
                 v.DOIReferences.ForEach((referenceDOI) =>
                 {
@@ -151,6 +79,18 @@ namespace DBLPProcessor
                     }
                 });
             });
+            await DOIElementPreprocessor.BuildCache(opts.DataFolderPath, mailAddress, secondaryDOISet);
+            var secondaryDOIElementDict = DOIElementPreprocessor.BuildDOIElementDictionary(opts.DataFolderPath, secondaryDOISet);
+
+            var resultFolderPath = opts.DataFolderPath + "/auto_generated/result";
+            if (!Directory.Exists(resultFolderPath))
+            {
+                Directory.CreateDirectory(resultFolderPath);
+            }
+
+            DOIElement.Save(primaryDOIElementDict, resultFolderPath + "/primary_doi_elements.jsonl");
+            DOIElement.Save(secondaryDOIElementDict, resultFolderPath + "/secondary_doi_elements.jsonl");
+
             var secondaryDOIList = secondaryDOISet.ToList();
             secondaryDOIList.Sort();
             var secondaryDOIListPath = resultFolderPath + "/secondary_doi.csv";
@@ -162,6 +102,32 @@ namespace DBLPProcessor
                 });
             }
             Console.WriteLine("Saved: " + secondaryDOIListPath);
+
+            /*
+            var primaryDOIElementPath = resultFolderPath + "/primary_doi_elements.jsonl";
+            primaryDOIElements.Sort((a, b) => a.DOI.CompareTo(b.DOI));
+            using (var writer = new StreamWriter(primaryDOIElementPath, false, Encoding.UTF8))
+            {
+                primaryDOIElements.ForEach((v) =>
+                {
+                    writer.WriteLine(v.to_JSON_Line());
+                });
+            }
+            Console.WriteLine("Saved: " + primaryDOIElementPath);
+
+            var secondaryDOIList = secondaryDOISet.ToList();
+            secondaryDOIList.Sort();
+            var secondaryDOIListPath = resultFolderPath + "/secondary_doi.csv";
+            using (var writer = new StreamWriter(secondaryDOIListPath, false, Encoding.UTF8))
+            {
+                secondaryDOIList.ForEach((v) =>
+                {
+                    writer.WriteLine(v);
+                });
+            }
+            Console.WriteLine("Saved: " + secondaryDOIListPath);
+            */
+
 
 
 

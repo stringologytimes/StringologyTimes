@@ -13,16 +13,10 @@ namespace DataProcessor
 {
     class SemanticScholarPreprocessor
     {
-        public static async Task PreprocessAll(List<DOIElement> doiElements, string dataFolderPath)
+        public static async Task PreprocessAll(Dictionary<string, DOIElement> doiElementDict, string dataFolderPath)
         {
-            var emptyReferenceDoiDic = new Dictionary<string, int>();
-            for (int i = 0; i < doiElements.Count; i++)
-            {
-                if (doiElements[i].DOIReferences.Count == 0)
-                {
-                    emptyReferenceDoiDic[doiElements[i].DOI] = i;
-                }
-            }
+            
+            
 
             var semanticScholarCacheFolderPath = dataFolderPath + "/auto_generated/cache/semantic_scholar_cache";
             if (!Directory.Exists(semanticScholarCacheFolderPath))
@@ -33,6 +27,17 @@ namespace DataProcessor
             var semanticScholarDic = SemanticScholarLoader.Load(semanticScholarDicPath);
             Console.WriteLine("Loaded: " + semanticScholarDic.Count + " / " + semanticScholarDicPath);
 
+            var emptyReferenceList = new List<string>();
+            foreach (var doiElement in doiElementDict.Values)
+            {
+                if (doiElement.DOIReferences.Count == 0 && !semanticScholarDic.ContainsKey(doiElement.DOI))
+                {
+                    emptyReferenceList.Add(doiElement.DOI);
+                }                
+            }
+
+
+            /*
             emptyReferenceDoiDic.Keys.ToList().ForEach((v) =>
             {
                 if (semanticScholarDic.ContainsKey(v))
@@ -40,8 +45,9 @@ namespace DataProcessor
                     emptyReferenceDoiDic.Remove(v);
                 }
             });
+            */
 
-            var emptyReferenceDoiDicList = emptyReferenceDoiDic.Keys.ToArray();
+            var emptyReferenceDoiDicList = emptyReferenceList.ToArray();
             var apiResults = await SemanticScholarClient.downloadReferrence(emptyReferenceDoiDicList);
 
 
@@ -54,28 +60,28 @@ namespace DataProcessor
             });
             JsonLib.Save(semanticScholarDic, semanticScholarDicPath);
 
-            for (int i = 0; i < doiElements.Count; i++)
+            doiElementDict.Keys.ToList().ForEach((v) =>
             {
-                var doi = doiElements[i].DOI;
-                if (semanticScholarDic.ContainsKey(doi))
+                var doiElement = doiElementDict[v];
+                var doi = doiElement.DOI;
+                if (doiElement.DOIReferences.Count == 0 && semanticScholarDic.ContainsKey(doi))
                 {
                     var semanticScholarResult = JsonSerializer.Deserialize<SemanticScholarResult>(semanticScholarDic[doi]);
                     if (semanticScholarResult != null)
                     {
-                        doiElements[i].DOIReferences.Clear();
-                        doiElements[i].UnknownReferences.Clear();
+                        doiElement.DOIReferences.Clear();
+                        doiElement.UnknownReferences.Clear();
                         semanticScholarResult.DOIReferences.ForEach((v) =>
                         {
-                            doiElements[i].DOIReferences.Add(v);
+                            doiElement.DOIReferences.Add(v);
                         });
                         semanticScholarResult.UnknownReferences.ForEach((v) =>
                         {
-                            doiElements[i].UnknownReferences.Add(v);
+                            doiElement.UnknownReferences.Add(v);
                         });
-
                     }
                 }
-            }
+            });
         }
     }
 }

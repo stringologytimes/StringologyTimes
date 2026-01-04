@@ -1,30 +1,11 @@
 
 namespace DataProcessor
 {
-    class CrossRefJSONLLoader
+    class CrossRefCacheBuilder
     {
         public static string GetGZFileToDoiFolderPath(string dataFolderPath)
         {
             return dataFolderPath + "/auto_generated/cache/crossref_cache/gzfile_to_doi";
-        }
-        public static string GetDOIToGZFileFolderPath(string dataFolderPath)
-        {
-            return dataFolderPath + "/auto_generated/cache/crossref_cache/doi_to_gzfile";
-        }
-        public static HashSet<string> GetDOIPrefixSet(string dataFolderPath)
-        {
-            var path = GetDOIToGZFileFolderPath(dataFolderPath) + "/doi_prefix.csv";
-            var fileInfo = new FileInfo(path);
-            HashSet<string> doiPrefixSet = new HashSet<string>();
-            if (fileInfo.Exists)
-            {
-                var lines = File.ReadAllLines(path);
-                foreach (var line in lines)
-                {
-                    doiPrefixSet.Add(line);
-                }
-            }
-            return doiPrefixSet;
         }
         public static DirectoryInfo SearchCrossRefFolder(string externalFolderPath)
         {
@@ -82,7 +63,7 @@ namespace DataProcessor
                 }
             }
             return foundJSONLMap;
-
         }
+
     }
 }

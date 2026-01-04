@@ -4,6 +4,7 @@ using System.Text;
 using System.Linq;
 using CommandLine;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 namespace DataProcessor
 {
     class FoundOrNotFoundLists
@@ -20,7 +21,7 @@ namespace DataProcessor
     }
     class CommonPreprocessors
     {
-        public static FoundOrNotFoundLists CreateFoundOrNotFoundLists(string dataFolderPath, Dictionary<string, List<string>> doiToTagMapper,
+        public static FoundOrNotFoundLists CreateFoundOrNotFoundLists(string dataFolderPath, HashSet<string> doiSet,
         Dictionary<string, string> crossRefDic,
         Dictionary<string, string> dataCiteDic,
         Dictionary<string, string> crossRefExternalDic,
@@ -31,7 +32,7 @@ namespace DataProcessor
         {
             var foundOrNotFoundLists = new FoundOrNotFoundLists();
 
-            foreach (var doi in doiToTagMapper.Keys)
+            foreach (var doi in doiSet)
             {
                 var b1 = crossRefDic.ContainsKey(doi);
                 var b2 = dataCiteDic.ContainsKey(doi);
@@ -63,7 +64,9 @@ namespace DataProcessor
             return foundOrNotFoundLists;
         }
 
-        public async static void ExternalSearch(FoundOrNotFoundLists foundOrNotFoundLists, string mailAddress, Dictionary<string, string> crossRefExternalDic, Dictionary<string, string> dataCiteExternalDic)
+        public async static void ExternalSearch(FoundOrNotFoundLists foundOrNotFoundLists,
+        string mailAddress, Dictionary<string, string> crossRefExternalDic,
+        IDictionary<string, string> dataCiteExternalDic)
         {
             var map = await DataProcessor.CrossrefBulk.GetManyAsync(foundOrNotFoundLists.NotFoundCrossRefDois, mailto: mailAddress);
 
