@@ -38,12 +38,13 @@ namespace DataProcessor
 
             DataCiteFoundDOICache.Build(doiSet.ToList(), dataFolderPath, dataCiteFolderInfo.FullName);
 
-            var unknownDOIList = await DataCiteExternalFoundDOICache.Build(dataFolderPath, doiSet, mailAddress);
 
-            unknownDOIList.ForEach((v) =>
-            {
-                Console.WriteLine("Unknown DOI: " + v);
-            });
+
+            var unknownDOISet = CSVFunctions.ReadCSVAsHashSet(dataFolderPath + "/auto_generated/cache/datacite_cache/unknown_doi.csv");
+            await DataCiteExternalFoundDOICache.Build(dataFolderPath, doiSet, unknownDOISet, mailAddress);
+            CSVFunctions.WriteCSV(dataFolderPath + "/auto_generated/cache/datacite_cache/unknown_doi.csv", unknownDOISet);
+
+
 
 
 

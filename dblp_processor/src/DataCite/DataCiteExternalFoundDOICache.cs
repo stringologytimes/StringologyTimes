@@ -18,7 +18,7 @@ namespace DataProcessor
             return dataCiteExternalDic;
         }
 
-        public static async Task<List<string>> Build(string dataFolderPath, HashSet<string> doiSet, string mailAddress)
+        public static async Task Build(string dataFolderPath, HashSet<string> doiSet, HashSet<string> unknownDOISet, string mailAddress)
         {
             var dataCiteExternalDic = DataProcessor.DataCiteExternalFoundDOICache.Load(dataFolderPath);
             var dataCiteDOIPrefixSet = DataProcessor.DataCiteDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
@@ -28,7 +28,7 @@ namespace DataProcessor
             foreach (var doi in doiSet)
             {
                 var doiPrefix = DOIFunctions.GetPrefix(doi);
-                if (!foundDOICache.ContainsKey(doi) && dataCiteDOIPrefixSet.Contains(doiPrefix) && !dataCiteExternalDic.ContainsKey(doi))
+                if (!foundDOICache.ContainsKey(doi) && dataCiteDOIPrefixSet.Contains(doiPrefix) && !dataCiteExternalDic.ContainsKey(doi) && !unknownDOISet.Contains(doi))
                 {
                     externalDOICandidateList.Add(doi);
                 }
@@ -36,7 +36,6 @@ namespace DataProcessor
 
 
             var http = DataProcessor.DataCiteClient.CreateHttpClient(mailAddress);
-           var unknownDOIList = new List<string>();
 
             var dict = await DataProcessor.DataCiteBatch.GetDoisAsync(
                 http, externalDOICandidateList,
@@ -54,18 +53,17 @@ namespace DataProcessor
                     }
                     else
                     {
-                        unknownDOIList.Add(doi);
+                        unknownDOISet.Add(doi);
                     }
                 }
                 else
                 {
-                    unknownDOIList.Add(doi);
+                    unknownDOISet.Add(doi);
                 }
             }
 
             JsonLib.Save(dataCiteExternalDic, GetCachePath(dataFolderPath));
 
-            return unknownDOIList;
 
         }
     }

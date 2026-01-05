@@ -18,8 +18,12 @@ namespace DataProcessor
             return crossRefExternalDic;
         }
 
-        public static async Task<List<string>> Build(string dataFolderPath, HashSet<string> doiSet, string mailAddress)
+        public static async Task Build(string dataFolderPath, HashSet<string> doiSet, HashSet<string> unknownDOISet, string mailAddress)
         {
+            Console.WriteLine("Building CrossRefExternalFoundDOICache");
+            Console.WriteLine("\t DOI Set: " + doiSet.Count);
+            Console.WriteLine("\t Unknown DOI Set: " + unknownDOISet.Count);
+
             var crossRefExternalDic = DataProcessor.CrossRefExternalFoundDOICache.Load(dataFolderPath);
             var crossRefDOIPrefixSet = DataProcessor.CrossRefDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
             var foundDOICache = DataProcessor.CrossRefFoundDOICache.Load(dataFolderPath);
@@ -28,7 +32,7 @@ namespace DataProcessor
             foreach (var doi in doiSet)
             {
                 var doiPrefix = DOIFunctions.GetPrefix(doi);
-                if (!foundDOICache.ContainsKey(doi) && crossRefDOIPrefixSet.Contains(doiPrefix) && !crossRefExternalDic.ContainsKey(doi))
+                if (!foundDOICache.ContainsKey(doi) && crossRefDOIPrefixSet.Contains(doiPrefix) && !crossRefExternalDic.ContainsKey(doi) && !unknownDOISet.Contains(doi))
                 {
                     externalDOICandidateList.Add(doi);
                 }
@@ -36,7 +40,7 @@ namespace DataProcessor
 
 
             var map = await DataProcessor.CrossrefBulk.GetManyAsync(externalDOICandidateList, mailto: mailAddress);
-            var unknownDOIList = new List<string>();
+            //var unknownDOIList = new List<string>();
 
             foreach (var (doi, json) in map)
             {
@@ -49,18 +53,17 @@ namespace DataProcessor
                     }
                     else
                     {
-                        unknownDOIList.Add(doi);
+                        unknownDOISet.Add(doi);
                     }
                 }
                 else
                 {
-                    unknownDOIList.Add(doi);
+                    unknownDOISet.Add(doi);
                 }
             }
 
             JsonLib.Save(crossRefExternalDic, GetCachePath(dataFolderPath));
 
-            return unknownDOIList;
 
         }
     }

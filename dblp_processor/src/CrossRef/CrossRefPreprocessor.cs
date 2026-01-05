@@ -28,12 +28,10 @@ namespace DataProcessor
 
             // Build Found DOI Cache
             CrossRefFoundDOICache.Build(doiSet.ToList(), dataFolderPath, crossrefFolderInfo.FullName);
-            var unknownDOIList = await CrossRefExternalFoundDOICache.Build(dataFolderPath, doiSet, mailAddress);
 
-            unknownDOIList.ForEach((v) =>
-            {
-                Console.WriteLine("Unknown DOI: " + v);
-            });
+            var unknownDOISet = CSVFunctions.ReadCSVAsHashSet(dataFolderPath + "/auto_generated/cache/crossref_cache/unknown_doi.csv");
+            await CrossRefExternalFoundDOICache.Build(dataFolderPath, doiSet, unknownDOISet, mailAddress);
+            CSVFunctions.WriteCSV(dataFolderPath + "/auto_generated/cache/crossref_cache/unknown_doi.csv", unknownDOISet);
 
         }
 
