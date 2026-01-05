@@ -20,6 +20,7 @@ namespace DataProcessor
         public List<string> VolumeList { get; set; } = new List<string>();
         public List<string> TypeList { get; set; } = new List<string>();
         //public List<string> TitleSizeList { get; set; } = new List<string>();
+        public List<string> CompressedFullNameList { get; set; } = new List<string>();
         public List<string> CompressedTitleList { get; set; } = new List<string>();
         public List<string> CompressedDOIReferenceList { get; set; } = new List<string>();
         //public List<string> DOIReferenceSizeList { get; set; } = new List<string>();
@@ -69,17 +70,38 @@ namespace DataProcessor
                 });
 
             }
+            HashSet<string> fullNameHashSet = new HashSet<string>();
 
-            throw new Exception("Not Author Nameimplemented");
-            /*
-                        mergedDOIElementList.ForEach((v) =>
-                        {
-                            v.Authors.ForEach((v) =>
-                            {
-                                r.FullNameList.Add(v.FullName);
-                            });
-                        });
-                        */
+            mergedDOIElementList.ForEach((v) =>
+            {
+                v.Authors.ForEach((v) =>
+                {
+                    if (!fullNameHashSet.Contains(v.TryGetFullName()))
+                    {
+                        fullNameHashSet.Add(v.TryGetFullName());
+                        r.FullNameList.Add(v.TryGetFullName());
+                    }
+                });
+            });
+            r.FullNameList.Sort((a, b) => a.CompareTo(b));
+            Dictionary<string, int> fullNameToIndexMapper = new Dictionary<string, int>();
+            for (var i = 0; i < r.FullNameList.Count; i++)
+            {
+                fullNameToIndexMapper[r.FullNameList[i]] = i;
+            }
+
+            mergedDOIElementList.ForEach((v) =>
+            {
+                var compStr = String.Join(",", v.Authors.Select((v) => fullNameToIndexMapper[v.TryGetFullName()].ToString()));
+                r.CompressedFullNameList.Add(compStr);
+            });
+
+            mergedDOIElementList.ForEach((v) =>
+            {
+                r.ContainerTitleList.Add(v.ContainerTitle);
+            });
+
+
 
 
 
@@ -154,6 +176,7 @@ namespace DataProcessor
             CSVFunctions.WriteCSVByGZip(outputFolder + "/month.csv.gz", MonthList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/volume.csv.gz", VolumeList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/type.csv.gz", TypeList);
+            CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_full_name.csv.gz", CompressedFullNameList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_title.csv.gz", CompressedTitleList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_doi_reference.csv.gz", CompressedDOIReferenceList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/doi_flag.csv.gz", DOIFlagList);

@@ -6,6 +6,7 @@ using System.Collections.Specialized;
 using System.Text.Json;
 using System;
 using System.Globalization;
+using System.Security.Cryptography.X509Certificates;
 
 namespace DataProcessor
 {
@@ -111,7 +112,19 @@ namespace DataProcessor
 
 
 
+
             return authorInfoList;
+        }
+        public string TryGetFullName()
+        {
+            if (this.FullName != "")
+            {
+                return this.FullName;
+            }
+            else
+            {
+                return this.GivenName + " " + this.FamilyName;
+            }
         }
         public static List<AuthorInfo> ParseFromDataCiteJSONL(Dictionary<string, string> dictFromJSONL)
         {
