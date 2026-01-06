@@ -26,6 +26,11 @@ namespace DataProcessor
         //public List<string> DOIReferenceSizeList { get; set; } = new List<string>();
         public List<string> DOIFlagList { get; set; } = new List<string>();
 
+        public static string SanitizeWord(string word)
+        {
+            return word.Replace("\n", "");
+        }
+
         public static LightweightDOIElementComponent Build(Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
         {
             LightweightDOIElementComponent r = new LightweightDOIElementComponent();
@@ -76,10 +81,15 @@ namespace DataProcessor
             {
                 v.Authors.ForEach((v) =>
                 {
-                    if (!fullNameHashSet.Contains(v.TryGetFullName()))
+                    string fullName = v.TryGetFullName();
+                    if (fullName.IndexOf("\n") >= 0)
                     {
-                        fullNameHashSet.Add(v.TryGetFullName());
-                        r.FullNameList.Add(v.TryGetFullName());
+                        throw new Exception("Full name contains newline: " + fullName);
+                    }
+                    if (!fullNameHashSet.Contains(fullName))
+                    {
+                        fullNameHashSet.Add(fullName);
+                        r.FullNameList.Add(fullName);
                     }
                 });
             });
@@ -111,10 +121,11 @@ namespace DataProcessor
             {
                 v.Title.Split(" ").ToList().ForEach((w) =>
                 {
-                    if (!wordHashSet.Contains(w))
+                    var sanitizedWord = SanitizeWord(w);
+                    if (!wordHashSet.Contains(sanitizedWord))
                     {
-                        wordHashSet.Add(w);
-                        r.WordList.Add(w);
+                        wordHashSet.Add(sanitizedWord);
+                        r.WordList.Add(sanitizedWord);
                     }
                 });
             });
@@ -150,7 +161,7 @@ namespace DataProcessor
                         r.CompressedDOIReferenceList.Add("");
                     }
 
-                    var compStr2 = String.Join(",", v.Title.Split(" ").Select((w) => wordToIndexMapper[w].ToString()));
+                    var compStr2 = String.Join(",", v.Title.Split(" ").Select((w) => wordToIndexMapper[SanitizeWord(w)].ToString()));
                     r.CompressedTitleList.Add(compStr2);
                     counter++;
                 });

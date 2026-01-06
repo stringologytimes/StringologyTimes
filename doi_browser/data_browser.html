@@ -6,7 +6,7 @@
   <title>Article Info Browser</title>
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
   <script type="module">
-    import { load_compressed_file } from "./dist/browser.js";
+    import { DOIInfoCollection } from "./dist/browser.js";
     
     async function init() {
       try {
@@ -17,16 +17,36 @@
         if (typeof pako === 'undefined') {
           throw new Error('pako library failed to load');
         }
+
+
+
+        const doiInfoCollection = await DOIInfoCollection.load("./doi_info_parts");
+        console.log(doiInfoCollection.doiInfos.length);
         
-        // CSVファイルを読み込む
-        const csv = await load_compressed_file("./doi_info_parts/doi.csv.gz");
+        // 最初の10件を表示
+        const first10 = doiInfoCollection.doiInfos.slice(0, 10);
+        let html = '<h2>最初の10件のDOI情報:</h2><ul>';
+        first10.forEach((doiInfo, index) => {
+          html += `<li><strong>${index + 1}.</strong>`;
+          html += `<div style="margin-left: 20px; margin-top: 5px;">`;
+          html += `<div><strong>DOI:</strong> ${doiInfo.doi || '(なし)'}</div>`;
+          if (doiInfo.title) html += `<div><strong>Title:</strong> ${doiInfo.title}</div>`;
+          if (doiInfo.container_title) html += `<div><strong>Container Title:</strong> ${doiInfo.container_title}</div>`;
+          if (doiInfo.year >= 0) html += `<div><strong>Year:</strong> ${doiInfo.year}</div>`;
+          if (doiInfo.month >= 0) html += `<div><strong>Month:</strong> ${doiInfo.month}</div>`;
+          if (doiInfo.authors && doiInfo.authors.length > 0) {
+            html += `<div><strong>Authors:</strong> ${doiInfo.authors.join(', ')}</div>`;
+          }
+          if (doiInfo.volume) html += `<div><strong>Volume:</strong> ${doiInfo.volume}</div>`;
+          if (doiInfo.tags && doiInfo.tags.length > 0) {
+            html += `<div><strong>Tags:</strong> ${doiInfo.tags.join(', ')}</div>`;
+          }
+          html += '</div></li>';
+        });
+        html += '</ul>';
+        html += `<p>合計: ${doiInfoCollection.doiInfos.length}件</p>`;
+        outputDiv.innerHTML = html;
         
-        // CSVをパース（最初の10行を表示）
-        const lines = csv.split('\n').filter(line => line.trim());
-        const preview = lines.slice(0, 10).join('<br>');
-        
-        outputDiv.innerHTML = `<h2>CSV Preview (first 10 lines):</h2><pre>${preview}</pre>`;
-        console.log('CSV loaded:', csv.substring(0, 200) + '...');
       } catch (error) {
         const errorDiv = document.getElementById('error');
         errorDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
