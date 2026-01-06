@@ -34,6 +34,7 @@ namespace DataProcessor
         public static LightweightDOIElementComponent Build(Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
         {
             LightweightDOIElementComponent r = new LightweightDOIElementComponent();
+            HashSet<string> knownDOISet = new HashSet<string>();
 
             List<DOIElement> primaryDOIElementList = primaryDOIElementDict.Values.ToList();
             primaryDOIElementList.Sort((a, b) => a.DOI.CompareTo(b.DOI));
@@ -41,16 +42,43 @@ namespace DataProcessor
             List<DOIElement> secondaryDOIElementList = secondaryDOIElementDict.Values.ToList();
             secondaryDOIElementList.Sort((a, b) => a.DOI.CompareTo(b.DOI));
 
+            primaryDOIElementList.ForEach((v) =>
+            {
+                knownDOISet.Add(v.DOI);
+            });
+            secondaryDOIElementList.ForEach((v) =>
+            {
+                knownDOISet.Add(v.DOI);
+            });
+
             HashSet<string> unknownDOISet = new HashSet<string>();
             primaryDOIElementList.ForEach((v) =>
             {
                 v.DOIReferences.ForEach((v) =>
                 {
-                    unknownDOISet.Add(v);
+                    if (!knownDOISet.Contains(v))
+                    {
+                        unknownDOISet.Add(v);                        
+                    }
                 });
             });
             List<string> unknownDOIList = unknownDOISet.ToList();
             unknownDOIList.Sort((a, b) => a.CompareTo(b));
+
+            {
+                primaryDOIElementList.ForEach((v) =>
+                {
+                    r.DOIList.Add(v.DOI);
+                });
+                secondaryDOIElementList.ForEach((v) =>
+                {
+                    r.DOIList.Add(v.DOI);
+                });
+                unknownDOIList.ForEach((v) =>
+                {
+                    r.DOIList.Add(v);
+                });
+            }
 
 
             List<DOIElement> mergedDOIElementList = primaryDOIElementList.Concat(secondaryDOIElementList).ToList();
@@ -74,6 +102,10 @@ namespace DataProcessor
                     doiReferenceMapper[v] = counter++;
                 });
 
+                Console.WriteLine("DOI Count: " + counter);
+                Console.WriteLine("Primary DOI Count: " + primaryDOIElementList.Count);
+                Console.WriteLine("Secondary DOI Count: " + secondaryDOIElementList.Count);
+                Console.WriteLine("Unknown DOI Count: " + unknownDOIList.Count);
             }
             HashSet<string> fullNameHashSet = new HashSet<string>();
 
@@ -138,13 +170,13 @@ namespace DataProcessor
                 wordToIndexMapper[r.WordList[i]] = i;
             }
 
+
             {
 
                 var counter = 0;
                 mergedDOIElementList.ForEach((v) =>
                 {
                     var isPrimary = r.DOIFlagList[counter] == "1";
-                    r.DOIList.Add(v.DOI);
                     r.YearList.Add(v.Year);
                     r.MonthList.Add(v.Month);
                     r.VolumeList.Add(v.Volume);

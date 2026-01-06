@@ -21,15 +21,19 @@
 
 
         const doiInfoCollection = await DOIInfoCollection.load("./doi_info_parts");
-        console.log(doiInfoCollection.doiInfos.length);
+        console.log(doiInfoCollection.length());
         
         // 最初の10件を表示
-        const first10 = doiInfoCollection.doiInfos.slice(0, 10);
+        const count = Math.min(10, doiInfoCollection.length());
         let html = '<h2>最初の10件のDOI情報:</h2><ul>';
-        first10.forEach((doiInfo, index) => {
-          html += `<li><strong>${index + 1}.</strong>`;
+        for (let i = 0; i < count; i++) {
+          const doiInfo = doiInfoCollection.getDOIInfo(i);
+          html += `<li><strong>${i + 1}.</strong>`;
           html += `<div style="margin-left: 20px; margin-top: 5px;">`;
           html += `<div><strong>DOI:</strong> ${doiInfo.doi || '(なし)'}</div>`;
+          if (doiInfo.status && doiInfo.status !== 'unknown') {
+            html += `<div><strong>Status:</strong> ${doiInfo.status}</div>`;
+          }
           if (doiInfo.title) html += `<div><strong>Title:</strong> ${doiInfo.title}</div>`;
           if (doiInfo.container_title) html += `<div><strong>Container Title:</strong> ${doiInfo.container_title}</div>`;
           if (doiInfo.year >= 0) html += `<div><strong>Year:</strong> ${doiInfo.year}</div>`;
@@ -38,13 +42,16 @@
             html += `<div><strong>Authors:</strong> ${doiInfo.authors.join(', ')}</div>`;
           }
           if (doiInfo.volume) html += `<div><strong>Volume:</strong> ${doiInfo.volume}</div>`;
+          if (doiInfo.doiReferences && doiInfo.doiReferences.length > 0) {
+            html += `<div><strong>DOI References:</strong> ${doiInfo.doiReferences.join(', ')}</div>`;
+          }
           if (doiInfo.tags && doiInfo.tags.length > 0) {
             html += `<div><strong>Tags:</strong> ${doiInfo.tags.join(', ')}</div>`;
           }
           html += '</div></li>';
-        });
+        }
         html += '</ul>';
-        html += `<p>合計: ${doiInfoCollection.doiInfos.length}件</p>`;
+        html += `<p>合計: ${doiInfoCollection.length()}件</p>`;
         outputDiv.innerHTML = html;
         
       } catch (error) {
