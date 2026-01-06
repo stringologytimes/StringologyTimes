@@ -4,69 +4,191 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Article Info Browser</title>
+  <style>
+    .doi_references {
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
   <script type="module">
-    import { DOIInfoCollection } from "./dist/browser.js";
+    import { DOIInfoCollection, DOIInfoSearchInput, BrowserInfo } from "./dist/browser.js";
+    import { Render } from "./dist/render.js";
+
+    let browserInfo = new BrowserInfo();
+
     
-    async function init() {
-      try {
-        const outputDiv = document.getElementById('output');
-        const errorDiv = document.getElementById('error');
-        
-        // pakoが読み込まれているか確認
-        if (typeof pako === 'undefined') {
-          throw new Error('pako library failed to load');
-        }
-
-
-
-        const doiInfoCollection = await DOIInfoCollection.load("./doi_info_parts");
-        console.log(doiInfoCollection.length());
-        
-        // 最初の10件を表示
-        const count = Math.min(10, doiInfoCollection.length());
-        let html = '<h2>最初の10件のDOI情報:</h2><ul>';
-        for (let i = 0; i < count; i++) {
-          const doiInfo = doiInfoCollection.getDOIInfo(i);
-          html += `<li><strong>${i + 1}.</strong>`;
-          html += `<div style="margin-left: 20px; margin-top: 5px;">`;
-          html += `<div><strong>DOI:</strong> ${doiInfo.doi || '(なし)'}</div>`;
-          if (doiInfo.status && doiInfo.status !== 'unknown') {
-            html += `<div><strong>Status:</strong> ${doiInfo.status}</div>`;
-          }
-          if (doiInfo.title) html += `<div><strong>Title:</strong> ${doiInfo.title}</div>`;
-          if (doiInfo.container_title) html += `<div><strong>Container Title:</strong> ${doiInfo.container_title}</div>`;
-          if (doiInfo.year >= 0) html += `<div><strong>Year:</strong> ${doiInfo.year}</div>`;
-          if (doiInfo.month >= 0) html += `<div><strong>Month:</strong> ${doiInfo.month}</div>`;
-          if (doiInfo.authors && doiInfo.authors.length > 0) {
-            html += `<div><strong>Authors:</strong> ${doiInfo.authors.join(', ')}</div>`;
-          }
-          if (doiInfo.volume) html += `<div><strong>Volume:</strong> ${doiInfo.volume}</div>`;
-          if (doiInfo.doiReferences && doiInfo.doiReferences.length > 0) {
-            html += `<div><strong>DOI References:</strong> ${doiInfo.doiReferences.join(', ')}</div>`;
-          }
-          if (doiInfo.tags && doiInfo.tags.length > 0) {
-            html += `<div><strong>Tags:</strong> ${doiInfo.tags.join(', ')}</div>`;
-          }
-          html += '</div></li>';
-        }
-        html += '</ul>';
-        html += `<p>合計: ${doiInfoCollection.length()}件</p>`;
-        outputDiv.innerHTML = html;
-        
-      } catch (error) {
-        const errorDiv = document.getElementById('error');
-        errorDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
-        console.error('Error:', error);
+    function setFoundDOIList(list) {
+      browserInfo.foundDOIList = list;
+      browserInfo.pageNumber = 0; // 検索結果が変わったら最初のページに戻る
+      Render.render(browserInfo);
+      updatePaginationControls();
+    }
+    
+    function goToPage(pageNumber) {
+      const totalPages = browserInfo.foundDOIList 
+        ? Math.ceil(browserInfo.foundDOIList.length / browserInfo.pageSize) 
+        : 0;
+      if (pageNumber >= 0 && pageNumber < totalPages) {
+        browserInfo.pageNumber = pageNumber;
+        Render.render(browserInfo);
+        updatePaginationControls();
       }
     }
     
+    function goToPreviousPage() {
+      if (browserInfo.pageNumber > 0) {
+        goToPage(browserInfo.pageNumber - 1);
+      }
+    }
+    
+    function goToNextPage() {
+      const totalPages = browserInfo.foundDOIList 
+        ? Math.ceil(browserInfo.foundDOIList.length / browserInfo.pageSize) 
+        : 0;
+      if (browserInfo.pageNumber < totalPages - 1) {
+        goToPage(browserInfo.pageNumber + 1);
+      }
+    }
+    
+    function updatePaginationControls() {
+      const prevButton = document.getElementById('prevPageButton');
+      const nextButton = document.getElementById('nextPageButton');
+      const pageInfo = document.getElementById('pageInfo');
+      
+      if (!browserInfo.foundDOIList || browserInfo.foundDOIList.length === 0) {
+        if (prevButton) prevButton.disabled = true;
+        if (nextButton) nextButton.disabled = true;
+        if (pageInfo) pageInfo.textContent = '';
+        return;
+      }
+      
+      const totalPages = Math.ceil(browserInfo.foundDOIList.length / browserInfo.pageSize);
+      const currentPage = browserInfo.pageNumber + 1;
+      
+      if (prevButton) {
+        prevButton.disabled = browserInfo.pageNumber === 0;
+      }
+      if (nextButton) {
+        nextButton.disabled = browserInfo.pageNumber >= totalPages - 1;
+      }
+      if (pageInfo) {
+        const startIndex = browserInfo.pageNumber * browserInfo.pageSize + 1;
+        const endIndex = Math.min(startIndex + browserInfo.pageSize - 1, browserInfo.foundDOIList.length);
+        pageInfo.textContent = `ページ ${currentPage}/${totalPages} (${startIndex}-${endIndex} / ${browserInfo.foundDOIList.length}件)`;
+      }
+    }
+    
+    async function init() {
+      if(browserInfo.doiInfoCollection == null){
+        browserInfo.doiInfoCollection = await DOIInfoCollection.load("./doi_info_parts");
+      }
+      
+      // URLパラメーターからページ番号を読み込む
+      const urlParams = new URL(location.href).searchParams;
+      const pageParam = urlParams.get('page');
+      if (pageParam) {
+        const pageNumber = parseInt(pageParam);
+        if (!isNaN(pageNumber) && pageNumber >= 0) {
+          browserInfo.pageNumber = pageNumber;
+        }
+      }
+      
+      // URLパラメーターがある場合は検索を実行
+      if (urlParams.toString().length > 0 && !pageParam) {
+        const searchInput = DOIInfoSearchInput.buildFromURLParameters();
+        const tmp = browserInfo.doiInfoCollection.search(searchInput);
+        setFoundDOIList(tmp);
+      } else {
+        // ページ番号だけが指定されている場合も更新
+        updatePaginationControls();
+      }
+    }
+    
+    // ボタンのイベントリスナーを設定
+    function setupButtons() {
+      const renderAllButton = document.getElementById('renderAllButton');
+      if (renderAllButton) {
+        renderAllButton.addEventListener('click', () => {
+          Render.renderAll(browserInfo);
+          updatePaginationControls();
+        });
+      }
+      
+      const prevButton = document.getElementById('prevPageButton');
+      if (prevButton) {
+        prevButton.addEventListener('click', goToPreviousPage);
+      }
+      
+      const nextButton = document.getElementById('nextPageButton');
+      if (nextButton) {
+        nextButton.addEventListener('click', goToNextPage);
+      }
+    }
+    
+    // DOMが読み込まれた後にボタンを設定
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupButtons);
+    } else {
+      setupButtons();
+    }
+    function clickDOIReferenceHTMLElement(element, event) {
+      // リンクやその子要素をクリックした場合は処理しない
+      console.log(element);
+      const articleElement = Render.getArticleElementByChild(element);
+      if(articleElement != null){
+        console.log("Found");
+        const doiReferencesDiv = articleElement.querySelector('.doi_references');
+        if(!doiReferencesDiv){
+          throw new Error("DOI References div not found");
+        }
+        console.log(doiReferencesDiv.style.display);
+        if(doiReferencesDiv.style.display == "none"){
+          doiReferencesDiv.style.display = "block";
+        }else{
+          doiReferencesDiv.style.display = "none";
+        }
+      }
+      
+    }
+    
+    // グローバルスコープに公開（onclick属性からアクセスできるようにする）
+    window.clickDOIReferenceHTMLElement = clickDOIReferenceHTMLElement;
+    
     init();
+
   </script>
 </head>
 <body>
   <h1>Article Info Browser</h1>
   <div id="output"></div>
   <div id="error"></div>
+  <div style="margin: 20px 0;">
+    <button id="renderAllButton">Render All</button>
+    <div style="margin-top: 10px;">
+      <button id="prevPageButton">前へ</button>
+      <span id="pageInfo" style="margin: 0 10px;"></span>
+      <button id="nextPageButton">次へ</button>
+    </div>
+  </div>
+  <template id="author-template">
+    <span class="author"></span></span>
+  </template>
+  <template id="doi-reference-template">
+    <span class="doi-reference"></span></span>
+  </template>
+
+  <template id="doi-info-template">
+    <article>
+      <h3>Title: <span class="title"></span></h3>
+      <p>Year: <span class="year"></span></p>
+      <p>Month: <span class="month"></span></p>
+      <p>Authors: <div class="authors"></div></p>
+      <p>Container Title: <span class="container_title"></span></p>
+      <p>Volume: <span class="volume"></span></p>
+      <p onclick="window.clickDOIReferenceHTMLElement(this, event)">DOI References: <div class="doi_references" style="display:none;"></div></p>
+      <p>Status: <span class="status"></span></p>
+    </article>
+  </template>
 </body>
 </html>
