@@ -33,8 +33,10 @@ namespace DBLPProcessor
         public string DataFolderPath { get; set; } = "";
 
 
+        /*
         [Option('o', "output", Required = true, HelpText = "Output Path")]
         public string OutputPath { get; set; } = "";
+        */
     }
 
 
@@ -98,40 +100,7 @@ namespace DBLPProcessor
             CSVFunctions.WriteCSV(secondaryDOIListPath, secondaryDOIList);
             
             var lightweightDOIElementComponent = LightweightDOIElementComponent.Build(primaryDOIElementDict, secondaryDOIElementDict);
-            lightweightDOIElementComponent.OutputByGZip(resultFolderPath + "/lightweight_doi_element_component");
-            /*
-
-            List<DOIElement> primaryDOIElementList = primaryDOIElementDict.Values.ToList();
-            primaryDOIElementList.Sort((a, b) => a.DOI.CompareTo(b.DOI));
-
-            List<DOIElement> secondaryDOIElementList = secondaryDOIElementDict.Values.ToList();
-            secondaryDOIElementList.Sort((a, b) => a.DOI.CompareTo(b.DOI));
-
-            List<DOIElement> mergedDOIElementList = primaryDOIElementList.Concat(secondaryDOIElementList).ToList();
-            List<string> mergedDOIList = mergedDOIElementList.Select((v) => v.DOI).ToList();
-            List<string> mergedTitleList = mergedDOIElementList.Select((v) => v.Title).ToList();
-            List<string> mergedYearList = mergedDOIElementList.Select((v) => v.Year).ToList();
-            List<string> mergedMonthList = mergedDOIElementList.Select((v) => v.Month).ToList();
-            List<string> mergedContainerTitleList = mergedDOIElementList.Select((v) => v.ContainerTitle).ToList();
-            List<string> mergedVolumeList = mergedDOIElementList.Select((v) => v.Volume).ToList();
-
-
-
-            DirectoryInfo directoryInfo = new DirectoryInfo(resultFolderPath + "/merged");
-            if (!directoryInfo.Exists)
-            {
-                directoryInfo.Create();
-            }
-
-            CSVFunctions.WriteCSVByGZip(directoryInfo.FullName + "/doi.csv.gz", mergedDOIList);
-            CSVFunctions.WriteCSVByGZip(directoryInfo.FullName + "/title.csv.gz", mergedTitleList);
-            CSVFunctions.WriteCSVByGZip(directoryInfo.FullName + "/year.csv.gz", mergedYearList);
-            CSVFunctions.WriteCSVByGZip(directoryInfo.FullName + "/month.csv.gz", mergedMonthList);
-            CSVFunctions.WriteCSVByGZip(directoryInfo.FullName + "/container_title.csv.gz", mergedContainerTitleList);
-            CSVFunctions.WriteCSVByGZip(directoryInfo.FullName + "/volume.csv.gz", mergedVolumeList);
-            */
-
-
+            lightweightDOIElementComponent.OutputByGZip(resultFolderPath + "/doi_info_parts");
 
 
             return 0;

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Article Info Browser</title>
+  <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+  <script type="module">
+    import { load_compressed_file } from "./dist/browser.js";
+    
+    async function init() {
+      try {
+        const outputDiv = document.getElementById('output');
+        const errorDiv = document.getElementById('error');
+        
+        // pakoが読み込まれているか確認
+        if (typeof pako === 'undefined') {
+          throw new Error('pako library failed to load');
+        }
+        
+        // CSVファイルを読み込む
+        const csv = await load_compressed_file("./doi_info_parts/doi.csv.gz");
+        
+        // CSVをパース（最初の10行を表示）
+        const lines = csv.split('\n').filter(line => line.trim());
+        const preview = lines.slice(0, 10).join('<br>');
+        
+        outputDiv.innerHTML = `<h2>CSV Preview (first 10 lines):</h2><pre>${preview}</pre>`;
+        console.log('CSV loaded:', csv.substring(0, 200) + '...');
+      } catch (error) {
+        const errorDiv = document.getElementById('error');
+        errorDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+        console.error('Error:', error);
+      }
+    }
+    
+    init();
+  </script>
+</head>
+<body>
+  <h1>Article Info Browser</h1>
+  <div id="output"></div>
+  <div id="error"></div>
+</body>
+</html>
