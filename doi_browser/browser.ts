@@ -56,7 +56,7 @@ export class LightWeightDOIInfo {
     public month: number = 0;
     public authorIDs: number[] = [];
     public status: number = -1;
-
+    public type: string = "unknown";
     public container_title: string = "";
     public volume: string = "";
     public tags: string[] = [];
@@ -124,6 +124,7 @@ export class DOIInfoCollection {
     private authorToDoiMapper: Map<string, number[]> = new Map();
     private containerTitleToDoiMapper: Map<string, number[]> = new Map();
     private doiReferencesToDoiMapper: Map<string, number[]> = new Map();
+    private typeToDOIInfoMapper: Map<string, number[]> = new Map();
 
     public length(): number {
         return this.lightweightDOIInfos.length;
@@ -323,6 +324,26 @@ export class DOIInfoCollection {
         return this.filter(input, r);
     }
 
+    public intitalizeFilterOptions() : void {
+        const type_list = Array.from(this.typeToDOIInfoMapper.keys());
+        type_list.sort();
+        const typeSelect = document.getElementById("type-select");
+        if(typeSelect){
+            typeSelect.innerHTML = "";
+            const defaultOption = document.createElement("option");
+            defaultOption.value = "";
+            defaultOption.textContent = "Any";
+            typeSelect.appendChild(defaultOption);
+            type_list.forEach(type => {
+                const option = document.createElement("option");
+                option.value = type;
+                option.textContent = type;
+                typeSelect.appendChild(option);
+            });    
+        }
+
+    }
+
 
     public static async load(folderURL: string): Promise<DOIInfoCollection> {
         let r = new DOIInfoCollection();
@@ -372,6 +393,15 @@ export class DOIInfoCollection {
             r.lightweightDOIInfos[index].doiReferenceIDs = numbers;
         });
 
+        const type_list = await load_gzip_text_lines(folderURL + "/type.csv.gz");
+        type_list.forEach((type, index) => {
+            if(type.length > 0){
+                r.lightweightDOIInfos[index].type = type;
+            }else{
+                r.lightweightDOIInfos[index].type = "unknown";
+            }
+        });
+
         const status_list = await load_gzip_integer_lines(folderURL + "/doi_flag.csv.gz");
         status_list.forEach((status, index) => {
             if (index >= r.lightweightDOIInfos.length) {
@@ -412,7 +442,17 @@ export class DOIInfoCollection {
                 }
             });
 
+            if(r.typeToDOIInfoMapper.has(doiInfo.type)){
+                r.typeToDOIInfoMapper.get(doiInfo.type)!.push(index);
+            }else{
+                //console.log("type: " + doiInfo.type + " " + index + "/" + r.lightweightDOIInfos.length);
+
+                r.typeToDOIInfoMapper.set(doiInfo.type, [index]);
+            }
+
+
         });
+
 
 
         return r;

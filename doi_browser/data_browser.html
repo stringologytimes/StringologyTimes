@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +10,9 @@
       cursor: pointer;
       user-select: none;
     }
+    .details_div {
+      padding-left: 30px;
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
   <script type="module">
@@ -17,17 +21,17 @@
 
     let browserInfo = new BrowserInfo();
 
-    
+
     function setFoundDOIList(list) {
       browserInfo.foundDOIList = list;
       browserInfo.pageNumber = 0; // 検索結果が変わったら最初のページに戻る
       Render.render(browserInfo);
       updatePaginationControls();
     }
-    
+
     function goToPage(pageNumber) {
-      const totalPages = browserInfo.foundDOIList 
-        ? Math.ceil(browserInfo.foundDOIList.length / browserInfo.pageSize) 
+      const totalPages = browserInfo.foundDOIList
+        ? Math.ceil(browserInfo.foundDOIList.length / browserInfo.pageSize)
         : 0;
       if (pageNumber >= 0 && pageNumber < totalPages) {
         browserInfo.pageNumber = pageNumber;
@@ -35,37 +39,37 @@
         updatePaginationControls();
       }
     }
-    
+
     function goToPreviousPage() {
       if (browserInfo.pageNumber > 0) {
         goToPage(browserInfo.pageNumber - 1);
       }
     }
-    
+
     function goToNextPage() {
-      const totalPages = browserInfo.foundDOIList 
-        ? Math.ceil(browserInfo.foundDOIList.length / browserInfo.pageSize) 
+      const totalPages = browserInfo.foundDOIList
+        ? Math.ceil(browserInfo.foundDOIList.length / browserInfo.pageSize)
         : 0;
       if (browserInfo.pageNumber < totalPages - 1) {
         goToPage(browserInfo.pageNumber + 1);
       }
     }
-    
+
     function updatePaginationControls() {
       const prevButton = document.getElementById('prevPageButton');
       const nextButton = document.getElementById('nextPageButton');
       const pageInfo = document.getElementById('pageInfo');
-      
+
       if (!browserInfo.foundDOIList || browserInfo.foundDOIList.length === 0) {
         if (prevButton) prevButton.disabled = true;
         if (nextButton) nextButton.disabled = true;
         if (pageInfo) pageInfo.textContent = '';
         return;
       }
-      
+
       const totalPages = Math.ceil(browserInfo.foundDOIList.length / browserInfo.pageSize);
       const currentPage = browserInfo.pageNumber + 1;
-      
+
       if (prevButton) {
         prevButton.disabled = browserInfo.pageNumber === 0;
       }
@@ -78,12 +82,12 @@
         pageInfo.textContent = `ページ ${currentPage}/${totalPages} (${startIndex}-${endIndex} / ${browserInfo.foundDOIList.length}件)`;
       }
     }
-    
+
     async function init() {
-      if(browserInfo.doiInfoCollection == null){
+      if (browserInfo.doiInfoCollection == null) {
         browserInfo.doiInfoCollection = await DOIInfoCollection.load("./doi_info_parts");
       }
-      
+
       // URLパラメーターからページ番号を読み込む
       const urlParams = new URL(location.href).searchParams;
       const pageParam = urlParams.get('page');
@@ -93,7 +97,7 @@
           browserInfo.pageNumber = pageNumber;
         }
       }
-      
+
       // URLパラメーターがある場合は検索を実行
       if (urlParams.toString().length > 0 && !pageParam) {
         const searchInput = DOIInfoSearchInput.buildFromURLParameters();
@@ -103,8 +107,33 @@
         // ページ番号だけが指定されている場合も更新
         updatePaginationControls();
       }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (browserInfo.doiInfoCollection) {
+        browserInfo.doiInfoCollection.intitalizeFilterOptions();
+      } else {
+        // コレクションのロード完了後に呼び出すため、init内で再実行する
+        // 既にinit実行中ならここでやらない
+      }
+    });
+
+    // コレクションのロード直後にも実行
+    if (browserInfo.doiInfoCollection) {
+      browserInfo.doiInfoCollection.intitalizeFilterOptions();
+    } else {
+      // ページロード時にinit()でコレクション読み込み＆初期化するため、init()内でも呼ぶ
+      const _oldInit = init;
+      init = async function() {
+        await _oldInit();
+        if (browserInfo.doiInfoCollection) {
+          browserInfo.doiInfoCollection.intitalizeFilterOptions();
+        }
+      };
     }
-    
+
+      
+    }
+
     // ボタンのイベントリスナーを設定
     function setupButtons() {
       const renderAllButton = document.getElementById('renderAllButton');
@@ -114,53 +143,46 @@
           updatePaginationControls();
         });
       }
-      
+
       const prevButton = document.getElementById('prevPageButton');
       if (prevButton) {
         prevButton.addEventListener('click', goToPreviousPage);
       }
-      
+
       const nextButton = document.getElementById('nextPageButton');
       if (nextButton) {
         nextButton.addEventListener('click', goToNextPage);
       }
     }
-    
+
     // DOMが読み込まれた後にボタンを設定
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', setupButtons);
     } else {
       setupButtons();
     }
-    function clickDOIReferenceHTMLElement(element, event) {
-      // リンクやその子要素をクリックした場合は処理しない
-      console.log(element);
-      const articleElement = Render.getArticleElementByChild(element);
-      if(articleElement != null){
-        console.log("Found");
-        const doiReferencesDiv = articleElement.querySelector('.doi_references');
-        if(!doiReferencesDiv){
-          throw new Error("DOI References div not found");
-        }
-        console.log(doiReferencesDiv.style.display);
-        if(doiReferencesDiv.style.display == "none"){
-          doiReferencesDiv.style.display = "block";
-        }else{
-          doiReferencesDiv.style.display = "none";
-        }
-      }
-      
-    }
-    
-    // グローバルスコープに公開（onclick属性からアクセスできるようにする）
-    window.clickDOIReferenceHTMLElement = clickDOIReferenceHTMLElement;
-    
+
+
     init();
 
   </script>
 </head>
+
 <body>
   <h1>Article Info Browser</h1>
+  <fieldset>
+    <legend>Filter</legend>
+    <ul>
+      <li>
+        <label>Type:</label> <select id="type-select"></select>
+      </li>
+      <li>
+        <label>Container Title:</label> <select id="container-title-select"></select>
+      </li>
+      </li>
+    </ul>
+    <button>Search</button>
+  </fieldset>
   <div id="output"></div>
   <div id="error"></div>
   <div style="margin: 20px 0;">
@@ -180,15 +202,24 @@
 
   <template id="doi-info-template">
     <article>
-      <h3>Title: <span class="title"></span></h3>
-      <p>Year: <span class="year"></span></p>
-      <p>Month: <span class="month"></span></p>
-      <p>Authors: <div class="authors"></div></p>
-      <p>Container Title: <span class="container_title"></span></p>
-      <p>Volume: <span class="volume"></span></p>
-      <p onclick="window.clickDOIReferenceHTMLElement(this, event)">DOI References: <div class="doi_references" style="display:none;"></div></p>
-      <p>Status: <span class="status"></span></p>
+      <details>
+        <summary class="title"></summary>
+        <div class="details_div"">
+          <ul>
+            <li class="date"></li>
+            <li><div class="authors"></div></li>
+            <li class="container_title"></li>
+            <li class="volume"></li>
+            <li class="status"></li>
+            <li><details>
+              <summary>DOI References</summary>
+              <div class="doi_references"></div>
+            </details></li>
+          </ul>
+        </div>
+      </details>
     </article>
   </template>
 </body>
+
 </html>

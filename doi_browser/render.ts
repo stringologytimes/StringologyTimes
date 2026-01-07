@@ -27,7 +27,7 @@ export class Render {
 
             const currentDOIListPart = browserInfo.getCurrentDOIListPart();
 
-            currentDOIListPart.forEach(doiInfo => {
+            currentDOIListPart.forEach((doiInfo, index) => {
                 // DOIInfoテンプレートをクローン
                 const doiInfoClone = doiInfoTemplate.content.cloneNode(true) as DocumentFragment;
                 const article = doiInfoClone.querySelector('article');
@@ -49,13 +49,26 @@ export class Render {
                 */
 
                 const titleSpan = article.querySelector('.title');
-                if (titleSpan) titleSpan.textContent = doiInfo.title || '';
+                if (titleSpan){
+                    const ith = (browserInfo.pageNumber * browserInfo.pageSize) + index + 1;
+                    const titleStr = doiInfo.title || '';
+                    const viewStr = `${ith}: ${titleStr}`;
+                    titleSpan.textContent = viewStr;
+                }
 
-                const yearSpan = article.querySelector('.year');
-                if (yearSpan) yearSpan.textContent = doiInfo.year >= 0 ? doiInfo.year.toString() : '';
+                const dateLi = article.querySelector('.date');
+                if(dateLi){
+                    if(doiInfo.year >= 0){
+                        if(doiInfo.month >= 0){
+                            dateLi.textContent = `Date: ${doiInfo.year}-${doiInfo.month}`;
+                        }else{
+                            dateLi.textContent = `Date: s${doiInfo.year}`;
+                        }
+                    }else{
+                        dateLi.textContent = `Date: Unknown`;
+                    }    
+                }
 
-                const monthSpan = article.querySelector('.month');
-                if (monthSpan) monthSpan.textContent = doiInfo.month >= 0 ? doiInfo.month.toString() : '';
 
                 const containerTitleSpan = article.querySelector('.container_title');
                 if (containerTitleSpan) containerTitleSpan.textContent = doiInfo.container_title || '';
