@@ -13,11 +13,65 @@
     .details_div {
       padding-left: 30px;
     }
+    #loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #loading-overlay.show {
+      display: flex;
+    }
+    .loading-container {
+      text-align: center;
+    }
+    .progress-bar-container {
+      width: 300px;
+      height: 20px;
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 20px auto;
+    }
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #4CAF50 0%, #45a049 50%, #4CAF50 100%);
+      background-size: 200% 100%;
+      width: 100%;
+      animation: progress-animation 1.5s ease-in-out infinite;
+    }
+    @keyframes progress-animation {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+    .loading-text {
+      font-size: 18px;
+      color: #333;
+      margin-top: 10px;
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
 </head>
 
 <body>
+  <div id="loading-overlay">
+    <div class="loading-container">
+      <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="loading-text">Loading...</div>
+    </div>
+  </div>
   <h1>Article Info Browser</h1>
   <fieldset>
     <legend>Filter</legend>

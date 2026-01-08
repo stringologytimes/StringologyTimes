@@ -69,6 +69,7 @@ function updatePaginationControls() {
 }
 
 async function initialize() {
+  await new Promise(resolve => setTimeout(resolve, 1000));
   if (browserInfo.doiInfoCollection == null) {
     browserInfo.doiInfoCollection = await DOIInfoCollection.load("./doi_info_parts");
   }
@@ -122,17 +123,34 @@ function setupButtons() {
   }
 }
 
-async function domFinished() {
-
-  await initialize();
-  preprocessURLParameters();
-  // コレクションのロード直後にも実行
-  if (browserInfo.doiInfoCollection) {
-    browserInfo.doiInfoCollection.intitalizeFilterOptions();
+function showLoading() {
+  const loadingOverlay = document.getElementById('loading-overlay');
+  if (loadingOverlay) {
+    loadingOverlay.classList.add('show');
   }
-  setupButtons();
+}
 
+function hideLoading() {
+  const loadingOverlay = document.getElementById('loading-overlay');
+  if (loadingOverlay) {
+    loadingOverlay.classList.remove('show');
+  }
+}
 
+async function domFinished() {
+  showLoading();
+  
+  try {
+    await initialize();
+    preprocessURLParameters();
+    // コレクションのロード直後にも実行
+    if (browserInfo.doiInfoCollection) {
+      browserInfo.doiInfoCollection.intitalizeFilterOptions();
+    }
+    setupButtons();
+  } finally {
+    hideLoading();
+  }
 }
 document.addEventListener('DOMContentLoaded', domFinished);
 
