@@ -30,7 +30,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './data_browser.html',
+      template: './index.html',
       filename: 'index.html',
     }),
     new CopyWebpackPlugin({

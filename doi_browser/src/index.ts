@@ -68,11 +68,18 @@ function updatePaginationControls() {
   }
 }
 
-async function init() {
+async function initialize() {
   if (browserInfo.doiInfoCollection == null) {
     browserInfo.doiInfoCollection = await DOIInfoCollection.load("./doi_info_parts");
   }
 
+
+
+}
+function preprocessURLParameters() {
+  if (browserInfo.doiInfoCollection == null) {
+    throw new Error("DOIInfoCollection is not loaded");
+  }
   // URLパラメーターからページ番号を読み込む
   const urlParams = new URL(location.href).searchParams;
   const pageParam = urlParams.get('page');
@@ -83,20 +90,15 @@ async function init() {
     }
   }
 
-      // URLパラメーターがある場合は検索を実行
-      if (urlParams.toString().length > 0 && !pageParam) {
-        const searchInput = DOIInfoSearchInput.buildFromURLParameters();
-        const tmp = searchInput.search(browserInfo.doiInfoCollection);
-        setFoundDOIList(tmp);
-      } else {
-        // ページ番号だけが指定されている場合も更新
-        updatePaginationControls();
-      }
-
-      // コレクションのロード直後にも実行
-      if (browserInfo.doiInfoCollection) {
-        browserInfo.doiInfoCollection.intitalizeFilterOptions();
-      }
+  // URLパラメーターがある場合は検索を実行
+  if (urlParams.toString().length > 0 && !pageParam) {
+    const searchInput = DOIInfoSearchInput.buildFromURLParameters();
+    const tmp = searchInput.search(browserInfo.doiInfoCollection);
+    setFoundDOIList(tmp);
+  } else {
+    // ページ番号だけが指定されている場合も更新
+    updatePaginationControls();
+  }
 }
 
 // ボタンのイベントリスナーを設定
@@ -120,12 +122,19 @@ function setupButtons() {
   }
 }
 
-// DOMが読み込まれた後にボタンを設定
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', setupButtons);
-} else {
-  setupButtons();
-}
+async function domFinished() {
 
-init();
+  await initialize();
+  preprocessURLParameters();
+  // コレクションのロード直後にも実行
+  if (browserInfo.doiInfoCollection) {
+    browserInfo.doiInfoCollection.intitalizeFilterOptions();
+  }
+  setupButtons();
+
+
+}
+document.addEventListener('DOMContentLoaded', domFinished);
+
+
 
