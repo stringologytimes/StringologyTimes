@@ -1,53 +1,10 @@
 
 
 
-export function load_gzip_text(url: string): Promise<string> {
-    return fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Failed to fetch file: ${response.statusText}`);
-            }
-            return response.arrayBuffer();
-        })
-        .then(buffer => {
-            // @ts-ignore
-            const pako = (globalThis as any).pako || (window as any).pako; // Assume pako is available in global scope
-            if (!pako) {
-                throw new Error('pako library not loaded. Please include pako in your HTML.');
-            }
-            const compressed = new Uint8Array(buffer);
-            const decompressed = pako.ungzip(compressed);
-            // Decode to UTF-8 text
-            const decoder = new TextDecoder('utf-8');
-            return decoder.decode(decompressed);
-        });
-}
-export async function load_gzip_text_lines(url: string, remove_empty: boolean = true): Promise<string[]> {
-    if (remove_empty) {
-        return load_gzip_text(url).then(text => text.split('\n').filter(line => line.trim()));
-    } else {
-        return load_gzip_text(url).then(text => text.split('\n'));
-    }
-}
-export async function load_gzip_integer_lines(url: string): Promise<number[]> {
-    return load_gzip_text(url).then(text => text.split('\n').map(line => parseInt(line)));
-}
 
-export async function load_gzip_integer_list_lines(url: string): Promise<number[][]> {
-    const lines = await load_gzip_text(url).then(text => text.split('\n').filter(line => line.trim()));
-    const r: number[][] = [];
-    lines.forEach(line => {
-        const parts = line.split(',');
-        const row: number[] = [];
-        parts.forEach(part => {
-            row.push(parseInt(part));
-        });
-        r.push(row);
-    });
-    return r;
-}
+import { load_gzip_text_lines, load_gzip_integer_list_lines, load_gzip_integer_lines } from "./gzip_loader";
 
-type DOIStatus = "primary" | "secondary" | "unknown";
+export type DOIStatus = "primary" | "secondary" | "unknown";
 
 export class LightWeightDOIInfo {
     public doi: string = "";
@@ -77,45 +34,7 @@ export class DOIInfo {
     public status: DOIStatus = "unknown";
 }
 
-export class DOIInfoSearchInput {
-    public minimum_year: number | null = null;
-    public maximum_year: number | null = null;
-    public authors: string[] = [];
-    public tags: string[] = [];
-    public volume: string | null = null;
-    public container_title: string | null = null;
-    public doiReferences: string[] = [];
-    public status: DOIStatus | null = null;
 
-    public static buildFromURLParameters(): DOIInfoSearchInput {
-        let r = new DOIInfoSearchInput();
-        const sp = new URL(location.href).searchParams;
-
-        for (const [k, v] of sp.entries()) {
-            if(k == "minimum_year"){
-                r.minimum_year = parseInt(v);
-            }
-            else if(k == "maximum_year"){
-                r.maximum_year = parseInt(v);
-            }
-            else if(k == "author"){
-                r.authors.push(v);
-            }
-            else if(k == "tag"){
-                r.tags.push(v);
-            }else if(k == "volume"){
-                r.volume = v;
-            }else if(k == "container_title"){
-                r.container_title = v;
-            }else if(k == "doi_reference"){
-                r.doiReferences.push(v);
-            }
-        }
-        return r;
-    }
-
-
-}
 
 export class DOIInfoCollection {
     private lightweightDOIInfos: LightWeightDOIInfo[] = [];
@@ -169,7 +88,7 @@ export class DOIInfoCollection {
         }
         return r;
     }
-    private searchByYear(minimum_year: number | null = null, maximum_year: number | null = null, candidates: DOIInfo[] | null = null): DOIInfo[] {
+    public searchByYear(minimum_year: number | null = null, maximum_year: number | null = null, candidates: DOIInfo[] | null = null): DOIInfo[] {
         const r: DOIInfo[] = [];
         let minYear = minimum_year ?? this.getMinimumYear();
         let maxYear = maximum_year ?? this.getMaxmumYear();
@@ -194,7 +113,7 @@ export class DOIInfoCollection {
         }
         return r;
     }
-    private searchByAuthor(author: string, candidates : DOIInfo[] | null = null): DOIInfo[] {
+    public searchByAuthor(author: string, candidates : DOIInfo[] | null = null): DOIInfo[] {
         const r: DOIInfo[] = [];
         if(candidates == null){
             const doiIds = this.authorToDoiMapper.get(author);
@@ -212,7 +131,7 @@ export class DOIInfoCollection {
         }
         return r;
     }
-    private searchByAuthors(authors: string[], candidates : DOIInfo[] | null = null): DOIInfo[] {
+    public searchByAuthors(authors: string[], candidates : DOIInfo[] | null = null): DOIInfo[] {
         let r: DOIInfo[] = [];
         if(candidates == null){
             if(authors.length == 0){
@@ -232,7 +151,7 @@ export class DOIInfoCollection {
             return r;
         }
     }
-    private searchByDOIReference(doi_reference: string, candidates : DOIInfo[] | null = null): DOIInfo[] {
+    public searchByDOIReference(doi_reference: string, candidates : DOIInfo[] | null = null): DOIInfo[] {
         let r: DOIInfo[] = [];
         if(candidates == null){
             const doiIds = this.doiReferencesToDoiMapper.get(doi_reference);
@@ -247,7 +166,7 @@ export class DOIInfoCollection {
         return r;
 
     }
-    private searchByDOIReferences(doi_references: string[], candidates : DOIInfo[] | null = null): DOIInfo[] {
+    public searchByDOIReferences(doi_references: string[], candidates : DOIInfo[] | null = null): DOIInfo[] {
         let r: DOIInfo[] = [];
         if(candidates == null){
             if(doi_references.length == 0){
@@ -269,7 +188,7 @@ export class DOIInfoCollection {
     }
 
 
-    private searchByContainerTitle(container_title: string, candidates : DOIInfo[] | null = null): DOIInfo[] {
+    public searchByContainerTitle(container_title: string, candidates : DOIInfo[] | null = null): DOIInfo[] {
         let r: DOIInfo[] = [];
         if(candidates == null){
             const doiIds = this.containerTitleToDoiMapper.get(container_title);
@@ -283,46 +202,7 @@ export class DOIInfoCollection {
         }
         return r;
     }
-    private filter(input: DOIInfoSearchInput, candidates: DOIInfo[]): DOIInfo[] {
-        let r: DOIInfo[] = candidates.map(candidate => candidate);
-        if(input.minimum_year != null || input.maximum_year != null){
-            r = this.searchByYear(input.minimum_year, input.maximum_year, r);
-        }
-        
-        if (input.authors.length > 0){
-            r = this.searchByAuthors(input.authors, r);
-        }
-        
-        if(input.container_title != null){
-            r = this.searchByContainerTitle(input.container_title, r);
-        }
-        
-        if(input.doiReferences.length > 0){
-            r = this.searchByDOIReferences(input.doiReferences, r);
-        }
-        
-        if(input.status != null){
-            throw new Error("status is not supported yet");
-        }
-        return r;
-    }
-
-    public search(input: DOIInfoSearchInput): DOIInfo[] {
-        let r: DOIInfo[] = [];
-        if(input.minimum_year != null || input.maximum_year != null){
-            r = this.searchByYear(input.minimum_year, input.maximum_year);
-        }else if (input.authors.length > 0){
-            r = this.searchByAuthor(input.authors[0]);
-        }else if(input.container_title != null){
-            r = this.searchByContainerTitle(input.container_title);
-        }else if(input.doiReferences.length > 0){
-            r = this.searchByDOIReference(input.doiReferences[0]);
-        }else if(input.status != null){
-            throw new Error("status is not supported yet");
-        }
-
-        return this.filter(input, r);
-    }
+    
 
     public intitalizeFilterOptions() : void {
         const type_list = Array.from(this.typeToDOIInfoMapper.keys());
@@ -460,35 +340,6 @@ export class DOIInfoCollection {
     }
 }
 
-export class BrowserInfo {
-    public doiInfoCollection: DOIInfoCollection | null = null;
-    public foundDOIList: DOIInfo[] | null =null;
-    public pageNumber : number = 0;
-    public pageSize : number = 100;
 
-    public getCurrentDOIListPart(): DOIInfo[] {
-        if(this.foundDOIList == null){
-            return [];
-        }
-        else if(this.foundDOIList.length == 0){
-            return [];
-        }
-        else{
-            let startIndex = this.pageNumber * this.pageSize;
-            if(startIndex >= this.foundDOIList.length){
-                startIndex = 0;
-            }
-            let endIndex = startIndex + this.pageSize;
-            if(endIndex >= this.foundDOIList.length){
-                endIndex = this.foundDOIList.length - 1;
-            }
-            const r : DOIInfo[] = [];
-            for(let i = startIndex; i <= endIndex; i++){
-                r.push(this.foundDOIList[i]);
-            }
-            return r;
-        }
-    }
-}
 
 //export let doiInfoCollection: DOIInfoCollection = new DOIInfoCollection();

@@ -7,5 +7,5 @@
       "rootDir": "./",
       "moduleResolution": "node"
     },
-    "include": ["browser.ts", "render.ts"]
+    "include": ["src/browser.ts", "src/render.ts", "src/gzip_loader.ts", "src/browser_info.ts", "src/index.ts"]
   }

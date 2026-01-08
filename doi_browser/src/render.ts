@@ -1,4 +1,5 @@
-import { DOIInfoCollection, DOIInfo, BrowserInfo } from "./browser";
+import { DOIInfoCollection, DOIInfo } from "./browser";
+import { BrowserInfo } from "./browser_info";
 
 export class Render {
     public static render(browserInfo: BrowserInfo) {
