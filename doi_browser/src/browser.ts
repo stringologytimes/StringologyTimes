@@ -31,19 +31,15 @@ export class DOIInfo {
     public tags: string[] = [];
     public doiReferences: string[] = [];
     public keywords: string[] = [];
+    public type: string = "unknown";
     public status: DOIStatus = "unknown";
 }
 
 
 
 export class DOIInfoCollection {
-    private lightweightDOIInfos: LightWeightDOIInfo[] = [];
-    private authorList: string[] = [];
-    private yearToDoiMapper: Map<number, number[]> = new Map();
-    private authorToDoiMapper: Map<string, number[]> = new Map();
-    private containerTitleToDoiMapper: Map<string, number[]> = new Map();
-    private doiReferencesToDoiMapper: Map<string, number[]> = new Map();
-    private typeToDOIInfoMapper: Map<string, number[]> = new Map();
+    public lightweightDOIInfos: LightWeightDOIInfo[] = [];
+    public authorList: string[] = [];
 
     public length(): number {
         return this.lightweightDOIInfos.length;
@@ -51,22 +47,7 @@ export class DOIInfoCollection {
     public getDOIByID(id: number): string {
         return this.lightweightDOIInfos[id].doi;
     }
-    public getMaxmumYear(): number {
-        if (this.yearToDoiMapper.size == 0) {
-            return 0;
-        } else {
-            const yearArr = Array.from(this.yearToDoiMapper.keys());
-            return Math.max(...yearArr);
-        }
-    }
-    public getMinimumYear(): number {
-        if (this.yearToDoiMapper.size == 0) {
-            return 0;
-        } else {
-            const yearArr = Array.from(this.yearToDoiMapper.keys());
-            return Math.min(...yearArr);
-        }
-    }
+
     public getDOIInfo(index: number): DOIInfo {
         let r = new DOIInfo();
         r.id = index;
@@ -78,6 +59,7 @@ export class DOIInfoCollection {
         r.container_title = this.lightweightDOIInfos[index].container_title;
         r.volume = this.lightweightDOIInfos[index].volume;
         r.doiReferences = this.lightweightDOIInfos[index].doiReferenceIDs.map(id => this.getDOIByID(id));
+        r.type = this.lightweightDOIInfos[index].type;
 
         if (this.lightweightDOIInfos[index].status == 1) {
             r.status = "primary";
@@ -88,122 +70,12 @@ export class DOIInfoCollection {
         }
         return r;
     }
-    public searchByYear(minimum_year: number | null = null, maximum_year: number | null = null, candidates: DOIInfo[] | null = null): DOIInfo[] {
-        const r: DOIInfo[] = [];
-        let minYear = minimum_year ?? this.getMinimumYear();
-        let maxYear = maximum_year ?? this.getMaxmumYear();
-        if (minYear > maxYear) {
-            minYear = maxYear;
-        }
-        if(candidates == null){
-            for (let year = minYear; year <= maxYear; year++) {
-                const doiIds = this.yearToDoiMapper.get(year);
-                if (doiIds) {
-                    doiIds.forEach(doiId => {
-                        r.push(this.getDOIInfo(doiId));
-                    });
-                }
-            }    
-        }else{
-            candidates.forEach(candidate => {
-                if(candidate.year >= minYear && candidate.year <= maxYear){
-                    r.push(candidate);
-                }
-            });
-        }
-        return r;
-    }
-    public searchByAuthor(author: string, candidates : DOIInfo[] | null = null): DOIInfo[] {
-        const r: DOIInfo[] = [];
-        if(candidates == null){
-            const doiIds = this.authorToDoiMapper.get(author);
-            if(doiIds){
-                doiIds.forEach(doiId => {
-                    r.push(this.getDOIInfo(doiId));
-                });
-            }    
-        }else{
-            candidates.forEach(candidate => {
-                if(candidate.authors.includes(author)){
-                    r.push(candidate);
-                }
-            });
-        }
-        return r;
-    }
-    public searchByAuthors(authors: string[], candidates : DOIInfo[] | null = null): DOIInfo[] {
-        let r: DOIInfo[] = [];
-        if(candidates == null){
-            if(authors.length == 0){
-                return r;
-            }else{
-                r = this.searchByAuthor(authors[0]);
-                for(let i = 1; i < authors.length; i++){
-                    r = this.searchByAuthor(authors[i], r);
-                }
-                return r;
-            }
-        }else{
-            candidates.forEach(candidate => r.push(candidate));
-            authors.forEach(author => {
-                r = this.searchByAuthor(author, r);
-            });
-            return r;
-        }
-    }
-    public searchByDOIReference(doi_reference: string, candidates : DOIInfo[] | null = null): DOIInfo[] {
-        let r: DOIInfo[] = [];
-        if(candidates == null){
-            const doiIds = this.doiReferencesToDoiMapper.get(doi_reference);
-            if(doiIds){
-                doiIds.forEach(doiId => {
-                    r.push(this.getDOIInfo(doiId));
-                });
-            }
-        }else{
-            r = candidates.filter(candidate => candidate.doiReferences.includes(doi_reference));
-        }
-        return r;
-
-    }
-    public searchByDOIReferences(doi_references: string[], candidates : DOIInfo[] | null = null): DOIInfo[] {
-        let r: DOIInfo[] = [];
-        if(candidates == null){
-            if(doi_references.length == 0){
-                return r;
-            }else{
-                r = this.searchByDOIReference(doi_references[0], null);
-                for(let i = 1; i < doi_references.length; i++){
-                    r = this.searchByDOIReference(doi_references[i], r);
-                }
-                return r;
-            }
-        }else{
-            candidates.forEach(candidate => r.push(candidate));
-            doi_references.forEach(doi_reference => {
-                r = this.searchByDOIReference(doi_reference, r);
-            });
-            return r;
-        }
-    }
 
 
-    public searchByContainerTitle(container_title: string, candidates : DOIInfo[] | null = null): DOIInfo[] {
-        let r: DOIInfo[] = [];
-        if(candidates == null){
-            const doiIds = this.containerTitleToDoiMapper.get(container_title);
-            if(doiIds){
-                doiIds.forEach(doiId => {
-                    r.push(this.getDOIInfo(doiId));
-                });
-            }
-        }else{
-            r = candidates.filter(candidate => candidate.container_title == container_title);
-        }
-        return r;
-    }
-    
 
+
+
+    /*
     public intitalizeFilterOptions() : void {
         const type_list = Array.from(this.typeToDOIInfoMapper.keys());
         type_list.sort();
@@ -221,8 +93,8 @@ export class DOIInfoCollection {
                 typeSelect.appendChild(option);
             });    
         }
-
     }
+    */
 
 
     public static async load(folderURL: string): Promise<DOIInfoCollection> {
@@ -275,12 +147,13 @@ export class DOIInfoCollection {
 
         const type_list = await load_gzip_text_lines(folderURL + "/type.csv.gz");
         type_list.forEach((type, index) => {
-            if(type.length > 0){
+            if (type.length > 0) {
                 r.lightweightDOIInfos[index].type = type;
-            }else{
+            } else {
                 r.lightweightDOIInfos[index].type = "unknown";
             }
         });
+
 
         const status_list = await load_gzip_integer_lines(folderURL + "/doi_flag.csv.gz");
         status_list.forEach((status, index) => {
@@ -291,53 +164,198 @@ export class DOIInfoCollection {
             r.lightweightDOIInfos[index].status = status;
         });
 
-        r.lightweightDOIInfos.forEach((doiInfo, index) => {
-            if(r.yearToDoiMapper.has(doiInfo.year)){
-                r.yearToDoiMapper.get(doiInfo.year)!.push(index);
-            }else{
-                r.yearToDoiMapper.set(doiInfo.year, [index]);
-            }
-
-            if(r.containerTitleToDoiMapper.has(doiInfo.container_title)){
-                r.containerTitleToDoiMapper.get(doiInfo.container_title)!.push(index);
-            }else{
-                r.containerTitleToDoiMapper.set(doiInfo.container_title, [index]);
-            }
-
-            doiInfo.authorIDs.forEach(authorID => {
-                const author = r.authorList[authorID];
-                if(r.authorToDoiMapper.has(author)){
-                    r.authorToDoiMapper.get(author)!.push(index);
-                }else{
-                    r.authorToDoiMapper.set(author, [index]);
-                }
-            });
-
-            doiInfo.doiReferenceIDs.forEach(doiReferenceID => {
-                const doiReference = r.getDOIByID(doiReferenceID);
-                if(r.doiReferencesToDoiMapper.has(doiReference)){
-                    r.doiReferencesToDoiMapper.get(doiReference)!.push(index);
-                }else{
-                    r.doiReferencesToDoiMapper.set(doiReference, [index]);
-                }
-            });
-
-            if(r.typeToDOIInfoMapper.has(doiInfo.type)){
-                r.typeToDOIInfoMapper.get(doiInfo.type)!.push(index);
-            }else{
-                //console.log("type: " + doiInfo.type + " " + index + "/" + r.lightweightDOIInfos.length);
-
-                r.typeToDOIInfoMapper.set(doiInfo.type, [index]);
-            }
-
-
-        });
-
 
 
         return r;
 
     }
+}
+
+export class DOIInfoCollectionFilter {
+    public doiIDs: number[] = [];
+    private yearToDoiMapper: Map<number, number[]> = new Map();
+    private authorToDoiMapper: Map<string, number[]> = new Map();
+    private containerTitleToDoiMapper: Map<string, number[]> = new Map();
+    private doiReferencesToDoiMapper: Map<string, number[]> = new Map();
+    private typeToDOIInfoMapper: Map<string, number[]> = new Map();
+
+
+    public constructor(doiIDs: number[] | null, r: DOIInfoCollection) {
+        if (doiIDs == null) {
+            this.doiIDs = Array.from({ length: r.lightweightDOIInfos.length }, (_, index) => index);
+        } else {
+            this.doiIDs = doiIDs.map(doiID => r.getDOIInfo(doiID).id);
+        }
+
+        this.doiIDs.forEach(doiID => {
+            const doiInfo = r.lightweightDOIInfos[doiID];
+            if (this.yearToDoiMapper.has(doiInfo.year)) {
+                this.yearToDoiMapper.get(doiInfo.year)!.push(doiID);
+            } else {
+                this.yearToDoiMapper.set(doiInfo.year, [doiID]);
+            }
+
+            if (this.containerTitleToDoiMapper.has(doiInfo.container_title)) {
+                this.containerTitleToDoiMapper.get(doiInfo.container_title)!.push(doiID);
+            } else {
+                this.containerTitleToDoiMapper.set(doiInfo.container_title, [doiID]);
+            }
+
+            doiInfo.authorIDs.forEach(authorID => {
+                const author = r.authorList[authorID];
+                if (this.authorToDoiMapper.has(author)) {
+                    this.authorToDoiMapper.get(author)!.push(doiID);
+                } else {
+                    this.authorToDoiMapper.set(author, [doiID]);
+                }
+            });
+
+            doiInfo.doiReferenceIDs.forEach(doiReferenceID => {
+                const doiReference = r.getDOIByID(doiReferenceID);
+                if (this.doiReferencesToDoiMapper.has(doiReference)) {
+                    this.doiReferencesToDoiMapper.get(doiReference)!.push(doiID);
+                } else {
+                    this.doiReferencesToDoiMapper.set(doiReference, [doiID]);
+                }
+            });
+
+            if (this.typeToDOIInfoMapper.has(doiInfo.type)) {
+                this.typeToDOIInfoMapper.get(doiInfo.type)!.push(doiID);
+            } else {
+                this.typeToDOIInfoMapper.set(doiInfo.type, [doiID]);
+            }
+        });
+
+    }
+    public getMaxmumYear(): number {
+        if (this.yearToDoiMapper.size == 0) {
+            return 0;
+        } else {
+            const yearArr = Array.from(this.yearToDoiMapper.keys());
+            return Math.max(...yearArr);
+        }
+    }
+    public getMinimumYear(): number {
+        if (this.yearToDoiMapper.size == 0) {
+            return 0;
+        } else {
+            const yearArr = Array.from(this.yearToDoiMapper.keys()).filter(year => year > 0);
+            return Math.min(...yearArr);
+        }
+    }
+
+    public getTypes(): string[] {
+        return Array.from(this.typeToDOIInfoMapper.keys());
+    }
+    public getContainerTitles(): string[] {
+        return Array.from(this.containerTitleToDoiMapper.keys());
+    }
+    public searchByYear(minimum_year: number | null = null, maximum_year: number | null = null, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
+        const r: DOIInfo[] = [];
+        let minYear = minimum_year ?? this.getMinimumYear();
+        let maxYear = maximum_year ?? this.getMaxmumYear();
+        if (minYear > maxYear) {
+            minYear = maxYear;
+        }
+
+        for (let year = minYear; year <= maxYear; year++) {
+            if (this.yearToDoiMapper.has(year)) {
+                this.yearToDoiMapper.get(year)!.forEach(doiId => {
+                    if (doiNumberFilterSet.has(doiId)) {
+                        r.push(collection.getDOIInfo(doiId));
+                    }
+                });
+            }
+        }
+        return r;
+    }
+    public searchByType(type: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
+        const r: DOIInfo[] = [];
+        if (this.typeToDOIInfoMapper.has(type)) {
+            this.typeToDOIInfoMapper.get(type)!.forEach(doiId => {
+                if (doiNumberFilterSet.has(doiId)) {
+                    r.push(collection.getDOIInfo(doiId));
+                }
+            });
+        }
+        return r;
+    }
+    public searchByAuthor(author: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
+        const r: DOIInfo[] = [];
+        if (this.authorToDoiMapper.has(author)) {
+            this.authorToDoiMapper.get(author)!.forEach(doiId => {
+                if (doiNumberFilterSet.has(doiId)) {
+                    r.push(collection.getDOIInfo(doiId));
+                }
+            });
+        }
+        return r;
+    }
+    public searchByAuthors(authors: string[], collection: DOIInfoCollection): DOIInfo[] {
+        throw new Error("searchByAuthors is not implemented yet");
+        /*
+        let r: DOIInfo[] = [];
+        if(authors.length == 0){
+            return r;
+        }else{
+            const fstAuthor = authors[0];
+            const r2 = this.searchByAuthor(fstAuthor, collection);            
+            for(let i = 1; i < authors.length; i++){
+                const author = authors[i];
+                r = this.searchByAuthor(author, r);
+            }
+            return r;
+        }
+
+
+        candidates.forEach(candidate => r.push(candidate));
+        authors.forEach(author => {
+            r = this.searchByAuthor(author, r);
+        });
+        return r;
+        */
+
+    }
+    public searchByDOIReference(doi_reference: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
+        const r: DOIInfo[] = [];
+        if (this.doiReferencesToDoiMapper.has(doi_reference)) {
+            this.doiReferencesToDoiMapper.get(doi_reference)!.forEach(doiId => {
+                if (doiNumberFilterSet.has(doiId)) {
+                    r.push(collection.getDOIInfo(doiId));
+                }
+            });
+        }
+        return r;
+    }
+    public searchByDOIReferences(doi_references: string[], collection: DOIInfoCollection): DOIInfo[] {
+        throw new Error("searchByDOIReferences is not implemented yet");
+        /*
+        let r: DOIInfo[] = [];
+        candidates.forEach(candidate => r.push(candidate));
+        doi_references.forEach(doi_reference => {
+            r = this.searchByDOIReference(doi_reference, r);
+        });
+        return r;
+        */
+
+    }
+
+
+    public searchByContainerTitle(container_title: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
+        const r: DOIInfo[] = [];
+        if (this.containerTitleToDoiMapper.has(container_title)) {
+            this.containerTitleToDoiMapper.get(container_title)!.forEach(doiId => {
+                if (doiNumberFilterSet.has(doiId)) {
+                    r.push(collection.getDOIInfo(doiId));
+                }
+            });
+        }
+        return r;
+    }
+
+
+
+
 }
 
 

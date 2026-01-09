@@ -1,10 +1,16 @@
 import { DOIInfoCollection } from "./browser";
-import { BrowserInfo, DOIInfoSearchInput } from "./browser_info";
+import { BrowserInfo } from "./browser_info";
 import { Render } from "./render";
-
+import { DOIInfoSearchInput } from "./doi_info_search_input";
+import { renderFilterBox } from "./filter_box_render";
+import { DOIInfoCollectionFilter } from "./browser";
 let browserInfo = new BrowserInfo();
 
 console.log("index.ts loaded");
+
+
+
+
 
 
 function setFoundDOIList(list: any[]) {
@@ -12,6 +18,18 @@ function setFoundDOIList(list: any[]) {
   browserInfo.pageNumber = 0; // 検索結果が変わったら最初のページに戻る
   Render.render(browserInfo);
   updatePaginationControls();
+}
+
+function process(){
+  if(browserInfo.doiInfoCollection != null){
+    const doiIDs = Array.from({length: browserInfo.doiInfoCollection!.length()}, (_, index) => index);
+    const foundDOIIDs = browserInfo.doiInfoSearchInput.search(new DOIInfoCollectionFilter(doiIDs, browserInfo.doiInfoCollection!), browserInfo.doiInfoCollection!);
+    browserInfo.foundDOIList = foundDOIIDs.map(doiID => browserInfo.doiInfoCollection!.getDOIInfo(doiID));
+    browserInfo.pageNumber = 0; // 検索結果が変わったら最初のページに戻る
+    renderFilterBox(browserInfo);
+    Render.render(browserInfo);
+    updatePaginationControls();
+  }
 }
 
 function goToPage(pageNumber: number) {
@@ -90,16 +108,16 @@ function preprocessURLParameters() {
       browserInfo.pageNumber = pageNumber;
     }
   }
+  browserInfo.doiInfoSearchInput = DOIInfoSearchInput.buildFromURLParameters();
 
   // URLパラメーターがある場合は検索を実行
+  /*
   if (urlParams.toString().length > 0 && !pageParam) {
-    const searchInput = DOIInfoSearchInput.buildFromURLParameters();
-    const tmp = searchInput.search(browserInfo.doiInfoCollection);
-    setFoundDOIList(tmp);
   } else {
     // ページ番号だけが指定されている場合も更新
     updatePaginationControls();
   }
+  */
 }
 
 // ボタンのイベントリスナーを設定
@@ -139,15 +157,12 @@ function hideLoading() {
 
 async function domFinished() {
   showLoading();
-  
+
   try {
     await initialize();
     preprocessURLParameters();
     // コレクションのロード直後にも実行
-    if (browserInfo.doiInfoCollection) {
-      browserInfo.doiInfoCollection.intitalizeFilterOptions();
-    }
-    setupButtons();
+    process();
   } finally {
     hideLoading();
   }
