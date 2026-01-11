@@ -21,11 +21,18 @@ function setFoundDOIList(list: any[]) {
 }
 
 function process(){
+  console.log("process");
   if(browserInfo.doiInfoCollection != null){
     const doiIDs = Array.from({length: browserInfo.doiInfoCollection!.length()}, (_, index) => index);
-    const foundDOIIDs = browserInfo.doiInfoSearchInput.search(new DOIInfoCollectionFilter(doiIDs, browserInfo.doiInfoCollection!), browserInfo.doiInfoCollection!);
-    browserInfo.foundDOIList = foundDOIIDs.map(doiID => browserInfo.doiInfoCollection!.getDOIInfo(doiID));
-    browserInfo.pageNumber = 0; // 検索結果が変わったら最初のページに戻る
+    if(browserInfo.doiInfoSearchInput.is_empty()){
+      browserInfo.foundDOIList = Array.from({length: browserInfo.doiInfoCollection!.length()}, (_, index) => browserInfo.doiInfoCollection!.getDOIInfo(index));
+    }else{
+      const foundDOIIDs = browserInfo.doiInfoSearchInput.search(new DOIInfoCollectionFilter(doiIDs, browserInfo.doiInfoCollection!), browserInfo.doiInfoCollection!);
+      browserInfo.foundDOIList = foundDOIIDs.map(doiID => browserInfo.doiInfoCollection!.getDOIInfo(doiID));
+    }
+    browserInfo.pageNumber = 0; // 検索結果が変わったら最初のページに戻る  
+
+
     renderFilterBox(browserInfo);
     Render.render(browserInfo);
     updatePaginationControls();
@@ -155,6 +162,44 @@ function hideLoading() {
   }
 }
 
+function filterInputChange(inputElementName : string) {
+  if(inputElementName == "type") {
+    const type = (document.getElementById("type-select") as HTMLSelectElement).value;
+    if(type == "dont-care") {
+      browserInfo.doiInfoSearchInput.type = null;
+    }else{
+      browserInfo.doiInfoSearchInput.type = type;
+    }
+  }
+  else if(inputElementName == "container-title") {
+    const containerTitle = (document.getElementById("container-title-select") as HTMLSelectElement).value;
+    if(containerTitle == "dont-care") {
+      browserInfo.doiInfoSearchInput.container_title = null;
+    }else{
+      browserInfo.doiInfoSearchInput.container_title = containerTitle;
+    }
+  }else{
+
+  }
+  process();
+}
+function resetFilter() {
+  browserInfo.doiInfoSearchInput.authors = [];
+  browserInfo.doiInfoSearchInput.tags = [];
+  browserInfo.doiInfoSearchInput.volume = null;
+  browserInfo.doiInfoSearchInput.container_title = null;
+  browserInfo.doiInfoSearchInput.doiReferences = [];
+  browserInfo.doiInfoSearchInput.status = null;
+  browserInfo.doiInfoSearchInput.type = null;
+  browserInfo.doiInfoSearchInput.minimum_year = null;
+  browserInfo.doiInfoSearchInput.maximum_year = null;
+  process();
+}
+
+// グローバルスコープに公開（onchange属性からアクセスできるようにする）
+(window as any).filterInputChange = filterInputChange;
+(window as any).resetFilter = resetFilter;
+
 async function domFinished() {
   showLoading();
 
@@ -163,6 +208,7 @@ async function domFinished() {
     preprocessURLParameters();
     // コレクションのロード直後にも実行
     process();
+    setupButtons();
   } finally {
     hideLoading();
   }

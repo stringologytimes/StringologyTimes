@@ -5,6 +5,7 @@ import { DOIInfoCollectionFilter } from "./browser";
 export class DOIInfoSearchInput {
     public minimum_year: number | null = null;
     public maximum_year: number | null = null;
+    public type: string | null = null;
     public authors: string[] = [];
     public tags: string[] = [];
     public volume: string | null = null;
@@ -28,6 +29,8 @@ export class DOIInfoSearchInput {
             }
             else if(k == "tag"){
                 r.tags.push(v);
+            }else if(k == "type"){
+                r.type = v;
             }else if(k == "volume"){
                 r.volume = v;
             }else if(k == "container_title"){
@@ -49,6 +52,9 @@ export class DOIInfoSearchInput {
             if(this.maximum_year != null && doiInfo.year > this.maximum_year){
                 return false;
             }
+            if(this.type != null && doiInfo.type != this.type){
+                return false;
+            }
             if(this.container_title != null && doiInfo.container_title != this.container_title){
                 return false;
             }
@@ -65,6 +71,9 @@ export class DOIInfoSearchInput {
     public search(doiInfoCollectionFilter: DOIInfoCollectionFilter, collection: DOIInfoCollection): number[] {
         let r: number[] = doiInfoCollectionFilter.doiIDs.map(doiID => doiID);
         return this.filter(collection, r);
+    }
+    public is_empty(): boolean {
+        return this.minimum_year == null && this.maximum_year == null && this.type == null && this.authors.length == 0 && this.tags.length == 0 && this.volume == null && this.container_title == null && this.doiReferences.length == 0 && this.status == null;
     }
     
 

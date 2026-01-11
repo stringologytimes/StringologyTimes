@@ -77,16 +77,18 @@
     <legend>Filter</legend>
     <ul>
       <li>
-        <label>Type:</label> <select id="type-select"></select>
+        <label>Type:</label> <select id="type-select" onchange="filterInputChange('type')"></select>
       </li>
       <li>
-        <label>Container Title:</label> <select id="container-title-select"></select>
+        <label>Container Title:</label> <select id="container-title-select" onchange="filterInputChange('container-title')"></select>
       </li>
       <li>
         <label>Year:</label> From <select id="year-from-select"></select> To <select id="year-to-select"></select> 
       </li>
     </ul>
     <button>Search</button>
+    <button onclick="resetFilter()">Reset</button>
+
   </fieldset>
   <div id="output"></div>
   <div id="error"></div>
