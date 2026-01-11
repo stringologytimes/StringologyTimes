@@ -1,7 +1,7 @@
 import { BrowserInfo } from "./browser_info";
-import { DOIInfoCollectionFilter } from "./browser";
-import { DOIInfoCollection } from "./browser";
-import { DOIInfoSearchInput } from "./doi_info_search_input";
+import { DOIFilterResult } from "./doi_filter_result";
+import { DOIInfoCollection } from "./doi_info";
+import { DOIFilterInput } from "./doi_filter_input";
 /*
 function getUniqueStringSet(items: string[]): string[] {
   const uniqueSet = new Set<string>();
@@ -12,7 +12,7 @@ function getUniqueStringSet(items: string[]): string[] {
 }
 */
 
-function setSelectHTMLElement(selectElement: HTMLSelectElement, options: string[], doiCountList: number[], selectedValue: string | null, dontCareValueName: string, currentDOIInfoCollectionFilter: DOIInfoCollectionFilter, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection){
+function setSelectHTMLElement(selectElement: HTMLSelectElement, options: string[], doiCountList: number[], selectedValue: string | null, dontCareValueName: string, currentDOIInfoCollectionFilter: DOIFilterResult, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection){
   selectElement.innerHTML = "";
   const defaultOption = document.createElement("option");
   defaultOption.value = "dont-care";
@@ -33,7 +33,7 @@ function setSelectHTMLElement(selectElement: HTMLSelectElement, options: string[
   });
 }
 
-function renderDOICategorySelectBox(currentDOIInfoCollectionFilter: DOIInfoCollectionFilter, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, doiInfoSearchInput: DOIInfoSearchInput){
+function renderDOICategorySelectBox(currentDOIInfoCollectionFilter: DOIFilterResult, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, doiInfoSearchInput: DOIFilterInput){
   const type_list = currentDOIInfoCollectionFilter.getTypes();
   type_list.sort();
   const typeDoiCountList = type_list.map(type => currentDOIInfoCollectionFilter.searchByType(type, doiNumberFilterSet, doiInfoCollection).length);
@@ -42,7 +42,7 @@ function renderDOICategorySelectBox(currentDOIInfoCollectionFilter: DOIInfoColle
     setSelectHTMLElement(typeSelect, type_list, typeDoiCountList, doiInfoSearchInput.type, "Any", currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection);
   }
 }
-function renderContainerTitleSelectBox(currentDOIInfoCollectionFilter: DOIInfoCollectionFilter, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, doiInfoSearchInput: DOIInfoSearchInput){
+function renderContainerTitleSelectBox(currentDOIInfoCollectionFilter: DOIFilterResult, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, doiInfoSearchInput: DOIFilterInput){
   const containerTitle_list = currentDOIInfoCollectionFilter.getContainerTitles();
   const containerTitleDoiCountList = containerTitle_list.map(containerTitle => currentDOIInfoCollectionFilter.searchByContainerTitle(containerTitle, doiNumberFilterSet, doiInfoCollection).length);
   const containerTitleSelect = document.getElementById("container-title-select");
@@ -51,7 +51,7 @@ function renderContainerTitleSelectBox(currentDOIInfoCollectionFilter: DOIInfoCo
   }
 }
 
-function renderMinimumYearSelectBox(currentDOIInfoCollectionFilter: DOIInfoCollectionFilter, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, doiInfoSearchInput: DOIInfoSearchInput){
+function renderMinimumYearSelectBox(currentDOIInfoCollectionFilter: DOIFilterResult, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, doiInfoSearchInput: DOIFilterInput){
   const yearFromSelect = document.getElementById("year-from-select");
   const minYear = currentDOIInfoCollectionFilter.getMinimumYear();
   const maxYear = currentDOIInfoCollectionFilter.getMaxmumYear();
@@ -66,7 +66,7 @@ function renderMinimumYearSelectBox(currentDOIInfoCollectionFilter: DOIInfoColle
   }
 }
 
-function renderMaximumYearSelectBox(currentDOIInfoCollectionFilter: DOIInfoCollectionFilter, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, doiInfoSearchInput: DOIInfoSearchInput){
+function renderMaximumYearSelectBox(currentDOIInfoCollectionFilter: DOIFilterResult, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, doiInfoSearchInput: DOIFilterInput){
   const yearToSelect = document.getElementById("year-to-select");
   const minYear = currentDOIInfoCollectionFilter.getMinimumYear();
   const maxYear = currentDOIInfoCollectionFilter.getMaxmumYear();
@@ -88,8 +88,8 @@ export function renderFilterBox(browserInfo: BrowserInfo) {
   }
   else {
     const doiIDs = Array.from({length: doiInfoCollection.length()}, (_, index) => index);
-    const foundDOIIDs : number[] = browserInfo.doiInfoSearchInput.search(new DOIInfoCollectionFilter(doiIDs, doiInfoCollection), doiInfoCollection);
-    const currentDOIInfoCollectionFilter = new DOIInfoCollectionFilter(foundDOIIDs, doiInfoCollection);
+    const foundDOIIDs : number[] = browserInfo.doiInfoSearchInput.search(new DOIFilterResult(doiIDs, doiInfoCollection), doiInfoCollection);
+    const currentDOIInfoCollectionFilter = new DOIFilterResult(foundDOIIDs, doiInfoCollection);
     const doiNumberFilterSet = new Set<number>(foundDOIIDs);
 
     renderDOICategorySelectBox(currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection, browserInfo.doiInfoSearchInput);

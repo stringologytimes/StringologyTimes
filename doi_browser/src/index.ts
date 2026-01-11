@@ -1,9 +1,9 @@
-import { DOIInfoCollection } from "./browser";
+import { DOIInfoCollection } from "./doi_info";
 import { BrowserInfo } from "./browser_info";
-import { Render } from "./render";
-import { DOIInfoSearchInput } from "./doi_info_search_input";
-import { renderFilterBox } from "./filter_box_render";
-import { DOIInfoCollectionFilter } from "./browser";
+import { Render } from "./doi_filter_result_render";
+import { DOIFilterInput } from "./doi_filter_input";
+import { renderFilterBox } from "./doi_filter_box_render";
+import { DOIFilterResult } from "./doi_info";
 let browserInfo = new BrowserInfo();
 
 console.log("index.ts loaded");
@@ -27,7 +27,7 @@ function process(){
     if(browserInfo.doiInfoSearchInput.is_empty()){
       browserInfo.foundDOIList = Array.from({length: browserInfo.doiInfoCollection!.length()}, (_, index) => browserInfo.doiInfoCollection!.getDOIInfo(index));
     }else{
-      const foundDOIIDs = browserInfo.doiInfoSearchInput.search(new DOIInfoCollectionFilter(doiIDs, browserInfo.doiInfoCollection!), browserInfo.doiInfoCollection!);
+      const foundDOIIDs = browserInfo.doiInfoSearchInput.search(new DOIFilterResult(doiIDs, browserInfo.doiInfoCollection!), browserInfo.doiInfoCollection!);
       browserInfo.foundDOIList = foundDOIIDs.map(doiID => browserInfo.doiInfoCollection!.getDOIInfo(doiID));
     }
     browserInfo.pageNumber = 0; // 検索結果が変わったら最初のページに戻る  
@@ -115,7 +115,7 @@ function preprocessURLParameters() {
       browserInfo.pageNumber = pageNumber;
     }
   }
-  browserInfo.doiInfoSearchInput = DOIInfoSearchInput.buildFromURLParameters();
+  browserInfo.doiInfoSearchInput = DOIFilterInput.buildFromURLParameters();
 
   // URLパラメーターがある場合は検索を実行
   /*

@@ -1,8 +1,8 @@
-import { DOIInfo } from "./browser";
-import { DOIInfoCollection } from "./browser";
-import { DOIStatus } from "./browser";
-import { DOIInfoCollectionFilter } from "./browser";
-export class DOIInfoSearchInput {
+import { DOIInfo } from "./doi_info";
+import { DOIInfoCollection } from "./doi_info";
+import { DOIStatus } from "./doi_info";
+import { DOIFilterResult } from "./doi_filter_result";
+export class DOIFilterInput {
     public minimum_year: number | null = null;
     public maximum_year: number | null = null;
     public type: string | null = null;
@@ -13,8 +13,8 @@ export class DOIInfoSearchInput {
     public doiReferences: string[] = [];
     public status: DOIStatus | null = null;
 
-    public static buildFromURLParameters(): DOIInfoSearchInput {
-        let r = new DOIInfoSearchInput();
+    public static buildFromURLParameters(): DOIFilterInput {
+        let r = new DOIFilterInput();
         const sp = new URL(location.href).searchParams;
 
         for (const [k, v] of sp.entries()) {
@@ -68,7 +68,7 @@ export class DOIInfoSearchInput {
         });
     }
 
-    public search(doiInfoCollectionFilter: DOIInfoCollectionFilter, collection: DOIInfoCollection): number[] {
+    public search(doiInfoCollectionFilter: DOIFilterResult, collection: DOIInfoCollection): number[] {
         let r: number[] = doiInfoCollectionFilter.doiIDs.map(doiID => doiID);
         return this.filter(collection, r);
     }

@@ -1,11 +1,11 @@
-import { DOIInfoCollection } from "./browser";
-import { DOIInfo } from "./browser";
-import { DOIInfoSearchInput } from "./doi_info_search_input";
+import { DOIInfoCollection } from "./doi_info";
+import { DOIInfo } from "./doi_info";
+import { DOIFilterInput } from "./doi_filter_input";
 
 
 export class BrowserInfo {
     public doiInfoCollection: DOIInfoCollection | null = null;
-    public doiInfoSearchInput: DOIInfoSearchInput = new DOIInfoSearchInput();
+    public doiInfoSearchInput: DOIFilterInput = new DOIFilterInput();
     public foundDOIList: DOIInfo[] | null =null;
     public pageNumber : number = 0;
     public pageSize : number = 100;
