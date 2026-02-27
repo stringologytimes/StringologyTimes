@@ -9,6 +9,8 @@ export class BrowserInfo {
     public foundDOIList: DOIInfo[] | null =null;
     public pageNumber : number = 0;
     public pageSize : number = 100;
+    public searchCountCache: Map<string, number> = new Map();
+    public idSequenceCache : Map<number, number[]> = new Map();
 
     public getCurrentDOIListPart(): DOIInfo[] {
         if(this.foundDOIList == null){

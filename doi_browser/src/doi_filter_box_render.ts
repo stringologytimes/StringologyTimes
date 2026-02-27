@@ -33,51 +33,69 @@ function setSelectHTMLElement(selectElement: HTMLSelectElement, options: string[
   });
 }
 
-function renderDOICategorySelectBox(currentDOIInfoCollectionFilter: DOIFilterResult, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, doiInfoSearchInput: DOIFilterInput){
+function renderDOICategorySelectBox(currentDOIInfoCollectionFilter: DOIFilterResult, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, selectedValue: string | null){
   const type_list = currentDOIInfoCollectionFilter.getTypes();
   type_list.sort();
   const typeDoiCountList = type_list.map(type => currentDOIInfoCollectionFilter.searchByType(type, doiNumberFilterSet, doiInfoCollection).length);
   const typeSelect = document.getElementById("type-select");
   if (typeSelect && typeSelect instanceof HTMLSelectElement) {
-    setSelectHTMLElement(typeSelect, type_list, typeDoiCountList, doiInfoSearchInput.type, "Any", currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection);
+    setSelectHTMLElement(typeSelect, type_list, typeDoiCountList, selectedValue, "Any", currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection);
   }
 }
-function renderContainerTitleSelectBox(currentDOIInfoCollectionFilter: DOIFilterResult, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, doiInfoSearchInput: DOIFilterInput){
+function renderContainerTitleSelectBox(currentDOIInfoCollectionFilter: DOIFilterResult, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, selectedValue: string | null){
   const containerTitle_list = currentDOIInfoCollectionFilter.getContainerTitles();
   const containerTitleDoiCountList = containerTitle_list.map(containerTitle => currentDOIInfoCollectionFilter.searchByContainerTitle(containerTitle, doiNumberFilterSet, doiInfoCollection).length);
   const containerTitleSelect = document.getElementById("container-title-select");
   if (containerTitleSelect && containerTitleSelect instanceof HTMLSelectElement) {
-    setSelectHTMLElement(containerTitleSelect, containerTitle_list, containerTitleDoiCountList, doiInfoSearchInput.container_title, "Any", currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection);
+    setSelectHTMLElement(containerTitleSelect, containerTitle_list, containerTitleDoiCountList, selectedValue, "Any", currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection);
   }
 }
 
-function renderMinimumYearSelectBox(currentDOIInfoCollectionFilter: DOIFilterResult, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, doiInfoSearchInput: DOIFilterInput){
+function renderMinimumYearSelectBox(currentDOIInfoCollectionFilter: DOIFilterResult, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, selectedMinimumYear: number | null, selectedMaximumYear: number | null){
   const yearFromSelect = document.getElementById("year-from-select");
   const minYear = currentDOIInfoCollectionFilter.getMinimumYear();
   const maxYear = currentDOIInfoCollectionFilter.getMaxmumYear();
 
   const yearList = Array.from({length: maxYear - minYear + 1}, (_, index) => minYear + index).map(year => year.toString());
-  const currentMaxYear = doiInfoSearchInput.maximum_year == null ? maxYear : doiInfoSearchInput.maximum_year;
-
+  const currentMaxYear = selectedMaximumYear == null ? maxYear : selectedMaximumYear;
   const yearDoiCountListForFromYear = yearList.map(year => currentDOIInfoCollectionFilter.searchByYear(parseInt(year), currentMaxYear, doiNumberFilterSet, doiInfoCollection).length);
-  const minimumYear = doiInfoSearchInput.minimum_year == null ? null : doiInfoSearchInput.minimum_year.toString();
+
+  const filteredYearList = [];
+  const filteredYearDoiCountList = [];
+  for(let i = 0; i < yearList.length; i++){
+    if(i == yearList.length-1 || (yearDoiCountListForFromYear[i] - yearDoiCountListForFromYear[i+1] > 0)){
+      filteredYearList.push(yearList[i]);
+      filteredYearDoiCountList.push(yearDoiCountListForFromYear[i]);
+    }
+  }
+
+  const selectedMinimumYearStr = selectedMinimumYear == null ? null : selectedMinimumYear.toString();
   if (yearFromSelect && yearFromSelect instanceof HTMLSelectElement) {
-    setSelectHTMLElement(yearFromSelect, yearList, yearDoiCountListForFromYear, minimumYear as string | null, "Any", currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection);
+    setSelectHTMLElement(yearFromSelect, filteredYearList, filteredYearDoiCountList, selectedMinimumYearStr, "Any", currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection);
   }
 }
 
-function renderMaximumYearSelectBox(currentDOIInfoCollectionFilter: DOIFilterResult, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, doiInfoSearchInput: DOIFilterInput){
+function renderMaximumYearSelectBox(currentDOIInfoCollectionFilter: DOIFilterResult, doiNumberFilterSet: Set<number>, doiInfoCollection: DOIInfoCollection, selectedMinimumYear: number | null, selectedMaximumYear: number | null){
   const yearToSelect = document.getElementById("year-to-select");
   const minYear = currentDOIInfoCollectionFilter.getMinimumYear();
   const maxYear = currentDOIInfoCollectionFilter.getMaxmumYear();
-  const currentMinimumYear = doiInfoSearchInput.minimum_year == null ? minYear : doiInfoSearchInput.minimum_year;
+  const currentMinimumYear = selectedMinimumYear == null ? minYear : selectedMinimumYear;
 
   const yearList = Array.from({length: maxYear - minYear + 1}, (_, index) => minYear + index).map(year => year.toString());
-  const maximumYear = doiInfoSearchInput.maximum_year == null ? null : doiInfoSearchInput.maximum_year.toString();
+  const selectedMaximumYearStr = selectedMaximumYear == null ? null : selectedMaximumYear.toString();
   const yearDoiCountListForToYear = yearList.map(year => currentDOIInfoCollectionFilter.searchByYear(currentMinimumYear, parseInt(year), doiNumberFilterSet, doiInfoCollection).length);
 
+  const filteredYearList = [];
+  const filteredYearDoiCountList = [];
+  for(let i = 0; i < yearList.length; i++){
+    if(i == 0 || (yearDoiCountListForToYear[i] - yearDoiCountListForToYear[i-1] > 0)){
+      filteredYearList.push(yearList[i]);
+      filteredYearDoiCountList.push(yearDoiCountListForToYear[i]);
+    }
+  }
+
   if (yearToSelect && yearToSelect instanceof HTMLSelectElement) {
-    setSelectHTMLElement(yearToSelect, yearList, yearDoiCountListForToYear, maximumYear as string | null, "Any", currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection);
+    setSelectHTMLElement(yearToSelect, filteredYearList, filteredYearDoiCountList, selectedMaximumYearStr, "Any", currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection);
   }
 }
 
@@ -92,10 +110,10 @@ export function renderFilterBox(browserInfo: BrowserInfo) {
     const currentDOIInfoCollectionFilter = new DOIFilterResult(foundDOIIDs, doiInfoCollection);
     const doiNumberFilterSet = new Set<number>(foundDOIIDs);
 
-    renderDOICategorySelectBox(currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection, browserInfo.doiInfoSearchInput);
-    renderContainerTitleSelectBox(currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection, browserInfo.doiInfoSearchInput);
-    renderMinimumYearSelectBox(currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection, browserInfo.doiInfoSearchInput);
-    renderMaximumYearSelectBox(currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection, browserInfo.doiInfoSearchInput);
+    renderDOICategorySelectBox(currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection, browserInfo.doiInfoSearchInput.type);
+    renderContainerTitleSelectBox(currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection, browserInfo.doiInfoSearchInput.container_title);
+    renderMinimumYearSelectBox(currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection, browserInfo.doiInfoSearchInput.minimum_year, browserInfo.doiInfoSearchInput.maximum_year);
+    renderMaximumYearSelectBox(currentDOIInfoCollectionFilter, doiNumberFilterSet, doiInfoCollection, browserInfo.doiInfoSearchInput.minimum_year, browserInfo.doiInfoSearchInput.maximum_year);
 
   }
 

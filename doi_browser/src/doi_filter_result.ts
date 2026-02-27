@@ -8,6 +8,7 @@ export class DOIFilterResult {
     private containerTitleToDoiMapper: Map<string, number[]> = new Map();
     private doiReferencesToDoiMapper: Map<string, number[]> = new Map();
     private typeToDOIInfoMapper: Map<string, number[]> = new Map();
+    public idsHash: number = 0;
 
 
     public constructor(doiIDs: number[] | null, r: DOIInfoCollection) {
@@ -56,7 +57,28 @@ export class DOIFilterResult {
             }
         });
 
+        this.idsHash = this.computeHash(this.doiIDs);
+
     }
+    public computeHash(arr: number[]): number {
+        let h = 0x811c9dc5; // offset basis
+        for (let i = 0; i < arr.length; i++) {
+            // Force to 32-bit signed, then treat as 4 bytes (little-endian).
+            let x = arr[i] | 0;
+
+            // Mix 4 bytes of x
+            for (let b = 0; b < 4; b++) {
+                const byte = x & 0xff;
+                h ^= byte;
+                // h *= 16777619 (with 32-bit overflow)
+                h = Math.imul(h, 0x01000193);
+                x >>>= 8; // logical shift to bring next byte
+            }
+        }
+        return h >>> 0; // unsigned
+    }
+
+
     public getMaxmumYear(): number {
         if (this.yearToDoiMapper.size == 0) {
             return 0;

@@ -13,6 +13,7 @@ export class DOIFilterInput {
     public doiReferences: string[] = [];
     public status: DOIStatus | null = null;
 
+
     public static buildFromURLParameters(): DOIFilterInput {
         let r = new DOIFilterInput();
         const sp = new URL(location.href).searchParams;
