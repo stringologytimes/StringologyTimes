@@ -58,7 +58,7 @@ namespace DataProcessor
                 {
                     if (!knownDOISet.Contains(v))
                     {
-                        unknownDOISet.Add(v);                        
+                        unknownDOISet.Add(v);
                     }
                 });
             });
@@ -140,7 +140,19 @@ namespace DataProcessor
 
             mergedDOIElementList.ForEach((v) =>
             {
-                r.ContainerTitleList.Add(v.ContainerTitle);
+                if (v.ContainerTitle.Count == 1 && v.ContainerTitle[0] == "")
+                {
+                    r.ContainerTitleList.Add("UNKNOWN");
+                }
+                else if (v.ContainerTitle.Count == 0)
+                {
+                    r.ContainerTitleList.Add("UNKNOWN");                    
+                }
+                else
+                {
+                    var contTitle = String.Join("---", v.ContainerTitle.ToArray());
+                    r.ContainerTitleList.Add(contTitle);
+                }
             });
 
 

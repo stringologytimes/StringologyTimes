@@ -57,8 +57,8 @@ namespace DBLPProcessor
         {
             var UrlPath = opts.DataFolderPath + "/auto_generated/url.csv";
             var TagPath = opts.DataFolderPath + "/auto_generated/tag.csv";
-            var XmlPath = opts.DataFolderPath + "/external/dblp.xml";
-            var JsonPath = opts.DataFolderPath + "/external/arxiv-metadata-oai-snapshot.json";
+            //var XmlPath = opts.DataFolderPath + "/external/dblp.xml";
+            //var JsonPath = opts.DataFolderPath + "/external/arxiv-metadata-oai-snapshot.json";
             var mailAddress = "takaaki.nishimoto@riken.jp";
 
 

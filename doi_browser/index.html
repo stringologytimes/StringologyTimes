@@ -59,6 +59,19 @@
       color: #333;
       margin-top: 10px;
     }
+    .title-text {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    .summary-info-text {
+      font-size: 18px;
+      color: #666;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
 </head>
@@ -108,9 +121,16 @@
   </template>
 
   <template id="doi-info-template">
-    <article>
+    <article style="display: flex; align-items: center; gap: 8px;">
       <details>
-        <summary class="title"></summary>
+        <summary class="title">
+          <span class="title-number-text"></span>
+          <a href="https://example.com" target="_blank" rel="noopener" class="doi-link" onclick="event.stopPropagation();">
+            <img src="images/doi_icon.png" alt="DOI" width="24" height="24">
+          </a>      
+          <span class="title-text"></span>
+          <span class="summary-info-text"></span>
+        </summary>
         <div class="details_div"">
           <ul>
             <li class="date"></li>
@@ -125,6 +145,7 @@
           </ul>
         </div>
       </details>
+
     </article>
   </template>
 </body>

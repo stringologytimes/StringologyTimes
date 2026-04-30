@@ -1,9 +1,13 @@
+param(
+    [switch]$ForceCompile = $false
+)
 
 $7zip = "C:\Program Files\7-Zip\7z.exe"
 $7zipArg = "x -o./data/external/ ./data/external/dblp.xml.gz"
 
 [string]$sourceFile = "./data/external/dblp.xml.gz"
 [string]$destinationFile = "./data/external/dblp.xml"
+
 
 # Open Gzip file
 function Expand-Gzip {
@@ -32,49 +36,47 @@ if (!(Test-Path -Path $destinationDir)) {
     New-Item -ItemType Directory -Path $destinationDir -Force
 }
 
-$skipDownload = $true;
-$localFile = "./data/external/dblp.xml.gz"
+#$skipDownload = $true;
+#$localFile = "./data/external/dblp.xml.gz"
 
-if(!$skipDownload){
-# Download dblp.xml file if needed.
-$remoteUrl = "https://dblp.org/xml/dblp.xml.gz"
-try {
-    Write-Host "Retrieving the last modified date of dblp.xml.gz on the web" -ForegroundColor Yellow
-    
-    $response = Invoke-WebRequest -Uri $remoteUrl -Method Head
-    $remoteLastModified = $response.Headers["Last-Modified"]
-    $remoteDate = [datetime]::ParseExact($remoteLastModified, "R", $null)
-} catch {
-    Write-Host "Failed to retrieve the last modified date of the remote file." -ForegroundColor Red
-    exit
-}
+#if(!$skipDownload){
+## Download dblp.xml file if needed.
+#$remoteUrl = "https://dblp.org/xml/dblp.xml.gz"
+#try {
+#    Write-Host "Retrieving the last modified date of dblp.xml.gz on the web" -ForegroundColor Yellow
+#    
+#    $response = Invoke-WebRequest -Uri $remoteUrl -Method Head
+#    $remoteLastModified = $response.Headers["Last-Modified"]
+#    $remoteDate = [datetime]::ParseExact($remoteLastModified, "R", $null)
+#} catch {
+#    Write-Host "Failed to retrieve the last modified date of the remote file." -ForegroundColor Red
+#    exit
+#}
+#
+#}
 
-}
+#if (Test-Path $localFile) {
+#    $localDate = (Get-Item $localFile).LastWriteTime
+#} else {
+#    $localDate = [datetime]::MinValue
+#}
+#if ($remoteDate -gt $localDate) {
+#    Write-Host "Downloading... $remoteUrl" -ForegroundColor Yellow
+#    Write-Host "The remote file is up-to-date. Starting the download." -ForegroundColor Yellow
+#    Invoke-WebRequest -Uri $remoteUrl -OutFile $localFile
+#} else {
+#    Write-Host "The local file is up-to-date. Download is not required." -ForegroundColor Green
+#}
 
-if (Test-Path $localFile) {
-    $localDate = (Get-Item $localFile).LastWriteTime
-} else {
-    $localDate = [datetime]::MinValue
-}
-if ($remoteDate -gt $localDate) {
-    Write-Host "Downloading... $remoteUrl" -ForegroundColor Yellow
-    Write-Host "The remote file is up-to-date. Starting the download." -ForegroundColor Yellow
-    Invoke-WebRequest -Uri $remoteUrl -OutFile $localFile
-} else {
-    Write-Host "The local file is up-to-date. Download is not required." -ForegroundColor Green
-}
+#Expand-Gzip -sourceFile $sourceFile -destinationFile $destinationFile
 
-
-Expand-Gzip -sourceFile $sourceFile -destinationFile $destinationFile
-
-
-if (!(Test-Path ./data/external/dblp.dtd)){
-    echo "Downloading... https://dblp.org/xml/dblp.dtd"
-    Invoke-WebRequest -Uri https://dblp.org/xml/dblp.dtd -OutFile ./data/external/dblp.dtd    
-}
-else{
-    echo "Skipped the download of the file from https://dblp.org/xml/dblp.dtd"
-}
+#if (!(Test-Path ./data/external/dblp.dtd)){
+#    echo "Downloading... https://dblp.org/xml/dblp.dtd"
+#    Invoke-WebRequest -Uri https://dblp.org/xml/dblp.dtd -OutFile ./data/external/dblp.dtd    
+#}
+#else{
+#    echo "Skipped the download of the file from https://dblp.org/xml/dblp.dtd"
+#}
 
 Write-Host "Execute: ts-node ./scripts/process_user_url_and_doi_lists_main.ts" -ForegroundColor Yellow
 ts-node ./scripts/process_user_url_and_doi_lists_main.ts
@@ -104,21 +106,21 @@ if ($previousUrlHash -ne $urlHashInfo.Hash) {
     $urlHashInfo.Hash | Set-Content -LiteralPath $urlHashPath -Encoding UTF8
 }
 
-## Compute the hash of the dblp.xml file
-Write-Host "Computing the hash of the dblp.xml file" -ForegroundColor Yellow
-$dblpHashInfo = Get-FileHash -LiteralPath "./data/external/dblp.xml" -Algorithm SHA256
-$dblpHashPath = "./data/auto_generated/dblp.xml.sha256"
-$previousDblpHash = $null;
-if (-not (Test-Path -LiteralPath $dblpHashPath -PathType Leaf)) {
-    $previousDblpHash = $null;
-} else {
-    $previousDblpHash = Get-Content -LiteralPath $dblpHashPath -Encoding UTF8
-}
-$DBLPUpdated = $false;
-if ($previousDblpHash -ne $dblpHashInfo.Hash) {
-    $DBLPUpdated = $true;
-    $dblpHashInfo.Hash | Set-Content -LiteralPath $dblpHashPath -Encoding UTF8
-}
+### Compute the hash of the dblp.xml file
+#Write-Host "Computing the hash of the dblp.xml file" -ForegroundColor Yellow
+#$dblpHashInfo = Get-FileHash -LiteralPath "./data/external/dblp.xml" -Algorithm SHA256
+#$dblpHashPath = "./data/auto_generated/dblp.xml.sha256"
+#$previousDblpHash = $null;
+#if (-not (Test-Path -LiteralPath $dblpHashPath -PathType Leaf)) {
+#    $previousDblpHash = $null;
+#} else {
+#    $previousDblpHash = Get-Content -LiteralPath $dblpHashPath -Encoding UTF8
+#}
+#$DBLPUpdated = $false;
+#if ($previousDblpHash -ne $dblpHashInfo.Hash) {
+#    $DBLPUpdated = $true;
+#    $dblpHashInfo.Hash | Set-Content -LiteralPath $dblpHashPath -Encoding UTF8
+#}
 
 
 ## Compute the hash of arxiv-metadata-oai-snapshot.json file
@@ -138,28 +140,31 @@ if ($previousArxivHash -ne $arxivHashInfo.Hash) {
 }
 
 Write-Host "Is url.csv updated? $urlUpdated" -ForegroundColor Yellow
-Write-Host "Is dblp.xml updated? $DBLPUpdated" -ForegroundColor Yellow
+#Write-Host "Is dblp.xml updated? $DBLPUpdated" -ForegroundColor Yellow
 Write-Host "Is arxiv-metadata-oai-snapshot.json updated? $arxivUpdated" -ForegroundColor Yellow
 
-$dblpProcessor = "./dblp_processor/bin/Release/net9.0/dblp_processor"
-$dblpProcessorArgs = @("-x", "./data/external/dblp.xml", "-u", "./data/auto_generated/url.csv", "-t", "./data/auto_generated/tag.csv" , "-o", "./data/auto_generated/stringology_dblp.jsonl" , "-j", "./data/external/arxiv-metadata-oai-snapshot.json")
+$doiProcessor = "./doi_processor/bin/Release/net9.0/doi_processor"
+$doiProcessorArgs = @("-d", "./data")
 
-if ($urlUpdated -or $DBLPUpdated -or $arxivUpdated) {
+if ($urlUpdated -or $arxivUpdated) {
     Write-Host "Compile: $dblpProcessor" -ForegroundColor Yellow
-    cd dblp_processor
+    cd doi_processor
     dotnet build -c Release
     cd ..    
 }
 
-if ($urlUpdated -or $DBLPUpdated -or $arxivUpdated) {
-    Write-Host "Execute: $dblpProcessor $dblpProcessorArgs" -ForegroundColor Yellow
-    $dblpProc = Start-Process -FilePath $dblpProcessor -ArgumentList $dblpProcessorArgs -Wait    
+Write-Host "`$ForceCompile = $ForceCompile" -ForegroundColor Yellow
+
+
+if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
+    Write-Host "Execute: $doiProcessor $doiProcessorArgs" -ForegroundColor Yellow
+    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgs -Wait    
 }else{
-    Write-Host "Skip: $dblpProcessor $dblpProcessorArgs" -ForegroundColor Green
+    Write-Host "Skip: $doiProcessor $doiProcessorArgs" -ForegroundColor Green
 }
 
-Write-Host "Copy: ./data/auto_generated/stringology_dblp.jsonl to ./docs/output/jsonl/stringology_dblp.jsonl" -ForegroundColor Yellow
-Copy-Item "./data/auto_generated/stringology_dblp.jsonl" "./docs/output/jsonl/stringology_dblp.jsonl"
+#Write-Host "Copy: ./data/auto_generated/stringology_dblp.jsonl to ./docs/output/jsonl/stringology_dblp.jsonl" -ForegroundColor Yellow
+#Copy-Item "./data/auto_generated/stringology_dblp.jsonl" "./docs/output/jsonl/stringology_dblp.jsonl"
 
 ## tsc -p ./scripts/browser/tsconfig.json
 

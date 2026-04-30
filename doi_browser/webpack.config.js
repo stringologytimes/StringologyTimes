@@ -2,7 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+
+
 module.exports = {
+
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -38,6 +41,14 @@ module.exports = {
         {
           from: 'doi_info_parts',
           to: 'doi_info_parts',
+        },
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'src/images',
+          to: 'images',
         },
       ],
     }),

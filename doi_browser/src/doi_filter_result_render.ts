@@ -3,6 +3,17 @@ import { BrowserInfo } from "./browser_info";
 
 
 export class Render {
+    public static getSummaryInfoText(doiInfo: DOIInfo): string {
+        const dataStr = `${doiInfo.year}-${doiInfo.month}`;
+        const containerTitle = doiInfo.container_title;
+        const volumStr = doiInfo.volume;
+        
+        if(volumStr.length > 0){
+            return `(${dataStr}) ${containerTitle}(Volume: ${volumStr})`;
+        }else{
+            return `(${dataStr}) ${containerTitle}`;
+        }
+    }
     public static render(browserInfo: BrowserInfo) {
         const outputDiv = document.getElementById("output");
         if (!outputDiv) {
@@ -50,13 +61,25 @@ export class Render {
                 }
                 */
 
-                const titleSpan = article.querySelector('.title');
-                if (titleSpan){
+                const titleNumberSpan = article.querySelector('.title-number-text');
+                if (titleNumberSpan){
                     const ith = (browserInfo.pageNumber * browserInfo.pageSize) + index + 1;
-                    const titleStr = doiInfo.title || '';
-                    const viewStr = `${ith}: ${titleStr}`;
-                    titleSpan.textContent = viewStr;
+                    titleNumberSpan.textContent = `${ith}: `;
                 }
+                const titleSpan = article.querySelector('.title-text');
+                if (titleSpan){
+                    const titleStr = doiInfo.title || '';
+                    titleSpan.textContent = titleStr;
+                }
+                const doiLink = article.querySelector('.doi-link');
+                if (doiLink){
+                    doiLink.setAttribute('href', `https://doi.org/${encodeURIComponent(doiInfo.doi)}`);
+                }
+                const summaryInfoSpan = article.querySelector('.summary-info-text');
+                if (summaryInfoSpan){
+                    summaryInfoSpan.textContent = this.getSummaryInfoText(doiInfo);
+                }
+
 
                 const dateLi = article.querySelector('.date');
                 if(dateLi){
