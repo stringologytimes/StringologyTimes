@@ -20,6 +20,8 @@ namespace DataProcessor
         public string Year { get; set; } = "";
         public string Month { get; set; } = "";
 
+        public string Source { get; set; } = "";
+
         public List<string> DOIReferences { get; set; } = new List<string>();
         public List<string> UnknownReferences { get; set; } = new List<string>();
 
@@ -233,6 +235,8 @@ namespace DataProcessor
                 element.Month = yearMonth.Value.ToString();
             }
 
+            element.Source = "CrossRef";
+
             return element;
         }
         /*
@@ -410,7 +414,7 @@ namespace DataProcessor
 
             }
 
-
+            element.Source = "DataCite";
 
             return element;
 
@@ -426,7 +430,8 @@ namespace DataProcessor
             dataList.Add(JsonSerializer.Serialize(this.Month));
             dataList.Add(JsonSerializer.Serialize(this.ContainerTitle));
             dataList.Add(JsonSerializer.Serialize(this.Volume));
-
+            dataList.Add(JsonSerializer.Serialize(this.Source));
+            
             List<string> authorStringList = new List<string>();
             this.Authors.ForEach((v) =>
             {

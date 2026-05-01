@@ -19,6 +19,7 @@ namespace DataProcessor
         public List<string> MonthList { get; set; } = new List<string>();
         public List<string> VolumeList { get; set; } = new List<string>();
         public List<string> TypeList { get; set; } = new List<string>();
+        public List<string> SourceList { get; set; } = new List<string>();
         //public List<string> TitleSizeList { get; set; } = new List<string>();
         public List<string> CompressedFullNameList { get; set; } = new List<string>();
         public List<string> CompressedTitleList { get; set; } = new List<string>();
@@ -193,6 +194,7 @@ namespace DataProcessor
                     r.MonthList.Add(v.Month);
                     r.VolumeList.Add(v.Volume);
                     r.TypeList.Add(v.Type);
+                    r.SourceList.Add(v.Source);
                     //r.TitleSizeList.Add(v.Title.Length.ToString());
                     //r.CompressedTitleList.Add(v.Title.Length.ToString());
                     if (isPrimary)
@@ -231,6 +233,7 @@ namespace DataProcessor
             CSVFunctions.WriteCSVByGZip(outputFolder + "/month.csv.gz", MonthList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/volume.csv.gz", VolumeList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/type.csv.gz", TypeList);
+            CSVFunctions.WriteCSVByGZip(outputFolder + "/source.csv.gz", SourceList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_full_name.csv.gz", CompressedFullNameList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_title.csv.gz", CompressedTitleList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_doi_reference.csv.gz", CompressedDOIReferenceList);

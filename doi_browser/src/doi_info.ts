@@ -13,7 +13,7 @@ export class LightWeightDOIInfo {
     public month: number = 0;
     public authorIDs: number[] = [];
     public status: number = -1;
-    public type: string = "unknown";
+    public type: string = "Unknown";
     public container_title: string = "";
     public volume: string = "";
     public tags: string[] = [];
@@ -31,7 +31,7 @@ export class DOIInfo {
     public tags: string[] = [];
     public doiReferences: string[] = [];
     public keywords: string[] = [];
-    public type: string = "unknown";
+    public type: string = "Unknown";
     public status: DOIStatus = "unknown";
 }
 
