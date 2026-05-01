@@ -45,6 +45,17 @@ export class DOIInfoCollection {
         return this.lightweightDOIInfos.length;
     }
     public getDOIByID(id: number): string {
+        if(id >= this.lightweightDOIInfos.length){
+            console.log("id is greater than the length of lightweightDOIInfos");
+            console.log("id: " + id);
+            console.log("length of lightweightDOIInfos: " + this.lightweightDOIInfos.length);
+            throw new Error("id is greater than the length of lightweightDOIInfos");
+        }
+        if(Number.isNaN(id)){
+            console.log("id is NaN");
+            console.log("id: " + id);
+            throw new Error("id is NaN");
+        }
         return this.lightweightDOIInfos[id].doi;
     }
 
@@ -58,6 +69,7 @@ export class DOIInfoCollection {
         r.authors = this.lightweightDOIInfos[index].authorIDs.map(id => this.authorList[id]);
         r.container_title = this.lightweightDOIInfos[index].container_title;
         r.volume = this.lightweightDOIInfos[index].volume;
+
         r.doiReferences = this.lightweightDOIInfos[index].doiReferenceIDs.map(id => this.getDOIByID(id));
         r.type = this.lightweightDOIInfos[index].type;
 
@@ -72,6 +84,7 @@ export class DOIInfoCollection {
     }
 
     public static async load(folderURL: string): Promise<DOIInfoCollection> {
+        console.log("loading DOIInfoCollection from: " + folderURL);
         let r = new DOIInfoCollection();
         const doi_list = await load_gzip_text_lines(folderURL + "/doi.csv.gz");
         console.log("size of doi_list: " + doi_list.length);
@@ -81,7 +94,7 @@ export class DOIInfoCollection {
             r.lightweightDOIInfos.push(doiInfo);
         });
 
-        var word_list = await load_gzip_text_lines(folderURL + "/word.csv.gz", false);
+        var word_list = await load_gzip_text_lines(folderURL + "/word.csv.gz");
         var title_list = await load_gzip_integer_list_lines(folderURL + "/compressed_title.csv.gz");
         title_list.forEach((numbers, index) => {
             const title = numbers.map(numbers => word_list[numbers]).join(" ");
@@ -89,37 +102,44 @@ export class DOIInfoCollection {
         });
 
         const year_list = await load_gzip_integer_lines(folderURL + "/year.csv.gz");
+        console.log("size of year_list: " + year_list.length);
         year_list.forEach((year, index) => {
             r.lightweightDOIInfos[index].year = year;
         });
 
         const month_list = await load_gzip_integer_lines(folderURL + "/month.csv.gz");
+        console.log("size of month_list: " + month_list.length);
         month_list.forEach((month, index) => {
             r.lightweightDOIInfos[index].month = month;
         });
 
-        r.authorList = await load_gzip_text_lines(folderURL + "/full_name.csv.gz", false);
+        r.authorList = await load_gzip_text_lines(folderURL + "/full_name.csv.gz");
         const author_number_list = await load_gzip_integer_list_lines(folderURL + "/compressed_full_name.csv.gz");
+        console.log("size of author_number_list: " + author_number_list.length);
         author_number_list.forEach((numbers, index) => {
             r.lightweightDOIInfos[index].authorIDs = numbers;
         });
 
         const volume_list = await load_gzip_text_lines(folderURL + "/volume.csv.gz");
+        console.log("size of volume_list: " + volume_list.length);
         volume_list.forEach((volume, index) => {
             r.lightweightDOIInfos[index].volume = volume;
         });
 
         const container_title_list = await load_gzip_text_lines(folderURL + "/container_title.csv.gz");
+        console.log("size of container_title_list: " + container_title_list.length);
         container_title_list.forEach((container_title, index) => {
             r.lightweightDOIInfos[index].container_title = container_title;
         });
 
         const doi_references_list = await load_gzip_integer_list_lines(folderURL + "/compressed_doi_reference.csv.gz");
+        console.log("size of doi_references_list: " + doi_references_list.length);
         doi_references_list.forEach((numbers, index) => {
             r.lightweightDOIInfos[index].doiReferenceIDs = numbers;
         });
-
+        
         const type_list = await load_gzip_text_lines(folderURL + "/type.csv.gz");
+        console.log("size of type_list: " + type_list.length);
         type_list.forEach((type, index) => {
             if (type.length > 0) {
                 r.lightweightDOIInfos[index].type = type;
@@ -130,6 +150,7 @@ export class DOIInfoCollection {
 
 
         const status_list = await load_gzip_integer_lines(folderURL + "/doi_flag.csv.gz");
+        console.log("size of status_list: " + status_list.length);
         status_list.forEach((status, index) => {
             if (index >= r.lightweightDOIInfos.length) {
                 console.log("status_list is longer than lightweightDOIInfos");
@@ -137,6 +158,16 @@ export class DOIInfoCollection {
             }
             r.lightweightDOIInfos[index].status = status;
         });
+
+        for(let i = 0; i < r.lightweightDOIInfos.length; i++){
+            if(r.lightweightDOIInfos[i] === undefined){
+                console.log("lightweightDOIInfos[i] is undefined");
+                console.log("i: " + i);
+                console.log("length of lightweightDOIInfos: " + r.lightweightDOIInfos.length);
+                throw new Error("lightweightDOIInfos[i] is undefined");
+            }
+        }
+        console.log("lightweightDOIInfos is loaded successfully : " + r.lightweightDOIInfos.length);
 
 
 

@@ -19,6 +19,12 @@ export class DOIFilterResult {
         }
 
         this.doiIDs.forEach(doiID => {
+            if(doiID >= r.lightweightDOIInfos.length){
+                console.log("doiID is greater than the length of lightweightDOIInfos");
+                console.log("doiID: " + doiID);
+                console.log("length of lightweightDOIInfos: " + r.lightweightDOIInfos.length);
+                throw new Error("doiID is greater than the length of lightweightDOIInfos");
+            }
             const doiInfo = r.lightweightDOIInfos[doiID];
             if (this.yearToDoiMapper.has(doiInfo.year)) {
                 this.yearToDoiMapper.get(doiInfo.year)!.push(doiID);

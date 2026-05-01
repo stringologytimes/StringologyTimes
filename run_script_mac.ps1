@@ -146,7 +146,7 @@ Write-Host "Is arxiv-metadata-oai-snapshot.json updated? $arxivUpdated" -Foregro
 $doiProcessor = "./doi_processor/bin/Release/net9.0/doi_processor"
 $doiProcessorArgs = @("-d", "./data")
 
-if ($urlUpdated -or $arxivUpdated) {
+if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
     Write-Host "Compile: $dblpProcessor" -ForegroundColor Yellow
     cd doi_processor
     dotnet build -c Release
@@ -162,6 +162,22 @@ if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
 }else{
     Write-Host "Skip: $doiProcessor $doiProcessorArgs" -ForegroundColor Green
 }
+
+Write-Host "Copying folder: ./data/auto_generated/result/doi_info_parts to ./doi_browser/doi_info_parts" -ForegroundColor Yellow
+$sourceFolder = "./data/auto_generated/result/doi_info_parts"
+$destinationFolder = "./doi_browser/doi_info_parts"
+if (Test-Path $sourceFolder) {
+    Copy-Item $sourceFolder $destinationFolder -Recurse -Force
+} else {
+    Write-Host "Source folder $sourceFolder does not exist. Skipping copy." -ForegroundColor Red
+}
+
+
+cd ./doi_browser
+npm run build
+cd ..
+
+
 
 #Write-Host "Copy: ./data/auto_generated/stringology_dblp.jsonl to ./docs/output/jsonl/stringology_dblp.jsonl" -ForegroundColor Yellow
 #Copy-Item "./data/auto_generated/stringology_dblp.jsonl" "./docs/output/jsonl/stringology_dblp.jsonl"

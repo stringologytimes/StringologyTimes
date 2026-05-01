@@ -19,25 +19,31 @@ export function load_gzip_text(url: string): Promise<string> {
             return decoder.decode(decompressed);
         });
 }
-export async function load_gzip_text_lines(url: string, remove_empty: boolean = true): Promise<string[]> {
+export async function load_gzip_text_lines(url: string): Promise<string[]> {
+    return load_gzip_text(url).then(text => text.split('\n'));
+
+    /*
     if (remove_empty) {
         return load_gzip_text(url).then(text => text.split('\n').filter(line => line.trim()));
     } else {
-        return load_gzip_text(url).then(text => text.split('\n'));
     }
+    */
 }
 export async function load_gzip_integer_lines(url: string): Promise<number[]> {
     return load_gzip_text(url).then(text => text.split('\n').map(line => parseInt(line)));
 }
 
 export async function load_gzip_integer_list_lines(url: string): Promise<number[][]> {
-    const lines = await load_gzip_text(url).then(text => text.split('\n').filter(line => line.trim()));
+    const lines = await load_gzip_text(url).then(text => text.split('\n'));
     const r: number[][] = [];
     lines.forEach(line => {
         const parts = line.split(',');
         const row: number[] = [];
         parts.forEach(part => {
-            row.push(parseInt(part));
+            const number = parseInt(part);
+            if(!Number.isNaN(number)){
+                row.push(number);
+            }
         });
         r.push(row);
     });
