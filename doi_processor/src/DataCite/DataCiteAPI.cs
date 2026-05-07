@@ -112,6 +112,13 @@ namespace DataProcessor
                 Timeout = TimeSpan.FromSeconds(30),
             };
 
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Executing DataCite API for DOI: {contactEmail} ...");
+            Console.ResetColor();
+            Console.ResetColor();
+
+
             // DataCiteは頻繁に叩く場合 User-Agent に連絡先(mailto)を入れることを推奨
             // これにより "Identified" 扱いになり、レート上限が上がります。:contentReference[oaicite:2]{index=2}
             http.DefaultRequestHeaders.UserAgent.ParseAdd(

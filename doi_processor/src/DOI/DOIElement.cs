@@ -14,7 +14,7 @@ namespace DataProcessor
         public string DOI { get; set; } = "";
         public string Title { get; set; } = "";
         public List<AuthorInfo> Authors { get; set; } = new List<AuthorInfo>();
-        public List<string> ContainerTitle { get; set; } = new List<string>();
+        public string ContainerTitle { get; set; } = "";
         public string Type { get; set; } = "";
         public string Volume { get; set; } = "";
         public string Year { get; set; } = "";
@@ -145,7 +145,7 @@ namespace DataProcessor
                 var containerTitleList = JsonSerializer.Deserialize<List<string>>(dict["container-title"]);
                 if (containerTitleList != null && containerTitleList.Count > 0)
                 {
-                    element.ContainerTitle = containerTitleList.ToList();
+                    element.ContainerTitle = string.Join("---", containerTitleList.ToArray());
                     containerTitleFlag = true;
                 }
             }
@@ -154,7 +154,7 @@ namespace DataProcessor
                 var containerTitleList = JsonSerializer.Deserialize<List<string>>(dict["title"]);
                 if (containerTitleList != null && containerTitleList.Count > 0)
                 {
-                    element.ContainerTitle = containerTitleList.ToList();
+                    element.ContainerTitle = string.Join("---", containerTitleList.ToArray());
                     containerTitleFlag = true;
                 }
             }
@@ -165,7 +165,7 @@ namespace DataProcessor
             {
                 if (element.Type == "CrossRef:monograph" || element.Type == "CrossRef:posted-content" || element.Type == "CrossRef:book")
                 {
-                    element.ContainerTitle = new List<string>(){""};
+                    element.ContainerTitle = "UNKNOWN";
                 }
                 else
                 {

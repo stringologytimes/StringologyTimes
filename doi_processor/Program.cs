@@ -105,7 +105,11 @@ namespace DBLPProcessor
             }
 
             outputSystemMessageFunction("Applying type replacement rules");
-            ReplacementRules.Apply1(opts.DataFolderPath + "/raw/doi_processor/type_replacement_rules.csv", primaryDOIElementDict, secondaryDOIElementDict);
+            ReplacementRules.ReplaceType(opts.DataFolderPath + "/raw/doi_processor/type_replacement_rules.csv", primaryDOIElementDict, secondaryDOIElementDict);
+
+            outputSystemMessageFunction("Applying container-title replacement rules");
+            ReplacementRules.ReplaceContainerTitle(opts.DataFolderPath + "/raw/doi_processor/container_title_replacement_rules.csv", primaryDOIElementDict, secondaryDOIElementDict);
+            
 
 
             outputSystemMessageFunction("Saving primary DOI element dictionary to: " + resultFolderPath + "/primary_doi_elements.jsonl");

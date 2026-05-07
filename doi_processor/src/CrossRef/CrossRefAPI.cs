@@ -116,6 +116,15 @@ namespace DataProcessor
                     {
                         await rate.WaitAsync(ct); // レート制限
                         var json = await GetWorkJsonByDoiAsync(doi, mailto, ct);
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.WriteLine($"Executing CrossRef API for DOI: {doi} ...");
+                        Console.ResetColor();
+                   
+                        Console.ResetColor();
+                   
+
+
                         lock (result) result[doi] = json; // nullならNotFound
                         lock (result) counter++;
 

@@ -165,9 +165,10 @@ if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
 
 Write-Host "Copying folder: ./data/auto_generated/result/doi_info_parts to ./doi_browser/doi_info_parts" -ForegroundColor Yellow
 $sourceFolder = "./data/auto_generated/result/doi_info_parts"
-$destinationFolder = "./doi_browser/doi_info_parts"
+$destinationFolder = "./doi_browser"
 if (Test-Path $sourceFolder) {
     Copy-Item $sourceFolder $destinationFolder -Recurse -Force
+    Write-Host "Copied folder: $sourceFolder to $destinationFolder" -ForegroundColor Green
 } else {
     Write-Host "Source folder $sourceFolder does not exist. Skipping copy." -ForegroundColor Red
 }
