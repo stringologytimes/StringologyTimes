@@ -7,5 +7,5 @@
       "rootDir": "./",
       "moduleResolution": "node"
     },
-    "include": ["src/doi_info.ts", "src/doi_filter_result_render.ts", "src/gzip_loader.ts", "src/browser_info.ts", "src/index.ts"]
+    "include": ["src/doi_info.ts", "src/render/doi_filter_result_render.ts", "src/gzip_loader.ts", "src/browser_info.ts", "src/index.ts"]
   }

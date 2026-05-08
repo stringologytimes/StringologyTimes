@@ -1,11 +1,15 @@
 
 import { BrowserInfo } from "./browser_info";
-import { Render } from "./doi_filter_result_render";
-import { renderFilterBox } from "./doi_filter_box_render";
-import { DOIFilterResult } from "./doi_filter_result";
+import { Render } from "./render/doi_filter_result_render";
+import { renderFilterBox } from "./render/doi_filter_box_render";
+
+import { DOIFilterResult } from "./doi_filter/doi_filter_result";
+import { DOIFilterPartialResult } from "./doi_filter/doi_filter_partial_result";
+import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
 
 
 export function updatePaginationControls(browserInfo: BrowserInfo) {
+  /*
     const prevButton = document.getElementById('prevPageButton');
     const nextButton = document.getElementById('nextPageButton');
     const pageInfo = document.getElementById('pageInfo');
@@ -31,24 +35,27 @@ export function updatePaginationControls(browserInfo: BrowserInfo) {
       const endIndex = Math.min(startIndex + browserInfo.pageSize - 1, browserInfo.foundDOIList.length);
       pageInfo.textContent = `ページ ${currentPage}/${totalPages} (${startIndex}-${endIndex} / ${browserInfo.foundDOIList.length}件)`;
     }
+    */
   }
 
 export function process(browserInfo: BrowserInfo){
     console.log("process");
+    browserInfo.processCurrentDOIFilterInput();
     if(browserInfo.doiInfoCollection != null){
-      const doiIDs = Array.from({length: browserInfo.doiInfoCollection!.length()}, (_, index) => index);
-      if(browserInfo.doiInfoSearchInput.is_empty()){
-        browserInfo.foundDOIList = Array.from({length: browserInfo.doiInfoCollection!.length()}, (_, index) => browserInfo.doiInfoCollection!.getDOIInfo(index));
+      browserInfo.debug();
+
+      const currentDOIFilterPartialResult = browserInfo.getCurrentDOIFilterPartialResult();
+      const currentDOIFilterInput = browserInfo.getCurrentDOIFilterInput();      
+      const currentDOIFilterResult = browserInfo.getCurrentDOIFilterResult();
+      renderFilterBox(currentDOIFilterResult, currentDOIFilterInput, browserInfo.doiInfoCollection!);
+      if(currentDOIFilterInput.viewMode == "article_list"){
+        DOIFilterStandardRender.render(currentDOIFilterPartialResult, browserInfo.doiInfoCollection!);
       }else{
-        const foundDOIIDs = browserInfo.doiInfoSearchInput.search(new DOIFilterResult(doiIDs, browserInfo.doiInfoCollection!), browserInfo.doiInfoCollection!);
-        browserInfo.foundDOIList = foundDOIIDs.map(doiID => browserInfo.doiInfoCollection!.getDOIInfo(doiID));
+        throw new Error("Unknown view mode");
       }
-      browserInfo.pageNumber = 0; // 検索結果が変わったら最初のページに戻る  
   
-  
-      renderFilterBox(browserInfo);
-      Render.render(browserInfo);
-      updatePaginationControls(browserInfo);
+      //Render.render(browserInfo);
+      //updatePaginationControls(browserInfo);
     }
   }
   
@@ -58,33 +65,33 @@ export function filterInputChange(inputElementName : string, browserInfo: Browse
     if(inputElementName == "type") {
       const type = (document.getElementById("type-select") as HTMLSelectElement).value;
       if(type == "dont-care") {
-        browserInfo.doiInfoSearchInput.type = null;
+        browserInfo.currentDOIFilterInput.type = null;
       }else{
-        browserInfo.doiInfoSearchInput.type = type;
+        browserInfo.currentDOIFilterInput.type = type;
       }
     }
     else if(inputElementName == "container-title") {
       const containerTitle = (document.getElementById("container-title-select") as HTMLSelectElement).value;
       if(containerTitle == "dont-care") {
-        browserInfo.doiInfoSearchInput.container_title = null;
+        browserInfo.currentDOIFilterInput.container_title = null;
       }else{
-        browserInfo.doiInfoSearchInput.container_title = containerTitle;
+        browserInfo.currentDOIFilterInput.container_title = containerTitle;
       }
     }
     else if(inputElementName == "year-from") {
       const yearFrom = (document.getElementById("year-from-select") as HTMLSelectElement).value;
       if(yearFrom == "dont-care") {
-        browserInfo.doiInfoSearchInput.minimum_year = null;
+        browserInfo.currentDOIFilterInput.minimum_year = null;
       }else{
-        browserInfo.doiInfoSearchInput.minimum_year = parseInt(yearFrom);
+        browserInfo.currentDOIFilterInput.minimum_year = parseInt(yearFrom);
       }
     }
     else if(inputElementName == "year-to") {
       const yearTo = (document.getElementById("year-to-select") as HTMLSelectElement).value;
       if(yearTo == "dont-care") {
-        browserInfo.doiInfoSearchInput.maximum_year = null;
+        browserInfo.currentDOIFilterInput.maximum_year = null;
       }else{
-        browserInfo.doiInfoSearchInput.maximum_year = parseInt(yearTo);
+        browserInfo.currentDOIFilterInput.maximum_year = parseInt(yearTo);
       }
     }
     else{

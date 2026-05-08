@@ -1,12 +1,12 @@
 import { DOIInfoCollection } from "./doi_info";
 import { BrowserInfo } from "./browser_info";
-import { Render } from "./doi_filter_result_render";
-import { DOIFilterInput } from "./doi_filter_input";
-import { renderFilterBox } from "./doi_filter_box_render";
-import { DOIFilterResult } from "./doi_filter_result";
+import { Render } from "./render/doi_filter_result_render";
+import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
+import { DOIFilterInput } from "./doi_filter/doi_filter_input";
 import * as EventFunctions from "./event_functions";
 
 let browserInfo = new BrowserInfo();
+(window as any).browserInfo = browserInfo;
 
 console.log("index.ts loaded");
 
@@ -14,32 +14,32 @@ console.log("index.ts loaded");
 
 
 
-
+/*
 function setFoundDOIList(list: any[]) {
   browserInfo.foundDOIList = list;
   browserInfo.pageNumber = 0; // 検索結果が変わったら最初のページに戻る
   Render.render(browserInfo);
   EventFunctions.updatePaginationControls(browserInfo);
 }
+*/
 
 function goToPage(pageNumber: number) {
-  const totalPages = browserInfo.foundDOIList
-    ? Math.ceil(browserInfo.foundDOIList.length / browserInfo.pageSize)
-    : 0;
-  if (pageNumber >= 0 && pageNumber < totalPages) {
-    browserInfo.pageNumber = pageNumber;
-    Render.render(browserInfo);
-    EventFunctions.updatePaginationControls(browserInfo);
-  }
+  browserInfo.currentDOIFilterInput.pageNumber = pageNumber;
+  browserInfo.processCurrentDOIFilterInput();
+  DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterPartialResult(), browserInfo.doiInfoCollection!);
+  EventFunctions.updatePaginationControls(browserInfo);
 }
 
+/*
 function goToPreviousPage() {
-  if (browserInfo.pageNumber > 0) {
-    goToPage(browserInfo.pageNumber - 1);
+  if (browserInfo.doiFilterInputNumber > 0) {
+    goToPage(browserInfo.doiFilterInputNumber - 1);
   }
 }
 
 function goToNextPage() {
+  goToNextPage(browserInfo.doiFilterInputNumber + 1);
+
   const totalPages = browserInfo.foundDOIList
     ? Math.ceil(browserInfo.foundDOIList.length / browserInfo.pageSize)
     : 0;
@@ -47,6 +47,7 @@ function goToNextPage() {
     goToPage(browserInfo.pageNumber + 1);
   }
 }
+*/
 
 async function initialize() {
   await new Promise(resolve => setTimeout(resolve, 1000));
@@ -63,6 +64,7 @@ function preprocessURLParameters() {
   }
   // URLパラメーターからページ番号を読み込む
   const urlParams = new URL(location.href).searchParams;
+  /*
   const pageParam = urlParams.get('page');
   if (pageParam) {
     const pageNumber = parseInt(pageParam);
@@ -70,8 +72,14 @@ function preprocessURLParameters() {
       browserInfo.pageNumber = pageNumber;
     }
   }
-  browserInfo.doiInfoSearchInput = DOIFilterInput.buildFromURLParameters();
+  */
 
+  console.log("preprocessURLParameters");
+  const currentDOIFilterInput = DOIFilterInput.buildFromURLParameters();
+  console.log("currentDOIFilterInput", currentDOIFilterInput);
+  browserInfo.initialize(currentDOIFilterInput, browserInfo.doiInfoCollection!);
+  console.log("browserInfo.initialize");
+  DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterPartialResult(), browserInfo.doiInfoCollection!);
   // URLパラメーターがある場合は検索を実行
   /*
   if (urlParams.toString().length > 0 && !pageParam) {
@@ -84,6 +92,7 @@ function preprocessURLParameters() {
 
 // ボタンのイベントリスナーを設定
 function setupButtons() {
+  /*
   const renderAllButton = document.getElementById('renderAllButton');
   if (renderAllButton) {
     renderAllButton.addEventListener('click', () => {
@@ -101,6 +110,7 @@ function setupButtons() {
   if (nextButton) {
     nextButton.addEventListener('click', goToNextPage);
   }
+  */
 }
 
 function showLoading() {
@@ -117,21 +127,14 @@ function hideLoading() {
   }
 }
 
-function filterInputChange(inputElementName : string) {
+function filterInputChange(inputElementName: string) {
   EventFunctions.filterInputChange(inputElementName, browserInfo);
 }
 
 function resetFilter() {
-  browserInfo.doiInfoSearchInput.authors = [];
-  browserInfo.doiInfoSearchInput.tags = [];
-  browserInfo.doiInfoSearchInput.volume = null;
-  browserInfo.doiInfoSearchInput.container_title = null;
-  browserInfo.doiInfoSearchInput.doiReferences = [];
-  browserInfo.doiInfoSearchInput.status = null;
-  browserInfo.doiInfoSearchInput.type = null;
-  browserInfo.doiInfoSearchInput.minimum_year = null;
-  browserInfo.doiInfoSearchInput.maximum_year = null;
-  EventFunctions.process(browserInfo);
+  browserInfo.currentDOIFilterInput = new DOIFilterInput();
+  browserInfo.processCurrentDOIFilterInput();
+  DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterPartialResult(), browserInfo.doiInfoCollection!);
 }
 
 // グローバルスコープに公開（onchange属性からアクセスできるようにする）

@@ -1,5 +1,5 @@
-import {  DOIInfo } from "./doi_info";
-import { BrowserInfo } from "./browser_info";
+import {  DOIInfo } from "../doi_info";
+import { BrowserInfo } from "../browser_info";
 
 
 export class Render {
@@ -14,6 +14,7 @@ export class Render {
             return `(${dataStr}) ${containerTitle}`;
         }
     }
+    /*
     public static render(browserInfo: BrowserInfo) {
         const outputDiv = document.getElementById("output");
         if (!outputDiv) {
@@ -49,17 +50,7 @@ export class Render {
 
                 // 基本情報を設定
                 article.setAttribute("id", `article_${doiInfo.id}`);
-                /*
-                const doiSpan = article.querySelector('.doi');
-                if (doiSpan) {
-                    const link = document.createElement('a');
-                    link.href = `https://doi.org/${encodeURIComponent(doiInfo.doi)}`;
-                    link.target = '_blank';
-                    link.textContent = doiInfo.doi;
-                    doiSpan.textContent = '';
-                    doiSpan.appendChild(link);
-                }
-                */
+
 
                 const titleNumberSpan = article.querySelector('.title-number-text');
                 if (titleNumberSpan){
@@ -145,23 +136,6 @@ export class Render {
                         }
                     });
                     
-                    // クリックイベントを追加して表示/非表示を切り替え
-                    /*
-                    doiReferencesDiv.addEventListener('click', (e) => {
-                        const target = e.target as HTMLElement;
-                        console.log("Click!");
-                        // リンクやその親要素（.doi-reference）をクリックした場合は、divのクリックイベントを発火させない
-                        if (target.tagName === 'A' || target.closest('.doi-reference')) {
-                            return;
-                        }
-                        e.stopPropagation();
-                        if (doiReferencesDiv.classList.contains('expanded')) {
-                            doiReferencesDiv.classList.remove('expanded');
-                        } else {
-                            doiReferencesDiv.classList.add('expanded');
-                        }
-                    });
-                    */
                 }
 
                 outputDiv.appendChild(article);
@@ -169,6 +143,8 @@ export class Render {
         }
 
     }
+    */
+   /*
     public static setFoundDOIList(browserInfo: BrowserInfo, list: DOIInfo[]) {
         browserInfo.foundDOIList = list;
         this.render(browserInfo);
@@ -194,4 +170,6 @@ export class Render {
         }
 
     }
+    */
 }
+
