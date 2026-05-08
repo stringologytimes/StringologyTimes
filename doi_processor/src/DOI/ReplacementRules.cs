@@ -19,7 +19,7 @@ namespace DataProcessor
                 var typeReplacementRulesDict = new Dictionary<string, string>();
                 typeReplacementRules.ForEach((v) =>
                 {
-                    var cols = v.Split(",");
+                    var cols = v.Split('\t');
                     var key = cols[0].Trim();
                     var value = cols[1].Trim();
                     typeReplacementRulesDict[key] = value;
@@ -60,7 +60,7 @@ namespace DataProcessor
                 var replacementRulesDict = new Dictionary<string, string>();
                 replacementRules.ForEach((v) =>
                 {
-                    var cols = v.Split(",");
+                    var cols = v.Split('\t');
                     var key = cols[0].Trim();
                     var value = cols[1].Trim();
                     replacementRulesDict[key] = value;
@@ -77,49 +77,70 @@ namespace DataProcessor
 
         }
 
+        private static bool MatchCheck(string keyWithMark, string value)
+        {
+            if (keyWithMark.Length == 0)
+            {
+                return false;
+            }
+            var key = keyWithMark[0] == '=' ? keyWithMark.Substring(1) : keyWithMark;
+
+            if (keyWithMark[0] == '=')
+            {
+
+                Regex regex = new Regex(key);
+                Match match = regex.Match(value);
+                return match.Success;
+            }
+            else
+            {
+                return key == value;
+            }
+
+        }
+
         private static void replace(Dictionary<string, string> rules, string replacedPropertyName, Dictionary<string, DOIElement> DOIElementDict)
         {
             var keyList = rules.Keys.ToList();
             HashSet<string> replacedNameSet = new HashSet<string>();
             DOIElementDict.Values.ToList().ForEach((DOIElement v) =>
             {
+#pragma warning disable CS0219 
                 bool isMatched = false;
-                foreach (var key in keyList)
+#pragma warning restore CS0219
+        
+                foreach (var keyWithMark in keyList)
                 {
-                    Regex regex = new Regex(key);
+                    var value = replacedPropertyName == "ContainerTitle" ? v.ContainerTitle : v.Type;
+                    var isKeyMatched = MatchCheck(keyWithMark, value);
 
-                    if (replacedPropertyName == "ContainerTitle")
+                    if (isKeyMatched)
                     {
-                        Match match = regex.Match(v.ContainerTitle);
-                        if (match.Success)
+                        if (replacedPropertyName == "ContainerTitle")
                         {
                             if (!replacedNameSet.Contains(v.ContainerTitle))
                             {
                                 replacedNameSet.Add(v.ContainerTitle);
-                                Console.WriteLine($"Replaced container title: {v.ContainerTitle} -> {rules[key]}");
+                                Console.WriteLine($"Replaced container title: {v.ContainerTitle} -> {rules[keyWithMark]}");
                             }
-                            v.ContainerTitle = rules[key];
+                            v.ContainerTitle = rules[keyWithMark];
                             isMatched = true;
                             break;
-                        }
-                    }
-                    else if (replacedPropertyName == "Type")
-                    {
-                        Match match = regex.Match(v.Type);
 
-                        if (match.Success)
+                        }
+                        else if (replacedPropertyName == "Type")
                         {
                             if (!replacedNameSet.Contains(v.Type))
                             {
                                 replacedNameSet.Add(v.Type);
-                                Console.WriteLine($"Replaced type: {v.Type} -> {rules[key]}");
+                                Console.WriteLine($"Replaced type: {v.Type} -> {rules[keyWithMark]}");
                             }
-                            v.Type = rules[key];
+                            v.Type = rules[keyWithMark];
                         }
                     }
-
-
                 }
+
+                /*
                 if (!isMatched)
                 {
                     if (replacedPropertyName == "ContainerTitle" && v.ContainerTitle.IndexOf("2016") != -1 && v.ContainerTitle.IndexOf("DCC") != -1)
@@ -129,9 +150,8 @@ namespace DataProcessor
                             Console.WriteLine($"{c} : {(int)c}");
                         }
                     }
-
-
                 }
+                */
 
 
             });

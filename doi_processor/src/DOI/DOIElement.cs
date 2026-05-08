@@ -449,7 +449,7 @@ namespace DataProcessor
         }
 
 
-        public static Dictionary<string, DOIElement> Load(string doiElementFilePath)
+        public static Dictionary<string, DOIElement> Load(string doiElementFilePath, bool checkFileExist)
         {
             Console.WriteLine("Loading from " + doiElementFilePath);
             var doiElementFileInfo = new FileInfo(doiElementFilePath);
@@ -466,6 +466,12 @@ namespace DataProcessor
                         doiDict[doiElement.DOI] = doiElement;
                     }
                 });
+            }
+            else
+            {
+                if(checkFileExist){
+                    throw new Exception("File not found: " + doiElementFilePath);
+                }
             }
             return doiDict;
         }

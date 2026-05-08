@@ -13,6 +13,8 @@ export class DOIFilterInput {
     public doiReferences: string[] = [];
     public status: DOIStatus | null = null;
 
+    public pageNumber: number = 0;
+    public pageSize: number = 100;
 
     public static buildFromURLParameters(): DOIFilterInput {
         let r = new DOIFilterInput();

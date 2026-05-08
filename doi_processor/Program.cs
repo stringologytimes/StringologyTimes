@@ -25,12 +25,12 @@ namespace DBLPProcessor
         public string UrlPath { get; set; } = "";
 
 
-        [Option('t', "tag", Required = true, HelpText = "The Path to tag.csv")]
-        public string TagPath { get; set; } = "";
         */
 
         [Option('d', "data", Required = true, HelpText = "The Path to data folder")]
         public string DataFolderPath { get; set; } = "";
+        [Option('s', "skip_build", Required = true, HelpText = "The mode to run the program")]
+        public bool SkipBuild { get; set; } = false;
 
 
         /*
@@ -52,23 +52,27 @@ namespace DBLPProcessor
                     (Func<IEnumerable<Error>, Task<int>>)(errs => Task.FromResult(1))
                 );
         }
+        static string PrimaryDOIElementFileName = "primary_doi_elements.jsonl";
+        static string SecondaryDOIElementFileName = "secondary_doi_elements.jsonl";
+        static string SecondaryDOIListFileName = "secondary_doi.csv";
 
-        static async Task<int> RunDBLP(DBLPOptions opts)
+        static string ProcessedPrimaryDOIElementFileName = "processed_primary_doi_elements.jsonl";
+        static string ProcessedSecondaryDOIElementFileName = "processed_secondary_doi_elements.jsonl";
+
+
+
+        static async Task<int> BuildDOIElementDictionary(DBLPOptions opts)
         {
-            var outputSystemMessageFunction = (string message) => {
+            var outputSystemMessageFunction = (string message) =>
+            {
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine(message);
                 Console.ResetColor();
             };
-            outputSystemMessageFunction("Running doi_processor");
-
 
             var UrlPath = opts.DataFolderPath + "/auto_generated/url.csv";
             var TagPath = opts.DataFolderPath + "/auto_generated/tag.csv";
             var mailAddress = "takaaki.nishimoto@riken.jp";
-
-
-
 
             outputSystemMessageFunction("Creating DOI to Tag Mapper");
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(UrlPath, TagPath);
@@ -104,35 +108,66 @@ namespace DBLPProcessor
                 Directory.CreateDirectory(resultFolderPath);
             }
 
-            outputSystemMessageFunction("Applying type replacement rules");
-            ReplacementRules.ReplaceType(opts.DataFolderPath + "/raw/doi_processor/type_replacement_rules.csv", primaryDOIElementDict, secondaryDOIElementDict);
+            outputSystemMessageFunction("Saving primary DOI element dictionary to: " + resultFolderPath + "/" + PrimaryDOIElementFileName);
+            DOIElement.Save(primaryDOIElementDict, resultFolderPath + "/" + PrimaryDOIElementFileName);
 
-            outputSystemMessageFunction("Applying container-title replacement rules");
-            ReplacementRules.ReplaceContainerTitle(opts.DataFolderPath + "/raw/doi_processor/container_title_replacement_rules.csv", primaryDOIElementDict, secondaryDOIElementDict);
-            
+            outputSystemMessageFunction("Saving secondary DOI element dictionary to: " + resultFolderPath + "/" + SecondaryDOIElementFileName);
+            DOIElement.Save(secondaryDOIElementDict, resultFolderPath + "/" + SecondaryDOIElementFileName);
 
-
-            outputSystemMessageFunction("Saving primary DOI element dictionary to: " + resultFolderPath + "/primary_doi_elements.jsonl");
-            DOIElement.Save(primaryDOIElementDict, resultFolderPath + "/primary_doi_elements.jsonl");
-
-            outputSystemMessageFunction("Saving secondary DOI element dictionary to: " + resultFolderPath + "/secondary_doi_elements.jsonl");
-            DOIElement.Save(secondaryDOIElementDict, resultFolderPath + "/secondary_doi_elements.jsonl");
-
-            outputSystemMessageFunction("Saving secondary DOI list to: " + resultFolderPath + "/secondary_doi.csv");
+            outputSystemMessageFunction("Saving secondary DOI list to: " + resultFolderPath + "/" + SecondaryDOIListFileName);
             var secondaryDOIList = secondaryDOISet.ToList();
             secondaryDOIList.Sort();
-            var secondaryDOIListPath = resultFolderPath + "/secondary_doi.csv";
-            CSVFunctions.WriteCSV(secondaryDOIListPath, secondaryDOIList);
+            CSVFunctions.WriteCSV(resultFolderPath + "/" + SecondaryDOIListFileName, secondaryDOIList);
+
+            return 0;
+        }
+
+        static async Task<int> RunDBLP(DBLPOptions opts)
+        {
+            var outputSystemMessageFunction = (string message) =>
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine(message);
+                Console.ResetColor();
+            };
+            outputSystemMessageFunction("Running doi_processor");
+            Console.WriteLine("SkipBuild: " + opts.SkipBuild);
+            if (!opts.SkipBuild)
+            {
+                await BuildDOIElementDictionary(opts);
+            }
+            else
+            {
+                outputSystemMessageFunction("Skipping build of DOI element dictionary");
+            }
+
+            var primaryDOIElementDict = DOIElement.Load(opts.DataFolderPath + "/auto_generated/result/" + PrimaryDOIElementFileName, true);
+            var secondaryDOIElementDict = DOIElement.Load(opts.DataFolderPath + "/auto_generated/result/" + SecondaryDOIElementFileName, true);
+
+            outputSystemMessageFunction("Applying type replacement rules");
+            ReplacementRules.ReplaceType(opts.DataFolderPath + "/raw/doi_processor/type_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict);
+
+            outputSystemMessageFunction("Applying container-title replacement rules");
+            ReplacementRules.ReplaceContainerTitle(opts.DataFolderPath + "/raw/doi_processor/container_title_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict);
+
+            var resultFolderPath = opts.DataFolderPath + "/auto_generated/result";
+
+
+            outputSystemMessageFunction("Saving primary DOI element dictionary to: " + resultFolderPath + "/" + ProcessedPrimaryDOIElementFileName);
+            DOIElement.Save(primaryDOIElementDict, resultFolderPath + "/" + ProcessedPrimaryDOIElementFileName);
+
+            outputSystemMessageFunction("Saving secondary DOI element dictionary to: " + resultFolderPath + "/" + ProcessedSecondaryDOIElementFileName);
+            DOIElement.Save(secondaryDOIElementDict, resultFolderPath + "/" + ProcessedSecondaryDOIElementFileName);
 
 
             outputSystemMessageFunction("Building lightweight DOI element component");
             var lightweightDOIElementComponent = LightweightDOIElementComponent.Build(primaryDOIElementDict, secondaryDOIElementDict);
 
-            outputSystemMessageFunction("Saving lightweight DOI element component to: " + resultFolderPath + "/doi_info_parts");
-            lightweightDOIElementComponent.OutputByGZip(resultFolderPath + "/doi_info_parts");
+            outputSystemMessageFunction("Saving lightweight DOI element component to: " + resultFolderPath + "/" + "doi_info_parts");
+            lightweightDOIElementComponent.OutputByGZip(resultFolderPath + "/" + "doi_info_parts");
 
             outputSystemMessageFunction("doi_processor is finished");
-       
+
 
             return 0;
         }

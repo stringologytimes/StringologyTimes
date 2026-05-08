@@ -27,7 +27,7 @@ namespace DataProcessor
 
 
 
-            var doiElementDict = DOIElement.Load(GetCachePath(dataFolderPath));
+            var doiElementDict = DOIElement.Load(GetCachePath(dataFolderPath), false);
             var crossRefDic = DataProcessor.CrossRefFoundDOICache.Load(dataFolderPath);
             crossRefDic.ToList().ForEach((v) =>
             {
@@ -63,7 +63,7 @@ namespace DataProcessor
         {
             var doiElementDict = new Dictionary<string, DOIElement>();
             var doiElementCachePath = DOIElementPreprocessor.GetCachePath(dataFolderPath);
-            var doiElementCache = DOIElement.Load(doiElementCachePath);
+            var doiElementCache = DOIElement.Load(doiElementCachePath, false);
             doiSet.ToList().ForEach((v) =>
             {
                 if (doiElementCache.ContainsKey(v))
