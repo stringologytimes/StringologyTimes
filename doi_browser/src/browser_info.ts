@@ -3,6 +3,10 @@ import { DOIInfo } from "./doi_info";
 import { DOIFilterInput } from "./doi_filter/doi_filter_input";
 import { DOIFilterPartialResult } from "./doi_filter/doi_filter_partial_result";
 import { DOIFilterResult } from "./doi_filter/doi_filter_result";
+import { DOIFilterViewSetting, DOIFilterWithViewSetting } from "./doi_filter/doi_filter_view_setting";
+
+import { SummaryCache } from "./doi_filter/summary_cache";
+import { SummaryInfo } from "./doi_filter/summary_cache";
 
 
 export class BrowserInfo {
@@ -10,39 +14,44 @@ export class BrowserInfo {
     //public pageNumber : number = -1;
     //public pageSize : number = 100;
 
-    public currentDOIFilterInput: DOIFilterInput = new DOIFilterInput();
+    public currentDOIFilterWithViewSetting: DOIFilterWithViewSetting = new DOIFilterWithViewSetting();
     public doiFilterInputNumber: number = 0;
     public doiFilterInputHashStack = new Array<string>();
 
-    public doiFilterInputMap = new Map<string, DOIFilterInput>();
+    public doiFilterWithViewSettingMap = new Map<string, DOIFilterWithViewSetting>();
     public doiFilterPartialResultMap = new Map<string, DOIFilterPartialResult>();
     public doiFilterResultMap = new Map<string, DOIFilterResult>();
 
-    public initialize(doiFilterInput: DOIFilterInput, doiInfoCollection: DOIInfoCollection): void {
-        this.currentDOIFilterInput = doiFilterInput;
+    public summaryCache: SummaryCache = new SummaryCache();
+
+    public initialize(doiFilterWithViewSetting: DOIFilterWithViewSetting, doiInfoCollection: DOIInfoCollection): void {
+        this.currentDOIFilterWithViewSetting = doiFilterWithViewSetting;
         this.doiInfoCollection = doiInfoCollection;
         this.doiFilterInputNumber = 0;
         this.doiFilterInputHashStack = [];
-        this.doiFilterInputHashStack.push(this.currentDOIFilterInput.getHash());
+        this.doiFilterInputHashStack.push(this.currentDOIFilterWithViewSetting.getHash());
 
-        this.doiFilterInputMap = new Map<string, DOIFilterInput>();
-        const emptyDOIFilterInput = new DOIFilterInput();
-        this.doiFilterInputMap.set(this.currentDOIFilterInput.getHash(), this.currentDOIFilterInput);
-        this.doiFilterInputMap.set(emptyDOIFilterInput.getHash(), emptyDOIFilterInput);
+        this.doiFilterWithViewSettingMap = new Map<string, DOIFilterWithViewSetting>();
+        const emptyDOIFilterWithViewSetting = new DOIFilterWithViewSetting();
+        this.doiFilterWithViewSettingMap.set(this.currentDOIFilterWithViewSetting.getHash(), this.currentDOIFilterWithViewSetting);
+        this.doiFilterWithViewSettingMap.set(emptyDOIFilterWithViewSetting.getHash(), emptyDOIFilterWithViewSetting);
 
         this.doiFilterResultMap = new Map<string, DOIFilterResult>();
         const newDOIFilterResult = new DOIFilterResult(null, this.doiInfoCollection!);
-        this.doiFilterResultMap.set(emptyDOIFilterInput.getHashWithoutDetailedParamters(), newDOIFilterResult);
-        if(emptyDOIFilterInput.getHash() != this.currentDOIFilterInput.getHash()){
-            const newDOIFilterResult2 = newDOIFilterResult.search(this.currentDOIFilterInput, this.doiInfoCollection!);
-            this.doiFilterResultMap.set(this.currentDOIFilterInput.getHashWithoutDetailedParamters(), newDOIFilterResult2);
+        this.doiFilterResultMap.set(emptyDOIFilterWithViewSetting.doiFilterInput.getHash(), newDOIFilterResult);
+        if(emptyDOIFilterWithViewSetting.getHash() != this.currentDOIFilterWithViewSetting.getHash()){
+            const newDOIFilterResult2 = newDOIFilterResult.search(this.currentDOIFilterWithViewSetting.doiFilterInput, this.doiInfoCollection!);
+            this.doiFilterResultMap.set(this.currentDOIFilterWithViewSetting.doiFilterInput.getHash(), newDOIFilterResult2);
         }
 
         this.doiFilterPartialResultMap = new Map<string, DOIFilterPartialResult>();
-        const currentDOIFilterResult = this.doiFilterResultMap.get(this.currentDOIFilterInput.getHashWithoutDetailedParamters())!;
-        const currentDOIFilterPartialResult = new DOIFilterPartialResult(currentDOIFilterResult.doiIDs, this.currentDOIFilterInput, this.doiInfoCollection!);
-        this.doiFilterPartialResultMap.set(this.currentDOIFilterInput.getHash(), currentDOIFilterPartialResult);
+        const currentDOIFilterResult = this.doiFilterResultMap.get(this.currentDOIFilterWithViewSetting.doiFilterInput.getHash())!;
+        const currentDOIFilterPartialResult = new DOIFilterPartialResult(currentDOIFilterResult.doiIDs, this.currentDOIFilterWithViewSetting, this.doiInfoCollection!);
+        this.doiFilterPartialResultMap.set(this.currentDOIFilterWithViewSetting.getHash(), currentDOIFilterPartialResult);
 
+        if(!this.summaryCache.hasSummaryInfo(this.currentDOIFilterWithViewSetting.doiFilterInput)){
+            this.summaryCache.createSummaryInfo(currentDOIFilterResult, this.currentDOIFilterWithViewSetting.doiFilterInput, this.doiInfoCollection!);
+        }
         
     }
 
@@ -58,11 +67,11 @@ export class BrowserInfo {
             return result;
         }
     }
-    public getCurrentDOIFilterInput(): DOIFilterInput {
+    public getCurrentDOIFilterWithViewSetting(): DOIFilterWithViewSetting {
         if (this.doiFilterInputNumber >= this.doiFilterInputHashStack.length) {
-            return new DOIFilterInput();
+            return new DOIFilterWithViewSetting();
         } else {
-            const result = this.doiFilterInputMap.get(this.doiFilterInputHashStack[this.doiFilterInputNumber])!;
+            const result = this.doiFilterWithViewSettingMap.get(this.doiFilterInputHashStack[this.doiFilterInputNumber])!;
             if(result == null){
                 throw new Error("No current DOI filter input");
             }
@@ -73,18 +82,25 @@ export class BrowserInfo {
         if (this.doiFilterInputNumber >= this.doiFilterInputHashStack.length) {
             throw new Error("No current DOI filter result");
         } else {
-            const rp = this.getCurrentDOIFilterInput();
-            const result = this.doiFilterResultMap.get(rp.getHashWithoutDetailedParamters())!;
+            const rp = this.getCurrentDOIFilterWithViewSetting();
+            const result = this.doiFilterResultMap.get(rp.doiFilterInput.getHash())!;
             if(result == null){
                 throw new Error("No current DOI filter result");
             }
             return result;
         }
     }
+    public getCurrentSummaryInfo(): SummaryInfo {
+        if(!this.summaryCache.hasSummaryInfo(this.currentDOIFilterWithViewSetting.doiFilterInput)){
+            throw new Error("No current summary info");
+        }
+        return this.summaryCache.getSummaryInfo(this.currentDOIFilterWithViewSetting.doiFilterInput);
+    }
+
     public processCurrentDOIFilterInput(): void {
         if (this.doiInfoCollection != null) {
-            const hash = this.currentDOIFilterInput.getHash();
-            const hashWithoutDetailedParamters = this.currentDOIFilterInput.getHashWithoutDetailedParamters();
+            const hash = this.currentDOIFilterWithViewSetting.getHash();
+            const hashWithoutDetailedParamters = this.currentDOIFilterWithViewSetting.doiFilterInput.getHash();
 
             while (this.doiFilterInputHashStack.length > this.doiFilterInputNumber && this.doiFilterInputHashStack.length > 0) {
                 this.doiFilterInputHashStack.shift();
@@ -92,35 +108,38 @@ export class BrowserInfo {
 
             this.doiFilterInputHashStack.push(hash);
             this.doiFilterInputNumber = this.doiFilterInputHashStack.length - 1;
-            this.doiFilterInputMap.set(hash, this.currentDOIFilterInput);
+            this.doiFilterWithViewSettingMap.set(hash, this.currentDOIFilterWithViewSetting);
 
 
 
             if (!this.doiFilterResultMap.has(hashWithoutDetailedParamters)) {
-                let parentDOIFilterInput = new DOIFilterInput();
+                let parentDOIFilterWithViewSetting = new DOIFilterWithViewSetting();
 
-                if(!this.doiFilterResultMap.has(parentDOIFilterInput.getHashWithoutDetailedParamters())){
+                if(!this.doiFilterResultMap.has(parentDOIFilterWithViewSetting.doiFilterInput.getHash())){
                     const newDOIFilterResult = new DOIFilterResult(null, this.doiInfoCollection!);
-                    this.doiFilterResultMap.set(parentDOIFilterInput.getHashWithoutDetailedParamters(), newDOIFilterResult);
+                    this.doiFilterResultMap.set(parentDOIFilterWithViewSetting.doiFilterInput.getHash(), newDOIFilterResult);
                 }
 
                 if (this.doiFilterInputNumber > 0) {
-                    const previousDOIFilterInput = this.doiFilterInputMap.get(this.doiFilterInputHashStack[this.doiFilterInputNumber - 1])!;
-                    if (this.currentDOIFilterInput.isIncluded(previousDOIFilterInput)) {
-                        parentDOIFilterInput = previousDOIFilterInput;
+                    const previousDOIFilterWithViewSetting = this.doiFilterWithViewSettingMap.get(this.doiFilterInputHashStack[this.doiFilterInputNumber - 1])!;
+                    if (this.currentDOIFilterWithViewSetting.doiFilterInput.isIncluded(previousDOIFilterWithViewSetting.doiFilterInput)) {
+                        parentDOIFilterWithViewSetting = previousDOIFilterWithViewSetting;
                     }
                 }
 
 
 
-                const parentDOIFilterResult = this.doiFilterResultMap.get(parentDOIFilterInput.getHashWithoutDetailedParamters())!;
-                const newDOIFilterResult = parentDOIFilterResult.search(this.currentDOIFilterInput, this.doiInfoCollection!);
+                const parentDOIFilterResult = this.doiFilterResultMap.get(parentDOIFilterWithViewSetting.doiFilterInput.getHash())!;
+                const newDOIFilterResult = parentDOIFilterResult.search(this.currentDOIFilterWithViewSetting.doiFilterInput, this.doiInfoCollection!);
                 this.doiFilterResultMap.set(hashWithoutDetailedParamters, newDOIFilterResult);
+                if(!this.summaryCache.hasSummaryInfo(this.currentDOIFilterWithViewSetting.doiFilterInput)){
+                    this.summaryCache.createSummaryInfo(newDOIFilterResult, this.currentDOIFilterWithViewSetting.doiFilterInput, this.doiInfoCollection!);
+                }
             }
 
 
             const filterResult = this.doiFilterResultMap.get(hashWithoutDetailedParamters)!;
-            const partialResult = new DOIFilterPartialResult(filterResult.doiIDs, this.currentDOIFilterInput, this.doiInfoCollection!);
+            const partialResult = new DOIFilterPartialResult(filterResult.doiIDs, this.currentDOIFilterWithViewSetting, this.doiInfoCollection!);
             this.doiFilterPartialResultMap.set(hash, partialResult);
         }
 

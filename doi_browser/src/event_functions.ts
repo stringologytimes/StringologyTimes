@@ -45,10 +45,11 @@ export function process(browserInfo: BrowserInfo){
       browserInfo.debug();
 
       const currentDOIFilterPartialResult = browserInfo.getCurrentDOIFilterPartialResult();
-      const currentDOIFilterInput = browserInfo.getCurrentDOIFilterInput();      
+      const currentDOIFilterWithViewSetting = browserInfo.getCurrentDOIFilterWithViewSetting();      
       const currentDOIFilterResult = browserInfo.getCurrentDOIFilterResult();
-      renderFilterBox(currentDOIFilterResult, currentDOIFilterInput, browserInfo.doiInfoCollection!);
-      if(currentDOIFilterInput.viewMode == "article_list"){
+      const currentSummaryInfo = browserInfo.getCurrentSummaryInfo();
+      renderFilterBox(currentDOIFilterResult, currentDOIFilterWithViewSetting.doiFilterInput, browserInfo.doiInfoCollection!, currentSummaryInfo);
+      if(currentDOIFilterWithViewSetting.doiFilterViewSetting.viewMode == "article_list"){
         DOIFilterStandardRender.render(currentDOIFilterPartialResult, browserInfo.doiInfoCollection!);
       }else{
         throw new Error("Unknown view mode");
@@ -65,33 +66,33 @@ export function filterInputChange(inputElementName : string, browserInfo: Browse
     if(inputElementName == "type") {
       const type = (document.getElementById("type-select") as HTMLSelectElement).value;
       if(type == "dont-care") {
-        browserInfo.currentDOIFilterInput.type = null;
+        browserInfo.currentDOIFilterWithViewSetting.doiFilterInput.type = null;
       }else{
-        browserInfo.currentDOIFilterInput.type = type;
+        browserInfo.currentDOIFilterWithViewSetting.doiFilterInput.type = type;
       }
     }
     else if(inputElementName == "container-title") {
       const containerTitle = (document.getElementById("container-title-select") as HTMLSelectElement).value;
       if(containerTitle == "dont-care") {
-        browserInfo.currentDOIFilterInput.container_title = null;
+        browserInfo.currentDOIFilterWithViewSetting.doiFilterInput.container_title = null;
       }else{
-        browserInfo.currentDOIFilterInput.container_title = containerTitle;
+        browserInfo.currentDOIFilterWithViewSetting.doiFilterInput.container_title = containerTitle;
       }
     }
     else if(inputElementName == "year-from") {
       const yearFrom = (document.getElementById("year-from-select") as HTMLSelectElement).value;
       if(yearFrom == "dont-care") {
-        browserInfo.currentDOIFilterInput.minimum_year = null;
+        browserInfo.currentDOIFilterWithViewSetting.doiFilterInput.minimum_year = null;
       }else{
-        browserInfo.currentDOIFilterInput.minimum_year = parseInt(yearFrom);
+        browserInfo.currentDOIFilterWithViewSetting.doiFilterInput.minimum_year = parseInt(yearFrom);
       }
     }
     else if(inputElementName == "year-to") {
       const yearTo = (document.getElementById("year-to-select") as HTMLSelectElement).value;
       if(yearTo == "dont-care") {
-        browserInfo.currentDOIFilterInput.maximum_year = null;
+        browserInfo.currentDOIFilterWithViewSetting.doiFilterInput.maximum_year = null;
       }else{
-        browserInfo.currentDOIFilterInput.maximum_year = parseInt(yearTo);
+        browserInfo.currentDOIFilterWithViewSetting.doiFilterInput.maximum_year = parseInt(yearTo);
       }
     }
     else{

@@ -4,6 +4,7 @@ import { Render } from "./render/doi_filter_result_render";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
 import { DOIFilterInput } from "./doi_filter/doi_filter_input";
 import * as EventFunctions from "./event_functions";
+import { DOIFilterWithViewSetting } from "./doi_filter/doi_filter_view_setting";
 
 let browserInfo = new BrowserInfo();
 (window as any).browserInfo = browserInfo;
@@ -24,7 +25,7 @@ function setFoundDOIList(list: any[]) {
 */
 
 function goToPage(pageNumber: number) {
-  browserInfo.currentDOIFilterInput.pageNumber = pageNumber;
+  browserInfo.currentDOIFilterWithViewSetting.doiFilterViewSetting.pageNumber = pageNumber;
   browserInfo.processCurrentDOIFilterInput();
   DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterPartialResult(), browserInfo.doiInfoCollection!);
   EventFunctions.updatePaginationControls(browserInfo);
@@ -75,9 +76,9 @@ function preprocessURLParameters() {
   */
 
   console.log("preprocessURLParameters");
-  const currentDOIFilterInput = DOIFilterInput.buildFromURLParameters();
-  console.log("currentDOIFilterInput", currentDOIFilterInput);
-  browserInfo.initialize(currentDOIFilterInput, browserInfo.doiInfoCollection!);
+  const currentDOIFilterWithViewSetting = DOIFilterWithViewSetting.buildFromURLParameters();
+  console.log("currentDOIFilterWithViewSetting", currentDOIFilterWithViewSetting);
+  browserInfo.initialize(currentDOIFilterWithViewSetting, browserInfo.doiInfoCollection!);
   console.log("browserInfo.initialize");
   DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterPartialResult(), browserInfo.doiInfoCollection!);
   // URLパラメーターがある場合は検索を実行
@@ -132,7 +133,7 @@ function filterInputChange(inputElementName: string) {
 }
 
 function resetFilter() {
-  browserInfo.currentDOIFilterInput = new DOIFilterInput();
+  browserInfo.currentDOIFilterWithViewSetting = new DOIFilterWithViewSetting();
   browserInfo.processCurrentDOIFilterInput();
   DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterPartialResult(), browserInfo.doiInfoCollection!);
 }

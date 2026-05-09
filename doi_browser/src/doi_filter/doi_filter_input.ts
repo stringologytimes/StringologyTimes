@@ -13,9 +13,6 @@ export class DOIFilterInput {
     public doiReferences: string[] = [];
     public status: DOIStatus | null = null;
 
-    public pageNumber: number | null = 0;
-    public pageSize: number | null = 100;
-    public viewMode: "article_list" | "unkonwn" = "article_list";
 
     public static buildFromURLParameters(): DOIFilterInput {
         let r = new DOIFilterInput();
@@ -92,21 +89,13 @@ export class DOIFilterInput {
         r.container_title = this.container_title;
         r.doiReferences = this.doiReferences;
         r.status = this.status;
-        r.pageNumber = this.pageNumber;
-        r.pageSize = this.pageSize;
-        r.viewMode = this.viewMode;
         return r;
     }
 
     public getHash(): string {
         return JSON.stringify(this);
     }
-    public getHashWithoutDetailedParamters(): string {
-        const r = this.copy();
-        r.pageNumber = null;
-        r.pageSize = null;
-        return JSON.stringify(r);
-    }
+    
     public contain(doiInfo: DOIInfo): boolean {
         if(this.minimum_year != null && doiInfo.year < this.minimum_year){
             return false;
