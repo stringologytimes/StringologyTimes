@@ -1,4 +1,4 @@
-import { DOIFilterInput } from "./doi_filter_input";
+import { DOIFilterQuery } from "./doi_filter_query";
 
 export class DOIFilterViewSetting {
     public viewMode: "article_list" | "unkonwn" = "article_list";
@@ -22,26 +22,3 @@ export class DOIFilterViewSetting {
     }
 }
 
-export class DOIFilterWithViewSetting {
-    public doiFilterInput: DOIFilterInput = new DOIFilterInput();
-    public doiFilterViewSetting: DOIFilterViewSetting = new DOIFilterViewSetting();
-
-    public static buildFromURLParameters(): DOIFilterWithViewSetting {        
-        let r = new DOIFilterWithViewSetting();
-        r.doiFilterInput = DOIFilterInput.buildFromURLParameters();
-        r.doiFilterViewSetting = DOIFilterViewSetting.buildFromURLParameters();
-       return r;
-    }
-
-    public copy(): DOIFilterWithViewSetting {
-        let r = new DOIFilterWithViewSetting();
-        r.doiFilterInput = this.doiFilterInput.copy();
-        r.doiFilterViewSetting = this.doiFilterViewSetting.copy();
-        return r;
-    }
-
-
-    public getHash(): string {
-        return this.doiFilterInput.getHash() + this.doiFilterViewSetting.getHash();
-    }
-}

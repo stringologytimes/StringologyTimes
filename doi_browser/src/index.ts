@@ -2,9 +2,9 @@ import { DOIInfoCollection } from "./doi_info";
 import { BrowserInfo } from "./browser_info";
 import { Render } from "./render/doi_filter_result_render";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
-import { DOIFilterInput } from "./doi_filter/doi_filter_input";
+import { DOIFilterQuery } from "./doi_filter/doi_filter_query";
 import * as EventFunctions from "./event_functions";
-import { DOIFilterWithViewSetting } from "./doi_filter/doi_filter_view_setting";
+import { DOIFilter } from "./doi_filter/doi_filter";
 
 let browserInfo = new BrowserInfo();
 (window as any).browserInfo = browserInfo;
@@ -25,7 +25,7 @@ function setFoundDOIList(list: any[]) {
 */
 
 function goToPage(pageNumber: number) {
-  browserInfo.currentDOIFilterWithViewSetting.doiFilterViewSetting.pageNumber = pageNumber;
+  browserInfo.currentDOIFilterWithViewSetting.viewSetting.pageNumber = pageNumber;
   browserInfo.processCurrentDOIFilterInput();
   DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterPartialResult(), browserInfo.doiInfoCollection!);
   EventFunctions.updatePaginationControls(browserInfo);
@@ -76,9 +76,12 @@ function preprocessURLParameters() {
   */
 
   console.log("preprocessURLParameters");
-  const currentDOIFilterWithViewSetting = DOIFilterWithViewSetting.buildFromURLParameters();
+  const currentDOIFilterWithViewSetting = DOIFilter.buildFromURLParameters();
   console.log("currentDOIFilterWithViewSetting", currentDOIFilterWithViewSetting);
-  browserInfo.initialize(currentDOIFilterWithViewSetting, browserInfo.doiInfoCollection!);
+  browserInfo.initialize(browserInfo.doiInfoCollection!);
+  browserInfo.setCurrentDOIFilterWithViewSetting(currentDOIFilterWithViewSetting);
+  browserInfo.processCurrentDOIFilterInput();
+
   console.log("browserInfo.initialize");
   DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterPartialResult(), browserInfo.doiInfoCollection!);
   // URLパラメーターがある場合は検索を実行
@@ -133,7 +136,7 @@ function filterInputChange(inputElementName: string) {
 }
 
 function resetFilter() {
-  browserInfo.currentDOIFilterWithViewSetting = new DOIFilterWithViewSetting();
+  browserInfo.currentDOIFilterWithViewSetting = new DOIFilter();
   browserInfo.processCurrentDOIFilterInput();
   DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterPartialResult(), browserInfo.doiInfoCollection!);
 }

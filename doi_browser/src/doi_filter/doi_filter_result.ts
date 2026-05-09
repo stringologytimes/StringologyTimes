@@ -1,6 +1,6 @@
 import { DOIInfoCollection } from "../doi_info";
 import { DOIInfo } from "../doi_info";
-import { DOIFilterInput } from "./doi_filter_input";
+import { DOIFilterQuery } from "./doi_filter_query";
 
 export class DOIFilterResult {
     public doiIDs: number[] = [];
@@ -192,7 +192,7 @@ export class DOIFilterResult {
         return r;
     }
 
-    public search(doiFilterInput: DOIFilterInput, collection: DOIInfoCollection): DOIFilterResult {
+    public search(doiFilterInput: DOIFilterQuery, collection: DOIInfoCollection): DOIFilterResult {
         const resultDOIIDs: number[] = this.doiIDs.filter(doiID => {
             const doiInfo = collection.getDOIInfo(doiID);
             return doiFilterInput.contain(doiInfo);

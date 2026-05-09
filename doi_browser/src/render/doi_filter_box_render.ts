@@ -1,8 +1,8 @@
 import { BrowserInfo } from "../browser_info";
 import { DOIFilterResult } from "../doi_filter/doi_filter_result";
 import { DOIInfoCollection } from "../doi_info";
-import { DOIFilterInput } from "../doi_filter/doi_filter_input";
-import { SummaryInfo } from "../doi_filter/summary_cache";
+import { DOIFilterQuery } from "../doi_filter/doi_filter_query";
+import { SummaryInfo } from "../doi_filter/summary_info";
 /*
 function getUniqueStringSet(items: string[]): string[] {
   const uniqueSet = new Set<string>();
@@ -69,7 +69,7 @@ function renderMaximumYearSelectBox(summaryInfo: SummaryInfo, selectedMinimumYea
   }
 }
 
-export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIFilterInput, doiInfoCollection: DOIInfoCollection, summaryInfo: SummaryInfo) {
+export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIInfoCollection, summaryInfo: SummaryInfo) {
   renderDOICategorySelectBox(summaryInfo, filterInput.type);
   renderContainerTitleSelectBox(summaryInfo, filterInput.container_title);
   renderMinimumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);

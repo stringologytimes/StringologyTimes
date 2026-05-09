@@ -1,5 +1,5 @@
 import { DOIFilterResult } from "./doi_filter_result";
-import { DOIFilterInput } from "./doi_filter_input";
+import { DOIFilterQuery } from "./doi_filter_query";
 import { DOIInfoCollection } from "../doi_info";
 
 export class SummaryInfo {
@@ -12,7 +12,7 @@ export class SummaryInfo {
     public yearToList: string[] = [];
     public yearToCountList: number[] = [];
 
-    public build(filterResult: DOIFilterResult, filterInput: DOIFilterInput, doiInfoCollection: DOIInfoCollection){
+    public build(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIInfoCollection){
         this.doiCategoryList = filterResult.getTypes();
         this.doiCategoryList.sort();
 
@@ -62,23 +62,4 @@ export class SummaryInfo {
 }
 
 
-export class SummaryCache {
-    public summaryInfoMap = new Map<string, SummaryInfo>();
 
-    public hasSummaryInfo(filterInput: DOIFilterInput): boolean {
-        return this.summaryInfoMap.has(filterInput.getHash());
-    }
-    public getSummaryInfo(filterInput: DOIFilterInput): SummaryInfo {
-        return this.summaryInfoMap.get(filterInput.getHash())!;
-    }
-
-    public createSummaryInfo(filterResult: DOIFilterResult, filterInput: DOIFilterInput, doiInfoCollection: DOIInfoCollection) {
-        const cacheKey = filterInput.getHash();
-        if (!this.summaryInfoMap.has(cacheKey)) {
-            let summaryInfo = new SummaryInfo();
-            summaryInfo.build(filterResult, filterInput, doiInfoCollection);
-            this.summaryInfoMap.set(cacheKey, summaryInfo);
-        }
-    }
-
-}

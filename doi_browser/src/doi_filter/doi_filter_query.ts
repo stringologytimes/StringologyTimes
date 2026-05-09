@@ -2,7 +2,7 @@ import { DOIInfo } from "../doi_info";
 import { DOIInfoCollection } from "../doi_info";
 import { DOIStatus } from "../doi_info";
 import { DOIFilterResult } from "./doi_filter_result";
-export class DOIFilterInput {
+export class DOIFilterQuery {
     public minimum_year: number | null = null;
     public maximum_year: number | null = null;
     public type: string | null = null;
@@ -14,8 +14,8 @@ export class DOIFilterInput {
     public status: DOIStatus | null = null;
 
 
-    public static buildFromURLParameters(): DOIFilterInput {
-        let r = new DOIFilterInput();
+    public static buildFromURLParameters(): DOIFilterQuery {
+        let r = new DOIFilterQuery();
         const sp = new URL(location.href).searchParams;
 
         for (const [k, v] of sp.entries()) {
@@ -78,8 +78,8 @@ export class DOIFilterInput {
         this.authors.length == 0 && this.tags.length == 0 && this.volume == null && this.container_title == null 
         && this.doiReferences.length == 0 && this.status == null;
     }
-    public copy(): DOIFilterInput {
-        const r = new DOIFilterInput();
+    public copy(): DOIFilterQuery {
+        const r = new DOIFilterQuery();
         r.minimum_year = this.minimum_year;
         r.maximum_year = this.maximum_year;
         r.type = this.type;
@@ -118,7 +118,7 @@ export class DOIFilterInput {
         return true;
     }
 
-    public isIncluded(item : DOIFilterInput): boolean {
+    public isIncluded(item : DOIFilterQuery): boolean {
         if(this.minimum_year != null && item.minimum_year != null){            
             if(this.minimum_year < item.minimum_year){
                 return false;
