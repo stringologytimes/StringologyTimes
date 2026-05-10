@@ -3,6 +3,7 @@ import { DOIFilterQuery } from "./doi_filter_query";
 import { DOIInfoCollection } from "../doi_info";
 
 export class SummaryInfo {
+    public doiCount: number = 0;
     public doiCategoryList: string[] = [];
     public doiCategoryCountList: number[] = [];
     public containerTitleList: string[] = [];
@@ -13,6 +14,7 @@ export class SummaryInfo {
     public yearToCountList: number[] = [];
 
     public build(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIInfoCollection){
+        this.doiCount = filterResult.doiIDs.length;
         this.doiCategoryList = filterResult.getTypes();
         this.doiCategoryList.sort();
 

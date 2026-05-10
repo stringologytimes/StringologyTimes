@@ -25,9 +25,9 @@ function setFoundDOIList(list: any[]) {
 */
 
 function goToPage(pageNumber: number) {
-  browserInfo.currentDOIFilterWithViewSetting.viewSetting.pageNumber = pageNumber;
+  browserInfo.currentDOIFilter.viewSetting.pageNumber = pageNumber;
   browserInfo.processCurrentDOIFilterInput();
-  DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterPartialResult(), browserInfo.doiInfoCollection!);
+  DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterResult(), browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.getItemIndex(), browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.pageSize!, browserInfo.doiInfoCollection!);
   EventFunctions.updatePaginationControls(browserInfo);
 }
 
@@ -83,7 +83,7 @@ function preprocessURLParameters() {
   browserInfo.processCurrentDOIFilterInput();
 
   console.log("browserInfo.initialize");
-  DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterPartialResult(), browserInfo.doiInfoCollection!);
+  DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterResult(), browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.getItemIndex(), browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.pageSize!, browserInfo.doiInfoCollection!);
   // URLパラメーターがある場合は検索を実行
   /*
   if (urlParams.toString().length > 0 && !pageParam) {
@@ -135,16 +135,29 @@ function filterInputChange(inputElementName: string) {
   EventFunctions.filterInputChange(inputElementName, browserInfo);
 }
 
-function resetFilter() {
-  browserInfo.currentDOIFilterWithViewSetting = new DOIFilter();
+function viewSettingInputChange(inputElementName: string) {
+  EventFunctions.ViewSettingInputChange(inputElementName, browserInfo);
+}
+
+function containerTitleLiElementClick(containerTitle: string) {
+  browserInfo.currentDOIFilter.query.container_title = containerTitle;
+  browserInfo.currentDOIFilter.viewSetting.pageNumber = 0;
+  browserInfo.currentDOIFilter.viewSetting.viewMode = "article_list";
   browserInfo.processCurrentDOIFilterInput();
-  DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterPartialResult(), browserInfo.doiInfoCollection!);
+  browserInfo.render();
+}
+
+function resetFilter() {
+  browserInfo.currentDOIFilter = new DOIFilter();
+  browserInfo.processCurrentDOIFilterInput();
+  browserInfo.render();
 }
 
 // グローバルスコープに公開（onchange属性からアクセスできるようにする）
 (window as any).filterInputChange = filterInputChange;
 (window as any).resetFilter = resetFilter;
-
+(window as any).viewSettingInputChange = viewSettingInputChange;
+(window as any).containerTitleLiElementClick = containerTitleLiElementClick;
 async function domFinished() {
   showLoading();
 

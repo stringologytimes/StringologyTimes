@@ -1,7 +1,8 @@
-import { DOIFilterQuery } from "./doi_filter_query";
+
+export type ViewModeType = "article_list" | "container_title_list" | "unkonwn";
 
 export class DOIFilterViewSetting {
-    public viewMode: "article_list" | "unkonwn" = "article_list";
+    public viewMode: ViewModeType = "article_list";
     public pageNumber: number | null = 0;
     public pageSize: number | null = 100;
 
@@ -19,6 +20,9 @@ export class DOIFilterViewSetting {
     }
     public getHash(): string {
         return JSON.stringify(this);
+    }
+    public getItemIndex(): number {
+        return this.pageNumber! * this.pageSize!;
     }
 }
 

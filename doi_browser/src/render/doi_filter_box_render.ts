@@ -74,5 +74,4 @@ export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIF
   renderContainerTitleSelectBox(summaryInfo, filterInput.container_title);
   renderMinimumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
   renderMaximumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
-
 }

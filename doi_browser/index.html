@@ -10,9 +10,11 @@
       cursor: pointer;
       user-select: none;
     }
+
     .details_div {
       padding-left: 30px;
     }
+
     #loading-overlay {
       position: fixed;
       top: 0;
@@ -25,12 +27,15 @@
       align-items: center;
       z-index: 9999;
     }
+
     #loading-overlay.show {
       display: flex;
     }
+
     .loading-container {
       text-align: center;
     }
+
     .progress-bar-container {
       width: 300px;
       height: 20px;
@@ -39,6 +44,7 @@
       overflow: hidden;
       margin: 20px auto;
     }
+
     .progress-bar {
       height: 100%;
       background: linear-gradient(90deg, #4CAF50 0%, #45a049 50%, #4CAF50 100%);
@@ -46,19 +52,23 @@
       width: 100%;
       animation: progress-animation 1.5s ease-in-out infinite;
     }
+
     @keyframes progress-animation {
       0% {
         background-position: 200% 0;
       }
+
       100% {
         background-position: -200% 0;
       }
     }
+
     .loading-text {
       font-size: 18px;
       color: #333;
       margin-top: 10px;
     }
+
     .title-text {
       font-size: 20px;
       font-weight: bold;
@@ -66,6 +76,7 @@
       margin-top: 10px;
       margin-left: 10px;
     }
+
     .summary-info-text {
       font-size: 18px;
       color: #666;
@@ -93,16 +104,38 @@
         <label>Type:</label> <select id="type-select" onchange="filterInputChange('type')"></select>
       </li>
       <li>
-        <label>Container Title:</label> <select id="container-title-select" onchange="filterInputChange('container-title')"></select>
+        <label>Container Title:</label> <select id="container-title-select"
+          onchange="filterInputChange('container-title')"></select>
       </li>
       <li>
-        <label>Year:</label> From <select id="year-from-select" onchange="filterInputChange('year-from')"></select> To <select id="year-to-select" onchange="filterInputChange('year-to')"></select> 
+        <label>Year:</label> From <select id="year-from-select" onchange="filterInputChange('year-from')"></select> To
+        <select id="year-to-select" onchange="filterInputChange('year-to')"></select>
       </li>
     </ul>
     <button>Search</button>
     <button onclick="resetFilter()">Reset</button>
-
   </fieldset>
+
+  <fieldset>
+    <legend>View Setting</legend>
+    <ul>
+      <li>
+        <label>Mode:</label> <select id="view-setting:mode-select"
+          onchange="viewSettingInputChange('view-setting:mode-select')"></select>
+      </li>
+      <li>
+        <label>Page number:</label> <select id="view-setting:page-number-select"
+          onchange="viewSettingInputChange('view-setting:page-number-select')"></select>
+      </li>
+      <li>
+        <label>Page size:</label> <select id="view-setting:page-size-select"
+          onchange="viewSettingInputChange('view-setting:page-size-select')"></select>
+      </li>
+
+    </ul>
+  </fieldset>
+
+
   <div id="output"></div>
   <div id="error"></div>
   <div style="margin: 20px 0;">
@@ -114,10 +147,10 @@
     </div>
   </div>
   <template id="author-template">
-    <span class="author"></span></span>
+    <span class="author"></span>
   </template>
   <template id="doi-reference-template">
-    <span class="doi-reference"></span></span>
+    <span class="doi-reference"></span>
   </template>
 
   <template id="doi-info-template">
@@ -125,29 +158,39 @@
       <details>
         <summary class="title">
           <span class="title-number-text"></span>
-          <a href="https://example.com" target="_blank" rel="noopener" class="doi-link" onclick="event.stopPropagation();">
+          <a href="https://example.com" target="_blank" rel="noopener" class="doi-link"
+            onclick="event.stopPropagation();">
             <img src="images/doi_icon.png" alt="DOI" width="24" height="24">
-          </a>      
+          </a>
           <span class="title-text"></span>
           <span class="summary-info-text"></span>
         </summary>
         <div class="details_div"">
           <ul>
-            <li class="date"></li>
-            <li><div class="authors"></div></li>
-            <li class="container_title"></li>
-            <li class="volume"></li>
-            <li class="status"></li>
-            <li><details>
+            <li class=" date">
+          </li>
+          <li>
+            <div class="authors"></div>
+          </li>
+          <li class="container_title"></li>
+          <li class="volume"></li>
+          <li class="status"></li>
+          <li>
+            <details>
               <summary>DOI References</summary>
               <div class="doi_references"></div>
-            </details></li>
+            </details>
+          </li>
           </ul>
         </div>
       </details>
 
     </article>
   </template>
+  <template id="container-title-template">
+    <div class="container-title"></div>
+  </template>
+
 </body>
 
 </html>

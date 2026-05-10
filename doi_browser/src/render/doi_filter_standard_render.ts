@@ -1,6 +1,8 @@
 import {  DOIInfo } from "../doi_info";
 import { DOIFilterPartialResult } from "../doi_filter/doi_filter_partial_result";
 import { DOIInfoCollection } from "../doi_info";
+import { DOIFilterResult } from "../doi_filter/doi_filter_result";
+import { DOIFilterViewSetting } from "../doi_filter/doi_filter_view_setting";
 
 
 export class DOIFilterStandardRender {
@@ -15,7 +17,12 @@ export class DOIFilterStandardRender {
             return `(${dataStr}) ${containerTitle}`;
         }
     }
-    public static render(doiFilterPartialResult: DOIFilterPartialResult, doiInfoCollection: DOIInfoCollection) {
+    public static render(doiFilterResult: DOIFilterResult, doiIndex: number, doiCount: number, doiInfoCollection: DOIInfoCollection) {
+        const doiIDs = new Array<number>();
+        for(let i = doiIndex; i < doiIndex + doiCount; i++){
+            doiIDs.push(doiFilterResult.doiIDs[i]);
+        }
+        
         const outputDiv = document.getElementById("output");
         if (!outputDiv) {
             return;
@@ -23,7 +30,7 @@ export class DOIFilterStandardRender {
 
         outputDiv.innerHTML = "";
 
-        if (doiFilterPartialResult.doiIDs.length == 0) {
+        if (doiIDs.length == 0) {
             outputDiv.innerHTML = "<p>No articles found.</p>";
         } else {
             const doiInfoTemplate = document.getElementById('doi-info-template') as HTMLTemplateElement;
@@ -37,7 +44,7 @@ export class DOIFilterStandardRender {
 
             //const currentDOIListPart = browserInfo.getCurrentDOIListPart();
 
-            doiFilterPartialResult.doiIDs.forEach((doiID, index) => {
+            doiIDs.forEach((doiID, index) => {
                 const doiInfo = doiInfoCollection.getDOIInfo(doiID);
                 // DOIInfoテンプレートをクローン
                 const doiInfoClone = doiInfoTemplate.content.cloneNode(true) as DocumentFragment;
@@ -61,7 +68,7 @@ export class DOIFilterStandardRender {
 
                 const titleNumberSpan = article.querySelector('.title-number-text');
                 if (titleNumberSpan){
-                    const ith = doiFilterPartialResult.firstDOINumber + index + 1;
+                    const ith = doiIndex + index + 1;
                     titleNumberSpan.textContent = `${ith}: `;
                 }
                 const titleSpan = article.querySelector('.title-text');

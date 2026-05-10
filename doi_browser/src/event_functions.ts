@@ -6,7 +6,8 @@ import { renderFilterBox } from "./render/doi_filter_box_render";
 import { DOIFilterResult } from "./doi_filter/doi_filter_result";
 import { DOIFilterPartialResult } from "./doi_filter/doi_filter_partial_result";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
-
+import { renderViewSettingBox } from "./render/view_setting_box_render";
+import { renderContainerTitleList } from "./render/doi_filter_container_title_render";
 
 export function updatePaginationControls(browserInfo: BrowserInfo) {
   /*
@@ -41,22 +42,7 @@ export function updatePaginationControls(browserInfo: BrowserInfo) {
 export function process(browserInfo: BrowserInfo){
     console.log("process");
     browserInfo.processCurrentDOIFilterInput();
-    if(browserInfo.doiInfoCollection != null){
-
-      const currentDOIFilterPartialResult = browserInfo.getCurrentDOIFilterPartialResult();
-      const currentDOIFilterWithViewSetting = browserInfo.getCurrentDOIFilterWithViewSetting();      
-      const currentDOIFilterResult = browserInfo.getCurrentDOIFilterResult();
-      const currentSummaryInfo = browserInfo.getCurrentSummaryInfo();
-      renderFilterBox(currentDOIFilterResult, currentDOIFilterWithViewSetting.query, browserInfo.doiInfoCollection!, currentSummaryInfo);
-      if(currentDOIFilterWithViewSetting.viewSetting.viewMode == "article_list"){
-        DOIFilterStandardRender.render(currentDOIFilterPartialResult, browserInfo.doiInfoCollection!);
-      }else{
-        throw new Error("Unknown view mode");
-      }
-  
-      //Render.render(browserInfo);
-      //updatePaginationControls(browserInfo);
-    }
+    browserInfo.render();
   }
   
 
@@ -65,37 +51,60 @@ export function filterInputChange(inputElementName : string, browserInfo: Browse
     if(inputElementName == "type") {
       const type = (document.getElementById("type-select") as HTMLSelectElement).value;
       if(type == "dont-care") {
-        browserInfo.currentDOIFilterWithViewSetting.query.type = null;
+        browserInfo.currentDOIFilter.query.type = null;
       }else{
-        browserInfo.currentDOIFilterWithViewSetting.query.type = type;
+        browserInfo.currentDOIFilter.query.type = type;
       }
     }
     else if(inputElementName == "container-title") {
       const containerTitle = (document.getElementById("container-title-select") as HTMLSelectElement).value;
       if(containerTitle == "dont-care") {
-        browserInfo.currentDOIFilterWithViewSetting.query.container_title = null;
+        browserInfo.currentDOIFilter.query.container_title = null;
       }else{
-        browserInfo.currentDOIFilterWithViewSetting.query.container_title = containerTitle;
+        browserInfo.currentDOIFilter.query.container_title = containerTitle;
       }
     }
     else if(inputElementName == "year-from") {
       const yearFrom = (document.getElementById("year-from-select") as HTMLSelectElement).value;
       if(yearFrom == "dont-care") {
-        browserInfo.currentDOIFilterWithViewSetting.query.minimum_year = null;
+        browserInfo.currentDOIFilter.query.minimum_year = null;
       }else{
-        browserInfo.currentDOIFilterWithViewSetting.query.minimum_year = parseInt(yearFrom);
+        browserInfo.currentDOIFilter.query.minimum_year = parseInt(yearFrom);
       }
     }
     else if(inputElementName == "year-to") {
       const yearTo = (document.getElementById("year-to-select") as HTMLSelectElement).value;
       if(yearTo == "dont-care") {
-        browserInfo.currentDOIFilterWithViewSetting.query.maximum_year = null;
+        browserInfo.currentDOIFilter.query.maximum_year = null;
       }else{
-        browserInfo.currentDOIFilterWithViewSetting.query.maximum_year = parseInt(yearTo);
+        browserInfo.currentDOIFilter.query.maximum_year = parseInt(yearTo);
       }
     }
     else{
   
+    }
+    browserInfo.currentDOIFilter.viewSetting.pageNumber = 0;
+
+    process(browserInfo);
+  }
+
+  export function ViewSettingInputChange(inputElementName : string, browserInfo: BrowserInfo) {
+    if(inputElementName == "view-setting:mode-select") {
+      const mode = (document.getElementById("view-setting:mode-select") as HTMLSelectElement).value;
+      if(mode == "container_title_list") {
+        browserInfo.currentDOIFilter.viewSetting.viewMode = "container_title_list";
+      }else{
+        browserInfo.currentDOIFilter.viewSetting.viewMode = "article_list";
+      }
+      browserInfo.currentDOIFilter.viewSetting.pageNumber = 0;
+    }
+    else if(inputElementName == "view-setting:page-number-select") {
+      const pageNumber = (document.getElementById("view-setting:page-number-select") as HTMLSelectElement).value;
+      browserInfo.currentDOIFilter.viewSetting.pageNumber = parseInt(pageNumber);
+    }
+    else if(inputElementName == "view-setting:page-size-select") {
+      const pageSize = (document.getElementById("view-setting:page-size-select") as HTMLSelectElement).value;
+      browserInfo.currentDOIFilter.viewSetting.pageSize = parseInt(pageSize);
     }
     process(browserInfo);
   }
