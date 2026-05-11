@@ -1,25 +1,38 @@
 import {  DOIInfo } from "../doi_info";
-import { DOIFilterPartialResult } from "../doi_filter/doi_filter_partial_result";
 import { DOIInfoCollection } from "../doi_info";
 import { DOIFilterResult } from "../doi_filter/doi_filter_result";
-import { DOIFilterViewSetting } from "../doi_filter/doi_filter_view_setting";
+import { setIconToLink, setIconToSpan } from "../svg_icon";
 
 
 export class DOIFilterStandardRender {
+    public static getDateStr(doiInfo: DOIInfo): string {
+        const yearStr = doiInfo.year <= 0 ? "?" : doiInfo.year.toString();
+        let monthStr = "?";
+        if(doiInfo.month > 0 && doiInfo.month < 10){
+            monthStr = `0${doiInfo.month}`;
+        }else if(doiInfo.month >= 10){
+            monthStr = doiInfo.month.toString();
+        }
+        const dataStr = `${yearStr}-${monthStr}`;
+        return dataStr;
+    }
     public static getSummaryInfoText(doiInfo: DOIInfo): string {
-        const dataStr = `${doiInfo.year}-${doiInfo.month}`;
+        //const dataStr = `${doiInfo.year}-${doiInfo.month <= 0 ? "?" : doiInfo.month}`;
         const containerTitle = doiInfo.container_title;
         const volumStr = doiInfo.volume;
         
         if(volumStr.length > 0){
-            return `(${dataStr}) ${containerTitle}(Volume: ${volumStr})`;
+            return `${containerTitle}(Volume: ${volumStr})`;
         }else{
-            return `(${dataStr}) ${containerTitle}`;
+            return `${containerTitle}`;
         }
     }
     public static render(doiFilterResult: DOIFilterResult, doiIndex: number, doiCount: number, doiInfoCollection: DOIInfoCollection) {
         const doiIDs = new Array<number>();
         for(let i = doiIndex; i < doiIndex + doiCount; i++){
+            if(i >= doiFilterResult.doiIDs.length){
+                break;
+            }
             doiIDs.push(doiFilterResult.doiIDs[i]);
         }
         
@@ -70,19 +83,99 @@ export class DOIFilterStandardRender {
                 if (titleNumberSpan){
                     const ith = doiIndex + index + 1;
                     titleNumberSpan.textContent = `${ith}: `;
+                }else{
+                    throw new Error("titleNumberSpan is not found");
                 }
                 const titleSpan = article.querySelector('.title-text');
                 if (titleSpan){
                     const titleStr = doiInfo.title || '';
                     titleSpan.textContent = titleStr;
+                }else{
+                    throw new Error("titleSpan is not found");
                 }
+
+                const doiLink = article.querySelector('.doi-link');
+                if (doiLink && doiLink instanceof HTMLAnchorElement){
+                    setIconToLink(doiLink, "DOI", `https://doi.org/${encodeURIComponent(doiInfo.doi)}`, 14, "blue", "white");
+                }else{
+                    throw new Error("doiLink is not found");
+                }
+
+                const statusIconSpan = article.querySelector('.status-icon-span');
+                if (statusIconSpan && statusIconSpan instanceof HTMLSpanElement){
+                    if(doiInfo.status == "primary"){
+                        setIconToSpan(statusIconSpan, "Primary", 14, "green", "white");
+                    }else{
+                        setIconToSpan(statusIconSpan, "Secondary", 14, "gray", "white");
+                    }
+                }else{
+                    throw new Error("statusIconSpan is not found");
+                }
+                
+                const typeIconSpan = article.querySelector('.type-icon-span');
+                if (typeIconSpan && typeIconSpan instanceof HTMLSpanElement){
+                    if(doiInfo.type == "Book"){
+                        setIconToSpan(typeIconSpan, "Book", 14, "purple", "white");
+                    }else if(doiInfo.type == "BookChapter"){
+                        setIconToSpan(typeIconSpan, "BookChapter", 14, "purple", "white");
+                    }else if(doiInfo.type == "BookSeries"){
+                        setIconToSpan(typeIconSpan, "BookSeries", 14, "purple", "white");
+                    }else if(doiInfo.type == "Misc"){
+                        setIconToSpan(typeIconSpan, "Misc", 14, "gray", "white");
+                    }else if(doiInfo.type == "Dataset"){
+                        setIconToSpan(typeIconSpan, "Dataset", 14, "gray", "white");
+                    }else if(doiInfo.type == "Dissertation"){
+                        setIconToSpan(typeIconSpan, "Dissertation", 14, "gray", "white");
+                    }else if(doiInfo.type == "Dissertation"){
+                        setIconToSpan(typeIconSpan, "Dissertation", 14, "gray", "white");
+                    }else if(doiInfo.type == "JournalArticle"){
+                        setIconToSpan(typeIconSpan, "JournalArticle", 14, "purple", "white");
+                    }
+                    else if(doiInfo.type == "JournalIssue"){
+                        setIconToSpan(typeIconSpan, "JournalIssue", 14, "purple", "white");
+                    }else if(doiInfo.type == "Other"){
+                        setIconToSpan(typeIconSpan, "Other", 14, "gray", "white");
+                    }else if(doiInfo.type == "PostedContent"){
+                        setIconToSpan(typeIconSpan, "PostedContent", 14, "purple", "white");
+                    }
+                    else if(doiInfo.type == "Preprint"){
+                        setIconToSpan(typeIconSpan, "Preprint", 14, "gray", "white");
+                    }else if(doiInfo.type == "Proceedings"){
+                        setIconToSpan(typeIconSpan, "Proceedings", 14, "gray", "white");
+                    }else if(doiInfo.type == "ProceedingsArticle"){
+                        setIconToSpan(typeIconSpan, "ProceedingsArticle", 14, "purple", "white");
+                    }else if(doiInfo.type == "Report"){
+                        setIconToSpan(typeIconSpan, "Report", 14, "gray", "white");
+                    }else if(doiInfo.type == "DataCite:ConferencePaper"){
+                        setIconToSpan(typeIconSpan, "DataCite:ConferencePaper", 14, "purple", "white");
+                    }else if(doiInfo.type == "Software"){
+                        setIconToSpan(typeIconSpan, "Software", 14, "gray", "white");
+                    }else{
+                        setIconToSpan(typeIconSpan, "Unknown", 14, "gray", "white");
+                    }
+                }else{
+                    throw new Error("typeIconSpan is not found");
+                }
+
+                const yearIconSpan = article.querySelector('.year-icon-span');
+                if (yearIconSpan && yearIconSpan instanceof HTMLSpanElement){
+                    setIconToSpan(yearIconSpan, `${this.getDateStr(doiInfo)}`, 14, "brown", "white");
+                }else{
+                    throw new Error("yearIconSpan is not found");
+                }
+
+
+                /*
                 const doiLink = article.querySelector('.doi-link');
                 if (doiLink){
                     doiLink.setAttribute('href', `https://doi.org/${encodeURIComponent(doiInfo.doi)}`);
                 }
+                */
                 const summaryInfoSpan = article.querySelector('.summary-info-text');
                 if (summaryInfoSpan){
                     summaryInfoSpan.textContent = this.getSummaryInfoText(doiInfo);
+                }else{
+                    throw new Error("summaryInfoSpan is not found");
                 }
 
 
@@ -97,17 +190,35 @@ export class DOIFilterStandardRender {
                     }else{
                         dateLi.textContent = `Date: Unknown`;
                     }    
+                }else{
+                    throw new Error("dateLi is not found")
                 }
+
+                
 
 
                 const containerTitleSpan = article.querySelector('.container_title');
-                if (containerTitleSpan) containerTitleSpan.textContent = doiInfo.container_title || '';
+                if (containerTitleSpan){
+                    containerTitleSpan.textContent = doiInfo.container_title || '';
+                } else{
+                    throw new Error("containerTitleSpan is not found");
+                }
 
                 const volumeSpan = article.querySelector('.volume');
-                if (volumeSpan) volumeSpan.textContent = doiInfo.volume || '';
+                if (volumeSpan && volumeSpan instanceof HTMLLIElement){
+                    if(doiInfo.volume.length > 0){
+                        volumeSpan.textContent = `Volume: ${doiInfo.volume}`;
+                    }else{
+                        volumeSpan.style.display = 'none';
+                    }
+                }else{
+                    throw new Error("volumeSpan is not found");
+                }
 
+                /*
                 const statusSpan = article.querySelector('.status');
                 if (statusSpan) statusSpan.textContent = doiInfo.status || '';
+                */
 
                 // Authorsを設定
                 const authorsDiv = article.querySelector('.authors');

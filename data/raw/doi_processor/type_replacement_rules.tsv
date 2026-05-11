@@ -18,7 +18,7 @@ CrossRef:report	Report
 CrossRef:standard	Misc
 DataCite:Audiovisual	Misc
 DataCite:Collection	Misc
-DataCite:ConferencePaper	ProceedingsArticle
+DataCite:ConferencePaper	DataCite:ConferencePaper
 DataCite:DataPaper	Misc
 DataCite:Dataset	Dataset
 DataCite:Image	Misc

@@ -52,6 +52,60 @@ namespace DataProcessor
 
         }
 
+        public static void ReplaceContainerTitleByDOIPrefix(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
+        {
+            if (File.Exists(rulePath))
+            {
+                var typeReplacementRules = CSVFunctions.ReadCSV(rulePath);
+                var typeReplacementRulesList = new List<Tuple<string, string>>();
+                typeReplacementRules.ForEach((v) =>
+                {
+                    var cols = v.Split('\t');
+                    if (cols.Length != 2)
+                    {
+                        Console.WriteLine($"Invalid DOI prefix rule: {v}");
+                    }
+                    else
+                    {
+                    var key = cols[0].Trim().ToLower();
+                    var value = cols[1].Trim();
+                    typeReplacementRulesList.Add(new Tuple<string, string>(key, value));
+                    Console.WriteLine($"Added DOI prefix rule: {key} -> {value}");                        
+                    }
+                });
+
+                replace2(typeReplacementRulesList, "ContainerTitle", primaryDOIElementDict);
+                replace2(typeReplacementRulesList, "ContainerTitle", secondaryDOIElementDict);
+            }
+            else
+            {
+                Console.WriteLine("No type replacement rules file found: " + rulePath);
+            }
+        }
+        public static void ReplaceTypeByDOIPrefix(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
+        {
+            if (File.Exists(rulePath))
+            {
+                var typeReplacementRules = CSVFunctions.ReadCSV(rulePath);
+                var typeReplacementRulesList = new List<Tuple<string, string>>();
+                typeReplacementRules.ForEach((v) =>
+                {
+                    var cols = v.Split('\t');
+                    var key = cols[0].Trim().ToLower();
+                    var value = cols[1].Trim();
+                    typeReplacementRulesList.Add(new Tuple<string, string>(key, value));
+                    Console.WriteLine($"Added DOI prefix rule: {key} -> {value}");
+                });
+
+                replace2(typeReplacementRulesList, "Type", primaryDOIElementDict);
+                replace2(typeReplacementRulesList, "Type", secondaryDOIElementDict);
+            }
+            else
+            {
+                Console.WriteLine("No type replacement rules file found: " + rulePath);
+            }
+        }
+
         public static void ReplaceContainerTitle(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
         {
             if (File.Exists(rulePath))
@@ -99,6 +153,33 @@ namespace DataProcessor
 
         }
 
+        private static void replace2(List<Tuple<string, string>> rules, string replacedPropertyName, Dictionary<string, DOIElement> DOIElementDict)
+        {
+            DOIElementDict.Values.ToList().ForEach((DOIElement v) =>
+            {
+                foreach (var rule in rules)
+                {
+                    // rule.Item1がv.DOIのprefixであるかどうかを判定
+                    if (!string.IsNullOrEmpty(v.DOI) && !string.IsNullOrEmpty(rule.Item1))
+                    {
+                        if (v.DOI.StartsWith(rule.Item1))
+                        {
+                            if (replacedPropertyName == "ContainerTitle")
+                            {
+                                v.ContainerTitle = rule.Item2;
+                            }
+                            else if (replacedPropertyName == "Type")
+                            {
+                                v.Type = rule.Item2;
+
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+
         private static void replace(Dictionary<string, string> rules, string replacedPropertyName, Dictionary<string, DOIElement> DOIElementDict)
         {
             var keyList = rules.Keys.ToList();
@@ -108,7 +189,7 @@ namespace DataProcessor
 #pragma warning disable CS0219 
                 bool isMatched = false;
 #pragma warning restore CS0219
-        
+
                 foreach (var keyWithMark in keyList)
                 {
                     var value = replacedPropertyName == "ContainerTitle" ? v.ContainerTitle : v.Type;

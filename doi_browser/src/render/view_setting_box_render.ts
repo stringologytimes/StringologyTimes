@@ -25,10 +25,10 @@ function setModeSelectHTMLElement(selectedValue: ViewModeType) {
     const selectElement = document.getElementById("view-setting:mode-select");
     if (selectElement && selectElement instanceof HTMLSelectElement) {
         selectElement.innerHTML = "";
-        const defaultOption = document.createElement("option");
-        defaultOption.value = "dont-care";
-        defaultOption.textContent = "article_list";
-        selectElement.appendChild(defaultOption);
+        //const defaultOption = document.createElement("option");
+        //defaultOption.value = "dont-care";
+        //defaultOption.textContent = "article_list";
+        //selectElement.appendChild(defaultOption);
         const options = ["article_list", "container_title_list"];
       
       

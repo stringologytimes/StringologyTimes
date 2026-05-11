@@ -2,6 +2,10 @@ import { DOIInfo } from "../doi_info";
 import { DOIInfoCollection } from "../doi_info";
 import { DOIStatus } from "../doi_info";
 import { DOIFilterResult } from "./doi_filter_result";
+
+export type SortByType = "alphabetical-order-by-container-title" | "ascending-order-by-date" | "descending-order-by-date" | "article-count" | "unordered";
+
+
 export class DOIFilterQuery {
     public minimum_year: number | null = null;
     public maximum_year: number | null = null;
@@ -10,8 +14,9 @@ export class DOIFilterQuery {
     public tags: string[] = [];
     public volume: string | null = null;
     public container_title: string | null = null;
-    public doiReferences: string[] = [];
+    public doiReferences: string[] = [];    
     public status: DOIStatus | null = null;
+    public sortBy: SortByType = "unordered";
 
 
     public static buildFromURLParameters(): DOIFilterQuery {
@@ -89,6 +94,7 @@ export class DOIFilterQuery {
         r.container_title = this.container_title;
         r.doiReferences = this.doiReferences;
         r.status = this.status;
+        r.sortBy = this.sortBy;
         return r;
     }
 
@@ -129,9 +135,14 @@ export class DOIFilterQuery {
                 return false;
             }
         }
-        if(this.type != null && item.type != null){
-            if(this.type != item.type){
+        if(item.type != null){
+            if(this.type == null){
                 return false;
+            }
+            else{
+                if(this.type != item.type){
+                    return false;
+                }
             }
         }
         if(this.authors.length > 0){
@@ -162,6 +173,10 @@ export class DOIFilterQuery {
             if(this.status != item.status){
                 return false;
             }
+        }
+
+        if(this.sortBy != item.sortBy){
+            return false;
         }
 
         return true;

@@ -111,6 +111,9 @@
         <label>Year:</label> From <select id="year-from-select" onchange="filterInputChange('year-from')"></select> To
         <select id="year-to-select" onchange="filterInputChange('year-to')"></select>
       </li>
+      <li>
+        <label>Sort By:</label> <select id="sort-by-select" onchange="filterInputChange('sort-by')"></select>
+      </li>
     </ul>
     <button>Search</button>
     <button onclick="resetFilter()">Reset</button>
@@ -158,23 +161,24 @@
       <details>
         <summary class="title">
           <span class="title-number-text"></span>
-          <a href="https://example.com" target="_blank" rel="noopener" class="doi-link"
-            onclick="event.stopPropagation();">
-            <img src="images/doi_icon.png" alt="DOI" width="24" height="24">
-          </a>
+          <a class="doi-link" target="_blank" rel="noopener" onclick="event.stopPropagation();"></a>
+          <span class="status-icon-span"></span>
+          <span class="type-icon-span"></span>
+          <span class="year-icon-span"></span>
+
+
           <span class="title-text"></span>
           <span class="summary-info-text"></span>
         </summary>
         <div class="details_div"">
           <ul>
-            <li class=" date">
+            <li class="date">
           </li>
           <li>
             <div class="authors"></div>
           </li>
           <li class="container_title"></li>
           <li class="volume"></li>
-          <li class="status"></li>
           <li>
             <details>
               <summary>DOI References</summary>

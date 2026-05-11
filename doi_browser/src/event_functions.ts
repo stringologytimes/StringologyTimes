@@ -1,13 +1,6 @@
 
 import { BrowserInfo } from "./browser_info";
-import { Render } from "./render/doi_filter_result_render";
-import { renderFilterBox } from "./render/doi_filter_box_render";
-
-import { DOIFilterResult } from "./doi_filter/doi_filter_result";
-import { DOIFilterPartialResult } from "./doi_filter/doi_filter_partial_result";
-import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
-import { renderViewSettingBox } from "./render/view_setting_box_render";
-import { renderContainerTitleList } from "./render/doi_filter_container_title_render";
+import { SortByType } from "./doi_filter/doi_filter_query";
 
 export function updatePaginationControls(browserInfo: BrowserInfo) {
   /*
@@ -52,6 +45,7 @@ export function filterInputChange(inputElementName : string, browserInfo: Browse
       const type = (document.getElementById("type-select") as HTMLSelectElement).value;
       if(type == "dont-care") {
         browserInfo.currentDOIFilter.query.type = null;
+        console.log("type: dont-care" + browserInfo.currentDOIFilter.query.getHash());
       }else{
         browserInfo.currentDOIFilter.query.type = type;
       }
@@ -78,6 +72,14 @@ export function filterInputChange(inputElementName : string, browserInfo: Browse
         browserInfo.currentDOIFilter.query.maximum_year = null;
       }else{
         browserInfo.currentDOIFilter.query.maximum_year = parseInt(yearTo);
+      }
+    }
+    else if(inputElementName == "sort-by") {
+      const sortBy = (document.getElementById("sort-by-select") as HTMLSelectElement).value;
+      if(sortBy == "dont-care") {
+        browserInfo.currentDOIFilter.query.sortBy = "unordered";
+      }else{
+        browserInfo.currentDOIFilter.query.sortBy = sortBy as SortByType;
       }
     }
     else{

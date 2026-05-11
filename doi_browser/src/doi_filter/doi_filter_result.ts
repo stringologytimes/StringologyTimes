@@ -1,6 +1,7 @@
 import { DOIInfoCollection } from "../doi_info";
 import { DOIInfo } from "../doi_info";
 import { DOIFilterQuery } from "./doi_filter_query";
+import { SortByType } from "./doi_filter_query";
 
 export class DOIFilterResult {
     public doiIDs: number[] = [];
@@ -11,15 +12,57 @@ export class DOIFilterResult {
     private typeToDOIInfoMapper: Map<string, number[]> = new Map();
 
 
-    public constructor(doiIDs: number[] | null, r: DOIInfoCollection) {
+    public constructor(doiIDs: number[] | null, r: DOIInfoCollection, sortBy: SortByType) {
         if (doiIDs == null) {
             this.doiIDs = Array.from({ length: r.lightweightDOIInfos.length }, (_, index) => index);
         } else {
             this.doiIDs = doiIDs.map(doiID => r.getDOIInfo(doiID).id);
         }
 
+        if (sortBy == "alphabetical-order-by-container-title") {
+            this.doiIDs.sort((a, b) => r.getDOIInfo(a).container_title.localeCompare(r.getDOIInfo(b).container_title));
+        }
+        else if (sortBy == "ascending-order-by-date") {
+            this.doiIDs.sort((a, b) => {
+                const aYear = r.getDOIInfo(a).year + 1;
+                const aMonth = r.getDOIInfo(a).month + 1;
+                const bYear = r.getDOIInfo(b).year + 1;
+                const bMonth = r.getDOIInfo(b).month + 1;
+                const diff = aYear - bYear;
+                if (diff == 0) {
+                    const diff2 = aMonth - bMonth;
+                    if(diff2 == 0){
+                        return a - b;
+                    }else{
+                        return diff2;
+                    }
+                } else {
+                    return diff;
+                }
+            });
+        }
+        else if (sortBy == "descending-order-by-date") {
+            this.doiIDs.sort((a, b) => {
+                const aYear = r.getDOIInfo(a).year + 1;
+                const aMonth = r.getDOIInfo(a).month + 1;
+                const bYear = r.getDOIInfo(b).year + 1;
+                const bMonth = r.getDOIInfo(b).month + 1;
+                const diff = aYear - bYear;
+                if (diff == 0) {
+                    const diff2 = aMonth - bMonth;
+                    if(diff2 == 0){
+                        return (a - b);
+                    }else{                        
+                        return -diff2;    
+                    }
+                } else {
+                    return -diff;
+                }
+            });
+        }
+
         this.doiIDs.forEach(doiID => {
-            if(doiID >= r.lightweightDOIInfos.length){
+            if (doiID >= r.lightweightDOIInfos.length) {
                 console.log("doiID is greater than the length of lightweightDOIInfos");
                 console.log("doiID: " + doiID);
                 console.log("length of lightweightDOIInfos: " + r.lightweightDOIInfos.length);
@@ -198,7 +241,7 @@ export class DOIFilterResult {
             return doiFilterInput.contain(doiInfo);
         });
 
-        return new DOIFilterResult(resultDOIIDs, collection);
+        return new DOIFilterResult(resultDOIIDs, collection, doiFilterInput.sortBy);
     }
 
 

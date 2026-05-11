@@ -1,9 +1,5 @@
 import { DOIInfoCollection } from "./doi_info";
-import { DOIInfo } from "./doi_info";
-import { DOIFilterQuery } from "./doi_filter/doi_filter_query";
-import { DOIFilterPartialResult } from "./doi_filter/doi_filter_partial_result";
 import { DOIFilterResult } from "./doi_filter/doi_filter_result";
-import { DOIFilterViewSetting } from "./doi_filter/doi_filter_view_setting";
 import { DOIFilter } from "./doi_filter/doi_filter";
 import { SummaryInfo } from "./doi_filter/summary_info";
 import { renderFilterBox } from "./render/doi_filter_box_render";
@@ -37,8 +33,7 @@ export class BrowserInfo {
 
         {
             const emptyDOIFilterWithViewSetting = new DOIFilter();
-            const newDOIFilterResult = new DOIFilterResult(null, this.doiInfoCollection!);
-            const partialResult = new DOIFilterPartialResult(newDOIFilterResult.doiIDs, emptyDOIFilterWithViewSetting, this.doiInfoCollection!);
+            const newDOIFilterResult = new DOIFilterResult(null, this.doiInfoCollection!, emptyDOIFilterWithViewSetting.query.sortBy);
             const summaryInfo = new SummaryInfo();
             summaryInfo.build(newDOIFilterResult, emptyDOIFilterWithViewSetting.query, this.doiInfoCollection!);
 
@@ -101,6 +96,7 @@ export class BrowserInfo {
             const hash = currentDOIFilterWithViewSetting.getHash();
             const queryHash = currentDOIFilterWithViewSetting.query.getHash();
 
+
             while (this.doiFilterInputHashStack.length - 1 > this.doiFilterInputNumber && this.doiFilterInputHashStack.length > 0) {
 
                 this.doiFilterInputHashStack.shift();
@@ -115,7 +111,7 @@ export class BrowserInfo {
                 if (this.doiFilterInputNumber > 0) {
                     const parentHash = this.doiFilterInputHashStack[this.doiFilterInputNumber - 1];
                     const [parentDOIFilter] = this.cacheAssociatedWithDOIFilterHash.get(parentHash)!;
-                    if (parentDOIFilter.query.isIncluded(this.currentDOIFilter.query)) {
+                    if (this.currentDOIFilter.query.isIncluded(parentDOIFilter.query)) {
                         const [parentDOIFilterResult, _] = this.cacheAssociatedWithDOIQueryHash.get(parentDOIFilter.query.getHash())!;
                         const newDOIFilterResult = parentDOIFilterResult.search(this.currentDOIFilter.query, this.doiInfoCollection!);
                         const newSummaryInfo = new SummaryInfo();
@@ -128,6 +124,8 @@ export class BrowserInfo {
 
                         const newDOIFilterResult = emptyDOIFilterResult.search(this.currentDOIFilter.query, this.doiInfoCollection!);
                         const newSummaryInfo = new SummaryInfo();
+
+
                         newSummaryInfo.build(newDOIFilterResult, this.currentDOIFilter.query, this.doiInfoCollection!);
                         this.cacheAssociatedWithDOIQueryHash.set(queryHash, [newDOIFilterResult, newSummaryInfo]);
                     }
@@ -190,6 +188,14 @@ export class BrowserInfo {
             //Render.render(browserInfo);
             //updatePaginationControls(browserInfo);
         }        
+    }
+
+    public debugPrint(): void {
+        console.log("cacheAssociatedWithDOIFilterHash: ");
+        for(const key of this.cacheAssociatedWithDOIQueryHash.keys()){
+            const [a, b] = this.cacheAssociatedWithDOIQueryHash.get(key)!;
+            console.log(key + "/" + a.doiIDs.length);
+        }
     }
 
 

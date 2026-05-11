@@ -22,6 +22,17 @@ export class SummaryInfo {
         this.doiCategoryCountList = this.doiCategoryList.map(type => filterResult.searchByType(type, doiNumberFilterSet, doiInfoCollection).length);
 
         this.containerTitleList = filterResult.getContainerTitles();
+        if(filterInput.sortBy == "alphabetical-order-by-container-title"){
+            this.containerTitleList.sort();
+        }else if(filterInput.sortBy == "article-count"){
+            const containerTitleToDoiCountMapper = new Map<string, number>();
+            this.containerTitleList.forEach(containerTitle => {
+                containerTitleToDoiCountMapper.set(containerTitle, filterResult.searchByContainerTitle(containerTitle, doiNumberFilterSet, doiInfoCollection).length);
+            });
+            this.containerTitleList = this.containerTitleList.sort((a, b) => containerTitleToDoiCountMapper.get(a)! - containerTitleToDoiCountMapper.get(b)!);
+        }
+
+
         this.containerTitleCountList = this.containerTitleList.map(containerTitle => filterResult.searchByContainerTitle(containerTitle, doiNumberFilterSet, doiInfoCollection).length);
 
         {
@@ -54,11 +65,12 @@ export class SummaryInfo {
             yearToDoiCountList = yearToList.map(year => filterResult.searchByYear(currentMinimumYear, parseInt(year), doiNumberFilterSet, doiInfoCollection).length);
 
             for (let i = 0; i < yearToList.length; i++) {
-                if (i == yearToList.length - 1 || (yearToDoiCountList[i] - yearToDoiCountList[i + 1] > 0)) {
+                if (i == yearToList.length - 1 || (yearToDoiCountList[i + 1] - yearToDoiCountList[i] > 0)) {
                     this.yearToList.push(yearToList[i]);
                     this.yearToCountList.push(yearToDoiCountList[i]);
                 }
             }
+
         }
     }
 }

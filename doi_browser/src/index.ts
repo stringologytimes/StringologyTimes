@@ -1,8 +1,6 @@
 import { DOIInfoCollection } from "./doi_info";
 import { BrowserInfo } from "./browser_info";
-import { Render } from "./render/doi_filter_result_render";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
-import { DOIFilterQuery } from "./doi_filter/doi_filter_query";
 import * as EventFunctions from "./event_functions";
 import { DOIFilter } from "./doi_filter/doi_filter";
 

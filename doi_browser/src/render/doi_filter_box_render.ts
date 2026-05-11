@@ -3,6 +3,7 @@ import { DOIFilterResult } from "../doi_filter/doi_filter_result";
 import { DOIInfoCollection } from "../doi_info";
 import { DOIFilterQuery } from "../doi_filter/doi_filter_query";
 import { SummaryInfo } from "../doi_filter/summary_info";
+import { SortByType } from "../doi_filter/doi_filter_query";
 /*
 function getUniqueStringSet(items: string[]): string[] {
   const uniqueSet = new Set<string>();
@@ -69,9 +70,34 @@ function renderMaximumYearSelectBox(summaryInfo: SummaryInfo, selectedMinimumYea
   }
 }
 
+function renderSortBySelectBox(selectedValue: SortByType) {
+  const sortBySelect = document.getElementById("sort-by-select");
+  if (sortBySelect && sortBySelect instanceof HTMLSelectElement) {
+    sortBySelect.innerHTML = "";
+    const options = ["alphabetical-order-by-container-title", "ascending-order-by-date", "descending-order-by-date", "article-count", "unordered"];
+    const optionNames = ["Alphabetical Order by Container Title", "Ascending Order by Date", "Descending Order by Date", "Article Count", "Unordered"];
+
+
+    options.forEach((optionValue, index) => {
+      const option = document.createElement("option");
+      option.value = optionValue;
+      option.textContent = `${optionNames[index]}`;
+  
+      if (optionValue == selectedValue) {
+        option.selected = true;
+      }
+      sortBySelect.appendChild(option);
+    });
+  
+  }
+
+
+}
+
 export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIInfoCollection, summaryInfo: SummaryInfo) {
   renderDOICategorySelectBox(summaryInfo, filterInput.type);
   renderContainerTitleSelectBox(summaryInfo, filterInput.container_title);
   renderMinimumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
   renderMaximumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
+  renderSortBySelectBox(filterInput.sortBy);
 }

@@ -16,6 +16,7 @@ export class DOIFilterViewSetting {
         r.viewMode = this.viewMode;
         r.pageNumber = this.pageNumber;
         r.pageSize = this.pageSize;
+        
         return r;
     }
     public getHash(): string {

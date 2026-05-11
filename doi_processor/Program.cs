@@ -144,11 +144,22 @@ namespace DBLPProcessor
             var primaryDOIElementDict = DOIElement.Load(opts.DataFolderPath + "/auto_generated/result/" + PrimaryDOIElementFileName, true);
             var secondaryDOIElementDict = DOIElement.Load(opts.DataFolderPath + "/auto_generated/result/" + SecondaryDOIElementFileName, true);
 
+            outputSystemMessageFunction("Normalizing container title");
+            ContainerTitleNormalization.NormalizeDOIElementDictionary(primaryDOIElementDict);
+            ContainerTitleNormalization.NormalizeDOIElementDictionary(secondaryDOIElementDict);
+
+            
             outputSystemMessageFunction("Applying type replacement rules");
             ReplacementRules.ReplaceType(opts.DataFolderPath + "/raw/doi_processor/type_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict);
 
             outputSystemMessageFunction("Applying container-title replacement rules");
             ReplacementRules.ReplaceContainerTitle(opts.DataFolderPath + "/raw/doi_processor/container_title_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict);
+
+            outputSystemMessageFunction("Modifying container title by DOI prefix");
+            ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_container_title_value.tsv", primaryDOIElementDict, secondaryDOIElementDict);
+
+            outputSystemMessageFunction("Modifying type by DOI prefix");
+            ReplacementRules.ReplaceTypeByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_type_value.tsv", primaryDOIElementDict, secondaryDOIElementDict);
 
             var resultFolderPath = opts.DataFolderPath + "/auto_generated/result";
 
