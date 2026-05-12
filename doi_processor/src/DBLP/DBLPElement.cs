@@ -5,7 +5,7 @@ using System.Text;
 using System.Collections.Specialized;
 using System.Text.Json;
 
-namespace DBLPProcessor
+namespace DataProcessor
 {
     class DBLPElement
     {
@@ -20,7 +20,7 @@ namespace DBLPProcessor
         public string PaperType { get; set; } = "";
         public string BookTitleOrJournal { get; set; } = "";
         public List<string> Tags { get; set; } = new List<string>();
-        public string to_JSON_Line()
+        public string ToJSONLine()
         {
             List<string> dataList = new List<string>();
             dataList.Add(JsonSerializer.Serialize(this.DOI));
@@ -65,7 +65,7 @@ namespace DBLPProcessor
                 return null;
             }
         }
-        public static DBLPElement from_XML(XElement x, List<string> tags)
+        public static DBLPElement BuildFromXML(XElement x, List<string> tags)
         {
             var dblpElement = new DBLPElement();
 
@@ -130,7 +130,7 @@ namespace DBLPProcessor
                 var doi = DBLPElement.getDOI(eeURL);
                 if (doi != null)
                 {
-                    dblpElement.DOI = doi;
+                    dblpElement.DOI = doi.ToLower();
                 }
             }
             /*
@@ -147,127 +147,11 @@ namespace DBLPProcessor
             }
             return dblpElement;
         }
-    }
-    class Processor
-    {
-        public static List<DBLPElement> Process(string xmlPath, Dictionary<string, List<string>> doiToTagMapper)
+
+        public static DBLPElement BuildFromXML(XElement x)
         {
-
-            //HashSet<string> doiHashSet = new HashSet<string>();
-            HashSet<string> journalURLHashSet = new HashSet<string>();
-            HashSet<string> ProceedingNameHashSet = new HashSet<string>();
-
-            /*
-            StreamReader sr = new StreamReader(urlListPath, System.Text.Encoding.UTF8);
-            var urlText = sr.ReadToEnd().Replace("\r\n", "\n");
-            var urlLines = urlText.Split("\n");
-            foreach (var line in urlLines)
-            {
-                if (line.IndexOf("^JournalURL") == 0)
-                {
-                    var words = line.Split(",");
-                    journalURLHashSet.Add(words[1]);
-                }
-                else if (line.IndexOf("^ProceedingName") == 0)
-                {
-                    var words = line.Split(",");
-                    ProceedingNameHashSet.Add(words[1]);
-                }
-                else if (line.IndexOf("10.") == 0)
-                {
-                    //var url = "https://doi.org/" + line;
-                    //Console.WriteLine(url + " / " + line);
-                    doiHashSet.Add(line);
-                }
-                else if (line.Length > 3)
-                {
-                }
-            }
-            */
-
-            List<DBLPElement> dblpElements = new List<DBLPElement>();
-
-            var stream = DBLPProcessor.DBLPProcessorFunctions.StreamCustomerItem(xmlPath);
-            var counter = 0;
-            XElement root = new XElement("dblp");
-
-            foreach (var v in stream)
-            {
-                if (counter % 100000 == 0)
-                {
-                    Console.WriteLine(counter);
-                }
-                var booktitleElement = v.Element("booktitle");
-                var b1 = v.Name == "inproceedings" && booktitleElement != null && ProceedingNameHashSet.Contains(booktitleElement.Value);
-                var urlNode = v.Element("url");
-                var b2 = false;
-                if (urlNode != null)
-                {
-                    var url = "https://dblp.org/" + urlNode.Value.Split("#")[0];
-                    if (journalURLHashSet.Contains(url))
-                    {
-                        b2 = true;
-                    }
-                }
-                var eeChildren = v.Elements("ee");
-                foreach (var eeChild in eeChildren)
-                {
-                    if (eeChild != null)
-                    {
-                        var url = eeChild.FirstNode?.ToString() ?? "";
-                        var doi = DBLPElement.getDOI(url);
-
-                        if (doi != null && doiToTagMapper.ContainsKey(doi))
-                        {
-                            root.Add(v);
-
-                            var dblpElement = new DBLPElement();
-                            dblpElement = DBLPElement.from_XML(v, doiToTagMapper[doi]);
-                            dblpElements.Add(dblpElement);
-
-
-                            //doiToTagMapper.Remove(doi);
-                            Console.WriteLine(doi);
-                            break;
-                        }
-                        if (b1 || b2)
-                        {
-                            root.Add(v);
-
-                            var dblpElement = new DBLPElement();
-                            var tags = new List<string>();
-                            if (doi != null && doiToTagMapper.ContainsKey(doi))
-                            {
-                                tags = doiToTagMapper[doi];
-                            }
-                            else
-                            {
-                                tags = new List<string>();
-                            }
-
-                            dblpElement = DBLPElement.from_XML(v, tags);
-                            dblpElements.Add(dblpElement);
-
-
-                            Console.WriteLine(doi);
-                            break;
-                        }
-
-                    }
-                }
-                counter++;
-            }
-            return dblpElements;
-
-
-            /*
-            foreach (var doi in doiToTagMapper.Keys)
-            {
-                Console.WriteLine("Not found: " + doi);
-            }
-            */
-
-
+            var tags = new List<string>();
+            return BuildFromXML(x, tags);
         }
     }
 }

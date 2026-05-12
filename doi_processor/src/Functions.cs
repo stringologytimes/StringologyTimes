@@ -1,7 +1,7 @@
 using System.Xml;
 using System.Xml.Linq;
 using System.IO;
-namespace DBLPProcessor
+namespace DataProcessor
 {
     enum URLType
     {
@@ -76,7 +76,7 @@ namespace DBLPProcessor
                 reader.MoveToContent();
                 HashSet<string> mainNodeNames = new HashSet<string>();
 
-                foreach (var nodetype in DBLPProcessor.DBLPProcessorFunctions.MainNodeType)
+                foreach (var nodetype in DataProcessor.DBLPProcessorFunctions.MainNodeType)
                 {
                     mainNodeNames.Add(nodetype);
                 }

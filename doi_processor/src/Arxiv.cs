@@ -5,7 +5,7 @@ using System.Text.Unicode;
 using System.Text.Json.Serialization;
 using System.Text;
 using System.IO;
-using DBLPProcessor;
+using DataProcessor;
 
 namespace ArxivProcessor
 {

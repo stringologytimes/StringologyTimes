@@ -144,7 +144,7 @@ Write-Host "Is url.csv updated? $urlUpdated" -ForegroundColor Yellow
 Write-Host "Is arxiv-metadata-oai-snapshot.json updated? $arxivUpdated" -ForegroundColor Yellow
 
 $doiProcessor = "./doi_processor/bin/Release/net9.0/doi_processor"
-$doiProcessorArgs = @("--data", "./data", "--skip_build")
+$doiProcessorArgs = @("--data", "./data", "--skip_build", "--mode", "standard")
 #$doiProcessorArgs = @("--data", "./data")
 
 if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {

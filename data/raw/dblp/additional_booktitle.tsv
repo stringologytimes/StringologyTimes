@@ -1,0 +1,13 @@
+=conf/sigir/	SIGIR
+conf/webist/2006-2	WEBIST
+=conf/tfcv/	TFCV
+=conf/aaai/	IAAI
+=conf/sigmod/\d+$	SIGMOD
+=conf/ht/\d+$	HYPERTEXT
+=conf/tc11-5/	IFIP TC11
+=conf/iccd/\d+$	ICCD
+=conf/trec/\d+$	TREC
+=conf/iscas/\d+$	ISCAS
+=conf/pods/\d+$	PODS
+=conf/dasfaa/\d+$	DASFAA
+=conf/cikm/\d+$	CIKM

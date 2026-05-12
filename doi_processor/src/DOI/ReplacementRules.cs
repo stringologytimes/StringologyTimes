@@ -11,6 +11,51 @@ namespace DataProcessor
 {
     public class ReplacementRules
     {
+        public static void ReplaceContainerTitleUsingDBLPSummary(string dblpSummaryPath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
+        {
+            if (File.Exists(dblpSummaryPath))
+            {
+                var dblpProceedingsSeriesDictionary = DBLPProceedingsSeriesDictionary.Load(dblpSummaryPath);
+                dblpProceedingsSeriesDictionary.BuildDoiToBookTitleMapper();
+
+                primaryDOIElementDict.Keys.ToList().ForEach((key) =>
+                {
+                    var doiElement = primaryDOIElementDict[key];
+                    var doi = doiElement.DOI;
+                    var bookTitle = dblpProceedingsSeriesDictionary.SearchBookTitleByDOI(doi);
+                    /*
+
+                    if (doi.StartsWith("10.4230/lipics.approx/random.2020.35"))
+                    {
+                        Console.WriteLine($"No Hit: {doi}/" + bookTitle);
+                    }
+                    */
+
+                    if (bookTitle != null)
+                    {
+                        //Console.WriteLine($"Replaced container title: {doiElement.ContainerTitle} -> {bookTitle}");
+                        doiElement.ContainerTitle = bookTitle;
+                    }
+
+                });
+
+                secondaryDOIElementDict.Keys.ToList().ForEach((key) =>
+                {
+                    var doiElement = secondaryDOIElementDict[key];
+                    var doi = doiElement.DOI;
+                    var bookTitle = dblpProceedingsSeriesDictionary.SearchBookTitleByDOI(doi);
+                    if (bookTitle != null)
+                    {
+                        //Console.WriteLine($"Replaced container title: {doiElement.ContainerTitle} -> {bookTitle}");
+                        doiElement.ContainerTitle = bookTitle;
+                    }
+                });
+            }
+            else
+            {
+                Console.WriteLine("NoDBLP summary file found: " + dblpSummaryPath);
+            }
+        }
         public static void ReplaceType(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
         {
             if (File.Exists(rulePath))
