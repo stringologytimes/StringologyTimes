@@ -143,9 +143,10 @@ Write-Host "Is url.csv updated? $urlUpdated" -ForegroundColor Yellow
 #Write-Host "Is dblp.xml updated? $DBLPUpdated" -ForegroundColor Yellow
 Write-Host "Is arxiv-metadata-oai-snapshot.json updated? $arxivUpdated" -ForegroundColor Yellow
 
+
+###### CS STEP
+
 $doiProcessor = "./doi_processor/bin/Release/net9.0/doi_processor"
-$doiProcessorArgs = @("--data", "./data", "--skip_build", "--mode", "standard")
-#$doiProcessorArgs = @("--data", "./data")
 
 if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
     Write-Host "Compile: $dblpProcessor" -ForegroundColor Yellow
@@ -156,6 +157,17 @@ if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
 
 Write-Host "`$ForceCompile = $ForceCompile" -ForegroundColor Yellow
 
+$doiProcessorArgsA = @("--data", "./data", "--skip_build", "--mode", "build_doi_element_dictionary")
+if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
+    Write-Host "Execute: $doiProcessor $doiProcessorArgsA" -ForegroundColor Yellow
+    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsA -Wait    
+}else{
+    Write-Host "Skip: $doiProcessor $doiProcessorArgsA" -ForegroundColor Green
+}
+
+
+$doiProcessorArgs = @("--data", "./data", "--skip_build", "--mode", "standard")
+#$doiProcessorArgs = @("--data", "./data")
 
 if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
     Write-Host "Execute: $doiProcessor $doiProcessorArgs" -ForegroundColor Yellow
@@ -164,8 +176,19 @@ if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
     Write-Host "Skip: $doiProcessor $doiProcessorArgs" -ForegroundColor Green
 }
 
-Write-Host "Copying folder: ./data/auto_generated/result/doi_info_parts to ./doi_browser/doi_info_parts" -ForegroundColor Yellow
-$sourceFolder = "./data/auto_generated/result/doi_info_parts"
+$doiProcessorArgsC = @("--data", "./data", "--skip_build", "--mode", "create_lightweight_doi_info_folder")
+
+if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
+    Write-Host "Execute: $doiProcessor $doiProcessorArgsC" -ForegroundColor Yellow
+    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsC -Wait    
+}else{
+    Write-Host "Skip: $doiProcessor $doiProcessorArgsC" -ForegroundColor Green
+}
+
+###### FINAL STEP
+
+Write-Host "Copying folder: ./data/auto_generated/result/lightweight_doi_info to ./doi_browser/lightweight_doi_info" -ForegroundColor Yellow
+$sourceFolder = "./data/auto_generated/result/lightweight_doi_info"
 $destinationFolder = "./doi_browser"
 if (Test-Path $sourceFolder) {
     Copy-Item $sourceFolder $destinationFolder -Recurse -Force

@@ -51,7 +51,7 @@ function goToNextPage() {
 async function initialize() {
   await new Promise(resolve => setTimeout(resolve, 1000));
   if (browserInfo.doiInfoCollection == null) {
-    browserInfo.doiInfoCollection = await DOIInfoCollection.load("./doi_info_parts");
+    browserInfo.doiInfoCollection = await DOIInfoCollection.load("./lightweight_doi_info");
   }
 
 

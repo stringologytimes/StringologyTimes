@@ -41,8 +41,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: 'doi_info_parts',
-          to: 'doi_info_parts',
+          from: 'lightweight_doi_info',
+          to: 'lightweight_doi_info',
         },
       ],
     }),
@@ -61,8 +61,8 @@ module.exports = {
         directory: path.join(__dirname, 'dist'),
       },
       {
-        directory: path.join(__dirname, 'doi_info_parts'),
-        publicPath: '/doi_info_parts',
+        directory: path.join(__dirname, 'lightweight_doi_info'),
+        publicPath: '/lightweight_doi_info',
       },
     ],
     compress: true,
