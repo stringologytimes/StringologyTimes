@@ -153,19 +153,26 @@ cd doi_processor
 dotnet build -c Release
 cd ..    
 
-Write-Host "`$ForceCompile = $ForceCompile" -ForegroundColor Yellow
-$doiProcessorArgsX = @("--data", "./data", "--skip_build", "--mode", "build_tag_csv_from_data_cite")
+#Write-Host "`$ForceCompile = $ForceCompile" -ForegroundColor Yellow
+#$doiProcessorArgsX = @("--data", "./data", "--skip_build", "--mode", "build_tag_csv_from_data_cite")
+#Write-Host "Execute: $doiProcessor $doiProcessorArgsX" -ForegroundColor Yellow
+#$dblpProcX = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsX -Wait    
+
+$doiProcessorArgsX = @("--data", "./data", "--skip_build", "--mode", "build_big_cache")
 Write-Host "Execute: $doiProcessor $doiProcessorArgsX" -ForegroundColor Yellow
-$dblpProcX = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsX -Wait    
+$dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsX -Wait    
 
-
-$doiProcessorArgsA = @("--data", "./data", "--skip_build", "--mode", "build_cache_for_primary_doi_elements")
+$doiProcessorArgsA = @("--data", "./data", "--skip_build", "--mode", "build_small_cache_for_primary_doi_elements")
 if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
     Write-Host "Execute: $doiProcessor $doiProcessorArgsA" -ForegroundColor Yellow
     $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsA -Wait    
 }else{
     Write-Host "Skip: $doiProcessor $doiProcessorArgsA" -ForegroundColor Green
 }
+
+
+<#
+
 
 
 
@@ -177,7 +184,7 @@ if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
     Write-Host "Skip: $doiProcessor $doiProcessorArgsB" -ForegroundColor Green
 }
 
-$doiProcessorArgsC = @("--data", "./data", "--skip_build", "--mode", "build_cache_for_secondary_doi_elements")
+$doiProcessorArgsC = @("--data", "./data", "--skip_build", "--mode", "build_small_cache_for_secondary_doi_elements")
 if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
     Write-Host "Execute: $doiProcessor $doiProcessorArgsC" -ForegroundColor Yellow
     $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsC -Wait    
@@ -224,6 +231,8 @@ if (Test-Path $sourceFolder) {
 } else {
     Write-Host "Source folder $sourceFolder does not exist. Skipping copy." -ForegroundColor Red
 }
+
+#>
 
 
 cd ./doi_browser

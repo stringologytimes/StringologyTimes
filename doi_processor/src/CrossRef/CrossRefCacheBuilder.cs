@@ -7,6 +7,12 @@ namespace DataProcessor
         {
             return dataFolderPath + "/auto_generated/cache/crossref_cache/gzfile_to_doi";
         }
+        public static string GetCrossRefCacheFolderPath(string dataFolderPath)
+        {
+            return dataFolderPath + "/auto_generated/cache/crossref_cache";
+        }
+
+
         public static DirectoryInfo SearchCrossRefFolder(string externalFolderPath)
         {
             DirectoryInfo di = new DirectoryInfo(externalFolderPath);

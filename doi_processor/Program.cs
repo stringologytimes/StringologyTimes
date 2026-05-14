@@ -12,20 +12,6 @@ namespace DataProcessor
     [Verb("dblp", HelpText = "Read and display the file.")]
     public class DBLPOptions
     {
-        /*
-        [Option('x', "xml", Required = true, HelpText = "DBLP XML Path")]
-        public string XmlPath { get; set; } = "";
-        [Option('j', "json", Required = false, HelpText = "Arxiv JSON Path")]
-        public string JsonPath { get; set; } = "";
-
-        [Option('c', "json-folder", Required = false, HelpText = "Arxiv JSON Folder Path")]
-        public string JsonFolderPath { get; set; } = "";
-
-        [Option('u', "url", Required = true, HelpText = "The Path to url.csv")]
-        public string UrlPath { get; set; } = "";
-
-
-        */
 
         [Option('d', "data", Required = true, HelpText = "The Path to data folder")]
         public string DataFolderPath { get; set; } = "";
@@ -39,11 +25,6 @@ namespace DataProcessor
         [Option('a', "mail_address", HelpText = "The mail address to use for the API")]
         public string MailAddress { get; set; } = "takaaki.nishimoto@riken.jp";
 
-
-        /*
-        [Option('o', "output", Required = true, HelpText = "Output Path")]
-        public string OutputPath { get; set; } = "";
-        */
     }
 
 
@@ -95,9 +76,14 @@ namespace DataProcessor
                 Processor.BuildTagCSVFromDataCite(opts);
                 return 0;
             }
-            else if (opts.Mode == "build_cache_for_primary_doi_elements")
+            else if (opts.Mode == "build_big_cache")
             {
-                await Processor.BuildCacheForPrimaryDOIElements(opts);
+                Processor.BuildBigCache(opts);
+                return 0;
+            }
+            else if (opts.Mode == "build_small_cache_for_primary_doi_elements")
+            {
+                await Processor.BuildSmallCacheForPrimaryDOIElements(opts);
                 return 0;
             }
             else if (opts.Mode == "build_primary_doi_element_dictionary")
@@ -105,9 +91,9 @@ namespace DataProcessor
                 Processor.BuildPrimaryDOIElementDictionary(opts);
                 return 0;
             }
-            else if (opts.Mode == "build_cache_for_secondary_doi_elements")
+            else if (opts.Mode == "build_small_cache_for_secondary_doi_elements")
             {
-                await Processor.BuildCacheForSecondaryDOIElements(opts);
+                await Processor.BuildSmallCacheForSecondaryDOIElements(opts);
                 return 0;
             }
             else if (opts.Mode == "build_secondary_doi_element_dictionary")

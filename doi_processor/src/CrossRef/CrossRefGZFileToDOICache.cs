@@ -1,7 +1,7 @@
 using System.Text;
 using System.IO.Compression;
 using System.Collections.ObjectModel;
-
+using System.Security.Cryptography;
 
 namespace DataProcessor
 {
@@ -31,15 +31,22 @@ namespace DataProcessor
                 MaxDegreeOfParallelism = 32 // 最大並列度を4に制限
             };
 
+
+
+
             System.Threading.Tasks.Parallel.For(0, gzFiles.Length, options, i =>
             {
                 var gzFilePath = gzFiles[i];
                 FileInfo fi = new FileInfo(gzFilePath);
+                string parentName = fi.Directory!.Name;
+                string fileName = fi.Name;
+
                 lock (lockObj)
                 {
                     parallelCounter++;
-
                 }
+
+            
                 var csvFilePath = CrossRefCacheBuilder.GetGZFileToDoiFolderPath(dataFolderPath) + $"/{fi.Name}.csv";
                 var csvFileInfo = new FileInfo(csvFilePath);
 
@@ -66,13 +73,11 @@ namespace DataProcessor
                     {
                         FinishedCounter++;
                         parallelCounter--;
-                        if (FinishedCounter % 100 == 0)
+                        if (FinishedCounter % 1000 == 0)
                         {
                             Console.WriteLine("\t Processing: " + FinishedCounter + " / " + gzFiles.Length + " / Skipped: " + skippedCounter);
                         }
                     }
-
-
                 }
                 else
                 {
@@ -81,12 +86,18 @@ namespace DataProcessor
                         skippedCounter++;
                         FinishedCounter++;
                         parallelCounter--;
+                        if (FinishedCounter % 1000 == 0)
+                        {
+                            Console.WriteLine("\t Processing: " + FinishedCounter + " / " + gzFiles.Length + " / Skipped: " + skippedCounter);
+                        }
+
                     }
                 }
 
 
 
             });
+
 
 
 

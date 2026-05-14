@@ -17,15 +17,12 @@ namespace DataProcessor
             return dataFolderPath + "/auto_generated/cache/doi_element.jsonl";
         }
 
-        public static async Task BuildCache(string dataFolderPath, string mailAddress, HashSet<string> doiSet)
+        public static async Task BuildSmallCache(string dataFolderPath, string mailAddress, HashSet<string> doiSet)
         {
 
 
-            await DataProcessor.CrossRefPreprocessor.BuildCache(dataFolderPath, doiSet, mailAddress);
-            await DataProcessor.DataCitePreprocessor.BuildCache(dataFolderPath, doiSet, mailAddress);
-
-
-
+            await DataProcessor.CrossRefPreprocessor.BuildSmallCache(dataFolderPath, doiSet, mailAddress);
+            await DataProcessor.DataCitePreprocessor.BuildSmallCache(dataFolderPath, doiSet, mailAddress);
 
             var doiElementDict = DOIElement.Load(GetCachePath(dataFolderPath), false);
             var crossRefDic = DataProcessor.CrossRefFoundDOICache.Load(dataFolderPath);

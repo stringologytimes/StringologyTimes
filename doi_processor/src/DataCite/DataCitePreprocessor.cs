@@ -17,12 +17,7 @@ namespace DataProcessor
 
 
 
-
-
-
-
-
-        public static async Task BuildCache(string dataFolderPath, HashSet<string> doiSet, string mailAddress)
+        public static void BuildBigCache(string dataFolderPath)
         {
             var dataCiteDoiListFolderPath = dataFolderPath + "/auto_generated/cache/datacite_cache/gzfile_to_doi";
 
@@ -35,10 +30,23 @@ namespace DataProcessor
             {
                 DataCiteDOIToGZFileCache.Build(dataCiteDoiListFolderPath, dataFolderPath);
             }
+        }
+
+
+
+
+
+        public static async Task BuildSmallCache(string dataFolderPath, HashSet<string> doiSet, string mailAddress)
+        {
+            var dataCiteFolderInfo = DataCiteJSONLLoader.SearchDataCiteFolder(dataFolderPath + "/external");
+            var dataCiteOtherCSVPath = dataFolderPath + "/auto_generated/cache/datacite_cache/doi_to_gzfile/others.csv";
+
+            var dataCiteOtherCSVFileInfo = new FileInfo(dataCiteOtherCSVPath);
+            if(!dataCiteOtherCSVFileInfo.Exists){
+                throw new Exception("others.csv not found");
+            }
 
             DataCiteFoundDOICache.Build(doiSet.ToList(), dataFolderPath, dataCiteFolderInfo.FullName);
-
-
 
             var unknownDOISet = CSVFunctions.ReadCSVAsHashSet(dataFolderPath + "/auto_generated/cache/datacite_cache/unknown_doi.csv");
             await DataCiteExternalFoundDOICache.Build(dataFolderPath, doiSet, unknownDOISet, mailAddress);
