@@ -137,12 +137,12 @@ export class DOIFilterQuery {
             return false;
         }
 
-        console.log("tags: " + this.tags);
         for(let i = 0; i < this.tags.length; i++){
             if(!doiInfo.tags.includes(this.tags[i])){
                 return false;
             }
         }
+        console.log("doiInfo.tags: " + doiInfo.tags);
         return true;
     }
 

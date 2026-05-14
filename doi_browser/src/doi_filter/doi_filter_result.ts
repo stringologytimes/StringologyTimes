@@ -106,6 +106,7 @@ export class DOIFilterResult {
             }
 
             doiInfo.tags.forEach(tag => {
+
                 if (this.tagToDOIInfoMapper.has(tag)) {
                     this.tagToDOIInfoMapper.get(tag)!.push(doiID);
                 } else {
@@ -265,6 +266,8 @@ export class DOIFilterResult {
             const doiInfo = collection.getDOIInfo(doiID);
             return doiFilterInput.contain(doiInfo);
         });
+
+        console.log("resultDOIIDs: " + resultDOIIDs);
 
         return new DOIFilterResult(resultDOIIDs, collection, doiFilterInput.sortBy);
     }
