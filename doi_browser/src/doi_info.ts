@@ -16,7 +16,7 @@ export class LightWeightDOIInfo {
     public type: string = "Unknown";
     public container_title: string = "";
     public volume: string = "";
-    public tags: string[] = [];
+    public tags: string[] = [];    
     public doiReferenceIDs: number[] = [];
 }
 export class DOIInfo {
@@ -40,6 +40,8 @@ export class DOIInfo {
 export class DOIInfoCollection {
     public lightweightDOIInfos: LightWeightDOIInfo[] = [];
     public authorList: string[] = [];
+    public tagList: string[] = [];
+
 
     public length(): number {
         return this.lightweightDOIInfos.length;
@@ -72,7 +74,7 @@ export class DOIInfoCollection {
 
         r.doiReferences = this.lightweightDOIInfos[index].doiReferenceIDs.map(id => this.getDOIByID(id));
         r.type = this.lightweightDOIInfos[index].type;
-
+        r.tags = this.lightweightDOIInfos[index].tags.map(tag => tag);
         if (this.lightweightDOIInfos[index].status == 1) {
             r.status = "primary";
         } else if (this.lightweightDOIInfos[index].status == 0) {
@@ -167,6 +169,17 @@ export class DOIInfoCollection {
                 throw new Error("lightweightDOIInfos[i] is undefined");
             }
         }
+
+        const tag_list = await load_gzip_text_lines(folderURL + "/tag.csv.gz");
+        const tag_index_list = await load_gzip_integer_list_lines(folderURL + "/tag_of_each_element.csv.gz");
+        r.tagList = tag_list;
+
+        tag_index_list.forEach((numbers, index) => {
+            numbers.forEach((number) => {
+                r.lightweightDOIInfos[index].tags.push(tag_list[number]);
+            });
+        });
+
         console.log("lightweightDOIInfos is loaded successfully : " + r.lightweightDOIInfos.length);
 
 

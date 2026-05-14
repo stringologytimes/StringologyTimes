@@ -82,6 +82,14 @@ export function filterInputChange(inputElementName : string, browserInfo: Browse
         browserInfo.currentDOIFilter.query.sortBy = sortBy as SortByType;
       }
     }
+    else if(inputElementName == "tag1") {
+      const tag1 = (document.getElementById("tag1-select") as HTMLSelectElement).value;
+      if(tag1 == "dont-care") {
+        browserInfo.currentDOIFilter.query.tags = [];
+      }else{
+        browserInfo.currentDOIFilter.query.tags = [tag1];
+      }
+    }
     else{
   
     }

@@ -70,6 +70,13 @@ function renderMaximumYearSelectBox(summaryInfo: SummaryInfo, selectedMinimumYea
   }
 }
 
+function renderTag1SelectBox(summaryInfo: SummaryInfo, selectedValue: string | null) {
+  const tag1Select = document.getElementById("tag1-select");
+  if (tag1Select && tag1Select instanceof HTMLSelectElement) {
+    setSelectHTMLElement(tag1Select, summaryInfo.tagList, summaryInfo.tagCountList, selectedValue, "Any");
+  }
+}
+
 function renderSortBySelectBox(selectedValue: SortByType) {
   const sortBySelect = document.getElementById("sort-by-select");
   if (sortBySelect && sortBySelect instanceof HTMLSelectElement) {
@@ -100,4 +107,5 @@ export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIF
   renderMinimumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
   renderMaximumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
   renderSortBySelectBox(filterInput.sortBy);
+  renderTag1SelectBox(summaryInfo, filterInput.tags[0]);
 }

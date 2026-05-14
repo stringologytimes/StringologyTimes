@@ -278,6 +278,17 @@ export class DOIFilterStandardRender {
                         }
                     });
                     */
+
+                const tagsSpan = article.querySelector('.tags-text');
+                if (tagsSpan){
+                    doiInfo.tags.forEach((tag, index) => {
+                        const tagSpan = document.createElement('span');
+                        setIconToSpan(tagSpan, tag, 14, "purple", "white");
+                        tagsSpan.appendChild(tagSpan);
+                    });
+                }
+
+
                 }
 
                 outputDiv.appendChild(article);

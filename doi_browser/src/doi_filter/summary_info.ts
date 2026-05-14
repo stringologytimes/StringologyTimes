@@ -12,6 +12,8 @@ export class SummaryInfo {
     public yearFromCountList: number[] = [];
     public yearToList: string[] = [];
     public yearToCountList: number[] = [];
+    public tagList: string[] = [];
+    public tagCountList: number[] = [];
 
     public build(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIInfoCollection){
         this.doiCount = filterResult.doiIDs.length;
@@ -71,6 +73,14 @@ export class SummaryInfo {
                 }
             }
 
+        }
+
+        {
+            filterResult.getTags().forEach(tag => {
+                this.tagList.push(tag);
+            });
+            this.tagList.sort();
+            this.tagCountList = this.tagList.map(tag => filterResult.searchByTag(tag, doiNumberFilterSet, doiInfoCollection).length);
         }
     }
 }

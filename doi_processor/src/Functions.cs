@@ -37,42 +37,57 @@ namespace DataProcessor
 
     class DoiToTagMapper
     {
-        public static Dictionary<string, List<string>> CreateDoiToTagMapper(string doiListCsvPath, string doiToTagCsvPath)
+        public static Dictionary<string, List<string>> CreateDoiToTagMapper(string dataRawFolderPath)
         {
-            var doiToTagMapper = new Dictionary<string, List<string>>();
-
-            var doiListCsvLines = File.ReadAllLines(doiListCsvPath);
-            foreach (var line in doiListCsvLines)
+            var doiToTagMapper = new Dictionary<string, HashSet<string>>();
+            DirectoryInfo directoryInfo = new DirectoryInfo(dataRawFolderPath);
+            // directoryInfo中のFileInfoを再帰的に列挙
+            var files = directoryInfo.GetFiles("*", SearchOption.AllDirectories);
+            foreach (var file in files)
             {
-                var cols = line.Split(",");
-                var doi = cols[0].Trim().ToLower();
-                if (!doiToTagMapper.ContainsKey(doi))
+                var fileInfo = new FileInfo(file.FullName);
+           
+                if (fileInfo.Name == "url_and_doi.csv" || fileInfo.Name == "url_and_doi.tsv")
                 {
-                    doiToTagMapper[doi] = new List<string>();
+                    var lines = File.ReadAllLines(fileInfo.FullName);
+                    foreach (var line in lines)
+                    {
+                        var cols = line.Split(",");
+                        var doi = cols[0].Trim().ToLower();
+                        if (!doiToTagMapper.ContainsKey(doi))
+                        {
+                            doiToTagMapper[doi] = new HashSet<string>();
+                        }
+                    }
+                }
+                if (fileInfo.Name == "tag.csv" || fileInfo.Name == "tag.tsv")
+                {                    
+                    var lines = File.ReadAllLines(fileInfo.FullName);
+                    foreach (var line in lines)
+                    {
+                        var splitChar = fileInfo.Extension == ".csv" ? "," : "\t";
+                        var cols = line.Split(splitChar);
+                        var doi = cols[0].Trim().ToLower();
+                        if (!doiToTagMapper.ContainsKey(doi))
+                        {
+                            doiToTagMapper[doi] = new HashSet<string>();
+                        }
+                        for (int i = 1; i < cols.Length; i++)
+                        {
+                            var tag = cols[i].Trim();
+                            doiToTagMapper[doi].Add(tag);
+                            Console.WriteLine($"DOI: {doi} -> {tag}");
+                        }
+                    }
                 }
             }
 
-            var doiToTagCsvLines = File.ReadAllLines(doiToTagCsvPath);
-            foreach (var line in doiToTagCsvLines)
+            var doiToTagMapper2 = new Dictionary<string, List<string>>();
+            foreach (var doi in doiToTagMapper.Keys)
             {
-                var cols = line.Split(",");
-                var doi = cols[0].Trim().ToLower();
-                for (int i = 1; i < cols.Length; i++)
-                {
-                    var tag = cols[i].Trim();
-                    if (doiToTagMapper.ContainsKey(doi))
-                    {
-                        doiToTagMapper[doi].Add(tag);
-                    }
-                    else
-                    {
-                        doiToTagMapper[doi] = new List<string>();
-                        doiToTagMapper[doi].Add(tag);
-                    }
-
-                }
+                doiToTagMapper2[doi] = doiToTagMapper[doi].ToList();
             }
-            return doiToTagMapper;
+            return doiToTagMapper2;
         }
     }
 

@@ -43,6 +43,12 @@ export class DOIFilterQuery {
                 r.container_title = v;
             }else if(k == "doi_reference"){
                 r.doiReferences.push(v);
+            }else if(k == "tag1"){
+                r.tags.push(v);
+            }else if(k == "tag2"){
+                r.tags.push(v);
+            }else if(k == "tag3"){
+                r.tags.push(v);
             }
         }
         return r;
@@ -70,6 +76,12 @@ export class DOIFilterQuery {
             if(this.status != null && doiInfo.status != this.status){
                 return false;
             }
+            for(let i = 0; i < this.tags.length; i++){
+                if(!doiInfo.tags.includes(this.tags[i])){
+                    return false;
+                }
+            }
+
             return true;
         });
     }
@@ -88,11 +100,11 @@ export class DOIFilterQuery {
         r.minimum_year = this.minimum_year;
         r.maximum_year = this.maximum_year;
         r.type = this.type;
-        r.authors = this.authors;
-        r.tags = this.tags;
+        r.authors = this.authors.map(author => author);
+        r.tags = this.tags.map(tag => tag);
         r.volume = this.volume;
         r.container_title = this.container_title;
-        r.doiReferences = this.doiReferences;
+        r.doiReferences = this.doiReferences.map(doiReference => doiReference);
         r.status = this.status;
         r.sortBy = this.sortBy;
         return r;
@@ -103,6 +115,9 @@ export class DOIFilterQuery {
     }
     
     public contain(doiInfo: DOIInfo): boolean {
+        if(doiInfo.tags.length > 0){
+            console.log("doiInfo.tags: " + doiInfo.tags);
+        }
         if(this.minimum_year != null && doiInfo.year < this.minimum_year){
             return false;
         }
@@ -120,6 +135,13 @@ export class DOIFilterQuery {
         }
         if(this.status != null && doiInfo.status != this.status){
             return false;
+        }
+
+        console.log("tags: " + this.tags);
+        for(let i = 0; i < this.tags.length; i++){
+            if(!doiInfo.tags.includes(this.tags[i])){
+                return false;
+            }
         }
         return true;
     }
@@ -177,6 +199,12 @@ export class DOIFilterQuery {
 
         if(this.sortBy != item.sortBy){
             return false;
+        }
+
+        for(let i = 0; i < item.tags.length; i++){
+            if(!this.tags.includes(item.tags[i])){
+                return false;
+            }
         }
 
         return true;

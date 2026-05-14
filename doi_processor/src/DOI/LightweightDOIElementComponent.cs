@@ -27,6 +27,9 @@ namespace DataProcessor
         //public List<string> DOIReferenceSizeList { get; set; } = new List<string>();
         public List<string> DOIFlagList { get; set; } = new List<string>();
 
+        public List<string> TagList { get; set; } = new List<string>();
+        public List<string> TagListOfEachElement { get; set; } = new List<string>();
+
         public static string SanitizeWord(string word)
         {
             return word.Replace("\n", "");
@@ -145,10 +148,6 @@ namespace DataProcessor
             });
 
 
-
-
-
-
             HashSet<string> wordHashSet = new HashSet<string>();
             mergedDOIElementList.ForEach((v) =>
             {
@@ -201,7 +200,32 @@ namespace DataProcessor
                 });
             }
 
+            HashSet<string> tagHashSet = new HashSet<string>();
+            mergedDOIElementList.ForEach((v) =>
+            {
+                v.Tags.ForEach((v) =>
+                {
+                    if (!tagHashSet.Contains(v))
+                    {
+                        tagHashSet.Add(v);
+                    }
+                });
+            });
 
+            r.TagList = tagHashSet.ToList();
+            r.TagList.Sort((a, b) => a.CompareTo(b));
+
+            Dictionary<string, int> tagToIndexMapper = new Dictionary<string, int>();
+            for (var i = 0; i < r.TagList.Count; i++)
+            {
+                tagToIndexMapper[r.TagList[i]] = i;
+            }
+
+            mergedDOIElementList.ForEach((v) =>
+            {
+                var compStr = String.Join(",", v.Tags.Select((v) => tagToIndexMapper[v].ToString()));
+                r.TagListOfEachElement.Add(compStr);
+            });
 
             return r;
         }
@@ -226,6 +250,8 @@ namespace DataProcessor
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_title.csv.gz", CompressedTitleList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_doi_reference.csv.gz", CompressedDOIReferenceList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/doi_flag.csv.gz", DOIFlagList);
+            CSVFunctions.WriteCSVByGZip(outputFolder + "/tag.csv.gz", TagList);
+            CSVFunctions.WriteCSVByGZip(outputFolder + "/tag_of_each_element.csv.gz", TagListOfEachElement);
         }
     }
 }

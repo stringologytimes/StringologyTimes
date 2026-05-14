@@ -107,8 +107,10 @@ export class BrowserInfo {
             this.cacheAssociatedWithDOIFilterHash.set(hash, [this.currentDOIFilter.copy()]);
             //this.doiFilterWithViewSettingMap.set(hash, this.currentDOIFilterWithViewSetting);
 
+            console.log("queryHash: " + queryHash);
+
             if (!this.cacheAssociatedWithDOIQueryHash.has(queryHash)) {
-                if (this.doiFilterInputNumber > 0) {
+                if (this.doiFilterInputNumber > 0) {                    
                     const parentHash = this.doiFilterInputHashStack[this.doiFilterInputNumber - 1];
                     const [parentDOIFilter] = this.cacheAssociatedWithDOIFilterHash.get(parentHash)!;
                     if (this.currentDOIFilter.query.isIncluded(parentDOIFilter.query)) {
@@ -124,6 +126,8 @@ export class BrowserInfo {
 
                         const newDOIFilterResult = emptyDOIFilterResult.search(this.currentDOIFilter.query, this.doiInfoCollection!);
                         const newSummaryInfo = new SummaryInfo();
+
+                        console.log("newDOIFilterResult.doiIDs.length: " + newDOIFilterResult.doiIDs.length);
 
 
                         newSummaryInfo.build(newDOIFilterResult, this.currentDOIFilter.query, this.doiInfoCollection!);

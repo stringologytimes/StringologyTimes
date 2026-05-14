@@ -11,6 +11,34 @@ namespace DataProcessor
 {
     public class ReplacementRules
     {
+        public static void AppendTags(string dataFolderPath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
+        {
+            var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(dataFolderPath + "/raw");
+            doiToTagMapper.Keys.ToList().ForEach((doi) =>
+            {
+                if (doiToTagMapper.ContainsKey(doi) && doiToTagMapper[doi].Count > 0)
+                {
+                Console.WriteLine($"DOI: {doi} -> {string.Join(',', doiToTagMapper[doi])}");
+                    
+                }
+            });
+
+
+            primaryDOIElementDict.Values.ToList().ForEach((v) =>
+            {
+                if(doiToTagMapper.ContainsKey(v.DOI)){
+                    v.Tags.AddRange(doiToTagMapper[v.DOI]);
+                }
+            });
+            secondaryDOIElementDict.Values.ToList().ForEach((v) =>
+            {
+                if(doiToTagMapper.ContainsKey(v.DOI)){
+                    v.Tags.AddRange(doiToTagMapper[v.DOI]);
+                }
+            });
+        }
+
+
         public static void ReplaceContainerTitleUsingDBLPSummary(string dblpSummaryPath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
         {
             if (File.Exists(dblpSummaryPath))

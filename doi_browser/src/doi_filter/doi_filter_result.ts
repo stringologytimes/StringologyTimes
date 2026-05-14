@@ -10,7 +10,7 @@ export class DOIFilterResult {
     private containerTitleToDoiMapper: Map<string, number[]> = new Map();
     private doiReferencesToDoiMapper: Map<string, number[]> = new Map();
     private typeToDOIInfoMapper: Map<string, number[]> = new Map();
-
+    private tagToDOIInfoMapper: Map<string, number[]> = new Map();
 
     public constructor(doiIDs: number[] | null, r: DOIInfoCollection, sortBy: SortByType) {
         if (doiIDs == null) {
@@ -104,6 +104,14 @@ export class DOIFilterResult {
             } else {
                 this.typeToDOIInfoMapper.set(doiInfo.type, [doiID]);
             }
+
+            doiInfo.tags.forEach(tag => {
+                if (this.tagToDOIInfoMapper.has(tag)) {
+                    this.tagToDOIInfoMapper.get(tag)!.push(doiID);
+                } else {
+                    this.tagToDOIInfoMapper.set(tag, [doiID]);
+                }
+            });
         });
 
 
@@ -132,6 +140,11 @@ export class DOIFilterResult {
     public getContainerTitles(): string[] {
         return Array.from(this.containerTitleToDoiMapper.keys());
     }
+    public getTags(): string[] {
+        return Array.from(this.tagToDOIInfoMapper.keys());
+    }
+
+
     public searchByYear(minimum_year: number | null = null, maximum_year: number | null = null, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
         const r: DOIInfo[] = [];
         let minYear = minimum_year ?? this.getMinimumYear();
@@ -162,6 +175,18 @@ export class DOIFilterResult {
         }
         return r;
     }
+    public searchByTag(tag: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
+        const r: DOIInfo[] = [];
+        if (this.tagToDOIInfoMapper.has(tag)) {
+            this.tagToDOIInfoMapper.get(tag)!.forEach(doiId => {
+                if (doiNumberFilterSet.has(doiId)) {
+                    r.push(collection.getDOIInfo(doiId));
+                }
+            });
+        }
+        return r;
+    }
+
     public searchByAuthor(author: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
         const r: DOIInfo[] = [];
         if (this.authorToDoiMapper.has(author)) {

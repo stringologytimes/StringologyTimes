@@ -154,9 +154,9 @@ dotnet build -c Release
 cd ..    
 
 #Write-Host "`$ForceCompile = $ForceCompile" -ForegroundColor Yellow
-#$doiProcessorArgsX = @("--data", "./data", "--skip_build", "--mode", "build_tag_csv_from_data_cite")
-#Write-Host "Execute: $doiProcessor $doiProcessorArgsX" -ForegroundColor Yellow
-#$dblpProcX = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsX -Wait    
+#$doiProcessorArgsY = @("--data", "./data", "--skip_build", "--mode", "build_tag_csv_from_data_cite")
+#Write-Host "Execute: $doiProcessor $doiProcessorArgsY" -ForegroundColor Yellow
+#$dblpProcY = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsY -Wait    
 
 $doiProcessorArgsX = @("--data", "./data", "--skip_build", "--mode", "build_big_cache")
 Write-Host "Execute: $doiProcessor $doiProcessorArgsX" -ForegroundColor Yellow
