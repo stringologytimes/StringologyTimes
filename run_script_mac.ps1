@@ -160,65 +160,31 @@ cd ..
 
 $doiProcessorArgsX = @("--data", "./data", "--skip_build", "--mode", "build_big_cache")
 Write-Host "Execute: $doiProcessor $doiProcessorArgsX" -ForegroundColor Yellow
-$dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsX -Wait    
+$dblpProcX = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsX -Wait    
 
 $doiProcessorArgsA = @("--data", "./data", "--skip_build", "--mode", "build_small_cache_for_primary_doi_elements")
-if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
-    Write-Host "Execute: $doiProcessor $doiProcessorArgsA" -ForegroundColor Yellow
-    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsA -Wait    
-}else{
-    Write-Host "Skip: $doiProcessor $doiProcessorArgsA" -ForegroundColor Green
-}
-
-
-<#
-
-
-
+Write-Host "Execute: $doiProcessor $doiProcessorArgsA" -ForegroundColor Yellow
+$dblpProcA = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsA -Wait    
 
 $doiProcessorArgsB = @("--data", "./data", "--skip_build", "--mode", "build_primary_doi_element_dictionary")
-if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
-    Write-Host "Execute: $doiProcessor $doiProcessorArgsB" -ForegroundColor Yellow
-    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsB -Wait    
-}else{
-    Write-Host "Skip: $doiProcessor $doiProcessorArgsB" -ForegroundColor Green
-}
+Write-Host "Execute: $doiProcessor $doiProcessorArgsB" -ForegroundColor Yellow
+$dblpProcB = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsB -Wait    
 
 $doiProcessorArgsC = @("--data", "./data", "--skip_build", "--mode", "build_small_cache_for_secondary_doi_elements")
-if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
-    Write-Host "Execute: $doiProcessor $doiProcessorArgsC" -ForegroundColor Yellow
-    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsC -Wait    
-}else{
-    Write-Host "Skip: $doiProcessor $doiProcessorArgsC" -ForegroundColor Green
-}
+Write-Host "Execute: $doiProcessor $doiProcessorArgsC" -ForegroundColor Yellow
+$dblpProcC = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsC -Wait    
 
 $doiProcessorArgsD = @("--data", "./data", "--skip_build", "--mode", "build_secondary_doi_element_dictionary")
-if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
-    Write-Host "Execute: $doiProcessor $doiProcessorArgsD" -ForegroundColor Yellow
-    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsD -Wait    
-}else{
-    Write-Host "Skip: $doiProcessor $doiProcessorArgsD" -ForegroundColor Green
-}
-
+Write-Host "Execute: $doiProcessor $doiProcessorArgsD" -ForegroundColor Yellow
+$dblpProcD = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsD -Wait    
 
 $doiProcessorArgs = @("--data", "./data", "--skip_build", "--mode", "standard")
-#$doiProcessorArgs = @("--data", "./data")
-
-if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
-    Write-Host "Execute: $doiProcessor $doiProcessorArgs" -ForegroundColor Yellow
-    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgs -Wait    
-}else{
-    Write-Host "Skip: $doiProcessor $doiProcessorArgs" -ForegroundColor Green
-}
+Write-Host "Execute: $doiProcessor $doiProcessorArgs" -ForegroundColor Yellow
+$dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgs -Wait    
 
 $doiProcessorArgsE = @("--data", "./data", "--skip_build", "--mode", "create_lightweight_doi_info_folder")
-
-if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
-    Write-Host "Execute: $doiProcessor $doiProcessorArgsE" -ForegroundColor Yellow
-    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsE -Wait    
-}else{
-    Write-Host "Skip: $doiProcessor $doiProcessorArgsE" -ForegroundColor Green
-}
+Write-Host "Execute: $doiProcessor $doiProcessorArgsE" -ForegroundColor Yellow
+$dblpProcE = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsE -Wait    
 
 ###### FINAL STEP
 
@@ -231,8 +197,6 @@ if (Test-Path $sourceFolder) {
 } else {
     Write-Host "Source folder $sourceFolder does not exist. Skipping copy." -ForegroundColor Red
 }
-
-#>
 
 
 cd ./doi_browser

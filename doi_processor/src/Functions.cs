@@ -1,6 +1,8 @@
 using System.Xml;
 using System.Xml.Linq;
 using System.IO;
+using System.Text;
+using System.Security.Cryptography;
 namespace DataProcessor
 {
     enum URLType
@@ -8,6 +10,29 @@ namespace DataProcessor
         ArXiv,
         DOI,
         Other
+    }
+
+    class HashFunctions
+    {
+        public static string ComputeHash(HashSet<string> doiSet)
+        {
+            List<string> doiList = doiSet.ToList();
+            doiList.Sort();
+            string str = "";
+            foreach (var doi in doiList)
+            {
+                str += doi;
+            }
+
+
+            byte[] bytes = Encoding.UTF8.GetBytes(str);
+
+            using SHA256 sha256 = SHA256.Create();
+            byte[] hashBytes = sha256.ComputeHash(bytes);
+
+            return Convert.ToHexString(hashBytes).ToLowerInvariant();
+        }
+
     }
 
     class DoiToTagMapper
@@ -44,7 +69,7 @@ namespace DataProcessor
                         doiToTagMapper[doi] = new List<string>();
                         doiToTagMapper[doi].Add(tag);
                     }
-                    
+
                 }
             }
             return doiToTagMapper;

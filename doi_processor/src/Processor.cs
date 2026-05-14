@@ -64,7 +64,7 @@ namespace DataProcessor
             var primaryDOISet = new HashSet<string>(doiToTagMapper.Keys);
 
             OutputSystemMessageFunction("Building cache for primary DOI elements");
-            await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, primaryDOISet);
+            await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, primaryDOISet, "primary_small_cache_hash.csv");
 
             return 0;
         }
@@ -112,7 +112,7 @@ namespace DataProcessor
             });
 
             OutputSystemMessageFunction("Building cache for secondary DOI set");
-            await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, secondaryDOISet);
+            await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, secondaryDOISet, "secondary_small_cache_hash.csv");
 
             return 0;
         }

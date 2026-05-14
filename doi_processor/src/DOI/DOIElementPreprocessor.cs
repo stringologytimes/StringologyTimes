@@ -17,8 +17,26 @@ namespace DataProcessor
             return dataFolderPath + "/auto_generated/cache/doi_element.jsonl";
         }
 
-        public static async Task BuildSmallCache(string dataFolderPath, string mailAddress, HashSet<string> doiSet)
+        public static async Task BuildSmallCache(string dataFolderPath, string mailAddress, HashSet<string> doiSet, string cacheFileName)
         {
+            var hashFileInfo = new FileInfo(dataFolderPath + "/auto_generated/cache/" + cacheFileName);
+            Console.WriteLine("Building SmallCache [START]");
+
+            List<string> hashList = new List<string>();
+            hashList.Add(HashFunctions.ComputeHash(doiSet));
+            var date = DateTime.Now;
+            hashList.Add(date.ToString("yyyy-MM"));
+
+            if (hashFileInfo.Exists)
+            {
+                var oldHashList = CSVFunctions.ReadCSV(hashFileInfo.FullName);
+                if (oldHashList.Count == 2 && oldHashList[0] == hashList[0] && oldHashList[1] == hashList[1])
+                {
+                    Console.WriteLine("SmallCache already exists [END]");
+                    return;
+                }
+            }
+
 
 
             await DataProcessor.CrossRefPreprocessor.BuildSmallCache(dataFolderPath, doiSet, mailAddress);
@@ -54,6 +72,10 @@ namespace DataProcessor
 
 
             DOIElement.Save(doiElementDict, GetCachePath(dataFolderPath));
+
+
+            CSVFunctions.WriteCSV(hashFileInfo.FullName, hashList);
+            Console.WriteLine("Building SmallCache [END]");
         }
 
         public static Dictionary<string, DOIElement> BuildDOIElementDictionary(string dataFolderPath, HashSet<string> doiSet)
