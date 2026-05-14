@@ -22,6 +22,8 @@ namespace DataProcessor
 
         public string Source { get; set; } = "";
 
+        public List<string> Tags { get; set; } = new List<string>();
+
         public List<string> DOIReferences { get; set; } = new List<string>();
         public List<string> UnknownReferences { get; set; } = new List<string>();
 
@@ -249,6 +251,38 @@ namespace DataProcessor
             return count;
         }
         */
+        public static List<string> GetTagsFromDataCiteJSONL(string jsonlString)
+        {
+
+            var dict = JsonLib.CreateDictionaryFromJSONL(jsonlString);
+            List<string> tags = new List<string>();
+
+
+            if (dict.ContainsKey("attributes"))
+            {
+                var attributesDict = JsonLib.CreateDictionaryFromJSONL(dict["attributes"]);
+
+                if (attributesDict.ContainsKey("subjects"))
+                {
+                    var subjectsArray = JsonLib.CreateArrayFromJSONL(attributesDict["subjects"]);
+
+                    foreach (var subject in subjectsArray)
+                    {
+                        Console.WriteLine(subject);
+
+                        var subjectDict = JsonLib.CreateDictionaryFromJSONL(subject);
+                        var subjectValue = subjectDict["subject"];
+                        tags.Add(subjectValue);
+                    }
+                }
+
+            }
+
+
+            return tags;
+        }
+
+
         public static DOIElement ParseFromDataCiteJSONL(string jsonlString)
         {
             var dict = JsonLib.CreateDictionaryFromJSONL(jsonlString);
@@ -420,7 +454,7 @@ namespace DataProcessor
 
         }
 
-        public string to_JSON_Line()
+        public string ToJSONLine()
         {
             List<string> dataList = new List<string>();
             dataList.Add(JsonSerializer.Serialize(this.DOI));
@@ -431,16 +465,16 @@ namespace DataProcessor
             dataList.Add(JsonSerializer.Serialize(this.ContainerTitle));
             dataList.Add(JsonSerializer.Serialize(this.Volume));
             dataList.Add(JsonSerializer.Serialize(this.Source));
-            
+
             List<string> authorStringList = new List<string>();
             this.Authors.ForEach((v) =>
             {
                 authorStringList.Add(v.to_JSON_Line());
             });
             var authorString = "[" + string.Join(",", authorStringList) + "]";
-
-
             dataList.Add(authorString);
+
+            dataList.Add(JsonSerializer.Serialize(this.Tags.ToArray()));
             dataList.Add(JsonSerializer.Serialize(this.DOIReferences.ToArray()));
             dataList.Add(JsonSerializer.Serialize(this.UnknownReferences.ToArray()));
 
@@ -469,7 +503,8 @@ namespace DataProcessor
             }
             else
             {
-                if(checkFileExist){
+                if (checkFileExist)
+                {
                     throw new Exception("File not found: " + doiElementFilePath);
                 }
             }

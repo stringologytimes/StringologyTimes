@@ -36,6 +36,9 @@ namespace DataProcessor
         [Option('m', "mode", Required = true, HelpText = "XXX")]
         public string Mode { get; set; } = "";
 
+        [Option('a', "mail_address", HelpText = "The mail address to use for the API")]
+        public string MailAddress { get; set; } = "takaaki.nishimoto@riken.jp";
+
 
         /*
         [Option('o', "output", Required = true, HelpText = "Output Path")]
@@ -59,7 +62,7 @@ namespace DataProcessor
 
 
 
-        
+
 
         static async Task<int> RunDBLP(DBLPOptions opts)
         {
@@ -87,9 +90,29 @@ namespace DataProcessor
                 return 0;
 
             }
-            else if (opts.Mode == "build_doi_element_dictionary")
+            else if (opts.Mode == "build_tag_csv_from_data_cite")
             {
-                await Processor.BuildDOIElementDictionary(opts);
+                Processor.BuildTagCSVFromDataCite(opts);
+                return 0;
+            }
+            else if (opts.Mode == "build_cache_for_primary_doi_elements")
+            {
+                await Processor.BuildCacheForPrimaryDOIElements(opts);
+                return 0;
+            }
+            else if (opts.Mode == "build_primary_doi_element_dictionary")
+            {
+                Processor.BuildPrimaryDOIElementDictionary(opts);
+                return 0;
+            }
+            else if (opts.Mode == "build_cache_for_secondary_doi_elements")
+            {
+                await Processor.BuildCacheForSecondaryDOIElements(opts);
+                return 0;
+            }
+            else if (opts.Mode == "build_secondary_doi_element_dictionary")
+            {
+                Processor.BuildSecondaryDOIElementDictionary(opts);
                 return 0;
             }
             else if (opts.Mode == "create_lightweight_doi_info_folder")

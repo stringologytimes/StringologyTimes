@@ -53,7 +53,7 @@ namespace DataProcessor
                 doiElementDict[v.Key] = doiElement;
             });
 
-                await SemanticScholarPreprocessor.PreprocessAll(doiElementDict, dataFolderPath);                
+            await SemanticScholarPreprocessor.PreprocessAll(doiElementDict, dataFolderPath);
 
 
             DOIElement.Save(doiElementDict, GetCachePath(dataFolderPath));
@@ -73,6 +73,8 @@ namespace DataProcessor
             });
             return doiElementDict;
         }
+
+
 
     }
 }

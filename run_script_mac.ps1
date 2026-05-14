@@ -148,21 +148,49 @@ Write-Host "Is arxiv-metadata-oai-snapshot.json updated? $arxivUpdated" -Foregro
 
 $doiProcessor = "./doi_processor/bin/Release/net9.0/doi_processor"
 
-if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
-    Write-Host "Compile: $dblpProcessor" -ForegroundColor Yellow
-    cd doi_processor
-    dotnet build -c Release
-    cd ..    
-}
+Write-Host "Compile: $dblpProcessor" -ForegroundColor Yellow
+cd doi_processor
+dotnet build -c Release
+cd ..    
 
 Write-Host "`$ForceCompile = $ForceCompile" -ForegroundColor Yellow
+$doiProcessorArgsX = @("--data", "./data", "--skip_build", "--mode", "build_tag_csv_from_data_cite")
+Write-Host "Execute: $doiProcessor $doiProcessorArgsX" -ForegroundColor Yellow
+$dblpProcX = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsX -Wait    
 
-$doiProcessorArgsA = @("--data", "./data", "--skip_build", "--mode", "build_doi_element_dictionary")
+
+$doiProcessorArgsA = @("--data", "./data", "--skip_build", "--mode", "build_cache_for_primary_doi_elements")
 if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
     Write-Host "Execute: $doiProcessor $doiProcessorArgsA" -ForegroundColor Yellow
     $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsA -Wait    
 }else{
     Write-Host "Skip: $doiProcessor $doiProcessorArgsA" -ForegroundColor Green
+}
+
+
+
+$doiProcessorArgsB = @("--data", "./data", "--skip_build", "--mode", "build_primary_doi_element_dictionary")
+if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
+    Write-Host "Execute: $doiProcessor $doiProcessorArgsB" -ForegroundColor Yellow
+    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsB -Wait    
+}else{
+    Write-Host "Skip: $doiProcessor $doiProcessorArgsB" -ForegroundColor Green
+}
+
+$doiProcessorArgsC = @("--data", "./data", "--skip_build", "--mode", "build_cache_for_secondary_doi_elements")
+if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
+    Write-Host "Execute: $doiProcessor $doiProcessorArgsC" -ForegroundColor Yellow
+    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsC -Wait    
+}else{
+    Write-Host "Skip: $doiProcessor $doiProcessorArgsC" -ForegroundColor Green
+}
+
+$doiProcessorArgsD = @("--data", "./data", "--skip_build", "--mode", "build_secondary_doi_element_dictionary")
+if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
+    Write-Host "Execute: $doiProcessor $doiProcessorArgsD" -ForegroundColor Yellow
+    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsD -Wait    
+}else{
+    Write-Host "Skip: $doiProcessor $doiProcessorArgsD" -ForegroundColor Green
 }
 
 
@@ -176,13 +204,13 @@ if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
     Write-Host "Skip: $doiProcessor $doiProcessorArgs" -ForegroundColor Green
 }
 
-$doiProcessorArgsC = @("--data", "./data", "--skip_build", "--mode", "create_lightweight_doi_info_folder")
+$doiProcessorArgsE = @("--data", "./data", "--skip_build", "--mode", "create_lightweight_doi_info_folder")
 
 if ($urlUpdated -or $arxivUpdated -or $ForceCompile) {
-    Write-Host "Execute: $doiProcessor $doiProcessorArgsC" -ForegroundColor Yellow
-    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsC -Wait    
+    Write-Host "Execute: $doiProcessor $doiProcessorArgsE" -ForegroundColor Yellow
+    $dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsE -Wait    
 }else{
-    Write-Host "Skip: $doiProcessor $doiProcessorArgsC" -ForegroundColor Green
+    Write-Host "Skip: $doiProcessor $doiProcessorArgsE" -ForegroundColor Green
 }
 
 ###### FINAL STEP

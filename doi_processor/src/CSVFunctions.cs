@@ -18,6 +18,7 @@ namespace DataProcessor
             File.WriteAllLines(filePath, lines);
             Console.WriteLine("Saved: " + filePath);
         }
+
         public static void WriteCSV(string filePath, HashSet<string> set)
         {
             WriteCSV(filePath, set.ToList());
