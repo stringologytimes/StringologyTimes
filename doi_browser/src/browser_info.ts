@@ -6,6 +6,9 @@ import { renderFilterBox } from "./render/doi_filter_box_render";
 import { renderViewSettingBox } from "./render/view_setting_box_render";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
 import { renderContainerTitleList } from "./render/doi_filter_container_title_render";
+import { SortByType } from "./doi_filter/doi_filter_query";
+import { DOIStatus } from "./doi_info";
+import { ViewModeType } from "./doi_filter/doi_filter_view_setting";
 
 
 export class BrowserInfo {
@@ -88,6 +91,74 @@ export class BrowserInfo {
     public setCurrentDOIFilterWithViewSetting(doiFilterWithViewSetting: DOIFilter): void {
         this.currentDOIFilter = doiFilterWithViewSetting.copy();
     }
+
+    public processURLParameters(): void {
+        const url = new URL(window.location.href);
+        var type = url.searchParams.get("type");
+        if (type) {
+            this.currentDOIFilter.query.type = type;
+        }else{
+            this.currentDOIFilter.query.type = null;
+        }
+
+        var containerTitle = url.searchParams.get("container_title");
+        if (containerTitle) {
+            this.currentDOIFilter.query.container_title = containerTitle;
+        }else{
+            this.currentDOIFilter.query.container_title = null;
+        }
+
+        var minimumYear = url.searchParams.get("minimum_year");
+        if (minimumYear) {
+            this.currentDOIFilter.query.minimum_year = parseInt(minimumYear);
+        }else{
+            this.currentDOIFilter.query.minimum_year = null;
+        }
+        var maximumYear = url.searchParams.get("maximum_year");
+        if (maximumYear) {
+            this.currentDOIFilter.query.maximum_year = parseInt(maximumYear);
+        }else{
+            this.currentDOIFilter.query.maximum_year = null;
+        }
+        var sortBy = url.searchParams.get("sort_by");
+        if (sortBy) {
+            this.currentDOIFilter.query.sortBy = sortBy as SortByType;
+        }else{
+            this.currentDOIFilter.query.sortBy = "unordered";
+        }
+        var tags = url.searchParams.getAll("tag");
+        if (tags.length > 0) {
+            this.currentDOIFilter.query.tags = tags;
+        }else{
+            this.currentDOIFilter.query.tags = [];
+        }
+        var excludeStatus = url.searchParams.getAll("exclude_status");
+        this.currentDOIFilter.query.excludeStatus = [];
+
+        this.currentDOIFilter.query.excludeStatus = excludeStatus.map(status => status as DOIStatus);
+
+        var viewMode = url.searchParams.get("view_mode");
+        if (viewMode) {
+            this.currentDOIFilter.viewSetting.viewMode = viewMode as ViewModeType;
+        }else{
+            this.currentDOIFilter.viewSetting.viewMode = "article_list";
+        }
+
+        var pageSize = url.searchParams.get("page_size");
+        if (pageSize) {
+            this.currentDOIFilter.viewSetting.pageSize = parseInt(pageSize);
+        }else{
+            this.currentDOIFilter.viewSetting.pageSize = 100;
+        }
+
+        var pageNumber = url.searchParams.get("page_number");
+        if (pageNumber) {
+            this.currentDOIFilter.viewSetting.pageNumber = parseInt(pageNumber);
+        }else{
+            this.currentDOIFilter.viewSetting.pageNumber = 0;
+        }
+    }
+
 
     public processCurrentDOIFilterInput(): void {
 

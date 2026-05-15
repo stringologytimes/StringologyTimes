@@ -1,6 +1,7 @@
 import { DOIFilterViewSetting } from "../doi_filter/doi_filter_view_setting";
 import { ViewModeType } from "../doi_filter/doi_filter_view_setting";
 import { SummaryInfo } from "../doi_filter/summary_info";
+import { setRadioBoxes } from "./doi_filter_box_render";
 
 function getMaxPageNumber(viewSetting: DOIFilterViewSetting, summary_info: SummaryInfo): number {
     if(viewSetting.viewMode == "article_list"){
@@ -21,6 +22,11 @@ function getMaxPageNumber(viewSetting: DOIFilterViewSetting, summary_info: Summa
 }
 
 function setModeSelectHTMLElement(selectedValue: ViewModeType) {
+    const viewModeList = ["article_list", "container_title_list"];
+    const viewModeValues = ["article_list", "container_title_list"];
+    setRadioBoxes("view-mode-list-div", "view-mode-template", selectedValue, viewModeList, viewModeValues);
+
+    /*
 
     const selectElement = document.getElementById("view-setting:mode-select");
     if (selectElement && selectElement instanceof HTMLSelectElement) {
@@ -46,6 +52,7 @@ function setModeSelectHTMLElement(selectedValue: ViewModeType) {
     }else{
         throw new Error("selectElement is not found");
     }
+    */
 
   }
 

@@ -57,21 +57,13 @@ async function initialize() {
 
 
 }
+/*
 function preprocessURLParameters() {
   if (browserInfo.doiInfoCollection == null) {
     throw new Error("DOIInfoCollection is not loaded");
   }
   // URLパラメーターからページ番号を読み込む
   const urlParams = new URL(location.href).searchParams;
-  /*
-  const pageParam = urlParams.get('page');
-  if (pageParam) {
-    const pageNumber = parseInt(pageParam);
-    if (!isNaN(pageNumber) && pageNumber >= 0) {
-      browserInfo.pageNumber = pageNumber;
-    }
-  }
-  */
 
   console.log("preprocessURLParameters");
   const currentDOIFilterWithViewSetting = DOIFilter.buildFromURLParameters();
@@ -82,15 +74,8 @@ function preprocessURLParameters() {
 
   console.log("browserInfo.initialize");
   DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterResult(), browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.getItemIndex(), browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.pageSize!, browserInfo.doiInfoCollection!);
-  // URLパラメーターがある場合は検索を実行
-  /*
-  if (urlParams.toString().length > 0 && !pageParam) {
-  } else {
-    // ページ番号だけが指定されている場合も更新
-    updatePaginationControls();
-  }
-  */
 }
+*/
 
 // ボタンのイベントリスナーを設定
 function setupButtons() {
@@ -161,7 +146,8 @@ async function domFinished() {
 
   try {
     await initialize();
-    preprocessURLParameters();
+    browserInfo.initialize(browserInfo.doiInfoCollection!);
+
     // コレクションのロード直後にも実行
     EventFunctions.process(browserInfo);
     setupButtons();

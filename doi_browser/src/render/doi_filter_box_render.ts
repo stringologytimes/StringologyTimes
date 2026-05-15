@@ -40,57 +40,112 @@ function setSelectHTMLElement(selectElement: HTMLSelectElement, options: string[
   });
 }
 
+export function setRadioBoxes(divID: string, templateName: string, selectedValue: string | null, itemNames: string[], itemValues: string[]) {
+  const typeListDiv = document.getElementById(divID);
+  if (typeListDiv && typeListDiv instanceof HTMLElement) {
+    typeListDiv.innerHTML = "";
+
+    const template = document.getElementById(templateName) as HTMLTemplateElement;
+
+    itemNames.forEach((itemName, index) => {
+      const itemValue = itemValues[index];
+      const typeClone = template.content.cloneNode(true) as DocumentFragment;
+      const typeLabel = typeClone.querySelector('label');
+      if (typeLabel && typeLabel instanceof HTMLLabelElement) {
+        typeLabel.textContent = itemName;
+        if (itemValue == "dissabled") {
+          typeLabel.style.color = "gray";
+        }
+      } else {
+        throw new Error("typeLabel is not found");
+      }
+
+      const typeInput = typeClone.querySelector('input');
+      if (typeInput && typeInput instanceof HTMLInputElement) {
+        typeInput.value = itemValue;
+        if (selectedValue == itemValue) {
+          typeInput.checked = true;
+        } else {
+          typeInput.checked = false;
+        }
+        if (itemValue == "dissabled") {
+          typeInput.disabled = true;
+        }
+      } else {
+        throw new Error("typeInput is not found");
+      }
+      typeListDiv.appendChild(typeClone);
+    });
+  }
+}
+
+
 function renderDOICategoryBox(summaryInfo: SummaryInfo, selectedValue: string | null) {
+  const typeList = ["Any"];
+  const typeValues = ["Any"];
+  getDOIInfoTypeList().forEach(type => {
+    //typeList.push(type);
+    var p = summaryInfo.doiCategoryList.indexOf(type);
+    if (p != -1) {
+      const count = summaryInfo.doiCategoryCountList[p];
+      typeList.push(`${type} (${count})`);
+      typeValues.push(type);
+    } else {
+      typeList.push(type);
+      typeValues.push("dissabled");
+    }
+
+  });
+  setRadioBoxes("type-list-div", "type-template", selectedValue == null ? "Any" : selectedValue, typeList, typeValues);
+
+  /*
   const typeListDiv = document.getElementById("type-list-div");
   if (typeListDiv && typeListDiv instanceof HTMLDivElement) {
     typeListDiv.innerHTML = "";
 
     const typeTemplate = document.getElementById('type-template') as HTMLTemplateElement;
 
-    const typeList = ["Any"];    
-    getDOIInfoTypeList().forEach(type => {
-      typeList.push(type);
-    });
 
-    
+
     typeList.forEach((type, index) => {
       const typeClone = typeTemplate.content.cloneNode(true) as DocumentFragment;
       const typeLabel = typeClone.querySelector('label');
       if (typeLabel && typeLabel instanceof HTMLLabelElement) {
         typeLabel.textContent = type;
-      }else{
+      } else {
         throw new Error("typeLabel is not found");
       }
 
       const typeInput = typeClone.querySelector('input');
       if (typeInput && typeInput instanceof HTMLInputElement) {
         typeInput.value = type;
-        if(selectedValue == null && type == "Any") {
+        if (selectedValue == null && type == "Any") {
           typeInput.checked = true;
         }
-        else{
+        else {
           typeInput.checked = selectedValue == type;
         }
 
-        if(type != "Any") {
+        if (type != "Any") {
           var p = summaryInfo.doiCategoryList.indexOf(type);
-          if(p != -1) {
+          if (p != -1) {
             const count = summaryInfo.doiCategoryCountList[p];
             typeLabel.textContent = `${type} (${count})`;
-          }else{
+          } else {
             typeInput.disabled = true;
             typeLabel.style.color = "gray";
-          }  
+          }
         }
 
 
-      }else{
+      } else {
         throw new Error("typeInput is not found");
       }
       console.log("typeClone: " + type);
       typeListDiv.appendChild(typeClone);
     });
   }
+  */
   /*
   const typeSelect = document.getElementById("type-select");
   if (typeSelect && typeSelect instanceof HTMLSelectElement) {
@@ -150,13 +205,13 @@ function renderSortBySelectBox(selectedValue: SortByType) {
       const option = document.createElement("option");
       option.value = optionValue;
       option.textContent = `${optionNames[index]}`;
-  
+
       if (optionValue == selectedValue) {
         option.selected = true;
       }
       sortBySelect.appendChild(option);
     });
-  
+
   }
 
 

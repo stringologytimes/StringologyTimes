@@ -31,110 +31,140 @@ export function updatePaginationControls(browserInfo: BrowserInfo) {
       pageInfo.textContent = `ページ ${currentPage}/${totalPages} (${startIndex}-${endIndex} / ${browserInfo.foundDOIList.length}件)`;
     }
     */
-  }
+}
 
-export function process(browserInfo: BrowserInfo){
-    console.log("process");
-    browserInfo.processCurrentDOIFilterInput();
-    browserInfo.render();
-  }
+export function process(browserInfo: BrowserInfo) {
+  const url = new URL(window.location.href);
+  console.log("process/" + url.toString());
+  browserInfo.processURLParameters();
+  browserInfo.processCurrentDOIFilterInput();
+  browserInfo.render();
+}
+
+
+
+export function filterInputChange(inputElementName: string, browserInfo: BrowserInfo) {
+  const url = new URL(window.location.href);
   
-
-
-export function filterInputChange(inputElementName : string, browserInfo: BrowserInfo) {
-    if(inputElementName == "type") {
-      const selected = document.querySelector('input[name="type-checkbox"]:checked');
-      if(selected) {
-        var value = (selected as HTMLInputElement).value;
-        if(value == "Any") {
-          browserInfo.currentDOIFilter.query.type = null;
-        }else{
-          browserInfo.currentDOIFilter.query.type = value;
-        }
-      }else{
-        browserInfo.currentDOIFilter.query.type = null;
+  if (inputElementName == "type") {
+    const selected = document.querySelector('input[name="type-checkbox"]:checked');
+    if (selected) {
+      var value = (selected as HTMLInputElement).value;
+      if (value == "Any") {
+        //browserInfo.currentDOIFilter.query.type = null;
+        url.searchParams.delete("type");
+        
+      } else {
+        //browserInfo.currentDOIFilter.query.type = value;
+        url.searchParams.set("type", value);
       }
+    } else {
+      //browserInfo.currentDOIFilter.query.type = null;
+      url.searchParams.delete("type");
     }
-    else if(inputElementName == "container-title") {
-      const containerTitle = (document.getElementById("container-title-select") as HTMLSelectElement).value;
-      if(containerTitle == "dont-care") {
-        browserInfo.currentDOIFilter.query.container_title = null;
-      }else{
-        browserInfo.currentDOIFilter.query.container_title = containerTitle;
-      }
-    }
-    else if(inputElementName == "year-from") {
-      const yearFrom = (document.getElementById("year-from-select") as HTMLSelectElement).value;
-      if(yearFrom == "dont-care") {
-        browserInfo.currentDOIFilter.query.minimum_year = null;
-      }else{
-        browserInfo.currentDOIFilter.query.minimum_year = parseInt(yearFrom);
-      }
-    }
-    else if(inputElementName == "year-to") {
-      const yearTo = (document.getElementById("year-to-select") as HTMLSelectElement).value;
-      if(yearTo == "dont-care") {
-        browserInfo.currentDOIFilter.query.maximum_year = null;
-      }else{
-        browserInfo.currentDOIFilter.query.maximum_year = parseInt(yearTo);
-      }
-    }
-    else if(inputElementName == "sort-by") {
-      const sortBy = (document.getElementById("sort-by-select") as HTMLSelectElement).value;
-      if(sortBy == "dont-care") {
-        browserInfo.currentDOIFilter.query.sortBy = "unordered";
-      }else{
-        browserInfo.currentDOIFilter.query.sortBy = sortBy as SortByType;
-      }
-    }
-    else if(inputElementName == "tag1") {
-      const tag1 = (document.getElementById("tag1-select") as HTMLSelectElement).value;
-      if(tag1 == "dont-care") {
-        browserInfo.currentDOIFilter.query.tags = [];
-      }else{
-        browserInfo.currentDOIFilter.query.tags = [tag1];
-      }
-    }
-    else if(inputElementName == "status") {
-      const checkboxPrimary = (document.getElementById("checkbox_primary") as HTMLInputElement).checked;
-      const checkboxSecondary = (document.getElementById("checkbox_secondary") as HTMLInputElement).checked;
-      var excludeStatus: DOIStatus[] = [];
-      if(!checkboxPrimary) {
-        excludeStatus.push("primary");
-      }
-      if(!checkboxSecondary) {
-        excludeStatus.push("secondary");
-      }
-      browserInfo.currentDOIFilter.query.excludeStatus = excludeStatus;
-
-    }
-    else{
-  
-    }
-    browserInfo.currentDOIFilter.viewSetting.pageNumber = 0;
-
-    process(browserInfo);
   }
-
-  export function ViewSettingInputChange(inputElementName : string, browserInfo: BrowserInfo) {
-    if(inputElementName == "view-setting:mode-select") {
-      const mode = (document.getElementById("view-setting:mode-select") as HTMLSelectElement).value;
-      if(mode == "container_title_list") {
-        browserInfo.currentDOIFilter.viewSetting.viewMode = "container_title_list";
-      }else{
-        browserInfo.currentDOIFilter.viewSetting.viewMode = "article_list";
-      }
-      browserInfo.currentDOIFilter.viewSetting.pageNumber = 0;
+  else if (inputElementName == "container-title") {
+    const containerTitle = (document.getElementById("container-title-select") as HTMLSelectElement).value;
+    if (containerTitle == "dont-care") {
+      //browserInfo.currentDOIFilter.query.container_title = null;
+      url.searchParams.delete("container_title");
+    } else {
+      //browserInfo.currentDOIFilter.query.container_title = containerTitle;
+      url.searchParams.set("container_title", containerTitle);
     }
-    else if(inputElementName == "view-setting:page-number-select") {
-      const pageNumber = (document.getElementById("view-setting:page-number-select") as HTMLSelectElement).value;
-      browserInfo.currentDOIFilter.viewSetting.pageNumber = parseInt(pageNumber);
-    }
-    else if(inputElementName == "view-setting:page-size-select") {
-      const pageSize = (document.getElementById("view-setting:page-size-select") as HTMLSelectElement).value;
-      browserInfo.currentDOIFilter.viewSetting.pageSize = parseInt(pageSize);
-    }
-    process(browserInfo);
   }
-  
-  
+  else if (inputElementName == "year-from") {
+    const yearFrom = (document.getElementById("year-from-select") as HTMLSelectElement).value;
+    if (yearFrom == "dont-care") {
+      //browserInfo.currentDOIFilter.query.minimum_year = null;
+      url.searchParams.delete("minimum_year");
+    } else {
+      //browserInfo.currentDOIFilter.query.minimum_year = parseInt(yearFrom);
+      url.searchParams.set("minimum_year", yearFrom);
+    }
+  }
+  else if (inputElementName == "year-to") {
+    const yearTo = (document.getElementById("year-to-select") as HTMLSelectElement).value;
+    if (yearTo == "dont-care") {
+      //browserInfo.currentDOIFilter.query.maximum_year = null;
+      url.searchParams.delete("maximum_year");
+    } else {
+      //browserInfo.currentDOIFilter.query.maximum_year = parseInt(yearTo);
+      url.searchParams.set("maximum_year", yearTo);
+    }
+  }
+  else if (inputElementName == "sort-by") {
+    const sortBy = (document.getElementById("sort-by-select") as HTMLSelectElement).value;
+    if (sortBy == "dont-care") {
+      //browserInfo.currentDOIFilter.query.sortBy = "unordered";
+      url.searchParams.delete("sort-by");
+    } else {
+      //browserInfo.currentDOIFilter.query.sortBy = sortBy as SortByType;
+      url.searchParams.set("sort-by", sortBy);
+    }
+  }
+  else if (inputElementName == "tag") {
+    const tag1 = (document.getElementById("tag1-select") as HTMLSelectElement).value;
+    url.searchParams.delete("tag");
+    if (tag1 != "dont-care") {
+      url.searchParams.append("tag", tag1);
+
+      //browserInfo.currentDOIFilter.query.tags = [];
+    }
+  }
+  else if (inputElementName == "status") {
+    const checkboxPrimary = (document.getElementById("checkbox_primary") as HTMLInputElement).checked;
+    const checkboxSecondary = (document.getElementById("checkbox_secondary") as HTMLInputElement).checked;
+
+    console.log("checkboxPrimary", checkboxPrimary);
+    console.log("checkboxSecondary", checkboxSecondary);
+    var excludeStatus: DOIStatus[] = [];
+    if (!checkboxPrimary) {
+      excludeStatus.push("primary");
+    }
+    if (!checkboxSecondary) {
+      excludeStatus.push("secondary");
+    }
+
+    url.searchParams.delete("exclude_status");
+    excludeStatus.forEach(status => {
+      url.searchParams.append("exclude_status", status);
+      console.log("exclude_status", status);
+    });
+  //browserInfo.currentDOIFilter.query.excludeStatus = excludeStatus;
+  }
+  else {
+
+  }
+  url.searchParams.set("page_number", "0");
+  //browserInfo.currentDOIFilter.viewSetting.pageNumber = 0;
+  history.pushState({}, "", url);
+
+  process(browserInfo);
+}
+
+export function ViewSettingInputChange(inputElementName: string, browserInfo: BrowserInfo) {
+  const url = new URL(window.location.href);
+  if (inputElementName == "view-mode") {
+    const selected = document.querySelector('input[name="view-mode-checkbox"]:checked');
+    if (selected) {
+      var value = (selected as HTMLInputElement).value;
+      url.searchParams.set("view_mode", value);
+    } else {
+      url.searchParams.delete("view_mode");
+    }
+    url.searchParams.set("page_number", "0");
+  }
+  else if (inputElementName == "page-number") {
+    const pageNumber = (document.getElementById("view-setting:page-number-select") as HTMLSelectElement).value;
+    url.searchParams.set("page_number", pageNumber);
+    console.log("pageNumber", pageNumber);
+  }
+  else if (inputElementName == "page-size") {
+    const pageSize = (document.getElementById("view-setting:page-size-select") as HTMLSelectElement).value;
+    url.searchParams.set("page_size", pageSize);
+  }
+  history.pushState({}, "", url);
+  process(browserInfo);
+}
+

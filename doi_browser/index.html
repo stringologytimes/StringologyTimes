@@ -100,13 +100,7 @@
   <fieldset>
     <legend>Filter</legend>
     <ul>
-      <li>
-        <fieldset>
-          <legend>Type:</legend>
-          <div id="type-list-div">
-          </div>
-        </fieldset>
-      </li>
+      <li> Type: <span id="type-list-div"></span></li>
       <li>
         <label>Container Title:</label> <select id="container-title-select"
           onchange="filterInputChange('container-title')"></select>
@@ -119,10 +113,7 @@
         <label>Tag1:</label> <select id="tag1-select"
           onchange="filterInputChange('tag1')"></select>
       </li>
-      <li>
-        <fieldset>
-          <legend>Status:</legend>
-          <span>
+      <li> Status: <span>
             <input type="checkbox" id="checkbox_primary" name="checkbox_primary" onchange="filterInputChange('status')" />
             <label for="checkbox_primary">Primary</label>
           </span>
@@ -130,7 +121,6 @@
             <input type="checkbox" id="checkbox_secondary" name="checkbox_secondary" onchange="filterInputChange('status')" />
             <label for="checkbox_secondary">Secondary</label>
           </span>
-        </fieldset>
       </li>
       <li>
         <label>Sort By:</label> <select id="sort-by-select" onchange="filterInputChange('sort-by')"></select>
@@ -143,17 +133,14 @@
   <fieldset>
     <legend>View Setting</legend>
     <ul>
-      <li>
-        <label>Mode:</label> <select id="view-setting:mode-select"
-          onchange="viewSettingInputChange('view-setting:mode-select')"></select>
-      </li>
+      <li> View Mode: <span id="view-mode-list-div"></span></li>
       <li>
         <label>Page number:</label> <select id="view-setting:page-number-select"
-          onchange="viewSettingInputChange('view-setting:page-number-select')"></select>
+          onchange="viewSettingInputChange('page-number')"></select>
       </li>
       <li>
         <label>Page size:</label> <select id="view-setting:page-size-select"
-          onchange="viewSettingInputChange('view-setting:page-size-select')"></select>
+          onchange="viewSettingInputChange('page-size')"></select>
       </li>
 
     </ul>
@@ -183,6 +170,14 @@
       <label for="type-label"></label>
     </span>
   </template>
+
+  <template id="view-mode-template">
+    <span class="view-mode-span">
+      <input type="radio" name="view-mode-checkbox" onchange="viewSettingInputChange('view-mode')" >
+      <label for="view-mode-label"></label>
+    </span>
+  </template>
+
 
 
   <template id="doi-info-template">
