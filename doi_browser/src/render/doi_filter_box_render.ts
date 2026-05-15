@@ -4,6 +4,7 @@ import { DOIInfoCollection } from "../doi_info";
 import { DOIFilterQuery } from "../doi_filter/doi_filter_query";
 import { SummaryInfo } from "../doi_filter/summary_info";
 import { SortByType } from "../doi_filter/doi_filter_query";
+import { getDOIInfoTypeList } from "../doi_info";
 /*
 function getUniqueStringSet(items: string[]): string[] {
   const uniqueSet = new Set<string>();
@@ -39,12 +40,63 @@ function setSelectHTMLElement(selectElement: HTMLSelectElement, options: string[
   });
 }
 
-function renderDOICategorySelectBox(summaryInfo: SummaryInfo, selectedValue: string | null) {
-  
+function renderDOICategoryBox(summaryInfo: SummaryInfo, selectedValue: string | null) {
+  const typeListDiv = document.getElementById("type-list-div");
+  if (typeListDiv && typeListDiv instanceof HTMLDivElement) {
+    typeListDiv.innerHTML = "";
+
+    const typeTemplate = document.getElementById('type-template') as HTMLTemplateElement;
+
+    const typeList = ["Any"];    
+    getDOIInfoTypeList().forEach(type => {
+      typeList.push(type);
+    });
+
+    
+    typeList.forEach((type, index) => {
+      const typeClone = typeTemplate.content.cloneNode(true) as DocumentFragment;
+      const typeLabel = typeClone.querySelector('label');
+      if (typeLabel && typeLabel instanceof HTMLLabelElement) {
+        typeLabel.textContent = type;
+      }else{
+        throw new Error("typeLabel is not found");
+      }
+
+      const typeInput = typeClone.querySelector('input');
+      if (typeInput && typeInput instanceof HTMLInputElement) {
+        typeInput.value = type;
+        if(selectedValue == null && type == "Any") {
+          typeInput.checked = true;
+        }
+        else{
+          typeInput.checked = selectedValue == type;
+        }
+
+        if(type != "Any") {
+          var p = summaryInfo.doiCategoryList.indexOf(type);
+          if(p != -1) {
+            const count = summaryInfo.doiCategoryCountList[p];
+            typeLabel.textContent = `${type} (${count})`;
+          }else{
+            typeInput.disabled = true;
+            typeLabel.style.color = "gray";
+          }  
+        }
+
+
+      }else{
+        throw new Error("typeInput is not found");
+      }
+      console.log("typeClone: " + type);
+      typeListDiv.appendChild(typeClone);
+    });
+  }
+  /*
   const typeSelect = document.getElementById("type-select");
   if (typeSelect && typeSelect instanceof HTMLSelectElement) {
     setSelectHTMLElement(typeSelect, summaryInfo.doiCategoryList, summaryInfo.doiCategoryCountList, selectedValue, "Any");
   }
+  */
 }
 function renderContainerTitleSelectBox(summaryInfo: SummaryInfo, selectedValue: string | null) {
   const containerTitleSelect = document.getElementById("container-title-select");
@@ -111,7 +163,8 @@ function renderSortBySelectBox(selectedValue: SortByType) {
 }
 
 export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIInfoCollection, summaryInfo: SummaryInfo) {
-  renderDOICategorySelectBox(summaryInfo, filterInput.type);
+  console.log("renderFilterBox: " + getDOIInfoTypeList());
+  renderDOICategoryBox(summaryInfo, filterInput.type);
   renderContainerTitleSelectBox(summaryInfo, filterInput.container_title);
   renderMinimumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
   renderMaximumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);

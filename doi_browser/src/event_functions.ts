@@ -43,12 +43,16 @@ export function process(browserInfo: BrowserInfo){
 
 export function filterInputChange(inputElementName : string, browserInfo: BrowserInfo) {
     if(inputElementName == "type") {
-      const type = (document.getElementById("type-select") as HTMLSelectElement).value;
-      if(type == "dont-care") {
-        browserInfo.currentDOIFilter.query.type = null;
-        console.log("type: dont-care" + browserInfo.currentDOIFilter.query.getHash());
+      const selected = document.querySelector('input[name="type-checkbox"]:checked');
+      if(selected) {
+        var value = (selected as HTMLInputElement).value;
+        if(value == "Any") {
+          browserInfo.currentDOIFilter.query.type = null;
+        }else{
+          browserInfo.currentDOIFilter.query.type = value;
+        }
       }else{
-        browserInfo.currentDOIFilter.query.type = type;
+        browserInfo.currentDOIFilter.query.type = null;
       }
     }
     else if(inputElementName == "container-title") {

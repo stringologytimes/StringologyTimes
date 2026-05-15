@@ -17,6 +17,7 @@ export class BrowserInfo {
     public doiFilterInputNumber: number = 0;
     public doiFilterInputHashStack = new Array<string>();
 
+
     public cacheAssociatedWithDOIFilterHash = new Map<string, [DOIFilter]>();
     public cacheAssociatedWithDOIQueryHash = new Map<string, [DOIFilterResult, SummaryInfo]>();
 

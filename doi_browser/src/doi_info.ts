@@ -6,6 +6,8 @@ import { load_gzip_text_lines, load_gzip_integer_list_lines, load_gzip_integer_l
 
 export type DOIStatus = "primary" | "secondary" | "unknown";
 
+let typeList: string[] = [];
+
 export class LightWeightDOIInfo {
     public doi: string = "";
     public title: string = "";
@@ -44,6 +46,10 @@ export class DOIInfo {
 }
 
 
+
+export function getDOIInfoTypeList(): string[] {
+    return typeList.map(type => type);
+}
 
 export class DOIInfoCollection {
     public lightweightDOIInfos: LightWeightDOIInfo[] = [];
@@ -147,14 +153,19 @@ export class DOIInfoCollection {
         });
         
         const type_list = await load_gzip_text_lines(folderURL + "/type.csv.gz");
+        const type_set = new Set<string>();
         console.log("size of type_list: " + type_list.length);
         type_list.forEach((type, index) => {
             if (type.length > 0) {
                 r.lightweightDOIInfos[index].type = type;
+                type_set.add(type);
             } else {
                 r.lightweightDOIInfos[index].type = "unknown";
+                type_set.add("unknown");
             }
         });
+
+        typeList = Array.from(type_set);
 
 
         const status_list = await load_gzip_integer_lines(folderURL + "/doi_flag.csv.gz");

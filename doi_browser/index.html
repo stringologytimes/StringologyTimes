@@ -101,7 +101,11 @@
     <legend>Filter</legend>
     <ul>
       <li>
-        <label>Type:</label> <select id="type-select" onchange="filterInputChange('type')"></select>
+        <fieldset>
+          <legend>Type:</legend>
+          <div id="type-list-div">
+          </div>
+        </fieldset>
       </li>
       <li>
         <label>Container Title:</label> <select id="container-title-select"
@@ -172,6 +176,14 @@
   <template id="doi-reference-template">
     <span class="doi-reference"></span>
   </template>
+
+  <template id="type-template">
+    <span class="type-span">
+      <input type="radio" name="type-checkbox" onchange="filterInputChange('type')" >
+      <label for="type-label"></label>
+    </span>
+  </template>
+
 
   <template id="doi-info-template">
     <article style="display: flex; align-items: center; gap: 8px;">
