@@ -1,6 +1,7 @@
 
 import { BrowserInfo } from "./browser_info";
 import { SortByType } from "./doi_filter/doi_filter_query";
+import { DOIStatus } from "./doi_info";
 
 export function updatePaginationControls(browserInfo: BrowserInfo) {
   /*
@@ -89,6 +90,19 @@ export function filterInputChange(inputElementName : string, browserInfo: Browse
       }else{
         browserInfo.currentDOIFilter.query.tags = [tag1];
       }
+    }
+    else if(inputElementName == "status") {
+      const checkboxPrimary = (document.getElementById("checkbox_primary") as HTMLInputElement).checked;
+      const checkboxSecondary = (document.getElementById("checkbox_secondary") as HTMLInputElement).checked;
+      var excludeStatus: DOIStatus[] = [];
+      if(!checkboxPrimary) {
+        excludeStatus.push("primary");
+      }
+      if(!checkboxSecondary) {
+        excludeStatus.push("secondary");
+      }
+      browserInfo.currentDOIFilter.query.excludeStatus = excludeStatus;
+
     }
     else{
   

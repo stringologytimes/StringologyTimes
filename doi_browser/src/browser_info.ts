@@ -116,6 +116,7 @@ export class BrowserInfo {
                     if (this.currentDOIFilter.query.isIncluded(parentDOIFilter.query)) {
                         const [parentDOIFilterResult, _] = this.cacheAssociatedWithDOIQueryHash.get(parentDOIFilter.query.getHash())!;
                         const newDOIFilterResult = parentDOIFilterResult.search(this.currentDOIFilter.query, this.doiInfoCollection!);
+                        console.log("newDOIFilterResult.doiIDs.length: " + newDOIFilterResult.doiIDs.length);
                         const newSummaryInfo = new SummaryInfo();
                         newSummaryInfo.build(newDOIFilterResult, this.currentDOIFilter.query, this.doiInfoCollection!);
                         this.cacheAssociatedWithDOIQueryHash.set(queryHash, [newDOIFilterResult, newSummaryInfo]);

@@ -103,7 +103,7 @@ export class DOIFilterStandardRender {
 
                 const statusIconSpan = article.querySelector('.status-icon-span');
                 if (statusIconSpan && statusIconSpan instanceof HTMLSpanElement) {
-                    if (doiInfo.status == "primary") {
+                    if (doiInfo.isPrimary) {
                         setIconToSpan(statusIconSpan, "Primary", 14, "green", "white");
                     } else {
                         setIconToSpan(statusIconSpan, "Secondary", 14, "gray", "white");
@@ -114,6 +114,10 @@ export class DOIFilterStandardRender {
 
                 const typeIconSpan = article.querySelector('.type-icon-span');
                 if (typeIconSpan && typeIconSpan instanceof HTMLSpanElement) {
+                    setIconToSpan(typeIconSpan, doiInfo.type, 14, "random", "random");
+
+                    /*
+
                     if (doiInfo.type == "Book") {
                         setIconToSpan(typeIconSpan, "Book", 14, "purple", "white");
                     } else if (doiInfo.type == "BookChapter") {
@@ -153,6 +157,7 @@ export class DOIFilterStandardRender {
                     } else {
                         setIconToSpan(typeIconSpan, "Unknown", 14, "gray", "white");
                     }
+                    */
                 } else {
                     throw new Error("typeIconSpan is not found");
                 }
@@ -178,6 +183,12 @@ export class DOIFilterStandardRender {
                     throw new Error("summaryInfoSpan is not found");
                 }
 
+                const doiLi = article.querySelector('.doi');
+                if (doiLi) {
+                    doiLi.textContent = doiInfo.doi;
+                } else {
+                    throw new Error("doiLi is not found");
+                }
 
                 const dateLi = article.querySelector('.date');
                 if (dateLi) {
@@ -284,7 +295,6 @@ export class DOIFilterStandardRender {
 
                 const tagsSpan = article.querySelector('.tags-text');
                 if (tagsSpan) {
-                    console.log("doiInfo.tags: " + doiInfo.tags);
                     doiInfo.tags.forEach((tag, index) => {
                         const tagSpan = document.createElement('span');
                         setIconToSpan(tagSpan, tag, 14, "random", "random");

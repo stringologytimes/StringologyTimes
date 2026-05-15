@@ -12,6 +12,9 @@ export class DOIFilterResult {
     private typeToDOIInfoMapper: Map<string, number[]> = new Map();
     private tagToDOIInfoMapper: Map<string, number[]> = new Map();
 
+    private primaryDOIIDs: number[] = [];
+    private secondaryDOIIDs: number[] = [];
+
     public constructor(doiIDs: number[] | null, r: DOIInfoCollection, sortBy: SortByType) {
         if (doiIDs == null) {
             this.doiIDs = Array.from({ length: r.lightweightDOIInfos.length }, (_, index) => index);
@@ -113,6 +116,13 @@ export class DOIFilterResult {
                     this.tagToDOIInfoMapper.set(tag, [doiID]);
                 }
             });
+
+
+            if (doiInfo.isPrimary) {
+                this.primaryDOIIDs.push(doiID);
+            } else {
+                this.secondaryDOIIDs.push(doiID);
+            }
         });
 
 
@@ -266,9 +276,6 @@ export class DOIFilterResult {
             const doiInfo = collection.getDOIInfo(doiID);
             return doiFilterInput.contain(doiInfo);
         });
-
-        console.log("resultDOIIDs: " + resultDOIIDs);
-
         return new DOIFilterResult(resultDOIIDs, collection, doiFilterInput.sortBy);
     }
 

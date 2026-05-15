@@ -115,7 +115,19 @@
         <label>Tag1:</label> <select id="tag1-select"
           onchange="filterInputChange('tag1')"></select>
       </li>
-
+      <li>
+        <fieldset>
+          <legend>Status:</legend>
+          <span>
+            <input type="checkbox" id="checkbox_primary" name="checkbox_primary" onchange="filterInputChange('status')" />
+            <label for="checkbox_primary">Primary</label>
+          </span>
+          <span> 
+            <input type="checkbox" id="checkbox_secondary" name="checkbox_secondary" onchange="filterInputChange('status')" />
+            <label for="checkbox_secondary">Secondary</label>
+          </span>
+        </fieldset>
+      </li>
       <li>
         <label>Sort By:</label> <select id="sort-by-select" onchange="filterInputChange('sort-by')"></select>
       </li>
@@ -178,6 +190,7 @@
         </summary>
         <div class="details_div"">
           <ul>
+            <li class="doi">
             <li class="date">
           </li>
           <li>

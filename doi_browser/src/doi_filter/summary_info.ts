@@ -31,7 +31,7 @@ export class SummaryInfo {
             this.containerTitleList.forEach(containerTitle => {
                 containerTitleToDoiCountMapper.set(containerTitle, filterResult.searchByContainerTitle(containerTitle, doiNumberFilterSet, doiInfoCollection).length);
             });
-            this.containerTitleList = this.containerTitleList.sort((a, b) => containerTitleToDoiCountMapper.get(a)! - containerTitleToDoiCountMapper.get(b)!);
+            this.containerTitleList = this.containerTitleList.sort((a, b) => containerTitleToDoiCountMapper.get(b)! - containerTitleToDoiCountMapper.get(a)!);
         }
 
 

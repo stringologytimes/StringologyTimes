@@ -11,6 +11,37 @@ namespace DataProcessor
 {
     public class ReplacementRules
     {
+        /*
+        public static void ReplaceDOI(string dataFolderPath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
+        {
+            var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(dataFolderPath + "/raw");
+            doiToTagMapper.Keys.ToList().ForEach((doi) =>
+            {
+                if (doiToTagMapper.ContainsKey(doi) && doiToTagMapper[doi].Count > 0)
+                {
+                    Console.WriteLine($"DOI: {doi} -> {string.Join(',', doiToTagMapper[doi])}");
+
+                }
+            });
+
+
+            primaryDOIElementDict.Values.ToList().ForEach((v) =>
+            {
+                if (doiToTagMapper.ContainsKey(v.DOI))
+                {
+                    v.Tags.AddRange(doiToTagMapper[v.DOI]);
+                }
+            });
+            secondaryDOIElementDict.Values.ToList().ForEach((v) =>
+            {
+                if (doiToTagMapper.ContainsKey(v.DOI))
+                {
+                    v.Tags.AddRange(doiToTagMapper[v.DOI]);
+                }
+            });
+        }
+        */
+
         public static void AppendTags(string dataFolderPath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
         {
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(dataFolderPath + "/raw");
@@ -18,21 +49,23 @@ namespace DataProcessor
             {
                 if (doiToTagMapper.ContainsKey(doi) && doiToTagMapper[doi].Count > 0)
                 {
-                Console.WriteLine($"DOI: {doi} -> {string.Join(',', doiToTagMapper[doi])}");
-                    
+                    Console.WriteLine($"DOI: {doi} -> {string.Join(',', doiToTagMapper[doi])}");
+
                 }
             });
 
 
             primaryDOIElementDict.Values.ToList().ForEach((v) =>
             {
-                if(doiToTagMapper.ContainsKey(v.DOI)){
+                if (doiToTagMapper.ContainsKey(v.DOI))
+                {
                     v.Tags.AddRange(doiToTagMapper[v.DOI]);
                 }
             });
             secondaryDOIElementDict.Values.ToList().ForEach((v) =>
             {
-                if(doiToTagMapper.ContainsKey(v.DOI)){
+                if (doiToTagMapper.ContainsKey(v.DOI))
+                {
                     v.Tags.AddRange(doiToTagMapper[v.DOI]);
                 }
             });
@@ -140,10 +173,10 @@ namespace DataProcessor
                     }
                     else
                     {
-                    var key = cols[0].Trim().ToLower();
-                    var value = cols[1].Trim();
-                    typeReplacementRulesList.Add(new Tuple<string, string>(key, value));
-                    Console.WriteLine($"Added DOI prefix rule: {key} -> {value}");                        
+                        var key = cols[0].Trim().ToLower();
+                        var value = cols[1].Trim();
+                        typeReplacementRulesList.Add(new Tuple<string, string>(key, value));
+                        Console.WriteLine($"Added DOI prefix rule: {key} -> {value}");
                     }
                 });
 

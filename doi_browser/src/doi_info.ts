@@ -12,7 +12,7 @@ export class LightWeightDOIInfo {
     public year: number = 0;
     public month: number = 0;
     public authorIDs: number[] = [];
-    public status: number = -1;
+    public isPrimary: boolean = false;
     public type: string = "Unknown";
     public container_title: string = "";
     public volume: string = "";
@@ -32,7 +32,15 @@ export class DOIInfo {
     public doiReferences: string[] = [];
     public keywords: string[] = [];
     public type: string = "Unknown";
-    public status: DOIStatus = "unknown";
+    public isPrimary: boolean = false;
+
+    public getStatus(): DOIStatus {
+        if (this.isPrimary) {
+            return "primary";
+        } else {
+            return "secondary";
+        }
+    }
 }
 
 
@@ -75,12 +83,10 @@ export class DOIInfoCollection {
         r.doiReferences = this.lightweightDOIInfos[index].doiReferenceIDs.map(id => this.getDOIByID(id));
         r.type = this.lightweightDOIInfos[index].type;
         r.tags = this.lightweightDOIInfos[index].tags.map(tag => tag);
-        if (this.lightweightDOIInfos[index].status == 1) {
-            r.status = "primary";
-        } else if (this.lightweightDOIInfos[index].status == 0) {
-            r.status = "secondary";
-        } else {
-            r.status = "unknown";
+        if (this.lightweightDOIInfos[index].isPrimary) {
+            r.isPrimary = true;
+        } else{
+            r.isPrimary = false;
         }
         return r;
     }
@@ -157,8 +163,8 @@ export class DOIInfoCollection {
             if (index >= r.lightweightDOIInfos.length) {
                 console.log("status_list is longer than lightweightDOIInfos");
                 throw new Error("status_list is longer than lightweightDOIInfos");
-            }
-            r.lightweightDOIInfos[index].status = status;
+            }            
+            r.lightweightDOIInfos[index].isPrimary = status == 1;
         });
 
         for(let i = 0; i < r.lightweightDOIInfos.length; i++){

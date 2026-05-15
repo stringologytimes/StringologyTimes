@@ -15,7 +15,7 @@ export class DOIFilterQuery {
     public volume: string | null = null;
     public container_title: string | null = null;
     public doiReferences: string[] = [];    
-    public status: DOIStatus | null = null;
+    public excludeStatus: DOIStatus[] = [];
     public sortBy: SortByType = "unordered";
 
 
@@ -73,8 +73,12 @@ export class DOIFilterQuery {
             if(this.doiReferences.length > 0 && !doiInfo.doiReferences.every(doiReference => this.doiReferences.includes(doiReference))){
                 return false;
             }
-            if(this.status != null && doiInfo.status != this.status){
-                return false;
+            if(this.excludeStatus.length > 0){
+                for(let i = 0; i < this.excludeStatus.length; i++){
+                    if(doiInfo.getStatus() == this.excludeStatus[i]){
+                        return false;
+                    }
+                }
             }
             for(let i = 0; i < this.tags.length; i++){
                 if(!doiInfo.tags.includes(this.tags[i])){
@@ -93,7 +97,7 @@ export class DOIFilterQuery {
     public is_empty(): boolean {
         return this.minimum_year == null && this.maximum_year == null && this.type == null && 
         this.authors.length == 0 && this.tags.length == 0 && this.volume == null && this.container_title == null 
-        && this.doiReferences.length == 0 && this.status == null;
+        && this.excludeStatus.length == 0 && this.doiReferences.length == 0;
     }
     public copy(): DOIFilterQuery {
         const r = new DOIFilterQuery();
@@ -105,7 +109,7 @@ export class DOIFilterQuery {
         r.volume = this.volume;
         r.container_title = this.container_title;
         r.doiReferences = this.doiReferences.map(doiReference => doiReference);
-        r.status = this.status;
+        r.excludeStatus = this.excludeStatus.map(excludeStatus => excludeStatus);
         r.sortBy = this.sortBy;
         return r;
     }
@@ -115,9 +119,6 @@ export class DOIFilterQuery {
     }
     
     public contain(doiInfo: DOIInfo): boolean {
-        if(doiInfo.tags.length > 0){
-            console.log("doiInfo.tags: " + doiInfo.tags);
-        }
         if(this.minimum_year != null && doiInfo.year < this.minimum_year){
             return false;
         }
@@ -133,8 +134,12 @@ export class DOIFilterQuery {
         if(this.doiReferences.length > 0 && !doiInfo.doiReferences.every(doiReference => this.doiReferences.includes(doiReference))){
             return false;
         }
-        if(this.status != null && doiInfo.status != this.status){
-            return false;
+        if(this.excludeStatus.length > 0){
+            for(let i = 0; i < this.excludeStatus.length; i++){
+                if(doiInfo.getStatus() == this.excludeStatus[i]){
+                    return false;
+                }
+            }
         }
 
         for(let i = 0; i < this.tags.length; i++){
@@ -142,7 +147,6 @@ export class DOIFilterQuery {
                 return false;
             }
         }
-        console.log("doiInfo.tags: " + doiInfo.tags);
         return true;
     }
 
@@ -178,9 +182,11 @@ export class DOIFilterQuery {
                 return false;
             }
         }
-        if(this.status != null && item.status != null){
-            if(this.status != item.status){
-                return false;
+        if(item.excludeStatus.length > 0){
+            for(let i = 0; i < item.excludeStatus.length; i++){
+                if(!this.excludeStatus.includes(item.excludeStatus[i])){
+                    return false;
+                }
             }
         }
         if(this.container_title != null && item.container_title != null){
@@ -190,11 +196,6 @@ export class DOIFilterQuery {
         }
         if(this.doiReferences.length > 0){
             return false;
-        }
-        if(this.status != null && item.status != null){
-            if(this.status != item.status){
-                return false;
-            }
         }
 
         if(this.sortBy != item.sortBy){

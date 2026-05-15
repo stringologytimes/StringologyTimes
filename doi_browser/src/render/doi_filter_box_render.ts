@@ -77,6 +77,15 @@ function renderTag1SelectBox(summaryInfo: SummaryInfo, selectedValue: string | n
   }
 }
 
+function renderStatusSelectBox(excludeStatus: string[]) {
+  const checkboxPrimary = document.getElementById("checkbox_primary");
+  const checkboxSecondary = document.getElementById("checkbox_secondary");
+  if (checkboxPrimary && checkboxSecondary && checkboxPrimary instanceof HTMLInputElement && checkboxSecondary instanceof HTMLInputElement) {
+    checkboxPrimary.checked = !excludeStatus.includes("primary");
+    checkboxSecondary.checked = !excludeStatus.includes("secondary");
+  }
+}
+
 function renderSortBySelectBox(selectedValue: SortByType) {
   const sortBySelect = document.getElementById("sort-by-select");
   if (sortBySelect && sortBySelect instanceof HTMLSelectElement) {
@@ -108,4 +117,6 @@ export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIF
   renderMaximumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
   renderSortBySelectBox(filterInput.sortBy);
   renderTag1SelectBox(summaryInfo, filterInput.tags[0]);
+
+  renderStatusSelectBox(filterInput.excludeStatus);
 }
