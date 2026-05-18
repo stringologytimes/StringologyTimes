@@ -57,25 +57,7 @@ async function initialize() {
 
 
 }
-/*
-function preprocessURLParameters() {
-  if (browserInfo.doiInfoCollection == null) {
-    throw new Error("DOIInfoCollection is not loaded");
-  }
-  // URLパラメーターからページ番号を読み込む
-  const urlParams = new URL(location.href).searchParams;
 
-  console.log("preprocessURLParameters");
-  const currentDOIFilterWithViewSetting = DOIFilter.buildFromURLParameters();
-  console.log("currentDOIFilterWithViewSetting", currentDOIFilterWithViewSetting);
-  browserInfo.initialize(browserInfo.doiInfoCollection!);
-  browserInfo.setCurrentDOIFilterWithViewSetting(currentDOIFilterWithViewSetting);
-  browserInfo.processCurrentDOIFilterInput();
-
-  console.log("browserInfo.initialize");
-  DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterResult(), browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.getItemIndex(), browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.pageSize!, browserInfo.doiInfoCollection!);
-}
-*/
 
 // ボタンのイベントリスナーを設定
 function setupButtons() {
@@ -131,9 +113,10 @@ function containerTitleLiElementClick(containerTitle: string) {
 }
 
 function resetFilter() {
-  browserInfo.currentDOIFilter = new DOIFilter();
-  browserInfo.processCurrentDOIFilterInput();
-  browserInfo.render();
+  const url = new URL(window.location.href);
+  url.search = "";
+  history.pushState({}, "", url);
+  EventFunctions.process(browserInfo);
 }
 
 // グローバルスコープに公開（onchange属性からアクセスできるようにする）
@@ -147,6 +130,12 @@ async function domFinished() {
   try {
     await initialize();
     browserInfo.initialize(browserInfo.doiInfoCollection!);
+
+    window.addEventListener("popstate", (event) => {
+      EventFunctions.process(browserInfo);
+    });
+
+    
 
     // コレクションのロード直後にも実行
     EventFunctions.process(browserInfo);

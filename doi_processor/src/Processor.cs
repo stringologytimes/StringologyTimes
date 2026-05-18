@@ -217,19 +217,20 @@ namespace DataProcessor
 
 
             OutputSystemMessageFunction("Applying type replacement rules");
-            ReplacementRules.ReplaceType(opts.DataFolderPath + "/raw/doi_processor/type_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict);
+            var logFolderPath = opts.DataFolderPath + "/raw/doi_processor/logs";
+            ReplacementRules.ReplaceType(opts.DataFolderPath + "/raw/doi_processor/type_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Applying container-title replacement rules");
-            ReplacementRules.ReplaceContainerTitle(opts.DataFolderPath + "/raw/doi_processor/container_title_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict);
+            ReplacementRules.ReplaceContainerTitle(opts.DataFolderPath + "/raw/doi_processor/container_title_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Modifying container title by DOI prefix");
-            ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_container_title_value.tsv", primaryDOIElementDict, secondaryDOIElementDict);
+            ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_container_title_value.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Modifying type by DOI prefix");
             ReplacementRules.ReplaceTypeByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_type_value.tsv", primaryDOIElementDict, secondaryDOIElementDict);
 
             OutputSystemMessageFunction("Appending tags to DOI element dictionary");
-            ReplacementRules.AppendTags(opts.DataFolderPath, primaryDOIElementDict, secondaryDOIElementDict);
+            ReplacementRules.AppendTags(opts.DataFolderPath, primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
 
             OutputSystemMessageFunction("Saving primary DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, ModifiedPrimaryDOIElementFileName));

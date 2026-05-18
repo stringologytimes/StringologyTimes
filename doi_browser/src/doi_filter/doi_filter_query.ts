@@ -17,7 +17,7 @@ export class DOIFilterQuery {
     public doiReferences: string[] = [];    
     public excludeStatus: DOIStatus[] = [];
     public sortBy: SortByType = "unordered";
-
+    public keywords: string | null = null;
 
     public static buildFromURLParameters(): DOIFilterQuery {
         let r = new DOIFilterQuery();
@@ -58,35 +58,7 @@ export class DOIFilterQuery {
     private filter(collection: DOIInfoCollection, candidates: number[]): number[] {
         return candidates.filter(candidate => {
             const doiInfo = collection.getDOIInfo(candidate);
-            if(this.minimum_year != null && doiInfo.year < this.minimum_year){
-                return false;
-            }
-            if(this.maximum_year != null && doiInfo.year > this.maximum_year){
-                return false;
-            }
-            if(this.type != null && doiInfo.type != this.type){
-                return false;
-            }
-            if(this.container_title != null && doiInfo.container_title != this.container_title){
-                return false;
-            }
-            if(this.doiReferences.length > 0 && !doiInfo.doiReferences.every(doiReference => this.doiReferences.includes(doiReference))){
-                return false;
-            }
-            if(this.excludeStatus.length > 0){
-                for(let i = 0; i < this.excludeStatus.length; i++){
-                    if(doiInfo.getStatus() == this.excludeStatus[i]){
-                        return false;
-                    }
-                }
-            }
-            for(let i = 0; i < this.tags.length; i++){
-                if(!doiInfo.tags.includes(this.tags[i])){
-                    return false;
-                }
-            }
-
-            return true;
+            return this.contain(doiInfo);
         });
     }
 
@@ -111,6 +83,7 @@ export class DOIFilterQuery {
         r.doiReferences = this.doiReferences.map(doiReference => doiReference);
         r.excludeStatus = this.excludeStatus.map(excludeStatus => excludeStatus);
         r.sortBy = this.sortBy;
+        r.keywords = this.keywords;
         return r;
     }
 
@@ -144,6 +117,20 @@ export class DOIFilterQuery {
 
         for(let i = 0; i < this.tags.length; i++){
             if(!doiInfo.tags.includes(this.tags[i])){
+                return false;
+            }
+        }
+
+        if(this.keywords != null){
+            let b = false;
+            if(doiInfo.title.indexOf(this.keywords) != -1){
+                b = true;
+            }
+            if(doiInfo.doi.indexOf(this.keywords) != -1){
+                b = true;
+            }
+
+            if(!b){
                 return false;
             }
         }
@@ -204,6 +191,12 @@ export class DOIFilterQuery {
 
         for(let i = 0; i < item.tags.length; i++){
             if(!this.tags.includes(item.tags[i])){
+                return false;
+            }
+        }
+
+        if(this.keywords != null){
+            if(item.keywords != null && this.keywords != item.keywords){
                 return false;
             }
         }

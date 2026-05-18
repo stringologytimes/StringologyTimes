@@ -157,6 +157,12 @@ export class BrowserInfo {
         }else{
             this.currentDOIFilter.viewSetting.pageNumber = 0;
         }
+        var keywords = url.searchParams.get("keywords");
+        if (keywords) {
+            this.currentDOIFilter.query.keywords = keywords;
+        }else{
+            this.currentDOIFilter.query.keywords = null;
+        }
     }
 
 

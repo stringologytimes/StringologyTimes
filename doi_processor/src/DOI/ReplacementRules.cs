@@ -42,14 +42,24 @@ namespace DataProcessor
         }
         */
 
-        public static void AppendTags(string dataFolderPath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
+        public static void AppendTags(string dataFolderPath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
+            var logFilePath = logFolderPath + "/append_tags.log";
+            if (!Directory.Exists(logFolderPath))
+            {
+                Directory.CreateDirectory(logFolderPath);
+            }
+            if (File.Exists(logFilePath))
+            {
+                File.Delete(logFilePath);
+            }
+            var logFile = new StreamWriter(logFilePath);
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(dataFolderPath + "/raw");
             doiToTagMapper.Keys.ToList().ForEach((doi) =>
             {
                 if (doiToTagMapper.ContainsKey(doi) && doiToTagMapper[doi].Count > 0)
                 {
-                    Console.WriteLine($"DOI: {doi} -> {string.Join(',', doiToTagMapper[doi])}");
+                    logFile.WriteLine($"DOI: {doi} -> {string.Join(',', doiToTagMapper[doi])}");
 
                 }
             });
@@ -117,8 +127,19 @@ namespace DataProcessor
                 Console.WriteLine("NoDBLP summary file found: " + dblpSummaryPath);
             }
         }
-        public static void ReplaceType(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
+        public static void ReplaceType(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
+            var logFilePath = logFolderPath + "/type_replacement_rules.log";
+            if (!Directory.Exists(logFolderPath))
+            {
+                Directory.CreateDirectory(logFolderPath);
+            }
+            if (File.Exists(logFilePath))
+            {
+                File.Delete(logFilePath);
+            }
+            var logFile = new StreamWriter(logFilePath);
+
             if (File.Exists(rulePath))
             {
                 var typeReplacementRules = CSVFunctions.ReadCSV(rulePath);
@@ -129,15 +150,15 @@ namespace DataProcessor
                     var key = cols[0].Trim();
                     var value = cols[1].Trim();
                     typeReplacementRulesDict[key] = value;
-                    Console.WriteLine($"Added type replacement rule: {key} -> {value}");
+                    logFile.WriteLine($"Added type replacement rule: {key} -> {value}");
                 });
 
-                replace(typeReplacementRulesDict, "Type", primaryDOIElementDict);
-                replace(typeReplacementRulesDict, "Type", secondaryDOIElementDict);
+                replace(typeReplacementRulesDict, "Type", primaryDOIElementDict, logFile);
+                replace(typeReplacementRulesDict, "Type", secondaryDOIElementDict, logFile);
             }
             else
             {
-                Console.WriteLine("No type replacement rules file found: " + rulePath);
+                logFile.WriteLine("No type replacement rules file found: " + rulePath);
             }
 
             var typeHashSet = new HashSet<string>();
@@ -158,8 +179,18 @@ namespace DataProcessor
 
         }
 
-        public static void ReplaceContainerTitleByDOIPrefix(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
+        public static void ReplaceContainerTitleByDOIPrefix(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
+            var logFilePath = logFolderPath + "/doi_prefix_key_container_title_value.log";
+            if (!Directory.Exists(logFolderPath))
+            {
+                Directory.CreateDirectory(logFolderPath);
+            }
+            if (File.Exists(logFilePath))
+            {
+                File.Delete(logFilePath);
+            }
+            var logFile = new StreamWriter(logFilePath);
             if (File.Exists(rulePath))
             {
                 var typeReplacementRules = CSVFunctions.ReadCSV(rulePath);
@@ -169,14 +200,14 @@ namespace DataProcessor
                     var cols = v.Split('\t');
                     if (cols.Length != 2)
                     {
-                        Console.WriteLine($"Invalid DOI prefix rule: {v}");
+                        logFile.WriteLine($"Invalid DOI prefix rule: {v}");
                     }
                     else
                     {
                         var key = cols[0].Trim().ToLower();
                         var value = cols[1].Trim();
                         typeReplacementRulesList.Add(new Tuple<string, string>(key, value));
-                        Console.WriteLine($"Added DOI prefix rule: {key} -> {value}");
+                        logFile.WriteLine($"Added DOI prefix rule: {key} -> {value}");
                     }
                 });
 
@@ -185,7 +216,7 @@ namespace DataProcessor
             }
             else
             {
-                Console.WriteLine("No type replacement rules file found: " + rulePath);
+                logFile.WriteLine("No DOI prefix rule file found: " + rulePath);
             }
         }
         public static void ReplaceTypeByDOIPrefix(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
@@ -212,8 +243,19 @@ namespace DataProcessor
             }
         }
 
-        public static void ReplaceContainerTitle(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
+        public static void ReplaceContainerTitle(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
+            var logFilePath = logFolderPath + "/container_title_replacement_rules.log";
+            if (!Directory.Exists(logFolderPath))
+            {
+                Directory.CreateDirectory(logFolderPath);
+            }
+            if (File.Exists(logFilePath))
+            {
+                File.Delete(logFilePath);
+            }
+            var logFile = new StreamWriter(logFilePath);
+
             if (File.Exists(rulePath))
             {
                 var replacementRules = CSVFunctions.ReadCSV(rulePath);
@@ -224,11 +266,11 @@ namespace DataProcessor
                     var key = cols[0].Trim();
                     var value = cols[1].Trim();
                     replacementRulesDict[key] = value;
-                    Console.WriteLine($"Added type replacement rule: {key} -> {value}");
+                    logFile.WriteLine($"Added type replacement rule: {key} -> {value}");
                 });
 
-                replace(replacementRulesDict, "ContainerTitle", primaryDOIElementDict);
-                replace(replacementRulesDict, "ContainerTitle", secondaryDOIElementDict);
+                replace(replacementRulesDict, "ContainerTitle", primaryDOIElementDict, logFile);
+                replace(replacementRulesDict, "ContainerTitle", secondaryDOIElementDict, logFile);
             }
             else
             {
@@ -286,7 +328,7 @@ namespace DataProcessor
         }
 
 
-        private static void replace(Dictionary<string, string> rules, string replacedPropertyName, Dictionary<string, DOIElement> DOIElementDict)
+        private static void replace(Dictionary<string, string> rules, string replacedPropertyName, Dictionary<string, DOIElement> DOIElementDict, StreamWriter logFile)
         {
             var keyList = rules.Keys.ToList();
             HashSet<string> replacedNameSet = new HashSet<string>();
@@ -308,7 +350,7 @@ namespace DataProcessor
                             if (!replacedNameSet.Contains(v.ContainerTitle))
                             {
                                 replacedNameSet.Add(v.ContainerTitle);
-                                Console.WriteLine($"Replaced container title: {v.ContainerTitle} -> {rules[keyWithMark]}");
+                                logFile.WriteLine($"Replaced container title: {v.ContainerTitle} -> {rules[keyWithMark]}");
                             }
                             v.ContainerTitle = rules[keyWithMark];
                             isMatched = true;
@@ -320,7 +362,7 @@ namespace DataProcessor
                             if (!replacedNameSet.Contains(v.Type))
                             {
                                 replacedNameSet.Add(v.Type);
-                                Console.WriteLine($"Replaced type: {v.Type} -> {rules[keyWithMark]}");
+                                logFile.WriteLine($"Replaced type: {v.Type} -> {rules[keyWithMark]}");
                             }
                             v.Type = rules[keyWithMark];
                         }

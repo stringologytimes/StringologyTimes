@@ -213,18 +213,24 @@ function renderSortBySelectBox(selectedValue: SortByType) {
     });
 
   }
-
-
 }
 
+function renderKeywordBox(keywords: string | null) {
+  const keywordsInput = document.getElementById("keywords-input");
+  if (keywordsInput && keywordsInput instanceof HTMLInputElement) {
+    keywordsInput.value = keywords == null ? "" : keywords;
+  }
+}
+
+
 export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIInfoCollection, summaryInfo: SummaryInfo) {
-  console.log("renderFilterBox: " + filterInput.sortBy);
+  console.log("renderFilterBox: " + filterInput.keywords);
   renderDOICategoryBox(summaryInfo, filterInput.type);
   renderContainerTitleSelectBox(summaryInfo, filterInput.container_title);
   renderMinimumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
   renderMaximumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
   renderSortBySelectBox(filterInput.sortBy);
   renderTag1SelectBox(summaryInfo, filterInput.tags[0]);
-
   renderStatusSelectBox(filterInput.excludeStatus);
+  renderKeywordBox(filterInput.keywords);
 }

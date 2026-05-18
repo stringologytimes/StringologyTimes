@@ -76,7 +76,7 @@ namespace DataProcessor
                         {
                             var tag = cols[i].Trim();
                             doiToTagMapper[doi].Add(tag);
-                            Console.WriteLine($"DOI: {doi} -> {tag}");
+                            //Console.WriteLine($"DOI: {doi} -> {tag}");
                         }
                     }
                 }
