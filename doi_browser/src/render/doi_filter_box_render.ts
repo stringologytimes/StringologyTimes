@@ -218,7 +218,7 @@ function renderSortBySelectBox(selectedValue: SortByType) {
 }
 
 export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIInfoCollection, summaryInfo: SummaryInfo) {
-  console.log("renderFilterBox: " + getDOIInfoTypeList());
+  console.log("renderFilterBox: " + filterInput.sortBy);
   renderDOICategoryBox(summaryInfo, filterInput.type);
   renderContainerTitleSelectBox(summaryInfo, filterInput.container_title);
   renderMinimumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);

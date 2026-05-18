@@ -97,10 +97,10 @@ export function filterInputChange(inputElementName: string, browserInfo: Browser
     const sortBy = (document.getElementById("sort-by-select") as HTMLSelectElement).value;
     if (sortBy == "dont-care") {
       //browserInfo.currentDOIFilter.query.sortBy = "unordered";
-      url.searchParams.delete("sort-by");
+      url.searchParams.delete("sort_by");
     } else {
       //browserInfo.currentDOIFilter.query.sortBy = sortBy as SortByType;
-      url.searchParams.set("sort-by", sortBy);
+      url.searchParams.set("sort_by", sortBy);
     }
   }
   else if (inputElementName == "tag") {
