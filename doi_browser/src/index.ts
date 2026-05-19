@@ -119,11 +119,24 @@ function resetFilter() {
   EventFunctions.process(browserInfo);
 }
 
+function changeParameter(parameterName: string, parameterValue: string) {
+  const url = new URL(window.location.href);
+  url.searchParams.set(parameterName, parameterValue);
+  url.searchParams.set("page_number", "0");
+  url.searchParams.set("view_mode", "article_list");
+  history.pushState({}, "", url);
+  EventFunctions.process(browserInfo);
+
+
+}
+
+
 // グローバルスコープに公開（onchange属性からアクセスできるようにする）
 (window as any).filterInputChange = filterInputChange;
 (window as any).resetFilter = resetFilter;
 (window as any).viewSettingInputChange = viewSettingInputChange;
 (window as any).containerTitleLiElementClick = containerTitleLiElementClick;
+(window as any).changeParameter = changeParameter;
 async function domFinished() {
   showLoading();
 

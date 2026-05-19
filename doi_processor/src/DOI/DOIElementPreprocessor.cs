@@ -19,6 +19,8 @@ namespace DataProcessor
 
         public static async Task BuildSmallCache(string dataFolderPath, string mailAddress, HashSet<string> doiSet, string cacheFileName)
         {
+            var logFolderPath = dataFolderPath + "/auto_generated/log";
+
             var hashFileInfo = new FileInfo(dataFolderPath + "/auto_generated/cache/" + cacheFileName);
             Console.WriteLine("Building SmallCache [START]");
 
@@ -46,13 +48,13 @@ namespace DataProcessor
             var crossRefDic = DataProcessor.CrossRefFoundDOICache.Load(dataFolderPath);
             crossRefDic.ToList().ForEach((v) =>
             {
-                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value);
+                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value, logFolderPath);
                 doiElementDict[v.Key] = doiElement;
             });
             var crossRefExternalDic = DataProcessor.CrossRefExternalFoundDOICache.Load(dataFolderPath);
             crossRefExternalDic.ToList().ForEach((v) =>
             {
-                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value);
+                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value, logFolderPath);
                 doiElementDict[v.Key] = doiElement;
             });
             var dataCiteDic = DataProcessor.DataCiteFoundDOICache.Load(dataFolderPath);

@@ -42,6 +42,41 @@ namespace DataProcessor
         }
         */
 
+        public static void EscapeContainerTitle(Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
+        {
+            var logFilePath = logFolderPath + "/escape_container_title.log";
+            if (!Directory.Exists(logFolderPath))
+            {
+                Directory.CreateDirectory(logFolderPath);
+            }
+            if (File.Exists(logFilePath))
+            {
+                File.Delete(logFilePath);
+            }
+            var logFile = new StreamWriter(logFilePath);
+
+            var escapeLambda = (DOIElement v) => {
+                var b = v.ContainerTitle.Contains("&amp;");
+                if (b)
+                {
+                    logFile.WriteLine($"Escaping container title: {v.ContainerTitle}");
+                    v.ContainerTitle = v.ContainerTitle.Replace("&amp;", "&");
+                }
+            };
+
+
+            primaryDOIElementDict.Values.ToList().ForEach((v) =>
+            {
+                escapeLambda(v);
+            });
+            secondaryDOIElementDict.Values.ToList().ForEach((v) =>
+            {
+                escapeLambda(v);
+            });
+
+            logFile.Close();
+        }
+
         public static void AppendTags(string dataFolderPath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/append_tags.log";

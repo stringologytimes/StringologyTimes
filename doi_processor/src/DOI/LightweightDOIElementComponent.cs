@@ -14,6 +14,7 @@ namespace DataProcessor
         public List<string> DOIList { get; set; } = new List<string>();
         public List<string> WordList { get; set; } = new List<string>();
         public List<string> ContainerTitleList { get; set; } = new List<string>();
+        public List<string> DetailedContainerTitleList { get; set; } = new List<string>();
         public List<string> FullNameList { get; set; } = new List<string>();
         public List<string> YearList { get; set; } = new List<string>();
         public List<string> MonthList { get; set; } = new List<string>();
@@ -140,11 +141,8 @@ namespace DataProcessor
             {
                 var compStr = String.Join(",", v.Authors.Select((v) => fullNameToIndexMapper[v.TryGetFullName()].ToString()));
                 r.CompressedFullNameList.Add(compStr);
-            });
-
-            mergedDOIElementList.ForEach((v) =>
-            {
                 r.ContainerTitleList.Add(v.ContainerTitle);
+                r.DetailedContainerTitleList.Add(v.DetailedContainerTitle);
             });
 
 
@@ -248,6 +246,7 @@ namespace DataProcessor
             CSVFunctions.WriteCSVByGZip(outputFolder + "/source.csv.gz", SourceList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_full_name.csv.gz", CompressedFullNameList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_title.csv.gz", CompressedTitleList);
+            CSVFunctions.WriteCSVByGZip(outputFolder + "/detailed_container_title.csv.gz", DetailedContainerTitleList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_doi_reference.csv.gz", CompressedDOIReferenceList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/doi_flag.csv.gz", DOIFlagList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/tag.csv.gz", TagList);

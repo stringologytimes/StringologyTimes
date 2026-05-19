@@ -17,6 +17,7 @@ namespace DataProcessor
         public List<string> DOIReferences { get; set; } = new List<string>();
         public List<string> UnknownReferences { get; set; } = new List<string>();
 
+
         public static SemanticScholarResult ParseFromJSON(string json)
         {
             var result = new SemanticScholarResult();
@@ -39,6 +40,13 @@ namespace DataProcessor
             else
             {
                 result.ErrorType = 0;
+                if (!jsonDict.ContainsKey("data"))
+                {
+                    result.ErrorType = 3;
+                    return result;
+                }
+
+
                 var dataArray = JsonLib.CreateArrayFromJSONL(jsonDict["data"]);
                 foreach (var data in dataArray)
                 {

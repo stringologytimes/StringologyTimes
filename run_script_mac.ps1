@@ -78,33 +78,33 @@ if (!(Test-Path -Path $destinationDir)) {
 #    echo "Skipped the download of the file from https://dblp.org/xml/dblp.dtd"
 #}
 
-Write-Host "Execute: ts-node ./scripts/process_user_url_and_doi_lists_main.ts" -ForegroundColor Yellow
-ts-node ./scripts/process_user_url_and_doi_lists_main.ts
+#Write-Host "Execute: ts-node ./scripts/process_user_url_and_doi_lists_main.ts" -ForegroundColor Yellow
+#ts-node ./scripts/process_user_url_and_doi_lists_main.ts
 
-Write-Host "Execute: ts-node ./scripts/process_user_tag_lists_main.ts" -ForegroundColor Yellow
-ts-node ./scripts/process_user_tag_lists_main.ts
+#Write-Host "Execute: ts-node ./scripts/process_user_tag_lists_main.ts" -ForegroundColor Yellow
+#ts-node ./scripts/process_user_tag_lists_main.ts
 
 ## Compute the hash of the url.csv file
-Write-Host "Computing the hash of the url.csv file" -ForegroundColor Yellow
-$urlHashInfo = Get-FileHash -LiteralPath "./data/auto_generated/url.csv" -Algorithm SHA256
-$urlHashPath = "./data/auto_generated/url.csv.sha256"
+#Write-Host "Computing the hash of the url.csv file" -ForegroundColor Yellow
+#$urlHashInfo = Get-FileHash -LiteralPath "./data/auto_generated/url.csv" -Algorithm SHA256
+#$urlHashPath = "./data/auto_generated/url.csv.sha256"
 
-$dir = Split-Path -Path $urlHashPath -Parent
-if ($dir -and -not (Test-Path -LiteralPath $dir)) {
-    New-Item -ItemType Directory -Path $dir | Out-Null
-}
+#$dir = Split-Path -Path $urlHashPath -Parent
+#if ($dir -and -not (Test-Path -LiteralPath $dir)) {
+#    New-Item -ItemType Directory -Path $dir | Out-Null
+#}
 
-$previousUrlHash = $null;
-if (-not (Test-Path -LiteralPath $urlHashPath -PathType Leaf)) {
-    $previousUrlHash = $null;
-} else {
-    $previousUrlHash = Get-Content -LiteralPath $urlHashPath -Encoding UTF8
-}
-$urlUpdated = $false;
-if ($previousUrlHash -ne $urlHashInfo.Hash) {
-    $urlUpdated = $true;
-    $urlHashInfo.Hash | Set-Content -LiteralPath $urlHashPath -Encoding UTF8
-}
+#$previousUrlHash = $null;
+#if (-not (Test-Path -LiteralPath $urlHashPath -PathType Leaf)) {
+#    $previousUrlHash = $null;
+#} else {
+#    $previousUrlHash = Get-Content -LiteralPath $urlHashPath -Encoding UTF8
+#}
+#$urlUpdated = $false;
+#if ($previousUrlHash -ne $urlHashInfo.Hash) {
+#    $urlUpdated = $true;
+#    $urlHashInfo.Hash | Set-Content -LiteralPath $urlHashPath -Encoding UTF8
+#}
 
 ### Compute the hash of the dblp.xml file
 #Write-Host "Computing the hash of the dblp.xml file" -ForegroundColor Yellow

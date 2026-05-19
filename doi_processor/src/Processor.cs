@@ -76,6 +76,7 @@ namespace DataProcessor
             OutputSystemMessageFunction("Creating DOI to Tag Mapper");
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.DataFolderPath + "/raw");
             var primaryDOISet = new HashSet<string>(doiToTagMapper.Keys);
+            Console.WriteLine("Primary DOI set: " + primaryDOISet.Count);
 
             OutputSystemMessageFunction("Building primary DOI element dictionary");
             var primaryDOIElementDict = DOIElementPreprocessor.BuildDOIElementDictionary(opts.DataFolderPath, primaryDOISet);
@@ -211,9 +212,9 @@ namespace DataProcessor
             ReplacementRules.ReplaceContainerTitleUsingDBLPSummary(GetFilePathInResultFolder(opts.DataFolderPath, "dblp_proceedings.jsonl"), primaryDOIElementDict, secondaryDOIElementDict);
 
 
-            OutputSystemMessageFunction("Normalizing container title");
-            ContainerTitleNormalization.NormalizeDOIElementDictionary(primaryDOIElementDict);
-            ContainerTitleNormalization.NormalizeDOIElementDictionary(secondaryDOIElementDict);
+            //OutputSystemMessageFunction("Normalizing container title");
+            //ContainerTitleNormalization.NormalizeDOIElementDictionary(primaryDOIElementDict);
+            //ContainerTitleNormalization.NormalizeDOIElementDictionary(secondaryDOIElementDict);
 
 
             OutputSystemMessageFunction("Applying type replacement rules");
@@ -222,6 +223,9 @@ namespace DataProcessor
 
             OutputSystemMessageFunction("Applying container-title replacement rules");
             ReplacementRules.ReplaceContainerTitle(opts.DataFolderPath + "/raw/doi_processor/container_title_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+
+            OutputSystemMessageFunction("Escaping container title");
+            ReplacementRules.EscapeContainerTitle(primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Modifying container title by DOI prefix");
             ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_container_title_value.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);

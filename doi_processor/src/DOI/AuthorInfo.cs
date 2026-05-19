@@ -28,15 +28,26 @@ namespace DataProcessor
             return dataString;
         }
 
-        public static List<AuthorInfo> ParseFromCrossRefJSONL(Dictionary<string, string> dictFromJSONL, string doiType)
+        public static List<AuthorInfo> ParseFromCrossRefJSONL(Dictionary<string, string> dictFromJSONL, string doiType, string logFolderPath)
         {
+            var logFilePath = logFolderPath + "/author_info.log";
+            if (!Directory.Exists(logFolderPath))
+            {
+                Directory.CreateDirectory(logFolderPath);
+            }
+            if (File.Exists(logFilePath))
+            {
+                File.Delete(logFilePath);
+            }
+            var logFile = new StreamWriter(logFilePath);
+
             var authorInfoList = new List<AuthorInfo>();
 
             if (doiType == "CrossRef:book")
             {
                 if (!dictFromJSONL.ContainsKey("editor"))
                 {
-                    Console.WriteLine("Warning: Editor is not found: " + dictFromJSONL["DOI"]);
+                    logFile.WriteLine("Warning: Editor is not found: " + dictFromJSONL["DOI"]);
                     //dictFromJSONL.ToList().ForEach((v) => Console.WriteLine(v.Key + " : " + v.Value));
                     //throw new Exception("Author is not found");
                 }
@@ -74,7 +85,7 @@ namespace DataProcessor
             {
                 if (!dictFromJSONL.ContainsKey("author"))
                 {
-                    Console.WriteLine("Warning: Editor is not found: " + dictFromJSONL["DOI"]);
+                    logFile.WriteLine("Warning: Editor is not found: " + dictFromJSONL["DOI"]);
                 }
                 else
                 {
@@ -107,7 +118,7 @@ namespace DataProcessor
                 
 
             }
-
+            logFile.Close();
 
 
 

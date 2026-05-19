@@ -15,6 +15,8 @@ namespace DataProcessor
         public string Title { get; set; } = "";
         public List<AuthorInfo> Authors { get; set; } = new List<AuthorInfo>();
         public string ContainerTitle { get; set; } = "";
+        public string DetailedContainerTitle { get; set; } = "";
+
         public string Type { get; set; } = "";
         public string Volume { get; set; } = "";
         public string Year { get; set; } = "";
@@ -102,7 +104,7 @@ namespace DataProcessor
         */
 
 
-        public static DOIElement ParseFromCrossRefJSONL(string jsonlString)
+        public static DOIElement ParseFromCrossRefJSONL(string jsonlString, string logFolderPath)
         {
             var dict = JsonLib.CreateDictionaryFromJSONL(jsonlString);
 
@@ -138,7 +140,7 @@ namespace DataProcessor
             {
                 element.Title = $"Dummy Title: {element.DOI}";
             }
-            element.Authors = AuthorInfo.ParseFromCrossRefJSONL(dict, element.Type);
+            element.Authors = AuthorInfo.ParseFromCrossRefJSONL(dict, element.Type, logFolderPath);
 
             var containerTitleFlag = false;
 
@@ -148,6 +150,7 @@ namespace DataProcessor
                 if (containerTitleList != null && containerTitleList.Count > 0)
                 {
                     element.ContainerTitle = string.Join("---", containerTitleList.ToArray());
+                    element.DetailedContainerTitle = element.ContainerTitle;
                     containerTitleFlag = true;
                 }
             }
@@ -157,6 +160,7 @@ namespace DataProcessor
                 if (containerTitleList != null && containerTitleList.Count > 0)
                 {
                     element.ContainerTitle = string.Join("---", containerTitleList.ToArray());
+                    element.DetailedContainerTitle = element.ContainerTitle;
                     containerTitleFlag = true;
                 }
             }
@@ -323,6 +327,19 @@ namespace DataProcessor
                 element.Title = $"Dummy Title: {element.DOI}";
             }
 
+            /*
+            if (attributeDict.ContainsKey("relatedItems")) {
+                var relatedItemsArray = JsonLib.CreateArrayFromJSONL(attributeDict["relatedItems"]);
+                foreach (var relatedItem in relatedItemsArray)
+                {
+                    var relatedItemDict = JsonLib.CreateDictionaryFromJSONL(relatedItem);
+                    if (relatedItemDict.ContainsKey("relatedItem")) {
+                        var relatedItemValue = relatedItemDict["relatedItem"];
+                    }
+                }
+            }
+            */
+
             element.Authors = AuthorInfo.ParseFromDataCiteJSONL(dict);
 
 
@@ -376,7 +393,7 @@ namespace DataProcessor
 
             if (currentDatePriority == 0)
             {
-                Console.WriteLine($"Warning (${element.DOI}): Year is not found");
+                Console.WriteLine($"Warning ({element.DOI}): Year is not found");
                 element.Year = "-1";
                 element.Month = "-1";
             }
@@ -443,7 +460,7 @@ namespace DataProcessor
             }
             else
             {
-                Console.WriteLine($"Warning (${element.DOI}): Resource Type General is not found");
+                Console.WriteLine($"Warning ({element.DOI}): Resource Type General is not found");
                 element.Type = $"DataCite:Unknown";
 
             }
@@ -463,6 +480,7 @@ namespace DataProcessor
             dataList.Add(JsonSerializer.Serialize(this.Year));
             dataList.Add(JsonSerializer.Serialize(this.Month));
             dataList.Add(JsonSerializer.Serialize(this.ContainerTitle));
+            dataList.Add(JsonSerializer.Serialize(this.DetailedContainerTitle));
             dataList.Add(JsonSerializer.Serialize(this.Volume));
             dataList.Add(JsonSerializer.Serialize(this.Source));
 

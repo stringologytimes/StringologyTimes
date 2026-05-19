@@ -48,10 +48,25 @@ export function renderContainerTitleList(filterResult: DOIFilterResult, viewSett
         */
 
         const li = document.createElement('li');
-        li.textContent = getDisplayName(containerTitle, summaryInfo.containerTitleCountList[index]);
+        const a = document.createElement('a');
+        a.textContent = containerTitle;
+        a.setAttribute("href", `javascript:void(0)`);
+        a.addEventListener("click", (event) => {
+            event.preventDefault();
+            (window as any).changeParameter("container_title", containerTitle);
+          });
+
+        //a.setAttribute("href", `javascript:changeParameter('container_title', '${encodeURIComponent(containerTitle)}')`);
+        li.appendChild(a);
+        const span = document.createElement('span');
+        span.textContent = ` (${summaryInfo.containerTitleCountList[index]} articles)`;
+        li.appendChild(span);
+
+
+        //li.textContent = getDisplayName(containerTitle, summaryInfo.containerTitleCountList[index]);
         //li.setAttribute("onclick", `containerTitleLiElementClick('${containerTitle}')`);
-        li.style.cursor = "pointer";
-        li.classList.add("clickable-list-item");
+        //li.style.cursor = "pointer";
+        //li.classList.add("clickable-list-item");
         ol.appendChild(li);
    
     });
