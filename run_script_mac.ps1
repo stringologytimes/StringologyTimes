@@ -158,6 +158,11 @@ cd ..
 #Write-Host "Execute: $doiProcessor $doiProcessorArgsY" -ForegroundColor Yellow
 #$dblpProcY = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsY -Wait    
 
+$doiProcessorArgsY = @("--data", "./data", "--skip_build", "--mode", "dblp_proceedings_preprocessor")
+Write-Host "Execute: $doiProcessor $doiProcessorArgsY" -ForegroundColor Yellow
+$dblpProcY = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsY -Wait    
+
+
 $doiProcessorArgsX = @("--data", "./data", "--skip_build", "--mode", "build_big_cache")
 Write-Host "Execute: $doiProcessor $doiProcessorArgsX" -ForegroundColor Yellow
 $dblpProcX = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsX -Wait    
@@ -170,6 +175,8 @@ $doiProcessorArgsB = @("--data", "./data", "--skip_build", "--mode", "build_prim
 Write-Host "Execute: $doiProcessor $doiProcessorArgsB" -ForegroundColor Yellow
 $dblpProcB = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsB -Wait    
 
+return;
+
 $doiProcessorArgsC = @("--data", "./data", "--skip_build", "--mode", "build_small_cache_for_secondary_doi_elements")
 Write-Host "Execute: $doiProcessor $doiProcessorArgsC" -ForegroundColor Yellow
 $dblpProcC = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsC -Wait    
@@ -177,6 +184,8 @@ $dblpProcC = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorAr
 $doiProcessorArgsD = @("--data", "./data", "--skip_build", "--mode", "build_secondary_doi_element_dictionary")
 Write-Host "Execute: $doiProcessor $doiProcessorArgsD" -ForegroundColor Yellow
 $dblpProcD = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsD -Wait    
+
+
 
 $doiProcessorArgs = @("--data", "./data", "--skip_build", "--mode", "standard")
 Write-Host "Execute: $doiProcessor $doiProcessorArgs" -ForegroundColor Yellow

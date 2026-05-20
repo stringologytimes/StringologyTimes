@@ -18,7 +18,7 @@ namespace DataProcessor
             return dic;
         }
 
-        public static void Build(List<string> dois, string dataFolderPath, string jsonlFolderPath)
+        public static void Update(List<string> dois, string dataFolderPath, string jsonlFolderPath)
         {
             Console.WriteLine("Creating Found JSONL File(CrossRef): ");
             //var dicPath = GetCachePath(dataFolderPath);
@@ -50,7 +50,7 @@ namespace DataProcessor
                 doiPrefixCounter++;
 
                 var doiPrefix = kvp.Key;
-                var filePath = $"{CrossRefDOIToGZFileCache.GetDOIToGZFileFolderPath(dataFolderPath)}/{doiPrefix}.csv";
+                var filePath = $"{CrossRefDOIToGZFileCache.GetDOIToGZFileFolderPath(dataFolderPath)}/{doiPrefix}.tsv";
                 var fileInfo = new FileInfo(filePath);
                 if (fileInfo.Exists)
                 {
@@ -59,7 +59,7 @@ namespace DataProcessor
                     var lines = File.ReadAllLines(filePath);
                     foreach (var line in lines)
                     {
-                        var cols = line.Split(",");
+                        var cols = line.Split("\t");
                         if (cols.Length == 2)
                         {
                             var lineDOI = cols[0];
@@ -80,14 +80,14 @@ namespace DataProcessor
                 }
             }
             Console.WriteLine();
-            var othersFilePath = $"{CrossRefDOIToGZFileCache.GetDOIToGZFileFolderPath(dataFolderPath)}/others.csv";
+            var othersFilePath = CrossRefDOIToGZFileCache.GetOthersFilePath(dataFolderPath);
             var othersFileInfo = new FileInfo(othersFilePath);
             if (othersFileInfo.Exists)
             {
                 var lines = File.ReadAllLines(othersFilePath);
                 foreach (var line in lines)
                 {
-                    var cols = line.Split(",");
+                    var cols = line.Split("\t");
                     if (cols.Length == 2)
                     {
                         var lineDOI = cols[0];

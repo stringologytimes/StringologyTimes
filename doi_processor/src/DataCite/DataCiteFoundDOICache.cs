@@ -17,7 +17,7 @@ namespace DataProcessor
             var dic = DataProcessor.DataCiteJSONLLoader.Load(dicPath);
             return dic;
         }
-        public static void Build(List<string> dois, string dataFolderPath, string dataCiteFolderPath)
+        public static void BuildUsingDOIToGZFileCache(List<string> dois, string dataFolderPath, string dataCiteFolderPath)
         {
             Console.WriteLine("Build Found DOI Cache(DataCite): ");
             var foundJSONLMapFilePath = GetCachePath(dataFolderPath);
@@ -38,7 +38,7 @@ namespace DataProcessor
                     doiPrefixToDoi[doiPrefix].Add(smallDOI.ToLower());
                 }
             }
-            var doiPrefixMacCount = doiPrefixToDoi.Count;
+            var doiPrefixMaxCount = doiPrefixToDoi.Count;
             var doiPrefixCounter = 0;
             var gzFilePathSet = new HashSet<string>();
             var othersHashSet = new HashSet<string>();
@@ -48,26 +48,24 @@ namespace DataProcessor
                 doiPrefixCounter++;
 
                 var doiPrefix = kvp.Key;
-                var filePath = $"{DataCiteDOIToGZFileCache.GetFolderPath(dataFolderPath)}/{doiPrefix}.csv";
+                var filePath = $"{DataCiteDOIToGZFileCache.GetFolderPath(dataFolderPath)}/{doiPrefix}.tsv";
                 var fileInfo = new FileInfo(filePath);
                 if (fileInfo.Exists)
                 {
-                    Console.Write("\r\t\t Processing DOI Prefix [" + doiPrefixCounter + " / " + doiPrefixMacCount + "]");
 
                     //Console.WriteLine("\t Processing File: " + fileInfo.Name + "/" + doiPrefix);
                     var lines = File.ReadAllLines(filePath);
 
                     foreach (var line in lines)
                     {
-                        var cols = line.Split(",");
+                        var cols = line.Split("\t");
                         if (cols.Length == 3)
                         {
                             var lineDOI = cols[0];
                             var directoryName = cols[1];
                             var fileName = cols[2];
                             var gzFileName = directoryName + "/" + fileName;
-                            if (kvp.Value.Contains(lineDOI))
-                            {
+                            if (kvp.Value.Contains(lineDOI))                            {
                                 gzFilePathSet.Add(dataCiteFolderPath + "/dois/" + gzFileName);
                             }
                         }
@@ -85,14 +83,14 @@ namespace DataProcessor
             Console.WriteLine();
             Console.WriteLine("\t Found JSONL Map: " + foundJSONLMap.Count);
 
-            var othersFilePath = $"{DataCiteDOIToGZFileCache.GetFolderPath(dataFolderPath)}/others.csv";
+            var othersFilePath = DataCiteDOIToGZFileCache.GetOthersFilePath(dataFolderPath);
             var othersFileInfo = new FileInfo(othersFilePath);
             if (othersFileInfo.Exists)
             {
                 var lines = File.ReadAllLines(othersFilePath);
                 foreach (var line in lines)
                 {
-                    var cols = line.Split(",");
+                    var cols = line.Split("\t");
                     if (cols.Length == 3)
                     {
                         var lineDOI = cols[0];

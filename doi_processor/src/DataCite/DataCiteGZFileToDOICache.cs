@@ -7,6 +7,12 @@ namespace DataProcessor
 {
     class DataCiteGZFileToDOICache
     {
+        class DOIElement1
+        {
+            public string DOI { get; set; } = "";
+            public string Type { get; set; } = "";
+            public string Title { get; set; } = "";
+        }
         public static string GetFolderPath(string dataFolderPath)
         {
             return dataFolderPath + "/auto_generated/cache/datacite_cache/gzfile_to_doi";
@@ -61,28 +67,40 @@ namespace DataProcessor
                 var name = (fi.Directory!.Name) + "_" + fi.Name;
 
 
-                var csvFilePath = GetFolderPath(dataFolderPath) + $"/{name}.csv";
+                var csvFilePath = GetFolderPath(dataFolderPath) + $"/{name}.tsv";
                 var csvFileInfo = new FileInfo(csvFilePath);
 
 
                 if (!csvFileInfo.Exists)
                 {
-                    List<string> dois = new List<string>();
+                    //List<KeyValuePair<string, string>> dois = new List<KeyValuePair<string, string>>();
+                    var sw = new StreamWriter(csvFilePath, false, Encoding.UTF8);
 
                     foreach (var line in JsonLib.ReadLinesFromGzip(gzFilePath))
                     {
+                        //var element = new DOIElement1();
                         var dict = JsonLib.CreateDictionaryFromJSONL(line);
                         if (dict.ContainsKey("id"))
                         {
-                            dois.Add(dict["id"]);
+                            var doi = dict["id"];
+                            var type = DOIElement.GetTypeFromDataCiteJSONL(line);
+                            var title = DOIElement.GetTitleFromDataCiteJSONL(line);
+                            if (title == null)
+                            {
+                                throw new Exception("Title is null: " + line);
+                            }
+                            title = CSVFunctions.DeleteNewLineCode(title);
+                            sw.WriteLine(doi + "\t" + type + "\t" + title);
                         }
                     }
-                    var sw = new StreamWriter(csvFilePath, false, Encoding.UTF8);
+                    sw.Close();
+
+                    /*
                     foreach (var doi in dois)
                     {
-                        sw.WriteLine(doi);
+                        sw.WriteLine(doi.Key + "\t" + doi.Value);
                     }
-                    sw.Close();
+                    */
 
                     lock (lockObj)
                     {

@@ -2,11 +2,19 @@ using System.Text;
 using System.IO.Compression;
 using System.Collections.ObjectModel;
 using System.Security.Cryptography;
-
+using System.Text.Json;
 namespace DataProcessor
 {
     class CrossRefGZFileToDOICache
     {
+        class DOIElement1
+        {
+            public string DOI { get; set; } = "";
+            public string Type { get; set; } = "";
+            public string Title { get; set; } = "";
+        }
+
+
         public static void Build(string jsonlFolderPath, string dataFolderPath)
         {
             Console.WriteLine("Creating DOI List(CrossRef): ");
@@ -46,26 +54,51 @@ namespace DataProcessor
                     parallelCounter++;
                 }
 
-            
-                var csvFilePath = CrossRefCacheBuilder.GetGZFileToDoiFolderPath(dataFolderPath) + $"/{fi.Name}.csv";
+
+                var csvFilePath = CrossRefCacheBuilder.GetGZFileToDoiFolderPath(dataFolderPath) + $"/{fi.Name}.tsv";
                 var csvFileInfo = new FileInfo(csvFilePath);
 
                 if (!csvFileInfo.Exists)
                 {
-                    List<string> dois = new List<string>();
+                    List<DOIElement1> dois = new List<DOIElement1>();
 
                     foreach (var line in JsonLib.ReadLinesFromGzip(gzFilePath))
                     {
                         var dict = JsonLib.CreateDictionaryFromJSONL(line);
                         if (dict.ContainsKey("DOI"))
                         {
-                            dois.Add(dict["DOI"]);
+                            var element = new DOIElement1();
+                            element.DOI = dict["DOI"];
+                            element.Type = "unknown";
+                            if (dict.ContainsKey("type"))
+                            {
+                                element.Type = dict["type"];
+                            }
+                            element.Title = "";
+                            if (dict.ContainsKey("title"))
+                            {
+                                var titleList = JsonSerializer.Deserialize<List<string>>(dict["title"]);
+                                if (titleList != null && titleList.Count > 0)
+                                {
+                                    element.Title = CSVFunctions.DeleteNewLineCode(titleList[0]);
+                                }
+                            }
+
+
+                            dois.Add(element);
                         }
                     }
                     var sw = new StreamWriter(csvFilePath, false, Encoding.UTF8);
                     foreach (var doi in dois)
                     {
-                        sw.WriteLine(doi);
+                        if (doi.Type == "book" || doi.Type == "journal" || doi.Type == "proceedings" || doi.Type == "journal-volume")
+                        {
+                            sw.WriteLine(doi.DOI + "\t" + doi.Type + "\t" + doi.Title);
+                        }
+                        else
+                        {
+                            sw.WriteLine(doi.DOI + "\t" + doi.Type + "\t");
+                        }
                     }
                     sw.Close();
 
@@ -102,5 +135,7 @@ namespace DataProcessor
 
 
         }
+
+
     }
 }

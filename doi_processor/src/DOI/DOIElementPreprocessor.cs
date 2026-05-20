@@ -45,6 +45,7 @@ namespace DataProcessor
             await DataProcessor.DataCitePreprocessor.BuildSmallCache(dataFolderPath, doiSet, mailAddress);
 
             var doiElementDict = DOIElement.Load(GetCachePath(dataFolderPath), false);
+
             var crossRefDic = DataProcessor.CrossRefFoundDOICache.Load(dataFolderPath);
             crossRefDic.ToList().ForEach((v) =>
             {
@@ -71,6 +72,36 @@ namespace DataProcessor
             });
 
             await SemanticScholarPreprocessor.PreprocessAll(doiElementDict, dataFolderPath);
+
+
+            {
+                var additionalCrossRefDOISet = new HashSet<string>();
+                var crossRefDicFromContainerTitleToDOI = DataProcessor.CrossRefDOIToGZFileCache.BuildDictionaryFromContainerTitleToDOI(dataFolderPath + "/auto_generated/cache/crossref_cache/gzfile_to_doi");
+                doiElementDict.ToList().ForEach((v) =>
+                {
+                    if (crossRefDicFromContainerTitleToDOI.ContainsKey(v.Value.ContainerTitle))
+                    {
+                        v.Value.ContainerDOI = crossRefDicFromContainerTitleToDOI[v.Value.ContainerTitle];
+                        additionalCrossRefDOISet.Add(v.Value.ContainerDOI);
+                    }
+                });
+                var crossrefFolderInfo = CrossRefCacheBuilder.SearchCrossRefFolder(dataFolderPath + "/external");
+                DataProcessor.CrossRefFoundDOICache.Update(additionalCrossRefDOISet.ToList(), dataFolderPath, crossrefFolderInfo.FullName);
+
+                var crossRefDic2 = DataProcessor.CrossRefFoundDOICache.Load(dataFolderPath);
+
+                doiElementDict.ToList().ForEach((v) =>
+                {
+                    if (v.Value.ContainerDOI.Length > 0 && crossRefDic2.ContainsKey(v.Value.ContainerDOI))
+                    {
+                        var jsonlString = crossRefDic2[v.Value.ContainerDOI];
+                        var doiElement = DOIElement.ParseFromCrossRefJSONL(jsonlString, logFolderPath);
+                        doiElementDict[v.Key].ContainerDOI = doiElement.DOI;
+                    }
+                });
+
+
+            }
 
 
             DOIElement.Save(doiElementDict, GetCachePath(dataFolderPath));

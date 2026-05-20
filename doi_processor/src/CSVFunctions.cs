@@ -10,6 +10,10 @@ namespace DataProcessor
 {
     class CSVFunctions
     {
+        public static string DeleteNewLineCode(string line)
+        {
+            return line.Replace("\r", "").Replace("\n", "");
+        }
         public static void WriteCSV(string filePath, List<string> lines)
         {
             Console.WriteLine("Writing: " + filePath);

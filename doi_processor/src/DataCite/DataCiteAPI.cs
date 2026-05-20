@@ -40,13 +40,17 @@ namespace DataProcessor
             var sem = new SemaphoreSlim(maxConcurrency, maxConcurrency);
             var results = new ConcurrentDictionary<string, JsonDocument?>();
 
+            var maxCounter = dois.Count();
+            var counter = 0;
+
             var tasks = dois.Select(async doi =>
             {
                 await sem.WaitAsync(ct);
                 try
                 {
 
-                    results[doi] = await GetOneWithRetryAsync(http, gate, doi, maxRetries, ct);
+                    results[doi] = await GetOneWithRetryAsync(http, gate, doi, maxRetries, ct, maxCounter, counter);
+                    counter++;
                 }
                 finally { sem.Release(); }
             });
@@ -60,9 +64,11 @@ namespace DataProcessor
             DataCiteRateGate gate,
             string doi,
             int maxRetries,
-            CancellationToken ct)
+            CancellationToken ct, 
+            int maxCounter,
+            int counter)
         {
-            Console.WriteLine("Getting DOI: " + doi);
+            Console.WriteLine($"Getting DOI {counter} / {maxCounter}: " + doi);
             for (int attempt = 0; ; attempt++)
             {
                 ct.ThrowIfCancellationRequested();

@@ -66,6 +66,8 @@ namespace DataProcessor
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.DataFolderPath + "/raw");
             var primaryDOISet = new HashSet<string>(doiToTagMapper.Keys);
 
+            
+
             OutputSystemMessageFunction("Building cache for primary DOI elements");
             await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, primaryDOISet, "primary_small_cache_hash.csv");
 

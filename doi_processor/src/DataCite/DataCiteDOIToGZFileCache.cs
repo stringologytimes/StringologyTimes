@@ -8,14 +8,22 @@ namespace DataProcessor
     class DataCiteDOIToGZFileCache
     {
 
-                public static string GetFolderPath(string dataFolderPath)
+        public static string GetFolderPath(string dataFolderPath)
         {
             return dataFolderPath + "/auto_generated/cache/datacite_cache/doi_to_gzfile";
         }
 
+        public static string GetOthersFilePath(string dataFolderPath)
+        {
+            return GetFolderPath(dataFolderPath) + "/others.tsv";
+        }
+        public static string GetDOIPrefixFilePath(string dataFolderPath)
+        {
+            return GetFolderPath(dataFolderPath) + "/doi_prefix.tsv";
+        }
         public static HashSet<string> GetDOIPrefixSet(string dataFolderPath)
         {
-            var path = GetFolderPath(dataFolderPath) + "/doi_prefix.csv";
+            var path = GetDOIPrefixFilePath(dataFolderPath);
             var fileInfo = new FileInfo(path);
             HashSet<string> doiPrefixSet = new HashSet<string>();
             if (fileInfo.Exists)
@@ -43,7 +51,7 @@ namespace DataProcessor
             }
 
             // gzファイル毎の処理を並列化し、各dict.Countを配列に格納
-            var csvFiles = System.IO.Directory.GetFiles(doiListFolderPath, "*.csv", System.IO.SearchOption.TopDirectoryOnly);
+            var csvFiles = System.IO.Directory.GetFiles(doiListFolderPath, "*.tsv", System.IO.SearchOption.TopDirectoryOnly);
             //Dictionary<string, HashSet<string>> r = new Dictionary<string, HashSet<string>>();
 
             var FinishedCounter = 0;
@@ -69,12 +77,16 @@ namespace DataProcessor
                 var directoryName = splits[0] + "_" + splits[1];
                 var gzFileName = splits[2] + "_" + splits[3];
 
-                var dois = File.ReadAllLines(fi.FullName);
+                var doi_and_types = File.ReadAllLines(fi.FullName);
                 lock (lockObj)
                 {
 
-                    foreach (var doi in dois)
+                    foreach (var doi_and_type_line in doi_and_types)
                     {
+                        var cols = doi_and_type_line.Split("\t");
+                        var doi = cols[0];
+                        var type = cols[1];
+
                         var prefix = DOIFunctions.GetPrefix(doi);
                         doiPrefixSet.Add(prefix);
 
@@ -85,15 +97,15 @@ namespace DataProcessor
 
                         if (onlineWriters.ContainsKey(prefix))
                         {
-                            onlineWriters[prefix].WriteLine($"{doi},{directoryName},{gzFileName}");
+                            onlineWriters[prefix].WriteLine($"{doi}\t{directoryName}\t{gzFileName}");
                         }
                         else
                         {
-                            doiPrefixToJSONLMap[prefix].Add($"{doi},{directoryName},{gzFileName}");
+                            doiPrefixToJSONLMap[prefix].Add($"{doi}\t{directoryName}\t{gzFileName}");
 
                             if (doiPrefixToJSONLMap[prefix].Count > 1000)
                             {
-                                onlineWriters[prefix] = new StreamWriter(GetFolderPath(dataFolderPath) + "/" + prefix + ".csv", false, Encoding.UTF8);
+                                onlineWriters[prefix] = new StreamWriter(GetFolderPath(dataFolderPath) + "/" + prefix + ".tsv", false, Encoding.UTF8);
                                 doiPrefixToJSONLMap[prefix].ForEach((v) =>
                                 {
                                     onlineWriters[prefix].WriteLine(v);
@@ -116,7 +128,7 @@ namespace DataProcessor
             });
 
 
-            using (var sw = new StreamWriter(GetFolderPath(dataFolderPath) + "/others.csv", false, Encoding.UTF8))
+            using (var sw = new StreamWriter(GetOthersFilePath(dataFolderPath), false, Encoding.UTF8))
             {
                 doiPrefixToJSONLMap.ToList().ForEach((v) =>
                 {
@@ -129,7 +141,7 @@ namespace DataProcessor
 
             }
 
-            using (var sw = new StreamWriter(GetFolderPath(dataFolderPath) + "/doi_prefix.csv", false, Encoding.UTF8))
+            using (var sw = new StreamWriter(GetDOIPrefixFilePath(dataFolderPath), false, Encoding.UTF8))
             {
                 doiPrefixSet.ToList().ForEach((v) =>
                 {

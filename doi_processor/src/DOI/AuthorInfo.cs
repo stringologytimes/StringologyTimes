@@ -73,7 +73,7 @@ namespace DataProcessor
                         }
                         if (editorDict.ContainsKey("name"))
                         {
-                            throw new Exception("Name is found!");
+                            authorInfo.FullName = editorDict["name"];
                         }
                         authorInfoList.Add(authorInfo);
                     }

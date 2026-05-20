@@ -14,6 +14,8 @@ namespace DataProcessor
         public string DOI { get; set; } = "";
         public string Title { get; set; } = "";
         public List<AuthorInfo> Authors { get; set; } = new List<AuthorInfo>();
+
+        public string ContainerDOI { get; set; } = "";
         public string ContainerTitle { get; set; } = "";
         public string DetailedContainerTitle { get; set; } = "";
 
@@ -285,13 +287,61 @@ namespace DataProcessor
 
             return tags;
         }
+        public static string GetTypeFromDataCiteJSONL(string jsonlString)
+        {
+            var dict = JsonLib.CreateDictionaryFromJSONL(jsonlString);
+            var attributeDict = JsonLib.CreateDictionaryFromJSONL(dict["attributes"]);
+            var typesDict = JsonLib.CreateDictionaryFromJSONL(attributeDict["types"]);
 
+            var type = "";
+            if (dict.ContainsKey("type"))
+            {
+                type = dict["type"];
+            }
+            if (typesDict.ContainsKey("resourceTypeGeneral"))
+            {
+                var resourceTypeGeneral = typesDict["resourceTypeGeneral"];
+                if (resourceTypeGeneral != null)
+                {
+                    type = resourceTypeGeneral;
+                }
+            }
+            else
+            {
+                type = "Unknown";
+            }
+
+            return type;
+        }
+        public static string GetTitleFromDataCiteJSONL(string jsonlString)
+        {
+            var title = "";
+            var dict = JsonLib.CreateDictionaryFromJSONL(jsonlString);
+            var attributeDict = JsonLib.CreateDictionaryFromJSONL(dict["attributes"]);
+            if (attributeDict.ContainsKey("titles"))
+            {
+                var titleList = JsonLib.CreateArrayFromJSONL(attributeDict["titles"]);
+                if (titleList.Length > 0)
+                {
+                    title = JsonLib.GetValueFromJSONL(titleList[0], "title")!;
+                }
+                else
+                {
+                    title = $"Dummy Title";
+                }
+            }
+            else
+            {
+                title = $"Dummy Title";
+            }
+            return title ?? "Dummy Title";
+        }
 
         public static DOIElement ParseFromDataCiteJSONL(string jsonlString)
         {
             var dict = JsonLib.CreateDictionaryFromJSONL(jsonlString);
             var attributeDict = JsonLib.CreateDictionaryFromJSONL(dict["attributes"]);
-            var typesDict = JsonLib.CreateDictionaryFromJSONL(attributeDict["types"]);
+            //var typesDict = JsonLib.CreateDictionaryFromJSONL(attributeDict["types"]);
             var dateArray = JsonLib.CreateArrayFromJSONL(attributeDict["dates"]);
 
             var element = new DOIElement();
@@ -299,33 +349,9 @@ namespace DataProcessor
             {
                 element.DOI = dict["id"];
             }
-            if (dict.ContainsKey("type"))
-            {
-                element.Type = dict["type"];
-            }
-            else
-            {
-                Console.WriteLine(jsonlString);
-                throw new Exception("Type is not found");
-            }
-            //attributeDict.ToList().ForEach((v) => Console.WriteLine(v.Key));
-            if (attributeDict.ContainsKey("titles"))
-            {
-                var titleList = JsonLib.CreateArrayFromJSONL(attributeDict["titles"]);
-                if (titleList.Length > 0)
-                {
-                    var title = JsonLib.GetValueFromJSONL(titleList[0], "title");
-                    element.Title = title!;
-                }
-                else
-                {
-                    element.Title = $"Dummy Title: {element.DOI}";
-                }
-            }
-            else
-            {
-                element.Title = $"Dummy Title: {element.DOI}";
-            }
+            element.Type = GetTypeFromDataCiteJSONL(jsonlString);
+            element.Title = GetTitleFromDataCiteJSONL(jsonlString);
+
 
             /*
             if (attributeDict.ContainsKey("relatedItems")) {
@@ -446,6 +472,7 @@ namespace DataProcessor
 
             }
 
+            /*
             if (typesDict.ContainsKey("resourceTypeGeneral"))
             {
                 var resourceTypeGeneral = typesDict["resourceTypeGeneral"];
@@ -464,6 +491,7 @@ namespace DataProcessor
                 element.Type = $"DataCite:Unknown";
 
             }
+            */
 
             element.Source = "DataCite";
 
@@ -479,6 +507,7 @@ namespace DataProcessor
             dataList.Add(JsonSerializer.Serialize(this.Title));
             dataList.Add(JsonSerializer.Serialize(this.Year));
             dataList.Add(JsonSerializer.Serialize(this.Month));
+            dataList.Add(JsonSerializer.Serialize(this.ContainerDOI));
             dataList.Add(JsonSerializer.Serialize(this.ContainerTitle));
             dataList.Add(JsonSerializer.Serialize(this.DetailedContainerTitle));
             dataList.Add(JsonSerializer.Serialize(this.Volume));

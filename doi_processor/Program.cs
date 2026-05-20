@@ -57,9 +57,18 @@ namespace DataProcessor
             if (opts.Mode == "dblp_proceedings_preprocessor")
             {
                 outputSystemMessageFunction("Running dblp_processor");
-                var dic = new Dictionary<string, List<string>>();
-                var proceedingsSeriesDictionary = DataProcessor.DBLPProcessor.CollectProceedings(opts.DataFolderPath + "/external/dblp.xml", opts.DataFolderPath + "/raw/dblp/additional_booktitle.tsv");
-                proceedingsSeriesDictionary.Save(opts.DataFolderPath + "/auto_generated/result/" + "dblp_proceedings.jsonl");
+                var savePath = opts.DataFolderPath + "/auto_generated/result/" + "dblp_proceedings.jsonl";
+                var fileInfo = new FileInfo(savePath);
+                if (!fileInfo.Exists)
+                {
+                    var dic = new Dictionary<string, List<string>>();
+                    var proceedingsSeriesDictionary = DataProcessor.DBLPProcessor.CollectProceedings(opts.DataFolderPath + "/external/dblp.xml", opts.DataFolderPath + "/raw/dblp/additional_booktitle.tsv");
+                    proceedingsSeriesDictionary.Save(savePath);
+                }
+                else
+                {
+                    Console.WriteLine("File already exists: " + savePath);
+                }
 
                 return 0;
             }
