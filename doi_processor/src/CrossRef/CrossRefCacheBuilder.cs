@@ -1,18 +1,12 @@
+using System.Text;
+using System.IO.Compression;
+using System.Collections.ObjectModel;
+
 
 namespace DataProcessor
 {
-    class CrossRefCacheBuilder
+    class CrossRefPreprocessor
     {
-        public static string GetGZFileToDoiFolderPath(string dataFolderPath)
-        {
-            return dataFolderPath + "/auto_generated/cache/crossref_cache/gzfile_to_doi";
-        }
-        public static string GetCrossRefCacheFolderPath(string dataFolderPath)
-        {
-            return dataFolderPath + "/auto_generated/cache/crossref_cache";
-        }
-
-
         public static DirectoryInfo SearchCrossRefFolder(string externalFolderPath)
         {
             DirectoryInfo di = new DirectoryInfo(externalFolderPath);
@@ -47,28 +41,51 @@ namespace DataProcessor
             }
             throw new Exception("CrossRef folder not found");
         }
-        public static Dictionary<string, string> Load(string dicPath)
+
+        public static void BuildBigCache(string dataFolderPath)
         {
-            Dictionary<string, string> foundJSONLMap = new Dictionary<string, string>();
-            var foundJSONLMapFileInfo = new FileInfo(dicPath);
-            if (foundJSONLMapFileInfo.Exists)
+            var crossrefFolderInfo = CrossRefPreprocessor.SearchCrossRefFolder(dataFolderPath + "/external");
+
+            DataProcessor.CrossRefGZFileToDOICache.Build(dataFolderPath);
+
+            var otherCSVPath = CrossRefDOIToGZFileCache.GetOthersFilePath(dataFolderPath);
+            var otherCSVFileInfo = new FileInfo(otherCSVPath);
+            if (!otherCSVFileInfo.Exists)
             {
-                var jsonLString = File.ReadAllText(dicPath);
-                var dicts = JsonLib.ProcessJSONL(jsonLString, true);
-                Console.WriteLine("\t\t Loading Found JSONL Map: " + dicts.Count + " / " + jsonLString.Length);
-                foreach (var dict in dicts)
-                {
-                    var b = dict.ContainsKey("DOI");
-                    if (!b)
-                    {
-                        dict.ToList().ForEach((v) => Console.WriteLine(v.Key + " : " + v.Value));
-                        throw new Exception("DOI is not found");
-                    }
-                    var doi = dict["DOI"];
-                    foundJSONLMap[doi] = dict["input_line"];
-                }
+                CrossRefDOIToGZFileCache.Build(dataFolderPath);
             }
-            return foundJSONLMap;
+
+            //BuildBookCache(dataFolderPath, crossRefDoiListFolderPath);
+
+        }
+
+
+
+
+        public static async Task UpdateSmallCache(string dataFolderPath, HashSet<string> doiSet, string mailAddress)
+        {
+            Console.WriteLine("Building CrossRefSmallCache [START]");
+            var crossrefFolderInfo = CrossRefPreprocessor.SearchCrossRefFolder(dataFolderPath + "/external");
+
+            var otherCSVPath = CrossRefDOIToGZFileCache.GetOthersFilePath(dataFolderPath);
+            var otherCSVFileInfo = new FileInfo(otherCSVPath);
+            if (!otherCSVFileInfo.Exists)
+            {
+                throw new Exception("others.tsv not found");
+            }
+
+            // Build Found DOI Cache
+            CrossRefFoundDOICache.Update(doiSet.ToList(), dataFolderPath, crossrefFolderInfo.FullName);
+
+            
+            var unknownDOIFilePath = CrossRefExternalFoundDOICache.GetUnknownDOIFilePath(dataFolderPath);
+            var unknownDOISet = CSVFunctions.ReadCSVAsHashSet(unknownDOIFilePath);
+            await CrossRefExternalFoundDOICache.Build(dataFolderPath, doiSet, unknownDOISet, mailAddress);
+            CSVFunctions.WriteCSV(unknownDOIFilePath, unknownDOISet);
+
+
+            Console.WriteLine("CrossRefSmallCache [END]");
+
         }
 
     }

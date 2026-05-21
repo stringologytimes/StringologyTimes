@@ -17,7 +17,7 @@ namespace DataProcessor
         }
         public static string GetDOIToGZFileFolderPath(string dataFolderPath)
         {
-            return dataFolderPath + "/auto_generated/cache/crossref_cache/doi_to_gzfile";
+            return dataFolderPath + "/auto_generated/cache/crossref_cache/big_cache/doi_to_gzfile";
         }
 
         public static HashSet<string> GetDOIPrefixSet(string dataFolderPath)
@@ -36,9 +36,10 @@ namespace DataProcessor
             return doiPrefixSet;
         }
 
-        public static void Build(string doiListFolderPath, string dataFolderPath)
+        public static void Build(string dataFolderPath)
         {
             Console.WriteLine("Creating DOI Prefix to JSONL Map(CrossRef): ");
+            var doiListFolderPath = GetDOIToGZFileFolderPath(dataFolderPath);
             Dictionary<string, List<string>> doiPrefixToJSONLMap = new Dictionary<string, List<string>>();
             Dictionary<string, StreamWriter> onlineWriters = new Dictionary<string, StreamWriter>();
             HashSet<string> doiPrefixSet = new HashSet<string>();

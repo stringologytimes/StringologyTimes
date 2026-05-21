@@ -41,7 +41,7 @@ namespace DataProcessor
 
 
 
-            await DataProcessor.CrossRefPreprocessor.BuildSmallCache(dataFolderPath, doiSet, mailAddress);
+            await DataProcessor.CrossRefPreprocessor.UpdateSmallCache(dataFolderPath, doiSet, mailAddress);
             await DataProcessor.DataCitePreprocessor.BuildSmallCache(dataFolderPath, doiSet, mailAddress);
 
             var doiElementDict = DOIElement.Load(GetCachePath(dataFolderPath), false);
@@ -85,7 +85,7 @@ namespace DataProcessor
                         additionalCrossRefDOISet.Add(v.Value.ContainerDOI);
                     }
                 });
-                var crossrefFolderInfo = CrossRefCacheBuilder.SearchCrossRefFolder(dataFolderPath + "/external");
+                var crossrefFolderInfo = CrossRefPreprocessor.SearchCrossRefFolder(dataFolderPath + "/external");
                 DataProcessor.CrossRefFoundDOICache.Update(additionalCrossRefDOISet.ToList(), dataFolderPath, crossrefFolderInfo.FullName);
 
                 var crossRefDic2 = DataProcessor.CrossRefFoundDOICache.Load(dataFolderPath);

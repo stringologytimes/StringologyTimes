@@ -9,14 +9,25 @@ namespace DataProcessor
     {
         public static string GetCachePath(string dataFolderPath)
         {
-            return dataFolderPath + "/auto_generated/cache/crossref_cache/found_external_doi.jsonl";
+            return dataFolderPath + "/auto_generated/cache/crossref_cache/small_cache/found_external_doi.jsonl";
         }
         public static Dictionary<string, string> Load(string dataFolderPath)
         {
             var crossRefExternalDicPath = GetCachePath(dataFolderPath);
-            var crossRefExternalDic = DataProcessor.CrossRefCacheBuilder.Load(crossRefExternalDicPath);
+            var crossRefExternalDic = DOIFunctions.BuildMapperDOIToJSONL(crossRefExternalDicPath);
             return crossRefExternalDic;
         }
+        public static string GetUnknownDOIFilePath(string dataFolderPath)
+        {
+            var directoryInfo = new DirectoryInfo(dataFolderPath + "/auto_generated/cache/crossref_cache/small_cache");
+            if (!directoryInfo.Exists)
+            {
+                directoryInfo.Create();
+            }
+            return dataFolderPath + "/auto_generated/cache/crossref_cache/unknown_doi.tsv";
+        }
+
+
 
         public static async Task Build(string dataFolderPath, HashSet<string> doiSet, HashSet<string> unknownDOISet, string mailAddress)
         {

@@ -13,13 +13,18 @@ namespace DataProcessor
             public string Type { get; set; } = "";
             public string Title { get; set; } = "";
         }
+        public static string GetGZFileToDoiFolderPath(string dataFolderPath)
+        {
+            return dataFolderPath + "/auto_generated/cache/crossref_cache/big_cache/gzfile_to_doi";
+        }
 
 
-        public static void Build(string jsonlFolderPath, string dataFolderPath)
+        public static void Build(string dataFolderPath)
         {
             Console.WriteLine("Creating DOI List(CrossRef): ");
 
-            var main_folder = new DirectoryInfo(CrossRefCacheBuilder.GetGZFileToDoiFolderPath(dataFolderPath));
+
+            var main_folder = new DirectoryInfo(CrossRefGZFileToDOICache.GetGZFileToDoiFolderPath(dataFolderPath));
             if (!main_folder.Exists)
             {
                 main_folder.Create();
@@ -27,7 +32,7 @@ namespace DataProcessor
 
 
             // gzファイル毎の処理を並列化し、各dict.Countを配列に格納
-            var gzFiles = System.IO.Directory.GetFiles(jsonlFolderPath, "*.gz", System.IO.SearchOption.TopDirectoryOnly);
+            var gzFiles = System.IO.Directory.GetFiles(main_folder.FullName, "*.gz", System.IO.SearchOption.TopDirectoryOnly);
 
             var FinishedCounter = 0;
             var parallelCounter = 0;
@@ -55,7 +60,7 @@ namespace DataProcessor
                 }
 
 
-                var csvFilePath = CrossRefCacheBuilder.GetGZFileToDoiFolderPath(dataFolderPath) + $"/{fi.Name}.tsv";
+                var csvFilePath = CrossRefGZFileToDOICache.GetGZFileToDoiFolderPath(dataFolderPath) + $"/{fi.Name}.tsv";
                 var csvFileInfo = new FileInfo(csvFilePath);
 
                 if (!csvFileInfo.Exists)

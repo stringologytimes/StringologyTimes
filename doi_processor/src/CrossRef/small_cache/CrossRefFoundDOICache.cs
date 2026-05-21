@@ -9,12 +9,12 @@ namespace DataProcessor
     {
         public static string GetCachePath(string dataFolderPath)
         {
-            return dataFolderPath + "/auto_generated/cache/crossref_cache/found_doi.jsonl";
+            return dataFolderPath + "/auto_generated/cache/crossref_cache/small_cache/found_doi.jsonl";
         }
         public static Dictionary<string, string> Load(string dataFolderPath)
         {
             var dicPath = GetCachePath(dataFolderPath);
-            var dic = DataProcessor.CrossRefCacheBuilder.Load(dicPath);
+            var dic = DOIFunctions.BuildMapperDOIToJSONL(dicPath);
             return dic;
         }
 
