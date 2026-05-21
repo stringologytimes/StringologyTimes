@@ -1,7 +1,7 @@
 using System.Xml;
 using System.Xml.Linq;
 using System.IO;
-namespace DataProcessor
+using System.Collections.ObjectModel;namespace DataProcessor
 {
     class Processor
     {
@@ -54,7 +54,7 @@ namespace DataProcessor
 
         public static void BuildBigCache(DBLPOptions opts)
         {
-            CrossRefPreprocessor.BuildBigCache(opts.DataFolderPath);
+            CrossRefCacheBuilder.BuildBigCache(opts.DataFolderPath);
             DataCitePreprocessor.BuildBigCache(opts.DataFolderPath);
 
         }
@@ -64,7 +64,9 @@ namespace DataProcessor
         {
             OutputSystemMessageFunction("Creating DOI to Tag Mapper");
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.DataFolderPath + "/raw");
-            var primaryDOISet = new HashSet<string>(doiToTagMapper.Keys);
+            var primaryDOISet = new ReadOnlySet<string>(new HashSet<string>(doiToTagMapper.Keys));
+       
+
 
             
 
@@ -111,9 +113,10 @@ namespace DataProcessor
                     }
                 });
             });
+            var readOnlySecondaryDOISet = new ReadOnlySet<string>(secondaryDOISet);
 
             OutputSystemMessageFunction("Building cache for secondary DOI set");
-            await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, secondaryDOISet, "secondary_small_cache_hash.csv");
+            await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, readOnlySecondaryDOISet, "secondary_small_cache_hash.csv");
 
             return 0;
         }

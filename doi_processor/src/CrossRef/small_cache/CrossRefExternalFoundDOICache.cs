@@ -1,8 +1,6 @@
 using System.Text;
 using System.IO.Compression;
 using System.Collections.ObjectModel;
-
-
 namespace DataProcessor
 {
     class CrossRefExternalFoundDOICache
@@ -29,7 +27,7 @@ namespace DataProcessor
 
 
 
-        public static async Task Build(string dataFolderPath, HashSet<string> doiSet, HashSet<string> unknownDOISet, string mailAddress)
+        public static async Task Build(string dataFolderPath, ReadOnlySet<string> doiSet, HashSet<string> unknownDOISet, string mailAddress)
         {
             Console.WriteLine("Building CrossRefExternalFoundDOICache");
             Console.WriteLine("\t DOI Set: " + doiSet.Count);

@@ -3,6 +3,8 @@ using System.Xml.Linq;
 using System.IO;
 using System.Text;
 using System.Security.Cryptography;
+using System.Collections.ObjectModel;
+
 namespace DataProcessor
 {
     enum URLType
@@ -14,7 +16,7 @@ namespace DataProcessor
 
     class HashFunctions
     {
-        public static string ComputeHash(HashSet<string> doiSet)
+        public static string ComputeHash(ReadOnlySet<string> doiSet)
         {
             List<string> doiList = doiSet.ToList();
             doiList.Sort();

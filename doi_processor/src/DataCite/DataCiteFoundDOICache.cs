@@ -17,9 +17,9 @@ namespace DataProcessor
             var dic = DataProcessor.DataCiteJSONLLoader.Load(dicPath);
             return dic;
         }
-        public static void BuildUsingDOIToGZFileCache(List<string> dois, string dataFolderPath, string dataCiteFolderPath)
+        public static void Update(List<string> dois, string dataFolderPath, string dataCiteFolderPath)
         {
-            Console.WriteLine("Build Found DOI Cache(DataCite): ");
+            Console.WriteLine("Update Found DOI Cache(DataCite), DOI Count: " + dois.Count);
             var foundJSONLMapFilePath = GetCachePath(dataFolderPath);
             Dictionary<string, string> foundJSONLMap = DataCiteJSONLLoader.Load(foundJSONLMapFilePath);
             Console.WriteLine("\t Found JSONL Map: " + foundJSONLMap.Count);

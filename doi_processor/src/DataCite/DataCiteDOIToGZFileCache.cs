@@ -157,5 +157,81 @@ namespace DataProcessor
             });
             onlineWriters.Clear();
         }
+
+        public static Dictionary<string, string> BuildDictionaryFromContainerTitleToDOI(string dataFolderPath)
+        {
+            Console.WriteLine("Building Dictionary From Container Title to DOI(DataCite): ");
+            var dic = new Dictionary<string, string>();
+            var doiListFolderPath = DataCiteGZFileToDOICache.GetFolderPath(dataFolderPath);
+            Console.WriteLine("DOI List Folder Path: " + doiListFolderPath);
+            Dictionary<string, List<string>> doiPrefixToJSONLMap = new Dictionary<string, List<string>>();
+            Dictionary<string, StreamWriter> onlineWriters = new Dictionary<string, StreamWriter>();
+            HashSet<string> doiPrefixSet = new HashSet<string>();
+
+            var main_folder = new DirectoryInfo(GetFolderPath(dataFolderPath));
+            if (!main_folder.Exists)
+            {
+                main_folder.Create();
+            }
+
+            // gzファイル毎の処理を並列化し、各dict.Countを配列に格納
+            var csvFiles = System.IO.Directory.GetFiles(doiListFolderPath, "*.tsv", System.IO.SearchOption.TopDirectoryOnly);
+            //Dictionary<string, HashSet<string>> r = new Dictionary<string, HashSet<string>>();
+
+            var FinishedCounter = 0;
+            var parallelCounter = 0;
+            object lockObj = new object();
+
+            var options = new ParallelOptions
+            {
+                MaxDegreeOfParallelism = 32 // 最大並列度を4に制限
+            };
+
+            System.Threading.Tasks.Parallel.For(0, csvFiles.Length, options, i =>
+            {
+                var csvFilePath = csvFiles[i];
+                FileInfo fi = new FileInfo(csvFilePath);
+                lock (lockObj)
+                {
+                    parallelCounter++;
+
+                }
+                var doi_and_types = File.ReadAllLines(fi.FullName);
+
+
+                foreach (var line in doi_and_types)
+                {
+                    var cols = line.Split("\t");
+                    if (cols.Length == 3)
+                    {
+                        var containerTitle = cols[2];
+                        var doi = cols[0];
+                        if (containerTitle.Length > 0)
+                        {
+                            lock (lockObj)
+                            {
+                                dic[containerTitle] = doi;
+                            }
+                        }
+                    }
+                }
+
+                lock (lockObj)
+                {
+
+
+                    FinishedCounter++;
+                    parallelCounter--;
+
+                    if (FinishedCounter % 1000 == 0)
+                    {
+                        Console.WriteLine("\t Processing: " + FinishedCounter + " / " + csvFiles.Length + " / ");
+                    }
+
+                }
+
+            });
+            return dic;
+        }
     }
 }

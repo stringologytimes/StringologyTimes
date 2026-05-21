@@ -2,10 +2,9 @@ using System.Text;
 using System.IO.Compression;
 using System.Collections.ObjectModel;
 
-
 namespace DataProcessor
 {
-    class CrossRefPreprocessor
+    class CrossRefCacheBuilder
     {
         public static DirectoryInfo SearchCrossRefFolder(string externalFolderPath)
         {
@@ -44,7 +43,7 @@ namespace DataProcessor
 
         public static void BuildBigCache(string dataFolderPath)
         {
-            var crossrefFolderInfo = CrossRefPreprocessor.SearchCrossRefFolder(dataFolderPath + "/external");
+            var crossrefFolderInfo = CrossRefCacheBuilder.SearchCrossRefFolder(dataFolderPath + "/external");
 
             DataProcessor.CrossRefGZFileToDOICache.Build(dataFolderPath);
 
@@ -62,10 +61,10 @@ namespace DataProcessor
 
 
 
-        public static async Task UpdateSmallCache(string dataFolderPath, HashSet<string> doiSet, string mailAddress)
+        public static async Task UpdateSmallCache(string dataFolderPath, ReadOnlySet<string> doiSet, string mailAddress)
         {
             Console.WriteLine("Building CrossRefSmallCache [START]");
-            var crossrefFolderInfo = CrossRefPreprocessor.SearchCrossRefFolder(dataFolderPath + "/external");
+            var crossrefFolderInfo = CrossRefCacheBuilder.SearchCrossRefFolder(dataFolderPath + "/external");
 
             var otherCSVPath = CrossRefDOIToGZFileCache.GetOthersFilePath(dataFolderPath);
             var otherCSVFileInfo = new FileInfo(otherCSVPath);
@@ -77,7 +76,7 @@ namespace DataProcessor
             // Build Found DOI Cache
             CrossRefFoundDOICache.Update(doiSet.ToList(), dataFolderPath, crossrefFolderInfo.FullName);
 
-            
+
             var unknownDOIFilePath = CrossRefExternalFoundDOICache.GetUnknownDOIFilePath(dataFolderPath);
             var unknownDOISet = CSVFunctions.ReadCSVAsHashSet(unknownDOIFilePath);
             await CrossRefExternalFoundDOICache.Build(dataFolderPath, doiSet, unknownDOISet, mailAddress);
@@ -87,6 +86,65 @@ namespace DataProcessor
             Console.WriteLine("CrossRefSmallCache [END]");
 
         }
+
+        public static Dictionary<string, DOIElement> LoadSmallCache(string dataFolderPath)
+        {
+            var doiElementDict = new Dictionary<string, DOIElement>();
+            var crossRefDic = DataProcessor.CrossRefFoundDOICache.Load(dataFolderPath);
+            crossRefDic.ToList().ForEach((v) =>
+            {
+                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value);
+                doiElementDict[v.Key] = doiElement;
+            });
+            var crossRefExternalDic = DataProcessor.CrossRefExternalFoundDOICache.Load(dataFolderPath);
+            crossRefExternalDic.ToList().ForEach((v) =>
+            {
+                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value);
+                doiElementDict[v.Key] = doiElement;
+            });
+
+            var mapperFromTitleToDOI = new Dictionary<string, string>();
+            doiElementDict.ToList().ForEach((v) =>
+            {
+                if (v.Value.Title.Length > 0)
+                {
+                    mapperFromTitleToDOI[v.Value.Title] = v.Value.DOI;
+                }
+            });
+
+            doiElementDict.ToList().ForEach((v) =>
+            {
+                if (mapperFromTitleToDOI.ContainsKey(v.Value.ContainerTitle))
+                {
+                    v.Value.ContainerDOI = mapperFromTitleToDOI[v.Value.ContainerTitle];
+                }
+            });
+
+
+            return doiElementDict;
+        }
+
+        public static void UpdateSmallCacheUsingContainerTitle(string dataFolderPath)
+        {
+            var filePath = CrossRefDOIToGZFileCache.GetDOIToGZFileFolderPath(dataFolderPath);
+            var crossRefDicFromContainerTitleToDOI = DataProcessor.CrossRefDOIToGZFileCache.BuildDictionaryFromContainerTitleToDOI(filePath);
+
+            var additionalCrossRefDOISet = new HashSet<string>();
+
+            var doiElementDict = LoadSmallCache(dataFolderPath);
+            doiElementDict.ToList().ForEach((v) =>
+            {
+                if (crossRefDicFromContainerTitleToDOI.ContainsKey(v.Value.ContainerTitle))
+                {
+                    additionalCrossRefDOISet.Add(v.Value.ContainerDOI);
+                }
+            });
+            var crossrefFolderInfo = CrossRefCacheBuilder.SearchCrossRefFolder(dataFolderPath + "/external");
+            DataProcessor.CrossRefFoundDOICache.Update(additionalCrossRefDOISet.ToList(), dataFolderPath, crossrefFolderInfo.FullName);
+
+
+        }
+
 
     }
 }

@@ -18,13 +18,14 @@ namespace DataProcessor
             return dic;
         }
 
-        public static void Update(List<string> dois, string dataFolderPath, string jsonlFolderPath)
+        public static void Update(IReadOnlyList<string> dois, string dataFolderPath, string jsonlFolderPath)
         {
             Console.WriteLine("Creating Found JSONL File(CrossRef): ");
             //var dicPath = GetCachePath(dataFolderPath);
             Dictionary<string, string> foundJSONLMap = Load(dataFolderPath);
             var crsosRefDOIPrefixSet = CrossRefDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
             Console.WriteLine("\t Found JSONL Map: " + foundJSONLMap.Count);
+
 
             //List<string> foundJSONLList = new List<string>();
             Dictionary<string, HashSet<string>> doiPrefixToDoi = new Dictionary<string, HashSet<string>>();
@@ -45,11 +46,15 @@ namespace DataProcessor
             var gzFilePathSet = new HashSet<string>();
             var othersHashSet = new HashSet<string>();
 
+            Console.WriteLine("\t DOI Count: "  + " / " + dois.Count + " / " + foundJSONLMap.Count);
+
             foreach (var kvp in doiPrefixToDoi)
             {
                 doiPrefixCounter++;
 
                 var doiPrefix = kvp.Key;
+                var doiSetForDoiPrefix = kvp.Value;
+
                 var filePath = $"{CrossRefDOIToGZFileCache.GetDOIToGZFileFolderPath(dataFolderPath)}/{doiPrefix}.tsv";
                 var fileInfo = new FileInfo(filePath);
                 if (fileInfo.Exists)
@@ -60,11 +65,11 @@ namespace DataProcessor
                     foreach (var line in lines)
                     {
                         var cols = line.Split("\t");
-                        if (cols.Length == 2)
+                        if (cols.Length >= 2)
                         {
                             var lineDOI = cols[0];
                             var gzFileName = cols[1];
-                            if (kvp.Value.Contains(lineDOI))
+                            if (doiSetForDoiPrefix.Contains(lineDOI))
                             {
                                 gzFilePathSet.Add(jsonlFolderPath + "/" + gzFileName);
                             }
@@ -88,7 +93,7 @@ namespace DataProcessor
                 foreach (var line in lines)
                 {
                     var cols = line.Split("\t");
-                    if (cols.Length == 2)
+                    if (cols.Length >= 2)
                     {
                         var lineDOI = cols[0];
                         var gzFileName = cols[1];
@@ -112,7 +117,7 @@ namespace DataProcessor
             }
             JSONLCacheWriter.Close();
         }
-        private static void CreateFoundJSONLFileSub(List<string> dois, List<string> gzJSONLPaths, Dictionary<string, string> foundJSONLMap)
+        private static void CreateFoundJSONLFileSub(IReadOnlyList<string> dois, List<string> gzJSONLPaths, Dictionary<string, string> foundJSONLMap)
         {
             HashSet<string> doiSet = new HashSet<string>(dois);
             var maxCount = gzJSONLPaths.Count;
@@ -122,7 +127,7 @@ namespace DataProcessor
                 counter++;
                 var fileInfo = new FileInfo(v);
 
-                Console.Write("\r\t\t Loading JSONL [" + counter + " / " + maxCount + "]");
+                Console.Write("\r\t\t Loading JSONL [" + counter + " / " + maxCount + "]" + ", found articles: " + foundJSONLMap.Count);
 
                 foreach (var line in JsonLib.ReadLinesFromGzip(v))
                 {

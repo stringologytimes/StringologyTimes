@@ -172,7 +172,7 @@ namespace DataProcessor
             var counter = 0;
             var options = new ParallelOptions
             {
-                MaxDegreeOfParallelism = 8 // 最大並列度を4に制限
+                MaxDegreeOfParallelism = 32 // 最大並列度を4に制限
             };
             System.Threading.Tasks.Parallel.For(0, tsvFiles.Length, options, i =>
             {

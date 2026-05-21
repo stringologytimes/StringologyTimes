@@ -45,15 +45,8 @@ namespace DataProcessor
         public static void EscapeContainerTitle(Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/escape_container_title.log";
-            if (!Directory.Exists(logFolderPath))
-            {
-                Directory.CreateDirectory(logFolderPath);
-            }
-            if (File.Exists(logFilePath))
-            {
-                File.Delete(logFilePath);
-            }
-            var logFile = new StreamWriter(logFilePath);
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
 
             var escapeLambda = (DOIElement v) => {
                 var b = v.ContainerTitle.Contains("&amp;");
@@ -80,15 +73,8 @@ namespace DataProcessor
         public static void AppendTags(string dataFolderPath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/append_tags.log";
-            if (!Directory.Exists(logFolderPath))
-            {
-                Directory.CreateDirectory(logFolderPath);
-            }
-            if (File.Exists(logFilePath))
-            {
-                File.Delete(logFilePath);
-            }
-            var logFile = new StreamWriter(logFilePath);
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(dataFolderPath + "/raw");
             doiToTagMapper.Keys.ToList().ForEach((doi) =>
             {
@@ -165,15 +151,8 @@ namespace DataProcessor
         public static void ReplaceType(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/type_replacement_rules.log";
-            if (!Directory.Exists(logFolderPath))
-            {
-                Directory.CreateDirectory(logFolderPath);
-            }
-            if (File.Exists(logFilePath))
-            {
-                File.Delete(logFilePath);
-            }
-            var logFile = new StreamWriter(logFilePath);
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
 
             if (File.Exists(rulePath))
             {
@@ -217,15 +196,8 @@ namespace DataProcessor
         public static void ReplaceContainerTitleByDOIPrefix(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/doi_prefix_key_container_title_value.log";
-            if (!Directory.Exists(logFolderPath))
-            {
-                Directory.CreateDirectory(logFolderPath);
-            }
-            if (File.Exists(logFilePath))
-            {
-                File.Delete(logFilePath);
-            }
-            var logFile = new StreamWriter(logFilePath);
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
             if (File.Exists(rulePath))
             {
                 var typeReplacementRules = CSVFunctions.ReadCSV(rulePath);
@@ -281,15 +253,8 @@ namespace DataProcessor
         public static void ReplaceContainerTitle(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/container_title_replacement_rules.log";
-            if (!Directory.Exists(logFolderPath))
-            {
-                Directory.CreateDirectory(logFolderPath);
-            }
-            if (File.Exists(logFilePath))
-            {
-                File.Delete(logFilePath);
-            }
-            var logFile = new StreamWriter(logFilePath);
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
 
             if (File.Exists(rulePath))
             {

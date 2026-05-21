@@ -83,8 +83,10 @@ namespace DataProcessor
                         if (dict.ContainsKey("id"))
                         {
                             var doi = dict["id"];
-                            var type = DOIElement.GetTypeFromDataCiteJSONL(line);
-                            var title = DOIElement.GetTitleFromDataCiteJSONL(line);
+                            var attributeDict = JsonLib.CreateDictionaryFromJSONL(dict["attributes"]);
+                            var typesDict = JsonLib.CreateDictionaryFromJSONL(attributeDict["types"]);
+                            var type = DOIElement.GetTypeFromDataCiteJSONL(dict, typesDict);
+                            var title = DOIElement.GetTitleFromDataCiteJSONL(attributeDict);
                             if (title == null)
                             {
                                 throw new Exception("Title is null: " + line);

@@ -1,8 +1,6 @@
 using System.Text;
 using System.IO.Compression;
 using System.Collections.ObjectModel;
-
-
 namespace DataProcessor
 {
     class DataCiteExternalFoundDOICache
@@ -18,7 +16,7 @@ namespace DataProcessor
             return dataCiteExternalDic;
         }
 
-        public static async Task Build(string dataFolderPath, HashSet<string> doiSet, HashSet<string> unknownDOISet, string mailAddress)
+        public static async Task Build(string dataFolderPath, ReadOnlySet<string> doiSet, HashSet<string> unknownDOISet, string mailAddress)
         {
             var dataCiteExternalDic = DataProcessor.DataCiteExternalFoundDOICache.Load(dataFolderPath);
             var dataCiteDOIPrefixSet = DataProcessor.DataCiteDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);

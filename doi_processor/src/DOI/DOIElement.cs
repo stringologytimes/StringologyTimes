@@ -106,7 +106,7 @@ namespace DataProcessor
         */
 
 
-        public static DOIElement ParseFromCrossRefJSONL(string jsonlString, string logFolderPath)
+        public static DOIElement ParseFromCrossRefJSONL(string jsonlString)
         {
             var dict = JsonLib.CreateDictionaryFromJSONL(jsonlString);
 
@@ -142,7 +142,7 @@ namespace DataProcessor
             {
                 element.Title = $"Dummy Title: {element.DOI}";
             }
-            element.Authors = AuthorInfo.ParseFromCrossRefJSONL(dict, element.Type, logFolderPath);
+            element.Authors = AuthorInfo.ParseFromCrossRefJSONL(dict, element.Type);
 
             var containerTitleFlag = false;
 
@@ -287,18 +287,15 @@ namespace DataProcessor
 
             return tags;
         }
-        public static string GetTypeFromDataCiteJSONL(string jsonlString)
+        public static string GetTypeFromDataCiteJSONL(Dictionary<string, string> dict, Dictionary<string, string>? typesDict)
         {
-            var dict = JsonLib.CreateDictionaryFromJSONL(jsonlString);
-            var attributeDict = JsonLib.CreateDictionaryFromJSONL(dict["attributes"]);
-            var typesDict = JsonLib.CreateDictionaryFromJSONL(attributeDict["types"]);
-
             var type = "";
             if (dict.ContainsKey("type"))
             {
                 type = dict["type"];
             }
-            if (typesDict.ContainsKey("resourceTypeGeneral"))
+
+            if (typesDict != null && typesDict.ContainsKey("resourceTypeGeneral"))
             {
                 var resourceTypeGeneral = typesDict["resourceTypeGeneral"];
                 if (resourceTypeGeneral != null)
@@ -313,11 +310,9 @@ namespace DataProcessor
 
             return type;
         }
-        public static string GetTitleFromDataCiteJSONL(string jsonlString)
+        public static string GetTitleFromDataCiteJSONL(Dictionary<string, string> attributeDict)
         {
             var title = "";
-            var dict = JsonLib.CreateDictionaryFromJSONL(jsonlString);
-            var attributeDict = JsonLib.CreateDictionaryFromJSONL(dict["attributes"]);
             if (attributeDict.ContainsKey("titles"))
             {
                 var titleList = JsonLib.CreateArrayFromJSONL(attributeDict["titles"]);
@@ -341,7 +336,7 @@ namespace DataProcessor
         {
             var dict = JsonLib.CreateDictionaryFromJSONL(jsonlString);
             var attributeDict = JsonLib.CreateDictionaryFromJSONL(dict["attributes"]);
-            //var typesDict = JsonLib.CreateDictionaryFromJSONL(attributeDict["types"]);
+            var typesDict = JsonLib.CreateDictionaryFromJSONL(attributeDict["types"]);
             var dateArray = JsonLib.CreateArrayFromJSONL(attributeDict["dates"]);
 
             var element = new DOIElement();
@@ -349,22 +344,29 @@ namespace DataProcessor
             {
                 element.DOI = dict["id"];
             }
-            element.Type = GetTypeFromDataCiteJSONL(jsonlString);
-            element.Title = GetTitleFromDataCiteJSONL(jsonlString);
+            element.Type = GetTypeFromDataCiteJSONL(dict, typesDict);
+            element.Title = GetTitleFromDataCiteJSONL(attributeDict);
 
 
-            /*
+            
             if (attributeDict.ContainsKey("relatedItems")) {
                 var relatedItemsArray = JsonLib.CreateArrayFromJSONL(attributeDict["relatedItems"]);
                 foreach (var relatedItem in relatedItemsArray)
                 {
                     var relatedItemDict = JsonLib.CreateDictionaryFromJSONL(relatedItem);
-                    if (relatedItemDict.ContainsKey("relatedItem")) {
-                        var relatedItemValue = relatedItemDict["relatedItem"];
+                    if (relatedItemDict.ContainsKey("relationType") && relatedItemDict.ContainsKey("relatedItemIdentifier")) {
+                        var relationType = relatedItemDict["relationType"];
+                        var relatedItemIdentifier = relatedItemDict["relatedItemIdentifier"];
+                        var relatedItemIdentifierDict = JsonLib.CreateDictionaryFromJSONL(relatedItemIdentifier);
+                        if (relationType == "IsPublishedIn" && relatedItemIdentifierDict.ContainsKey("relatedItemIdentifierType") && relatedItemIdentifierDict["relatedItemIdentifierType"] == "DOI")
+                        {
+                            var relatedItemIdentifier2 = relatedItemIdentifierDict["relatedItemIdentifier"];
+                            element.ContainerDOI = relatedItemIdentifier2.ToLower();
+                        }
                     }
                 }
             }
-            */
+            
 
             element.Authors = AuthorInfo.ParseFromDataCiteJSONL(dict);
 

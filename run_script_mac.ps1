@@ -175,7 +175,7 @@ $doiProcessorArgsB = @("--data", "./data", "--skip_build", "--mode", "build_prim
 Write-Host "Execute: $doiProcessor $doiProcessorArgsB" -ForegroundColor Yellow
 $dblpProcB = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsB -Wait    
 
-return;
+
 
 $doiProcessorArgsC = @("--data", "./data", "--skip_build", "--mode", "build_small_cache_for_secondary_doi_elements")
 Write-Host "Execute: $doiProcessor $doiProcessorArgsC" -ForegroundColor Yellow
