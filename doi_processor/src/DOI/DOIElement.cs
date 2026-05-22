@@ -15,9 +15,10 @@ namespace DataProcessor
         public string Title { get; set; } = "";
         public List<AuthorInfo> Authors { get; set; } = new List<AuthorInfo>();
 
+        public string SeriesTitle { get; set; } = "";
+
         public string ContainerDOI { get; set; } = "";
         public string ContainerTitle { get; set; } = "";
-        public string DetailedContainerTitle { get; set; } = "";
 
         public string Type { get; set; } = "";
         public string Volume { get; set; } = "";
@@ -152,7 +153,7 @@ namespace DataProcessor
                 if (containerTitleList != null && containerTitleList.Count > 0)
                 {
                     element.ContainerTitle = string.Join("---", containerTitleList.ToArray());
-                    element.DetailedContainerTitle = element.ContainerTitle;
+                    element.SeriesTitle = element.ContainerTitle;
                     containerTitleFlag = true;
                 }
             }
@@ -162,7 +163,7 @@ namespace DataProcessor
                 if (containerTitleList != null && containerTitleList.Count > 0)
                 {
                     element.ContainerTitle = string.Join("---", containerTitleList.ToArray());
-                    element.DetailedContainerTitle = element.ContainerTitle;
+                    element.SeriesTitle = element.ContainerTitle;
                     containerTitleFlag = true;
                 }
             }
@@ -509,9 +510,9 @@ namespace DataProcessor
             dataList.Add(JsonSerializer.Serialize(this.Title));
             dataList.Add(JsonSerializer.Serialize(this.Year));
             dataList.Add(JsonSerializer.Serialize(this.Month));
+            dataList.Add(JsonSerializer.Serialize(this.SeriesTitle));
             dataList.Add(JsonSerializer.Serialize(this.ContainerDOI));
             dataList.Add(JsonSerializer.Serialize(this.ContainerTitle));
-            dataList.Add(JsonSerializer.Serialize(this.DetailedContainerTitle));
             dataList.Add(JsonSerializer.Serialize(this.Volume));
             dataList.Add(JsonSerializer.Serialize(this.Source));
 

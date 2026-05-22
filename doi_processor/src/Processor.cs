@@ -141,6 +141,10 @@ using System.Collections.ObjectModel;namespace DataProcessor
                     {
                         secondaryDOISet.Add(referenceDOI);
                     }
+                    if (v.ContainerDOI.Length > 0 && !doiToTagMapper.ContainsKey(v.ContainerDOI))
+                    {
+                        secondaryDOISet.Add(v.ContainerDOI);
+                    }
                 });
             });
 
@@ -207,6 +211,7 @@ using System.Collections.ObjectModel;namespace DataProcessor
 
         public static int ModifyDOIElementDictionary(DBLPOptions opts)
         {
+            var logFolderPath = opts.DataFolderPath + "/auto_generated/log";
 
             OutputSystemMessageFunction("Running doi_processor");
 
@@ -214,7 +219,11 @@ using System.Collections.ObjectModel;namespace DataProcessor
             var secondaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, SecondaryDOIElementFileName), true);
 
             OutputSystemMessageFunction("Modifying container title using DBLP summary");
-            ReplacementRules.ReplaceContainerTitleUsingDBLPSummary(GetFilePathInResultFolder(opts.DataFolderPath, "dblp_proceedings.jsonl"), primaryDOIElementDict, secondaryDOIElementDict);
+            ReplacementRules.ReplaceContainerTitleUsingDBLPSummary(GetFilePathInResultFolder(opts.DataFolderPath, "dblp_proceedings.jsonl"), primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+
+            OutputSystemMessageFunction("Modifying series title using DBLP summary");
+            var seriesTitleReplacementRulesPath = opts.DataFolderPath + "/raw/doi_processor/series_title_replacement_rules.tsv";
+            ReplacementRules.ReplaceSeriesTitle(seriesTitleReplacementRulesPath, primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
 
             //OutputSystemMessageFunction("Normalizing container title");
@@ -223,17 +232,16 @@ using System.Collections.ObjectModel;namespace DataProcessor
 
 
             OutputSystemMessageFunction("Applying type replacement rules");
-            var logFolderPath = opts.DataFolderPath + "/raw/doi_processor/logs";
             ReplacementRules.ReplaceType(opts.DataFolderPath + "/raw/doi_processor/type_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
-            OutputSystemMessageFunction("Applying container-title replacement rules");
-            ReplacementRules.ReplaceContainerTitle(opts.DataFolderPath + "/raw/doi_processor/container_title_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+            //OutputSystemMessageFunction("Applying container-title replacement rules");
+            //ReplacementRules.ReplaceContainerTitle(opts.DataFolderPath + "/raw/doi_processor/container_title_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Escaping container title");
-            ReplacementRules.EscapeContainerTitle(primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+            ReplacementRules.EscapeProcessing(primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
-            OutputSystemMessageFunction("Modifying container title by DOI prefix");
-            ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_container_title_value.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+            //OutputSystemMessageFunction("Modifying container title by DOI prefix");
+            //ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_container_title_value.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Modifying type by DOI prefix");
             ReplacementRules.ReplaceTypeByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_type_value.tsv", primaryDOIElementDict, secondaryDOIElementDict);

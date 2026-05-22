@@ -43,7 +43,8 @@ namespace DataProcessor
             }
                 
             }
-            Console.WriteLine("Saved: " + filePath);
+            //Console.WriteLine("Saved: " + filePath);
+            Console.WriteLine("Saved: " + filePath + " / " + lines.Count);
 
         }
 

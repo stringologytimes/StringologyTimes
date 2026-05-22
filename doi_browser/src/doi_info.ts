@@ -16,6 +16,8 @@ export class LightWeightDOIInfo {
     public authorIDs: number[] = [];
     public isPrimary: boolean = false;
     public type: string = "Unknown";
+    public seriesTitle: string = "";
+    public container_DOI: string = "";
     public container_title: string = "";
     public volume: string = "";
     public tags: string[] = [];    
@@ -28,6 +30,8 @@ export class DOIInfo {
     public year: number = 0;
     public month: number = 0;
     public authors: string[] = [];
+    public seriesTitle: string = "";
+    public container_DOI: string = "";
     public container_title: string = "";
     public volume: string = "";
     public tags: string[] = [];
@@ -83,9 +87,10 @@ export class DOIInfoCollection {
         r.year = this.lightweightDOIInfos[index].year;
         r.month = this.lightweightDOIInfos[index].month;
         r.authors = this.lightweightDOIInfos[index].authorIDs.map(id => this.authorList[id]);
+        r.seriesTitle = this.lightweightDOIInfos[index].seriesTitle;
         r.container_title = this.lightweightDOIInfos[index].container_title;
         r.volume = this.lightweightDOIInfos[index].volume;
-
+        r.container_DOI = this.lightweightDOIInfos[index].container_DOI;
         r.doiReferences = this.lightweightDOIInfos[index].doiReferenceIDs.map(id => this.getDOIByID(id));
         r.type = this.lightweightDOIInfos[index].type;
         r.tags = this.lightweightDOIInfos[index].tags.map(tag => tag);
@@ -138,6 +143,18 @@ export class DOIInfoCollection {
         console.log("size of volume_list: " + volume_list.length);
         volume_list.forEach((volume, index) => {
             r.lightweightDOIInfos[index].volume = volume;
+        });
+
+        const series_title_list = await load_gzip_text_lines(folderURL + "/series_title.csv.gz");
+        console.log("size of series_title_list: " + series_title_list.length);
+        series_title_list.forEach((series_title, index) => {
+            r.lightweightDOIInfos[index].seriesTitle = series_title;
+        });
+
+        const container_DOI_list = await load_gzip_text_lines(folderURL + "/container_DOI.csv.gz");
+        console.log("size of container_DOI_list: " + container_DOI_list.length);
+        container_DOI_list.forEach((container_DOI, index) => {
+            r.lightweightDOIInfos[index].container_DOI = container_DOI;
         });
 
         const container_title_list = await load_gzip_text_lines(folderURL + "/container_title.csv.gz");

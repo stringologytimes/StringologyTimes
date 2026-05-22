@@ -42,19 +42,32 @@ namespace DataProcessor
         }
         */
 
-        public static void EscapeContainerTitle(Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
+        public static string Escape(string s)
+        {
+            return s.Replace("&amp;", "&")
+                 .Replace("\r\n", " ")
+                 .Replace("\n", " ")
+                 .Replace("\r", " ");
+        }
+
+        public static void EscapeProcessing(Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/escape_container_title.log";
             var logFile = new StreamWriter(logFilePath, true);
             logFile.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
 
-            var escapeLambda = (DOIElement v) => {
-                var b = v.ContainerTitle.Contains("&amp;");
+            var escapeLambda = (DOIElement v) =>
+            {
+                v.Title = Escape(v.Title);
+                v.ContainerTitle = Escape(v.ContainerTitle);
+                v.SeriesTitle = Escape(v.SeriesTitle);
+                /*
                 if (b)
                 {
                     logFile.WriteLine($"Escaping container title: {v.ContainerTitle}");
                     v.ContainerTitle = v.ContainerTitle.Replace("&amp;", "&");
                 }
+                */
             };
 
 
@@ -103,51 +116,96 @@ namespace DataProcessor
         }
 
 
-        public static void ReplaceContainerTitleUsingDBLPSummary(string dblpSummaryPath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
+        public static void ReplaceContainerTitleUsingDBLPSummary(string dblpSummaryPath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
+            var logFilePath = logFolderPath + "/replace_container_titles_using_dblp_summary.log";
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
+
+
             if (File.Exists(dblpSummaryPath))
             {
                 var dblpProceedingsSeriesDictionary = DBLPProceedingsSeriesDictionary.Load(dblpSummaryPath);
-                dblpProceedingsSeriesDictionary.BuildDoiToBookTitleMapper();
+                dblpProceedingsSeriesDictionary.BuildDoiToSeriesTitleMapper();
 
-                primaryDOIElementDict.Keys.ToList().ForEach((key) =>
+                var mergedDOIElementList = new List<DOIElement>();
+                primaryDOIElementDict.Values.ToList().ForEach((v) =>
                 {
-                    var doiElement = primaryDOIElementDict[key];
+                    mergedDOIElementList.Add(v);
+                });
+                secondaryDOIElementDict.Values.ToList().ForEach((v) =>
+                {
+                    mergedDOIElementList.Add(v);
+                });
+
+                mergedDOIElementList.ForEach((doiElement) =>
+                {
                     var doi = doiElement.DOI;
-                    var bookTitle = dblpProceedingsSeriesDictionary.SearchBookTitleByDOI(doi);
-                    /*
-
-                    if (doi.StartsWith("10.4230/lipics.approx/random.2020.35"))
+                    if (doiElement.ContainerDOI.Length > 0)
                     {
-                        Console.WriteLine($"No Hit: {doi}/" + bookTitle);
+                        var seriesTitle = dblpProceedingsSeriesDictionary.SearchSeriesTitleByDOI(doiElement.ContainerDOI);
+                        if (seriesTitle != null)
+                        {
+                            logFile.WriteLine($"#1 {doi}, {doiElement.SeriesTitle} -> {seriesTitle}");
+                            doiElement.SeriesTitle = seriesTitle;
+
+                        }
                     }
-                    */
-
-                    if (bookTitle != null)
+                    else
                     {
-                        //Console.WriteLine($"Replaced container title: {doiElement.ContainerTitle} -> {bookTitle}");
-                        doiElement.ContainerTitle = bookTitle;
+                        var seriesTitle = dblpProceedingsSeriesDictionary.SearchSeriesTitleByDOI(doi);
+                        if (seriesTitle != null)
+                        {
+                            logFile.WriteLine($"#2 {doi}, {doiElement.SeriesTitle} -> {seriesTitle}");
+                            doiElement.SeriesTitle = seriesTitle;
+
+                        }
                     }
 
                 });
 
-                secondaryDOIElementDict.Keys.ToList().ForEach((key) =>
-                {
-                    var doiElement = secondaryDOIElementDict[key];
-                    var doi = doiElement.DOI;
-                    var bookTitle = dblpProceedingsSeriesDictionary.SearchBookTitleByDOI(doi);
-                    if (bookTitle != null)
-                    {
-                        //Console.WriteLine($"Replaced container title: {doiElement.ContainerTitle} -> {bookTitle}");
-                        doiElement.ContainerTitle = bookTitle;
-                    }
-                });
             }
             else
             {
                 Console.WriteLine("NoDBLP summary file found: " + dblpSummaryPath);
             }
+            logFile.Close();
+            Console.WriteLine("Log file: " + logFilePath);
         }
+
+        public static void ReplaceSeriesTitle(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
+        {
+            var logFilePath = logFolderPath + "/series_title_replacement_rules.log";
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
+
+            if (File.Exists(rulePath))
+            {
+                var seriesTitleReplacementRules = CSVFunctions.ReadCSV(rulePath);
+                var seriesTitleReplacementRulesDict = new Dictionary<string, string>();
+                seriesTitleReplacementRules.ForEach((v) =>
+                {
+                    var cols = v.Split('\t');
+                    var key = cols[0].Trim();
+                    var value = cols[1].Trim();
+                    seriesTitleReplacementRulesDict[key] = value;
+                    logFile.WriteLine($"Added series title replacement rule: {key} -> {value}");
+                });
+
+
+                replace(seriesTitleReplacementRulesDict, "SeriesTitle", primaryDOIElementDict, logFile);
+                replace(seriesTitleReplacementRulesDict, "SeriesTitle", secondaryDOIElementDict, logFile);
+
+            }
+            else
+            {
+                logFile.WriteLine("No series title replacement rules file found: " + rulePath);
+            }
+
+            logFile.Close();
+            Console.WriteLine("Log file: " + logFilePath);
+        }
+
         public static void ReplaceType(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/type_replacement_rules.log";
@@ -340,8 +398,22 @@ namespace DataProcessor
 
                 foreach (var keyWithMark in keyList)
                 {
-                    var value = replacedPropertyName == "ContainerTitle" ? v.ContainerTitle : v.Type;
+                    var value = "";
+                    if (replacedPropertyName == "ContainerTitle")
+                    {
+                        value = v.ContainerTitle;
+                    }
+                    else if (replacedPropertyName == "Type")
+                    {
+                        value = v.Type;
+                    }
+                    else if (replacedPropertyName == "SeriesTitle")
+                    {
+                        value = v.DOI;
+                    }
+
                     var isKeyMatched = MatchCheck(keyWithMark, value);
+
 
                     if (isKeyMatched)
                     {
@@ -365,6 +437,15 @@ namespace DataProcessor
                                 logFile.WriteLine($"Replaced type: {v.Type} -> {rules[keyWithMark]}");
                             }
                             v.Type = rules[keyWithMark];
+                        }
+                        else if (replacedPropertyName == "SeriesTitle")
+                        {
+                            if (!replacedNameSet.Contains(v.SeriesTitle))
+                            {
+                                replacedNameSet.Add(v.SeriesTitle);
+                                logFile.WriteLine($"Replaced series title: {v.DOI}, {v.SeriesTitle} -> {rules[keyWithMark]}");
+                            }
+                            v.SeriesTitle = rules[keyWithMark];
                         }
                     }
                 }

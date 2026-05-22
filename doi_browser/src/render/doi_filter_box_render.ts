@@ -215,10 +215,10 @@ function renderSortBySelectBox(selectedValue: SortByType) {
   }
 }
 
-function renderKeywordBox(keywords: string | null) {
+function renderKeywordBox(keywords: string[]) {
   const keywordsInput = document.getElementById("keywords-input");
   if (keywordsInput && keywordsInput instanceof HTMLInputElement) {
-    keywordsInput.value = keywords == null ? "" : keywords;
+    keywordsInput.value = keywords.length > 0 ? keywords[0] : "";
   }
 }
 

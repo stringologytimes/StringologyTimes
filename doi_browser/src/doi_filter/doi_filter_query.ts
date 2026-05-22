@@ -17,7 +17,7 @@ export class DOIFilterQuery {
     public doiReferences: string[] = [];    
     public excludeStatus: DOIStatus[] = [];
     public sortBy: SortByType = "unordered";
-    public keywords: string | null = null;
+    public keywords: string[] = [];
 
     public static buildFromURLParameters(): DOIFilterQuery {
         let r = new DOIFilterQuery();
@@ -69,6 +69,7 @@ export class DOIFilterQuery {
     public is_empty(): boolean {
         return this.minimum_year == null && this.maximum_year == null && this.type == null && 
         this.authors.length == 0 && this.tags.length == 0 && this.volume == null && this.container_title == null 
+        && this.keywords.length == 0
         && this.excludeStatus.length == 0 && this.doiReferences.length == 0;
     }
     public copy(): DOIFilterQuery {
@@ -83,7 +84,7 @@ export class DOIFilterQuery {
         r.doiReferences = this.doiReferences.map(doiReference => doiReference);
         r.excludeStatus = this.excludeStatus.map(excludeStatus => excludeStatus);
         r.sortBy = this.sortBy;
-        r.keywords = this.keywords;
+        r.keywords = this.keywords.map(keyword => keyword);
         return r;
     }
 
@@ -122,15 +123,29 @@ export class DOIFilterQuery {
         }
 
         if(this.keywords != null){
-            let b = false;
-            if(doiInfo.title.indexOf(this.keywords) != -1){
-                b = true;
-            }
-            if(doiInfo.doi.indexOf(this.keywords) != -1){
-                b = true;
+            const bArray = [];
+
+            for(let i = 0; i < this.keywords.length; i++){
+                var keyword = this.keywords[i];
+                let b = false;
+
+                if(keyword.indexOf("@DOI:") == 0){
+                    const doiKeyword = keyword.substring(5);
+                    if(doiInfo.doi == doiKeyword){
+                        b = true;
+                    }
+                }else{
+                    if(doiInfo.title.indexOf(keyword) != -1){
+                        b = true;
+                    }
+                    if(doiInfo.doi.indexOf(keyword) != -1){
+                        b = true;
+                    }
+                }
+                bArray.push(b);
             }
 
-            if(!b){
+            if(!bArray.every(b => b)){
                 return false;
             }
         }
@@ -195,8 +210,8 @@ export class DOIFilterQuery {
             }
         }
 
-        if(this.keywords != null){
-            if(item.keywords != null && this.keywords != item.keywords){
+        if(this.keywords.length > 0){
+            if(item.keywords.length > 0){
                 return false;
             }
         }

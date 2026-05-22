@@ -126,9 +126,19 @@ function changeParameter(parameterName: string, parameterValue: string) {
   url.searchParams.set("view_mode", "article_list");
   history.pushState({}, "", url);
   EventFunctions.process(browserInfo);
-
-
 }
+
+function initializeParameter(parameterList: [string, string][]) {
+  const url = new URL(window.location.href);
+  url.search = "";
+  parameterList.forEach(([parameterName, parameterValue]) => {
+    url.searchParams.set(parameterName, parameterValue);
+  });
+
+  history.pushState({}, "", url);
+  EventFunctions.process(browserInfo);
+}
+
 
 
 // グローバルスコープに公開（onchange属性からアクセスできるようにする）
@@ -137,6 +147,8 @@ function changeParameter(parameterName: string, parameterValue: string) {
 (window as any).viewSettingInputChange = viewSettingInputChange;
 (window as any).containerTitleLiElementClick = containerTitleLiElementClick;
 (window as any).changeParameter = changeParameter;
+(window as any).initializeParameter = initializeParameter;
+
 async function domFinished() {
   showLoading();
 

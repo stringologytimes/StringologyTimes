@@ -75,7 +75,7 @@ namespace DataProcessor
             else if (opts.Mode == "dblp_proceedings_processor")
             {
                 var proceedingsSeriesDictionary = DBLPProceedingsSeriesDictionary.Load(opts.DataFolderPath + "/auto_generated/result/" + "dblp_proceedings.jsonl");
-                proceedingsSeriesDictionary.BuildDoiToBookTitleMapper();
+                proceedingsSeriesDictionary.BuildDoiToSeriesTitleMapper();
 
                 return 0;
 

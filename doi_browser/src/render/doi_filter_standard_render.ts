@@ -20,12 +20,24 @@ export class DOIFilterStandardRender {
         //const dataStr = `${doiInfo.year}-${doiInfo.month <= 0 ? "?" : doiInfo.month}`;
         const containerTitle = doiInfo.container_title;
         const volumStr = doiInfo.volume;
+        const seriesTitle = doiInfo.seriesTitle;
 
-        if (volumStr.length > 0) {
-            return `${containerTitle}(Volume: ${volumStr})`;
-        } else {
-            return `${containerTitle}`;
+        if(doiInfo.doi == "10.1109/dcc.1996"){
+            console.log(doiInfo);
         }
+
+        if(doiInfo.type == "Proceedings" || doiInfo.type == "Book" || doiInfo.type == "ConferenceProceeding"){
+            return `${seriesTitle}`;
+        }else{
+            if(seriesTitle.length > 0){
+                return `${seriesTitle}(${containerTitle})`;
+            }else{
+                return `${containerTitle}`;
+            }
+    
+        }
+
+
     }
     public static render(doiFilterResult: DOIFilterResult, doiIndex: number, doiCount: number, doiInfoCollection: DOIInfoCollection) {
         const doiIDs = new Array<number>();
@@ -188,6 +200,38 @@ export class DOIFilterStandardRender {
                     doiLi.textContent = doiInfo.doi;
                 } else {
                     throw new Error("doiLi is not found");
+                }
+
+                const containerDOISpan = article.querySelector('.container_DOI');
+                if (containerDOISpan) {
+                    const labelSpan = document.createElement('span');
+                    labelSpan.textContent = "Container DOI: ";
+                    containerDOISpan.appendChild(labelSpan);
+
+                    if(doiInfo.container_DOI.length > 0){
+                        const link = document.createElement('a');
+                        link.href = `#`;
+                        link.textContent = doiInfo.container_DOI;
+                        link.addEventListener("click", (event) => {
+                            event.preventDefault();
+                            (window as any).initializeParameter([["keyword", `@DOI:${doiInfo.container_DOI}`]]);
+                        });
+                        containerDOISpan.appendChild(link);    
+                    }else{
+                        const labelSpan = document.createElement('span');
+                        labelSpan.textContent = "null";
+                        containerDOISpan.appendChild(labelSpan);
+    
+                    }
+                } else {
+                    throw new Error("containerDOISpan is not found");
+                }
+
+                const seriesTitleSpan = article.querySelector('.series_title');
+                if (seriesTitleSpan) {
+                    seriesTitleSpan.textContent = `Series Title: ${doiInfo.seriesTitle}`;
+                } else {
+                    throw new Error("seriesTitleSpan is not found");
                 }
 
                 const dateLi = article.querySelector('.date');

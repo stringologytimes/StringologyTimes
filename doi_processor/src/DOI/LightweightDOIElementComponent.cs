@@ -13,8 +13,9 @@ namespace DataProcessor
     {
         public List<string> DOIList { get; set; } = new List<string>();
         public List<string> WordList { get; set; } = new List<string>();
+        public List<string> SeriesTitleList { get; set; } = new List<string>();
+        public List<string> ContainerDOIList { get; set; } = new List<string>();
         public List<string> ContainerTitleList { get; set; } = new List<string>();
-        public List<string> DetailedContainerTitleList { get; set; } = new List<string>();
         public List<string> FullNameList { get; set; } = new List<string>();
         public List<string> YearList { get; set; } = new List<string>();
         public List<string> MonthList { get; set; } = new List<string>();
@@ -70,24 +71,61 @@ namespace DataProcessor
             List<string> unknownDOIList = unknownDOISet.ToList();
             unknownDOIList.Sort((a, b) => a.CompareTo(b));
 
+            List<DOIElement> mergedDOIElementList = primaryDOIElementList.Concat(secondaryDOIElementList).ToList();
+            unknownDOIList.ForEach((v) =>
             {
-                primaryDOIElementList.ForEach((v) =>
+                mergedDOIElementList.Add(new DOIElement() { DOI = v });
+            });
+
+
+            var primaryDOIElementCount = primaryDOIElementList.Count;
+            var secondaryDOIElementCount = secondaryDOIElementList.Count;
+
+            Dictionary<string, int> doiReferenceMapper = new Dictionary<string, int>();
+
+
+            for (var i = 0; i < mergedDOIElementList.Count; i++)
+            {
+                if (i < primaryDOIElementCount)
                 {
-                    r.DOIList.Add(v.DOI);
-                });
-                secondaryDOIElementList.ForEach((v) =>
+                    r.DOIFlagList.Add("1");
+                }
+                else if (i < primaryDOIElementCount + secondaryDOIElementCount)
                 {
-                    r.DOIList.Add(v.DOI);
-                });
-                unknownDOIList.ForEach((v) =>
+                    r.DOIFlagList.Add("0");
+                }
+                else
                 {
-                    r.DOIList.Add(v);
-                });
+                    r.DOIFlagList.Add("-1");
+                }
+                r.DOIList.Add(mergedDOIElementList[i].DOI);
+                doiReferenceMapper[mergedDOIElementList[i].DOI] = i;
+
             }
 
 
-            List<DOIElement> mergedDOIElementList = primaryDOIElementList.Concat(secondaryDOIElementList).ToList();
-            Dictionary<string, int> doiReferenceMapper = new Dictionary<string, int>();
+
+
+            /*
+
+                        {
+                            primaryDOIElementList.ForEach((v) =>
+                            {
+                                r.DOIList.Add(v.DOI);
+                            });
+                            secondaryDOIElementList.ForEach((v) =>
+                            {
+                                r.DOIList.Add(v.DOI);
+                            });
+                            unknownDOIList.ForEach((v) =>
+                            {
+                                r.DOIList.Add(v);
+                            });
+                        }
+                        */
+
+
+/*
             {
                 var counter = 0;
 
@@ -112,6 +150,7 @@ namespace DataProcessor
                 Console.WriteLine("Secondary DOI Count: " + secondaryDOIElementList.Count);
                 Console.WriteLine("Unknown DOI Count: " + unknownDOIList.Count);
             }
+            */
             HashSet<string> fullNameHashSet = new HashSet<string>();
 
             mergedDOIElementList.ForEach((v) =>
@@ -137,12 +176,16 @@ namespace DataProcessor
                 fullNameToIndexMapper[r.FullNameList[i]] = i;
             }
 
+            var tmp_counter = 0;
+
             mergedDOIElementList.ForEach((v) =>
             {
                 var compStr = String.Join(",", v.Authors.Select((v) => fullNameToIndexMapper[v.TryGetFullName()].ToString()));
                 r.CompressedFullNameList.Add(compStr);
+                r.SeriesTitleList.Add(v.SeriesTitle);
+                //r.SeriesTitleList.Add((tmp_counter++).ToString());
+                r.ContainerDOIList.Add(v.ContainerDOI);
                 r.ContainerTitleList.Add(v.ContainerTitle);
-                r.DetailedContainerTitleList.Add(v.DetailedContainerTitle);
             });
 
 
@@ -225,6 +268,27 @@ namespace DataProcessor
                 r.TagListOfEachElement.Add(compStr);
             });
 
+            if (r.SeriesTitleList.Count != r.DOIList.Count)
+            {
+                Console.WriteLine("SeriesTitleList.Count: " + r.SeriesTitleList.Count);
+                Console.WriteLine("DOIList.Count: " + r.DOIList.Count);
+                throw new Exception("SeriesTitleList.Count != DOIList.Count");
+            }
+
+            if (r.ContainerDOIList.Count != r.DOIList.Count)
+            {
+                Console.WriteLine("ContainerDOIList.Count: " + r.ContainerDOIList.Count);
+                Console.WriteLine("DOIList.Count: " + r.DOIList.Count);
+                throw new Exception("ContainerDOIList.Count != DOIList.Count");
+            }
+
+            if (r.ContainerTitleList.Count != r.DOIList.Count)
+            {
+                Console.WriteLine("ContainerTitleList.Count: " + r.ContainerTitleList.Count);
+                Console.WriteLine("DOIList.Count: " + r.DOIList.Count);
+                throw new Exception("ContainerTitleList.Count != DOIList.Count");
+            }
+
             return r;
         }
         public void OutputByGZip(string outputFolder)
@@ -234,6 +298,7 @@ namespace DataProcessor
             {
                 directoryInfo.Create();
             }
+
 
             CSVFunctions.WriteCSVByGZip(outputFolder + "/doi.csv.gz", DOIList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/word.csv.gz", WordList);
@@ -245,8 +310,9 @@ namespace DataProcessor
             CSVFunctions.WriteCSVByGZip(outputFolder + "/type.csv.gz", TypeList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/source.csv.gz", SourceList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_full_name.csv.gz", CompressedFullNameList);
+            CSVFunctions.WriteCSVByGZip(outputFolder + "/container_doi.csv.gz", ContainerDOIList);
+            CSVFunctions.WriteCSVByGZip(outputFolder + "/series_title.csv.gz", SeriesTitleList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_title.csv.gz", CompressedTitleList);
-            CSVFunctions.WriteCSVByGZip(outputFolder + "/detailed_container_title.csv.gz", DetailedContainerTitleList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_doi_reference.csv.gz", CompressedDOIReferenceList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/doi_flag.csv.gz", DOIFlagList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/tag.csv.gz", TagList);

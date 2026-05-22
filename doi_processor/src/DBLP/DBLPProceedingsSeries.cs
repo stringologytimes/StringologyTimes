@@ -32,7 +32,16 @@ namespace DataProcessor
             dataList.Add(JsonSerializer.Serialize(this.Month?.ToString() ?? ""));
             dataList.Add(JsonSerializer.Serialize(this.Volume));
 
-            dataList.Add(JsonSerializer.Serialize(this.DOIList));
+            if (this.DOI.Length > 0)
+            {
+                dataList.Add(JsonSerializer.Serialize(new List<string>()));
+
+            }
+            else
+            {
+                dataList.Add(JsonSerializer.Serialize(this.DOIList));
+            }
+
 
             string dataString = "[" + string.Join(",", dataList) + "]";
             return dataString;
@@ -252,7 +261,7 @@ namespace DataProcessor
 
     class DBLPProceedingsSeries
     {
-        public string BookTitle { get; set; } = "";
+        public string SeriesTitle { get; set; } = "";
         public Dictionary<string, DBLPProceedings> Series { get; set; } = new Dictionary<string, DBLPProceedings>();
 
         public bool ContainsKey(string key)
@@ -301,7 +310,8 @@ namespace DataProcessor
 
         public void Add(DBLPProceedings proceedings)
         {
-            if(this.Series.ContainsKey(proceedings.key)){
+            if (this.Series.ContainsKey(proceedings.key))
+            {
                 throw new Exception("Key is already exists: " + proceedings.key);
             }
             this.Series.Add(proceedings.key, proceedings);
@@ -322,7 +332,7 @@ namespace DataProcessor
     {
         public Dictionary<string, DBLPProceedingsSeries> Series { get; set; } = new Dictionary<string, DBLPProceedingsSeries>();
         public Dictionary<string, string> KeyDictionary { get; set; } = new Dictionary<string, string>();
-        public Dictionary<string, string> DoiToBookTitleMapper { get; set; } = new Dictionary<string, string>();
+        public Dictionary<string, string> DoiToSeriesTitleMapper { get; set; } = new Dictionary<string, string>();
 
         //public PrefixSet PrefixSet { get; set; } = new PrefixSet();
 
@@ -337,35 +347,46 @@ namespace DataProcessor
             else
             {
                 this.Series[bookTitle] = new DBLPProceedingsSeries();
-                this.Series[bookTitle].BookTitle = bookTitle;
+                this.Series[bookTitle].SeriesTitle = bookTitle;
                 this.Series[bookTitle].Add(proceedings);
             }
 
             this.KeyDictionary.Add(proceedings.key, bookTitle);
         }
-        public void BuildDoiToBookTitleMapper()
+        public void BuildDoiToSeriesTitleMapper()
         {
             foreach (var element in this.Series)
             {
-                if (element.Value.BookTitle.Length > 0)
+                if (element.Value.SeriesTitle.Length > 0)
                 {
                     foreach (var proceedings in element.Value.Series)
                     {
+                        if (proceedings.Value.DOI.Length > 0)
+                        {
+                            if (!this.DoiToSeriesTitleMapper.ContainsKey(proceedings.Value.DOI))
+                            {
+                                this.DoiToSeriesTitleMapper.Add(proceedings.Value.DOI, element.Value.SeriesTitle);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Conflict DOI: " + proceedings.Value.DOI + " -> " + element.Value.SeriesTitle + " vs " + this.DoiToSeriesTitleMapper[proceedings.Value.DOI]);
+                            }
+                        }
                         foreach (var doi in proceedings.Value.DOIList)
                         {
                             if (doi.Length > 0)
                             {
-                                if (!this.DoiToBookTitleMapper.ContainsKey(doi))
+                                if (!this.DoiToSeriesTitleMapper.ContainsKey(doi))
                                 {
-                                    this.DoiToBookTitleMapper.Add(doi, element.Value.BookTitle);
+                                    this.DoiToSeriesTitleMapper.Add(doi, element.Value.SeriesTitle);
 
                                 }
                                 else
                                 {
-                                    if (this.DoiToBookTitleMapper[doi] != element.Value.BookTitle)
+                                    if (this.DoiToSeriesTitleMapper[doi] != element.Value.SeriesTitle)
                                     {
                                         Console.WriteLine("DOI: " + doi);
-                                        Console.WriteLine("BookTitle: " + element.Value.BookTitle);
+                                        Console.WriteLine("BookTitle: " + element.Value.SeriesTitle);
                                         Console.WriteLine("--------------------------------");
                                         throw new Exception("DOI is not unique");
                                     }
@@ -377,11 +398,11 @@ namespace DataProcessor
                 }
             }
         }
-        public string? SearchBookTitleByDOI(string doi)
+        public string? SearchSeriesTitleByDOI(string doi)
         {
-            if (this.DoiToBookTitleMapper.ContainsKey(doi))
+            if (this.DoiToSeriesTitleMapper.ContainsKey(doi))
             {
-                return this.DoiToBookTitleMapper[doi];
+                return this.DoiToSeriesTitleMapper[doi];
             }
             else
             {
@@ -458,7 +479,7 @@ namespace DataProcessor
         public static DBLPProceedingsSeriesSummary Build(DBLPProceedingsSeries series)
         {
             var summary = new DBLPProceedingsSeriesSummary();
-            summary.BookTitle = series.BookTitle;
+            summary.BookTitle = series.SeriesTitle;
             summary.FullName = series.ComputeFullName();
             summary.Count = series.Series.Count;
             return summary;

@@ -133,9 +133,8 @@ export function filterInputChange(inputElementName: string, browserInfo: Browser
   //browserInfo.currentDOIFilter.query.excludeStatus = excludeStatus;
   }
   else if (inputElementName == "keywords") {
-    const keywords = (document.getElementById("keywords-input") as HTMLInputElement).value;
-    url.searchParams.set("keywords", keywords);
-    console.log("keywords: " + keywords);
+    const keyword = (document.getElementById("keywords-input") as HTMLInputElement).value;
+    url.searchParams.set("keyword", keyword);
   }
   else {
 
