@@ -93,13 +93,13 @@ namespace DataProcessor
             var crossRefDic = DataProcessor.CrossRefFoundDOICache.Load(dataFolderPath);
             crossRefDic.ToList().ForEach((v) =>
             {
-                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value);
+                var doiElement = CrossRefParser.Parse(v.Value);
                 doiElementDict[v.Key] = doiElement;
             });
             var crossRefExternalDic = DataProcessor.CrossRefExternalFoundDOICache.Load(dataFolderPath);
             crossRefExternalDic.ToList().ForEach((v) =>
             {
-                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value);
+                var doiElement = CrossRefParser.Parse(v.Value);
                 doiElementDict[v.Key] = doiElement;
             });
 

@@ -176,7 +176,7 @@ namespace DataProcessor
                 fullNameToIndexMapper[r.FullNameList[i]] = i;
             }
 
-            var tmp_counter = 0;
+            //var tmp_counter = 0;
 
             mergedDOIElementList.ForEach((v) =>
             {

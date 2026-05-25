@@ -12,6 +12,28 @@ using System.Collections.ObjectModel;namespace DataProcessor
         static string ModifiedPrimaryDOIElementFileName = "modified_primary_doi_elements.jsonl";
         static string ModifiedSecondaryDOIElementFileName = "modified_secondary_doi_elements.jsonl";
 
+        private static ReadOnlySet<string> BuildSecondaryDOISet(Dictionary<string, DOIElement> primaryDOIElementDict)
+        {
+            var secondaryDOISet = new HashSet<string>();
+            primaryDOIElementDict.Values.ToList().ForEach((v) =>
+            {
+                v.DOIReferences.ForEach((referenceDOI) =>
+                {
+                    if (!primaryDOIElementDict.ContainsKey(referenceDOI))
+                    {
+                        secondaryDOISet.Add(referenceDOI);
+                    }
+                    if (v.ContainerDOI.Length > 0 && !primaryDOIElementDict.ContainsKey(v.ContainerDOI))
+                    {
+                        secondaryDOISet.Add(v.ContainerDOI);
+                    }
+
+                });
+            });
+            var readOnlySecondaryDOISet = new ReadOnlySet<string>(secondaryDOISet);
+            return readOnlySecondaryDOISet;
+        }
+
 
         public static void BuildTagCSVFromDataCite(DBLPOptions opts)
         {
@@ -28,7 +50,7 @@ using System.Collections.ObjectModel;namespace DataProcessor
             {
                 if (doiToTagMapper.ContainsKey(v))
                 {
-                    var tags = DOIElement.GetTagsFromDataCiteJSONL(foundJSONLMap[v]);
+                    var tags = DataCiteParser.GetTagsFromDataCiteJSONL(foundJSONLMap[v]);
                     if (tags.Count > 0)
                     {
                         List<string> line = new List<string>();
@@ -79,7 +101,8 @@ using System.Collections.ObjectModel;namespace DataProcessor
         {
             OutputSystemMessageFunction("Creating DOI to Tag Mapper");
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.DataFolderPath + "/raw");
-            var primaryDOISet = new HashSet<string>(doiToTagMapper.Keys);
+            var primaryDOISet = new ReadOnlySet<string>(new HashSet<string>(doiToTagMapper.Keys));
+
             Console.WriteLine("Primary DOI set: " + primaryDOISet.Count);
 
             OutputSystemMessageFunction("Building primary DOI element dictionary");
@@ -102,21 +125,10 @@ using System.Collections.ObjectModel;namespace DataProcessor
 
 
             OutputSystemMessageFunction("Building secondary DOI set");
-            var secondaryDOISet = new HashSet<string>();
-            primaryDOIElementDict.Values.ToList().ForEach((v) =>
-            {
-                v.DOIReferences.ForEach((referenceDOI) =>
-                {
-                    if (!doiToTagMapper.ContainsKey(referenceDOI))
-                    {
-                        secondaryDOISet.Add(referenceDOI);
-                    }
-                });
-            });
-            var readOnlySecondaryDOISet = new ReadOnlySet<string>(secondaryDOISet);
+            var secondaryDOISet = BuildSecondaryDOISet(primaryDOIElementDict);
 
             OutputSystemMessageFunction("Building cache for secondary DOI set");
-            await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, readOnlySecondaryDOISet, "secondary_small_cache_hash.csv");
+            await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, secondaryDOISet, "secondary_small_cache_hash.csv");
 
             return 0;
         }
@@ -132,21 +144,7 @@ using System.Collections.ObjectModel;namespace DataProcessor
             var primaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, PrimaryDOIElementFileName), true);
 
             OutputSystemMessageFunction("Building secondary DOI set");
-            var secondaryDOISet = new HashSet<string>();
-            primaryDOIElementDict.Values.ToList().ForEach((v) =>
-            {
-                v.DOIReferences.ForEach((referenceDOI) =>
-                {
-                    if (!doiToTagMapper.ContainsKey(referenceDOI))
-                    {
-                        secondaryDOISet.Add(referenceDOI);
-                    }
-                    if (v.ContainerDOI.Length > 0 && !doiToTagMapper.ContainsKey(v.ContainerDOI))
-                    {
-                        secondaryDOISet.Add(v.ContainerDOI);
-                    }
-                });
-            });
+            var secondaryDOISet = BuildSecondaryDOISet(primaryDOIElementDict);
 
             OutputSystemMessageFunction("Building secondary DOI element dictionary");
             var secondaryDOIElementDict = DOIElementPreprocessor.BuildDOIElementDictionary(opts.DataFolderPath, secondaryDOISet);

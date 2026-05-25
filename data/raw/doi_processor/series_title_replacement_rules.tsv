@@ -42,3 +42,17 @@
 10.1145/2840728	ITCS
 10.1145/3357384	CIKM
 10.1145/375551	PODS
+=^10.4230/lipics.cpm.\d{4}$	CPM
+=^10.4230/lipics.esa.\d{4}$	ESA
+=^10.4230/lipics.icalp.\d{4}$	ICALP
+=^10.4230/lipics.isaac.\d{4}$	ISAAC
+=^10.4230/lipics.sea.\d{4}$	SEA
+=^10.4230/lipics.socg.\d{4}$	SOCG
+=^10.4230/lipics.stacs.\d{4}$	STACS
+=^10.4230/lipics.wabi.\d{4}$	WABI
+=^10.4230/oasics.sosa.\d{4}$	SOSA
+=^10.4230/lipics.itcs.\d{4}$	ITCS
+=^10.4230/lipics.mfcs.\d{4}$	MFCS
+=^10.4230/lipics.fsttcs.\d{4}$	FSTTCS
+=^10.4230/lipics.fun.\d{4}$	FUN
+=^10.4230/lipics.approx/random.\d{4}$	APPROX/RANDOM

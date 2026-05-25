@@ -127,63 +127,7 @@ namespace DataProcessor
                 return this.GivenName + " " + this.FamilyName;
             }
         }
-        public static List<AuthorInfo> ParseFromDataCiteJSONL(Dictionary<string, string> dictFromJSONL)
-        {
-            var authorInfoList = new List<AuthorInfo>();
-            var attributeDict = JsonLib.CreateDictionaryFromJSONL(dictFromJSONL["attributes"]);
-
-
-            if (attributeDict.ContainsKey("creators"))
-            {
-                var creatorsArray = JsonLib.CreateArrayFromJSONL(attributeDict["creators"]);
-                foreach (var creator in creatorsArray)
-                {
-                    var authorInfo = new AuthorInfo();
-                    var creatorDict = JsonLib.CreateDictionaryFromJSONL(creator);
-                    if (creatorDict.ContainsKey("nameIdentifiers"))
-                    {
-                        var nameIdentifiersArray = JsonLib.CreateArrayFromJSONL(creatorDict["nameIdentifiers"]);
-                        if (nameIdentifiersArray.Length > 0)
-                        {
-                            var str = nameIdentifiersArray[0];
-                            var nameIdentifierDict = JsonLib.CreateDictionaryFromJSONL(str);
-                            if (nameIdentifierDict.ContainsKey("ORCID") && nameIdentifierDict.ContainsKey("nameIdentifier"))
-                            {
-                                authorInfo.ORCID = nameIdentifierDict["nameIdentifier"];
-                            }
-
-                        }
-
-                    }
-                    if (creatorDict.ContainsKey("givenName"))
-                    {
-                        authorInfo.GivenName = creatorDict["givenName"];
-                    }
-                    if (creatorDict.ContainsKey("familyName"))
-                    {
-                        authorInfo.FamilyName = creatorDict["familyName"];
-                    }
-                    var name = creatorDict["name"];
-                    var nameList = name.Split(',').ToList();
-                    if (nameList.Count == 2)
-                    {
-                        var fullName = nameList[1].Trim() + " " + nameList[0].Trim();
-                        authorInfo.FullName = fullName;
-
-                    }
-                    else if (nameList.Count == 1)
-                    {
-                        authorInfo.FullName = name;
-                    }
-                    else
-                    {
-                        throw new Exception("Creator name is not valid: " + name);
-                    }
-                    authorInfoList.Add(authorInfo);
-                }
-            }
-            return authorInfoList;
-        }
+        
 
     }
 }

@@ -41,13 +41,13 @@ namespace DataProcessor
             var dataCiteDic = DataProcessor.DataCiteFoundDOICache.Load(dataFolderPath);
             dataCiteDic.ToList().ForEach((v) =>
             {
-                var doiElement = DOIElement.ParseFromDataCiteJSONL(v.Value);
+                var doiElement = DataCiteParser.Parse(v.Value);
                 doiElementDict[v.Key] = doiElement;
             });
             var dataCiteExternalDic = DataProcessor.DataCiteExternalFoundDOICache.Load(dataFolderPath);
             dataCiteExternalDic.ToList().ForEach((v) =>
             {
-                var doiElement = DOIElement.ParseFromDataCiteJSONL(v.Value);
+                var doiElement = DataCiteParser.Parse(v.Value);
                 doiElementDict[v.Key] = doiElement;
             });
 

@@ -84,33 +84,6 @@ namespace DataProcessor
 
 
 
-            /*
-
-            var crossRefDic = DataProcessor.CrossRefFoundDOICache.Load(dataFolderPath);
-            crossRefDic.ToList().ForEach((v) =>
-            {
-                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value, logFolderPath);
-                doiElementDict[v.Key] = doiElement;
-            });
-            var crossRefExternalDic = DataProcessor.CrossRefExternalFoundDOICache.Load(dataFolderPath);
-            crossRefExternalDic.ToList().ForEach((v) =>
-            {
-                var doiElement = DOIElement.ParseFromCrossRefJSONL(v.Value, logFolderPath);
-                doiElementDict[v.Key] = doiElement;
-            });
-            var dataCiteDic = DataProcessor.DataCiteFoundDOICache.Load(dataFolderPath);
-            dataCiteDic.ToList().ForEach((v) =>
-            {
-                var doiElement = DOIElement.ParseFromDataCiteJSONL(v.Value);
-                doiElementDict[v.Key] = doiElement;
-            });
-            var dataCiteExternalDic = DataProcessor.DataCiteExternalFoundDOICache.Load(dataFolderPath);
-            dataCiteExternalDic.ToList().ForEach((v) =>
-            {
-                var doiElement = DOIElement.ParseFromDataCiteJSONL(v.Value);
-                doiElementDict[v.Key] = doiElement;
-            });
-            */
 
             //await SemanticScholarPreprocessor.PreprocessAll(doiElementDict, dataFolderPath);
 
@@ -123,7 +96,7 @@ namespace DataProcessor
             Console.WriteLine("Building SmallCache [END]");
         }
 
-        public static Dictionary<string, DOIElement> BuildDOIElementDictionary(string dataFolderPath, HashSet<string> doiSet)
+        public static Dictionary<string, DOIElement> BuildDOIElementDictionary(string dataFolderPath, ReadOnlySet<string> doiSet)
         {
             var doiElementDict = new Dictionary<string, DOIElement>();
             var doiElementCachePath = DOIElementPreprocessor.GetCachePath(dataFolderPath);
