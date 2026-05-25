@@ -22,28 +22,41 @@ namespace DataProcessor
             {
                 directoryInfo.Create();
             }
-            return dataFolderPath + "/auto_generated/cache/crossref_cache/unknown_doi.tsv";
+            return dataFolderPath + "/auto_generated/cache/crossref_cache/small_cache/unknown_doi.tsv";
         }
 
 
 
-        public static async Task Build(string dataFolderPath, ReadOnlySet<string> doiSet, HashSet<string> unknownDOISet, string mailAddress)
+        public static async Task Build(string dataFolderPath, ReadOnlySet<string> doiSet, Dictionary<string, string> unknownDOIDictionary, string mailAddress)
         {
             Console.WriteLine("Building CrossRefExternalFoundDOICache");
             Console.WriteLine("\t DOI Set: " + doiSet.Count);
-            Console.WriteLine("\t Unknown DOI Set: " + unknownDOISet.Count);
+            Console.WriteLine("\t Unknown DOI Dictionary: " + unknownDOIDictionary.Count);
 
             var crossRefExternalDic = DataProcessor.CrossRefExternalFoundDOICache.Load(dataFolderPath);
             var crossRefDOIPrefixSet = DataProcessor.CrossRefDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
             var foundDOICache = DataProcessor.CrossRefFoundDOICache.Load(dataFolderPath);
 
             var externalDOICandidateList = new List<string>();
+            var dateNowStr = DateTime.Now.ToString("yyyy-MM");
+
             foreach (var doi in doiSet)
             {
                 var doiPrefix = DOIFunctions.GetPrefix(doi);
-                if (!foundDOICache.ContainsKey(doi) && crossRefDOIPrefixSet.Contains(doiPrefix) && !crossRefExternalDic.ContainsKey(doi) && !unknownDOISet.Contains(doi))
+                if (!foundDOICache.ContainsKey(doi) && crossRefDOIPrefixSet.Contains(doiPrefix) && !crossRefExternalDic.ContainsKey(doi))
                 {
-                    externalDOICandidateList.Add(doi);
+                    if (!unknownDOIDictionary.ContainsKey(doi))
+                    {
+                        externalDOICandidateList.Add(doi);
+                    }
+                    else
+                    {
+                        var foundDateStr = unknownDOIDictionary[doi];
+                        if (dateNowStr != foundDateStr)
+                        {
+                            externalDOICandidateList.Add(doi);
+                        }
+                    }
                 }
             }
 
@@ -59,15 +72,19 @@ namespace DataProcessor
                     if (value != null)
                     {
                         crossRefExternalDic[doi] = value;
+                        if (unknownDOIDictionary.ContainsKey(doi))
+                        {
+                            unknownDOIDictionary.Remove(doi);
+                        }
                     }
                     else
                     {
-                        unknownDOISet.Add(doi);
+                        unknownDOIDictionary[doi] = dateNowStr;
                     }
                 }
                 else
                 {
-                    unknownDOISet.Add(doi);
+                    unknownDOIDictionary[doi] = dateNowStr;
                 }
             }
 

@@ -1,6 +1,7 @@
 using System.Text;
 using System.IO.Compression;
 using System.Collections.ObjectModel;
+using System.Text.RegularExpressions;
 
 namespace DataProcessor
 {
@@ -78,9 +79,11 @@ namespace DataProcessor
 
 
             var unknownDOIFilePath = CrossRefExternalFoundDOICache.GetUnknownDOIFilePath(dataFolderPath);
-            var unknownDOISet = CSVFunctions.ReadCSVAsHashSet(unknownDOIFilePath);
-            await CrossRefExternalFoundDOICache.Build(dataFolderPath, doiSet, unknownDOISet, mailAddress);
-            CSVFunctions.WriteCSV(unknownDOIFilePath, unknownDOISet);
+            var unknownDOIDictionary = CSVFunctions.ReadCSVAasDictionary(unknownDOIFilePath);
+            await CrossRefExternalFoundDOICache.Build(dataFolderPath, doiSet, unknownDOIDictionary, mailAddress);
+
+
+            CSVFunctions.WriteCSVAsDictionary(unknownDOIFilePath, unknownDOIDictionary);
 
 
             Console.WriteLine("CrossRefSmallCache [END]");
@@ -144,6 +147,41 @@ namespace DataProcessor
 
 
         }
+
+        public static void UpdateSmallCacheUsingDOIPrefix(string dataFolderPath)
+        {
+            var logFilePath = dataFolderPath + "/auto_generated/log/update_small_cache_using_doi_prefix.log";
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
+
+            var doiPrefixSettingPath = dataFolderPath + "/raw/small_cache_setting/doi_prefix.tsv";
+            var doiPrefixDictionary = CSVFunctions.ReadCSVAasDictionary(doiPrefixSettingPath);
+
+            var additionalCrossRefDOISet = new HashSet<string>();
+
+            var doiElementDict = LoadSmallCache(dataFolderPath);
+            doiElementDict.ToList().ForEach((v) =>
+            {
+                var doi = v.Value.DOI;
+                doiPrefixDictionary.ToList().ForEach((w) =>
+                {
+                    var regexMatchResult = SpecialRegexMatchResult.Match(w.Key, doi, w.Value);
+                    if (regexMatchResult.IsMatch && regexMatchResult.NewValue != null)
+                    {
+                        if (!additionalCrossRefDOISet.Contains(regexMatchResult.NewValue))
+                        {
+                            logFile.WriteLine("Matched DOI: " + doi + " -> " + regexMatchResult.NewValue);
+                        }
+                        additionalCrossRefDOISet.Add(regexMatchResult.NewValue);
+                    }
+                });
+            });
+            var crossrefFolderInfo = CrossRefCacheBuilder.SearchCrossRefFolder(dataFolderPath + "/external");
+            DataProcessor.CrossRefFoundDOICache.Update(additionalCrossRefDOISet.ToList(), dataFolderPath, crossrefFolderInfo.FullName);
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
+            logFile.Close();
+        }
+
 
 
     }

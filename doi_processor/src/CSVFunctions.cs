@@ -27,6 +27,18 @@ namespace DataProcessor
         {
             WriteCSV(filePath, set.ToList());
         }
+        public static void WriteCSVAsDictionary(string filePath, Dictionary<string, string> dict)
+        {
+            var list = new List<string>();
+            var delimiter = filePath.EndsWith(".csv") ? "," : "\t";
+            dict.ToList().ForEach((v) =>
+            {
+                list.Add(v.Key + delimiter + v.Value);
+            });
+
+            WriteCSV(filePath, list);
+        }
+
         public static void WriteCSVByGZip(string filePath, List<string> lines)
         {
 
@@ -34,14 +46,14 @@ namespace DataProcessor
             byte[] input1 = Encoding.UTF8.GetBytes(linesString);
             if (linesString.Length > 0)
             {
-            using (var fs = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
-            {
-                using (var gzip = new GZipStream(fs, CompressionLevel.Optimal))
+                using (var fs = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
                 {
-                    gzip.Write(input1, 0, input1.Length);
+                    using (var gzip = new GZipStream(fs, CompressionLevel.Optimal))
+                    {
+                        gzip.Write(input1, 0, input1.Length);
+                    }
                 }
-            }
-                
+
             }
             //Console.WriteLine("Saved: " + filePath);
             Console.WriteLine("Saved: " + filePath + " / " + lines.Count);
@@ -70,5 +82,23 @@ namespace DataProcessor
             });
             return set;
         }
+        public static Dictionary<string, string> ReadCSVAasDictionary(string filePath)
+        {
+            var list = ReadCSV(filePath);
+            var fileInfo = new FileInfo(filePath);
+            var delimiter = fileInfo.Extension == ".csv" ? "," : "\t";
+
+            var dict = new Dictionary<string, string>();
+            list.ForEach((v) =>
+            {
+                var cols = v.Split(delimiter);
+                if (cols.Length > 1)
+                {
+                    dict[cols[0]] = cols[1];
+                }
+            });
+            return dict;
+        }
+        
     }
 }

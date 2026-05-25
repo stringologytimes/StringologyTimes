@@ -10,7 +10,12 @@ namespace DataProcessor
 
         public static string GetFolderPath(string dataFolderPath)
         {
-            return dataFolderPath + "/auto_generated/cache/datacite_cache/doi_to_gzfile";
+            var f = new DirectoryInfo(dataFolderPath + "/auto_generated/cache/datacite_cache/big_cache");
+            if (!f.Exists)
+            {
+                f.Create();
+            }
+            return dataFolderPath + "/auto_generated/cache/datacite_cache/big_cache/doi_to_gzfile";
         }
 
         public static string GetOthersFilePath(string dataFolderPath)

@@ -15,12 +15,18 @@ namespace DataProcessor
         }
         public static string GetFolderPath(string dataFolderPath)
         {
-            return dataFolderPath + "/auto_generated/cache/datacite_cache/gzfile_to_doi";
+            var f = new DirectoryInfo(dataFolderPath + "/auto_generated/cache/datacite_cache/big_cache");
+            if (!f.Exists)
+            {
+                f.Create();
+            }
+            return dataFolderPath + "/auto_generated/cache/datacite_cache/big_cache/gzfile_to_doi";
         }
 
         public static void Build(string dataCiteFolderPath, string dataFolderPath)
         {
             Console.WriteLine("Creating DOI List(DataCite): ");
+            /*
 
             var main_folder = new DirectoryInfo(dataFolderPath + "/auto_generated/cache/datacite_cache");
             if (!main_folder.Exists)
@@ -35,6 +41,7 @@ namespace DataProcessor
                 main_folder2.Create();
                 Console.WriteLine("Created: " + main_folder2.FullName);
             }
+            */
 
 
             //int maxCounter = 0;

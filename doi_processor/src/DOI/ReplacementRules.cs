@@ -251,6 +251,46 @@ namespace DataProcessor
 
         }
 
+        public static void RpelaceContainerDOIByDOIPrefix(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
+        {
+            var logFilePath = logFolderPath + "/cotaniner_doi_replacement_rules.log";
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
+            if (File.Exists(rulePath))
+            {
+                var ruleList = CSVFunctions.ReadCSVAasDictionary(rulePath).ToList();
+                var mergedDictionary = new Dictionary<string, DOIElement>();
+                primaryDOIElementDict.ToList().ForEach((v) =>
+                {
+                    mergedDictionary[v.Key] = v.Value;
+                });
+                secondaryDOIElementDict.ToList().ForEach((v) =>
+                {
+                    mergedDictionary[v.Key] = v.Value;
+                });
+
+                mergedDictionary.ToList().ForEach((v) =>
+                {
+                    var doi = v.Key;
+                    ruleList.ForEach((rule) =>
+                    {
+                        var regexMatchResult = SpecialRegexMatchResult.Match(rule.Key, doi, rule.Value);
+                        if (regexMatchResult.IsMatch && regexMatchResult.NewValue != null)
+                        {
+                            v.Value.ContainerDOI = regexMatchResult.NewValue;
+                            logFile.WriteLine("Replaced container DOI: {0} -> {1}", doi, regexMatchResult.NewValue);
+                        }
+                    });
+                });
+            }
+            else
+            {
+                logFile.WriteLine("No container DOI rule file found: " + rulePath);
+            }
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
+            logFile.Close();
+        }
+
         public static void ReplaceContainerTitleByDOIPrefix(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/doi_prefix_key_container_title_value.log";

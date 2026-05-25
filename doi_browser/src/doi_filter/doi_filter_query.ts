@@ -134,7 +134,16 @@ export class DOIFilterQuery {
                     if(doiInfo.doi == doiKeyword){
                         b = true;
                     }
-                }else{
+                }
+                else if(keyword.indexOf("@CONTAINER_DOI:") == 0){
+                    const containerDOIKeyword = keyword.substring(15);
+                    if(doiInfo.container_DOI == containerDOIKeyword){                    
+                        b = true;
+                    }else if(containerDOIKeyword == "null" && doiInfo.container_DOI == ""){
+                        b = true;
+                    }
+                }
+                else{
                     if(doiInfo.title.indexOf(keyword) != -1){
                         b = true;
                     }

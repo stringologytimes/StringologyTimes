@@ -1,6 +1,7 @@
 using System.Text;
 using System.IO.Compression;
 using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
 
 namespace DataProcessor
@@ -20,11 +21,19 @@ namespace DataProcessor
 
         public static void Update(IReadOnlyList<string> dois, string dataFolderPath, string jsonlFolderPath)
         {
+            var logFilePath = dataFolderPath + "/auto_generated/log/update_crossref_found_doi_cache.log";
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
+
             Console.WriteLine("Creating Found JSONL File(CrossRef): ");
             //var dicPath = GetCachePath(dataFolderPath);
             Dictionary<string, string> foundJSONLMap = Load(dataFolderPath);
-            var crsosRefDOIPrefixSet = CrossRefDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
+            var crossRefDOIPrefixSet = CrossRefDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
             Console.WriteLine("\t Found JSONL Map: " + foundJSONLMap.Count);
+
+            var candidateDOISet = new HashSet<string>();
+            var notCrossRefDOIPrefixSet = new HashSet<string>();
+            var alreadyFoundDOISet = new HashSet<string>();
 
 
             //List<string> foundJSONLList = new List<string>();
@@ -32,21 +41,43 @@ namespace DataProcessor
             foreach (var doi in dois)
             {
                 var doiPrefix = DOIFunctions.GetPrefix(doi);
-                if (!foundJSONLMap.ContainsKey(doi) && crsosRefDOIPrefixSet.Contains(doiPrefix))
+                if (!foundJSONLMap.ContainsKey(doi))
                 {
-                    if (!doiPrefixToDoi.ContainsKey(doiPrefix))
+                    if (crossRefDOIPrefixSet.Contains(doiPrefix))
                     {
-                        doiPrefixToDoi[doiPrefix] = new HashSet<string>();
+                        if (!doiPrefixToDoi.ContainsKey(doiPrefix))
+                        {
+                            doiPrefixToDoi[doiPrefix] = new HashSet<string>();
+                        }
+                        doiPrefixToDoi[doiPrefix].Add(doi);
                     }
-                    doiPrefixToDoi[doiPrefix].Add(doi);
+                    else
+                    {
+                        notCrossRefDOIPrefixSet.Add(doiPrefix);
+                    }
+                }
+                else
+                {
+                    alreadyFoundDOISet.Add(doi);
                 }
             }
+
+            alreadyFoundDOISet.ToList().ForEach((v) =>
+            {
+                logFile.WriteLine("Already found DOI: " + v);
+            });
+            notCrossRefDOIPrefixSet.ToList().ForEach((v) =>
+            {
+                logFile.WriteLine("Not CrossRef DOI Prefix: " + v);
+            }); 
+
+
             var doiPrefixMacCount = doiPrefixToDoi.Count;
             var doiPrefixCounter = 0;
             var gzFilePathSet = new HashSet<string>();
             var othersHashSet = new HashSet<string>();
 
-            Console.WriteLine("\t DOI Count: "  + " / " + dois.Count + " / " + foundJSONLMap.Count);
+            Console.WriteLine("\t DOI Count: " + " / " + dois.Count + " / " + foundJSONLMap.Count);
 
             foreach (var kvp in doiPrefixToDoi)
             {
@@ -72,6 +103,8 @@ namespace DataProcessor
                             if (doiSetForDoiPrefix.Contains(lineDOI))
                             {
                                 gzFilePathSet.Add(jsonlFolderPath + "/" + gzFileName);
+                                logFile.WriteLine("Found DOI: " + lineDOI);
+                                candidateDOISet.Add(lineDOI);
                             }
                         }
                     }
@@ -100,14 +133,29 @@ namespace DataProcessor
                         if (othersHashSet.Contains(lineDOI))
                         {
                             gzFilePathSet.Add(jsonlFolderPath + "/" + gzFileName);
+                            logFile.WriteLine("Found DOI from others.tsv: " + lineDOI);
+                            candidateDOISet.Add(lineDOI);
+                            othersHashSet.Remove(lineDOI);
                         }
                     }
                 }
             }
 
+            othersHashSet.ToList().ForEach((v) =>
+            {
+                logFile.WriteLine("Not found DOI (Type 1): " + v);
+            });
+
+            var notFoundDOIs = new List<string>();
+
 
             List<string> gzJSONLPaths = gzFilePathSet.ToList();
-            CreateFoundJSONLFileSub(dois, gzJSONLPaths, foundJSONLMap);
+            CreateFoundJSONLFileSub(candidateDOISet.ToList(), gzJSONLPaths, foundJSONLMap, notFoundDOIs);
+
+            notFoundDOIs.ForEach((v) =>
+            {
+                logFile.WriteLine("Not found DOI (Type 2): " + v);
+            });
 
 
             var JSONLCacheWriter = new StreamWriter(GetCachePath(dataFolderPath), false, Encoding.UTF8);
@@ -116,9 +164,13 @@ namespace DataProcessor
                 JSONLCacheWriter.WriteLine(jsonl);
             }
             JSONLCacheWriter.Close();
+
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
+            logFile.Close();
         }
-        private static void CreateFoundJSONLFileSub(IReadOnlyList<string> dois, List<string> gzJSONLPaths, Dictionary<string, string> foundJSONLMap)
+        private static void CreateFoundJSONLFileSub(IReadOnlyList<string> dois, List<string> gzJSONLPaths, Dictionary<string, string> foundJSONLMap, List<string> notFoundDOIs)
         {
+
             HashSet<string> doiSet = new HashSet<string>(dois);
             var maxCount = gzJSONLPaths.Count;
             var counter = 0;
@@ -136,10 +188,15 @@ namespace DataProcessor
                     if (doiSet.Contains(doi))
                     {
                         foundJSONLMap[doi] = line;
+                        doiSet.Remove(doi);
                     }
                 }
 
             });
+
+            notFoundDOIs.AddRange(doiSet.ToList());
+
+
             Console.WriteLine();
 
         }

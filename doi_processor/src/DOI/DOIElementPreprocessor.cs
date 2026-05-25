@@ -62,10 +62,13 @@ namespace DataProcessor
 
 
             await DataProcessor.CrossRefCacheBuilder.UpdateSmallCache(dataFolderPath, doiSet, mailAddress);
-            await DataProcessor.DataCitePreprocessor.BuildSmallCache(dataFolderPath, doiSet, mailAddress);
+            await DataProcessor.DataCitePreprocessor.UpdateSmallCache(dataFolderPath, doiSet, mailAddress);
 
             DataProcessor.CrossRefCacheBuilder.UpdateSmallCacheUsingContainerTitle(dataFolderPath);
             DataProcessor.DataCitePreprocessor.UpdateSmallCacheUsingContainerTitle(dataFolderPath);
+
+            DataProcessor.CrossRefCacheBuilder.UpdateSmallCacheUsingDOIPrefix(dataFolderPath);
+            DataProcessor.DataCitePreprocessor.UpdateSmallCacheUsingDOIPrefix(dataFolderPath);
 
 
             var doiElementDict = new Dictionary<string, DOIElement>();
@@ -98,6 +101,11 @@ namespace DataProcessor
 
         public static Dictionary<string, DOIElement> BuildDOIElementDictionary(string dataFolderPath, ReadOnlySet<string> doiSet)
         {
+            var logFilePath = dataFolderPath + "/auto_generated/log/build_doi_element_dictionary.log";
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
+
+
             var doiElementDict = new Dictionary<string, DOIElement>();
             var doiElementCachePath = DOIElementPreprocessor.GetCachePath(dataFolderPath);
             var doiElementCache = DOIElement.Load(doiElementCachePath, false);
@@ -107,7 +115,14 @@ namespace DataProcessor
                 {
                     doiElementDict[v] = doiElementCache[v];
                 }
+                else
+                {
+                    logFile.WriteLine("DOI not found in cache: " + v);
+                }
             });
+
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
+            logFile.Close();
             return doiElementDict;
         }
 

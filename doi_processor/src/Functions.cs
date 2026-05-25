@@ -39,6 +39,40 @@ namespace DataProcessor
 
     class DoiToTagMapper
     {
+        public static HashSet<string> CollectSpecialContainerDOI(string dataFolderPath, IList<string> doiList, string logFilePath)
+        {
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
+
+
+            var doiPrefixSettingPath = dataFolderPath + "/raw/small_cache_setting/doi_prefix.tsv";
+            var doiPrefixDictionary = CSVFunctions.ReadCSVAasDictionary(doiPrefixSettingPath);
+            var specialContainerDOIList = new List<string>();
+
+            var additionalCrossRefDOISet = new HashSet<string>();
+
+            doiList.ToList().ForEach((doi) =>
+            {
+                doiPrefixDictionary.ToList().ForEach((w) =>
+                {
+                    var regexMatchResult = SpecialRegexMatchResult.Match(w.Key, doi, w.Value);
+                    if (regexMatchResult.IsMatch && regexMatchResult.NewValue != null)
+                    {
+                        if (!additionalCrossRefDOISet.Contains(regexMatchResult.NewValue))
+                        {
+                            logFile.WriteLine("Matched DOI: " + doi + " -> " + regexMatchResult.NewValue);
+                        }
+                        additionalCrossRefDOISet.Add(regexMatchResult.NewValue);
+                    }
+                });
+            });
+
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
+            logFile.Close();
+
+            return additionalCrossRefDOISet;
+
+        }
         public static Dictionary<string, List<string>> CreateDoiToTagMapper(string dataRawFolderPath)
         {
             var doiToTagMapper = new Dictionary<string, HashSet<string>>();
@@ -48,7 +82,7 @@ namespace DataProcessor
             foreach (var file in files)
             {
                 var fileInfo = new FileInfo(file.FullName);
-           
+
                 if (fileInfo.Name == "url_and_doi.csv" || fileInfo.Name == "url_and_doi.tsv")
                 {
                     var lines = File.ReadAllLines(fileInfo.FullName);
@@ -63,7 +97,7 @@ namespace DataProcessor
                     }
                 }
                 if (fileInfo.Name == "tag.csv" || fileInfo.Name == "tag.tsv")
-                {                    
+                {
                     var lines = File.ReadAllLines(fileInfo.FullName);
                     foreach (var line in lines)
                     {

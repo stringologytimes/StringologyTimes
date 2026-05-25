@@ -1,19 +1,22 @@
 using System.Xml;
 using System.Xml.Linq;
 using System.IO;
-using System.Collections.ObjectModel;namespace DataProcessor
+using System.Collections.ObjectModel;
+namespace DataProcessor
 {
     class Processor
     {
-        static string PrimaryDOIElementFileName = "primary_doi_elements.jsonl";
-        static string SecondaryDOIElementFileName = "secondary_doi_elements.jsonl";
-        static string SecondaryDOIListFileName = "secondary_doi.csv";
+        static string PRIMARY_DOI_ELEMENT_FILENAME = "primary_doi_elements.jsonl";
+        static string SECONDARY_DOI_ELEMENT_FILENAME = "secondary_doi_elements.jsonl";
+        static string SECONDARY_DOI_LIST_FILENAME = "secondary_doi.csv";
 
-        static string ModifiedPrimaryDOIElementFileName = "modified_primary_doi_elements.jsonl";
-        static string ModifiedSecondaryDOIElementFileName = "modified_secondary_doi_elements.jsonl";
+        static string MODIFIED_PRIMARY_DOI_ELEMENT_FILENAME = "modified_primary_doi_elements.jsonl";
+        static string MODIFIED_SECONDARY_DOI_ELEMENT_FILENAME = "modified_secondary_doi_elements.jsonl";
 
-        private static ReadOnlySet<string> BuildSecondaryDOISet(Dictionary<string, DOIElement> primaryDOIElementDict)
+        private static ReadOnlySet<string> BuildSecondaryDOISet(Dictionary<string, DOIElement> primaryDOIElementDict, string dataFolderPath)
         {
+
+
             var secondaryDOISet = new HashSet<string>();
             primaryDOIElementDict.Values.ToList().ForEach((v) =>
             {
@@ -30,9 +33,22 @@ using System.Collections.ObjectModel;namespace DataProcessor
 
                 });
             });
+
+            var secondaryDOIList = secondaryDOISet.ToList();
+            var specialContainerDOISet = DoiToTagMapper.CollectSpecialContainerDOI(dataFolderPath, secondaryDOIList, dataFolderPath + "/auto_generated/log/build_secondary_doi_set.log");
+
+            specialContainerDOISet.ToList().ForEach((v) =>
+            {
+                if (!primaryDOIElementDict.ContainsKey(v))
+                {
+                    secondaryDOISet.Add(v);
+                }
+            });
+
             var readOnlySecondaryDOISet = new ReadOnlySet<string>(secondaryDOISet);
             return readOnlySecondaryDOISet;
         }
+
 
 
         public static void BuildTagCSVFromDataCite(DBLPOptions opts)
@@ -87,10 +103,10 @@ using System.Collections.ObjectModel;namespace DataProcessor
             OutputSystemMessageFunction("Creating DOI to Tag Mapper");
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.DataFolderPath + "/raw");
             var primaryDOISet = new ReadOnlySet<string>(new HashSet<string>(doiToTagMapper.Keys));
-       
 
 
-            
+
+
 
             OutputSystemMessageFunction("Building cache for primary DOI elements");
             await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, primaryDOISet, "primary_small_cache_hash.csv");
@@ -108,24 +124,24 @@ using System.Collections.ObjectModel;namespace DataProcessor
             OutputSystemMessageFunction("Building primary DOI element dictionary");
             var primaryDOIElementDict = DOIElementPreprocessor.BuildDOIElementDictionary(opts.DataFolderPath, primaryDOISet);
 
-            OutputSystemMessageFunction("Saving primary DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, PrimaryDOIElementFileName));
-            DOIElement.Save(primaryDOIElementDict, GetFilePathInResultFolder(opts.DataFolderPath, PrimaryDOIElementFileName));
+            OutputSystemMessageFunction("Saving primary DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, PRIMARY_DOI_ELEMENT_FILENAME));
+            DOIElement.Save(primaryDOIElementDict, GetFilePathInResultFolder(opts.DataFolderPath, PRIMARY_DOI_ELEMENT_FILENAME));
 
         }
         public static async Task<int> BuildSmallCacheForSecondaryDOIElements(DBLPOptions opts)
         {
 
-            OutputSystemMessageFunction("Creating DOI to Tag Mapper");
-            var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.DataFolderPath + "/raw");
-            var primaryDOISet = new HashSet<string>(doiToTagMapper.Keys);
+            //OutputSystemMessageFunction("Creating DOI to Tag Mapper");
+            //var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.DataFolderPath + "/raw");
+            //var primaryDOISet = new HashSet<string>(doiToTagMapper.Keys);
 
 
             OutputSystemMessageFunction("Loading primary DOI element dictionary");
-            var primaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, PrimaryDOIElementFileName), true);
+            var primaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, PRIMARY_DOI_ELEMENT_FILENAME), true);
 
 
             OutputSystemMessageFunction("Building secondary DOI set");
-            var secondaryDOISet = BuildSecondaryDOISet(primaryDOIElementDict);
+            var secondaryDOISet = BuildSecondaryDOISet(primaryDOIElementDict, opts.DataFolderPath);
 
             OutputSystemMessageFunction("Building cache for secondary DOI set");
             await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, secondaryDOISet, "secondary_small_cache_hash.csv");
@@ -141,21 +157,21 @@ using System.Collections.ObjectModel;namespace DataProcessor
             var primaryDOISet = new HashSet<string>(doiToTagMapper.Keys);
 
             OutputSystemMessageFunction("Loading primary DOI element dictionary");
-            var primaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, PrimaryDOIElementFileName), true);
+            var primaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, PRIMARY_DOI_ELEMENT_FILENAME), true);
 
             OutputSystemMessageFunction("Building secondary DOI set");
-            var secondaryDOISet = BuildSecondaryDOISet(primaryDOIElementDict);
+            var secondaryDOISet = BuildSecondaryDOISet(primaryDOIElementDict, opts.DataFolderPath);
 
             OutputSystemMessageFunction("Building secondary DOI element dictionary");
             var secondaryDOIElementDict = DOIElementPreprocessor.BuildDOIElementDictionary(opts.DataFolderPath, secondaryDOISet);
 
-            OutputSystemMessageFunction("Saving secondary DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, SecondaryDOIElementFileName));
-            DOIElement.Save(secondaryDOIElementDict, GetFilePathInResultFolder(opts.DataFolderPath, SecondaryDOIElementFileName));
+            OutputSystemMessageFunction("Saving secondary DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, SECONDARY_DOI_ELEMENT_FILENAME));
+            DOIElement.Save(secondaryDOIElementDict, GetFilePathInResultFolder(opts.DataFolderPath, SECONDARY_DOI_ELEMENT_FILENAME));
 
-            OutputSystemMessageFunction("Saving secondary DOI list to: " + GetFilePathInResultFolder(opts.DataFolderPath, SecondaryDOIListFileName));
+            OutputSystemMessageFunction("Saving secondary DOI list to: " + GetFilePathInResultFolder(opts.DataFolderPath, SECONDARY_DOI_LIST_FILENAME));
             var secondaryDOIList = secondaryDOISet.ToList();
             secondaryDOIList.Sort();
-            CSVFunctions.WriteCSV(GetFilePathInResultFolder(opts.DataFolderPath, SecondaryDOIListFileName), secondaryDOIList);
+            CSVFunctions.WriteCSV(GetFilePathInResultFolder(opts.DataFolderPath, SECONDARY_DOI_LIST_FILENAME), secondaryDOIList);
 
         }
 
@@ -194,8 +210,8 @@ using System.Collections.ObjectModel;namespace DataProcessor
         {
             OutputSystemMessageFunction("Process: CreateLightweightDOIInfoFolder[Start]");
 
-            var primaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, ModifiedPrimaryDOIElementFileName), true);
-            var secondaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, ModifiedSecondaryDOIElementFileName), true);
+            var primaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_PRIMARY_DOI_ELEMENT_FILENAME), true);
+            var secondaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_SECONDARY_DOI_ELEMENT_FILENAME), true);
             OutputSystemMessageFunction("Building lightweight DOI element component");
             var lightweightDOIElementComponent = LightweightDOIElementComponent.Build(primaryDOIElementDict, secondaryDOIElementDict);
 
@@ -213,8 +229,8 @@ using System.Collections.ObjectModel;namespace DataProcessor
 
             OutputSystemMessageFunction("Running doi_processor");
 
-            var primaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, PrimaryDOIElementFileName), true);
-            var secondaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, SecondaryDOIElementFileName), true);
+            var primaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, PRIMARY_DOI_ELEMENT_FILENAME), true);
+            var secondaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, SECONDARY_DOI_ELEMENT_FILENAME), true);
 
             OutputSystemMessageFunction("Modifying container title using DBLP summary");
             ReplacementRules.ReplaceContainerTitleUsingDBLPSummary(GetFilePathInResultFolder(opts.DataFolderPath, "dblp_proceedings.jsonl"), primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
@@ -238,6 +254,9 @@ using System.Collections.ObjectModel;namespace DataProcessor
             OutputSystemMessageFunction("Escaping container title");
             ReplacementRules.EscapeProcessing(primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
+            OutputSystemMessageFunction("Modifying container DOI by DOI prefix");
+            ReplacementRules.RpelaceContainerDOIByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/cotaniner_doi_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+
             //OutputSystemMessageFunction("Modifying container title by DOI prefix");
             //ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_container_title_value.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
@@ -248,11 +267,11 @@ using System.Collections.ObjectModel;namespace DataProcessor
             ReplacementRules.AppendTags(opts.DataFolderPath, primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
 
-            OutputSystemMessageFunction("Saving primary DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, ModifiedPrimaryDOIElementFileName));
-            DOIElement.Save(primaryDOIElementDict, GetFilePathInResultFolder(opts.DataFolderPath, ModifiedPrimaryDOIElementFileName));
+            OutputSystemMessageFunction("Saving primary DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_PRIMARY_DOI_ELEMENT_FILENAME));
+            DOIElement.Save(primaryDOIElementDict, GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_PRIMARY_DOI_ELEMENT_FILENAME));
 
-            OutputSystemMessageFunction("Saving secondary DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, ModifiedSecondaryDOIElementFileName));
-            DOIElement.Save(secondaryDOIElementDict, GetFilePathInResultFolder(opts.DataFolderPath, ModifiedSecondaryDOIElementFileName));
+            OutputSystemMessageFunction("Saving secondary DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_SECONDARY_DOI_ELEMENT_FILENAME));
+            DOIElement.Save(secondaryDOIElementDict, GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_SECONDARY_DOI_ELEMENT_FILENAME));
 
             OutputSystemMessageFunction("doi_processor is finished");
 
