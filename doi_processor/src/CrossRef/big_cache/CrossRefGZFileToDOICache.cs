@@ -11,6 +11,7 @@ namespace DataProcessor
         {
             public string DOI { get; set; } = "";
             public string Type { get; set; } = "";
+            public string Title { get; set; } = "";
             public List<string> ISBNList { get; set; } = new List<string>();
         }
         public static string GetGZFileToDoiFolderPath(string dataFolderPath)
@@ -79,6 +80,16 @@ namespace DataProcessor
                             {
                                 element.Type = dict["type"];
                             }
+                            element.Title = "";
+                            if (dict.ContainsKey("title"))
+                            {
+                                var titleList = JsonSerializer.Deserialize<List<string>>(dict["title"]);
+                                if (titleList != null && titleList.Count > 0)
+                                {
+                                    element.Title = CSVFunctions.DeleteNewLineCode(titleList[0]);
+                                }
+                            }
+
                             if (dict.ContainsKey("ISBN"))
                             {
                                 var ISBNList = JsonSerializer.Deserialize<List<string>>(dict["ISBN"]);
@@ -95,13 +106,13 @@ namespace DataProcessor
                     var sw = new StreamWriter(csvFilePath, false, Encoding.UTF8);
                     foreach (var doi in dois)
                     {
-                        if(doi.ISBNList.Count > 0)
+                        if (doi.ISBNList.Count > 0)
                         {
-                            sw.WriteLine(doi.DOI + "\t" + doi.Type + "\t" + string.Join("\t", doi.ISBNList));
+                            sw.WriteLine(doi.DOI + "\t" + doi.Type + "\t" + doi.Title + "\t" + string.Join("\t", doi.ISBNList));
                         }
                         else
                         {
-                            sw.WriteLine(doi.DOI + "\t" + doi.Type + "\t");
+                            sw.WriteLine(doi.DOI + "\t" + doi.Type + "\t" + doi.Title);
                         }
                     }
                     sw.Close();
