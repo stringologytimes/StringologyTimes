@@ -119,6 +119,18 @@ namespace DataProcessor
             {
                 element.Title = $"Dummy Title: {element.DOI}";
             }
+
+            if (dict.ContainsKey("ISBN"))
+            {
+                var isbnList = JsonSerializer.Deserialize<List<string>>(dict["ISBN"]);
+                if (isbnList != null && isbnList.Count > 0)
+                {
+                    element.ISBNList = isbnList;
+                }
+            }
+
+
+
             element.Authors = AuthorInfo.ParseFromCrossRefJSONL(dict, element.Type);
 
             var containerTitleFlag = false;

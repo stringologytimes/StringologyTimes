@@ -46,7 +46,7 @@ namespace DataProcessor
         {
             var crossrefFolderInfo = CrossRefCacheBuilder.SearchCrossRefFolder(dataFolderPath + "/external");
 
-            DataProcessor.CrossRefGZFileToDOICache.Build(dataFolderPath);
+            DataProcessor.CrossRefGZFileToDOICache.Build(dataFolderPath, crossrefFolderInfo.FullName);
 
             var otherCSVPath = CrossRefDOIToGZFileCache.GetOthersFilePath(dataFolderPath);
             var otherCSVFileInfo = new FileInfo(otherCSVPath);
@@ -54,6 +54,8 @@ namespace DataProcessor
             {
                 CrossRefDOIToGZFileCache.Build(dataFolderPath);
             }
+
+            CrossRefDOIToGZFileCache.BuildISBNFile(dataFolderPath);
 
             //BuildBookCache(dataFolderPath, crossRefDoiListFolderPath);
 
@@ -127,26 +129,26 @@ namespace DataProcessor
             return doiElementDict;
         }
 
-        public static void UpdateSmallCacheUsingContainerTitle(string dataFolderPath)
-        {
-            var filePath = CrossRefDOIToGZFileCache.GetDOIToGZFileFolderPath(dataFolderPath);
-            var crossRefDicFromContainerTitleToDOI = DataProcessor.CrossRefDOIToGZFileCache.BuildDictionaryFromContainerTitleToDOI(filePath);
-
-            var additionalCrossRefDOISet = new HashSet<string>();
-
-            var doiElementDict = LoadSmallCache(dataFolderPath);
-            doiElementDict.ToList().ForEach((v) =>
-            {
-                if (crossRefDicFromContainerTitleToDOI.ContainsKey(v.Value.ContainerTitle))
+        /*
+                public static void UpdateSmallCacheUsingContainerTitle(string dataFolderPath)
                 {
-                    additionalCrossRefDOISet.Add(v.Value.ContainerDOI);
+                    var filePath = CrossRefDOIToGZFileCache.GetDOIToGZFileFolderPath(dataFolderPath);
+                    var crossRefDicFromContainerTitleToDOI = DataProcessor.CrossRefDOIToGZFileCache.BuildDictionaryFromContainerTitleToDOI(filePath);
+
+                    var additionalCrossRefDOISet = new HashSet<string>();
+
+                    var doiElementDict = LoadSmallCache(dataFolderPath);
+                    doiElementDict.ToList().ForEach((v) =>
+                    {
+                        if (crossRefDicFromContainerTitleToDOI.ContainsKey(v.Value.ContainerTitle))
+                        {
+                            additionalCrossRefDOISet.Add(v.Value.ContainerDOI);
+                        }
+                    });
+                    var crossrefFolderInfo = CrossRefCacheBuilder.SearchCrossRefFolder(dataFolderPath + "/external");
+                    DataProcessor.CrossRefFoundDOICache.Update(additionalCrossRefDOISet.ToList(), dataFolderPath, crossrefFolderInfo.FullName);
                 }
-            });
-            var crossrefFolderInfo = CrossRefCacheBuilder.SearchCrossRefFolder(dataFolderPath + "/external");
-            DataProcessor.CrossRefFoundDOICache.Update(additionalCrossRefDOISet.ToList(), dataFolderPath, crossrefFolderInfo.FullName);
-
-
-        }
+                */
 
         public static void UpdateSmallCacheUsingDOIPrefix(string dataFolderPath)
         {
@@ -181,6 +183,46 @@ namespace DataProcessor
             logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
             logFile.Close();
         }
+
+        public static void UpdateSmallCacheUsingISBN(string dataFolderPath)
+        {
+            var logFilePath = dataFolderPath + "/auto_generated/log/update_small_cache_using_isbn.log";
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
+
+            var isbnFilePath = CrossRefDOIToGZFileCache.GetISBNFilePath(dataFolderPath);
+            var isbnDictionary = CSVFunctions.ReadCSVAasDictionary(isbnFilePath);
+
+            var additionalCrossRefDOISet = new HashSet<string>();
+
+            var doiElementDict = LoadSmallCache(dataFolderPath);
+            doiElementDict.ToList().ForEach((v) =>
+            {
+                v.Value.ISBNList.ForEach((w) =>
+                {
+                    if (isbnDictionary.ContainsKey(w))
+                    {
+                        var foundDOI = isbnDictionary[w];
+                        if (!doiElementDict.ContainsKey(foundDOI))
+                        {
+                            if (!additionalCrossRefDOISet.Contains(foundDOI))
+                            {
+                                logFile.WriteLine("Matched DOI: " + v.Value.DOI + " -> " + foundDOI);
+                            }
+                            additionalCrossRefDOISet.Add(foundDOI);
+                        }
+
+                    }
+                });
+            });
+
+            var crossrefFolderInfo = CrossRefCacheBuilder.SearchCrossRefFolder(dataFolderPath + "/external");
+            DataProcessor.CrossRefFoundDOICache.Update(additionalCrossRefDOISet.ToList(), dataFolderPath, crossrefFolderInfo.FullName);
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
+            logFile.Close();
+
+        }
+
 
 
 

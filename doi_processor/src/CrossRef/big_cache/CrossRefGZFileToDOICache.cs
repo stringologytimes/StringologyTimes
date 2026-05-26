@@ -11,7 +11,7 @@ namespace DataProcessor
         {
             public string DOI { get; set; } = "";
             public string Type { get; set; } = "";
-            public string Title { get; set; } = "";
+            public List<string> ISBNList { get; set; } = new List<string>();
         }
         public static string GetGZFileToDoiFolderPath(string dataFolderPath)
         {
@@ -19,7 +19,7 @@ namespace DataProcessor
         }
 
 
-        public static void Build(string dataFolderPath)
+        public static void Build(string dataFolderPath, string externalFolderPath)
         {
             Console.WriteLine("Creating DOI List(CrossRef): ");
 
@@ -32,7 +32,7 @@ namespace DataProcessor
 
 
             // gzファイル毎の処理を並列化し、各dict.Countを配列に格納
-            var gzFiles = System.IO.Directory.GetFiles(main_folder.FullName, "*.gz", System.IO.SearchOption.TopDirectoryOnly);
+            var gzFiles = System.IO.Directory.GetFiles(externalFolderPath, "*.gz", System.IO.SearchOption.TopDirectoryOnly);
 
             var FinishedCounter = 0;
             var parallelCounter = 0;
@@ -79,13 +79,12 @@ namespace DataProcessor
                             {
                                 element.Type = dict["type"];
                             }
-                            element.Title = "";
-                            if (dict.ContainsKey("title"))
+                            if (dict.ContainsKey("ISBN"))
                             {
-                                var titleList = JsonSerializer.Deserialize<List<string>>(dict["title"]);
-                                if (titleList != null && titleList.Count > 0)
+                                var ISBNList = JsonSerializer.Deserialize<List<string>>(dict["ISBN"]);
+                                if (ISBNList != null && ISBNList.Count > 0)
                                 {
-                                    element.Title = CSVFunctions.DeleteNewLineCode(titleList[0]);
+                                    element.ISBNList = ISBNList.ToList();
                                 }
                             }
 
@@ -96,9 +95,9 @@ namespace DataProcessor
                     var sw = new StreamWriter(csvFilePath, false, Encoding.UTF8);
                     foreach (var doi in dois)
                     {
-                        if (doi.Type == "book" || doi.Type == "journal" || doi.Type == "proceedings" || doi.Type == "journal-volume")
+                        if(doi.ISBNList.Count > 0)
                         {
-                            sw.WriteLine(doi.DOI + "\t" + doi.Type + "\t" + doi.Title);
+                            sw.WriteLine(doi.DOI + "\t" + doi.Type + "\t" + string.Join("\t", doi.ISBNList));
                         }
                         else
                         {
