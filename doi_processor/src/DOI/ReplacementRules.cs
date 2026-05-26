@@ -279,6 +279,12 @@ namespace DataProcessor
                         {
                             v.Value.ContainerDOI = regexMatchResult.NewValue;
                             logFile.WriteLine("Replaced container DOI: {0} -> {1}", doi, regexMatchResult.NewValue);
+
+                            if (mergedDictionary.ContainsKey(v.Value.ContainerDOI))
+                            {
+                                v.Value.ContainerTitle = mergedDictionary[v.Value.ContainerDOI].Title;
+                                v.Value.SeriesTitle = mergedDictionary[v.Value.ContainerDOI].SeriesTitle;
+                            }
                         }
                     });
                 });

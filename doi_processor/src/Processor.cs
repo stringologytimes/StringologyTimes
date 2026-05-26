@@ -35,7 +35,17 @@ namespace DataProcessor
             });
 
             var secondaryDOIList = secondaryDOISet.ToList();
-            var specialContainerDOISet = DoiToTagMapper.CollectSpecialContainerDOI(dataFolderPath, secondaryDOIList, dataFolderPath + "/auto_generated/log/build_secondary_doi_set.log");
+            var mergedDOIList = new List<string>();
+            primaryDOIElementDict.Values.ToList().ForEach((v) =>
+            {
+                mergedDOIList.Add(v.DOI);
+            });
+            secondaryDOISet.ToList().ForEach((v) =>
+            {
+                mergedDOIList.Add(v);
+            });
+
+            var specialContainerDOISet = DoiToTagMapper.CollectSpecialContainerDOI(dataFolderPath, mergedDOIList, dataFolderPath + "/auto_generated/log/build_secondary_doi_set.log");
 
             specialContainerDOISet.ToList().ForEach((v) =>
             {
@@ -257,8 +267,8 @@ namespace DataProcessor
             OutputSystemMessageFunction("Modifying container DOI by DOI prefix");
             ReplacementRules.RpelaceContainerDOIByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/cotaniner_doi_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
-            //OutputSystemMessageFunction("Modifying container title by DOI prefix");
-            //ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_container_title_value.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+            OutputSystemMessageFunction("Modifying container title by DOI prefix");
+            ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_container_title_value.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Modifying type by DOI prefix");
             ReplacementRules.ReplaceTypeByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_type_value.tsv", primaryDOIElementDict, secondaryDOIElementDict);

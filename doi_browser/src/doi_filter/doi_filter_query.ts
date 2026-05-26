@@ -143,6 +143,14 @@ export class DOIFilterQuery {
                         b = true;
                     }
                 }
+                else if(keyword.indexOf("@CONTAINER_TITLE:") == 0){
+                    const containerTitleKeyword = keyword.substring(17);
+                    if(doiInfo.container_title == containerTitleKeyword){                    
+                        b = true;
+                    }else if(containerTitleKeyword == "null" && doiInfo.container_title == ""){
+                        b = true;
+                    }
+                }
                 else{
                     if(doiInfo.title.indexOf(keyword) != -1){
                         b = true;
