@@ -144,7 +144,7 @@ namespace DataProcessor
             var secondaryDOISet = BuildSecondaryDOISet(primaryDOIElementDict, opts.DataFolderPath);
 
             OutputSystemMessageFunction("Building cache for secondary DOI set");
-            await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, secondaryDOISet, "secondary_small_cache_hash.csv");
+            await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, secondaryDOISet, "secondary_small_cache_hash.tsv");
 
             return 0;
         }
@@ -154,7 +154,7 @@ namespace DataProcessor
 
             OutputSystemMessageFunction("Creating DOI to Tag Mapper");
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.DataFolderPath + "/raw");
-            var primaryDOISet = new HashSet<string>(doiToTagMapper.Keys);
+            //var primaryDOISet = new HashSet<string>(doiToTagMapper.Keys);
 
             OutputSystemMessageFunction("Loading primary DOI element dictionary");
             var primaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, PRIMARY_DOI_ELEMENT_FILENAME), true);

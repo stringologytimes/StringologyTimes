@@ -179,7 +179,11 @@ namespace DataProcessor
                 counter++;
                 var fileInfo = new FileInfo(v);
 
-                Console.Write("\r\t\t Loading JSONL [" + counter + " / " + maxCount + "]" + ", found articles: " + foundJSONLMap.Count);
+                if (counter % 50 == 0)
+                {
+                Console.Write("\r\t\t Loading JSONL [" + counter + " / " + maxCount + "]" + ", found articles: " + foundJSONLMap.Count);                    
+                }
+
 
                 foreach (var line in JsonLib.ReadLinesFromGzip(v))
                 {

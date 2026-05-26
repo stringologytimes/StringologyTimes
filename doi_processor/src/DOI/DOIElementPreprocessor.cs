@@ -37,22 +37,39 @@ namespace DataProcessor
         }
         */
 
-        public static async Task BuildSmallCache(string dataFolderPath, string mailAddress, ReadOnlySet<string> doiSet, string cacheFileName)
+        public static async Task BuildSmallCache(string dataFolderPath, string mailAddress, ReadOnlySet<string> doiSet, string checksumFileName)
         {
             var logFolderPath = dataFolderPath + "/auto_generated/log";
 
-            var hashFileInfo = new FileInfo(dataFolderPath + "/auto_generated/cache/" + cacheFileName);
+            var checksumFilePath = dataFolderPath + "/auto_generated/cache/" + checksumFileName;
+
             Console.WriteLine("Building SmallCache [START]");
 
-            List<string> hashList = new List<string>();
-            hashList.Add(HashFunctions.ComputeHash(doiSet));
-            var date = DateTime.Now;
-            hashList.Add(date.ToString("yyyy-MM"));
+            var currentChecksumDictionary = new Dictionary<string, string>();
+            currentChecksumDictionary["doiSet_hash"] = HashFunctions.ComputeHash(doiSet);
+            currentChecksumDictionary["date"] = DateTime.Now.ToString("yyyy-MM");
 
-            if (hashFileInfo.Exists)
+            if (new FileInfo(checksumFilePath).Exists)
             {
-                var oldHashList = CSVFunctions.ReadCSV(hashFileInfo.FullName);
-                if (oldHashList.Count == 2 && oldHashList[0] == hashList[0] && oldHashList[1] == hashList[1])
+                var checksumDictionary_tmp = CSVFunctions.ReadCSVAasDictionary(checksumFilePath);
+                var b = true;
+
+                foreach (var item in currentChecksumDictionary)
+                {
+                    if (checksumDictionary_tmp.ContainsKey(item.Key))
+                    {
+                        if (checksumDictionary_tmp[item.Key] != item.Value)
+                        {
+                            b = false;
+                        }
+                    }
+                    else
+                    {
+                        b = false;
+                    }
+                }
+
+                if (b)
                 {
                     Console.WriteLine("SmallCache already exists [END]");
                     return;
@@ -95,7 +112,7 @@ namespace DataProcessor
             DOIElement.Save(doiElementDict, GetCachePath(dataFolderPath));
 
 
-            CSVFunctions.WriteCSV(hashFileInfo.FullName, hashList);
+            CSVFunctions.WriteCSVAsDictionary(checksumFilePath, currentChecksumDictionary);
             Console.WriteLine("Building SmallCache [END]");
         }
 
