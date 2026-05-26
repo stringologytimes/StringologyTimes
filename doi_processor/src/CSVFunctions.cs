@@ -99,6 +99,23 @@ namespace DataProcessor
             });
             return dict;
         }
+        public static List<KeyValuePair<string, string>> ReadCSVAsKeyValuePairList(string filePath)
+        {
+            var list = ReadCSV(filePath);
+            var fileInfo = new FileInfo(filePath);
+            var delimiter = fileInfo.Extension == ".csv" ? "," : "\t";
+
+            var keyValuePairList = new List<KeyValuePair<string, string>>();
+            list.ForEach((v) =>
+            {
+                var cols = v.Split(delimiter);
+                if (cols.Length > 1)
+                {
+                    keyValuePairList.Add(new KeyValuePair<string, string>(cols[0], cols[1]));
+                }
+            });
+            return keyValuePairList;
+        }
         
     }
 }

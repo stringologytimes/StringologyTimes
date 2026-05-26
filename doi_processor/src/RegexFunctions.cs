@@ -41,7 +41,7 @@ namespace DataProcessor
                     }
                     else
                     {
-                        return new SpecialRegexMatchResult { IsMatch = true, NewValue = match.Value };
+                        return new SpecialRegexMatchResult { IsMatch = true, NewValue = newTextRepresentation };
                     }
                 }
                 else

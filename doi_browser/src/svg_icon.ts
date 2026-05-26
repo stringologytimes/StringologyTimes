@@ -285,3 +285,15 @@ export function setIconToSpan(
     span.setAttribute("aria-label", text);
     span.setAttribute("role", "img");
 }
+
+export function addIconToSpan(
+    span: HTMLSpanElement,
+    text: string,
+    fontSize: number,
+    backgroundColor: string,
+    textColor: string
+): void {
+    var subSpan = document.createElement('span');
+    span.appendChild(subSpan);
+    setIconToSpan(subSpan, text, fontSize, backgroundColor, textColor);
+}

@@ -8,6 +8,9 @@ export class SummaryInfo {
     public doiCategoryCountList: number[] = [];
     public containerTitleList: string[] = [];
     public containerTitleCountList: number[] = [];
+    public seriesTitleList: string[] = [];
+    public seriesTitleCountList: number[] = [];
+
     public yearFromList: string[] = [];
     public yearFromCountList: number[] = [];
     public yearToList: string[] = [];
@@ -24,19 +27,30 @@ export class SummaryInfo {
         this.doiCategoryCountList = this.doiCategoryList.map(type => filterResult.searchByType(type, doiNumberFilterSet, doiInfoCollection).length);
 
         this.containerTitleList = filterResult.getContainerTitles();
+        this.seriesTitleList = filterResult.getSeriesTitles();
+
+
         if(filterInput.sortBy == "alphabetical-order-by-container-title"){
             this.containerTitleList.sort();
+            this.seriesTitleList.sort();
         }else if(filterInput.sortBy == "article-count"){
             const containerTitleToDoiCountMapper = new Map<string, number>();
             this.containerTitleList.forEach(containerTitle => {
                 containerTitleToDoiCountMapper.set(containerTitle, filterResult.searchByContainerTitle(containerTitle, doiNumberFilterSet, doiInfoCollection).length);
             });
             this.containerTitleList = this.containerTitleList.sort((a, b) => containerTitleToDoiCountMapper.get(b)! - containerTitleToDoiCountMapper.get(a)!);
+
+            const seriesTitleToDoiCountMapper = new Map<string, number>();
+            this.seriesTitleList.forEach(seriesTitle => {
+                seriesTitleToDoiCountMapper.set(seriesTitle, filterResult.searchBySeriesTitle(seriesTitle, doiNumberFilterSet, doiInfoCollection).length);
+            });
+            this.seriesTitleList = this.seriesTitleList.sort((a, b) => seriesTitleToDoiCountMapper.get(b)! - seriesTitleToDoiCountMapper.get(a)!);
         }
 
 
         this.containerTitleCountList = this.containerTitleList.map(containerTitle => filterResult.searchByContainerTitle(containerTitle, doiNumberFilterSet, doiInfoCollection).length);
-
+        this.seriesTitleCountList = this.seriesTitleList.map(seriesTitle => filterResult.searchBySeriesTitle(seriesTitle, doiNumberFilterSet, doiInfoCollection).length);
+        
         {
             let yearFromList: string[] = [];
             const minYear = filterResult.getMinimumYear();

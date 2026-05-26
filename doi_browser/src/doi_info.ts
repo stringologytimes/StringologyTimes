@@ -59,10 +59,18 @@ export class DOIInfoCollection {
     public lightweightDOIInfos: LightWeightDOIInfo[] = [];
     public authorList: string[] = [];
     public tagList: string[] = [];
+    public doiToIDMapper: Map<string, number> = new Map();
 
 
     public length(): number {
         return this.lightweightDOIInfos.length;
+    }
+    public getIDByDOI(doi: string): number | null {
+        if(this.doiToIDMapper.has(doi)){
+            return this.doiToIDMapper.get(doi)!;
+        } else {
+            return null;
+        }
     }
     public getDOIByID(id: number): string {
         if(id >= this.lightweightDOIInfos.length){
@@ -212,6 +220,11 @@ export class DOIInfoCollection {
             numbers.forEach((number) => {
                 r.lightweightDOIInfos[index].tags.push(tag_list[number]);
             });
+        });
+
+        r.doiToIDMapper = new Map<string, number>();
+        r.lightweightDOIInfos.forEach((doiInfo, index) => {
+            r.doiToIDMapper.set(doiInfo.doi, index);
         });
 
         console.log("lightweightDOIInfos is loaded successfully : " + r.lightweightDOIInfos.length);

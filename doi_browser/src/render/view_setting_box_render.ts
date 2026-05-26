@@ -16,14 +16,22 @@ function getMaxPageNumber(viewSetting: DOIFilterViewSetting, summary_info: Summa
         }else{
             return Math.ceil(summary_info.containerTitleCountList.length / viewSetting.pageSize!) - 1;
         }
-    }else{
+    }
+    else if(viewSetting.viewMode == "series_title_list"){
+        if(summary_info.seriesTitleCountList.length == 0){
+            return 0;
+        }else{
+            return Math.ceil(summary_info.seriesTitleCountList.length / viewSetting.pageSize!) - 1;
+        }
+    }
+    else{
         throw new Error("Unknown view mode");
     }
 }
 
 function setModeSelectHTMLElement(selectedValue: ViewModeType) {
-    const viewModeList = ["article_list", "container_title_list"];
-    const viewModeValues = ["article_list", "container_title_list"];
+    const viewModeList = ["article_list", "container_title_list", "series_title_list"];
+    const viewModeValues = ["article_list", "container_title_list", "series_title_list"];
     setRadioBoxes("view-mode-list-div", "view-mode-template", selectedValue, viewModeList, viewModeValues);
 
     /*

@@ -9,6 +9,7 @@ import { renderContainerTitleList } from "./render/doi_filter_container_title_re
 import { SortByType } from "./doi_filter/doi_filter_query";
 import { DOIStatus } from "./doi_info";
 import { ViewModeType } from "./doi_filter/doi_filter_view_setting";
+import { renderSeriesTitleList } from "./render/doi_filter_series_title_render";
 
 
 export class BrowserInfo {
@@ -106,6 +107,13 @@ export class BrowserInfo {
             this.currentDOIFilter.query.container_title = containerTitle;
         }else{
             this.currentDOIFilter.query.container_title = null;
+        }
+
+        var seriesTitle = url.searchParams.get("series_title");
+        if (seriesTitle) {
+            this.currentDOIFilter.query.series_title = seriesTitle;
+        }else{
+            this.currentDOIFilter.query.series_title = null;
         }
 
         var minimumYear = url.searchParams.get("minimum_year");
@@ -257,6 +265,10 @@ export class BrowserInfo {
             }
             else if (currentDOIFilterWithViewSetting.viewSetting.viewMode == "container_title_list") {
                 renderContainerTitleList(currentDOIFilterResult, currentDOIFilterWithViewSetting.viewSetting, currentSummaryInfo);
+            }
+            else if (currentDOIFilterWithViewSetting.viewSetting.viewMode == "series_title_list") {
+                console.log(currentSummaryInfo);
+                renderSeriesTitleList(currentDOIFilterResult, currentDOIFilterWithViewSetting.viewSetting, currentSummaryInfo);
             }
             else {
                 throw new Error("Unknown view mode");

@@ -14,10 +14,13 @@ export class DOIFilterQuery {
     public tags: string[] = [];
     public volume: string | null = null;
     public container_title: string | null = null;
+    public series_title: string | null = null;
     public doiReferences: string[] = [];    
     public excludeStatus: DOIStatus[] = [];
     public sortBy: SortByType = "unordered";
     public keywords: string[] = [];
+
+    /*
 
     public static buildFromURLParameters(): DOIFilterQuery {
         let r = new DOIFilterQuery();
@@ -53,6 +56,7 @@ export class DOIFilterQuery {
         }
         return r;
     }
+    */
 
     
     private filter(collection: DOIInfoCollection, candidates: number[]): number[] {
@@ -69,7 +73,7 @@ export class DOIFilterQuery {
     public is_empty(): boolean {
         return this.minimum_year == null && this.maximum_year == null && this.type == null && 
         this.authors.length == 0 && this.tags.length == 0 && this.volume == null && this.container_title == null 
-        && this.keywords.length == 0
+        && this.keywords.length == 0 && this.series_title == null
         && this.excludeStatus.length == 0 && this.doiReferences.length == 0;
     }
     public copy(): DOIFilterQuery {
@@ -81,6 +85,7 @@ export class DOIFilterQuery {
         r.tags = this.tags.map(tag => tag);
         r.volume = this.volume;
         r.container_title = this.container_title;
+        r.series_title = this.series_title;
         r.doiReferences = this.doiReferences.map(doiReference => doiReference);
         r.excludeStatus = this.excludeStatus.map(excludeStatus => excludeStatus);
         r.sortBy = this.sortBy;
@@ -105,6 +110,11 @@ export class DOIFilterQuery {
         if(this.container_title != null && doiInfo.container_title != this.container_title){
             return false;
         }
+        if(this.series_title != null && doiInfo.seriesTitle != this.series_title){
+            return false;
+        }
+
+
         if(this.doiReferences.length > 0 && !doiInfo.doiReferences.every(doiReference => this.doiReferences.includes(doiReference))){
             return false;
         }
@@ -131,9 +141,25 @@ export class DOIFilterQuery {
 
                 if(keyword.indexOf("@DOI:") == 0){
                     const doiKeyword = keyword.substring(5);
-                    if(doiInfo.doi == doiKeyword){
+                    if(doiKeyword.length > 0){
+                        var fstChar = doiKeyword.charAt(0);
+                        if(fstChar == "="){
+                            var regexPattern = doiKeyword.substring(1);
+                            var regex = new RegExp(regexPattern);
+                            if(regex.test(doiInfo.doi)){
+                                b = true;
+                            }
+                        }else{
+                            if(doiInfo.doi == doiKeyword){
+                                b = true;
+                            }        
+                        }
+
+                    }else{
                         b = true;
                     }
+
+
                 }
                 else if(keyword.indexOf("@CONTAINER_DOI:") == 0){
                     const containerDOIKeyword = keyword.substring(15);
@@ -213,6 +239,13 @@ export class DOIFilterQuery {
                 return false;
             }
         }
+        if(this.series_title != null && item.series_title != null){
+            if(this.series_title != item.series_title){
+                return false;
+            }
+        }
+
+
         if(this.doiReferences.length > 0){
             return false;
         }

@@ -8,6 +8,7 @@ export class DOIFilterResult {
     private yearToDoiMapper: Map<number, number[]> = new Map();
     private authorToDoiMapper: Map<string, number[]> = new Map();
     private containerTitleToDoiMapper: Map<string, number[]> = new Map();
+    private seriesTitleToDoiMapper: Map<string, number[]> = new Map();
     private doiReferencesToDoiMapper: Map<string, number[]> = new Map();
     private typeToDOIInfoMapper: Map<string, number[]> = new Map();
     private tagToDOIInfoMapper: Map<string, number[]> = new Map();
@@ -84,6 +85,12 @@ export class DOIFilterResult {
                 this.containerTitleToDoiMapper.set(doiInfo.container_title, [doiID]);
             }
 
+            if (this.seriesTitleToDoiMapper.has(doiInfo.seriesTitle)) {
+                this.seriesTitleToDoiMapper.get(doiInfo.seriesTitle)!.push(doiID);
+            } else {
+                this.seriesTitleToDoiMapper.set(doiInfo.seriesTitle, [doiID]);
+            }
+
             doiInfo.authorIDs.forEach(authorID => {
                 const author = r.authorList[authorID];
                 if (this.authorToDoiMapper.has(author)) {
@@ -150,6 +157,9 @@ export class DOIFilterResult {
     }
     public getContainerTitles(): string[] {
         return Array.from(this.containerTitleToDoiMapper.keys());
+    }
+    public getSeriesTitles(): string[] {
+        return Array.from(this.seriesTitleToDoiMapper.keys());
     }
     public getTags(): string[] {
         return Array.from(this.tagToDOIInfoMapper.keys());
@@ -263,6 +273,17 @@ export class DOIFilterResult {
         const r: DOIInfo[] = [];
         if (this.containerTitleToDoiMapper.has(container_title)) {
             this.containerTitleToDoiMapper.get(container_title)!.forEach(doiId => {
+                if (doiNumberFilterSet.has(doiId)) {
+                    r.push(collection.getDOIInfo(doiId));
+                }
+            });
+        }
+        return r;
+    }
+    public searchBySeriesTitle(series_title: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
+        const r: DOIInfo[] = [];
+        if (this.seriesTitleToDoiMapper.has(series_title)) {
+            this.seriesTitleToDoiMapper.get(series_title)!.forEach(doiId => {
                 if (doiNumberFilterSet.has(doiId)) {
                     r.push(collection.getDOIInfo(doiId));
                 }

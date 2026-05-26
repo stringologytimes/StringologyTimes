@@ -73,6 +73,14 @@ export function filterInputChange(inputElementName: string, browserInfo: Browser
       url.searchParams.set("container_title", containerTitle);
     }
   }
+  else if (inputElementName == "series-title") {
+    const seriesTitle = (document.getElementById("series-title-select") as HTMLSelectElement).value;
+    if (seriesTitle == "dont-care") {
+      url.searchParams.delete("series_title");
+    } else {
+      url.searchParams.set("series_title", seriesTitle);
+    }
+  }
   else if (inputElementName == "year-from") {
     const yearFrom = (document.getElementById("year-from-select") as HTMLSelectElement).value;
     if (yearFrom == "dont-care") {

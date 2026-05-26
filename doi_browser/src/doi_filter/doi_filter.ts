@@ -4,12 +4,14 @@ export class DOIFilter {
     public query: DOIFilterQuery = new DOIFilterQuery();
     public viewSetting: DOIFilterViewSetting = new DOIFilterViewSetting();
 
+    /*
     public static buildFromURLParameters(): DOIFilter {        
         let r = new DOIFilter();
         r.query = DOIFilterQuery.buildFromURLParameters();
         r.viewSetting = DOIFilterViewSetting.buildFromURLParameters();
        return r;
     }
+    */
 
     public copy(): DOIFilter {
         let r = new DOIFilter();

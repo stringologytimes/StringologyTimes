@@ -160,6 +160,13 @@ function renderContainerTitleSelectBox(summaryInfo: SummaryInfo, selectedValue: 
   }
 }
 
+function renderSeriesTitleSelectBox(summaryInfo: SummaryInfo, selectedValue: string | null) {
+  const seriesTitleSelect = document.getElementById("series-title-select");
+  if (seriesTitleSelect && seriesTitleSelect instanceof HTMLSelectElement) {
+    setSelectHTMLElement(seriesTitleSelect, summaryInfo.seriesTitleList, summaryInfo.seriesTitleCountList, selectedValue, "Any");
+  }
+}
+
 function renderMinimumYearSelectBox(summaryInfo: SummaryInfo, selectedMinimumYear: number | null, selectedMaximumYear: number | null) {
   const yearFromSelect = document.getElementById("year-from-select");
   const selectedMinimumYearStr = selectedMinimumYear == null ? null : selectedMinimumYear.toString();
@@ -227,6 +234,7 @@ export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIF
   console.log("renderFilterBox: " + filterInput.keywords);
   renderDOICategoryBox(summaryInfo, filterInput.type);
   renderContainerTitleSelectBox(summaryInfo, filterInput.container_title);
+  renderSeriesTitleSelectBox(summaryInfo, filterInput.series_title);
   renderMinimumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
   renderMaximumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
   renderSortBySelectBox(filterInput.sortBy);

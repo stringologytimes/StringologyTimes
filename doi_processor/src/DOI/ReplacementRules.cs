@@ -258,7 +258,7 @@ namespace DataProcessor
             logFile.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
             if (File.Exists(rulePath))
             {
-                var ruleList = CSVFunctions.ReadCSVAasDictionary(rulePath).ToList();
+                var ruleList = CSVFunctions.ReadCSVAsKeyValuePairList(rulePath);
                 var mergedDictionary = new Dictionary<string, DOIElement>();
                 primaryDOIElementDict.ToList().ForEach((v) =>
                 {
@@ -272,13 +272,14 @@ namespace DataProcessor
                 mergedDictionary.ToList().ForEach((v) =>
                 {
                     var doi = v.Key;
+                    var index = 0;
                     ruleList.ForEach((rule) =>
                     {
                         var regexMatchResult = SpecialRegexMatchResult.Match(rule.Key, doi, rule.Value);
                         if (regexMatchResult.IsMatch && regexMatchResult.NewValue != null)
                         {
                             v.Value.ContainerDOI = regexMatchResult.NewValue;
-                            logFile.WriteLine("Replaced container DOI: {0} -> {1}", doi, regexMatchResult.NewValue);
+                            logFile.WriteLine("Replaced container DOI {0}: {1} -> {2}", index, doi, regexMatchResult.NewValue);
 
                             if (mergedDictionary.ContainsKey(v.Value.ContainerDOI))
                             {
@@ -286,6 +287,7 @@ namespace DataProcessor
                                 v.Value.SeriesTitle = mergedDictionary[v.Value.ContainerDOI].SeriesTitle;
                             }
                         }
+                        index++;
                     });
                 });
             }

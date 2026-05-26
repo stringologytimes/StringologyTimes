@@ -46,14 +46,14 @@ namespace DataProcessor
 
 
             var doiPrefixSettingPath = dataFolderPath + "/raw/small_cache_setting/doi_prefix.tsv";
-            var doiPrefixDictionary = CSVFunctions.ReadCSVAasDictionary(doiPrefixSettingPath);
+            var doiPrefixKeyValuePairList = CSVFunctions.ReadCSVAsKeyValuePairList(doiPrefixSettingPath);
             var specialContainerDOIList = new List<string>();
 
             var additionalCrossRefDOISet = new HashSet<string>();
 
             doiList.ToList().ForEach((doi) =>
             {
-                doiPrefixDictionary.ToList().ForEach((w) =>
+                doiPrefixKeyValuePairList.ForEach((w) =>
                 {
                     var regexMatchResult = SpecialRegexMatchResult.Match(w.Key, doi, w.Value);
                     if (regexMatchResult.IsMatch && regexMatchResult.NewValue != null)

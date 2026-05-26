@@ -127,6 +127,16 @@ function changeParameter(parameterName: string, parameterValue: string) {
   history.pushState({}, "", url);
   EventFunctions.process(browserInfo);
 }
+function changeParameters(parameterList: [string, string][]) {
+  const url = new URL(window.location.href);
+  parameterList.forEach(([parameterName, parameterValue]) => {
+    url.searchParams.set(parameterName, parameterValue);
+  });
+  history.pushState({}, "", url);
+  EventFunctions.process(browserInfo);
+}
+
+
 
 function initializeParameter(parameterList: [string, string][]) {
   const url = new URL(window.location.href);
@@ -147,6 +157,7 @@ function initializeParameter(parameterList: [string, string][]) {
 (window as any).viewSettingInputChange = viewSettingInputChange;
 (window as any).containerTitleLiElementClick = containerTitleLiElementClick;
 (window as any).changeParameter = changeParameter;
+(window as any).changeParameters = changeParameters;
 (window as any).initializeParameter = initializeParameter;
 
 async function domFinished() {

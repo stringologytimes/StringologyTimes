@@ -1,7 +1,7 @@
 import { DOIInfo } from "../doi_info";
 import { DOIInfoCollection } from "../doi_info";
 import { DOIFilterResult } from "../doi_filter/doi_filter_result";
-import { setIconToLink, setIconToSpan } from "../svg_icon";
+import { addIconToSpan, setIconToLink, setIconToSpan } from "../svg_icon";
 
 
 export class DOIFilterStandardRender {
@@ -127,49 +127,6 @@ export class DOIFilterStandardRender {
                 const typeIconSpan = article.querySelector('.type-icon-span');
                 if (typeIconSpan && typeIconSpan instanceof HTMLSpanElement) {
                     setIconToSpan(typeIconSpan, doiInfo.type, 14, "random", "random");
-
-                    /*
-
-                    if (doiInfo.type == "Book") {
-                        setIconToSpan(typeIconSpan, "Book", 14, "purple", "white");
-                    } else if (doiInfo.type == "BookChapter") {
-                        setIconToSpan(typeIconSpan, "BookChapter", 14, "purple", "white");
-                    } else if (doiInfo.type == "BookSeries") {
-                        setIconToSpan(typeIconSpan, "BookSeries", 14, "purple", "white");
-                    } else if (doiInfo.type == "Misc") {
-                        setIconToSpan(typeIconSpan, "Misc", 14, "gray", "white");
-                    } else if (doiInfo.type == "Dataset") {
-                        setIconToSpan(typeIconSpan, "Dataset", 14, "gray", "white");
-                    } else if (doiInfo.type == "Dissertation") {
-                        setIconToSpan(typeIconSpan, "Dissertation", 14, "gray", "white");
-                    } else if (doiInfo.type == "Dissertation") {
-                        setIconToSpan(typeIconSpan, "Dissertation", 14, "gray", "white");
-                    } else if (doiInfo.type == "JournalArticle") {
-                        setIconToSpan(typeIconSpan, "JournalArticle", 14, "purple", "white");
-                    }
-                    else if (doiInfo.type == "JournalIssue") {
-                        setIconToSpan(typeIconSpan, "JournalIssue", 14, "purple", "white");
-                    } else if (doiInfo.type == "Other") {
-                        setIconToSpan(typeIconSpan, "Other", 14, "gray", "white");
-                    } else if (doiInfo.type == "PostedContent") {
-                        setIconToSpan(typeIconSpan, "PostedContent", 14, "purple", "white");
-                    }
-                    else if (doiInfo.type == "Preprint") {
-                        setIconToSpan(typeIconSpan, "Preprint", 14, "gray", "white");
-                    } else if (doiInfo.type == "Proceedings") {
-                        setIconToSpan(typeIconSpan, "Proceedings", 14, "gray", "white");
-                    } else if (doiInfo.type == "ProceedingsArticle") {
-                        setIconToSpan(typeIconSpan, "ProceedingsArticle", 14, "purple", "white");
-                    } else if (doiInfo.type == "Report") {
-                        setIconToSpan(typeIconSpan, "Report", 14, "gray", "white");
-                    } else if (doiInfo.type == "DataCite:ConferencePaper") {
-                        setIconToSpan(typeIconSpan, "DataCite:ConferencePaper", 14, "purple", "white");
-                    } else if (doiInfo.type == "Software") {
-                        setIconToSpan(typeIconSpan, "Software", 14, "gray", "white");
-                    } else {
-                        setIconToSpan(typeIconSpan, "Unknown", 14, "gray", "white");
-                    }
-                    */
                 } else {
                     throw new Error("typeIconSpan is not found");
                 }
@@ -179,6 +136,29 @@ export class DOIFilterStandardRender {
                     setIconToSpan(yearIconSpan, `${this.getDateStr(doiInfo)}`, 14, "brown", "white");
                 } else {
                     throw new Error("yearIconSpan is not found");
+                }
+
+                const optionalIconSpan = article.querySelector('.optional-icon-span');
+                if (optionalIconSpan && optionalIconSpan instanceof HTMLSpanElement) {
+                    optionalIconSpan.innerHTML = "";
+                    var containerDOI = doiInfo.container_DOI;
+                    var containerDOIID = doiInfoCollection.getIDByDOI(containerDOI);
+
+                    if(containerDOI.length > 0 && containerDOIID == null){
+                        var iconText = "InvalidContainerDOI";
+                        addIconToSpan(optionalIconSpan, iconText, 14, "red", "white");
+                    }
+                    if(doiInfo.container_DOI.length == 0){
+                        var iconText = "NoContainerDOI";
+                        addIconToSpan(optionalIconSpan, iconText, 14, "gray", "white");
+                    }
+
+                    if(doiInfo.doi == containerDOI){
+                        var iconText = "SelfContainerDOI";
+                        addIconToSpan(optionalIconSpan, iconText, 14, "green", "white");
+                    }
+                } else {
+                    throw new Error("optionalIconSpan is not found");
                 }
 
 
