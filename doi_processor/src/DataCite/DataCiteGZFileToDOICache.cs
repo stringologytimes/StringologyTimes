@@ -98,7 +98,7 @@ namespace DataProcessor
                             {
                                 throw new Exception("Title is null: " + line);
                             }
-                            title = CSVFunctions.DeleteNewLineCode(title);
+                            title = CSVFunctions.SanityzeForTSVFormat(title);
                             sw.WriteLine(doi + "\t" + type + "\t" + title);
                         }
                     }

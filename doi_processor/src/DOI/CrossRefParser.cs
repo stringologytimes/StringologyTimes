@@ -82,6 +82,19 @@ namespace DataProcessor
         }
         */
 
+        public static bool IsGroupType(string type)
+        {
+            if (type == "CrossRef:book" || type == "CrossRef:edited-book" || type == "CrossRef:journal" || type == "CrossRef:proceedings" || type == "CrossRef:journal-volume" || type == "CrossRef:book-series" || type == "CrossRef:proceedings-series")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
 
         public static DOIElement Parse(string jsonlString)
         {

@@ -86,7 +86,7 @@ namespace DataProcessor
                                 var titleList = JsonSerializer.Deserialize<List<string>>(dict["title"]);
                                 if (titleList != null && titleList.Count > 0)
                                 {
-                                    element.Title = CSVFunctions.DeleteNewLineCode(titleList[0]);
+                                    element.Title = CSVFunctions.SanityzeForTSVFormat(titleList[0]);
                                 }
                             }
 

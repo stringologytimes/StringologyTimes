@@ -169,6 +169,7 @@ namespace DataProcessor
             onlineWriters.Clear();
         }
 
+/*
         public static Dictionary<string, string> BuildDictionaryFromContainerTitleToDOI(string doiListFolderPath)
         {
             Console.WriteLine("Building Dictionary From Container Title to DOI(CrossRef): ");
@@ -216,6 +217,7 @@ namespace DataProcessor
             });
             return dic;
         }
+        */
 
 
 
@@ -263,7 +265,6 @@ namespace DataProcessor
                     var cols = line.Split("\t");
                     if (cols.Length >= 3)
                     {
-                        var containerTitle = cols[2];
                         var doi = cols[0];
                         var type = cols[1];
                         var title = cols[2];
@@ -280,6 +281,15 @@ namespace DataProcessor
                                     if (ISBN.Length > 0)
                                     {
                                         dic[ISBN] = doi;
+
+                                        var firstChar = ISBN[0];
+                                        
+                                        bool xb = int.TryParse(firstChar.ToString(), out int result);
+                                        if (!xb)
+                                        {
+                                            Console.WriteLine("ISBN: " + ISBN + " / " + firstChar.ToString());
+                                            Console.WriteLine(line);
+                                        }
                                     }
                                     //typeHashSet.Add(type);
                                 }

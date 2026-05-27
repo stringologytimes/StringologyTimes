@@ -82,14 +82,14 @@ namespace DataProcessor
             await DataProcessor.DataCitePreprocessor.UpdateSmallCache(dataFolderPath, doiSet, mailAddress);
 
 
-            //DataProcessor.CrossRefCacheBuilder.UpdateSmallCacheUsingContainerTitle(dataFolderPath);
-            //DataProcessor.DataCitePreprocessor.UpdateSmallCacheUsingContainerTitle(dataFolderPath);
+            DataProcessor.CrossRefCacheBuilder.UpdateSmallCacheUsingContainerDOI(dataFolderPath);
+            DataProcessor.DataCitePreprocessor.UpdateSmallCacheUsingContainerTitle(dataFolderPath);
 
-                        DataProcessor.CrossRefCacheBuilder.UpdateSmallCacheUsingISBN(dataFolderPath);
+            //DataProcessor.CrossRefCacheBuilder.UpdateSmallCacheUsingISBN(dataFolderPath);
 
 
             //DataProcessor.CrossRefCacheBuilder.UpdateSmallCacheUsingDOIPrefix(dataFolderPath);
-            DataProcessor.DataCitePreprocessor.UpdateSmallCacheUsingDOIPrefix(dataFolderPath);
+            //DataProcessor.DataCitePreprocessor.UpdateSmallCacheUsingDOIPrefix(dataFolderPath);
 
 
             var doiElementDict = new Dictionary<string, DOIElement>();

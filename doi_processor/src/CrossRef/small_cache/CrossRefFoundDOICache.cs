@@ -69,7 +69,7 @@ namespace DataProcessor
             notCrossRefDOIPrefixSet.ToList().ForEach((v) =>
             {
                 logFile.WriteLine("Not CrossRef DOI Prefix: " + v);
-            }); 
+            });
 
 
             var doiPrefixMacCount = doiPrefixToDoi.Count;
@@ -172,33 +172,46 @@ namespace DataProcessor
         {
 
             HashSet<string> doiSet = new HashSet<string>(dois);
+            var doiSetCopy = new HashSet<string>(dois);
+
+
             var maxCount = gzJSONLPaths.Count;
-            var counter = 0;
-            gzJSONLPaths.ForEach((v) =>
+            object lockObj = new object();
+
+            var options = new ParallelOptions
             {
-                counter++;
-                var fileInfo = new FileInfo(v);
+                MaxDegreeOfParallelism = 32 // 最大並列度を4に制限
+            };
+            System.Threading.Tasks.Parallel.For(0, gzJSONLPaths.Count, options, i =>
+            {
+                var gzFilePath = gzJSONLPaths[i];
+                var fileInfo = new FileInfo(gzFilePath);
 
-                if (counter % 50 == 0)
-                {
-                Console.Write("\r\t\t Loading JSONL [" + counter + " / " + maxCount + "]" + ", found articles: " + foundJSONLMap.Count);                    
-                }
 
 
-                foreach (var line in JsonLib.ReadLinesFromGzip(v))
+
+                foreach (var line in JsonLib.ReadLinesFromGzip(gzFilePath))
                 {
                     var dict = JsonLib.CreateDictionaryFromJSONL(line);
                     var doi = dict["DOI"];
                     if (doiSet.Contains(doi))
                     {
-                        foundJSONLMap[doi] = line;
-                        doiSet.Remove(doi);
+                        lock (lockObj)
+                        {
+                            foundJSONLMap[doi] = line;
+                            doiSetCopy.Remove(doi);
+
+                            if (doiSetCopy.Count % 100 == 0)
+                            {
+                                Console.WriteLine("\t\t Loading JSONL [" + doiSetCopy.Count + " / " + doiSet.Count + "]");
+                            }
+                        }
                     }
                 }
-
             });
 
-            notFoundDOIs.AddRange(doiSet.ToList());
+
+            notFoundDOIs.AddRange(doiSetCopy.ToList());
 
 
             Console.WriteLine();

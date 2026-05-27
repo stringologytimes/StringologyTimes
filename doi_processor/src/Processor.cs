@@ -264,8 +264,8 @@ namespace DataProcessor
             OutputSystemMessageFunction("Escaping container title");
             ReplacementRules.EscapeProcessing(primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
-            OutputSystemMessageFunction("Modifying container DOI by DOI prefix");
-            ReplacementRules.RpelaceContainerDOIByDOIPrefix(opts.DataFolderPath + "/raw/small_cache_setting/doi_prefix.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+            //OutputSystemMessageFunction("Modifying container DOI by DOI prefix");
+            //ReplacementRules.RpelaceContainerDOIByDOIPrefix(opts.DataFolderPath + "/raw/small_cache_setting/doi_prefix.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Modifying container title by DOI prefix");
             ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_container_title_value.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);

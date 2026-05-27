@@ -10,9 +10,9 @@ namespace DataProcessor
 {
     class CSVFunctions
     {
-        public static string DeleteNewLineCode(string line)
+        public static string SanityzeForTSVFormat(string line)
         {
-            return line.Replace("\r", "").Replace("\n", "");
+            return line.Replace("\r", "").Replace("\n", "").Replace("\t", " ");
         }
         public static void WriteCSV(string filePath, List<string> lines)
         {
