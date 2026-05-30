@@ -136,8 +136,22 @@ namespace DataProcessor
             if (dict.ContainsKey("ISBN"))
             {
                 var isbnList = JsonSerializer.Deserialize<List<string>>(dict["ISBN"]);
+
+
                 if (isbnList != null && isbnList.Count > 0)
                 {
+                    for (int i = 0; i < isbnList.Count; i++)
+                    {
+                        var isbn = isbnList[i];
+                        var isValid = ISBNConverter.IsValidIsbn10(isbn);
+                        if (isValid)
+                        {
+                            var isbn13 = ISBNConverter.Isbn10ToIsbn13(isbn);
+                            isbnList[i] = isbn13;
+                        }
+                    }
+
+
                     element.ISBNList = isbnList;
                 }
             }
