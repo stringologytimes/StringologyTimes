@@ -55,6 +55,7 @@ namespace DataProcessor
                 CrossRefDOIToGZFileCache.Build(dataFolderPath);
             }
 
+            MinorCache.BuildISSNFile(dataFolderPath);
             MinorCache.BuildISBNFile(dataFolderPath);
             MinorCache.BuildTitleFile(dataFolderPath);
             MinorCache.BuildTypeListFile(dataFolderPath);

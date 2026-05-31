@@ -40,8 +40,6 @@ namespace DataProcessor
                 return;
             }
 
-
-            var dic = new Dictionary<string, string>();
             var tsvFiles = System.IO.Directory.GetFiles(doiListFolderPath, "*.tsv", System.IO.SearchOption.TopDirectoryOnly);
             var lockObj = new object();
 
@@ -55,72 +53,158 @@ namespace DataProcessor
             {
                 MaxDegreeOfParallelism = 32 // 最大並列度を4に制限
             };
-            System.Threading.Tasks.Parallel.For(0, tsvFiles.Length, options, i =>
-            {
-                var tsvFile = tsvFiles[i];
-                var lines = File.ReadAllLines(tsvFile);
-                foreach (var line in lines)
-                {
-                    var cols = line.Split("\t");
-                    if (cols.Length >= 3)
-                    {
-                        var doi = cols[0];
-                        var type = cols[1];
-                        var title = cols[2];
 
-                        if (checkTypeHashSet.Contains(type))
-                        {
-                            lock (lockObj)
+            var results = tsvFiles.AsParallel().Select<string, List<KeyValuePair<string, string>>>(tsvFile =>
                             {
+                                var lines = File.ReadAllLines(tsvFile);
+                                List<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string, string>>();
 
 
-                                for (int j = 3; j < cols.Length; j++)
+                                foreach (var line in lines)
                                 {
-                                    var ISBN = cols[j];                                    
-                                    if (ISBN.Length > 0)
+                                    var element = DOIElement1.ParseFromTSVString(line);
+                                    if (element != null)
                                     {
-                                        var isValid = ISBNConverter.IsValidIsbn10(ISBN);
-                                        if (isValid)
+                                        if (checkTypeHashSet.Contains(element.Type))
                                         {
-                                            var isbn13 = ISBNConverter.Isbn10ToIsbn13(ISBN);
-                                            ISBN = isbn13;
-                                        }
-
-                                        dic[ISBN] = doi;
-
-                                        var firstChar = ISBN[0];
-
-                                        bool xb = int.TryParse(firstChar.ToString(), out int result);
-                                        if (!xb)
-                                        {
-                                            Console.WriteLine("ISBN: " + ISBN + " / " + firstChar.ToString());
-                                            Console.WriteLine(line);
+                                            foreach (var isStr in element.ISList)
+                                            {
+                                                if (isStr.StartsWith("ISBN:"))
+                                                {
+                                                    var isbn = isStr.Substring(5);
+                                                    pairs.Add(new KeyValuePair<string, string>(isbn, element.DOI));
+                                                }                                                
+                                            }
                                         }
                                     }
-                                    //typeHashSet.Add(type);
                                 }
-                            }
-                        }
 
+                                lock (lockObj)
+                                {
+                                    counter++;
+                                    if (counter % 1000 == 0)
+                                    {
+                                        Console.WriteLine($"Processing: {counter} / {maxCount}");
+                                    }
 
+                                }
 
+                                return pairs;
+                            }).ToList();
 
+            var dic = new Dictionary<string, string>();
 
-                    }
-                }
-
-                lock (lockObj)
+            foreach (var resultList in results)
+            {
+                foreach (var pair in resultList)
                 {
-                    counter++;
-                    if (counter % 1000 == 0)
-                    {
-                        Console.WriteLine($"Processing: {counter} / {maxCount}");
-                    }
-
+                    dic[pair.Key] = pair.Value;
                 }
+            }
 
-            });
             CSVFunctions.WriteCSVAsDictionary(isbnFilePath, dic);
+        }
+
+        public static void BuildISSNFile(string dataFolderPath)
+        {
+            Console.WriteLine("Building Dictionary From ISSN to DOI(CrossRef): ");
+            var doiListFolderPath = CrossRefGZFileToDOICache.GetGZFileToDoiFolderPath(dataFolderPath);
+
+            var issnFilePath = CrossRefDOIToGZFileCache.GetISSNFilePath(dataFolderPath);
+            var issnFile = new FileInfo(issnFilePath);
+            if (issnFile.Exists)
+            {
+                Console.WriteLine("ISSN File already exists: " + issnFilePath);
+                return;
+            }
+
+            var tsvFiles = System.IO.Directory.GetFiles(doiListFolderPath, "*.tsv", System.IO.SearchOption.TopDirectoryOnly);
+            var lockObj = new object();
+
+            //var typeHashSet = new HashSet<string>();
+
+            var checkTypeHashSet = GetCheckTypeHashSet(dataFolderPath);
+
+            var maxCount = tsvFiles.Length;
+            var counter = 0;
+            var options = new ParallelOptions
+            {
+                MaxDegreeOfParallelism = 32 // 最大並列度を4に制限
+            };
+
+            var results = tsvFiles.AsParallel().Select<string, Dictionary<string, string>>(tsvFile =>
+                            {
+                                var lines = File.ReadAllLines(tsvFile);
+                                var tmp_dic = new Dictionary<string, string>();
+
+
+                                foreach (var line in lines)
+                                {
+                                    var element = DOIElement1.ParseFromTSVString(line);
+                                    if (element != null)
+                                    {
+                                        if (checkTypeHashSet.Contains(element.Type))
+                                        {
+                                            foreach (var isStr in element.ISList)
+                                            {
+                                                if (isStr.StartsWith("ISSN:"))
+                                                {
+                                                    var issn = isStr.Substring(5);
+                                                    tmp_dic[issn] = element.DOI;
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            foreach (var isStr in element.ISList)
+                                            {
+                                                if (isStr.StartsWith("ISSN:"))
+                                                {
+                                                    var issn = isStr.Substring(5);
+                                                    if (!tmp_dic.ContainsKey(issn))
+                                                    {
+                                                        tmp_dic[issn] = "DUMMY:" + element.DOI;
+                                                    }
+                                                }
+                                            }                                            
+                                        }
+                                    }
+                                }
+
+                                lock (lockObj)
+                                {
+                                    counter++;
+                                    if (counter % 1000 == 0)
+                                    {
+                                        Console.WriteLine($"Processing: {counter} / {maxCount}");
+                                    }
+
+                                }
+
+                                return tmp_dic;
+                            }).ToList();
+
+            var dic = new Dictionary<string, string>();
+
+            foreach (var resultList in results)
+            {
+                foreach (var keyValuePair in resultList)
+                {
+                    if (keyValuePair.Value.StartsWith("DUMMY:"))
+                    {
+                        if (!dic.ContainsKey(keyValuePair.Key))
+                        {
+                            dic[keyValuePair.Key] = keyValuePair.Value;
+                        }
+                    }
+                    else
+                    {
+                        dic[keyValuePair.Key] = keyValuePair.Value;
+                    }
+                }
+            }
+
+            CSVFunctions.WriteCSVAsDictionary(issnFilePath, dic);
         }
 
         public static void BuildTitleFile(string dataFolderPath)
@@ -137,8 +221,7 @@ namespace DataProcessor
             }
 
 
-            var dic = new Dictionary<string, string>();
-            var tsvFiles = System.IO.Directory.GetFiles(doiListFolderPath, "*.tsv", System.IO.SearchOption.TopDirectoryOnly);
+            string[] tsvFiles = System.IO.Directory.GetFiles(doiListFolderPath, "*.tsv", System.IO.SearchOption.TopDirectoryOnly);
             var lockObj = new object();
 
             //var typeHashSet = new HashSet<string>();
@@ -151,52 +234,47 @@ namespace DataProcessor
             {
                 MaxDegreeOfParallelism = 32 // 最大並列度を4に制限
             };
-            System.Threading.Tasks.Parallel.For(0, tsvFiles.Length, options, i =>
-            {
-                var tsvFile = tsvFiles[i];
-                var lines = File.ReadAllLines(tsvFile);
-                foreach (var line in lines)
-                {
-                    var cols = line.Split("\t");
-                    if (cols.Length >= 3)
-                    {
-                        var containerTitle = cols[2];
-                        var doi = cols[0];
-                        var type = cols[1];
-                        var title = cols[2];
-                        var isbnList = cols.Skip(3).ToList();
-                        //bool b = isbnList.Any(isbn => isbn.Length > 0);
 
-                        if (checkTypeHashSet.Contains(type) && title.Length > 0)
+            var results = tsvFiles.AsParallel().Select<string, List<KeyValuePair<string, string>>>(tsvFile =>
+                {
+                    var lines = File.ReadAllLines(tsvFile);
+                    List<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string, string>>();
+
+
+                    foreach (var line in lines)
+                    {
+                        var element = DOIElement1.ParseFromTSVString(line);
+                        if (element != null)
                         {
-                            lock (lockObj)
+                            if (checkTypeHashSet.Contains(element.Type) && element.Title.Length > 0)
                             {
-                                dic[title] = doi;
+                                pairs.Add(new KeyValuePair<string, string>(element.Title, element.DOI));
                             }
                         }
                     }
-                }
 
-                lock (lockObj)
-                {
-                    counter++;
-                    if (counter % 1000 == 0)
+                    lock (lockObj)
                     {
-                        Console.WriteLine($"Processing: {counter} / {maxCount}");
+                        counter++;
+                        if (counter % 1000 == 0)
+                        {
+                            Console.WriteLine($"Processing: {counter} / {maxCount}");
+                        }
+
                     }
 
+                    return pairs;
+                }).ToList();
+
+            var dic = new Dictionary<string, string>();
+
+            foreach (var resultList in results)
+            {
+                foreach (var pair in resultList)
+                {
+                    dic[pair.Key] = pair.Value;
                 }
-
-            });
-
-
-
-            /*
-                        foreach (var type in typeHashSet)
-                        {
-                            Console.WriteLine("Type: " + type);
-                        }
-                        */
+            }
 
             CSVFunctions.WriteCSVAsDictionary(titleFilePath, dic);
         }
@@ -221,7 +299,6 @@ namespace DataProcessor
 
             //var typeHashSet = new HashSet<string>();
 
-            var typeHashSet = new HashSet<string>();
 
             var maxCount = tsvFiles.Length;
             var counter = 0;
@@ -229,42 +306,45 @@ namespace DataProcessor
             {
                 MaxDegreeOfParallelism = 32 // 最大並列度を4に制限
             };
-            System.Threading.Tasks.Parallel.For(0, tsvFiles.Length, options, i =>
-            {
-                var tsvFile = tsvFiles[i];
-                var lines = File.ReadAllLines(tsvFile);
-                foreach (var line in lines)
-                {
-                    var cols = line.Split("\t");
-                    if (cols.Length >= 3)
-                    {
-                        var type = cols[1];
-                        if (!typeHashSet.Contains(type))
-                        {
-                            lock (lockObj)
+            var results = tsvFiles.AsParallel().Select<string, HashSet<string>>(tsvFile =>
                             {
-                                typeHashSet.Add(type);
-                            }
-                        }
+                                var lines = File.ReadAllLines(tsvFile);
+                                List<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string, string>>();
+
+                                var tmpHashSet = new HashSet<string>();
 
 
+                                foreach (var line in lines)
+                                {
+                                    var element = DOIElement1.ParseFromTSVString(line);
+                                    if (element != null)
+                                    {
+                                        tmpHashSet.Add(element.Type);
+                                    }
+                                }
+
+                                lock (lockObj)
+                                {
+                                    counter++;
+                                    if (counter % 1000 == 0)
+                                    {
+                                        Console.WriteLine($"Processing: {counter} / {maxCount}");
+                                    }
+
+                                }
+
+                                return tmpHashSet;
+                            }).ToList();
+            var typeHashSet = new HashSet<string>();
 
 
-
-                    }
-                }
-
-                lock (lockObj)
+            foreach (var resultList in results)
+            {
+                foreach (var type in resultList)
                 {
-                    counter++;
-                    if (counter % 1000 == 0)
-                    {
-                        Console.WriteLine($"Processing: {counter} / {maxCount}");
-                    }
-
+                    typeHashSet.Add(type);
                 }
-
-            });
+            }
             CSVFunctions.WriteCSV(typeListFilePath, typeHashSet.ToList());
         }
 

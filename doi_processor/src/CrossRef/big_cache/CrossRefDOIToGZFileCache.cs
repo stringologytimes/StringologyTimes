@@ -23,6 +23,11 @@ namespace DataProcessor
         {
             return dataFolderPath + "/auto_generated/cache/crossref_cache/big_cache/isbn.tsv";
         }
+
+        public static string GetISSNFilePath(string dataFolderPath)
+        {
+            return dataFolderPath + "/auto_generated/cache/crossref_cache/big_cache/issn.tsv";
+        }
         public static string GetTitleFilePath(string dataFolderPath)
         {
             return dataFolderPath + "/auto_generated/cache/crossref_cache/big_cache/title.tsv";

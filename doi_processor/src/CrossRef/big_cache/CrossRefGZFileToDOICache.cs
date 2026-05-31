@@ -5,15 +5,117 @@ using System.Security.Cryptography;
 using System.Text.Json;
 namespace DataProcessor
 {
+    class DOIElement1
+    {
+        public string DOI { get; set; } = "";
+        public string Type { get; set; } = "";
+        public string Title { get; set; } = "";
+        public List<string> ISList { get; set; } = new List<string>();
+
+        public static DOIElement1? ParseFromJSONL(string jsonl)
+        {
+            var dict = JsonLib.CreateDictionaryFromJSONL(jsonl);
+            if (dict.ContainsKey("DOI"))
+            {
+                var element = new DOIElement1();
+                element.DOI = dict["DOI"];
+                element.Type = "unknown";
+                if (dict.ContainsKey("type"))
+                {
+                    element.Type = dict["type"];
+                }
+                element.Title = "";
+                if (dict.ContainsKey("title"))
+                {
+                    var titleList = JsonSerializer.Deserialize<List<string>>(dict["title"]);
+                    if (titleList != null && titleList.Count > 0)
+                    {
+                        element.Title = CSVFunctions.SanityzeForTSVFormat(titleList[0]);
+                    }
+                }
+
+                if (dict.ContainsKey("ISBN"))
+                {
+                    var ISBNList = JsonSerializer.Deserialize<List<string>>(dict["ISBN"]);
+                    if (ISBNList != null)
+                    {
+                        ISBNList.ForEach(isbn =>
+                        {
+                            if (isbn.Length > 0)
+                            {
+                                if (ISBNConverter.IsValidIsbn10(isbn))
+                                {
+                                    var isbn13 = ISBNConverter.Isbn10ToIsbn13(isbn);
+                                    element.ISList.Add("ISBN:" + isbn13);
+                                }
+                                else
+                                {
+                                    element.ISList.Add("ISBN:" + isbn);
+                                }
+                            }
+                        });
+                    }
+                }
+
+                if (dict.ContainsKey("ISSN"))
+                {
+                    var ISSNList = JsonSerializer.Deserialize<List<string>>(dict["ISSN"]);
+                    if (ISSNList != null)
+                    {
+                        ISSNList.ForEach(issn =>
+                        {
+                            if (issn.Length > 0)
+                            {
+                                element.ISList.Add("ISSN:" + issn);
+                            }
+                        });
+                    }
+                }
+                return element;
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+        public string ToTSVString()
+        {
+            var s = this.DOI + "\t" + this.Type + "\t" + this.Title;
+            if (this.ISList.Count > 0)
+            {
+                s += "\t" + string.Join("\t", this.ISList);
+            }
+            return s;
+        }
+
+        public static DOIElement1? ParseFromTSVString(string tsvString)
+        {
+            var cols = tsvString.Split("\t");
+            if (cols.Length >= 3)
+            {
+                var element = new DOIElement1();
+                element.DOI = cols[0];
+                element.Type = cols[1];
+                element.Title = cols[2];
+
+                for (int i = 3; i < cols.Length; i++)
+                {
+                    var s = cols[i];
+                    element.ISList.Add(s);
+                }
+                return element;
+            }
+            return null;
+        }
+
+    }
+
+
     class CrossRefGZFileToDOICache
     {
-        class DOIElement1
-        {
-            public string DOI { get; set; } = "";
-            public string Type { get; set; } = "";
-            public string Title { get; set; } = "";
-            public List<string> ISBNList { get; set; } = new List<string>();
-        }
+
         public static string GetGZFileToDoiFolderPath(string dataFolderPath)
         {
             return dataFolderPath + "/auto_generated/cache/crossref_cache/big_cache/gzfile_to_doi";
@@ -70,50 +172,16 @@ namespace DataProcessor
 
                     foreach (var line in JsonLib.ReadLinesFromGzip(gzFilePath))
                     {
-                        var dict = JsonLib.CreateDictionaryFromJSONL(line);
-                        if (dict.ContainsKey("DOI"))
+                        var element = DOIElement1.ParseFromJSONL(line);
+                        if (element != null)
                         {
-                            var element = new DOIElement1();
-                            element.DOI = dict["DOI"];
-                            element.Type = "unknown";
-                            if (dict.ContainsKey("type"))
-                            {
-                                element.Type = dict["type"];
-                            }
-                            element.Title = "";
-                            if (dict.ContainsKey("title"))
-                            {
-                                var titleList = JsonSerializer.Deserialize<List<string>>(dict["title"]);
-                                if (titleList != null && titleList.Count > 0)
-                                {
-                                    element.Title = CSVFunctions.SanityzeForTSVFormat(titleList[0]);
-                                }
-                            }
-
-                            if (dict.ContainsKey("ISBN"))
-                            {
-                                var ISBNList = JsonSerializer.Deserialize<List<string>>(dict["ISBN"]);
-                                if (ISBNList != null && ISBNList.Count > 0)
-                                {
-                                    element.ISBNList = ISBNList.ToList();
-                                }
-                            }
-
-
                             dois.Add(element);
                         }
                     }
                     var sw = new StreamWriter(csvFilePath, false, Encoding.UTF8);
                     foreach (var doi in dois)
                     {
-                        if (doi.ISBNList.Count > 0)
-                        {
-                            sw.WriteLine(doi.DOI + "\t" + doi.Type + "\t" + doi.Title + "\t" + string.Join("\t", doi.ISBNList));
-                        }
-                        else
-                        {
-                            sw.WriteLine(doi.DOI + "\t" + doi.Type + "\t" + doi.Title);
-                        }
+                        sw.WriteLine(doi.ToTSVString());
                     }
                     sw.Close();
 
