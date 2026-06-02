@@ -90,24 +90,9 @@ namespace DataProcessor
                 Processor.BuildBigCache(opts);
                 return 0;
             }
-            else if (opts.Mode == "build_small_cache_for_primary_doi_elements")
+            else if (opts.Mode == "build_small_cache")
             {
-                await Processor.BuildSmallCacheForPrimaryDOIElements(opts);
-                return 0;
-            }
-            else if (opts.Mode == "build_primary_doi_element_dictionary")
-            {
-                Processor.BuildPrimaryDOIElementDictionary(opts);
-                return 0;
-            }
-            else if (opts.Mode == "build_small_cache_for_secondary_doi_elements")
-            {
-                await Processor.BuildSmallCacheForSecondaryDOIElements(opts);
-                return 0;
-            }
-            else if (opts.Mode == "build_secondary_doi_element_dictionary")
-            {
-                Processor.BuildSecondaryDOIElementDictionary(opts);
+                await Processor.BuildSmallCache(opts);
                 return 0;
             }
             else if (opts.Mode == "create_lightweight_doi_info_folder")

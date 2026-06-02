@@ -13,10 +13,44 @@ namespace DataProcessor
     class DOIElementPreprocessor
     {
 
+
         public static string GetCachePath(string dataFolderPath)
         {
             return dataFolderPath + "/auto_generated/cache/doi_element.jsonl";
         }
+
+        public static string GetDOICacheInfoPath(string dataFolderPath)
+        {
+            return dataFolderPath + "/auto_generated/cache/doi_cache_info.jsonl";
+        }
+        public static Dictionary<string, string> LoadDOIPrefixMapper(string dataFolderPath)
+        {
+            Dictionary<string, string> doiPrefixMapper = new Dictionary<string, string>();
+            var crossRefDOIPrefixPath = CrossRefDOIToGZFileCache.GetDOIPrefixFilePath(dataFolderPath);
+            var crossRefDOIPrefixFileInfo = new FileInfo(crossRefDOIPrefixPath);
+            if (crossRefDOIPrefixFileInfo.Exists)
+            {
+                var lines = File.ReadAllLines(crossRefDOIPrefixPath);
+                foreach (var doiPrefix in lines)
+                {
+                    doiPrefixMapper[doiPrefix] = "CrossRef";
+                }
+            }
+
+            var dataCiteDOIPrefixPath = DataCiteDOIToGZFileCache.GetDOIPrefixFilePath(dataFolderPath);
+            var dataCiteDOIPrefixFileInfo = new FileInfo(dataCiteDOIPrefixPath);
+            if (dataCiteDOIPrefixFileInfo.Exists)
+            {
+                var lines = File.ReadAllLines(dataCiteDOIPrefixPath);
+                foreach (var doiPrefix in lines)
+                {
+                    doiPrefixMapper[doiPrefix] = "DataCite";
+                }
+            }
+
+            return doiPrefixMapper;
+        }
+
         /*
         public static Dictionary<string, DOIElement> LoadSmallCache(string dataFolderPath)
         {
@@ -37,17 +71,28 @@ namespace DataProcessor
         }
         */
 
-        public static async Task BuildSmallCache(string dataFolderPath, string mailAddress, ReadOnlySet<string> doiSet, string checksumFileName)
+        public static void LaunchSmallCacheBuilder()
         {
-            var logFolderPath = dataFolderPath + "/auto_generated/log";
+            throw new Exception("Not implemented");
+        }
 
+        private static void WriteChecksum(string dataFolderPath, string checksumFileName, ReadOnlySet<string> doiSet)
+        {
+            var currentChecksumDictionary = new Dictionary<string, string>();
+            currentChecksumDictionary["doiSet_hash"] = HashFunctions.ComputeHash(doiSet);
+            currentChecksumDictionary["date"] = DateTime.Now.ToString("yyyy-MM");
             var checksumFilePath = dataFolderPath + "/auto_generated/cache/" + checksumFileName;
+            CSVFunctions.WriteCSVAsDictionary(checksumFilePath, currentChecksumDictionary);
+        }
 
-            Console.WriteLine("Building SmallCache [START]");
+        private static bool ChecksumCheck(string dataFolderPath, string checksumFileName, ReadOnlySet<string> doiSet)
+        {
+            var checksumFilePath = dataFolderPath + "/auto_generated/cache/" + checksumFileName;
 
             var currentChecksumDictionary = new Dictionary<string, string>();
             currentChecksumDictionary["doiSet_hash"] = HashFunctions.ComputeHash(doiSet);
             currentChecksumDictionary["date"] = DateTime.Now.ToString("yyyy-MM");
+
 
             if (new FileInfo(checksumFilePath).Exists)
             {
@@ -71,19 +116,93 @@ namespace DataProcessor
 
                 if (b)
                 {
-                    Console.WriteLine("SmallCache already exists [END]");
-                    return;
+                    return true;
                 }
             }
+            return false;
+        }
+
+        public static void UpdateSecondaryDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
+        {
+            var crossRefDOIPrefixSet = CrossRefDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
+            var crossRefdoiElementDict = CrossRefCacheBuilder.LoadSmallCache(dataFolderPath, doiCacheInfoDict, crossRefDOIPrefixSet);
+
+            var dataCiteDOIPrefixSet = DataCiteDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
+            var dataCitedoiElementDict = DataCitePreprocessor.LoadSmallCache(dataFolderPath, doiCacheInfoDict, dataCiteDOIPrefixSet);
+
+            var mergedList = new List<DOIElement>();
+            mergedList.AddRange(crossRefdoiElementDict.Values);
+            mergedList.AddRange(dataCitedoiElementDict.Values);
+
+            mergedList.ForEach((v) =>
+            {
+                if (doiCacheInfoDict.ContainsKey(v.DOI))
+                {
+                    var w = doiCacheInfoDict[v.DOI];
+                    if (w.ContainerDOI.Length > 0 && !doiCacheInfoDict.ContainsKey(w.ContainerDOI))
+                    {
+                        doiCacheInfoDict[w.ContainerDOI] = new DOICacheInfo() { DOI = w.ContainerDOI, IsPrimary = false };
+                    }
+                }
+
+                v.DOIReferences.ForEach((referenceDOI) =>
+                {
+                    if (!doiCacheInfoDict.ContainsKey(referenceDOI))
+                    {
+                        doiCacheInfoDict[referenceDOI] = new DOICacheInfo() { DOI = referenceDOI, IsPrimary = false };
+                    }
+                });
+            });
+        }
+
+
+        public static async Task BuildSmallCacheX(string dataFolderPath, string mailAddress, ReadOnlySet<string> primaryDOISet, string checksumFileName)
+        {
+            var logFolderPath = dataFolderPath + "/auto_generated/log";
+
+            var checksumFilePath = dataFolderPath + "/auto_generated/cache/" + checksumFileName;
+
+            Console.WriteLine("Building SmallCache [START]");
+
+            bool b = ChecksumCheck(dataFolderPath, checksumFileName, primaryDOISet);
+            if (b)
+            {
+                Console.WriteLine("SmallCache already exists [END]");
+                return;
+            }
+
+            var doiCacheInfoDict = new Dictionary<string, DOICacheInfo>();
 
 
 
-            await DataProcessor.CrossRefCacheBuilder.UpdateSmallCache(dataFolderPath, doiSet, mailAddress);
-            await DataProcessor.DataCitePreprocessor.UpdateSmallCache(dataFolderPath, doiSet, mailAddress);
+            primaryDOISet.ToList().ForEach((v) =>
+            {
+                doiCacheInfoDict[v] = new DOICacheInfo() { DOI = v, IsPrimary = true };
+            });
 
 
-            DataProcessor.CrossRefCacheBuilder.UpdateSmallCacheUsingContainerDOI(dataFolderPath);
-            DataProcessor.DataCitePreprocessor.UpdateSmallCacheUsingContainerTitle(dataFolderPath);
+            await DataProcessor.CrossRefCacheBuilder.UpdateSmallCache(dataFolderPath, doiCacheInfoDict, mailAddress);
+            await DataProcessor.DataCitePreprocessor.UpdateSmallCache(dataFolderPath, doiCacheInfoDict, mailAddress);
+            UpdateSecondaryDOI(dataFolderPath, doiCacheInfoDict);
+
+            DOICacheInfo.Save(doiCacheInfoDict, GetDOICacheInfoPath(dataFolderPath));
+            WriteChecksum(dataFolderPath, checksumFileName, primaryDOISet);
+
+
+
+            //UpdateSecondaryDOI(dataFolderPath, doiCacheInfoDict);
+
+
+
+
+
+
+
+
+
+
+            //DataProcessor.CrossRefCacheBuilder.UpdateSmallCacheUsingContainerDOI(dataFolderPath);
+            //DataProcessor.DataCitePreprocessor.UpdateSmallCacheUsingContainerTitle(dataFolderPath);
 
             //DataProcessor.CrossRefCacheBuilder.UpdateSmallCacheUsingISBN(dataFolderPath);
 
@@ -92,6 +211,8 @@ namespace DataProcessor
             //DataProcessor.DataCitePreprocessor.UpdateSmallCacheUsingDOIPrefix(dataFolderPath);
 
 
+
+/*
             var doiElementDict = new Dictionary<string, DOIElement>();
 
             var crossRefDic = DataProcessor.CrossRefCacheBuilder.LoadSmallCache(dataFolderPath);
@@ -105,6 +226,7 @@ namespace DataProcessor
             {
                 doiElementDict[v.Key] = v.Value;
             });
+            */
 
 
 
@@ -113,10 +235,9 @@ namespace DataProcessor
 
 
 
-            DOIElement.Save(doiElementDict, GetCachePath(dataFolderPath));
+            //DOIElement.Save(doiElementDict, GetCachePath(dataFolderPath));
 
 
-            CSVFunctions.WriteCSVAsDictionary(checksumFilePath, currentChecksumDictionary);
             Console.WriteLine("Building SmallCache [END]");
         }
 

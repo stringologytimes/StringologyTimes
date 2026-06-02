@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace DataProcessor
 {
-    class CrossRefFoundDOICache
+    class CrossRefLocalCache
     {
         public static string GetCachePath(string dataFolderPath)
         {
@@ -19,7 +19,22 @@ namespace DataProcessor
             return dic;
         }
 
-        public static void Update(IReadOnlyList<string> dois, string dataFolderPath, string jsonlFolderPath)
+        public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath)
+        {
+            Dictionary<string, string> foundJSONLMap = Load(dataFolderPath);
+
+            doiCacheInfoDict.Values.ToList().ForEach((v) =>
+            {
+                if (foundJSONLMap.ContainsKey(v.DOI))
+                {
+                    v.Source = "CrossRef:LocalCache";
+                    v.Date = DateTime.Now.ToString("yyyy-MM");
+                }
+            });
+        }
+
+
+        public static void Update(IDictionary<string, DOICacheInfo> doiCacheInfoDict, IReadOnlySet<string> crossRefDOIPrefixSet, string dataFolderPath, string jsonlFolderPath)
         {
             var logFilePath = dataFolderPath + "/auto_generated/log/update_crossref_found_doi_cache.log";
             var logFile = new StreamWriter(logFilePath, true);
@@ -28,39 +43,56 @@ namespace DataProcessor
             Console.WriteLine("Creating Found JSONL File(CrossRef): ");
             //var dicPath = GetCachePath(dataFolderPath);
             Dictionary<string, string> foundJSONLMap = Load(dataFolderPath);
-            var crossRefDOIPrefixSet = CrossRefDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
             Console.WriteLine("\t Found JSONL Map: " + foundJSONLMap.Count);
 
             var candidateDOISet = new HashSet<string>();
             var notCrossRefDOIPrefixSet = new HashSet<string>();
             var alreadyFoundDOISet = new HashSet<string>();
 
+            var count = 0;
+
+
 
             //List<string> foundJSONLList = new List<string>();
             Dictionary<string, HashSet<string>> doiPrefixToDoi = new Dictionary<string, HashSet<string>>();
-            foreach (var doi in dois)
+            foreach (var doiCacheInfo in doiCacheInfoDict.Values)
             {
-                var doiPrefix = DOIFunctions.GetPrefix(doi);
-                if (!foundJSONLMap.ContainsKey(doi))
+                if (doiCacheInfo.Source.StartsWith("CrossRef:"))
                 {
-                    if (crossRefDOIPrefixSet.Contains(doiPrefix))
-                    {
-                        if (!doiPrefixToDoi.ContainsKey(doiPrefix))
-                        {
-                            doiPrefixToDoi[doiPrefix] = new HashSet<string>();
-                        }
-                        doiPrefixToDoi[doiPrefix].Add(doi);
-                    }
-                    else
-                    {
-                        notCrossRefDOIPrefixSet.Add(doiPrefix);
-                    }
+                    alreadyFoundDOISet.Add(doiCacheInfo.DOI);
+
                 }
                 else
                 {
-                    alreadyFoundDOISet.Add(doi);
+                    if (!foundJSONLMap.ContainsKey(doiCacheInfo.DOI))
+                    {
+                        var doiPrefix = DOIFunctions.GetPrefix(doiCacheInfo.DOI);
+
+                        if (crossRefDOIPrefixSet.Contains(doiPrefix))
+                        {
+                            if (!doiPrefixToDoi.ContainsKey(doiPrefix))
+                            {
+                                doiPrefixToDoi[doiPrefix] = new HashSet<string>();
+                            }
+                            doiPrefixToDoi[doiPrefix].Add(doiCacheInfo.DOI);
+                            count++;
+                        }
+                        else
+                        {
+                            notCrossRefDOIPrefixSet.Add(doiPrefix);
+                        }
+                    }
+                    else
+                    {
+                        alreadyFoundDOISet.Add(doiCacheInfo.DOI);
+                    }
+
                 }
+
+
             }
+
+            Console.WriteLine("Count: " + count);
 
             alreadyFoundDOISet.ToList().ForEach((v) =>
             {
@@ -77,7 +109,7 @@ namespace DataProcessor
             var gzFilePathSet = new HashSet<string>();
             var othersHashSet = new HashSet<string>();
 
-            Console.WriteLine("\t DOI Count: " + " / " + dois.Count + " / " + foundJSONLMap.Count);
+            //Console.WriteLine("\t DOI Count: " + " / " + dois.Count + " / " + foundJSONLMap.Count);
 
             foreach (var kvp in doiPrefixToDoi)
             {
@@ -146,6 +178,8 @@ namespace DataProcessor
                 logFile.WriteLine("Not found DOI (Type 1): " + v);
             });
 
+            /*
+
             var notFoundDOIs = new List<string>();
 
 
@@ -156,6 +190,7 @@ namespace DataProcessor
             {
                 logFile.WriteLine("Not found DOI (Type 2): " + v);
             });
+            */
 
 
             var JSONLCacheWriter = new StreamWriter(GetCachePath(dataFolderPath), false, Encoding.UTF8);

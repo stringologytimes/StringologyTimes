@@ -8,7 +8,7 @@ namespace DataProcessor
     {
         static string PRIMARY_DOI_ELEMENT_FILENAME = "primary_doi_elements.jsonl";
         static string SECONDARY_DOI_ELEMENT_FILENAME = "secondary_doi_elements.jsonl";
-        static string SECONDARY_DOI_LIST_FILENAME = "secondary_doi.csv";
+        //static string SECONDARY_DOI_LIST_FILENAME = "secondary_doi.csv";
 
         static string MODIFIED_PRIMARY_DOI_ELEMENT_FILENAME = "modified_primary_doi_elements.jsonl";
         static string MODIFIED_SECONDARY_DOI_ELEMENT_FILENAME = "modified_secondary_doi_elements.jsonl";
@@ -108,21 +108,20 @@ namespace DataProcessor
         }
 
 
-        public static async Task<int> BuildSmallCacheForPrimaryDOIElements(DBLPOptions opts)
+        public static async Task<int> BuildSmallCache(DBLPOptions opts)
         {
             OutputSystemMessageFunction("Creating DOI to Tag Mapper");
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.DataFolderPath + "/raw");
             var primaryDOISet = new ReadOnlySet<string>(new HashSet<string>(doiToTagMapper.Keys));
 
 
-
-
-
             OutputSystemMessageFunction("Building cache for primary DOI elements");
-            await DOIElementPreprocessor.BuildSmallCache(opts.DataFolderPath, opts.MailAddress, primaryDOISet, "primary_small_cache_hash.csv");
+            await DOIElementPreprocessor.BuildSmallCacheX(opts.DataFolderPath, opts.MailAddress, primaryDOISet, "primary_small_cache_hash.csv");
 
             return 0;
         }
+
+        /*
         public static void BuildPrimaryDOIElementDictionary(DBLPOptions opts)
         {
             OutputSystemMessageFunction("Creating DOI to Tag Mapper");
@@ -138,12 +137,11 @@ namespace DataProcessor
             DOIElement.Save(primaryDOIElementDict, GetFilePathInResultFolder(opts.DataFolderPath, PRIMARY_DOI_ELEMENT_FILENAME));
 
         }
+        */
+
+        /*
         public static async Task<int> BuildSmallCacheForSecondaryDOIElements(DBLPOptions opts)
         {
-
-            //OutputSystemMessageFunction("Creating DOI to Tag Mapper");
-            //var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.DataFolderPath + "/raw");
-            //var primaryDOISet = new HashSet<string>(doiToTagMapper.Keys);
 
 
             OutputSystemMessageFunction("Loading primary DOI element dictionary");
@@ -184,6 +182,7 @@ namespace DataProcessor
             CSVFunctions.WriteCSV(GetFilePathInResultFolder(opts.DataFolderPath, SECONDARY_DOI_LIST_FILENAME), secondaryDOIList);
 
         }
+        */
 
 
 

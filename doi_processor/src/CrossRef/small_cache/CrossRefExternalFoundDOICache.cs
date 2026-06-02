@@ -3,7 +3,7 @@ using System.IO.Compression;
 using System.Collections.ObjectModel;
 namespace DataProcessor
 {
-    class CrossRefExternalFoundDOICache
+    class CrossRefExternalCache
     {
         public static string GetCachePath(string dataFolderPath)
         {
@@ -27,42 +27,35 @@ namespace DataProcessor
 
 
 
-        public static async Task Build(string dataFolderPath, ReadOnlySet<string> doiSet, Dictionary<string, string> unknownDOIDictionary, string mailAddress)
+        public static async Task Update(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, IReadOnlySet<string> crossRefDOIPrefixSet, string mailAddress)
         {
             Console.WriteLine("Building CrossRefExternalFoundDOICache");
-            Console.WriteLine("\t DOI Set: " + doiSet.Count);
-            Console.WriteLine("\t Unknown DOI Dictionary: " + unknownDOIDictionary.Count);
 
-            var crossRefExternalDic = DataProcessor.CrossRefExternalFoundDOICache.Load(dataFolderPath);
-            var crossRefDOIPrefixSet = DataProcessor.CrossRefDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
-            var foundDOICache = DataProcessor.CrossRefFoundDOICache.Load(dataFolderPath);
+            var crossRefExternalDic = DataProcessor.CrossRefExternalCache.Load(dataFolderPath);
+            var foundDOICache = DataProcessor.CrossRefLocalCache.Load(dataFolderPath);
+
 
             var externalDOICandidateList = new List<string>();
-            var dateNowStr = DateTime.Now.ToString("yyyy-MM");
+            var currentDate = DateTime.Now.ToString("yyyy-MM");
 
-            foreach (var doi in doiSet)
+            doiCacheInfoDict.Values.ToList().ForEach((v) =>
             {
-                var doiPrefix = DOIFunctions.GetPrefix(doi);
-                if (!foundDOICache.ContainsKey(doi) && crossRefDOIPrefixSet.Contains(doiPrefix) && !crossRefExternalDic.ContainsKey(doi))
+                bool crossRefSource = crossRefDOIPrefixSet.Contains(DOIFunctions.GetPrefix(v.DOI));
+
+
+
+                if (crossRefSource && !crossRefExternalDic.ContainsKey(v.DOI) && v.Date != currentDate)
                 {
-                    if (!unknownDOIDictionary.ContainsKey(doi))
+                    if (v.Source != "CrossRef:LocalCache")
                     {
-                        externalDOICandidateList.Add(doi);
-                    }
-                    else
-                    {
-                        var foundDateStr = unknownDOIDictionary[doi];
-                        if (dateNowStr != foundDateStr)
-                        {
-                            externalDOICandidateList.Add(doi);
-                        }
+                        externalDOICandidateList.Add(v.DOI);
                     }
                 }
-            }
-
+            });
 
             var map = await DataProcessor.CrossrefBulk.GetManyAsync(externalDOICandidateList, mailto: mailAddress);
             //var unknownDOIList = new List<string>();
+
 
             foreach (var (doi, json) in map)
             {
@@ -72,25 +65,38 @@ namespace DataProcessor
                     if (value != null)
                     {
                         crossRefExternalDic[doi] = value;
-                        if (unknownDOIDictionary.ContainsKey(doi))
-                        {
-                            unknownDOIDictionary.Remove(doi);
-                        }
                     }
-                    else
-                    {
-                        unknownDOIDictionary[doi] = dateNowStr;
-                    }
-                }
-                else
-                {
-                    unknownDOIDictionary[doi] = dateNowStr;
                 }
             }
 
             JsonLib.Save(crossRefExternalDic, GetCachePath(dataFolderPath));
-
-
         }
+
+        public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, IReadOnlySet<string> crossRefDOIPrefixSet, string dataFolderPath)
+        {
+            var crossRefExternalDic = DataProcessor.CrossRefExternalCache.Load(dataFolderPath);
+
+            doiCacheInfoDict.Values.ToList().ForEach((v) =>
+            {
+                var doiPrefix = DOIFunctions.GetPrefix(v.DOI);
+                if (crossRefDOIPrefixSet.Contains(doiPrefix))
+                {
+                    if (crossRefExternalDic.ContainsKey(v.DOI))
+                    {
+                        v.Source = "CrossRef:ExternalCache";
+                        v.Date = DateTime.Now.ToString("yyyy-MM");
+                    }
+                    else
+                    {
+                        if (v.Source != "CrossRef:LocalCache")
+                        {
+                            v.Source = "CrossRef:NotFound";
+                            v.Date = DateTime.Now.ToString("yyyy-MM");
+                        }
+                    }
+                }
+            });
+        }
+
     }
 }

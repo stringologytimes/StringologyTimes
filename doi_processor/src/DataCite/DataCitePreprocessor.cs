@@ -43,8 +43,9 @@ namespace DataProcessor
         }
 
 
-        public static Dictionary<string, DOIElement> LoadSmallCache(string dataFolderPath)
+        public static Dictionary<string, DOIElement> LoadSmallCache(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, HashSet<string> dataCiteDOIPrefixSet)
         {
+            throw new Exception("Not implemented");
             var doiElementDict = new Dictionary<string, DOIElement>();
 
             var dataCiteDic = DataProcessor.DataCiteFoundDOICache.Load(dataFolderPath);
@@ -80,6 +81,12 @@ namespace DataProcessor
 
             return doiElementDict;
         }
+
+        public static async Task UpdateSmallCache(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, string mailAddress)
+        {
+            throw new Exception("Not implemented");
+        }
+
 
 
         public static async Task UpdateSmallCache(string dataFolderPath, ReadOnlySet<string> doiSet, string mailAddress)
@@ -177,14 +184,11 @@ namespace DataProcessor
 
         public static void UpdateSmallCacheUsingContainerTitle(string dataFolderPath)
         {
+            /*
             var logFilePath = dataFolderPath + "/auto_generated/log/datacite_update_small_cache_using_container_title.log";
             var logFileInfo = new FileInfo(logFilePath);
             var logFile = new StreamWriter(logFilePath, true);
             logFile.WriteLine(new DateTime().ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
-
-
-
-            //var dataCiteDicFromContainerTitleToDOI = DataProcessor.DataCiteDOIToGZFileCache.BuildDictionaryFromContainerTitleToDOI(dataFolderPath);
 
             var additionalDataCiteDOISet = new HashSet<string>();
 
@@ -213,10 +217,12 @@ namespace DataProcessor
 
             var dataCiteFolderInfo = DataCiteJSONLLoader.SearchDataCiteFolder(dataFolderPath + "/external");
             DataProcessor.DataCiteFoundDOICache.Update(additionalDataCiteDOISet.ToList(), dataFolderPath, dataCiteFolderInfo.FullName);
+            */
         }
 
         public static void UpdateSmallCacheUsingDOIPrefix(string dataFolderPath)
         {
+            /*
             var logFilePath = dataFolderPath + "/auto_generated/log/datacite_update_small_cache_using_doi_prefix.log";
             var logFile = new StreamWriter(logFilePath, true);
             logFile.WriteLine(new DateTime().ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
@@ -248,6 +254,7 @@ namespace DataProcessor
             DataProcessor.DataCiteFoundDOICache.Update(additionalCrossRefDOISet.ToList(), dataFolderPath, crossrefFolderInfo.FullName);
             logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
             logFile.Close();
+            */
 
 
         }

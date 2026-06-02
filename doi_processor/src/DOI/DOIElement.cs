@@ -29,6 +29,8 @@ namespace DataProcessor
 
         public string Source { get; set; } = "";
 
+        public bool IsPrimary { get; set; } = false;
+
         public List<string> Tags { get; set; } = new List<string>();
 
         public List<string> DOIReferences { get; set; } = new List<string>();
@@ -61,7 +63,7 @@ namespace DataProcessor
             dataList.Add(JsonSerializer.Serialize(this.ContainerTitle));
             dataList.Add(JsonSerializer.Serialize(this.Volume));
             dataList.Add(JsonSerializer.Serialize(this.Source));
-
+            dataList.Add(JsonSerializer.Serialize(this.IsPrimary));
 
 
             List<string> authorStringList = new List<string>();
