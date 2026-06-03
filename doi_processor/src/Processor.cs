@@ -6,13 +6,12 @@ namespace DataProcessor
 {
     class Processor
     {
-        static string PRIMARY_DOI_ELEMENT_FILENAME = "primary_doi_elements.jsonl";
-        static string SECONDARY_DOI_ELEMENT_FILENAME = "secondary_doi_elements.jsonl";
-        //static string SECONDARY_DOI_LIST_FILENAME = "secondary_doi.csv";
+        static string DOI_ELEMENT_FILENAME = "doi_element.jsonl";
 
-        static string MODIFIED_PRIMARY_DOI_ELEMENT_FILENAME = "modified_primary_doi_elements.jsonl";
-        static string MODIFIED_SECONDARY_DOI_ELEMENT_FILENAME = "modified_secondary_doi_elements.jsonl";
+        static string MODIFIED_DOI_ELEMENT_FILENAME = "modified_doi_element.jsonl";
 
+
+/*
         private static ReadOnlySet<string> BuildSecondaryDOISet(Dictionary<string, DOIElement> primaryDOIElementDict, string dataFolderPath)
         {
 
@@ -58,6 +57,7 @@ namespace DataProcessor
             var readOnlySecondaryDOISet = new ReadOnlySet<string>(secondaryDOISet);
             return readOnlySecondaryDOISet;
         }
+        */
 
 
 
@@ -219,10 +219,9 @@ namespace DataProcessor
         {
             OutputSystemMessageFunction("Process: CreateLightweightDOIInfoFolder[Start]");
 
-            var primaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_PRIMARY_DOI_ELEMENT_FILENAME), true);
-            var secondaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_SECONDARY_DOI_ELEMENT_FILENAME), true);
+            var doiElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_DOI_ELEMENT_FILENAME), true);
             OutputSystemMessageFunction("Building lightweight DOI element component");
-            var lightweightDOIElementComponent = LightweightDOIElementComponent.Build(primaryDOIElementDict, secondaryDOIElementDict);
+            var lightweightDOIElementComponent = LightweightDOIElementComponent.Build(doiElementDict);
 
             OutputSystemMessageFunction("Saving lightweight DOI element component to: " + GetFilePathInResultFolder(opts.DataFolderPath, "lightweight_doi_info"));
             lightweightDOIElementComponent.OutputByGZip(GetFilePathInResultFolder(opts.DataFolderPath, "lightweight_doi_info"));
@@ -238,15 +237,19 @@ namespace DataProcessor
 
             OutputSystemMessageFunction("Running doi_processor");
 
-            var primaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, PRIMARY_DOI_ELEMENT_FILENAME), true);
-            var secondaryDOIElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, SECONDARY_DOI_ELEMENT_FILENAME), true);
+            var doiCacheInfoPath = DOIElementPreprocessor.GetDOICacheInfoPath(opts.DataFolderPath);
+            var doiCacheInfoDict = DOICacheInfo.Load(doiCacheInfoPath);
+            var doiElementDict = DOIElementPreprocessor.LoadDOIElementDictionary(opts.DataFolderPath, doiCacheInfoDict);
+
+            DOIElement.Save(doiElementDict, GetFilePathInResultFolder(opts.DataFolderPath, DOI_ELEMENT_FILENAME));
+
 
             OutputSystemMessageFunction("Modifying container title using DBLP summary");
-            ReplacementRules.ReplaceContainerTitleUsingDBLPSummary(GetFilePathInResultFolder(opts.DataFolderPath, "dblp_proceedings.jsonl"), primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+            ReplacementRules.ReplaceContainerTitleUsingDBLPSummary(GetFilePathInResultFolder(opts.DataFolderPath, "dblp_proceedings.jsonl"), doiElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Modifying series title using DBLP summary");
             var seriesTitleReplacementRulesPath = opts.DataFolderPath + "/raw/doi_processor/series_title_replacement_rules.tsv";
-            ReplacementRules.ReplaceSeriesTitle(seriesTitleReplacementRulesPath, primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+            ReplacementRules.ReplaceSeriesTitle(seriesTitleReplacementRulesPath, doiElementDict, logFolderPath);
 
 
             //OutputSystemMessageFunction("Normalizing container title");
@@ -255,32 +258,28 @@ namespace DataProcessor
 
 
             OutputSystemMessageFunction("Applying type replacement rules");
-            ReplacementRules.ReplaceType(opts.DataFolderPath + "/raw/doi_processor/type_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+            ReplacementRules.ReplaceType(opts.DataFolderPath + "/raw/doi_processor/type_replacement_rules.tsv", doiElementDict, logFolderPath);
 
             //OutputSystemMessageFunction("Applying container-title replacement rules");
             //ReplacementRules.ReplaceContainerTitle(opts.DataFolderPath + "/raw/doi_processor/container_title_replacement_rules.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Escaping container title");
-            ReplacementRules.EscapeProcessing(primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+            ReplacementRules.EscapeProcessing(doiElementDict, logFolderPath);
 
             //OutputSystemMessageFunction("Modifying container DOI by DOI prefix");
             //ReplacementRules.RpelaceContainerDOIByDOIPrefix(opts.DataFolderPath + "/raw/small_cache_setting/doi_prefix.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Modifying container title by DOI prefix");
-            ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_container_title_value.tsv", primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+            ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_container_title_value.tsv", doiElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Modifying type by DOI prefix");
-            ReplacementRules.ReplaceTypeByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_type_value.tsv", primaryDOIElementDict, secondaryDOIElementDict);
+            ReplacementRules.ReplaceTypeByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_type_value.tsv", doiElementDict);
 
             OutputSystemMessageFunction("Appending tags to DOI element dictionary");
-            ReplacementRules.AppendTags(opts.DataFolderPath, primaryDOIElementDict, secondaryDOIElementDict, logFolderPath);
+            ReplacementRules.AppendTags(opts.DataFolderPath, doiElementDict, logFolderPath);
 
+            DOIElement.Save(doiElementDict, GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_DOI_ELEMENT_FILENAME));
 
-            OutputSystemMessageFunction("Saving primary DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_PRIMARY_DOI_ELEMENT_FILENAME));
-            DOIElement.Save(primaryDOIElementDict, GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_PRIMARY_DOI_ELEMENT_FILENAME));
-
-            OutputSystemMessageFunction("Saving secondary DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_SECONDARY_DOI_ELEMENT_FILENAME));
-            DOIElement.Save(secondaryDOIElementDict, GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_SECONDARY_DOI_ELEMENT_FILENAME));
 
             OutputSystemMessageFunction("doi_processor is finished");
 

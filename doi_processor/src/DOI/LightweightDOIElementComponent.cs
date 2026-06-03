@@ -37,28 +37,23 @@ namespace DataProcessor
             return word.Replace("\n", "");
         }
 
-        public static LightweightDOIElementComponent Build(Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
+        public static LightweightDOIElementComponent Build(Dictionary<string, DOIElement> doiElementDict)
         {
             LightweightDOIElementComponent r = new LightweightDOIElementComponent();
             HashSet<string> knownDOISet = new HashSet<string>();
 
-            List<DOIElement> primaryDOIElementList = primaryDOIElementDict.Values.ToList();
-            primaryDOIElementList.Sort((a, b) => a.DOI.CompareTo(b.DOI));
+            var strFunc = (DOIElement a) => { return (a.IsPrimary ? "0" : "1") + a.DOI; };
 
-            List<DOIElement> secondaryDOIElementList = secondaryDOIElementDict.Values.ToList();
-            secondaryDOIElementList.Sort((a, b) => a.DOI.CompareTo(b.DOI));
+            List<DOIElement> doiElementList = doiElementDict.Values.ToList();
+            doiElementList.Sort((a, b) => strFunc(a).CompareTo(strFunc(b)));
 
-            primaryDOIElementList.ForEach((v) =>
-            {
-                knownDOISet.Add(v.DOI);
-            });
-            secondaryDOIElementList.ForEach((v) =>
+            doiElementList.ForEach((v) =>
             {
                 knownDOISet.Add(v.DOI);
             });
 
             HashSet<string> unknownDOISet = new HashSet<string>();
-            primaryDOIElementList.ForEach((v) =>
+            doiElementList.ForEach((v) =>
             {
                 v.DOIReferences.ForEach((v) =>
                 {
@@ -71,15 +66,15 @@ namespace DataProcessor
             List<string> unknownDOIList = unknownDOISet.ToList();
             unknownDOIList.Sort((a, b) => a.CompareTo(b));
 
-            List<DOIElement> mergedDOIElementList = primaryDOIElementList.Concat(secondaryDOIElementList).ToList();
+            List<DOIElement> mergedDOIElementList = doiElementList.ToList();
             unknownDOIList.ForEach((v) =>
             {
                 mergedDOIElementList.Add(new DOIElement() { DOI = v });
             });
 
 
-            var primaryDOIElementCount = primaryDOIElementList.Count;
-            var secondaryDOIElementCount = secondaryDOIElementList.Count;
+            var primaryDOIElementCount = doiElementList.Count(v => v.IsPrimary);
+            var secondaryDOIElementCount = doiElementList.Count(v => !v.IsPrimary);
 
             Dictionary<string, int> doiReferenceMapper = new Dictionary<string, int>();
 

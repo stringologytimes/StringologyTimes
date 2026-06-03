@@ -172,10 +172,6 @@ Write-Host "Execute: $doiProcessor $doiProcessorArgsA" -ForegroundColor Yellow
 $dblpProcA = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsA -Wait    
 
 
-return
-
-
-
 #$doiProcessorArgsB = @("--data", "./data", "--skip_build", "--mode", "build_primary_doi_element_dictionary")
 #Write-Host "Execute: $doiProcessor $doiProcessorArgsB" -ForegroundColor Yellow
 #$dblpProcB = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsB -Wait    

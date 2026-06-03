@@ -121,8 +121,7 @@ namespace DataProcessor
             }
             return false;
         }
-
-        public static void UpdateSecondaryDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
+        public static Dictionary<string, DOIElement> LoadDOIElementDictionary(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
         {
             var crossRefDOIPrefixSet = CrossRefDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
             var crossRefdoiElementDict = CrossRefCacheBuilder.LoadSmallCache(dataFolderPath, doiCacheInfoDict, crossRefDOIPrefixSet);
@@ -130,11 +129,25 @@ namespace DataProcessor
             var dataCiteDOIPrefixSet = DataCiteDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
             var dataCitedoiElementDict = DataCitePreprocessor.LoadSmallCache(dataFolderPath, doiCacheInfoDict, dataCiteDOIPrefixSet);
 
-            var mergedList = new List<DOIElement>();
-            mergedList.AddRange(crossRefdoiElementDict.Values);
-            mergedList.AddRange(dataCitedoiElementDict.Values);
+            var mergedDict = new Dictionary<string, DOIElement>();
+            crossRefdoiElementDict.ToList().ForEach((v) =>
+            {
+                mergedDict[v.Key] = v.Value;
+            });
+            dataCitedoiElementDict.ToList().ForEach((v) =>
+            {
+                mergedDict[v.Key] = v.Value;
+            });
 
-            mergedList.ForEach((v) =>
+            return mergedDict;
+            
+        }
+
+        public static void UpdateSecondaryDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
+        {
+            var doiElementDict = LoadDOIElementDictionary(dataFolderPath, doiCacheInfoDict);
+
+            doiElementDict.Values.ToList().ForEach((v) =>
             {
                 if (doiCacheInfoDict.ContainsKey(v.DOI))
                 {

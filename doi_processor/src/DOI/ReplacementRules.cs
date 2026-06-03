@@ -50,7 +50,7 @@ namespace DataProcessor
                  .Replace("\r", " ");
         }
 
-        public static void EscapeProcessing(Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
+        public static void EscapeProcessing(Dictionary<string, DOIElement> doiElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/escape_container_title.log";
             var logFile = new StreamWriter(logFilePath, true);
@@ -71,11 +71,7 @@ namespace DataProcessor
             };
 
 
-            primaryDOIElementDict.Values.ToList().ForEach((v) =>
-            {
-                escapeLambda(v);
-            });
-            secondaryDOIElementDict.Values.ToList().ForEach((v) =>
+            doiElementDict.Values.ToList().ForEach((v) =>
             {
                 escapeLambda(v);
             });
@@ -83,7 +79,7 @@ namespace DataProcessor
             logFile.Close();
         }
 
-        public static void AppendTags(string dataFolderPath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
+        public static void AppendTags(string dataFolderPath, Dictionary<string, DOIElement> doiElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/append_tags.log";
             var logFile = new StreamWriter(logFilePath, true);
@@ -99,14 +95,7 @@ namespace DataProcessor
             });
 
 
-            primaryDOIElementDict.Values.ToList().ForEach((v) =>
-            {
-                if (doiToTagMapper.ContainsKey(v.DOI))
-                {
-                    v.Tags.AddRange(doiToTagMapper[v.DOI]);
-                }
-            });
-            secondaryDOIElementDict.Values.ToList().ForEach((v) =>
+            doiElementDict.Values.ToList().ForEach((v) =>
             {
                 if (doiToTagMapper.ContainsKey(v.DOI))
                 {
@@ -116,7 +105,7 @@ namespace DataProcessor
         }
 
 
-        public static void ReplaceContainerTitleUsingDBLPSummary(string dblpSummaryPath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
+        public static void ReplaceContainerTitleUsingDBLPSummary(string dblpSummaryPath, Dictionary<string, DOIElement> doiElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/replace_container_titles_using_dblp_summary.log";
             var logFile = new StreamWriter(logFilePath, true);
@@ -128,17 +117,8 @@ namespace DataProcessor
                 var dblpProceedingsSeriesDictionary = DBLPProceedingsSeriesDictionary.Load(dblpSummaryPath);
                 dblpProceedingsSeriesDictionary.BuildDoiToSeriesTitleMapper();
 
-                var mergedDOIElementList = new List<DOIElement>();
-                primaryDOIElementDict.Values.ToList().ForEach((v) =>
-                {
-                    mergedDOIElementList.Add(v);
-                });
-                secondaryDOIElementDict.Values.ToList().ForEach((v) =>
-                {
-                    mergedDOIElementList.Add(v);
-                });
 
-                mergedDOIElementList.ForEach((doiElement) =>
+                doiElementDict.Values.ToList().ForEach((doiElement) =>
                 {
                     var doi = doiElement.DOI;
                     if (doiElement.ContainerDOI.Length > 0)
@@ -173,7 +153,7 @@ namespace DataProcessor
             Console.WriteLine("Log file: " + logFilePath);
         }
 
-        public static void ReplaceSeriesTitle(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
+        public static void ReplaceSeriesTitle(string rulePath, Dictionary<string, DOIElement> doiElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/series_title_replacement_rules.log";
             var logFile = new StreamWriter(logFilePath, true);
@@ -193,9 +173,7 @@ namespace DataProcessor
                 });
 
 
-                replace(seriesTitleReplacementRulesDict, "SeriesTitle", primaryDOIElementDict, logFile);
-                replace(seriesTitleReplacementRulesDict, "SeriesTitle", secondaryDOIElementDict, logFile);
-
+                replace(seriesTitleReplacementRulesDict, "SeriesTitle", doiElementDict, logFile);
             }
             else
             {
@@ -206,7 +184,7 @@ namespace DataProcessor
             Console.WriteLine("Log file: " + logFilePath);
         }
 
-        public static void ReplaceType(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
+        public static void ReplaceType(string rulePath, Dictionary<string, DOIElement> doiElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/type_replacement_rules.log";
             var logFile = new StreamWriter(logFilePath, true);
@@ -225,8 +203,7 @@ namespace DataProcessor
                     logFile.WriteLine($"Added type replacement rule: {key} -> {value}");
                 });
 
-                replace(typeReplacementRulesDict, "Type", primaryDOIElementDict, logFile);
-                replace(typeReplacementRulesDict, "Type", secondaryDOIElementDict, logFile);
+                replace(typeReplacementRulesDict, "Type", doiElementDict, logFile);
             }
             else
             {
@@ -234,11 +211,7 @@ namespace DataProcessor
             }
 
             var typeHashSet = new HashSet<string>();
-            primaryDOIElementDict.Values.ToList().ForEach((v) =>
-            {
-                typeHashSet.Add(v.Type);
-            });
-            secondaryDOIElementDict.Values.ToList().ForEach((v) =>
+            doiElementDict.Values.ToList().ForEach((v) =>
             {
                 typeHashSet.Add(v.Type);
             });
@@ -299,7 +272,7 @@ namespace DataProcessor
             logFile.Close();
         }
 
-        public static void ReplaceContainerTitleByDOIPrefix(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict, string logFolderPath)
+        public static void ReplaceContainerTitleByDOIPrefix(string rulePath, Dictionary<string, DOIElement> doiElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/doi_prefix_key_container_title_value.log";
             var logFile = new StreamWriter(logFilePath, true);
@@ -324,15 +297,14 @@ namespace DataProcessor
                     }
                 });
 
-                replace2(typeReplacementRulesList, "ContainerTitle", primaryDOIElementDict);
-                replace2(typeReplacementRulesList, "ContainerTitle", secondaryDOIElementDict);
+                replace2(typeReplacementRulesList, "ContainerTitle", doiElementDict);
             }
             else
             {
                 logFile.WriteLine("No DOI prefix rule file found: " + rulePath);
             }
         }
-        public static void ReplaceTypeByDOIPrefix(string rulePath, Dictionary<string, DOIElement> primaryDOIElementDict, Dictionary<string, DOIElement> secondaryDOIElementDict)
+        public static void ReplaceTypeByDOIPrefix(string rulePath, Dictionary<string, DOIElement> doiElementDict)
         {
             if (File.Exists(rulePath))
             {
@@ -347,8 +319,7 @@ namespace DataProcessor
                     Console.WriteLine($"Added DOI prefix rule: {key} -> {value}");
                 });
 
-                replace2(typeReplacementRulesList, "Type", primaryDOIElementDict);
-                replace2(typeReplacementRulesList, "Type", secondaryDOIElementDict);
+                replace2(typeReplacementRulesList, "Type", doiElementDict);
             }
             else
             {
