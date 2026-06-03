@@ -116,7 +116,7 @@ namespace DataProcessor
 
 
             OutputSystemMessageFunction("Building cache for primary DOI elements");
-            await DOIElementPreprocessor.BuildSmallCacheX(opts.DataFolderPath, opts.MailAddress, primaryDOISet, "primary_small_cache_hash.csv");
+            await DOIElementPreprocessor.BuildSmallCacheX(opts.DataFolderPath, opts.MailAddress, primaryDOISet, "small_cache_hash.csv");
 
             return 0;
         }

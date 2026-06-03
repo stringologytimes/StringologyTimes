@@ -83,6 +83,16 @@ namespace DataProcessor
             return dataString;
         }
 
+        public void UpdateContainerDOI(DOICacheInfo v)
+        {
+            if (this.ContainerDOI.Length == 0 && v.ContainerDOI.Length > 0)
+            {
+                this.ContainerDOI = v.ContainerDOI;
+            }
+
+            
+        }
+
 
         public static Dictionary<string, DOIElement> Load(string doiElementFilePath, bool checkFileExist)
         {

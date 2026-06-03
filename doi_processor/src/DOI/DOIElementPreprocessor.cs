@@ -139,8 +139,19 @@ namespace DataProcessor
                 mergedDict[v.Key] = v.Value;
             });
 
+            doiCacheInfoDict.Values.ToList().ForEach((v) =>
+            {
+                if (!mergedDict.ContainsKey(v.DOI))
+                {
+                    var doiElement = new DOIElement() { DOI = v.DOI, Source = "Unknown", IsPrimary = v.Priority == 0 };
+                    mergedDict[v.DOI] = doiElement;
+                }
+            });
+
+
+
             return mergedDict;
-            
+
         }
 
         public static void UpdateSecondaryDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
@@ -192,7 +203,7 @@ namespace DataProcessor
 
             var doiCacheInfoDict = new Dictionary<string, DOICacheInfo>();
 
-            if(new FileInfo(doiCacheInfoFilePath).Exists)
+            if (new FileInfo(doiCacheInfoFilePath).Exists)
             {
                 doiCacheInfoDict = DOICacheInfo.Load(doiCacheInfoFilePath);
             }
@@ -205,7 +216,7 @@ namespace DataProcessor
 
             primaryDOISet.ToList().ForEach((v) =>
             {
-                if(!doiCacheInfoDict.ContainsKey(v))
+                if (!doiCacheInfoDict.ContainsKey(v))
                 {
                     doiCacheInfoDict[v] = new DOICacheInfo() { DOI = v, Priority = 0 };
                 }
@@ -242,6 +253,7 @@ namespace DataProcessor
 
                 await DataProcessor.CrossRefCacheBuilder.UpdateSmallCache(dataFolderPath, doiCacheInfoDict, mailAddress);
                 await DataProcessor.DataCitePreprocessor.UpdateSmallCache(dataFolderPath, doiCacheInfoDict, mailAddress);
+                UpdateContainerDOI(dataFolderPath, doiCacheInfoDict, crossRefDOIPrefixSet);
                 UpdateSecondaryDOI(dataFolderPath, doiCacheInfoDict);
 
                 int unknownCounter = doiCacheInfoDict.Values.Count(v => v.SourceStatus == "");
@@ -333,6 +345,35 @@ namespace DataProcessor
             logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
             logFile.Close();
             return doiElementDict;
+        }
+        
+
+        public static void UpdateContainerDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, HashSet<string> crossRefDOIPrefixSet)
+        {
+            var logFilePath = dataFolderPath + "/auto_generated/log/update_container_doi.log";
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
+
+
+            var filePath = CrossRefDOIToGZFileCache.GetDOIToGZFileFolderPath(dataFolderPath);
+
+            var isbnFilePath = CrossRefDOIToGZFileCache.GetISBNFilePath(dataFolderPath);
+            var isbnDictionary = CSVFunctions.ReadCSVAasDictionary(isbnFilePath);
+            var titleFilePath = CrossRefDOIToGZFileCache.GetTitleFilePath(dataFolderPath);
+            var titleDictionary = CSVFunctions.ReadCSVAasDictionary(titleFilePath);
+
+            var doiElementDict = LoadDOIElementDictionary(dataFolderPath, doiCacheInfoDict);
+
+
+
+            doiCacheInfoDict.Values.ToList().ForEach((w) =>
+            {
+                w.UpdateContainerDOI(doiElementDict[w.DOI], isbnDictionary, titleDictionary, logFile);
+            });
+
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
+            logFile.Close();
+
         }
 
 
