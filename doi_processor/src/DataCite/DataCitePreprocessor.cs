@@ -45,10 +45,13 @@ namespace DataProcessor
 
         public static Dictionary<string, DOIElement> LoadSmallCache(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, HashSet<string> dataCiteDOIPrefixSet)
         {
-            throw new Exception("Not implemented");
-            var doiElementDict = new Dictionary<string, DOIElement>();
+            var logFilePath = dataFolderPath + "/auto_generated/log/load_small_cache.log";
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
 
-            var dataCiteDic = DataProcessor.DataCiteFoundDOICache.Load(dataFolderPath);
+
+            var doiElementDict = new Dictionary<string, DOIElement>();
+            var dataCiteDic = DataProcessor.DataCiteLocalCache.Load(dataFolderPath);
             dataCiteDic.ToList().ForEach((v) =>
             {
                 var doiElement = DataCiteParser.Parse(v.Value);
@@ -61,36 +64,67 @@ namespace DataProcessor
                 doiElementDict[v.Key] = doiElement;
             });
 
-            var mapperFromTitleToDOI = new Dictionary<string, string>();
-            doiElementDict.ToList().ForEach((v) =>
+            var lambdaLoadFunction = (DOICacheInfo v, bool isPrimary) =>
             {
-                if (v.Value.Title.Length > 0)
+                var doiPrefix = DOIFunctions.GetPrefix(v.DOI);
+                if (dataCiteDOIPrefixSet.Contains(doiPrefix))
                 {
-                    mapperFromTitleToDOI[v.Value.Title] = v.Value.DOI;
+                    if (dataCiteDic.ContainsKey(v.DOI))
+                    {
+                        var r = DataCiteParser.Parse(dataCiteDic[v.DOI]);
+                        r.IsPrimary = isPrimary;
+                        if (v.ContainerDOI.Length == 0 && v.ContainerDOI.Length > 0)
+                        {
+                            r.ContainerDOI = v.ContainerDOI;
+                        }
+                        return r;
+                    }
+                    else if (dataCiteExternalDic.ContainsKey(v.DOI))
+                    {
+                        var r = DataCiteParser.Parse(dataCiteExternalDic[v.DOI]);
+                        r.IsPrimary = isPrimary;
+                        if (v.ContainerDOI.Length == 0 && v.ContainerDOI.Length > 0)
+                        {
+                            r.ContainerDOI = v.ContainerDOI;
+                        }
+                        return r;
+                    }
+                    else
+                    {
+                        var r = new DOIElement() { DOI = v.DOI, Source = "DataCite:NotFound" };
+                        r.IsPrimary = isPrimary;
+                        if (v.ContainerDOI.Length == 0 && v.ContainerDOI.Length > 0)
+                        {
+                            r.ContainerDOI = v.ContainerDOI;
+                        }
+                        return r;
+                    }
+                }
+                else
+                {
+                    return null;
+                }
+            };
+
+            doiCacheInfoDict.Values.ToList().ForEach((v) =>
+            {
+                var doiElement = lambdaLoadFunction(v, v.Priority == 0);
+                if (doiElement != null)
+                {
+                    doiElementDict[v.DOI] = doiElement;
                 }
             });
 
-            doiElementDict.ToList().ForEach((v) =>
-            {
-                if (mapperFromTitleToDOI.ContainsKey(v.Value.ContainerTitle))
-                {
-                    v.Value.ContainerDOI = mapperFromTitleToDOI[v.Value.ContainerTitle];
-                }
-            });
-
-
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
+            logFile.Close();
             return doiElementDict;
+
         }
 
         public static async Task UpdateSmallCache(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, string mailAddress)
         {
-            throw new Exception("Not implemented");
-        }
+            Console.WriteLine("Building DataCiteSmallCache [START]");
 
-
-
-        public static async Task UpdateSmallCache(string dataFolderPath, ReadOnlySet<string> doiSet, string mailAddress)
-        {
             var dataCiteFolderInfo = DataCiteJSONLLoader.SearchDataCiteFolder(dataFolderPath + "/external");
             var dataCiteOtherCSVPath = DataCiteDOIToGZFileCache.GetOthersFilePath(dataFolderPath);
 
@@ -100,17 +134,42 @@ namespace DataProcessor
                 throw new Exception("others.tsv not found");
             }
 
-            DataCiteFoundDOICache.Update(doiSet.ToList(), dataFolderPath, dataCiteFolderInfo.FullName);
+            // Build Found DOI Cache
 
-            var unknownDOIDictionary = CSVFunctions.ReadCSVAasDictionary(GetUnknownDOIFilePath(dataFolderPath));
-            await DataCiteExternalFoundDOICache.Build(dataFolderPath, doiSet, unknownDOIDictionary, mailAddress);
-            CSVFunctions.WriteCSVAsDictionary(GetUnknownDOIFilePath(dataFolderPath), unknownDOIDictionary);
+            DataCiteLocalCache.Update(doiCacheInfoDict, dataFolderPath, dataCiteFolderInfo.FullName);
+            DataCiteLocalCache.UpdateDOICache(doiCacheInfoDict, dataFolderPath);
+            await DataCiteExternalFoundDOICache.Build(dataFolderPath, doiCacheInfoDict, mailAddress);
+
+            DataCiteExternalFoundDOICache.UpdateDOICache(doiCacheInfoDict, dataFolderPath);
 
 
-
-
+            Console.WriteLine("DataCiteSmallCache [END]");
 
         }
+
+
+
+        /*
+
+                public static async Task UpdateSmallCache(string dataFolderPath, ReadOnlySet<string> doiSet, string mailAddress)
+                {
+                    var dataCiteFolderInfo = DataCiteJSONLLoader.SearchDataCiteFolder(dataFolderPath + "/external");
+                    var dataCiteOtherCSVPath = DataCiteDOIToGZFileCache.GetOthersFilePath(dataFolderPath);
+
+                    var dataCiteOtherCSVFileInfo = new FileInfo(dataCiteOtherCSVPath);
+                    if (!dataCiteOtherCSVFileInfo.Exists)
+                    {
+                        throw new Exception("others.tsv not found");
+                    }
+
+                    DataCiteLocalCache.Update(doiSet.ToList(), dataFolderPath, dataCiteFolderInfo.FullName);
+
+                    var unknownDOIDictionary = CSVFunctions.ReadCSVAasDictionary(GetUnknownDOIFilePath(dataFolderPath));
+                    await DataCiteExternalFoundDOICache.Build(dataFolderPath, doiSet, unknownDOIDictionary, mailAddress);
+                    CSVFunctions.WriteCSVAsDictionary(GetUnknownDOIFilePath(dataFolderPath), unknownDOIDictionary);
+
+                }
+                */
 
 
         /*
@@ -182,9 +241,10 @@ namespace DataProcessor
                 }
                 */
 
+/*
         public static void UpdateSmallCacheUsingContainerTitle(string dataFolderPath)
         {
-            /*
+
             var logFilePath = dataFolderPath + "/auto_generated/log/datacite_update_small_cache_using_container_title.log";
             var logFileInfo = new FileInfo(logFilePath);
             var logFile = new StreamWriter(logFilePath, true);
@@ -217,12 +277,12 @@ namespace DataProcessor
 
             var dataCiteFolderInfo = DataCiteJSONLLoader.SearchDataCiteFolder(dataFolderPath + "/external");
             DataProcessor.DataCiteFoundDOICache.Update(additionalDataCiteDOISet.ToList(), dataFolderPath, dataCiteFolderInfo.FullName);
-            */
+
         }
 
         public static void UpdateSmallCacheUsingDOIPrefix(string dataFolderPath)
         {
-            /*
+
             var logFilePath = dataFolderPath + "/auto_generated/log/datacite_update_small_cache_using_doi_prefix.log";
             var logFile = new StreamWriter(logFilePath, true);
             logFile.WriteLine(new DateTime().ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
@@ -254,10 +314,11 @@ namespace DataProcessor
             DataProcessor.DataCiteFoundDOICache.Update(additionalCrossRefDOISet.ToList(), dataFolderPath, crossrefFolderInfo.FullName);
             logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
             logFile.Close();
-            */
+
 
 
         }
+        */
 
     }
 }

@@ -27,14 +27,14 @@ namespace DataProcessor
             {
                 if (foundJSONLMap.ContainsKey(v.DOI))
                 {
-                    v.Source = "CrossRef:LocalCache";
+                    v.SourceStatus = "LocalCache";
                     v.Date = DateTime.Now.ToString("yyyy-MM");
                 }
             });
         }
 
 
-        public static void Update(IDictionary<string, DOICacheInfo> doiCacheInfoDict, IReadOnlySet<string> crossRefDOIPrefixSet, string dataFolderPath, string jsonlFolderPath)
+        public static void Update(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath, string jsonlFolderPath)
         {
             var logFilePath = dataFolderPath + "/auto_generated/log/update_crossref_found_doi_cache.log";
             var logFile = new StreamWriter(logFilePath, true);
@@ -57,38 +57,32 @@ namespace DataProcessor
             Dictionary<string, HashSet<string>> doiPrefixToDoi = new Dictionary<string, HashSet<string>>();
             foreach (var doiCacheInfo in doiCacheInfoDict.Values)
             {
-                if (doiCacheInfo.Source.StartsWith("CrossRef:"))
+                if (doiCacheInfo.SourceCite == "CrossRef")
                 {
-                    alreadyFoundDOISet.Add(doiCacheInfo.DOI);
-
-                }
-                else
-                {
-                    if (!foundJSONLMap.ContainsKey(doiCacheInfo.DOI))
+                    if (doiCacheInfo.SourceStatus == "LocalCache" || doiCacheInfo.SourceStatus == "ExternalCache" || doiCacheInfo.SourceStatus == "NotFound")
                     {
-                        var doiPrefix = DOIFunctions.GetPrefix(doiCacheInfo.DOI);
-
-                        if (crossRefDOIPrefixSet.Contains(doiPrefix))
+                        alreadyFoundDOISet.Add(doiCacheInfo.DOI);
+                    }
+                    else
+                    {
+                        if (!foundJSONLMap.ContainsKey(doiCacheInfo.DOI))
                         {
+                            var doiPrefix = DOIFunctions.GetPrefix(doiCacheInfo.DOI);
                             if (!doiPrefixToDoi.ContainsKey(doiPrefix))
                             {
                                 doiPrefixToDoi[doiPrefix] = new HashSet<string>();
                             }
                             doiPrefixToDoi[doiPrefix].Add(doiCacheInfo.DOI);
                             count++;
+
                         }
                         else
                         {
-                            notCrossRefDOIPrefixSet.Add(doiPrefix);
+                            alreadyFoundDOISet.Add(doiCacheInfo.DOI);
                         }
-                    }
-                    else
-                    {
-                        alreadyFoundDOISet.Add(doiCacheInfo.DOI);
-                    }
 
+                    }
                 }
-
 
             }
 
@@ -178,7 +172,7 @@ namespace DataProcessor
                 logFile.WriteLine("Not found DOI (Type 1): " + v);
             });
 
-            /*
+
 
             var notFoundDOIs = new List<string>();
 
@@ -190,7 +184,7 @@ namespace DataProcessor
             {
                 logFile.WriteLine("Not found DOI (Type 2): " + v);
             });
-            */
+
 
 
             var JSONLCacheWriter = new StreamWriter(GetCachePath(dataFolderPath), false, Encoding.UTF8);

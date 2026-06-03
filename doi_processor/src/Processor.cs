@@ -64,7 +64,7 @@ namespace DataProcessor
         public static void BuildTagCSVFromDataCite(DBLPOptions opts)
         {
             OutputSystemMessageFunction("Building DataCite subjects");
-            var foundJSONLMapFilePath = DataCiteFoundDOICache.GetCachePath(opts.DataFolderPath);
+            var foundJSONLMapFilePath = DataCiteLocalCache.GetCachePath(opts.DataFolderPath);
             Dictionary<string, string> foundJSONLMap = DataCiteJSONLLoader.Load(foundJSONLMapFilePath);
             Console.WriteLine("Found JSONL Map: " + foundJSONLMap.Count);
 

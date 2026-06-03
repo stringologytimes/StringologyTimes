@@ -21,34 +21,51 @@ namespace DataProcessor
             var dataCiteExternalDic = DataProcessor.DataCiteJSONLLoader.Load(dataCiteExternalDicPath);
             return dataCiteExternalDic;
         }
-
-        public static async Task Build(string dataFolderPath, ReadOnlySet<string> doiSet, Dictionary<string, string> unknownDOIDictionary, string mailAddress)
+        public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath)
         {
             var dataCiteExternalDic = DataProcessor.DataCiteExternalFoundDOICache.Load(dataFolderPath);
-            var dataCiteDOIPrefixSet = DataProcessor.DataCiteDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
-            var foundDOICache = DataProcessor.DataCiteFoundDOICache.Load(dataFolderPath);
 
-            var externalDOICandidateList = new List<string>();
-            var dateNowStr = DateTime.Now.ToString("yyyy-MM");
-            foreach (var doi in doiSet)
+            doiCacheInfoDict.Values.ToList().ForEach((v) =>
             {
-                var doiPrefix = DOIFunctions.GetPrefix(doi);
-                if (!foundDOICache.ContainsKey(doi) && dataCiteDOIPrefixSet.Contains(doiPrefix) && !dataCiteExternalDic.ContainsKey(doi))
+                //var doiPrefix = DOIFunctions.GetPrefix(v.DOI);
+                if (v.SourceCite == "DataCite")
                 {
-                    if (!unknownDOIDictionary.ContainsKey(doi))
+                    if (dataCiteExternalDic.ContainsKey(v.DOI))
                     {
-                        externalDOICandidateList.Add(doi);
+                        v.SourceStatus = "ExternalCache";
+                        v.Date = DateTime.Now.ToString("yyyy-MM");
                     }
                     else
                     {
-                        var foundDateStr = unknownDOIDictionary[doi];
-                        if (dateNowStr != foundDateStr)
+                        if (v.SourceStatus != "LocalCache")
                         {
-                            externalDOICandidateList.Add(doi);
+                            v.SourceStatus = "NotFound";
+                            v.Date = DateTime.Now.ToString("yyyy-MM");
                         }
                     }
                 }
-            }
+            });
+        }
+        public static async Task Build(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, string mailAddress)
+        {
+            var dataCiteExternalDic = DataProcessor.DataCiteExternalFoundDOICache.Load(dataFolderPath);
+            var foundDOICache = DataProcessor.DataCiteLocalCache.Load(dataFolderPath);
+
+            var externalDOICandidateList = new List<string>();
+            var dateNowStr = DateTime.Now.ToString("yyyy-MM");
+            doiCacheInfoDict.Values.ToList().ForEach((v) =>
+                {
+                    if (v.SourceCite == "DataCite")
+                    {
+                        if (!dataCiteExternalDic.ContainsKey(v.DOI) && v.Date != dateNowStr)
+                        {
+                            if (v.SourceStatus != "LocalCache")
+                            {
+                                externalDOICandidateList.Add(v.DOI);
+                            }
+                        }
+                    }
+                });
 
 
             var http = DataProcessor.DataCiteClient.CreateHttpClient(mailAddress);
@@ -58,6 +75,8 @@ namespace DataProcessor
                 maxConcurrency: 4,
                 requestsPerSecond: 2.5);
 
+
+
             foreach (var (doi, json) in dict)
             {
                 if (json != null)
@@ -66,19 +85,7 @@ namespace DataProcessor
                     if (value != null)
                     {
                         dataCiteExternalDic[doi] = value;
-                        if (unknownDOIDictionary.ContainsKey(doi))
-                        {
-                            unknownDOIDictionary.Remove(doi);
-                        }
                     }
-                    else
-                    {
-                        unknownDOIDictionary[doi] = dateNowStr;
-                    }
-                }
-                else
-                {
-                    unknownDOIDictionary[doi] = dateNowStr;
                 }
             }
 

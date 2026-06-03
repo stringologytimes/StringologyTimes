@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 
 namespace DataProcessor
 {
-    class DataCiteFoundDOICache
+    class DataCiteLocalCache
     {
         public static string GetCachePath(string dataFolderPath)
         {
@@ -24,17 +24,35 @@ namespace DataProcessor
             var dic = DataProcessor.DataCiteJSONLLoader.Load(dicPath);
             return dic;
         }
-        public static void Update(List<string> dois, string dataFolderPath, string dataCiteFolderPath)
+        public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath)
+        {
+            Dictionary<string, string> foundJSONLMap = Load(dataFolderPath);
+
+            doiCacheInfoDict.Values.ToList().ForEach((v) =>
+            {
+                if (v.SourceCite == "DataCite")
+                {
+                    if (foundJSONLMap.ContainsKey(v.DOI))
+                    {
+                        v.SourceStatus = "LocalCache";
+                        v.Date = DateTime.Now.ToString("yyyy-MM");
+                    }
+
+                }
+            });
+        }
+
+
+        public static void Update(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath, string jsonlFolderPath)
         {
 
             var logFilePath = dataFolderPath + "/auto_generated/log/update_datacite_found_doi_cache.log";
             var logFile = new StreamWriter(logFilePath, true);
             logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
 
-            Console.WriteLine("Update Found DOI Cache(DataCite), DOI Count: " + dois.Count);
+            Console.WriteLine("Update Found DOI Cache(DataCite), DOI Count: " + doiCacheInfoDict.Count);
             var foundJSONLMapFilePath = GetCachePath(dataFolderPath);
             Dictionary<string, string> foundJSONLMap = DataCiteJSONLLoader.Load(foundJSONLMapFilePath);
-            var dataCiteDOIPrefixSet = DataCiteDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
 
 
             Console.WriteLine("\t Found JSONL Map: " + foundJSONLMap.Count);
@@ -45,23 +63,27 @@ namespace DataProcessor
 
 
             Dictionary<string, HashSet<string>> doiPrefixToDoi = new Dictionary<string, HashSet<string>>();
-            foreach (var doi in dois)
+            foreach (var doiCacheInfo in doiCacheInfoDict.Values)
             {
-                var smallDOI = doi.ToLower();
+                var smallDOI = doiCacheInfo.DOI.ToLower();
                 if (!foundJSONLMap.ContainsKey(smallDOI))
                 {
-                    if (dataCiteDOIPrefixSet.Contains(DOIFunctions.GetPrefix(smallDOI)))
+                    if (doiCacheInfo.SourceCite == "DataCite")
                     {
-                        var doiPrefix = DOIFunctions.GetPrefix(smallDOI);
-                        if (!doiPrefixToDoi.ContainsKey(doiPrefix))
+                        if (doiCacheInfo.SourceStatus == "LocalCache" || doiCacheInfo.SourceStatus == "ExternalCache" || doiCacheInfo.SourceStatus == "NotFound")
                         {
-                            doiPrefixToDoi[doiPrefix] = new HashSet<string>();
+                            alreadyFoundDOISet.Add(doiCacheInfo.DOI);
                         }
-                        doiPrefixToDoi[doiPrefix].Add(smallDOI.ToLower());
-                    }
-                    else
-                    {
-                        notDataCiteDOIPrefixSet.Add(DOIFunctions.GetPrefix(smallDOI));
+                        else
+                        {
+                            var doiPrefix = DOIFunctions.GetPrefix(smallDOI);
+                            if (!doiPrefixToDoi.ContainsKey(doiPrefix))
+                            {
+                                doiPrefixToDoi[doiPrefix] = new HashSet<string>();
+                            }
+                            doiPrefixToDoi[doiPrefix].Add(smallDOI);
+                            
+                        }
                     }
                 }
                 else
@@ -69,6 +91,7 @@ namespace DataProcessor
                     alreadyFoundDOISet.Add(smallDOI);
                 }
             }
+
 
             alreadyFoundDOISet.ToList().ForEach((v) =>
             {
@@ -111,7 +134,7 @@ namespace DataProcessor
                             var gzFileName = directoryName + "/" + fileName;
                             if (kvp.Value.Contains(lineDOI))
                             {
-                                gzFilePathSet.Add(dataCiteFolderPath + "/dois/" + gzFileName);
+                                gzFilePathSet.Add(jsonlFolderPath + "/dois/" + gzFileName);
                                 candidateDOISet.Add(lineDOI);
                             }
                         }
@@ -146,7 +169,7 @@ namespace DataProcessor
                         var gzFileName = directoryName + "/" + fileName;
                         if (othersHashSet.Contains(lineDOI))
                         {
-                            gzFilePathSet.Add(dataCiteFolderPath + "/dois/" + gzFileName);
+                            gzFilePathSet.Add(jsonlFolderPath + "/dois/" + gzFileName);
                             candidateDOISet.Add(lineDOI);
                             othersHashSet.Remove(lineDOI);
                         }

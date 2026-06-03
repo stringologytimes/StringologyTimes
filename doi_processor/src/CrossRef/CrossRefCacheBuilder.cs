@@ -75,13 +75,12 @@ namespace DataProcessor
             {
                 throw new Exception("others.tsv not found");
             }
-            var crossRefDOIPrefixSet = CrossRefDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
 
             // Build Found DOI Cache
-            CrossRefLocalCache.Update(doiCacheInfoDict, crossRefDOIPrefixSet, dataFolderPath, crossrefFolderInfo.FullName);
+            CrossRefLocalCache.Update(doiCacheInfoDict, dataFolderPath, crossrefFolderInfo.FullName);
             CrossRefLocalCache.UpdateDOICache(doiCacheInfoDict, dataFolderPath);
-            await CrossRefExternalCache.Update(dataFolderPath, doiCacheInfoDict, crossRefDOIPrefixSet, mailAddress);
-            CrossRefExternalCache.UpdateDOICache(doiCacheInfoDict, crossRefDOIPrefixSet, dataFolderPath);
+            await CrossRefExternalCache.Update(dataFolderPath, doiCacheInfoDict, mailAddress);
+            CrossRefExternalCache.UpdateDOICache(doiCacheInfoDict, dataFolderPath);
 
             Console.WriteLine("CrossRefSmallCache [END]");
 
@@ -169,7 +168,7 @@ namespace DataProcessor
                     }
                     else
                     {
-                        var r = new DOIElement() { DOI = v.DOI, Source = "CrossRef:NotFound" };
+                        var r = new DOIElement() { DOI = v.DOI, Source = v.SourceCite + ":NotFound" };
                         r.IsPrimary = isPrimary;
                         if (v.ContainerDOI.Length == 0 && v.ContainerDOI.Length > 0)
                         {
@@ -189,77 +188,12 @@ namespace DataProcessor
 
             doiCacheInfoDict.Values.ToList().ForEach((v) =>
             {
-                var doiElement = lambdaLoadFunction(v, v.IsPrimary);
+                var doiElement = lambdaLoadFunction(v, v.Priority == 0);
                 if (doiElement != null)
                 {
                     doiElementDict[v.DOI] = doiElement;
                 }
             });
-
-
-
-
-            /*
-
-            var isbnFilePath = CrossRefDOIToGZFileCache.GetISBNFilePath(dataFolderPath);
-            var isbnDictionary = CSVFunctions.ReadCSVAasDictionary(isbnFilePath);
-            var titleFilePath = CrossRefDOIToGZFileCache.GetTitleFilePath(dataFolderPath);
-            var titleDictionary = CSVFunctions.ReadCSVAasDictionary(titleFilePath);
-
-            logFile.WriteLine("DOI Dictionary: " + doiElementDict.Count);
-
-            logFile.WriteLine("ISBN Dictionary: " + isbnDictionary.Count);
-            logFile.WriteLine("Title Dictionary: " + titleDictionary.Count);
-
-            doiElementDict.ToList().ForEach((v) =>
-            {
-                if (v.Value.ContainerDOI.Length == 0)
-                {
-                    for (int i = 0; i < v.Value.ISBNList.Count; i++)
-                    {
-                        var ISBN = v.Value.ISBNList[i];
-                        if (isbnDictionary.ContainsKey(ISBN) && ISBN.Length > 0)
-                        {
-                            v.Value.ContainerDOI = isbnDictionary[ISBN];
-                            logFile.WriteLine("Matched ISBN: " + v.Value.DOI + " -> " + v.Value.ContainerDOI);
-                            break;
-                        }
-                    }
-                }
-
-                if (v.Value.ContainerDOI.Length == 0 && v.Value.ContainerTitle.Length > 0)
-                {
-                    if (titleDictionary.ContainsKey(v.Value.ContainerTitle))
-                    {
-                        v.Value.ContainerDOI = titleDictionary[v.Value.ContainerTitle];
-                        logFile.WriteLine("Matched Container Title: " + v.Value.DOI + " -> " + v.Value.ContainerDOI);
-                    }
-                }
-
-                if (v.Value.ContainerDOI.Length == 0)
-                {
-                    var isbnString = string.Join(",", v.Value.ISBNList);
-                    var titleString = v.Value.ContainerTitle;
-
-                    var bit = "";
-                    for (int i = 0; i < v.Value.ISBNList.Count; i++)
-                    {
-                        var ISBN = v.Value.ISBNList[i];
-                        if (isbnDictionary.ContainsKey(ISBN))
-                        {
-                            bit += "1";
-                        }
-                        else
-                        {
-                            bit += "0";
-                        }
-                    }
-
-                    logFile.WriteLine("No Container DOI found: " + v.Value.DOI + " / " + isbnString + " / " + titleString + " / " + bit);
-                }
-            });
-            */
-
 
             logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
             logFile.Close();

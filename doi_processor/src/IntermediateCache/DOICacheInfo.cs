@@ -13,22 +13,28 @@ namespace DataProcessor
     class DOICacheInfo
     {
         public string DOI { get; set; } = "";
-        public string Source { get; set; } = "";
+        public string SourceCite { get; set; } = "";
+        public string SourceStatus { get; set; } = "";
+
         public string Date { get; set; } = "";
         public string ContainerDOI { get; set; } = "";
-        public bool IsPrimary { get; set; } = false;
+        public int Priority { get; set; } = 3;
 
         public string ToJSONLine()
         {
+            return JsonSerializer.Serialize(this);
+/*
             List<string> dataList = new List<string>();
             dataList.Add(JsonSerializer.Serialize(this.DOI));
-            dataList.Add(JsonSerializer.Serialize(this.IsPrimary));
-            dataList.Add(JsonSerializer.Serialize(this.Source));
+            dataList.Add(JsonSerializer.Serialize(this.Priority));
+            dataList.Add(JsonSerializer.Serialize(this.SourceCite));
+            dataList.Add(JsonSerializer.Serialize(this.SourceStatus));
             dataList.Add(JsonSerializer.Serialize(this.ContainerDOI));
             dataList.Add(JsonSerializer.Serialize(this.Date));
 
             string dataString = "[" + string.Join(",", dataList) + "]";
             return dataString;
+            */
         }
 
         public static Dictionary<string, DOICacheInfo> Load(string doiCacheInfoFilePath)
