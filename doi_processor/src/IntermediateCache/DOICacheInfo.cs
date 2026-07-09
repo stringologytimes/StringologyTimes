@@ -18,7 +18,7 @@ namespace DataProcessor
 
         public string Date { get; set; } = "";
         public string ContainerDOI { get; set; } = "";
-        public int Priority { get; set; } = 3;
+        public int DOIRank { get; set; } = 3;
 
         public string ToJSONLine()
         {
@@ -96,6 +96,113 @@ namespace DataProcessor
                     logFile.WriteLine("Matched Container Title: " + this.DOI + " -> " + this.ContainerDOI);
                 }
             }
+
+            //if(doiElement.ISBNList)
         }
+
+        public void UpdateSourceCite(HashSet<string> crossRefDOIPrefixSet, HashSet<string> dataCiteDOIPrefixSet)
+        {
+            var doiPrefix = DOIFunctions.GetPrefix(this.DOI);
+            if (doiPrefix == "99.9999")
+            {
+                this.SourceCite = "DUMMY-ISSN";
+                this.SourceStatus = "Custom";
+            }
+            else if (crossRefDOIPrefixSet.Contains(doiPrefix))
+            {
+                this.SourceCite = "CrossRef";
+            }
+            else if (dataCiteDOIPrefixSet.Contains(doiPrefix))
+            {
+                this.SourceCite = "DataCite";
+            }
+            else
+            {
+                this.SourceCite = "Unknown";
+                this.SourceStatus = "Unknown";
+            }
+        }
+
+        
+
+        public static Dictionary<string, DOIElement> BuildDOIElementDictionary(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
+        {
+            var crossRefFoundDOIFilePath = dataFolderPath + "/auto_generated/cache/crossref_cache/small_cache/found_doi.jsonl";
+            var crossRefFoundExternalDOIFilePath = dataFolderPath + "/auto_generated/cache/crossref_cache/small_cache/found_external_doi.jsonl";
+
+
+            var crossRefFoundDOI = CrossRefJSONLLoader.LoadFoundDOI(crossRefFoundDOIFilePath);
+            var crossRefFoundExternalDOI = CrossRefJSONLLoader.LoadFoundExternalDOI(crossRefFoundExternalDOIFilePath);
+
+            var dataCiteFoundDOI = DataCiteLocalCache.Load(dataFolderPath);
+            var dataCiteFoundExternalDOI = DataCiteExternalFoundDOICache.Load(dataFolderPath);
+
+            Console.WriteLine("CrossRef Found DOI: " + crossRefFoundDOI.Count);
+            Console.WriteLine("CrossRef Found External DOI: " + crossRefFoundExternalDOI.Count);
+            Console.WriteLine("DataCite Found DOI: " + dataCiteFoundDOI.Count);
+            Console.WriteLine("DataCite Found External DOI: " + dataCiteFoundExternalDOI.Count);
+
+            var doiElementDict = new Dictionary<string, DOIElement>();
+            doiCacheInfoDict.ToList().ForEach((v) =>
+            {
+                var doiElement = new DOIElement();
+                bool b = false;
+                if (crossRefFoundDOI.ContainsKey(v.Key))
+                {
+                    doiElement = CrossRefParser.Parse(crossRefFoundDOI[v.Key]);
+                    b = true;
+                }
+                else if (crossRefFoundExternalDOI.ContainsKey(v.Key))
+                {
+                    doiElement = CrossRefParser.Parse(crossRefFoundExternalDOI[v.Key]);
+                    b = true;
+                }
+                else if (dataCiteFoundDOI.ContainsKey(v.Key))
+                {
+                    doiElement = DataCiteParser.Parse(dataCiteFoundDOI[v.Key]);
+                    b = true;
+                }
+                else if (dataCiteFoundExternalDOI.ContainsKey(v.Key))
+                {
+                    doiElement = DataCiteParser.Parse(dataCiteFoundExternalDOI[v.Key]);
+                    b = true;
+                }
+
+
+                if (b)
+                {
+                    doiElement.IsPrimary = v.Value.DOIRank == 0;
+                    doiElementDict[v.Key] = doiElement;                    
+                }
+
+            });
+
+            /*
+            var logFilePath = dataFolderPath + "/auto_generated/log/build_doi_element_dictionary.log";
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
+
+
+            var doiElementDict = new Dictionary<string, DOIElement>();
+            var doiElementCachePath = DOIElementPreprocessor.GetCachePath(dataFolderPath);
+            var doiElementCache = DOIElement.Load(doiElementCachePath, false);
+            doiCacheInfoDict.ToList().ForEach((v) =>
+            {
+                if (doiElementCache.ContainsKey(v))
+                {
+                    doiElementDict[v] = doiElementCache[v];
+                }
+                else
+                {
+                    logFile.WriteLine("DOI not found in cache: " + v);
+                }
+            });
+
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
+            logFile.Close();
+            */
+            return doiElementDict;
+        }
+        
     }
 }

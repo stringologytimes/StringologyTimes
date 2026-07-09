@@ -16,7 +16,7 @@ namespace DataProcessor
         public List<AuthorInfo> Authors { get; set; } = new List<AuthorInfo>();
 
         public List<string> ISBNList { get; set; } = new List<string>();
-
+        public List<string> ISSNList { get; set; } = new List<string>();
         public string SeriesTitle { get; set; } = "";
 
         public string ContainerDOI { get; set; } = "";
@@ -78,7 +78,7 @@ namespace DataProcessor
             dataList.Add(JsonSerializer.Serialize(this.DOIReferences.ToArray()));
             dataList.Add(JsonSerializer.Serialize(this.UnknownReferences.ToArray()));
             dataList.Add(JsonSerializer.Serialize(this.ISBNList.ToArray()));
-
+            dataList.Add(JsonSerializer.Serialize(this.ISSNList.ToArray()));
             string dataString = "[" + string.Join(",", dataList) + "]";
             return dataString;
         }

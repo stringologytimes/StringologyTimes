@@ -147,7 +147,7 @@ namespace DataProcessor
                     }
                     else
                     {
-                        var doiElement = new DOIElement() { DOI = v.DOI, Source = "CrossRef", IsPrimary = v.Priority == 0 };
+                        var doiElement = new DOIElement() { DOI = v.DOI, Source = "CrossRef", IsPrimary = v.DOIRank == 0 };
                         mergedDic[v.DOI] = doiElement;
                     }
                 }

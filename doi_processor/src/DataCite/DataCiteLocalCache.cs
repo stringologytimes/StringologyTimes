@@ -21,7 +21,7 @@ namespace DataProcessor
         public static Dictionary<string, string> Load(string dataFolderPath)
         {
             var dicPath = GetCachePath(dataFolderPath);
-            var dic = DataProcessor.DataCiteJSONLLoader.Load(dicPath);
+            var dic = JsonLib.LoadJSONLAsDictionary(dicPath, "id");
             return dic;
         }
         public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath)
@@ -52,7 +52,7 @@ namespace DataProcessor
 
             Console.WriteLine("Update Found DOI Cache(DataCite), DOI Count: " + doiCacheInfoDict.Count);
             var foundJSONLMapFilePath = GetCachePath(dataFolderPath);
-            Dictionary<string, string> foundJSONLMap = DataCiteJSONLLoader.Load(foundJSONLMapFilePath);
+            Dictionary<string, string> foundJSONLMap = DataCiteLocalCache.Load(dataFolderPath);
 
 
             Console.WriteLine("\t Found JSONL Map: " + foundJSONLMap.Count);

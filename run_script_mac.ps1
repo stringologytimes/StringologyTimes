@@ -172,23 +172,21 @@ Write-Host "Execute: $doiProcessor $doiProcessorArgsA" -ForegroundColor Yellow
 $dblpProcA = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsA -Wait    
 
 
-#$doiProcessorArgsB = @("--data", "./data", "--skip_build", "--mode", "build_primary_doi_element_dictionary")
-#Write-Host "Execute: $doiProcessor $doiProcessorArgsB" -ForegroundColor Yellow
-#$dblpProcB = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsB -Wait    
+$doiProcessorArgsB = @("--data", "./data", "--skip_build", "--mode", "build_doi_element_dictionary")
+Write-Host "Execute: $doiProcessor $doiProcessorArgsB" -ForegroundColor Yellow
+$dblpProcB = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsB -Wait    
 
-#$doiProcessorArgsC = @("--data", "./data", "--skip_build", "--mode", "build_small_cache_for_secondary_doi_elements")
-#Write-Host "Execute: $doiProcessor $doiProcessorArgsC" -ForegroundColor Yellow
-#$dblpProcC = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsC -Wait    
+$doiProcessorArgsC = @("--data", "./data", "--skip_build", "--mode", "modify_doi_element_dictionary")
+Write-Host "Execute: $doiProcessor $doiProcessorArgsC" -ForegroundColor Yellow
+$dblpProcC = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsC -Wait    
 
 #$doiProcessorArgsD = @("--data", "./data", "--skip_build", "--mode", "build_secondary_doi_element_dictionary")
 #Write-Host "Execute: $doiProcessor $doiProcessorArgsD" -ForegroundColor Yellow
 #$dblpProcD = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgsD -Wait    
 
-
-
-$doiProcessorArgs = @("--data", "./data", "--skip_build", "--mode", "standard")
-Write-Host "Execute: $doiProcessor $doiProcessorArgs" -ForegroundColor Yellow
-$dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgs -Wait    
+#$doiProcessorArgs = @("--data", "./data", "--skip_build", "--mode", "standard")
+#Write-Host "Execute: $doiProcessor $doiProcessorArgs" -ForegroundColor Yellow
+#$dblpProc = Start-Process -FilePath $doiProcessor -ArgumentList $doiProcessorArgs -Wait    
 
 $doiProcessorArgsE = @("--data", "./data", "--skip_build", "--mode", "create_lightweight_doi_info_folder")
 Write-Host "Execute: $doiProcessor $doiProcessorArgsE" -ForegroundColor Yellow
@@ -213,30 +211,5 @@ cd ..
 
 
 
-#Write-Host "Copy: ./data/auto_generated/stringology_dblp.jsonl to ./docs/output/jsonl/stringology_dblp.jsonl" -ForegroundColor Yellow
-#Copy-Item "./data/auto_generated/stringology_dblp.jsonl" "./docs/output/jsonl/stringology_dblp.jsonl"
-
-## tsc -p ./scripts/browser/tsconfig.json
-
-
-
-##
-## $arxivProcessor = "./dblp_processor/bin/Release/net9.0/dblp_processor"
-## $arxivProcessorArgs = @("arxiv", "--i", "./data/external/arxiv-metadata-oai-snapshot.json", "--o", "./data/auto_generated/cs.DS_arxiv_articles.tsv")
-## if ($urlUpdated -or $DBLPUpdated -or $arxivUpdated) {
-##     Write-Host "Execute: $arxivProcessor $arxivProcessorArgs" -ForegroundColor Yellow
-##     $arxivProc = Start-Process -FilePath $arxivProcessor -ArgumentList $arxivProcessorArgs -Wait
-## }else{
-##     Write-Host "Skip: $arxivProcessor $arxivProcessorArgs" -ForegroundColor Green
-## }
-## 
-## Write-Host "Execute: ts-node ./scripts/download_arxiv_xml_main.ts" -ForegroundColor Yellow
-## ts-node ./scripts/download_arxiv_xml_main.ts
-## 
-## Write-Host "Execute: ts-node ./scripts/process_stringology_dblp_main.ts" -ForegroundColor Yellow
-## ts-node ./scripts/process_stringology_dblp_main.ts
-## 
-## Write-Host "Execute: ts-node ./scripts/weekly_arxiv_main.ts" -ForegroundColor Yellow
-## ts-node ./scripts/weekly_arxiv_main.ts
 
 

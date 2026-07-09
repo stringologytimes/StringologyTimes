@@ -18,9 +18,9 @@ namespace DataProcessor
         public static Dictionary<string, string> Load(string dataFolderPath)
         {
             var dataCiteExternalDicPath = GetCachePath(dataFolderPath);
-            var dataCiteExternalDic = DataProcessor.DataCiteJSONLLoader.Load(dataCiteExternalDicPath);
-            return dataCiteExternalDic;
+            return JsonLib.LoadJSONLAsDictionary(dataCiteExternalDicPath, "id");
         }
+        
         public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath)
         {
             var dataCiteExternalDic = DataProcessor.DataCiteExternalFoundDOICache.Load(dataFolderPath);

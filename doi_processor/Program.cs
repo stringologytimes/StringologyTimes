@@ -95,6 +95,16 @@ namespace DataProcessor
                 await Processor.BuildSmallCache(opts);
                 return 0;
             }
+            else if (opts.Mode == "build_doi_element_dictionary")
+            {
+                Processor.BuildDOIElementDictionary(opts);
+                return 0;
+            }
+            else if (opts.Mode == "modify_doi_element_dictionary")
+            {
+                Processor.ModifyDOIElementDictionary(opts);
+                return 0;
+            }
             else if (opts.Mode == "create_lightweight_doi_info_folder")
             {
                 Processor.CreateLightweightDOIInfoFolder(opts);
@@ -102,8 +112,8 @@ namespace DataProcessor
             }
             else
             {
-                Processor.ModifyDOIElementDictionary(opts);
-                return 0;
+                throw new Exception("Invalid mode: " + opts.Mode);
+                //return 0;
 
             }
 

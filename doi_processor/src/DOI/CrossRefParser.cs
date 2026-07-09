@@ -11,7 +11,7 @@ namespace DataProcessor
 {
     public class CrossRefParser
     {
- public static List<int>? GetDataParts(Dictionary<string, string> dict, string key)
+        public static List<int>? GetDataParts(Dictionary<string, string> dict, string key)
         {
             if (dict.ContainsKey(key))
             {
@@ -155,6 +155,27 @@ namespace DataProcessor
                     element.ISBNList = isbnList;
                 }
             }
+
+            /*
+                        if (dict.ContainsKey("ISSN"))
+                        {
+                            var issnList = JsonSerializer.Deserialize<List<string>>(dict["ISSN"]);
+
+
+                            if (issnList != null && issnList.Count > 0)
+                            {
+                                for (int i = 0; i < issnList.Count; i++)
+                                {
+                                    var issn = issnList[i];
+                                        isbnList[i] = isbn13;
+                                }
+
+
+                                element.ISBNList = isbnList;
+                            }
+                        }
+                        */
+
 
 
 

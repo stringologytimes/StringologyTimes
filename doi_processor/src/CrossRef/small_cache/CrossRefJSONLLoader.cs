@@ -1,8 +1,8 @@
 namespace DataProcessor
 {
-    class DataCiteJSONLLoader
+    class CrossRefJSONLLoader
     {
-
+        /*
         public static DirectoryInfo SearchDataCiteFolder(string externalFolderPath)
         {
             DirectoryInfo di = new DirectoryInfo(externalFolderPath);
@@ -27,39 +27,19 @@ namespace DataProcessor
             }
             throw new Exception("DataCite folder not found");
         }
-        /*
-
-        public static Dictionary<string, string> Load(string foundJSONLMapFilePath)
-        {
-            Dictionary<string, string> foundJSONLMap = new Dictionary<string, string>();
-            var foundJSONLMapFileInfo = new FileInfo(foundJSONLMapFilePath);
-            if (foundJSONLMapFileInfo.Exists)
-            {
-                var jsonLString = File.ReadAllText(foundJSONLMapFilePath);
-                var dicts = JsonLib.ProcessJSONL(jsonLString, true);
-                Console.WriteLine("\t\t Loading Found JSONL Map: " + dicts.Count + " / " + jsonLString.Length);
-                foreach (var dict in dicts)
-                {
-                    var doi = dict["id"];
-                    foundJSONLMap[doi] = dict["input_line"];
-                }
-            }
-            return foundJSONLMap;
-        }
         */
+        
 
-
-/*
         public static Dictionary<string, string> LoadFoundDOI(string filepath)
         {
-            return JsonLib.LoadJSONLAsDictionary(filepath, "id");
+            return JsonLib.LoadJSONLAsDictionary(filepath, "DOI");
         }
 
         public static Dictionary<string, string> LoadFoundExternalDOI(string filepath)
         {
-            return JsonLib.LoadJSONLAsDictionary(filepath, "id");
+            return JsonLib.LoadJSONLAsDictionary(filepath, "DOI");
         }
-        */
+        
 
 
     }

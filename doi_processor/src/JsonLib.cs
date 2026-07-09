@@ -173,7 +173,35 @@ namespace DataProcessor
 
             return dicts;
         }
-        
+
+        public static Dictionary<string, string> LoadJSONLAsDictionary(string jsonlFilePath, string keyName)
+        {
+            var dict = new Dictionary<string, string>();
+            var jsonlString = File.ReadAllText(jsonlFilePath);
+            var lines = jsonlString.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (var line in lines)
+            {
+                var line_dict = new Dictionary<string, string>();
+                var keyValuePairs = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, object>>(line);
+                if (keyValuePairs != null)
+                {
+                    foreach (var kvp in keyValuePairs)
+                    {
+                        if(kvp.Key == keyName && kvp.Value != null)
+                        {
+                            var doi = kvp.Value?.ToString() ?? "";
+
+                            dict[doi] = line;
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("dict: " + dict.Count);
+            return dict;
+        }
+
+
 
         public static void Save(Dictionary<string, string> foundJSONLMap, string dicPath)
         {

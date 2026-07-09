@@ -11,53 +11,53 @@ namespace DataProcessor
         static string MODIFIED_DOI_ELEMENT_FILENAME = "modified_doi_element.jsonl";
 
 
-/*
-        private static ReadOnlySet<string> BuildSecondaryDOISet(Dictionary<string, DOIElement> primaryDOIElementDict, string dataFolderPath)
-        {
-
-
-            var secondaryDOISet = new HashSet<string>();
-            primaryDOIElementDict.Values.ToList().ForEach((v) =>
-            {
-                v.DOIReferences.ForEach((referenceDOI) =>
+        /*
+                private static ReadOnlySet<string> BuildSecondaryDOISet(Dictionary<string, DOIElement> primaryDOIElementDict, string dataFolderPath)
                 {
-                    if (!primaryDOIElementDict.ContainsKey(referenceDOI))
+
+
+                    var secondaryDOISet = new HashSet<string>();
+                    primaryDOIElementDict.Values.ToList().ForEach((v) =>
                     {
-                        secondaryDOISet.Add(referenceDOI);
-                    }
-                    if (v.ContainerDOI.Length > 0 && !primaryDOIElementDict.ContainsKey(v.ContainerDOI))
+                        v.DOIReferences.ForEach((referenceDOI) =>
+                        {
+                            if (!primaryDOIElementDict.ContainsKey(referenceDOI))
+                            {
+                                secondaryDOISet.Add(referenceDOI);
+                            }
+                            if (v.ContainerDOI.Length > 0 && !primaryDOIElementDict.ContainsKey(v.ContainerDOI))
+                            {
+                                secondaryDOISet.Add(v.ContainerDOI);
+                            }
+
+                        });
+                    });
+
+                    var secondaryDOIList = secondaryDOISet.ToList();
+                    var mergedDOIList = new List<string>();
+                    primaryDOIElementDict.Values.ToList().ForEach((v) =>
                     {
-                        secondaryDOISet.Add(v.ContainerDOI);
-                    }
+                        mergedDOIList.Add(v.DOI);
+                    });
+                    secondaryDOISet.ToList().ForEach((v) =>
+                    {
+                        mergedDOIList.Add(v);
+                    });
 
-                });
-            });
+                    var specialContainerDOISet = DoiToTagMapper.CollectSpecialContainerDOI(dataFolderPath, mergedDOIList, dataFolderPath + "/auto_generated/log/build_secondary_doi_set.log");
 
-            var secondaryDOIList = secondaryDOISet.ToList();
-            var mergedDOIList = new List<string>();
-            primaryDOIElementDict.Values.ToList().ForEach((v) =>
-            {
-                mergedDOIList.Add(v.DOI);
-            });
-            secondaryDOISet.ToList().ForEach((v) =>
-            {
-                mergedDOIList.Add(v);
-            });
+                    specialContainerDOISet.ToList().ForEach((v) =>
+                    {
+                        if (!primaryDOIElementDict.ContainsKey(v))
+                        {
+                            secondaryDOISet.Add(v);
+                        }
+                    });
 
-            var specialContainerDOISet = DoiToTagMapper.CollectSpecialContainerDOI(dataFolderPath, mergedDOIList, dataFolderPath + "/auto_generated/log/build_secondary_doi_set.log");
-
-            specialContainerDOISet.ToList().ForEach((v) =>
-            {
-                if (!primaryDOIElementDict.ContainsKey(v))
-                {
-                    secondaryDOISet.Add(v);
+                    var readOnlySecondaryDOISet = new ReadOnlySet<string>(secondaryDOISet);
+                    return readOnlySecondaryDOISet;
                 }
-            });
-
-            var readOnlySecondaryDOISet = new ReadOnlySet<string>(secondaryDOISet);
-            return readOnlySecondaryDOISet;
-        }
-        */
+                */
 
 
 
@@ -65,7 +65,7 @@ namespace DataProcessor
         {
             OutputSystemMessageFunction("Building DataCite subjects");
             var foundJSONLMapFilePath = DataCiteLocalCache.GetCachePath(opts.DataFolderPath);
-            Dictionary<string, string> foundJSONLMap = DataCiteJSONLLoader.Load(foundJSONLMapFilePath);
+            Dictionary<string, string> foundJSONLMap = DataCiteLocalCache.Load(opts.DataFolderPath);
             Console.WriteLine("Found JSONL Map: " + foundJSONLMap.Count);
 
             List<string> csvLines = new List<string>();
@@ -116,28 +116,53 @@ namespace DataProcessor
 
 
             OutputSystemMessageFunction("Building cache for primary DOI elements");
-            await DOIElementPreprocessor.BuildSmallCacheX(opts.DataFolderPath, opts.MailAddress, primaryDOISet, "small_cache_hash.csv");
+            await DOIElementPreprocessor.BuildSmallCaches(opts.DataFolderPath, opts.MailAddress, primaryDOISet, "small_cache_hash.csv");
 
             return 0;
         }
 
-        /*
-        public static void BuildPrimaryDOIElementDictionary(DBLPOptions opts)
+        public static void BuildDOIElementDictionary(DBLPOptions opts)
         {
-            OutputSystemMessageFunction("Creating DOI to Tag Mapper");
-            var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.DataFolderPath + "/raw");
-            var primaryDOISet = new ReadOnlySet<string>(new HashSet<string>(doiToTagMapper.Keys));
+            var smallCacheSummaryFilePath = DOIElementPreprocessor.GetDOICacheInfoPath(opts.DataFolderPath);
+            if (!File.Exists(smallCacheSummaryFilePath))
+            {
+                throw new Exception("Small cache summary file not found: " + smallCacheSummaryFilePath);
+            }
 
-            Console.WriteLine("Primary DOI set: " + primaryDOISet.Count);
+            Dictionary<string, DOICacheInfo> doiCacheInfoDict = DOICacheInfo.Load(smallCacheSummaryFilePath);
+            if (File.Exists(smallCacheSummaryFilePath))
+            {
+                doiCacheInfoDict = DOICacheInfo.Load(smallCacheSummaryFilePath);
+            }
+            var doiElementDict = DOICacheInfo.BuildDOIElementDictionary(opts.DataFolderPath, doiCacheInfoDict);
 
-            OutputSystemMessageFunction("Building primary DOI element dictionary");
-            var primaryDOIElementDict = DOIElementPreprocessor.BuildDOIElementDictionary(opts.DataFolderPath, primaryDOISet);
 
-            OutputSystemMessageFunction("Saving primary DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, PRIMARY_DOI_ELEMENT_FILENAME));
-            DOIElement.Save(primaryDOIElementDict, GetFilePathInResultFolder(opts.DataFolderPath, PRIMARY_DOI_ELEMENT_FILENAME));
+
+            OutputSystemMessageFunction("Saving DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, DOI_ELEMENT_FILENAME));
+            DOIElement.Save(doiElementDict, GetFilePathInResultFolder(opts.DataFolderPath, DOI_ELEMENT_FILENAME));
 
         }
-        */
+
+
+        /*
+
+         public static void BuildPrimaryDOIElementDictionary(DBLPOptions opts)
+         {
+             OutputSystemMessageFunction("Creating DOI to Tag Mapper");
+             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.DataFolderPath + "/raw");
+             var primaryDOISet = new ReadOnlySet<string>(new HashSet<string>(doiToTagMapper.Keys));
+
+             Console.WriteLine("Primary DOI set: " + primaryDOISet.Count);
+
+             OutputSystemMessageFunction("Building primary DOI element dictionary");
+             var primaryDOIElementDict = DOIElementPreprocessor.BuildDOIElementDictionary(opts.DataFolderPath, primaryDOISet);
+
+             OutputSystemMessageFunction("Saving primary DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, PRIMARY_DOI_ELEMENT_FILENAME));
+             DOIElement.Save(primaryDOIElementDict, GetFilePathInResultFolder(opts.DataFolderPath, PRIMARY_DOI_ELEMENT_FILENAME));
+
+         }
+         */
+
 
         /*
         public static async Task<int> BuildSmallCacheForSecondaryDOIElements(DBLPOptions opts)
@@ -236,12 +261,15 @@ namespace DataProcessor
             var logFolderPath = opts.DataFolderPath + "/auto_generated/log";
 
             OutputSystemMessageFunction("Running doi_processor");
+            var doiElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, DOI_ELEMENT_FILENAME), true);
 
+            /*
             var doiCacheInfoPath = DOIElementPreprocessor.GetDOICacheInfoPath(opts.DataFolderPath);
             var doiCacheInfoDict = DOICacheInfo.Load(doiCacheInfoPath);
-            var doiElementDict = DOIElementPreprocessor.LoadDOIElementDictionary(opts.DataFolderPath, doiCacheInfoDict);
+            var doiElementDict = DOIElementPreprocessor.CreateDOIElementDictionaryFromSmallCache(opts.DataFolderPath, doiCacheInfoDict);
+            */
 
-            DOIElement.Save(doiElementDict, GetFilePathInResultFolder(opts.DataFolderPath, DOI_ELEMENT_FILENAME));
+            //DOIElement.Save(doiElementDict, GetFilePathInResultFolder(opts.DataFolderPath, DOI_ELEMENT_FILENAME));
 
 
             OutputSystemMessageFunction("Modifying container title using DBLP summary");

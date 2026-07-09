@@ -21,7 +21,7 @@ namespace DataProcessor
 
         public static string GetDOICacheInfoPath(string dataFolderPath)
         {
-            return dataFolderPath + "/auto_generated/cache/doi_cache_info.jsonl";
+            return dataFolderPath + "/auto_generated/cache/small_cache_summary.jsonl";
         }
         public static Dictionary<string, string> LoadDOIPrefixMapper(string dataFolderPath)
         {
@@ -121,7 +121,7 @@ namespace DataProcessor
             }
             return false;
         }
-        public static Dictionary<string, DOIElement> LoadDOIElementDictionary(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
+        public static Dictionary<string, DOIElement> CreateDOIElementDictionaryFromSmallCache(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
         {
             var crossRefDOIPrefixSet = CrossRefDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
             var crossRefdoiElementDict = CrossRefCacheBuilder.LoadSmallCache(dataFolderPath, doiCacheInfoDict, crossRefDOIPrefixSet);
@@ -143,7 +143,7 @@ namespace DataProcessor
             {
                 if (!mergedDict.ContainsKey(v.DOI))
                 {
-                    var doiElement = new DOIElement() { DOI = v.DOI, Source = "Unknown", IsPrimary = v.Priority == 0 };
+                    var doiElement = new DOIElement() { DOI = v.DOI, Source = "Unknown", IsPrimary = v.DOIRank == 0 };
                     mergedDict[v.DOI] = doiElement;
                 }
             });
@@ -156,7 +156,7 @@ namespace DataProcessor
 
         public static void UpdateSecondaryDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
         {
-            var doiElementDict = LoadDOIElementDictionary(dataFolderPath, doiCacheInfoDict);
+            var doiElementDict = CreateDOIElementDictionaryFromSmallCache(dataFolderPath, doiCacheInfoDict);
 
             doiElementDict.Values.ToList().ForEach((v) =>
             {
@@ -165,7 +165,7 @@ namespace DataProcessor
                     var w = doiCacheInfoDict[v.DOI];
                     if (w.ContainerDOI.Length > 0 && !doiCacheInfoDict.ContainsKey(w.ContainerDOI))
                     {
-                        doiCacheInfoDict[w.ContainerDOI] = new DOICacheInfo() { DOI = w.ContainerDOI, Priority = 1 };
+                        doiCacheInfoDict[w.ContainerDOI] = new DOICacheInfo() { DOI = w.ContainerDOI, DOIRank = 1 };
                     }
                 }
 
@@ -175,7 +175,7 @@ namespace DataProcessor
                     {
                         if (!doiCacheInfoDict.ContainsKey(referenceDOI))
                         {
-                            doiCacheInfoDict[referenceDOI] = new DOICacheInfo() { DOI = referenceDOI, Priority = 1 };
+                            doiCacheInfoDict[referenceDOI] = new DOICacheInfo() { DOI = referenceDOI, DOIRank = 1 };
                         }
                     });
 
@@ -185,7 +185,7 @@ namespace DataProcessor
         }
 
 
-        public static async Task BuildSmallCacheX(string dataFolderPath, string mailAddress, ReadOnlySet<string> primaryDOISet, string checksumFileName)
+        public static async Task BuildSmallCaches(string dataFolderPath, string mailAddress, ReadOnlySet<string> primaryDOISet, string checksumFileName)
         {
             var logFolderPath = dataFolderPath + "/auto_generated/log";
 
@@ -211,18 +211,18 @@ namespace DataProcessor
 
             doiCacheInfoDict.Values.ToList().ForEach((v) =>
             {
-                v.Priority = 1;
+                v.DOIRank = 1;
             });
 
             primaryDOISet.ToList().ForEach((v) =>
             {
                 if (!doiCacheInfoDict.ContainsKey(v))
                 {
-                    doiCacheInfoDict[v] = new DOICacheInfo() { DOI = v, Priority = 0 };
+                    doiCacheInfoDict[v] = new DOICacheInfo() { DOI = v, DOIRank = 0 };
                 }
                 else
                 {
-                    doiCacheInfoDict[v].Priority = 0;
+                    doiCacheInfoDict[v].DOIRank = 0;
                 }
             });
 
@@ -234,19 +234,8 @@ namespace DataProcessor
             {
                 foreach (var v in doiCacheInfoDict.Values)
                 {
-                    var doiPrefix = DOIFunctions.GetPrefix(v.DOI);
-                    if (crossRefDOIPrefixSet.Contains(doiPrefix))
-                    {
-                        v.SourceCite = "CrossRef";
-                    }
-                    else if (dataCiteDOIPrefixSet.Contains(doiPrefix))
-                    {
-                        v.SourceCite = "DataCite";
-                    }
-                    else
-                    {
-                        v.SourceCite = "Unknown";
-                        v.SourceStatus = "Unknown";
+                    if(v.SourceCite.Length == 0){
+                        v.UpdateSourceCite(crossRefDOIPrefixSet, dataCiteDOIPrefixSet);
                     }
                 }
 
@@ -320,6 +309,7 @@ namespace DataProcessor
             Console.WriteLine("Building SmallCache [END]");
         }
 
+/*
         public static Dictionary<string, DOIElement> BuildDOIElementDictionary(string dataFolderPath, ReadOnlySet<string> doiSet)
         {
             var logFilePath = dataFolderPath + "/auto_generated/log/build_doi_element_dictionary.log";
@@ -346,6 +336,8 @@ namespace DataProcessor
             logFile.Close();
             return doiElementDict;
         }
+        */
+        
         
 
         public static void UpdateContainerDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, HashSet<string> crossRefDOIPrefixSet)
@@ -355,14 +347,16 @@ namespace DataProcessor
             logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
 
 
-            var filePath = CrossRefDOIToGZFileCache.GetDOIToGZFileFolderPath(dataFolderPath);
+            //var filePath = CrossRefDOIToGZFileCache.GetDOIToGZFileFolderPath(dataFolderPath);
 
             var isbnFilePath = CrossRefDOIToGZFileCache.GetISBNFilePath(dataFolderPath);
             var isbnDictionary = CSVFunctions.ReadCSVAasDictionary(isbnFilePath);
             var titleFilePath = CrossRefDOIToGZFileCache.GetTitleFilePath(dataFolderPath);
             var titleDictionary = CSVFunctions.ReadCSVAasDictionary(titleFilePath);
+            var issnFilePath = CrossRefDOIToGZFileCache.GetISSNFilePath(dataFolderPath);
+            var issnDictionary = CSVFunctions.ReadCSVAasDictionary(issnFilePath);
 
-            var doiElementDict = LoadDOIElementDictionary(dataFolderPath, doiCacheInfoDict);
+            var doiElementDict = CreateDOIElementDictionaryFromSmallCache(dataFolderPath, doiCacheInfoDict);
 
 
 
