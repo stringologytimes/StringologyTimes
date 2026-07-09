@@ -22,6 +22,7 @@ export class LightWeightDOIInfo {
     public volume: string = "";
     public tags: string[] = [];    
     public doiReferenceIDs: number[] = [];
+    public optional_ids: string[] = [];
 }
 export class DOIInfo {
     public id: number = -1;
@@ -39,6 +40,7 @@ export class DOIInfo {
     public keywords: string[] = [];
     public type: string = "Unknown";
     public isPrimary: boolean = false;
+    public optional_ids: string[] = [];
 
     public getStatus(): DOIStatus {
         if (this.isPrimary) {
@@ -102,6 +104,7 @@ export class DOIInfoCollection {
         r.doiReferences = this.lightweightDOIInfos[index].doiReferenceIDs.map(id => this.getDOIByID(id));
         r.type = this.lightweightDOIInfos[index].type;
         r.tags = this.lightweightDOIInfos[index].tags.map(tag => tag);
+        r.optional_ids = this.lightweightDOIInfos[index].optional_ids.map(id => id);
         if (this.lightweightDOIInfos[index].isPrimary) {
             r.isPrimary = true;
         } else{
@@ -226,6 +229,18 @@ export class DOIInfoCollection {
         r.lightweightDOIInfos.forEach((doiInfo, index) => {
             r.doiToIDMapper.set(doiInfo.doi, index);
         });
+
+        const optional_ids_list = await load_gzip_text_lines(folderURL + "/optional_id.csv.gz");
+        console.log("size of optional_ids_list: " + optional_ids_list.length);
+        var optional_ids_index = 0;
+        optional_ids_list.forEach((optional_ids) => {
+            if(optional_ids == ""){
+                optional_ids_index++;
+            }else{
+                r.lightweightDOIInfos[optional_ids_index].optional_ids = optional_ids.split(",");
+            }
+        });
+
 
         console.log("lightweightDOIInfos is loaded successfully : " + r.lightweightDOIInfos.length);
 

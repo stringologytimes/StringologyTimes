@@ -250,6 +250,13 @@ export class DOIFilterStandardRender {
                     throw new Error("volumeSpan is not found");
                 }
 
+                const optionalIdsSpan = article.querySelector('.optional_ids');
+                if (optionalIdsSpan) {
+                    optionalIdsSpan.textContent = doiInfo.optional_ids.join(", ");
+                } else {
+                    throw new Error("optionalIdsSpan is not found");
+                }
+
                 /*
                 const statusSpan = article.querySelector('.status');
                 if (statusSpan) statusSpan.textContent = doiInfo.status || '';

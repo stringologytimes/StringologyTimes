@@ -23,6 +23,8 @@ namespace DataProcessor
         public List<string> TypeList { get; set; } = new List<string>();
         public List<string> SourceList { get; set; } = new List<string>();
         //public List<string> TitleSizeList { get; set; } = new List<string>();
+        public List<string> OptionalIDList { get; set; } = new List<string>();
+
         public List<string> CompressedFullNameList { get; set; } = new List<string>();
         public List<string> CompressedTitleList { get; set; } = new List<string>();
         public List<string> CompressedDOIReferenceList { get; set; } = new List<string>();
@@ -98,54 +100,6 @@ namespace DataProcessor
 
             }
 
-
-
-
-            /*
-
-                        {
-                            primaryDOIElementList.ForEach((v) =>
-                            {
-                                r.DOIList.Add(v.DOI);
-                            });
-                            secondaryDOIElementList.ForEach((v) =>
-                            {
-                                r.DOIList.Add(v.DOI);
-                            });
-                            unknownDOIList.ForEach((v) =>
-                            {
-                                r.DOIList.Add(v);
-                            });
-                        }
-                        */
-
-
-/*
-            {
-                var counter = 0;
-
-                primaryDOIElementList.ForEach((v) =>
-                {
-                    r.DOIFlagList.Add("1");
-                    doiReferenceMapper[v.DOI] = counter++;
-                });
-                secondaryDOIElementList.ForEach((v) =>
-                {
-                    r.DOIFlagList.Add("0");
-                    doiReferenceMapper[v.DOI] = counter++;
-                });
-                unknownDOIList.ForEach((v) =>
-                {
-                    r.DOIFlagList.Add("-1");
-                    doiReferenceMapper[v] = counter++;
-                });
-
-                Console.WriteLine("DOI Count: " + counter);
-                Console.WriteLine("Primary DOI Count: " + primaryDOIElementList.Count);
-                Console.WriteLine("Secondary DOI Count: " + secondaryDOIElementList.Count);
-                Console.WriteLine("Unknown DOI Count: " + unknownDOIList.Count);
-            }
-            */
             HashSet<string> fullNameHashSet = new HashSet<string>();
 
             mergedDOIElementList.ForEach((v) =>
@@ -181,6 +135,18 @@ namespace DataProcessor
                 //r.SeriesTitleList.Add((tmp_counter++).ToString());
                 r.ContainerDOIList.Add(v.ContainerDOI);
                 r.ContainerTitleList.Add(v.ContainerTitle);
+
+                var tmp_optionalIDList = new List<string>();
+                v.ISBNList.ForEach((v) => {
+                    tmp_optionalIDList.Add($"ISBN:{v}");
+                });
+                v.ISSNList.ForEach((v) => {
+                    tmp_optionalIDList.Add($"ISSN:{v}");
+                });
+                tmp_optionalIDList.ForEach((v) => {
+                    r.OptionalIDList.Add(v);
+                });
+                r.OptionalIDList.Add("");
             });
 
 
@@ -312,6 +278,7 @@ namespace DataProcessor
             CSVFunctions.WriteCSVByGZip(outputFolder + "/doi_flag.csv.gz", DOIFlagList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/tag.csv.gz", TagList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/tag_of_each_element.csv.gz", TagListOfEachElement);
+            CSVFunctions.WriteCSVByGZip(outputFolder + "/optional_id.csv.gz", OptionalIDList);
         }
     }
 }
