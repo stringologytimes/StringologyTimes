@@ -33,7 +33,7 @@ namespace DataProcessor
 
             var authorInfoList = new List<AuthorInfo>();
 
-            if (doiType == "CrossRef:book")
+            if (doiType == "book")
             {
                 if (!dictFromJSONL.ContainsKey("editor"))
                 {

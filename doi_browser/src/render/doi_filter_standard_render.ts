@@ -234,7 +234,7 @@ export class DOIFilterStandardRender {
 
                 const containerTitleSpan = article.querySelector('.container_title');
                 if (containerTitleSpan) {
-                    containerTitleSpan.textContent = doiInfo.container_title || '';
+                    containerTitleSpan.textContent = "Container Title: " + (doiInfo.container_title || '');
                 } else {
                     throw new Error("containerTitleSpan is not found");
                 }
@@ -252,7 +252,7 @@ export class DOIFilterStandardRender {
 
                 const optionalIdsSpan = article.querySelector('.optional_ids');
                 if (optionalIdsSpan) {
-                    optionalIdsSpan.textContent = doiInfo.optional_ids.join(", ");
+                    optionalIdsSpan.textContent = "Optional IDs: " + doiInfo.optional_ids.join(", ");
                 } else {
                     throw new Error("optionalIdsSpan is not found");
                 }

@@ -84,7 +84,7 @@ namespace DataProcessor
 
         public static bool IsGroupType(string type)
         {
-            if (type == "CrossRef:book" || type == "CrossRef:edited-book" || type == "CrossRef:journal" || type == "CrossRef:proceedings" || type == "CrossRef:journal-volume" || type == "CrossRef:book-series" || type == "CrossRef:proceedings-series")
+            if (type == "book" || type == "edited-book" || type == "journal" || type == "proceedings" || type == "journal-volume" || type == "book-series" || type == "proceedings-series")
             {
                 return true;
             }
@@ -108,7 +108,7 @@ namespace DataProcessor
             if (dict.ContainsKey("type"))
             {
                 //element.Type = dict["type"];
-                element.Type = $"CrossRef:{dict["type"]}";
+                element.Type = $"{dict["type"]}";
 
             }
             else
@@ -208,7 +208,7 @@ namespace DataProcessor
 
             if (!containerTitleFlag)
             {
-                if (element.Type == "CrossRef:monograph" || element.Type == "CrossRef:posted-content" || element.Type == "CrossRef:book")
+                if (element.Type == "monograph" || element.Type == "posted-content" || element.Type == "book")
                 {
                     element.ContainerTitle = "UNKNOWN";
                 }

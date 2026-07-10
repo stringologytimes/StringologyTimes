@@ -23,6 +23,19 @@ namespace DataProcessor
         {
             return dataFolderPath + "/auto_generated/cache/small_cache_summary.jsonl";
         }
+
+        public static string GetDummyDOIElementCachePath(string dataFolderPath)
+        {
+            return dataFolderPath + "/auto_generated/cache/dummy_cache/doi_element.jsonl";
+        }
+        public static string GetDebugLogFolderPath(string dataFolderPath)
+        {
+            return dataFolderPath + "/auto_generated/cache/debug_log";
+        }
+
+
+
+
         public static Dictionary<string, string> LoadDOIPrefixMapper(string dataFolderPath)
         {
             Dictionary<string, string> doiPrefixMapper = new Dictionary<string, string>();
@@ -184,6 +197,95 @@ namespace DataProcessor
             });
         }
 
+        public static void UpdateDummyDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
+        {
+            var dummyDirectoryPath = dataFolderPath + "/auto_generated/cache/dummy_cache";
+            if (!Directory.Exists(dummyDirectoryPath))
+            {
+                Directory.CreateDirectory(dummyDirectoryPath);
+            }
+
+
+            Dictionary<string, DOIElement> dummyDOIElementDict = DOIElement.Load(GetDummyDOIElementCachePath(dataFolderPath), false);
+
+            var doiElementDict = CreateDOIElementDictionaryFromSmallCache(dataFolderPath, doiCacheInfoDict);
+
+            doiCacheInfoDict.Values.ToList().ForEach((v) =>
+            {
+                if (doiElementDict.ContainsKey(v.DOI))
+                {
+                    var vInfo = doiElementDict[v.DOI];
+                    if (v.ContainerDOI != null && !doiCacheInfoDict.ContainsKey(v.ContainerDOI))
+                    {
+                        var containerTitle = vInfo.ContainerTitle;
+                        var containerDOI = vInfo.ContainerDOI;
+
+                        var newDOIElement = new DOIElement() { DOI = containerDOI, Title = containerTitle, Source = "Unknown", IsPrimary = false, Type = "Book?" };
+                        dummyDOIElementDict[newDOIElement.DOI] = newDOIElement;
+                        doiCacheInfoDict[newDOIElement.DOI] = new DOICacheInfo() { DOI = newDOIElement.DOI, DOIRank = 1, SourceCite = "Dummy", SourceStatus = "Unknown" };
+                    }
+                    else if (v.ContainerDOI == null)
+                    {
+                        if (vInfo.ISBNList.Count > 0)
+                        {
+                            var isbn = vInfo.ISBNList[0];
+                            var containerDOI = "dummy/isbn/" + isbn;
+                            var newDOIElement = new DOIElement() { DOI = containerDOI, Title = "???", Source = "Unknown", IsPrimary = false, Type = "Book?" };
+                            dummyDOIElementDict[newDOIElement.DOI] = newDOIElement;
+                            doiCacheInfoDict[newDOIElement.DOI] = new DOICacheInfo() { DOI = newDOIElement.DOI, DOIRank = 1, SourceCite = "Dummy", SourceStatus = "Unknown" };
+                        }
+                    }
+
+                }
+            });
+            DOIElement.Save(dummyDOIElementDict, GetDummyDOIElementCachePath(dataFolderPath));
+
+            var debugLogFolderPath = GetDebugLogFolderPath(dataFolderPath);
+            if (!Directory.Exists(debugLogFolderPath))
+            {
+                Directory.CreateDirectory(debugLogFolderPath);
+            }
+
+
+            Dictionary<string, string> isbnToDOIMapper = new Dictionary<string, string>();
+            doiElementDict.Values.ToList().ForEach((v) =>
+            {
+                bool parent_check = ISBNConverter.isISBNOwner(v.Type);
+
+                if (parent_check)
+                {
+                    v.ISBNList.ForEach((isbn) =>
+                    {
+                        isbnToDOIMapper[isbn] = v.DOI;
+                    });
+                }
+            });
+
+            doiElementDict.Values.ToList().ForEach((v) =>
+            {
+                bool parent_check = ISBNConverter.isISBNOwner(v.Type);
+
+                if (!parent_check)
+                {
+                    v.ISBNList.ForEach((isbn) =>
+                    {
+                        if (!isbnToDOIMapper.ContainsKey(isbn))
+                        {
+                            isbnToDOIMapper[isbn] = "null";
+                        }
+                    });
+                }
+            });
+
+            CSVFunctions.WriteCSVAsDictionary(debugLogFolderPath + "/isbnToDOIMapper.jsonl", isbnToDOIMapper);
+
+
+
+
+
+        }
+
+
 
         public static async Task BuildSmallCaches(string dataFolderPath, string mailAddress, ReadOnlySet<string> primaryDOISet, string checksumFileName)
         {
@@ -230,11 +332,14 @@ namespace DataProcessor
             var dataCiteDOIPrefixSet = DataCiteDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
 
 
+
+
             while (true)
             {
                 foreach (var v in doiCacheInfoDict.Values)
                 {
-                    if(v.SourceCite.Length == 0){
+                    if (v.SourceCite.Length == 0)
+                    {
                         v.UpdateSourceCite(crossRefDOIPrefixSet, dataCiteDOIPrefixSet);
                     }
                 }
@@ -244,6 +349,7 @@ namespace DataProcessor
                 await DataProcessor.DataCitePreprocessor.UpdateSmallCache(dataFolderPath, doiCacheInfoDict, mailAddress);
                 UpdateContainerDOI(dataFolderPath, doiCacheInfoDict, crossRefDOIPrefixSet);
                 UpdateSecondaryDOI(dataFolderPath, doiCacheInfoDict);
+                UpdateDummyDOI(dataFolderPath, doiCacheInfoDict);
 
                 int unknownCounter = doiCacheInfoDict.Values.Count(v => v.SourceStatus == "");
                 if (unknownCounter == 0) { break; }
@@ -309,36 +415,36 @@ namespace DataProcessor
             Console.WriteLine("Building SmallCache [END]");
         }
 
-/*
-        public static Dictionary<string, DOIElement> BuildDOIElementDictionary(string dataFolderPath, ReadOnlySet<string> doiSet)
-        {
-            var logFilePath = dataFolderPath + "/auto_generated/log/build_doi_element_dictionary.log";
-            var logFile = new StreamWriter(logFilePath, true);
-            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
-
-
-            var doiElementDict = new Dictionary<string, DOIElement>();
-            var doiElementCachePath = DOIElementPreprocessor.GetCachePath(dataFolderPath);
-            var doiElementCache = DOIElement.Load(doiElementCachePath, false);
-            doiSet.ToList().ForEach((v) =>
-            {
-                if (doiElementCache.ContainsKey(v))
+        /*
+                public static Dictionary<string, DOIElement> BuildDOIElementDictionary(string dataFolderPath, ReadOnlySet<string> doiSet)
                 {
-                    doiElementDict[v] = doiElementCache[v];
-                }
-                else
-                {
-                    logFile.WriteLine("DOI not found in cache: " + v);
-                }
-            });
+                    var logFilePath = dataFolderPath + "/auto_generated/log/build_doi_element_dictionary.log";
+                    var logFile = new StreamWriter(logFilePath, true);
+                    logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
 
-            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
-            logFile.Close();
-            return doiElementDict;
-        }
-        */
-        
-        
+
+                    var doiElementDict = new Dictionary<string, DOIElement>();
+                    var doiElementCachePath = DOIElementPreprocessor.GetCachePath(dataFolderPath);
+                    var doiElementCache = DOIElement.Load(doiElementCachePath, false);
+                    doiSet.ToList().ForEach((v) =>
+                    {
+                        if (doiElementCache.ContainsKey(v))
+                        {
+                            doiElementDict[v] = doiElementCache[v];
+                        }
+                        else
+                        {
+                            logFile.WriteLine("DOI not found in cache: " + v);
+                        }
+                    });
+
+                    logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
+                    logFile.Close();
+                    return doiElementDict;
+                }
+                */
+
+
 
         public static void UpdateContainerDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, HashSet<string> crossRefDOIPrefixSet)
         {

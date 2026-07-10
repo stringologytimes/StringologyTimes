@@ -79,4 +79,9 @@ public static class ISBNConverter
 
         return sum % 11 == 0;
     }
+
+    public static bool isISBNOwner(string type)
+    {
+        return type == "book" || type == "ConferenceProceeding" || type == "monograph" || type == "reference-book" || type == "proceedings" || type == "journal" || type == "edited-book";        
+    }
 }
