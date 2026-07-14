@@ -26,22 +26,23 @@ namespace DataProcessor
         public static void Build(string dataCiteFolderPath, string dataFolderPath)
         {
             Console.WriteLine("Creating DOI List(DataCite): ");
-            /*
+            
 
-            var main_folder = new DirectoryInfo(dataFolderPath + "/auto_generated/cache/datacite_cache");
+            var main_folder = new DirectoryInfo(dataFolderPath + "/auto_generated/cache/datacite_cache/big_cache");
             if (!main_folder.Exists)
             {
                 main_folder.Create();
                 Console.WriteLine("Created: " + main_folder.FullName);
             }
 
-            var main_folder2 = new DirectoryInfo(dataFolderPath + "/auto_generated/cache/datacite_cache/gzfile_to_doi");
+            var gzfile_to_doi_folder = GetFolderPath(dataFolderPath);
+            var main_folder2 = new DirectoryInfo(gzfile_to_doi_folder);
             if (!main_folder2.Exists)
             {
                 main_folder2.Create();
                 Console.WriteLine("Created: " + main_folder2.FullName);
             }
-            */
+            
 
 
             //int maxCounter = 0;
@@ -69,6 +70,7 @@ namespace DataProcessor
                     parallelCounter++;
                 }
 
+                List<DOIElementX> dois = new List<DOIElementX>();
 
 
                 var name = (fi.Directory!.Name) + "_" + fi.Name;
@@ -81,11 +83,16 @@ namespace DataProcessor
                 if (!csvFileInfo.Exists)
                 {
                     //List<KeyValuePair<string, string>> dois = new List<KeyValuePair<string, string>>();
-                    var sw = new StreamWriter(csvFilePath, false, Encoding.UTF8);
 
                     foreach (var line in JsonLib.ReadLinesFromGzip(gzFilePath))
                     {
                         //var element = new DOIElement1();
+                        var element = DataCiteParser.LightweightParseFromJSONL(line);
+                        if (element != null)
+                        {
+                            dois.Add(element);
+                        }
+                        /*
                         var dict = JsonLib.CreateDictionaryFromJSONL(line);
                         if (dict.ContainsKey("id"))
                         {
@@ -94,6 +101,7 @@ namespace DataProcessor
                             var typesDict = JsonLib.CreateDictionaryFromJSONL(attributeDict["types"]);
                             var type = DataCiteParser.GetTypeFromDataCiteJSONL(dict, typesDict);
                             var title = DataCiteParser.GetTitleFromDataCiteJSONL(attributeDict);
+                            var isList = DataCiteParser.GetISListFromDataCiteJSONL(attributeDict);
                             if (title == null)
                             {
                                 throw new Exception("Title is null: " + line);
@@ -101,8 +109,9 @@ namespace DataProcessor
                             title = CSVFunctions.SanityzeForTSVFormat(title);
                             sw.WriteLine(doi + "\t" + type + "\t" + title);
                         }
+                        */
                     }
-                    sw.Close();
+
 
                     /*
                     foreach (var doi in dois)
@@ -110,6 +119,14 @@ namespace DataProcessor
                         sw.WriteLine(doi.Key + "\t" + doi.Value);
                     }
                     */
+
+                    var sw = new StreamWriter(csvFilePath, false, Encoding.UTF8);
+                    foreach (var doi in dois)
+                    {
+                        sw.WriteLine(doi.ToTSVString());
+                    }
+                    sw.Close();
+
 
                     lock (lockObj)
                     {

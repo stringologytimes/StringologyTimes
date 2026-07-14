@@ -19,7 +19,7 @@ export class LightWeightDOIInfo {
     public seriesTitle: string = "";
     public container_DOI: string = "";
     public container_title: string = "";
-    public volume: string = "";
+    public volume_issue: string = "";
     public tags: string[] = [];    
     public doiReferenceIDs: number[] = [];
     public optional_ids: string[] = [];
@@ -34,7 +34,7 @@ export class DOIInfo {
     public seriesTitle: string = "";
     public container_DOI: string = "";
     public container_title: string = "";
-    public volume: string = "";
+    public volume_issue: string = "";
     public tags: string[] = [];
     public doiReferences: string[] = [];
     public keywords: string[] = [];
@@ -99,7 +99,7 @@ export class DOIInfoCollection {
         r.authors = this.lightweightDOIInfos[index].authorIDs.map(id => this.authorList[id]);
         r.seriesTitle = this.lightweightDOIInfos[index].seriesTitle;
         r.container_title = this.lightweightDOIInfos[index].container_title;
-        r.volume = this.lightweightDOIInfos[index].volume;
+        r.volume_issue = this.lightweightDOIInfos[index].volume_issue;
         r.container_DOI = this.lightweightDOIInfos[index].container_DOI;
         r.doiReferences = this.lightweightDOIInfos[index].doiReferenceIDs.map(id => this.getDOIByID(id));
         r.type = this.lightweightDOIInfos[index].type;
@@ -150,10 +150,10 @@ export class DOIInfoCollection {
             r.lightweightDOIInfos[index].authorIDs = numbers;
         });
 
-        const volume_list = await load_gzip_text_lines(folderURL + "/volume.csv.gz");
-        console.log("size of volume_list: " + volume_list.length);
+        const volume_list = await load_gzip_text_lines(folderURL + "/volume_issue.csv.gz");
+        console.log("size of volume_issue_list: " + volume_list.length);
         volume_list.forEach((volume, index) => {
-            r.lightweightDOIInfos[index].volume = volume;
+            r.lightweightDOIInfos[index].volume_issue = volume;
         });
 
         const series_title_list = await load_gzip_text_lines(folderURL + "/series_title.csv.gz");

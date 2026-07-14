@@ -19,7 +19,7 @@ namespace DataProcessor
         public List<string> FullNameList { get; set; } = new List<string>();
         public List<string> YearList { get; set; } = new List<string>();
         public List<string> MonthList { get; set; } = new List<string>();
-        public List<string> VolumeList { get; set; } = new List<string>();
+        public List<string> VolumeIssueList { get; set; } = new List<string>();
         public List<string> TypeList { get; set; } = new List<string>();
         public List<string> SourceList { get; set; } = new List<string>();
         //public List<string> TitleSizeList { get; set; } = new List<string>();
@@ -181,7 +181,7 @@ namespace DataProcessor
                     var isPrimary = r.DOIFlagList[counter] == "1";
                     r.YearList.Add(v.Year);
                     r.MonthList.Add(v.Month);
-                    r.VolumeList.Add(v.Volume);
+                    r.VolumeIssueList.Add(v.GetVolumeIssueString());
                     r.TypeList.Add(v.Type);
                     r.SourceList.Add(v.Source);
                     //r.TitleSizeList.Add(v.Title.Length.ToString());
@@ -217,17 +217,26 @@ namespace DataProcessor
             r.TagList = tagHashSet.ToList();
             r.TagList.Sort((a, b) => a.CompareTo(b));
 
+            if(r.TagList.Count == 0)
+            {
+                r.TagList.Add("DummyTag");
+            }
+
             Dictionary<string, int> tagToIndexMapper = new Dictionary<string, int>();
             for (var i = 0; i < r.TagList.Count; i++)
             {
                 tagToIndexMapper[r.TagList[i]] = i;
             }
 
+
+
             mergedDOIElementList.ForEach((v) =>
             {
                 var compStr = String.Join(",", v.Tags.Select((v) => tagToIndexMapper[v].ToString()));
                 r.TagListOfEachElement.Add(compStr);
             });
+
+
 
             if (r.SeriesTitleList.Count != r.DOIList.Count)
             {
@@ -267,7 +276,7 @@ namespace DataProcessor
             CSVFunctions.WriteCSVByGZip(outputFolder + "/full_name.csv.gz", FullNameList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/year.csv.gz", YearList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/month.csv.gz", MonthList);
-            CSVFunctions.WriteCSVByGZip(outputFolder + "/volume.csv.gz", VolumeList);
+            CSVFunctions.WriteCSVByGZip(outputFolder + "/volume_issue.csv.gz", VolumeIssueList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/type.csv.gz", TypeList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/source.csv.gz", SourceList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/compressed_full_name.csv.gz", CompressedFullNameList);

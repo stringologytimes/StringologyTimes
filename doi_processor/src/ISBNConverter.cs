@@ -21,11 +21,11 @@ public static class ISBNConverter
         }
 
         // ISBN-10 の形式チェック
-            for (int i = 0; i < 9; i++)
-            {
-                if (!char.IsDigit(s[i]))
-                    throw new ArgumentException("The first 9 characters of ISBN-10 must be digits.", nameof(isbn10));
-            }
+        for (int i = 0; i < 9; i++)
+        {
+            if (!char.IsDigit(s[i]))
+                throw new ArgumentException("The first 9 characters of ISBN-10 must be digits.", nameof(isbn10));
+        }
 
         if (!char.IsDigit(s[9]) && s[9] != 'X')
             throw new ArgumentException("The last character of ISBN-10 must be a digit or X.", nameof(isbn10));
@@ -51,11 +51,11 @@ public static class ISBNConverter
 
     public static bool IsValidIsbn10(string isbn10)
     {
-        if(isbn10.Length != 10)
+        if (isbn10.Length != 10)
         {
             return false;
         }
-        
+
         int sum = 0;
 
         for (int i = 0; i < 10; i++)
@@ -79,9 +79,34 @@ public static class ISBNConverter
 
         return sum % 11 == 0;
     }
+    public static string ParseISBN(string isbn)
+    {
+
+        if (isbn.Length > 0)
+        {
+            if (ISBNConverter.IsValidIsbn10(isbn))
+            {
+                var isbn13 = ISBNConverter.Isbn10ToIsbn13(isbn);
+                return isbn13;
+            }
+            else
+            {
+                return isbn.Replace("-", "");
+            }
+        }
+        throw new Exception("Invalid ISBN: " + isbn);
+    }
+    public static string ParseISSN(string issn)
+    {
+        if (issn.Length > 0)
+        {
+            return issn.Replace("-", "");
+        }
+        throw new Exception("Invalid ISSN: " + issn);
+    }
 
     public static bool isISBNOwner(string type)
     {
-        return type == "book" || type == "ConferenceProceeding" || type == "monograph" || type == "reference-book" || type == "proceedings" || type == "journal" || type == "edited-book";        
+        return type == "book" || type == "ConferenceProceeding" || type == "monograph" || type == "reference-book" || type == "proceedings" || type == "journal" || type == "edited-book";
     }
 }

@@ -9,6 +9,47 @@ using System.Globalization;
 
 namespace DataProcessor
 {
+
+    public class DOIElementX
+    {
+        public string DOI { get; set; } = "";
+        public string Type { get; set; } = "";
+        public string Title { get; set; } = "";
+        public List<string> ISList { get; set; } = new List<string>();
+
+
+        public string ToTSVString()
+        {
+            var s = this.DOI + "\t" + this.Type + "\t" + this.Title;
+            if (this.ISList.Count > 0)
+            {
+                s += "\t" + string.Join("\t", this.ISList);
+            }
+            return s;
+        }
+
+        public static DOIElementX? ParseFromTSVString(string tsvString)
+        {
+            var cols = tsvString.Split("\t");
+            if (cols.Length >= 3)
+            {
+                var element = new DOIElementX();
+                element.DOI = cols[0];
+                element.Type = cols[1];
+                element.Title = cols[2];
+
+                for (int i = 3; i < cols.Length; i++)
+                {
+                    var s = cols[i];
+                    element.ISList.Add(s);
+                }
+                return element;
+            }
+            return null;
+        }
+
+    }
+
     public class DataCiteParser
     {
         public static List<AuthorInfo> AuthorInfoParse(Dictionary<string, string> dictFromJSONL)
@@ -68,7 +109,7 @@ namespace DataProcessor
             }
             return authorInfoList;
         }
-        
+
 
         public static List<string> GetTagsFromDataCiteJSONL(string jsonlString)
         {
@@ -123,6 +164,33 @@ namespace DataProcessor
 
             return type;
         }
+        public static List<string> GetISListFromDataCiteJSONL(Dictionary<string, string> attributeDict)
+        {
+            List<string> r = new List<string>();
+            if (attributeDict.ContainsKey("relatedIdentifiers"))
+            {
+                var relatedIdentifiersArray = JsonLib.CreateArrayFromJSONL(attributeDict["relatedIdentifiers"]);
+                foreach (var relatedIdentifier in relatedIdentifiersArray)
+                {
+                    var relatedIdentifierDict = JsonLib.CreateDictionaryFromJSONL(relatedIdentifier);
+                    if (relatedIdentifierDict.ContainsKey("relatedIdentifier") && relatedIdentifierDict.ContainsKey("relatedIdentifierType"))
+                    {
+                        var relatedIdentifierTypeValue = relatedIdentifierDict["relatedIdentifierType"];
+                        var relatedIdentifierValue = relatedIdentifierDict["relatedIdentifier"];
+                        if (relatedIdentifierTypeValue == "ISBN" && relatedIdentifierValue.Length > 0)
+                        {
+                            r.Add("ISBN:" + ISBNConverter.ParseISBN(relatedIdentifierValue));
+                        }
+                        else if (relatedIdentifierTypeValue == "ISSN" && relatedIdentifierValue.Length > 0)
+                        {
+                            r.Add("ISSN:" + ISBNConverter.ParseISSN(relatedIdentifierValue));
+                        }
+                    }
+                }
+            }
+            return r;
+        }
+
         public static string GetTitleFromDataCiteJSONL(Dictionary<string, string> attributeDict)
         {
             var title = "";
@@ -131,18 +199,53 @@ namespace DataProcessor
                 var titleList = JsonLib.CreateArrayFromJSONL(attributeDict["titles"]);
                 if (titleList.Length > 0)
                 {
-                    title = JsonLib.GetValueFromJSONL(titleList[0], "title")!;
+                    if (titleList[0] == null)
+                    {
+                        throw new Exception("Title is null");
+                    }
+                    string? tmp_title = JsonLib.GetValueFromJSONL(titleList[0], "title")!;
+                    if (tmp_title == null)
+                    {
+                        title = $"Dummy Title(1)";
+                    }
+                    else
+                    {
+                        title = CSVFunctions.SanityzeForTSVFormat(tmp_title);
+                    }
                 }
                 else
                 {
-                    title = $"Dummy Title";
+                    title = $"Dummy Title(2)";
                 }
             }
             else
             {
-                title = $"Dummy Title";
+                title = $"Dummy Title(3)";
             }
-            return title ?? "Dummy Title";
+            return title ?? "Dummy Title(4)";
+        }
+
+        public static KeyValuePair<string, string> GetVolumeAndIssueFromDataCiteJSONL(string[] relatedItems)
+        {
+            foreach (var relatedItem in relatedItems)
+            {
+                var relatedItemDict = JsonLib.CreateDictionaryFromJSONL(relatedItem);
+
+                if (relatedItemDict.ContainsKey("relationType") && relatedItemDict.ContainsKey("relatedItemType") && relatedItemDict.ContainsKey("volume"))
+                {
+                    var relationType = relatedItemDict["relationType"];
+                    var relatedItemType = relatedItemDict["relatedItemType"];
+                    var volume = relatedItemDict["volume"];
+                    bool b1 = relationType == "IsPublishedIn";
+                    bool b2 = relatedItemType == "Collection" || relatedItemType == "ConferenceProceeding";
+                    bool b3 = volume.Length > 0;
+                    if (b1 && b2 && b3)
+                    {
+                        return new KeyValuePair<string, string>(volume, "");
+                    }
+                }
+            }
+            return new KeyValuePair<string, string>("", "");
         }
 
         public static DOIElement Parse(string jsonlString)
@@ -161,13 +264,21 @@ namespace DataProcessor
             element.Title = GetTitleFromDataCiteJSONL(attributeDict);
 
 
-            
-            if (attributeDict.ContainsKey("relatedItems")) {
+
+            if (attributeDict.ContainsKey("relatedItems"))
+            {
                 var relatedItemsArray = JsonLib.CreateArrayFromJSONL(attributeDict["relatedItems"]);
+
+
+                var volumeAndIssue = GetVolumeAndIssueFromDataCiteJSONL(relatedItemsArray);
+                element.Volume = volumeAndIssue.Key;
+                element.Issue = volumeAndIssue.Value;
+
                 foreach (var relatedItem in relatedItemsArray)
                 {
                     var relatedItemDict = JsonLib.CreateDictionaryFromJSONL(relatedItem);
-                    if (relatedItemDict.ContainsKey("relationType") && relatedItemDict.ContainsKey("relatedItemIdentifier")) {
+                    if (relatedItemDict.ContainsKey("relationType") && relatedItemDict.ContainsKey("relatedItemIdentifier"))
+                    {
                         var relationType = relatedItemDict["relationType"];
                         var relatedItemIdentifier = relatedItemDict["relatedItemIdentifier"];
                         var relatedItemIdentifierDict = JsonLib.CreateDictionaryFromJSONL(relatedItemIdentifier);
@@ -179,7 +290,7 @@ namespace DataProcessor
                     }
                 }
             }
-            
+
 
             element.Authors = AuthorInfoParse(dict);
 
@@ -279,13 +390,39 @@ namespace DataProcessor
             }
 
 
-
+            if (attributeDict.ContainsKey("relatedIdentifiers"))
+            {
+                var relatedIdentifiersArray = JsonLib.CreateArrayFromJSONL(attributeDict["relatedIdentifiers"]);
+                foreach (var relatedIdentifier in relatedIdentifiersArray)
+                {
+                    var relatedIdentifierDict = JsonLib.CreateDictionaryFromJSONL(relatedIdentifier);
+                    if (relatedIdentifierDict.ContainsKey("relatedIdentifier") && relatedIdentifierDict.ContainsKey("relatedIdentifierType"))
+                    {
+                        var relatedIdentifierTypeValue = relatedIdentifierDict["relatedIdentifierType"];
+                        var relatedIdentifierValue = relatedIdentifierDict["relatedIdentifier"];
+                        if (relatedIdentifierTypeValue == "ISBN" && relatedIdentifierValue.Length > 0)
+                        {
+                            element.ISBNList.Add(ISBNConverter.ParseISBN(relatedIdentifierValue));
+                        }
+                        else if (relatedIdentifierTypeValue == "ISSN" && relatedIdentifierValue.Length > 0)
+                        {
+                            element.ISSNList.Add(ISBNConverter.ParseISSN(relatedIdentifierValue));
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine(jsonlString);
+                throw new Exception("Related Identifiers is not found");
+            }
 
 
             if (attributeDict.ContainsKey("publicationYear"))
             {
 
             }
+
 
             /*
             if (typesDict.ContainsKey("resourceTypeGeneral"))
@@ -312,6 +449,65 @@ namespace DataProcessor
 
             return element;
 
+        }
+        public static DOIElementX? LightweightParseFromJSONL(string jsonl)
+        {
+            var dict = JsonLib.CreateDictionaryFromJSONL(jsonl);
+            if (!dict.ContainsKey("attributes"))
+            {
+                Console.WriteLine(jsonl);
+                throw new Exception("Attributes is not found");
+            }
+
+
+            var attributeDict = JsonLib.CreateDictionaryFromJSONL(dict["attributes"]);
+            var typesDict = JsonLib.CreateDictionaryFromJSONL(attributeDict["types"]);
+
+            var element = new DOIElementX();
+            if (dict.ContainsKey("id"))
+            {
+                element.DOI = dict["id"];
+            }
+            element.Type = GetTypeFromDataCiteJSONL(dict, typesDict);
+            element.Title = GetTitleFromDataCiteJSONL(attributeDict);
+
+            var isList = GetISListFromDataCiteJSONL(attributeDict);
+            foreach (var value in isList)
+            {
+                element.ISList.Add(value);
+            }
+
+            /*
+
+            if (attributeDict.ContainsKey("relatedIdentifiers"))
+            {
+                var relatedIdentifiersArray = JsonLib.CreateArrayFromJSONL(attributeDict["relatedIdentifiers"]);
+                foreach (var relatedIdentifier in relatedIdentifiersArray)
+                {
+                    var relatedIdentifierDict = JsonLib.CreateDictionaryFromJSONL(relatedIdentifier);
+                    if (relatedIdentifierDict.ContainsKey("relatedIdentifier") && relatedIdentifierDict.ContainsKey("relatedIdentifierType"))
+                    {
+                        var relatedIdentifierTypeValue = relatedIdentifierDict["relatedIdentifierType"];
+                        var relatedIdentifierValue = relatedIdentifierDict["relatedIdentifier"];
+                        if (relatedIdentifierTypeValue == "ISBN")
+                        {
+                            element.ISList.Add("ISBN:" + relatedIdentifierValue);
+                        }
+                        else if (relatedIdentifierTypeValue == "ISSN")
+                        {
+                            element.ISList.Add("ISSN:" + relatedIdentifierValue);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine(jsonl);
+                throw new Exception("Related Identifiers is not found");
+            }
+            */
+
+            return element;
         }
 
     }

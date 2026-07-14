@@ -24,6 +24,8 @@ namespace DataProcessor
 
         public string Type { get; set; } = "";
         public string Volume { get; set; } = "";
+        public string Issue { get; set; } = "";
+
         public string Year { get; set; } = "";
         public string Month { get; set; } = "";
 
@@ -83,14 +85,38 @@ namespace DataProcessor
             return dataString;
         }
 
+        public string GetVolumeIssueString()
+        {
+            if(this.Volume.Length > 0 && this.Issue.Length > 0){
+                return this.Volume + ":" + this.Issue;
+            }
+            else if(this.Volume.Length > 0){
+                return this.Volume;
+            }
+            else if(this.Issue.Length > 0)
+            {
+                throw new Exception("Issue is not found");
+            }
+            else
+            {
+                return "";
+            }
+        }
+
         public void UpdateContainerDOI(DOICacheInfo v)
         {
-            if (this.ContainerDOI.Length == 0 && v.ContainerDOI.Length > 0)
+            if (this.ContainerDOI.Length == 0 && v.ProperContainerDOI.Length > 0)
             {
-                this.ContainerDOI = v.ContainerDOI;
+                this.ContainerDOI = v.ProperContainerDOI;
             }
 
             
+        }
+
+        public static string GetDOIPrefix(string doi)
+        {
+            var prefix = doi.Split('/')[0];
+            return prefix;
         }
 
 

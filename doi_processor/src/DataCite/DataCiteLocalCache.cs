@@ -35,7 +35,7 @@ namespace DataProcessor
                     if (foundJSONLMap.ContainsKey(v.DOI))
                     {
                         v.SourceStatus = "LocalCache";
-                        v.Date = DateTime.Now.ToString("yyyy-MM");
+                        v.CacheCreatedDate = DateTime.Now.ToString("yyyy-MM");
                     }
 
                 }

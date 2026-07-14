@@ -5,112 +5,6 @@ using System.Security.Cryptography;
 using System.Text.Json;
 namespace DataProcessor
 {
-    class DOIElement1
-    {
-        public string DOI { get; set; } = "";
-        public string Type { get; set; } = "";
-        public string Title { get; set; } = "";
-        public List<string> ISList { get; set; } = new List<string>();
-
-        public static DOIElement1? ParseFromJSONL(string jsonl)
-        {
-            var dict = JsonLib.CreateDictionaryFromJSONL(jsonl);
-            if (dict.ContainsKey("DOI"))
-            {
-                var element = new DOIElement1();
-                element.DOI = dict["DOI"];
-                element.Type = "unknown";
-                if (dict.ContainsKey("type"))
-                {
-                    element.Type = dict["type"];
-                }
-                element.Title = "";
-                if (dict.ContainsKey("title"))
-                {
-                    var titleList = JsonSerializer.Deserialize<List<string>>(dict["title"]);
-                    if (titleList != null && titleList.Count > 0)
-                    {
-                        element.Title = CSVFunctions.SanityzeForTSVFormat(titleList[0]);
-                    }
-                }
-
-                if (dict.ContainsKey("ISBN"))
-                {
-                    var ISBNList = JsonSerializer.Deserialize<List<string>>(dict["ISBN"]);
-                    if (ISBNList != null)
-                    {
-                        ISBNList.ForEach(isbn =>
-                        {
-                            if (isbn.Length > 0)
-                            {
-                                if (ISBNConverter.IsValidIsbn10(isbn))
-                                {
-                                    var isbn13 = ISBNConverter.Isbn10ToIsbn13(isbn);
-                                    element.ISList.Add("ISBN:" + isbn13);
-                                }
-                                else
-                                {
-                                    element.ISList.Add("ISBN:" + isbn);
-                                }
-                            }
-                        });
-                    }
-                }
-
-                if (dict.ContainsKey("ISSN"))
-                {
-                    var ISSNList = JsonSerializer.Deserialize<List<string>>(dict["ISSN"]);
-                    if (ISSNList != null)
-                    {
-                        ISSNList.ForEach(issn =>
-                        {
-                            if (issn.Length > 0)
-                            {
-                                element.ISList.Add("ISSN:" + issn);
-                            }
-                        });
-                    }
-                }
-                return element;
-            }
-            else
-            {
-                return null;
-            }
-
-        }
-
-        public string ToTSVString()
-        {
-            var s = this.DOI + "\t" + this.Type + "\t" + this.Title;
-            if (this.ISList.Count > 0)
-            {
-                s += "\t" + string.Join("\t", this.ISList);
-            }
-            return s;
-        }
-
-        public static DOIElement1? ParseFromTSVString(string tsvString)
-        {
-            var cols = tsvString.Split("\t");
-            if (cols.Length >= 3)
-            {
-                var element = new DOIElement1();
-                element.DOI = cols[0];
-                element.Type = cols[1];
-                element.Title = cols[2];
-
-                for (int i = 3; i < cols.Length; i++)
-                {
-                    var s = cols[i];
-                    element.ISList.Add(s);
-                }
-                return element;
-            }
-            return null;
-        }
-
-    }
 
 
     class CrossRefGZFileToDOICache
@@ -168,11 +62,11 @@ namespace DataProcessor
 
                 if (!csvFileInfo.Exists)
                 {
-                    List<DOIElement1> dois = new List<DOIElement1>();
+                    List<DOIElementX> dois = new List<DOIElementX>();
 
                     foreach (var line in JsonLib.ReadLinesFromGzip(gzFilePath))
                     {
-                        var element = DOIElement1.ParseFromJSONL(line);
+                        var element = CrossRefParser.LightweightParseFromJSONL(line);
                         if (element != null)
                         {
                             dois.Add(element);

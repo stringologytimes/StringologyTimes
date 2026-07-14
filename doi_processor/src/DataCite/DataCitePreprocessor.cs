@@ -39,6 +39,12 @@ namespace DataProcessor
             {
                 DataCiteDOIToGZFileCache.Build(dataCiteDoiListFolderPath, dataFolderPath);
             }
+
+            DataCiteSubMapperBuilders.BuildISBNMapper(dataFolderPath);
+            DataCiteSubMapperBuilders.BuildISSNMapper(dataFolderPath);
+            DataCiteSubMapperBuilders.BuildTitleMapper(dataFolderPath);
+            DataCiteSubMapperBuilders.BuildTypeListFile(dataFolderPath);
+
             //BuildBookCache(dataCiteDoiListFolderPath, dataFolderPath);
         }
 

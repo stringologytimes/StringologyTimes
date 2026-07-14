@@ -197,7 +197,6 @@ namespace DataProcessor
                     }
                 }
             }
-            Console.WriteLine("dict: " + dict.Count);
             return dict;
         }
 

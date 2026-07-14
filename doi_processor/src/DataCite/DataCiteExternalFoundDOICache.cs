@@ -33,14 +33,14 @@ namespace DataProcessor
                     if (dataCiteExternalDic.ContainsKey(v.DOI))
                     {
                         v.SourceStatus = "ExternalCache";
-                        v.Date = DateTime.Now.ToString("yyyy-MM");
+                        v.CacheCreatedDate = DateTime.Now.ToString("yyyy-MM");
                     }
                     else
                     {
                         if (v.SourceStatus != "LocalCache")
                         {
                             v.SourceStatus = "NotFound";
-                            v.Date = DateTime.Now.ToString("yyyy-MM");
+                            v.CacheCreatedDate = DateTime.Now.ToString("yyyy-MM");
                         }
                     }
                 }
@@ -48,6 +48,8 @@ namespace DataProcessor
         }
         public static async Task Build(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, string mailAddress)
         {
+            Console.WriteLine("Building DataCite External Found DOI Cache...");
+
             var dataCiteExternalDic = DataProcessor.DataCiteExternalFoundDOICache.Load(dataFolderPath);
             var foundDOICache = DataProcessor.DataCiteLocalCache.Load(dataFolderPath);
 
@@ -57,7 +59,7 @@ namespace DataProcessor
                 {
                     if (v.SourceCite == "DataCite")
                     {
-                        if (!dataCiteExternalDic.ContainsKey(v.DOI) && v.Date != dateNowStr)
+                        if (!dataCiteExternalDic.ContainsKey(v.DOI) && v.CacheCreatedDate != dateNowStr)
                         {
                             if (v.SourceStatus != "LocalCache")
                             {
@@ -66,6 +68,12 @@ namespace DataProcessor
                         }
                     }
                 });
+
+            Console.WriteLine($"Found {externalDOICandidateList.Count} external DOI candidates");
+            if(externalDOICandidateList.Count == 0)
+            {
+                return;
+            }
 
 
             var http = DataProcessor.DataCiteClient.CreateHttpClient(mailAddress);

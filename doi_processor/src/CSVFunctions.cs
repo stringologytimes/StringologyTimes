@@ -27,6 +27,18 @@ namespace DataProcessor
         {
             WriteCSV(filePath, set.ToList());
         }
+        public static void WriteCSV(string filePath, List<List<string>> table)
+        {
+            var list = new List<string>();
+            var delimiter = filePath.EndsWith(".csv") ? "," : "\t";
+            table.ForEach((row) =>
+            {
+                list.Add(String.Join(delimiter, row));
+            });
+
+            WriteCSV(filePath, list);
+        }
+
         public static void WriteCSVAsDictionary(string filePath, Dictionary<string, string> dict)
         {
             var list = new List<string>();
@@ -99,6 +111,30 @@ namespace DataProcessor
             });
             return dict;
         }
+        public static Dictionary<string, List<string>> ReadCSVAasMultiDictionary(string filePath)
+        {
+            var list = ReadCSV(filePath);
+            var fileInfo = new FileInfo(filePath);
+            var delimiter = fileInfo.Extension == ".csv" ? "," : "\t";
+
+            var dict = new Dictionary<string, List<string>>();
+            list.ForEach((v) =>
+            {
+                var cols = v.Split(delimiter);
+                if (cols.Length > 1)
+                {
+                    var key = cols[0];
+                    var value = cols[1];
+                    if (!dict.ContainsKey(key))
+                    {
+                        dict[key] = new List<string>();
+                    }
+                    dict[key].Add(value);
+                }
+            });
+            return dict;
+        }
+
         public static List<KeyValuePair<string, string>> ReadCSVAsKeyValuePairList(string filePath)
         {
             var list = ReadCSV(filePath);
@@ -115,6 +151,26 @@ namespace DataProcessor
                 }
             });
             return keyValuePairList;
+        }
+        public static List<string> ReadCSVAsList(string filePath)
+        {
+            var list = ReadCSV(filePath);
+            var fileInfo = new FileInfo(filePath);
+            var delimiter = fileInfo.Extension == ".csv" ? "," : "\t";
+
+            var rowList = new List<string>();
+
+            list.ForEach((v) =>
+            {
+                var cols = v.Split(delimiter);
+                var row = new List<string>();
+                foreach (var col in cols)
+                {
+                    row.Add(col);
+                }
+                rowList.Add(String.Join(delimiter, row));
+            });
+            return rowList;
         }
         
     }

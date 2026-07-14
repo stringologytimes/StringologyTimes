@@ -19,7 +19,7 @@ namespace DataProcessor
             return dic;
         }
 
-        public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath)
+        public static void UpdateDOICacheStatus(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath)
         {
             Dictionary<string, string> foundJSONLMap = Load(dataFolderPath);
 
@@ -28,7 +28,7 @@ namespace DataProcessor
                 if (foundJSONLMap.ContainsKey(v.DOI))
                 {
                     v.SourceStatus = "LocalCache";
-                    v.Date = DateTime.Now.ToString("yyyy-MM");
+                    v.CacheCreatedDate = DateTime.Now.ToString("yyyy-MM");
                 }
             });
         }

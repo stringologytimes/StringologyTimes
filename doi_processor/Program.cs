@@ -57,7 +57,15 @@ namespace DataProcessor
             if (opts.Mode == "dblp_proceedings_preprocessor")
             {
                 outputSystemMessageFunction("Running dblp_processor");
-                var savePath = opts.DataFolderPath + "/auto_generated/result/" + "dblp_proceedings.jsonl";
+                var savePath = opts.DataFolderPath + "/auto_generated/cache/dblp_cache/" + "dblp_proceedings.jsonl";
+
+                var directoryInfo = new DirectoryInfo(opts.DataFolderPath + "/auto_generated/cache/dblp_cache/");
+                if (!directoryInfo.Exists)
+                {
+                    directoryInfo.Create();
+                }
+
+
                 var fileInfo = new FileInfo(savePath);
                 if (!fileInfo.Exists)
                 {
@@ -74,8 +82,10 @@ namespace DataProcessor
             }
             else if (opts.Mode == "dblp_proceedings_processor")
             {
-                var proceedingsSeriesDictionary = DBLPProceedingsSeriesDictionary.Load(opts.DataFolderPath + "/auto_generated/result/" + "dblp_proceedings.jsonl");
+                /*
+                var proceedingsSeriesDictionary = DBLPProceedingsSeriesDictionary.Load(opts.DataFolderPath + "/auto_generated/cache/dblp_cache/" + "dblp_proceedings.jsonl");
                 proceedingsSeriesDictionary.BuildDoiToSeriesTitleMapper();
+                */
 
                 return 0;
 

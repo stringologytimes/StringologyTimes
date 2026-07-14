@@ -263,6 +263,23 @@ namespace DataProcessor
             OutputSystemMessageFunction("Running doi_processor");
             var doiElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, DOI_ELEMENT_FILENAME), true);
 
+            /*
+
+            var smallCacheSummaryFilePath = DOIElementPreprocessor.GetDOICacheInfoPath(opts.DataFolderPath);
+            var doiCacheInfoDict = DOICacheInfo.Load(smallCacheSummaryFilePath);
+
+            doiCacheInfoDict.Values.ToList().ForEach((v) =>
+            {
+                var doiElement = doiElementDict[v.DOI];
+                doiElement.
+
+
+                if(v.ContainerDOI.Length > 0 && !doiElementDict.ContainsKey(v.ContainerDOI)){
+                    doiElementDict[v.ContainerDOI] = new DOIElement() { DOI = v.ContainerDOI, ContainerTitle = v.ContainerTitle };
+                }
+            });
+            */
+
 
 
 /*

@@ -15,9 +15,11 @@ namespace DataProcessor
         public string DOI { get; set; } = "";
         public string SourceCite { get; set; } = "";
         public string SourceStatus { get; set; } = "";
+        public string ModifiedTitle { get; set; } = "";
 
-        public string Date { get; set; } = "";
-        public string ContainerDOI { get; set; } = "";
+        public string CacheCreatedDate { get; set; } = "";
+        public string ProperContainerDOI { get; set; } = "";
+        public List<string> ISList { get; set; } = new List<string>();
         public int DOIRank { get; set; } = 3;
 
         public string ToJSONLine()
@@ -65,29 +67,83 @@ namespace DataProcessor
             }
         }
 
-        public void UpdateContainerDOI(DOIElement doiElement, Dictionary<string, string> isbnDictionary, Dictionary<string, string> titleDictionary, StreamWriter logFile)
+        public void UpdateContainerDOI(Dictionary<string, DOIElement> doiElementDict, Dictionary<string, string> isbnDictionary, Dictionary<string, string> issnDictionary, Dictionary<string, List<string>> titleDictionary, StreamWriter logFile)
         {
-            if (this.ContainerDOI.Length == 0)
+            var doiElement = doiElementDict[this.DOI];
+            if (this.ProperContainerDOI.Length == 0)
             {
                 if (doiElement.ContainerDOI.Length > 0 && this.DOI != doiElement.ContainerDOI)
                 {
-                    this.ContainerDOI = doiElement.ContainerDOI;
+                    this.ProperContainerDOI = doiElement.ContainerDOI;
                 }
             }
 
 
-            if (this.ContainerDOI.Length == 0)
+            if (this.ProperContainerDOI.Length == 0)
             {
                 for (int i = 0; i < doiElement.ISBNList.Count; i++)
                 {
                     var ISBN = doiElement.ISBNList[i];
                     if (isbnDictionary.ContainsKey(ISBN) && ISBN.Length > 0 && this.DOI != isbnDictionary[ISBN])
                     {
-                        this.ContainerDOI = isbnDictionary[ISBN];
+                        this.ProperContainerDOI = isbnDictionary[ISBN];
                         break;
                     }
                 }
             }
+
+            var title = doiElement.ContainerTitle;
+            if (this.ProperContainerDOI.Length == 0 && title.Length > 0 && titleDictionary.ContainsKey(title))
+            {
+                var containerDOICandidateList = titleDictionary[title];
+                if (containerDOICandidateList.Count == 1)
+                {
+                    if (containerDOICandidateList[0] != this.DOI)
+                    {
+                        this.ProperContainerDOI = containerDOICandidateList[0];
+                    }
+                }
+                else if (containerDOICandidateList.Count > 1)
+                {
+                    var doiPrefix = DOIElement.GetDOIPrefix(this.DOI);
+                    var doiYear = doiElement.Year;
+                    var candidateList = new List<string>();
+                    foreach (var containerDOI in containerDOICandidateList)
+                    {
+                        var candidateDOIPrefix = DOIElement.GetDOIPrefix(containerDOI);
+                        if (candidateDOIPrefix == doiPrefix && doiElementDict.ContainsKey(containerDOI) && this.DOI != containerDOI)
+                        {
+                            var candidateDOIElement = doiElementDict[containerDOI];
+                            var candidateDOIYear = candidateDOIElement.Year;
+                            if (candidateDOIYear == doiYear)
+                            {
+                                candidateList.Add(containerDOI);
+                            }
+                        }
+                    }
+
+                    if (candidateList.Count == 1)
+                    {
+                        this.ProperContainerDOI = candidateList[0];
+                    }
+                    else if (candidateList.Count > 1)
+                    {
+                        Console.WriteLine("Multiple container DOI candidates found for title: " + title);
+                        throw new Exception("Multiple container DOI candidates found for title: " + title);
+                    }
+
+
+
+                }
+                else
+                {
+                    throw new Exception("Multiple container DOI candidates found for title: " + title);
+                }
+            }
+
+
+
+            /*
             if (this.ContainerDOI.Length == 0 && doiElement.ContainerTitle.Length > 0)
             {
                 if (titleDictionary.ContainsKey(doiElement.ContainerTitle) && this.DOI != titleDictionary[doiElement.ContainerTitle])
@@ -96,6 +152,7 @@ namespace DataProcessor
                     logFile.WriteLine("Matched Container Title: " + this.DOI + " -> " + this.ContainerDOI);
                 }
             }
+            */
 
             //if(doiElement.ISBNList)
         }
@@ -103,9 +160,9 @@ namespace DataProcessor
         public void UpdateSourceCite(HashSet<string> crossRefDOIPrefixSet, HashSet<string> dataCiteDOIPrefixSet)
         {
             var doiPrefix = DOIFunctions.GetPrefix(this.DOI);
-            if (doiPrefix == "99.9999")
+            if (doiPrefix == "dummy")
             {
-                this.SourceCite = "DUMMY-ISSN";
+                this.SourceCite = "DUMMY";
                 this.SourceStatus = "Custom";
             }
             else if (crossRefDOIPrefixSet.Contains(doiPrefix))
@@ -123,7 +180,7 @@ namespace DataProcessor
             }
         }
 
-        
+
 
         public static Dictionary<string, DOIElement> BuildDOIElementDictionary(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
         {
@@ -167,12 +224,22 @@ namespace DataProcessor
                     doiElement = DataCiteParser.Parse(dataCiteFoundExternalDOI[v.Key]);
                     b = true;
                 }
+                else if(v.Value.SourceCite == "DUMMY")
+                {
+                    doiElement = new DOIElement() { DOI = v.Key, Title = v.Value.ModifiedTitle, Type = "DummyProceedings", Year = "3000", ContainerTitle = v.Value.ProperContainerDOI };
+                    b = true;
+                }
 
 
                 if (b)
                 {
+                    doiElementDict[v.Key] = doiElement;
                     doiElement.IsPrimary = v.Value.DOIRank == 0;
-                    doiElementDict[v.Key] = doiElement;                    
+                    doiElement.ContainerDOI = v.Value.ProperContainerDOI;
+                    if(v.Value.ModifiedTitle.Length > 0)
+                    {
+                        doiElement.Title = v.Value.ModifiedTitle;
+                    }
                 }
 
             });
@@ -203,6 +270,6 @@ namespace DataProcessor
             */
             return doiElementDict;
         }
-        
+
     }
 }

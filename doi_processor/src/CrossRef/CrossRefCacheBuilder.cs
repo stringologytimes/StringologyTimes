@@ -55,10 +55,11 @@ namespace DataProcessor
                 CrossRefDOIToGZFileCache.Build(dataFolderPath);
             }
 
-            MinorCache.BuildISSNFile(dataFolderPath);
-            MinorCache.BuildISBNFile(dataFolderPath);
-            MinorCache.BuildTitleFile(dataFolderPath);
-            MinorCache.BuildTypeListFile(dataFolderPath);
+            CrossRefSubMapperBuilders.BuildISBNMapper(dataFolderPath);
+            CrossRefSubMapperBuilders.BuildISSNMapper(dataFolderPath);
+            CrossRefSubMapperBuilders.BuildTitleMapper(dataFolderPath);
+            //MinorCache.BuildTitleFile(dataFolderPath);
+            CrossRefSubMapperBuilders.BuildTypeListFile(dataFolderPath);
             //BuildBookCache(dataFolderPath, crossRefDoiListFolderPath);
 
         }
@@ -78,7 +79,7 @@ namespace DataProcessor
 
             // Build Found DOI Cache
             CrossRefLocalCache.Update(doiCacheInfoDict, dataFolderPath, crossrefFolderInfo.FullName);
-            CrossRefLocalCache.UpdateDOICache(doiCacheInfoDict, dataFolderPath);
+            CrossRefLocalCache.UpdateDOICacheStatus(doiCacheInfoDict, dataFolderPath);
             await CrossRefExternalCache.Update(dataFolderPath, doiCacheInfoDict, mailAddress);
             CrossRefExternalCache.UpdateDOICache(doiCacheInfoDict, dataFolderPath);
 

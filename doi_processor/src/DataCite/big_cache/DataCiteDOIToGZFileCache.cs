@@ -26,6 +26,19 @@ namespace DataProcessor
         {
             return GetFolderPath(dataFolderPath) + "/doi_prefix.tsv";
         }
+        public static string GetISBNFilePath(string dataFolderPath)
+        {
+            return dataFolderPath + "/auto_generated/cache/datacite_cache/big_cache/isbn.tsv";
+        }
+        public static string GetISSNFilePath(string dataFolderPath)
+        {
+            return dataFolderPath + "/auto_generated/cache/datacite_cache/big_cache/issn.tsv";
+        }
+        public static string GetTitleFilePath(string dataFolderPath)
+        {
+            return dataFolderPath + "/auto_generated/cache/datacite_cache/big_cache/title.tsv";
+        }
+
         public static HashSet<string> GetDOIPrefixSet(string dataFolderPath)
         {
             var path = GetDOIPrefixFilePath(dataFolderPath);

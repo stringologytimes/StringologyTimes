@@ -19,7 +19,7 @@ export class DOIFilterStandardRender {
     public static getSummaryInfoText(doiInfo: DOIInfo): string {
         //const dataStr = `${doiInfo.year}-${doiInfo.month <= 0 ? "?" : doiInfo.month}`;
         const containerTitle = doiInfo.container_title;
-        const volumStr = doiInfo.volume;
+        const volumStr = doiInfo.volume_issue;
         const seriesTitle = doiInfo.seriesTitle;
 
         if(doiInfo.doi == "10.1109/dcc.1996"){
@@ -241,8 +241,8 @@ export class DOIFilterStandardRender {
 
                 const volumeSpan = article.querySelector('.volume');
                 if (volumeSpan && volumeSpan instanceof HTMLLIElement) {
-                    if (doiInfo.volume.length > 0) {
-                        volumeSpan.textContent = `Volume: ${doiInfo.volume}`;
+                    if (doiInfo.volume_issue.length > 0) {
+                        volumeSpan.textContent = `Volume: ${doiInfo.volume_issue}`;
                     } else {
                         volumeSpan.style.display = 'none';
                     }

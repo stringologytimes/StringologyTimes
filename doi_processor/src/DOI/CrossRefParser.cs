@@ -133,6 +133,34 @@ namespace DataProcessor
                 element.Title = $"Dummy Title: {element.DOI}";
             }
 
+            if (dict.ContainsKey("issue"))
+            {
+                element.Issue = dict["issue"];
+            }
+            else if (dict.ContainsKey("journal-issue"))
+            {
+                var journalIssueDict = JsonSerializer.Deserialize<Dictionary<string, object>>(dict["journal-issue"]);
+                if (journalIssueDict != null && journalIssueDict.ContainsKey("issue"))
+                {                    
+                    var issue = journalIssueDict["issue"] as string;
+                    if(issue != null && issue.Length > 0)
+                    {
+                        element.Issue = issue;
+                    }
+                    else
+                    {
+                        element.Issue = "";
+                    }
+                }
+                
+            }
+            else
+            {
+                element.Issue = "";
+            }
+
+
+
             if (dict.ContainsKey("ISBN"))
             {
                 var isbnList = JsonSerializer.Deserialize<List<string>>(dict["ISBN"]);
@@ -156,28 +184,20 @@ namespace DataProcessor
                 }
             }
 
-            /*
-                        if (dict.ContainsKey("ISSN"))
+            if (dict.ContainsKey("ISSN"))
+            {
+                var ISSNList = JsonSerializer.Deserialize<List<string>>(dict["ISSN"]);
+                if (ISSNList != null)
+                {
+                    ISSNList.ForEach(issn =>
+                    {
+                        if (issn.Length > 0)
                         {
-                            var issnList = JsonSerializer.Deserialize<List<string>>(dict["ISSN"]);
-
-
-                            if (issnList != null && issnList.Count > 0)
-                            {
-                                for (int i = 0; i < issnList.Count; i++)
-                                {
-                                    var issn = issnList[i];
-                                        isbnList[i] = isbn13;
-                                }
-
-
-                                element.ISBNList = isbnList;
-                            }
+                            element.ISSNList.Add(ISBNConverter.ParseISSN(issn));
                         }
-                        */
-
-
-
+                    });
+                }
+            }
 
             element.Authors = AuthorInfo.ParseFromCrossRefJSONL(dict, element.Type);
 
@@ -283,6 +303,69 @@ namespace DataProcessor
             element.Source = "CrossRef";
 
             return element;
+        }
+
+
+        public static DOIElementX? LightweightParseFromJSONL(string jsonl)
+        {
+            var dict = JsonLib.CreateDictionaryFromJSONL(jsonl);
+            Console.WriteLine(dict.ContainsKey("DOI"));
+
+            if (dict.ContainsKey("DOI"))
+            {
+                var element = new DOIElementX();
+                element.DOI = dict["DOI"];
+                element.Type = "unknown";
+                if (dict.ContainsKey("type"))
+                {
+                    element.Type = dict["type"];
+                }
+                element.Title = "";
+                if (dict.ContainsKey("title"))
+                {
+                    var titleList = JsonSerializer.Deserialize<List<string>>(dict["title"]);
+                    if (titleList != null && titleList.Count > 0)
+                    {
+                        element.Title = CSVFunctions.SanityzeForTSVFormat(titleList[0]);
+                    }
+                }
+
+                if (dict.ContainsKey("ISBN"))
+                {
+                    var ISBNList = JsonSerializer.Deserialize<List<string>>(dict["ISBN"]);
+                    if (ISBNList != null)
+                    {
+                        ISBNList.ForEach(isbn =>
+                        {
+                            if (isbn.Length > 0)
+                            {
+                                element.ISList.Add("ISBN:" + ISBNConverter.ParseISBN(isbn));
+                            }
+                        });
+                    }
+                }
+
+                if (dict.ContainsKey("ISSN"))
+                {
+                    var ISSNList = JsonSerializer.Deserialize<List<string>>(dict["ISSN"]);
+                    if (ISSNList != null)
+                    {
+                        ISSNList.ForEach(issn =>
+                        {
+                            if (issn.Length > 0)
+                            {
+                                element.ISList.Add("ISSN:" + ISBNConverter.ParseISSN(issn));
+                            }
+                        });
+                    }
+                }
+                return element;
+            }
+            else
+            {
+                return null;
+            }
+
         }
     }
 }

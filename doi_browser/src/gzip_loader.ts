@@ -20,6 +20,7 @@ export function load_gzip_text(url: string): Promise<string> {
         });
 }
 export async function load_gzip_text_lines(url: string): Promise<string[]> {
+    
     return load_gzip_text(url).then(text => text.split('\n'));
 
     /*

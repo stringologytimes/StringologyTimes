@@ -332,7 +332,10 @@ namespace DataProcessor
     {
         public Dictionary<string, DBLPProceedingsSeries> Series { get; set; } = new Dictionary<string, DBLPProceedingsSeries>();
         public Dictionary<string, string> KeyDictionary { get; set; } = new Dictionary<string, string>();
-        public Dictionary<string, string> DoiToSeriesTitleMapper { get; set; } = new Dictionary<string, string>();
+        //public Dictionary<string, string> DoiToSeriesTitleMapper { get; set; } = new Dictionary<string, string>();
+        public Dictionary<string, KeyValuePair<string, string>> DoiToSeriesTitleAndKeyMapper { get; set; } = new Dictionary<string, KeyValuePair<string, string>>();
+
+
 
         //public PrefixSet PrefixSet { get; set; } = new PrefixSet();
 
@@ -353,6 +356,54 @@ namespace DataProcessor
 
             this.KeyDictionary.Add(proceedings.key, bookTitle);
         }
+        public void BuildDoiToSeriesTitleAndKeyMapper()
+        {
+            foreach (var element in this.Series)
+            {
+                if (element.Value.SeriesTitle.Length > 0)
+                {
+                    foreach (var proceedings in element.Value.Series)
+                    {
+                        if (proceedings.Value.DOI.Length > 0)
+                        {
+                            if (!this.DoiToSeriesTitleAndKeyMapper.ContainsKey(proceedings.Value.DOI))
+                            {
+                                this.DoiToSeriesTitleAndKeyMapper.Add(proceedings.Value.DOI, new KeyValuePair<string, string>(element.Value.SeriesTitle, proceedings.Value.key));
+                            }
+                            else
+                            {
+                                Console.WriteLine("Conflict DOI: " + proceedings.Value.DOI + " -> " + element.Value.SeriesTitle + " vs " + this.DoiToSeriesTitleAndKeyMapper[proceedings.Value.DOI].Key);
+                            }
+                        }
+                        foreach (var doi in proceedings.Value.DOIList)
+                        {
+                            if (doi.Length > 0)
+                            {
+                                if (!this.DoiToSeriesTitleAndKeyMapper.ContainsKey(doi))
+                                {
+                                    this.DoiToSeriesTitleAndKeyMapper.Add(doi, new KeyValuePair<string, string>(element.Value.SeriesTitle, proceedings.Value.key));
+
+                                }
+                                else
+                                {
+                                    if (this.DoiToSeriesTitleAndKeyMapper[doi].Key != element.Value.SeriesTitle)
+                                    {
+                                        Console.WriteLine("DOI: " + doi);
+                                        Console.WriteLine("BookTitle: " + element.Value.SeriesTitle);
+                                        Console.WriteLine("--------------------------------");
+                                        throw new Exception("DOI is not unique");
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+            
+        }
+        /*
+
         public void BuildDoiToSeriesTitleMapper()
         {
             foreach (var element in this.Series)
@@ -398,11 +449,12 @@ namespace DataProcessor
                 }
             }
         }
-        public string? SearchSeriesTitleByDOI(string doi)
+        */
+        public KeyValuePair<string, string>? SearchSeriesTitleAndKeyByDOI(string doi)
         {
-            if (this.DoiToSeriesTitleMapper.ContainsKey(doi))
+            if (this.DoiToSeriesTitleAndKeyMapper.ContainsKey(doi))
             {
-                return this.DoiToSeriesTitleMapper[doi];
+                return this.DoiToSeriesTitleAndKeyMapper[doi];
             }
             else
             {

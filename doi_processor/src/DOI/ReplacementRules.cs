@@ -105,6 +105,7 @@ namespace DataProcessor
         }
 
 
+/*
         public static void ReplaceContainerTitleUsingDBLPSummary(string dblpSummaryPath, Dictionary<string, DOIElement> doiElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/replace_container_titles_using_dblp_summary.log";
@@ -152,6 +153,7 @@ namespace DataProcessor
             logFile.Close();
             Console.WriteLine("Log file: " + logFilePath);
         }
+        */
 
         public static void ReplaceSeriesTitle(string rulePath, Dictionary<string, DOIElement> doiElementDict, string logFolderPath)
         {

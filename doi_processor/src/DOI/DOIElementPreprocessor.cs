@@ -167,7 +167,7 @@ namespace DataProcessor
 
         }
 
-        public static void UpdateSecondaryDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
+        private static void InsertDOICacheInfoUsingSecondaryDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
         {
             var doiElementDict = CreateDOIElementDictionaryFromSmallCache(dataFolderPath, doiCacheInfoDict);
 
@@ -176,9 +176,9 @@ namespace DataProcessor
                 if (doiCacheInfoDict.ContainsKey(v.DOI))
                 {
                     var w = doiCacheInfoDict[v.DOI];
-                    if (w.ContainerDOI.Length > 0 && !doiCacheInfoDict.ContainsKey(w.ContainerDOI))
+                    if (w.ProperContainerDOI.Length > 0 && !doiCacheInfoDict.ContainsKey(w.ProperContainerDOI))
                     {
-                        doiCacheInfoDict[w.ContainerDOI] = new DOICacheInfo() { DOI = w.ContainerDOI, DOIRank = 1 };
+                        doiCacheInfoDict[w.ProperContainerDOI] = new DOICacheInfo() { DOI = w.ProperContainerDOI, DOIRank = 1 };
                     }
                 }
 
@@ -193,99 +193,306 @@ namespace DataProcessor
                     });
 
                 }
+            });
+        }
+        private static void InsertDOICacheInfoUsingContainerDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
+        {
+            var doiElementDict = CreateDOIElementDictionaryFromSmallCache(dataFolderPath, doiCacheInfoDict);
+            var isbnDictionary = LoadISBNMapper(dataFolderPath);
+            doiElementDict.Values.ToList().ForEach((v) =>
+            {
+                if (doiCacheInfoDict.ContainsKey(v.DOI))
+                {
+                    var w = doiCacheInfoDict[v.DOI];
+                    if (w.ProperContainerDOI.Length > 0 && !doiCacheInfoDict.ContainsKey(w.ProperContainerDOI))
+                    {
+                        doiCacheInfoDict[w.ProperContainerDOI] = new DOICacheInfo() { DOI = w.ProperContainerDOI, DOIRank = 1 };
+                    }
+                    /*
+                    v.ISBNList.ForEach((isbn) =>
+                    {
+                        if (isbnDictionary.ContainsKey(isbn))
+                        {
+                            var containerDOI = isbnDictionary[isbn];
+                            if (v.DOI != containerDOI && !doiCacheInfoDict.ContainsKey(containerDOI))
+                            {
+                                doiCacheInfoDict[containerDOI] = new DOICacheInfo() { DOI = containerDOI, DOIRank = 1 };
 
+                                var cache = doiCacheInfoDict[v.DOI];
+                                cache.ProperContainerDOI = containerDOI;
+
+                            }
+
+                        }
+
+                    });
+                    */
+
+                }
             });
         }
 
-        public static void UpdateDummyDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
+        /*
+        public static void InsertDOICacheInfoUsingTitle(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
         {
-            var dummyDirectoryPath = dataFolderPath + "/auto_generated/cache/dummy_cache";
-            if (!Directory.Exists(dummyDirectoryPath))
+            var doiElementDict = CreateDOIElementDictionaryFromSmallCache(dataFolderPath, doiCacheInfoDict);
+            var titleDictionary = LoadTitleMapper(dataFolderPath);
+            doiElementDict.Values.ToList().ForEach((v) =>
             {
-                Directory.CreateDirectory(dummyDirectoryPath);
-            }
+                if (doiCacheInfoDict.ContainsKey(v.DOI))
+                {
+                    v.ISBNList.ForEach((isbn) =>
+                    {
+                        if (isbnDictionary.ContainsKey(isbn))
+                        {
+                            var containerDOI = isbnDictionary[isbn];
+                            if (v.DOI != containerDOI && !doiCacheInfoDict.ContainsKey(containerDOI))
+                            {
+                                doiCacheInfoDict[containerDOI] = new DOICacheInfo() { DOI = containerDOI, DOIRank = 1 };
+
+                                var cache = doiCacheInfoDict[v.DOI];
+                                cache.ContainerDOI = containerDOI;
+
+                            }
+
+                        }
+
+                    });
+
+                }
+            });
+        }
+        */
 
 
-            Dictionary<string, DOIElement> dummyDOIElementDict = DOIElement.Load(GetDummyDOIElementCachePath(dataFolderPath), false);
+        /*
+                private static void UpdateDummyDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
+                {
+                    var dummyDirectoryPath = dataFolderPath + "/auto_generated/cache/dummy_cache";
+                    if (!Directory.Exists(dummyDirectoryPath))
+                    {
+                        Directory.CreateDirectory(dummyDirectoryPath);
+                    }
+
+
+                    Dictionary<string, DOIElement> dummyDOIElementDict = DOIElement.Load(GetDummyDOIElementCachePath(dataFolderPath), false);
+
+                    var doiElementDict = CreateDOIElementDictionaryFromSmallCache(dataFolderPath, doiCacheInfoDict);
+
+                    doiCacheInfoDict.Values.ToList().ForEach((v) =>
+                    {
+                        if (doiElementDict.ContainsKey(v.DOI))
+                        {
+                            var vInfo = doiElementDict[v.DOI];
+                            if (v.ProperContainerDOI != null && !doiCacheInfoDict.ContainsKey(v.ProperContainerDOI))
+                            {
+                                var containerTitle = vInfo.ContainerTitle;
+                                var containerDOI = vInfo.ContainerDOI;
+
+                                var newDOIElement = new DOIElement() { DOI = containerDOI, Title = containerTitle, Source = "Unknown", IsPrimary = false, Type = "Book?" };
+                                dummyDOIElementDict[newDOIElement.DOI] = newDOIElement;
+                                doiCacheInfoDict[newDOIElement.DOI] = new DOICacheInfo() { DOI = newDOIElement.DOI, DOIRank = 1, SourceCite = "Dummy", SourceStatus = "Unknown" };
+                            }
+                            else if (v.ProperContainerDOI == null)
+                            {
+                                if (vInfo.ISBNList.Count > 0)
+                                {
+                                    var isbn = vInfo.ISBNList[0];
+                                    var containerDOI = "dummy/isbn/" + isbn;
+                                    var newDOIElement = new DOIElement() { DOI = containerDOI, Title = "???", Source = "Unknown", IsPrimary = false, Type = "Book?" };
+                                    dummyDOIElementDict[newDOIElement.DOI] = newDOIElement;
+                                    doiCacheInfoDict[newDOIElement.DOI] = new DOICacheInfo() { DOI = newDOIElement.DOI, DOIRank = 1, SourceCite = "Dummy", SourceStatus = "Unknown" };
+                                }
+                            }
+
+                        }
+                    });
+                    DOIElement.Save(dummyDOIElementDict, GetDummyDOIElementCachePath(dataFolderPath));
+
+                    var debugLogFolderPath = GetDebugLogFolderPath(dataFolderPath);
+                    if (!Directory.Exists(debugLogFolderPath))
+                    {
+                        Directory.CreateDirectory(debugLogFolderPath);
+                    }
+
+
+                    Dictionary<string, string> isbnToDOIMapper = new Dictionary<string, string>();
+                    doiElementDict.Values.ToList().ForEach((v) =>
+                    {
+                        bool parent_check = ISBNConverter.isISBNOwner(v.Type);
+
+                        if (parent_check)
+                        {
+                            v.ISBNList.ForEach((isbn) =>
+                            {
+                                isbnToDOIMapper[isbn] = v.DOI;
+                            });
+                        }
+                    });
+
+                    doiElementDict.Values.ToList().ForEach((v) =>
+                    {
+                        bool parent_check = ISBNConverter.isISBNOwner(v.Type);
+
+                        if (!parent_check)
+                        {
+                            v.ISBNList.ForEach((isbn) =>
+                            {
+                                if (!isbnToDOIMapper.ContainsKey(isbn))
+                                {
+                                    isbnToDOIMapper[isbn] = "null";
+                                }
+                            });
+                        }
+                    });
+
+                    CSVFunctions.WriteCSVAsDictionary(debugLogFolderPath + "/isbnToDOIMapper.jsonl", isbnToDOIMapper);
+                }
+                */
+
+
+
+
+
+
+        private static Dictionary<string, string> LoadISBNMapper(string dataFolderPath)
+        {
+            var isbnMapperOfCrossRef = CrossRefSubMapperBuilders.LoadISBNMapper(dataFolderPath);
+            var isbnMapperOfDataCite = DataCiteSubMapperBuilders.LoadISBNMapper(dataFolderPath);
+            var isbnMapper = new Dictionary<string, string>();
+            isbnMapperOfCrossRef.ToList().ForEach((v) =>
+            {
+                isbnMapper[v.Key] = v.Value;
+            });
+            isbnMapperOfDataCite.ToList().ForEach((v) =>
+            {
+                isbnMapper[v.Key] = v.Value;
+            });
+            return isbnMapper;
+        }
+        private static Dictionary<string, List<string>> LoadTitleMapper(string dataFolderPath)
+        {
+            var titleMapperOfCrossRef = CrossRefSubMapperBuilders.LoadTitleMapper(dataFolderPath);
+            var titleMapperOfDataCite = DataCiteSubMapperBuilders.LoadTitleMapper(dataFolderPath);
+            var titleMapper = new Dictionary<string, List<string>>();
+            titleMapperOfCrossRef.ToList().ForEach((v) =>
+            {
+                if (!titleMapper.ContainsKey(v.Key))
+                {
+                    titleMapper[v.Key] = new List<string>();
+                }
+                titleMapper[v.Key].AddRange(v.Value);
+            });
+            titleMapperOfDataCite.ToList().ForEach((v) =>
+            {
+                if (!titleMapper.ContainsKey(v.Key))
+                {
+                    titleMapper[v.Key] = new List<string>();
+                }
+                titleMapper[v.Key].AddRange(v.Value);
+            });
+            return titleMapper;
+        }
+        private static Dictionary<string, string> LoadISSNMapper(string dataFolderPath)
+        {
+            var issnMapperOfCrossRef = CrossRefSubMapperBuilders.LoadISSNMapper(dataFolderPath);
+            var issnMapperOfDataCite = DataCiteSubMapperBuilders.LoadISSNMapper(dataFolderPath);
+            var issnMapper = new Dictionary<string, string>();
+            issnMapperOfCrossRef.ToList().ForEach((v) =>
+            {
+                issnMapper[v.Key] = v.Value;
+            });
+            issnMapperOfDataCite.ToList().ForEach((v) =>
+            {
+                issnMapper[v.Key] = v.Value;
+            });
+            return issnMapper;
+        }
+
+        private static void UpdateModifiedTitle(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
+        {
 
             var doiElementDict = CreateDOIElementDictionaryFromSmallCache(dataFolderPath, doiCacheInfoDict);
+            var dblpSeriesDictionary = DBLPProceedingsSeriesDictionary.Load(dataFolderPath + "/auto_generated/cache/dblp_cache/dblp_proceedings.jsonl");
+            dblpSeriesDictionary.BuildDoiToSeriesTitleAndKeyMapper();
 
             doiCacheInfoDict.Values.ToList().ForEach((v) =>
             {
-                if (doiElementDict.ContainsKey(v.DOI))
+                var doiElement = doiElementDict[v.DOI];
+                if (doiElement.Type == "ConferencePaper" || doiElement.Type == "proceedings-article")
                 {
-                    var vInfo = doiElementDict[v.DOI];
-                    if (v.ContainerDOI != null && !doiCacheInfoDict.ContainsKey(v.ContainerDOI))
+                    var seriesTitleAndKey = dblpSeriesDictionary.SearchSeriesTitleAndKeyByDOI(doiElement.DOI);
+                    if (seriesTitleAndKey != null)
                     {
-                        var containerTitle = vInfo.ContainerTitle;
-                        var containerDOI = vInfo.ContainerDOI;
+                        var proceedingsSeries = dblpSeriesDictionary.Series[seriesTitleAndKey.Value.Key];
+                        var proceedings = proceedingsSeries.GetProceedings(seriesTitleAndKey.Value.Value);
+                        var proceedingsSeriesTitle = proceedingsSeries.SeriesTitle;
+                        var proceedingsName = proceedings.Title;
 
-                        var newDOIElement = new DOIElement() { DOI = containerDOI, Title = containerTitle, Source = "Unknown", IsPrimary = false, Type = "Book?" };
-                        dummyDOIElementDict[newDOIElement.DOI] = newDOIElement;
-                        doiCacheInfoDict[newDOIElement.DOI] = new DOICacheInfo() { DOI = newDOIElement.DOI, DOIRank = 1, SourceCite = "Dummy", SourceStatus = "Unknown" };
-                    }
-                    else if (v.ContainerDOI == null)
-                    {
-                        if (vInfo.ISBNList.Count > 0)
+                        var proceedingsSeriesDummyDOI = "dummy/proceedings_series/" + proceedingsSeriesTitle.ToLower();
+                        if (!doiCacheInfoDict.ContainsKey(proceedingsSeriesDummyDOI))
                         {
-                            var isbn = vInfo.ISBNList[0];
-                            var containerDOI = "dummy/isbn/" + isbn;
-                            var newDOIElement = new DOIElement() { DOI = containerDOI, Title = "???", Source = "Unknown", IsPrimary = false, Type = "Book?" };
-                            dummyDOIElementDict[newDOIElement.DOI] = newDOIElement;
-                            doiCacheInfoDict[newDOIElement.DOI] = new DOICacheInfo() { DOI = newDOIElement.DOI, DOIRank = 1, SourceCite = "Dummy", SourceStatus = "Unknown" };
+                            doiCacheInfoDict[proceedingsSeriesDummyDOI] = new DOICacheInfo() { DOI = proceedingsSeriesDummyDOI, ModifiedTitle = proceedingsSeriesTitle, DOIRank = 1 };
                         }
-                    }
 
-                }
-            });
-            DOIElement.Save(dummyDOIElementDict, GetDummyDOIElementCachePath(dataFolderPath));
-
-            var debugLogFolderPath = GetDebugLogFolderPath(dataFolderPath);
-            if (!Directory.Exists(debugLogFolderPath))
-            {
-                Directory.CreateDirectory(debugLogFolderPath);
-            }
-
-
-            Dictionary<string, string> isbnToDOIMapper = new Dictionary<string, string>();
-            doiElementDict.Values.ToList().ForEach((v) =>
-            {
-                bool parent_check = ISBNConverter.isISBNOwner(v.Type);
-
-                if (parent_check)
-                {
-                    v.ISBNList.ForEach((isbn) =>
-                    {
-                        isbnToDOIMapper[isbn] = v.DOI;
-                    });
-                }
-            });
-
-            doiElementDict.Values.ToList().ForEach((v) =>
-            {
-                bool parent_check = ISBNConverter.isISBNOwner(v.Type);
-
-                if (!parent_check)
-                {
-                    v.ISBNList.ForEach((isbn) =>
-                    {
-                        if (!isbnToDOIMapper.ContainsKey(isbn))
+                        if (v.ProperContainerDOI.Length > 0)
                         {
-                            isbnToDOIMapper[isbn] = "null";
+
+                            var proceedingsDOI = v.ProperContainerDOI;
+                            //Console.WriteLine("Proceedings DOI: " + proceedingsDOI);
+                            if (doiCacheInfoDict.ContainsKey(proceedingsDOI))
+                            {
+                                var proceedingsCache = doiCacheInfoDict[proceedingsDOI];
+                                if (proceedingsCache.ModifiedTitle != proceedingsName && proceedingsCache.ProperContainerDOI != proceedingsSeriesDummyDOI)
+                                {
+                                    proceedingsCache.ModifiedTitle = proceedingsName;
+                                    proceedingsCache.ProperContainerDOI = proceedingsSeriesDummyDOI;
+
+                                    Console.WriteLine("Updated ModifiedTitle: " + proceedingsName + " -> " + proceedingsSeriesTitle);
+
+                                }
+
+                            }
                         }
-                    });
+
+
+
+                        //proceedingsSeries.
+                    }
                 }
+
             });
-
-            CSVFunctions.WriteCSVAsDictionary(debugLogFolderPath + "/isbnToDOIMapper.jsonl", isbnToDOIMapper);
-
-
-
-
-
         }
 
 
+
+        private static void UpdateContainerDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, HashSet<string> crossRefDOIPrefixSet)
+        {
+            var logFilePath = dataFolderPath + "/auto_generated/log/update_container_doi.log";
+            var logFile = new StreamWriter(logFilePath, true);
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
+
+
+            //var filePath = CrossRefDOIToGZFileCache.GetDOIToGZFileFolderPath(dataFolderPath);
+
+            //var titleDictionary = DataCiteMinorCache.LoadTitleFile(dataFolderPath);
+            var issnDictionary = LoadISSNMapper(dataFolderPath);
+            var isbnDictionary = LoadISBNMapper(dataFolderPath);
+            var titleDictionary = LoadTitleMapper(dataFolderPath);
+
+            var doiElementDict = CreateDOIElementDictionaryFromSmallCache(dataFolderPath, doiCacheInfoDict);
+
+
+
+            doiCacheInfoDict.Values.ToList().ForEach((w) =>
+            {
+                w.UpdateContainerDOI(doiElementDict, isbnDictionary, issnDictionary, titleDictionary, logFile);
+            });
+
+            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
+            logFile.Close();
+
+        }
 
         public static async Task BuildSmallCaches(string dataFolderPath, string mailAddress, ReadOnlySet<string> primaryDOISet, string checksumFileName)
         {
@@ -348,8 +555,10 @@ namespace DataProcessor
                 await DataProcessor.CrossRefCacheBuilder.UpdateSmallCache(dataFolderPath, doiCacheInfoDict, mailAddress);
                 await DataProcessor.DataCitePreprocessor.UpdateSmallCache(dataFolderPath, doiCacheInfoDict, mailAddress);
                 UpdateContainerDOI(dataFolderPath, doiCacheInfoDict, crossRefDOIPrefixSet);
-                UpdateSecondaryDOI(dataFolderPath, doiCacheInfoDict);
-                UpdateDummyDOI(dataFolderPath, doiCacheInfoDict);
+                UpdateModifiedTitle(dataFolderPath, doiCacheInfoDict);
+                InsertDOICacheInfoUsingSecondaryDOI(dataFolderPath, doiCacheInfoDict);
+                InsertDOICacheInfoUsingContainerDOI(dataFolderPath, doiCacheInfoDict);
+                //UpdateDummyDOI(dataFolderPath, doiCacheInfoDict);
 
                 int unknownCounter = doiCacheInfoDict.Values.Count(v => v.SourceStatus == "");
                 if (unknownCounter == 0) { break; }
@@ -357,125 +566,34 @@ namespace DataProcessor
 
             }
 
+            {
+                var doiElementDict = CreateDOIElementDictionaryFromSmallCache(dataFolderPath, doiCacheInfoDict);
+                doiElementDict.Values.ToList().ForEach((v) =>
+                {
+                    if (doiCacheInfoDict.ContainsKey(v.DOI))
+                    {
+                        var w = doiCacheInfoDict[v.DOI];
+                        w.ISList.Clear();
+                        v.ISBNList.ForEach((isbn) =>
+                        {
+                            w.ISList.Add("ISBN:" + isbn);
+                        });
+                        v.ISSNList.ForEach((issn) =>
+                        {
+                            w.ISList.Add("ISSN:" + issn);
+                        });
+                    }
+
+                });
+            }
+
 
 
             DOICacheInfo.Save(doiCacheInfoDict, doiCacheInfoFilePath);
             WriteChecksum(dataFolderPath, checksumFileName, primaryDOISet);
 
-
-
-            //UpdateSecondaryDOI(dataFolderPath, doiCacheInfoDict);
-
-
-
-
-
-
-
-
-
-
-            //DataProcessor.CrossRefCacheBuilder.UpdateSmallCacheUsingContainerDOI(dataFolderPath);
-            //DataProcessor.DataCitePreprocessor.UpdateSmallCacheUsingContainerTitle(dataFolderPath);
-
-            //DataProcessor.CrossRefCacheBuilder.UpdateSmallCacheUsingISBN(dataFolderPath);
-
-
-            //DataProcessor.CrossRefCacheBuilder.UpdateSmallCacheUsingDOIPrefix(dataFolderPath);
-            //DataProcessor.DataCitePreprocessor.UpdateSmallCacheUsingDOIPrefix(dataFolderPath);
-
-
-
-            /*
-                        var doiElementDict = new Dictionary<string, DOIElement>();
-
-                        var crossRefDic = DataProcessor.CrossRefCacheBuilder.LoadSmallCache(dataFolderPath);
-                        var dataCiteDic = DataProcessor.DataCitePreprocessor.LoadSmallCache(dataFolderPath);
-
-                        crossRefDic.ToList().ForEach((v) =>
-                        {
-                            doiElementDict[v.Key] = v.Value;
-                        });
-                        dataCiteDic.ToList().ForEach((v) =>
-                        {
-                            doiElementDict[v.Key] = v.Value;
-                        });
-                        */
-
-
-
-
-            //await SemanticScholarPreprocessor.PreprocessAll(doiElementDict, dataFolderPath);
-
-
-
-            //DOIElement.Save(doiElementDict, GetCachePath(dataFolderPath));
-
-
             Console.WriteLine("Building SmallCache [END]");
         }
-
-        /*
-                public static Dictionary<string, DOIElement> BuildDOIElementDictionary(string dataFolderPath, ReadOnlySet<string> doiSet)
-                {
-                    var logFilePath = dataFolderPath + "/auto_generated/log/build_doi_element_dictionary.log";
-                    var logFile = new StreamWriter(logFilePath, true);
-                    logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
-
-
-                    var doiElementDict = new Dictionary<string, DOIElement>();
-                    var doiElementCachePath = DOIElementPreprocessor.GetCachePath(dataFolderPath);
-                    var doiElementCache = DOIElement.Load(doiElementCachePath, false);
-                    doiSet.ToList().ForEach((v) =>
-                    {
-                        if (doiElementCache.ContainsKey(v))
-                        {
-                            doiElementDict[v] = doiElementCache[v];
-                        }
-                        else
-                        {
-                            logFile.WriteLine("DOI not found in cache: " + v);
-                        }
-                    });
-
-                    logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
-                    logFile.Close();
-                    return doiElementDict;
-                }
-                */
-
-
-
-        public static void UpdateContainerDOI(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, HashSet<string> crossRefDOIPrefixSet)
-        {
-            var logFilePath = dataFolderPath + "/auto_generated/log/update_container_doi.log";
-            var logFile = new StreamWriter(logFilePath, true);
-            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
-
-
-            //var filePath = CrossRefDOIToGZFileCache.GetDOIToGZFileFolderPath(dataFolderPath);
-
-            var isbnFilePath = CrossRefDOIToGZFileCache.GetISBNFilePath(dataFolderPath);
-            var isbnDictionary = CSVFunctions.ReadCSVAasDictionary(isbnFilePath);
-            var titleFilePath = CrossRefDOIToGZFileCache.GetTitleFilePath(dataFolderPath);
-            var titleDictionary = CSVFunctions.ReadCSVAasDictionary(titleFilePath);
-            var issnFilePath = CrossRefDOIToGZFileCache.GetISSNFilePath(dataFolderPath);
-            var issnDictionary = CSVFunctions.ReadCSVAasDictionary(issnFilePath);
-
-            var doiElementDict = CreateDOIElementDictionaryFromSmallCache(dataFolderPath, doiCacheInfoDict);
-
-
-
-            doiCacheInfoDict.Values.ToList().ForEach((w) =>
-            {
-                w.UpdateContainerDOI(doiElementDict[w.DOI], isbnDictionary, titleDictionary, logFile);
-            });
-
-            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
-            logFile.Close();
-
-        }
-
 
 
     }
