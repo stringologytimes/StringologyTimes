@@ -24,15 +24,14 @@ namespace DataProcessor
             var dic = JsonLib.LoadJSONLAsDictionary(dicPath, "id");
             return dic;
         }
-        public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath)
+        public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, DataCiteSmallCache dataCiteSmallCache)
         {
-            Dictionary<string, string> foundJSONLMap = Load(dataFolderPath);
 
             doiCacheInfoDict.Values.ToList().ForEach((v) =>
             {
                 if (v.SourceCite == "DataCite")
                 {
-                    if (foundJSONLMap.ContainsKey(v.DOI))
+                    if (dataCiteSmallCache.localCacheDic.ContainsKey(v.DOI))
                     {
                         v.SourceStatus = "LocalCache";
                         v.CacheCreatedDate = DateTime.Now.ToString("yyyy-MM");
@@ -43,19 +42,19 @@ namespace DataProcessor
         }
 
 
-        public static void Update(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath, string jsonlFolderPath)
+
+
+        public static void Update(IDictionary<string, DOICacheInfo> doiCacheInfoDict, DataCiteSmallCache dataCiteSmallCache, string dataFolderPath, string jsonlFolderPath)
         {
 
             var logFilePath = dataFolderPath + "/auto_generated/log/update_datacite_found_doi_cache.log";
             var logFile = new StreamWriter(logFilePath, true);
             logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
 
-            Console.WriteLine("Update Found DOI Cache(DataCite), DOI Count: " + doiCacheInfoDict.Count);
-            var foundJSONLMapFilePath = GetCachePath(dataFolderPath);
-            Dictionary<string, string> foundJSONLMap = DataCiteLocalCache.Load(dataFolderPath);
+            CommonFunctions.OutputSystemMessageFunction("Update LocalCache(DataCite) [START], DOI Count: " + doiCacheInfoDict.Count);
+            CommonFunctions.IncrementParagraphCounter();
 
 
-            Console.WriteLine("\t Found JSONL Map: " + foundJSONLMap.Count);
 
             var candidateDOISet = new HashSet<string>();
             var notDataCiteDOIPrefixSet = new HashSet<string>();
@@ -66,7 +65,7 @@ namespace DataProcessor
             foreach (var doiCacheInfo in doiCacheInfoDict.Values)
             {
                 var smallDOI = doiCacheInfo.DOI.ToLower();
-                if (!foundJSONLMap.ContainsKey(smallDOI))
+                if (!dataCiteSmallCache.localCacheDic.ContainsKey(smallDOI))
                 {
                     if (doiCacheInfo.SourceCite == "DataCite")
                     {
@@ -151,7 +150,7 @@ namespace DataProcessor
 
             }
             Console.WriteLine();
-            Console.WriteLine("\t Found JSONL Map: " + foundJSONLMap.Count);
+            CommonFunctions.OutputSystemMessageFunction("\t Found JSONL Map: " + dataCiteSmallCache.localCacheDic.Count);
 
             var othersFilePath = DataCiteDOIToGZFileCache.GetOthersFilePath(dataFolderPath);
             var othersFileInfo = new FileInfo(othersFilePath);
@@ -184,19 +183,15 @@ namespace DataProcessor
 
             List<string> gzJSONLPaths = gzFilePathSet.ToList();
             var notFoundDOIs = new List<string>();
-            CreateFoundJSONLFileSub(candidateDOISet.ToList(), gzJSONLPaths, foundJSONLMap, notFoundDOIs);
+            CreateFoundJSONLFileSub(candidateDOISet.ToList(), gzJSONLPaths, dataCiteSmallCache.localCacheDic, notFoundDOIs);
             notFoundDOIs.ForEach((v) =>
             {
                 logFile.WriteLine("Not found DOI (Type 2): " + v);
             });
 
-            using (var JSONLCacheWriter = new StreamWriter(GetCachePath(dataFolderPath), false, Encoding.UTF8))
-            {
-                foreach (var jsonl in foundJSONLMap.Values)
-                {
-                    JSONLCacheWriter.WriteLine(jsonl);
-                }
-            }
+            CommonFunctions.DecrementParagraphCounter();
+            CommonFunctions.OutputSystemMessageFunction("Update LocalCache(DataCite) [END]");
+
 
         }
 

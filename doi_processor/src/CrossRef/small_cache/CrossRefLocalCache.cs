@@ -10,7 +10,13 @@ namespace DataProcessor
     {
         public static string GetCachePath(string dataFolderPath)
         {
-            return dataFolderPath + "/auto_generated/cache/crossref_cache/small_cache/found_doi.jsonl";
+            var dirPath = dataFolderPath + "/auto_generated/cache/crossref_cache/small_cache";
+            var dirPathFileInfo = new DirectoryInfo(dirPath);
+            if (!dirPathFileInfo.Exists)
+            {
+                dirPathFileInfo.Create();
+            }
+            return dirPath + "/found_doi.jsonl";
         }
         public static Dictionary<string, string> Load(string dataFolderPath)
         {
@@ -19,13 +25,12 @@ namespace DataProcessor
             return dic;
         }
 
-        public static void UpdateDOICacheStatus(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath)
+        public static void UpdateDOICacheStatus(IDictionary<string, DOICacheInfo> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache)
         {
-            Dictionary<string, string> foundJSONLMap = Load(dataFolderPath);
 
             doiCacheInfoDict.Values.ToList().ForEach((v) =>
             {
-                if (foundJSONLMap.ContainsKey(v.DOI))
+                if (crossRefSmallCache.localCacheDic.ContainsKey(v.DOI))
                 {
                     v.SourceStatus = "LocalCache";
                     v.CacheCreatedDate = DateTime.Now.ToString("yyyy-MM");
@@ -34,16 +39,17 @@ namespace DataProcessor
         }
 
 
-        public static void Update(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath, string jsonlFolderPath)
+        public static void Update(IDictionary<string, DOICacheInfo> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache, string dataFolderPath, string jsonlFolderPath)
         {
             var logFilePath = dataFolderPath + "/auto_generated/log/update_crossref_found_doi_cache.log";
             var logFile = new StreamWriter(logFilePath, true);
             logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
 
-            Console.WriteLine("Creating Found JSONL File(CrossRef): ");
+            CommonFunctions.OutputSystemMessageFunction("Update LocalCache(CrossRef) [START]");
+            CommonFunctions.IncrementParagraphCounter();
             //var dicPath = GetCachePath(dataFolderPath);
-            Dictionary<string, string> foundJSONLMap = Load(dataFolderPath);
-            Console.WriteLine("\t Found JSONL Map: " + foundJSONLMap.Count);
+            //Dictionary<string, string> foundJSONLMap = Load(dataFolderPath);
+            //Console.WriteLine("\t Found JSONL Map: " + foundJSONLMap.Count);
 
             var candidateDOISet = new HashSet<string>();
             var notCrossRefDOIPrefixSet = new HashSet<string>();
@@ -65,7 +71,7 @@ namespace DataProcessor
                     }
                     else
                     {
-                        if (!foundJSONLMap.ContainsKey(doiCacheInfo.DOI))
+                        if (!crossRefSmallCache.localCacheDic.ContainsKey(doiCacheInfo.DOI))
                         {
                             var doiPrefix = DOIFunctions.GetPrefix(doiCacheInfo.DOI);
                             if (!doiPrefixToDoi.ContainsKey(doiPrefix))
@@ -86,7 +92,6 @@ namespace DataProcessor
 
             }
 
-            Console.WriteLine("Count: " + count);
 
             alreadyFoundDOISet.ToList().ForEach((v) =>
             {
@@ -178,7 +183,7 @@ namespace DataProcessor
 
 
             List<string> gzJSONLPaths = gzFilePathSet.ToList();
-            CreateFoundJSONLFileSub(candidateDOISet.ToList(), gzJSONLPaths, foundJSONLMap, notFoundDOIs);
+            CreateFoundJSONLFileSub(candidateDOISet.ToList(), gzJSONLPaths, crossRefSmallCache.localCacheDic, notFoundDOIs);
 
             notFoundDOIs.ForEach((v) =>
             {
@@ -186,16 +191,11 @@ namespace DataProcessor
             });
 
 
-
-            var JSONLCacheWriter = new StreamWriter(GetCachePath(dataFolderPath), false, Encoding.UTF8);
-            foreach (var jsonl in foundJSONLMap.Values)
-            {
-                JSONLCacheWriter.WriteLine(jsonl);
-            }
-            JSONLCacheWriter.Close();
-
             logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
             logFile.Close();
+
+            CommonFunctions.DecrementParagraphCounter();
+            CommonFunctions.OutputSystemMessageFunction("Update LocalCache(CrossRef) [END]");
         }
         private static void CreateFoundJSONLFileSub(IReadOnlyList<string> dois, List<string> gzJSONLPaths, Dictionary<string, string> foundJSONLMap, List<string> notFoundDOIs)
         {

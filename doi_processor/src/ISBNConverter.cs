@@ -87,11 +87,11 @@ public static class ISBNConverter
             if (ISBNConverter.IsValidIsbn10(isbn))
             {
                 var isbn13 = ISBNConverter.Isbn10ToIsbn13(isbn);
-                return isbn13;
+                return isbn13.Replace("\n", "");
             }
             else
             {
-                return isbn.Replace("-", "");
+                return isbn.Replace("-", "").Replace("\n", "");
             }
         }
         throw new Exception("Invalid ISBN: " + isbn);
@@ -100,7 +100,7 @@ public static class ISBNConverter
     {
         if (issn.Length > 0)
         {
-            return issn.Replace("-", "");
+            return issn.Replace("-", "").Replace("\n", "");
         }
         throw new Exception("Invalid ISSN: " + issn);
     }

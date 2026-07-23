@@ -14,6 +14,33 @@ namespace DataProcessor
         Other
     }
 
+    class CommonFunctions
+    {
+        public static uint paragraphCounter = 0;
+
+        public static void IncrementParagraphCounter()
+        {
+            paragraphCounter++;
+        }
+
+        public static void DecrementParagraphCounter()
+        {
+            paragraphCounter--;
+        }
+
+        public static void OutputSystemMessageFunction(string message, ConsoleColor color = ConsoleColor.Blue)
+        {
+            Console.ForegroundColor = color;
+            for (int i = 0; i < paragraphCounter; i++)
+            {
+                Console.Write("  ");
+            }
+            Console.WriteLine(message);
+            Console.ResetColor();
+        }
+
+    }
+
     class HashFunctions
     {
         public static string ComputeHash(ReadOnlySet<string> doiSet)

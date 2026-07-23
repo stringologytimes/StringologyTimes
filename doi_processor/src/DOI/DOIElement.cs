@@ -17,9 +17,12 @@ namespace DataProcessor
 
         public List<string> ISBNList { get; set; } = new List<string>();
         public List<string> ISSNList { get; set; } = new List<string>();
+        public List<string> DOIAliasList { get; set; } = new List<string>();
         public string SeriesTitle { get; set; } = "";
 
         public string ContainerDOI { get; set; } = "";
+        public string ContainerType { get; set; } = "";
+
         public string ContainerTitle { get; set; } = "";
 
         public string Type { get; set; } = "";
@@ -52,6 +55,7 @@ namespace DataProcessor
             return count;
         }
         */
+        /*
         public string ToJSONLine()
         {
             List<string> dataList = new List<string>();
@@ -84,6 +88,7 @@ namespace DataProcessor
             string dataString = "[" + string.Join(",", dataList) + "]";
             return dataString;
         }
+        */
 
         public string GetVolumeIssueString()
         {
@@ -95,13 +100,15 @@ namespace DataProcessor
             }
             else if(this.Issue.Length > 0)
             {
-                throw new Exception("Issue is not found");
+                return "0" + ":" + this.Issue;
+                //throw new Exception("Issue is not found");
             }
             else
             {
                 return "";
             }
         }
+        
 
         public void UpdateContainerDOI(DOICacheInfo v)
         {
@@ -122,7 +129,7 @@ namespace DataProcessor
 
         public static Dictionary<string, DOIElement> Load(string doiElementFilePath, bool checkFileExist)
         {
-            Console.WriteLine("Loading from " + doiElementFilePath);
+            CommonFunctions.OutputSystemMessageFunction("Loading from " + doiElementFilePath, ConsoleColor.Gray);
             var doiElementFileInfo = new FileInfo(doiElementFilePath);
             var doiDict = new Dictionary<string, DOIElement>();
             if (doiElementFileInfo.Exists)

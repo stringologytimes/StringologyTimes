@@ -32,6 +32,10 @@ namespace DataProcessor
         {
             return dataFolderPath + "/auto_generated/cache/crossref_cache/big_cache/title.tsv";
         }
+        public static string GetAliasFilePath(string dataFolderPath)
+        {
+            return dataFolderPath + "/auto_generated/cache/crossref_cache/big_cache/alias.tsv";
+        }
 
         public static HashSet<string> GetDOIPrefixSet(string dataFolderPath)
         {
@@ -52,7 +56,7 @@ namespace DataProcessor
         public static void Build(string dataFolderPath)
         {
             Console.WriteLine("Creating DOI Prefix to JSONL Map(CrossRef): ");
-            var doiListFolderPath = GetDOIToGZFileFolderPath(dataFolderPath);
+            var doiListFolderPath = CrossRefGZFileToDOICache.GetGZFileToDoiFolderPath(dataFolderPath);
             Dictionary<string, List<string>> doiPrefixToJSONLMap = new Dictionary<string, List<string>>();
             Dictionary<string, StreamWriter> onlineWriters = new Dictionary<string, StreamWriter>();
             HashSet<string> doiPrefixSet = new HashSet<string>();
@@ -65,6 +69,7 @@ namespace DataProcessor
 
             // gzファイル毎の処理を並列化し、各dict.Countを配列に格納
             var tsvFiles = System.IO.Directory.GetFiles(doiListFolderPath, "*.tsv", System.IO.SearchOption.TopDirectoryOnly);
+            Console.WriteLine("tsvFiles: " + tsvFiles.Length);
             //Dictionary<string, HashSet<string>> r = new Dictionary<string, HashSet<string>>();
 
             var FinishedCounter = 0;
@@ -78,10 +83,6 @@ namespace DataProcessor
 
             System.Threading.Tasks.Parallel.For(0, tsvFiles.Length, options, i =>
             {
-                lock (lockObj)
-                {
-                    Console.WriteLine("Processing: " + i + " / " + tsvFiles.Length);
-                }
 
                 var tsvFilePath = tsvFiles[i];
                 FileInfo fi = new FileInfo(tsvFilePath);

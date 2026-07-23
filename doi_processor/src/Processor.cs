@@ -63,7 +63,7 @@ namespace DataProcessor
 
         public static void BuildTagCSVFromDataCite(DBLPOptions opts)
         {
-            OutputSystemMessageFunction("Building DataCite subjects");
+            CommonFunctions.OutputSystemMessageFunction("Building DataCite subjects");
             var foundJSONLMapFilePath = DataCiteLocalCache.GetCachePath(opts.DataFolderPath);
             Dictionary<string, string> foundJSONLMap = DataCiteLocalCache.Load(opts.DataFolderPath);
             Console.WriteLine("Found JSONL Map: " + foundJSONLMap.Count);
@@ -96,7 +96,7 @@ namespace DataProcessor
             }
 
             CSVFunctions.WriteCSV(folderPath + "/tag.tsv", csvLines);
-            OutputSystemMessageFunction("Saved: " + folderPath + "/tag.tsv");
+            CommonFunctions.OutputSystemMessageFunction("Saved: " + folderPath + "/tag.tsv");
 
         }
 
@@ -110,12 +110,12 @@ namespace DataProcessor
 
         public static async Task<int> BuildSmallCache(DBLPOptions opts)
         {
-            OutputSystemMessageFunction("Creating DOI to Tag Mapper");
+            CommonFunctions.OutputSystemMessageFunction("Creating DOI to Tag Mapper");
             var doiToTagMapper = DoiToTagMapper.CreateDoiToTagMapper(opts.DataFolderPath + "/raw");
             var primaryDOISet = new ReadOnlySet<string>(new HashSet<string>(doiToTagMapper.Keys));
 
 
-            OutputSystemMessageFunction("Building cache for primary DOI elements");
+            CommonFunctions.OutputSystemMessageFunction("Building cache for primary DOI elements");
             await DOIElementPreprocessor.BuildSmallCaches(opts.DataFolderPath, opts.MailAddress, primaryDOISet, "small_cache_hash.csv");
 
             return 0;
@@ -138,7 +138,7 @@ namespace DataProcessor
 
 
 
-            OutputSystemMessageFunction("Saving DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, DOI_ELEMENT_FILENAME));
+            CommonFunctions.OutputSystemMessageFunction("Saving DOI element dictionary to: " + GetFilePathInResultFolder(opts.DataFolderPath, DOI_ELEMENT_FILENAME));
             DOIElement.Save(doiElementDict, GetFilePathInResultFolder(opts.DataFolderPath, DOI_ELEMENT_FILENAME));
 
         }
@@ -211,12 +211,14 @@ namespace DataProcessor
 
 
 
+/*
         public static void OutputSystemMessageFunction(string message)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine(message);
             Console.ResetColor();
         }
+        */
 
         public static string GetFilePathInResultFolder(string dataFolderPath, string filename)
         {
@@ -242,16 +244,16 @@ namespace DataProcessor
 
         public static int CreateLightweightDOIInfoFolder(DBLPOptions opts)
         {
-            OutputSystemMessageFunction("Process: CreateLightweightDOIInfoFolder[Start]");
+            CommonFunctions.OutputSystemMessageFunction("Process: CreateLightweightDOIInfoFolder[Start]");
 
             var doiElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_DOI_ELEMENT_FILENAME), true);
-            OutputSystemMessageFunction("Building lightweight DOI element component");
+            CommonFunctions.OutputSystemMessageFunction("Building lightweight DOI element component");
             var lightweightDOIElementComponent = LightweightDOIElementComponent.Build(doiElementDict);
 
-            OutputSystemMessageFunction("Saving lightweight DOI element component to: " + GetFilePathInResultFolder(opts.DataFolderPath, "lightweight_doi_info"));
+            CommonFunctions.OutputSystemMessageFunction("Saving lightweight DOI element component to: " + GetFilePathInResultFolder(opts.DataFolderPath, "lightweight_doi_info"));
             lightweightDOIElementComponent.OutputByGZip(GetFilePathInResultFolder(opts.DataFolderPath, "lightweight_doi_info"));
 
-            OutputSystemMessageFunction("Process: CreateLightweightDOIInfoFolder[End]");
+            CommonFunctions.OutputSystemMessageFunction("Process: CreateLightweightDOIInfoFolder[End]");
 
             return 0;
         }
@@ -260,7 +262,7 @@ namespace DataProcessor
         {
             var logFolderPath = opts.DataFolderPath + "/auto_generated/log";
 
-            OutputSystemMessageFunction("Running doi_processor");
+            CommonFunctions.OutputSystemMessageFunction("Running doi_processor");
             var doiElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, DOI_ELEMENT_FILENAME), true);
 
             /*
@@ -310,7 +312,7 @@ namespace DataProcessor
             DOIElement.Save(doiElementDict, GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_DOI_ELEMENT_FILENAME));
 
 
-            OutputSystemMessageFunction("doi_processor is finished");
+            CommonFunctions.OutputSystemMessageFunction("doi_processor is finished");
 
 
             return 0;

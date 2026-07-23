@@ -58,6 +58,7 @@ namespace DataProcessor
             CrossRefSubMapperBuilders.BuildISBNMapper(dataFolderPath);
             CrossRefSubMapperBuilders.BuildISSNMapper(dataFolderPath);
             CrossRefSubMapperBuilders.BuildTitleMapper(dataFolderPath);
+            CrossRefSubMapperBuilders.BuildAliasMapper(dataFolderPath);
             //MinorCache.BuildTitleFile(dataFolderPath);
             CrossRefSubMapperBuilders.BuildTypeListFile(dataFolderPath);
             //BuildBookCache(dataFolderPath, crossRefDoiListFolderPath);
@@ -65,9 +66,10 @@ namespace DataProcessor
         }
 
 
-        public static async Task UpdateSmallCache(string dataFolderPath, Dictionary<string, DOICacheInfo> doiCacheInfoDict, string mailAddress)
+        public static async Task UpdateSmallCache(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache, string mailAddress)
         {
-            Console.WriteLine("Building CrossRefSmallCache [START]");
+            CommonFunctions.OutputSystemMessageFunction("Updating SmallCache(CrossRef) [START]");
+            CommonFunctions.IncrementParagraphCounter();
             var crossrefFolderInfo = CrossRefCacheBuilder.SearchCrossRefFolder(dataFolderPath + "/external");
 
             var otherCSVPath = CrossRefDOIToGZFileCache.GetOthersFilePath(dataFolderPath);
@@ -78,12 +80,13 @@ namespace DataProcessor
             }
 
             // Build Found DOI Cache
-            CrossRefLocalCache.Update(doiCacheInfoDict, dataFolderPath, crossrefFolderInfo.FullName);
-            CrossRefLocalCache.UpdateDOICacheStatus(doiCacheInfoDict, dataFolderPath);
-            await CrossRefExternalCache.Update(dataFolderPath, doiCacheInfoDict, mailAddress);
-            CrossRefExternalCache.UpdateDOICache(doiCacheInfoDict, dataFolderPath);
+            CrossRefLocalCache.Update(doiCacheInfoDict, crossRefSmallCache, dataFolderPath, crossrefFolderInfo.FullName);
+            CrossRefLocalCache.UpdateDOICacheStatus(doiCacheInfoDict, crossRefSmallCache);
+            await CrossRefExternalCache.Update(dataFolderPath, doiCacheInfoDict, crossRefSmallCache, mailAddress);
+            CrossRefExternalCache.UpdateDOICache(doiCacheInfoDict, crossRefSmallCache);
 
-            Console.WriteLine("CrossRefSmallCache [END]");
+            CommonFunctions.DecrementParagraphCounter();
+            CommonFunctions.OutputSystemMessageFunction("Updating SmallCache(CrossRef) [END]");
 
         }
 
@@ -119,51 +122,7 @@ namespace DataProcessor
                 }
                 */
 
-        public static Dictionary<string, DOIElement> LoadSmallCache(string dataFolderPath,
-        IDictionary<string, DOICacheInfo> doiCacheInfoDict, HashSet<string> crossRefDOIPrefixSet)
-        {
-            var logFilePath = dataFolderPath + "/auto_generated/log/load_small_cache.log";
-            var logFile = new StreamWriter(logFilePath, true);
-            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
-
-
-            var crossRefDic = DataProcessor.CrossRefLocalCache.Load(dataFolderPath);
-            var crossRefExternalDic = DataProcessor.CrossRefExternalCache.Load(dataFolderPath);
-
-            var mergedDic = new Dictionary<string, DOIElement>();
-
-            doiCacheInfoDict.Values.ToList().ForEach((v) =>
-            {
-                if (v.SourceCite == "CrossRef")
-                {
-                    if (crossRefDic.ContainsKey(v.DOI))
-                    {
-                        var doiElement = CrossRefParser.Parse(crossRefDic[v.DOI]);
-                        mergedDic[v.DOI] = doiElement;
-                    }
-                    else if (crossRefExternalDic.ContainsKey(v.DOI))
-                    {
-                        var doiElement = CrossRefParser.Parse(crossRefExternalDic[v.DOI]);
-                        mergedDic[v.DOI] = doiElement;
-                    }
-                    else
-                    {
-                        var doiElement = new DOIElement() { DOI = v.DOI, Source = "CrossRef", IsPrimary = v.DOIRank == 0 };
-                        mergedDic[v.DOI] = doiElement;
-                    }
-                }
-            });
-
-            mergedDic.ToList().ForEach((v) =>
-            {
-                v.Value.UpdateContainerDOI(doiCacheInfoDict[v.Key]);
-            });
-
-
-            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
-            logFile.Close();
-            return mergedDic;
-        }
+        
 
 
 

@@ -146,36 +146,36 @@ namespace DataProcessor
                         var ele = DBLPProceedings.BuildFromXML(v);
 
 
-                        if (ele.BookTitle.Length == 0)
+                        if (ele.SeriesTitle.Length == 0)
+                        {
+                            foreach (var key in replaceDictionary.Keys)
                             {
-                                foreach (var key in replaceDictionary.Keys)
+                                if (key.Length > 0)
                                 {
-                                    if (key.Length > 0)
+                                    var fstChar = key[0];
+                                    if (fstChar == '=')
                                     {
-                                        var fstChar = key[0];
-                                        if (fstChar == '=')
-                                        {
-                                            var regex = new Regex(key.Substring(1));
-                                            var match = regex.Match(ele.key);
-                                            if (match.Success)
-                                            {
-                                                Console.WriteLine("Replacing booktitle: " + ele.key + " " + ele.Title + " -> " + replaceDictionary[key]);
-                                                ele.BookTitle = replaceDictionary[key];
-                                            }
-
-                                        }
-                                        else if (ele.key == key)
+                                        var regex = new Regex(key.Substring(1));
+                                        var match = regex.Match(ele.key);
+                                        if (match.Success)
                                         {
                                             Console.WriteLine("Replacing booktitle: " + ele.key + " " + ele.Title + " -> " + replaceDictionary[key]);
-                                            ele.BookTitle = replaceDictionary[key];
+                                            ele.SeriesTitle = replaceDictionary[key];
                                         }
 
+                                    }
+                                    else if (ele.key == key)
+                                    {
+                                        Console.WriteLine("Replacing booktitle: " + ele.key + " " + ele.Title + " -> " + replaceDictionary[key]);
+                                        ele.SeriesTitle = replaceDictionary[key];
                                     }
 
                                 }
 
-
                             }
+
+
+                        }
 
 
                         proceedingsSeriesDictionary.Add(ele);
@@ -197,7 +197,7 @@ namespace DataProcessor
                                 doiDictionary[key].Add(ele.DOI);
                             }
                         }
-                        
+
                     }
 
                     counter++;
@@ -207,10 +207,14 @@ namespace DataProcessor
 
             foreach (var kvp in doiDictionary)
             {
+
                 if (proceedingsSeriesDictionary.ContainsKey(kvp.Key))
                 {
                     var proceedings = proceedingsSeriesDictionary.GetProceedings(kvp.Key);
-                    proceedings.DOIList = kvp.Value.Distinct().ToList();
+                    kvp.Value.ForEach(v =>
+                    {
+                        proceedings.DOIList.Add(v);
+                    });
                 }
             }
 

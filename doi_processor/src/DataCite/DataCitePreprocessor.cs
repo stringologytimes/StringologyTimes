@@ -49,54 +49,12 @@ namespace DataProcessor
         }
 
 
-        public static Dictionary<string, DOIElement> LoadSmallCache(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, HashSet<string> dataCiteDOIPrefixSet)
+
+        public static async Task UpdateSmallCache(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, DataCiteSmallCache dataCiteSmallCache, string mailAddress)
         {
-            var logFilePath = dataFolderPath + "/auto_generated/log/load_small_cache.log";
-            var logFile = new StreamWriter(logFilePath, true);
-            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
+            CommonFunctions.OutputSystemMessageFunction("Updating SmallCache(DataCite) [START]");
+            CommonFunctions.IncrementParagraphCounter();
 
-            var dataCiteDic = DataProcessor.DataCiteLocalCache.Load(dataFolderPath);
-            var dataCiteExternalDic = DataProcessor.DataCiteExternalFoundDOICache.Load(dataFolderPath);
-
-            var mergedDic = new Dictionary<string, DOIElement>();
-
-            doiCacheInfoDict.Values.ToList().ForEach((v) =>
-            {
-                if (v.SourceCite == "DataCite")
-                {
-                    if (dataCiteDic.ContainsKey(v.DOI))
-                    {
-                        var doiElement = DataCiteParser.Parse(dataCiteDic[v.DOI]);
-                        mergedDic[v.DOI] = doiElement;
-                    }
-                    else if (dataCiteExternalDic.ContainsKey(v.DOI))
-                    {
-                        var doiElement = DataCiteParser.Parse(dataCiteExternalDic[v.DOI]);
-                        mergedDic[v.DOI] = doiElement;
-                    }
-                    else
-                    {
-                        var doiElement = new DOIElement() { DOI = v.DOI, Source = "CrossRef", IsPrimary = v.DOIRank == 0 };
-                        mergedDic[v.DOI] = doiElement;
-                    }
-                }
-            });
-
-            mergedDic.ToList().ForEach((v) =>
-            {
-                v.Value.UpdateContainerDOI(doiCacheInfoDict[v.Key]);
-            });
-
-
-            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
-            logFile.Close();
-            return mergedDic;
-
-        }
-
-        public static async Task UpdateSmallCache(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, string mailAddress)
-        {
-            Console.WriteLine("Building DataCiteSmallCache [START]");
 
             var dataCiteFolderInfo = DataCiteJSONLLoader.SearchDataCiteFolder(dataFolderPath + "/external");
             var dataCiteOtherCSVPath = DataCiteDOIToGZFileCache.GetOthersFilePath(dataFolderPath);
@@ -109,14 +67,15 @@ namespace DataProcessor
 
             // Build Found DOI Cache
 
-            DataCiteLocalCache.Update(doiCacheInfoDict, dataFolderPath, dataCiteFolderInfo.FullName);
-            DataCiteLocalCache.UpdateDOICache(doiCacheInfoDict, dataFolderPath);
-            await DataCiteExternalFoundDOICache.Build(dataFolderPath, doiCacheInfoDict, mailAddress);
+            DataCiteLocalCache.Update(doiCacheInfoDict, dataCiteSmallCache, dataFolderPath, dataCiteFolderInfo.FullName);
+            DataCiteLocalCache.UpdateDOICache(doiCacheInfoDict, dataCiteSmallCache);
+            await DataCiteExternalFoundDOICache.Build(dataFolderPath, doiCacheInfoDict, dataCiteSmallCache, mailAddress);
 
-            DataCiteExternalFoundDOICache.UpdateDOICache(doiCacheInfoDict, dataFolderPath);
+            DataCiteExternalFoundDOICache.UpdateDOICache(doiCacheInfoDict, dataCiteSmallCache);
 
 
-            Console.WriteLine("DataCiteSmallCache [END]");
+            CommonFunctions.DecrementParagraphCounter();
+            CommonFunctions.OutputSystemMessageFunction("Updating SmallCache(DataCite) [END]");
 
         }
 

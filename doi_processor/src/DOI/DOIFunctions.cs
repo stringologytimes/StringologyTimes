@@ -15,6 +15,14 @@ namespace DataProcessor
             }
 
         }
+        public static bool IsValidDOI(string doi)
+        {
+            bool b1 = doi.Contains(" ");
+            bool b2 = doi.Contains("\t");
+            bool b3 = doi.Contains("\n");
+            bool b4 = doi.Contains("\r");
+            return !b1 && !b2 && !b3 && !b4;
+        }
 
         public static Dictionary<string, string> BuildMapperDOIToJSONL(string dicPath)
         {
@@ -25,7 +33,7 @@ namespace DataProcessor
             {
                 var jsonLString = File.ReadAllText(dicPath);
                 var dicts = JsonLib.ProcessJSONL(jsonLString, true);
-                Console.WriteLine("\t\t Loading Found JSONL Map: " + dicts.Count + " / " + jsonLString.Length);
+                CommonFunctions.OutputSystemMessageFunction("Loading Map: " + dicPath, ConsoleColor.Gray);
                 foreach (var dict in dicts)
                 {
                     var b = dict.ContainsKey("DOI");
@@ -39,6 +47,12 @@ namespace DataProcessor
                 }
             }
             return foundJSONLMap;
+        }
+
+        public static string CreateDummyDOI(string type, string title)
+        {
+            title = title.Replace(" ", "_");
+            return "dummy/" + type + "/" + title.ToLower();
         }
 
     }

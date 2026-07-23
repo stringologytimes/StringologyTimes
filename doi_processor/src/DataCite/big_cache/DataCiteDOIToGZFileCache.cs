@@ -81,8 +81,15 @@ namespace DataProcessor
                 MaxDegreeOfParallelism = 8 // 最大並列度を4に制限
             };
 
-            System.Threading.Tasks.Parallel.For(0, csvFiles.Length, options, i =>
+            System.Threading.Tasks.Parallel.For(0, csvFiles.Length, options, i =>            
+            //for(uint i = 0; i < csvFiles.Length; i++)
             {
+                if(i >= csvFiles.Length)
+                {
+                    Console.WriteLine("i >= csvFiles.Length: " + i + " / " + csvFiles.Length);
+                    throw new Exception("i >= csvFiles.Length");
+                    
+                }
                 var csvFilePath = csvFiles[i];
                 FileInfo fi = new FileInfo(csvFilePath);
                 lock (lockObj)
@@ -92,6 +99,10 @@ namespace DataProcessor
                 }
                 var csvFileName = System.IO.Path.GetFileNameWithoutExtension(fi.Name);
                 var splits = csvFileName.Split("_");
+                if(splits.Length < 4)
+                {
+                    throw new Exception("splits.Length < 4: " + csvFileName);                    
+                }
                 var directoryName = splits[0] + "_" + splits[1];
                 var gzFileName = splits[2] + "_" + splits[3];
 
@@ -102,6 +113,11 @@ namespace DataProcessor
                     foreach (var doi_and_type_line in doi_and_types)
                     {
                         var cols = doi_and_type_line.Split("\t");
+                        if(cols.Length < 2)
+                        {
+                            Console.WriteLine("Error filepath: " + fi.FullName);
+                            throw new Exception("cols.Length < 2: " + doi_and_type_line);
+                        }
                         var doi = cols[0];
                         var type = cols[1];
 
@@ -143,7 +159,8 @@ namespace DataProcessor
 
                 }
 
-            });
+            }
+            );
 
 
             using (var sw = new StreamWriter(GetOthersFilePath(dataFolderPath), false, Encoding.UTF8))

@@ -6,7 +6,7 @@ namespace DataProcessor
 
         public static Dictionary<string, string> Load(string foundJSONLMapFilePath)
         {
-            Console.WriteLine("Loading from " + foundJSONLMapFilePath);
+            CommonFunctions.OutputSystemMessageFunction("Loading from " + foundJSONLMapFilePath, ConsoleColor.Gray);
             Dictionary<string, string> foundJSONLMap = new Dictionary<string, string>();
             var foundJSONLMapFileInfo = new FileInfo(foundJSONLMapFilePath);
             if (foundJSONLMapFileInfo.Exists)

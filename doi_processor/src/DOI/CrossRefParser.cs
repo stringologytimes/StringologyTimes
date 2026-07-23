@@ -141,9 +141,9 @@ namespace DataProcessor
             {
                 var journalIssueDict = JsonSerializer.Deserialize<Dictionary<string, object>>(dict["journal-issue"]);
                 if (journalIssueDict != null && journalIssueDict.ContainsKey("issue"))
-                {                    
+                {
                     var issue = journalIssueDict["issue"] as string;
-                    if(issue != null && issue.Length > 0)
+                    if (issue != null && issue.Length > 0)
                     {
                         element.Issue = issue;
                     }
@@ -152,7 +152,7 @@ namespace DataProcessor
                         element.Issue = "";
                     }
                 }
-                
+
             }
             else
             {
@@ -265,12 +265,34 @@ namespace DataProcessor
                             var doi = referenceListLine["DOI"] as System.Text.Json.JsonElement?;
                             if (doi != null && doi.Value.ValueKind == JsonValueKind.String)
                             {
-                                element.DOIReferences.Add(doi.Value.GetString()!.ToLower());
+                                var doiString = doi.Value.GetString()!.ToLower();
+                                if (DOIFunctions.IsValidDOI(doiString))
+                                {
+                                    element.DOIReferences.Add(doiString);
+                                }
+                                /*
+                                else
+                                {
+                                    Console.WriteLine("Invalid DOI in reference: " + doiString);
+                                }
+                                */
                             }
 
                         }
                     }
                 });
+            }
+
+            if (dict.ContainsKey("aliases"))
+            {
+                var aliasesList = JsonSerializer.Deserialize<List<string>>(dict["aliases"]);
+                if (aliasesList != null && aliasesList.Count > 0)
+                {
+                    aliasesList.ForEach((v) =>
+                    {
+                        element.DOIAliasList.Add(v.ToLower());
+                    });
+                }
             }
 
             /*
@@ -309,7 +331,6 @@ namespace DataProcessor
         public static DOIElementX? LightweightParseFromJSONL(string jsonl)
         {
             var dict = JsonLib.CreateDictionaryFromJSONL(jsonl);
-            Console.WriteLine(dict.ContainsKey("DOI"));
 
             if (dict.ContainsKey("DOI"))
             {
@@ -359,6 +380,20 @@ namespace DataProcessor
                         });
                     }
                 }
+
+
+                if (dict.ContainsKey("aliases"))
+                {
+                    var aliasesList = JsonSerializer.Deserialize<List<string>>(dict["aliases"]);
+                    if (aliasesList != null && aliasesList.Count > 0)
+                    {
+                        aliasesList.ForEach((v) =>
+                        {
+                            element.ISList.Add("DOI_ALIAS:" + v.ToLower());
+                        });
+                    }
+                }
+
                 return element;
             }
             else

@@ -131,10 +131,12 @@ namespace DataProcessor
             {
                 var compStr = String.Join(",", v.Authors.Select((v) => fullNameToIndexMapper[v.TryGetFullName()].ToString()));
                 r.CompressedFullNameList.Add(compStr);
-                r.SeriesTitleList.Add(v.SeriesTitle);
+                r.SeriesTitleList.Add("");
+                
+                //r.SeriesTitleList.Add(v.SeriesTitle);
                 //r.SeriesTitleList.Add((tmp_counter++).ToString());
                 r.ContainerDOIList.Add(v.ContainerDOI);
-                r.ContainerTitleList.Add(v.ContainerTitle);
+                r.ContainerTitleList.Add(v.ContainerTitle.Replace("\n", ""));
 
                 var tmp_optionalIDList = new List<string>();
                 v.ISBNList.ForEach((v) => {

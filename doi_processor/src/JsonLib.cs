@@ -177,6 +177,14 @@ namespace DataProcessor
         public static Dictionary<string, string> LoadJSONLAsDictionary(string jsonlFilePath, string keyName)
         {
             var dict = new Dictionary<string, string>();
+            var jsonlFileInfo = new FileInfo(jsonlFilePath);
+            if (!jsonlFileInfo.Exists)
+            {
+                Console.WriteLine("File not found: " + jsonlFilePath);
+                return dict;
+            }
+
+
             var jsonlString = File.ReadAllText(jsonlFilePath);
             var lines = jsonlString.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
 

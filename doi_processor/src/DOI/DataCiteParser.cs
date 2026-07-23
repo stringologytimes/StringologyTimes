@@ -345,7 +345,7 @@ namespace DataProcessor
 
             if (currentDatePriority == 0)
             {
-                Console.WriteLine($"Warning ({element.DOI}): Year is not found");
+                CommonFunctions.OutputSystemMessageFunction($"Warning ({element.DOI}): Year is not found", ConsoleColor.Yellow);
                 element.Year = "-1";
                 element.Month = "-1";
             }

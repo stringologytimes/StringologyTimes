@@ -16,9 +16,12 @@ namespace DataProcessor
         public string SourceCite { get; set; } = "";
         public string SourceStatus { get; set; } = "";
         public string ModifiedTitle { get; set; } = "";
+        public string ModifiedType { get; set; } = "";
 
         public string CacheCreatedDate { get; set; } = "";
         public string ProperContainerDOI { get; set; } = "";
+        public string ProperContainerDOIType { get; set; } = "";
+
         public List<string> ISList { get; set; } = new List<string>();
         public int DOIRank { get; set; } = 3;
 
@@ -67,6 +70,31 @@ namespace DataProcessor
             }
         }
 
+        public static bool TitleParentCheck(DOIElement child, DOIElement parent)
+        {
+            if(child.DOI == parent.DOI)
+            {
+                return false;
+            }
+            if(child.Type == parent.Type)
+            {
+                return false;
+            }
+            if(child.Year != parent.Year)
+            {
+                return false;
+            }
+
+            var childDOIPrefix = DOIElement.GetDOIPrefix(child.DOI);
+            var parentDOIPrefix = DOIElement.GetDOIPrefix(parent.DOI);
+            if(childDOIPrefix != parentDOIPrefix)
+            {
+                return false;
+            }
+            return true;
+            
+        }
+
         public void UpdateContainerDOI(Dictionary<string, DOIElement> doiElementDict, Dictionary<string, string> isbnDictionary, Dictionary<string, string> issnDictionary, Dictionary<string, List<string>> titleDictionary, StreamWriter logFile)
         {
             var doiElement = doiElementDict[this.DOI];
@@ -75,6 +103,7 @@ namespace DataProcessor
                 if (doiElement.ContainerDOI.Length > 0 && this.DOI != doiElement.ContainerDOI)
                 {
                     this.ProperContainerDOI = doiElement.ContainerDOI;
+                    this.ProperContainerDOIType = doiElement.ContainerType;
                 }
             }
 
@@ -87,6 +116,7 @@ namespace DataProcessor
                     if (isbnDictionary.ContainsKey(ISBN) && ISBN.Length > 0 && this.DOI != isbnDictionary[ISBN])
                     {
                         this.ProperContainerDOI = isbnDictionary[ISBN];
+                        this.ProperContainerDOIType = "ISBN";
                         break;
                     }
                 }
@@ -96,11 +126,35 @@ namespace DataProcessor
             if (this.ProperContainerDOI.Length == 0 && title.Length > 0 && titleDictionary.ContainsKey(title))
             {
                 var containerDOICandidateList = titleDictionary[title];
+                var candidateList = new List<string>();
+                foreach (var containerDOI in containerDOICandidateList)
+                {
+                    if (doiElementDict.ContainsKey(containerDOI) && TitleParentCheck(doiElement, doiElementDict[containerDOI]))
+                    {
+                        candidateList.Add(containerDOI);
+                    }
+                }
+
+                if (candidateList.Count == 1)
+                {
+                    this.ProperContainerDOI = candidateList[0];
+                    this.ProperContainerDOIType = "Title";
+                }
+                else if (candidateList.Count > 1)
+                {
+                    Console.WriteLine("Multiple container DOI candidates found for title: " + title);
+                    throw new Exception("Multiple container DOI candidates found for title: " + title);
+                }
+
+
+               /*
+
                 if (containerDOICandidateList.Count == 1)
                 {
                     if (containerDOICandidateList[0] != this.DOI)
                     {
                         this.ProperContainerDOI = containerDOICandidateList[0];
+                        this.ProperContainerDOIType = "Title";
                     }
                 }
                 else if (containerDOICandidateList.Count > 1)
@@ -125,6 +179,7 @@ namespace DataProcessor
                     if (candidateList.Count == 1)
                     {
                         this.ProperContainerDOI = candidateList[0];
+                        this.ProperContainerDOIType = "Title";
                     }
                     else if (candidateList.Count > 1)
                     {
@@ -139,22 +194,9 @@ namespace DataProcessor
                 {
                     throw new Exception("Multiple container DOI candidates found for title: " + title);
                 }
+                */
             }
 
-
-
-            /*
-            if (this.ContainerDOI.Length == 0 && doiElement.ContainerTitle.Length > 0)
-            {
-                if (titleDictionary.ContainsKey(doiElement.ContainerTitle) && this.DOI != titleDictionary[doiElement.ContainerTitle])
-                {
-                    this.ContainerDOI = titleDictionary[doiElement.ContainerTitle];
-                    logFile.WriteLine("Matched Container Title: " + this.DOI + " -> " + this.ContainerDOI);
-                }
-            }
-            */
-
-            //if(doiElement.ISBNList)
         }
 
         public void UpdateSourceCite(HashSet<string> crossRefDOIPrefixSet, HashSet<string> dataCiteDOIPrefixSet)
@@ -194,6 +236,10 @@ namespace DataProcessor
             var dataCiteFoundDOI = DataCiteLocalCache.Load(dataFolderPath);
             var dataCiteFoundExternalDOI = DataCiteExternalFoundDOICache.Load(dataFolderPath);
 
+            var dummyDOIElementDict = DOIElement.Load(DummyCacheManager.GetDummyCacheFilePath(dataFolderPath), false);
+
+            var doiAliasMapper = DOIElementPreprocessor.LoadDOIAliasListMapper(dataFolderPath);
+
             Console.WriteLine("CrossRef Found DOI: " + crossRefFoundDOI.Count);
             Console.WriteLine("CrossRef Found External DOI: " + crossRefFoundExternalDOI.Count);
             Console.WriteLine("DataCite Found DOI: " + dataCiteFoundDOI.Count);
@@ -224,9 +270,9 @@ namespace DataProcessor
                     doiElement = DataCiteParser.Parse(dataCiteFoundExternalDOI[v.Key]);
                     b = true;
                 }
-                else if(v.Value.SourceCite == "DUMMY")
+                else if (v.Value.SourceCite == "DUMMY")
                 {
-                    doiElement = new DOIElement() { DOI = v.Key, Title = v.Value.ModifiedTitle, Type = "DummyProceedings", Year = "3000", ContainerTitle = v.Value.ProperContainerDOI };
+                    doiElement = dummyDOIElementDict[v.Key];
                     b = true;
                 }
 
@@ -235,39 +281,38 @@ namespace DataProcessor
                 {
                     doiElementDict[v.Key] = doiElement;
                     doiElement.IsPrimary = v.Value.DOIRank == 0;
-                    doiElement.ContainerDOI = v.Value.ProperContainerDOI;
-                    if(v.Value.ModifiedTitle.Length > 0)
+
+                    if (v.Value.ProperContainerDOI.Length > 0)
+                    {
+                        doiElement.ContainerDOI = v.Value.ProperContainerDOI;
+                        doiElement.ContainerType = v.Value.ProperContainerDOIType;
+                    }
+                    if (v.Value.ModifiedTitle.Length > 0)
                     {
                         doiElement.Title = v.Value.ModifiedTitle;
+                    }
+                    if (v.Value.ModifiedType.Length > 0)
+                    {
+                        doiElement.Type = v.Value.ModifiedType;
+                    }
+
+                    for (int i = 0; i < doiElement.DOIReferences.Count; i++)
+                    {
+                        var doiReference = doiElement.DOIReferences[i];
+                        if (doiAliasMapper.ContainsKey(doiReference))
+                        {
+                            doiElement.DOIReferences[i] = doiAliasMapper[doiReference];
+                        }
+                    }
+
+                    if (!doiElement.IsPrimary)
+                    {
+                        doiElement.DOIReferences.Clear();
                     }
                 }
 
             });
 
-            /*
-            var logFilePath = dataFolderPath + "/auto_generated/log/build_doi_element_dictionary.log";
-            var logFile = new StreamWriter(logFilePath, true);
-            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
-
-
-            var doiElementDict = new Dictionary<string, DOIElement>();
-            var doiElementCachePath = DOIElementPreprocessor.GetCachePath(dataFolderPath);
-            var doiElementCache = DOIElement.Load(doiElementCachePath, false);
-            doiCacheInfoDict.ToList().ForEach((v) =>
-            {
-                if (doiElementCache.ContainsKey(v))
-                {
-                    doiElementDict[v] = doiElementCache[v];
-                }
-                else
-                {
-                    logFile.WriteLine("DOI not found in cache: " + v);
-                }
-            });
-
-            logFile.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : End");
-            logFile.Close();
-            */
             return doiElementDict;
         }
 

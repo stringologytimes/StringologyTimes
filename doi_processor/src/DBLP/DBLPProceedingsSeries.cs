@@ -9,260 +9,14 @@ using System.Text.RegularExpressions;
 
 namespace DataProcessor
 {
-    class DBLPProceedings
-    {
-        public string DOI { get; set; } = "";
-        public string key { get; set; } = "";
-        public string BookTitle { get; set; } = "";
-        public string Title { get; set; } = "";
-        public int? Year { get; set; } = null;
-        public int? Month { get; set; } = null;
-        public string Volume { get; set; } = "";
-
-        public List<string> DOIList { get; set; } = new List<string>();
-
-        public string ToJSONLine()
-        {
-            List<object> dataList = new List<object>();
-            dataList.Add(JsonSerializer.Serialize(this.DOI));
-            dataList.Add(JsonSerializer.Serialize(this.key));
-            dataList.Add(JsonSerializer.Serialize(this.BookTitle));
-            dataList.Add(JsonSerializer.Serialize(this.Title));
-            dataList.Add(JsonSerializer.Serialize(this.Year?.ToString() ?? ""));
-            dataList.Add(JsonSerializer.Serialize(this.Month?.ToString() ?? ""));
-            dataList.Add(JsonSerializer.Serialize(this.Volume));
-
-            if (this.DOI.Length > 0)
-            {
-                dataList.Add(JsonSerializer.Serialize(new List<string>()));
-
-            }
-            else
-            {
-                dataList.Add(JsonSerializer.Serialize(this.DOIList));
-            }
-
-
-            string dataString = "[" + string.Join(",", dataList) + "]";
-            return dataString;
-
-        }
-        public static DBLPProceedings BuildFromJSONLine(string jsonLine)
-        {
-            var dblpProceedings = new DBLPProceedings();
-            var dataList = JsonSerializer.Deserialize<List<object>>(jsonLine);
-            if (dataList == null)
-            {
-                throw new Exception("DataList is null");
-            }
-
-
-            dblpProceedings.DOI = dataList[0].ToString() ?? "";
-            dblpProceedings.key = dataList[1].ToString() ?? "";
-
-            if (dblpProceedings.key == "")
-            {
-                Console.WriteLine(dataList[1].ToString());
-                throw new Exception("key is not found");
-            }
-            dblpProceedings.BookTitle = dataList[2].ToString() ?? "";
-            dblpProceedings.Title = dataList[3].ToString() ?? "";
-            var yearStr = dataList[4].ToString() ?? "";
-            if (yearStr != "")
-            {
-                dblpProceedings.Year = int.Parse(yearStr);
-            }
-            else
-            {
-                dblpProceedings.Year = null;
-            }
-            var monthStr = dataList[5].ToString() ?? "";
-            if (monthStr != "")
-            {
-                dblpProceedings.Month = int.Parse(monthStr);
-            }
-            else
-            {
-                dblpProceedings.Month = null;
-            }
-
-            dblpProceedings.Volume = dataList[6].ToString() ?? "";
-            var doiListString = ((System.Text.Json.JsonElement)dataList[7]).Deserialize<List<string>>();
-            if (doiListString != null && doiListString.Count > 0)
-            {
-                foreach (var doi in doiListString)
-                {
-                    dblpProceedings.DOIList.Add(doi);
-                }
-            }
-            return dblpProceedings;
-        }
-
-        public static DBLPProceedings BuildFromXML(XElement x)
-        {
-            var dblpProceedings = new DBLPProceedings();
-
-
-
-            var paperType = x.Name.ToString();
-            if (paperType != "proceedings")
-            {
-                throw new Exception("Proceedings is not found");
-            }
-            dblpProceedings.key = x.Attribute("key")?.Value ?? "";
-            if (dblpProceedings.key == "")
-            {
-                Console.WriteLine(x.ToString());
-                throw new Exception("key is not found");
-            }
-
-
-            dblpProceedings.BookTitle = x.Element("booktitle")?.Value ?? "";
-
-            var title = x.Element("title");
-            if (title != null)
-            {
-                dblpProceedings.Title = title.Value;
-            }
-            var year = x.Element("year");
-            if (year != null)
-            {
-                dblpProceedings.Year = int.Parse(year.Value);
-            }
-
-            var ee = x.Element("ee");
-            if (ee != null)
-            {
-                var eeURL = ee.FirstNode?.ToString() ?? "";
-                var doi = DBLPElement.getDOI(eeURL);
-                if (doi != null)
-                {
-                    dblpProceedings.DOI = doi.ToLower();
-                }
-            }
-            var volume = x.Element("volume");
-            if (volume != null)
-            {
-                dblpProceedings.Volume = volume.Value;
-            }
-
-
-
-
-
-            return dblpProceedings;
-        }
-
-        public static string GetCommonPrefixDOI(string doi1, string doi2)
-        {
-            int minLength = Math.Min(doi1.Length, doi2.Length);
-            int i = 0;
-            while (i < minLength && doi1[i] == doi2[i])
-            {
-                i++;
-            }
-            return doi1.Substring(0, i);
-        }
-
-        public string ComputeFullName()
-        {
-            throw new Exception("Not implemented");
-        }
-
-
-        public int GetTitleType()
-        {
-            var tangos = this.Title.Split(", ");
-
-            if (tangos.Length > 2)
-            {
-                var secondTango = tangos[1];
-                if (Regex.IsMatch(secondTango, @"^[A-Z]+ \d{4}$"))
-                {
-                    return 4;
-                }
-            }
-
-            if (Regex.IsMatch(this.Title, @"^Proceedings of the \d+(st|nd|rd|th)"))
-            {
-                return 1;
-            }
-            else if (Regex.IsMatch(this.Title, @"^Proceedings of the \d{4} "))
-            {
-                return 2;
-            }
-            else if (Regex.IsMatch(this.Title, @"^Proceedings \d{4} "))
-            {
-                return 2;
-            }
-            else if (Regex.IsMatch(this.Title, @"^Proceedings of (the|The) (First|Second|Third|Fourth|Fifth|Sixth|Seventh|Eighth|Ninth|Tenth|Eleventh|Twelfth|Thirteenth|Fourteenth|Fifteenth|Sixteenth|Seventeenth|Eighteenth|Nineteenth|Twentieth) "))
-            {
-                return 3;
-            }
-            else if (Regex.IsMatch(this.Title, @"^Proceedings of the Workshop on "))
-            {
-                return 3;
-            }
-            else if (Regex.IsMatch(this.Title, @"^Proceedings of the ACM/IEEE "))
-            {
-                return 3;
-            }
-            else if (Regex.IsMatch(this.Title, @"^Proceedings of the "))
-            {
-                return 3;
-            }
-            else if (Regex.IsMatch(this.Title, @", Proceedings of the "))
-            {
-                return 3;
-            }
-            else if (Regex.IsMatch(this.Title, @", Proceedings (from|From) "))
-            {
-                return 3;
-            }
-            else if (Regex.IsMatch(this.Title, @"^International Symposium on "))
-            {
-                return 3;
-            }
-            else if (Regex.IsMatch(this.Title, @"International Workshop"))
-            {
-                return 3;
-            }
-            else if (Regex.IsMatch(this.Title, @"^\d+(st|nd|rd|th) "))
-            {
-                return 4;
-            }
-            else if (Regex.IsMatch(this.Title, @"^\d{4} "))
-            {
-                return 4;
-            }
-            else if (Regex.IsMatch(this.Title, @"^[A-Z]+ \d{4}(\s|,|:)"))
-            {
-                return 4;
-            }
-            else if (Regex.IsMatch(this.Title, @"^[A-Z]+ '\d{2}(\s|,|:)"))
-            {
-                return 6;
-            }
-            else if (Regex.IsMatch(this.Title, @"^[A-Z]+'\d{2}(\s|,|:)"))
-            {
-                return 6;
-            }
-            else if (Regex.IsMatch(this.Title, @"^[A-Z]+ \d{2}(\s|,|:)"))
-            {
-                return 7;
-            }
-            return 0;
-
-        }
-
-
-    }
 
 
     class DBLPProceedingsSeries
     {
         public string SeriesTitle { get; set; } = "";
         public Dictionary<string, DBLPProceedings> Series { get; set; } = new Dictionary<string, DBLPProceedings>();
+
+        public Dictionary<string, string> ProceedingsDOIToKeyMapper { get; set; } = new Dictionary<string, string>();
 
         public bool ContainsKey(string key)
         {
@@ -279,24 +33,6 @@ namespace DataProcessor
                 throw new Exception("Key is not found: " + key);
             }
         }
-
-        /*
-                public bool MatchDOIPrefix(string doi)
-                {
-                    foreach (var element in this.Series)
-                    {
-                        if (element.Value.CommonPrefixDOI.Length > 0)
-                        {
-                            if (element.Value.DOI.StartsWith(doi))
-                            {
-                                return true;
-                            }
-                        }
-                    }
-                    return false;
-                }
-                */
-
 
         public List<string> ToJSONLines()
         {
@@ -315,6 +51,10 @@ namespace DataProcessor
                 throw new Exception("Key is already exists: " + proceedings.key);
             }
             this.Series.Add(proceedings.key, proceedings);
+            if(proceedings.DOI.Length > 0)
+            {
+                this.ProceedingsDOIToKeyMapper.Add(proceedings.DOI, proceedings.key);
+            }
         }
         public string ComputeFullName()
         {
@@ -326,233 +66,24 @@ namespace DataProcessor
             return false;
         }
 
-    }
-
-    class DBLPProceedingsSeriesDictionary
-    {
-        public Dictionary<string, DBLPProceedingsSeries> Series { get; set; } = new Dictionary<string, DBLPProceedingsSeries>();
-        public Dictionary<string, string> KeyDictionary { get; set; } = new Dictionary<string, string>();
-        //public Dictionary<string, string> DoiToSeriesTitleMapper { get; set; } = new Dictionary<string, string>();
-        public Dictionary<string, KeyValuePair<string, string>> DoiToSeriesTitleAndKeyMapper { get; set; } = new Dictionary<string, KeyValuePair<string, string>>();
-
-
-
-        //public PrefixSet PrefixSet { get; set; } = new PrefixSet();
-
-
-        public void Add(DBLPProceedings proceedings)
+        public KeyValuePair<int, int> GetMinimumYearAndMonth()
         {
-            var bookTitle = proceedings.BookTitle;
-            if (this.Series.ContainsKey(bookTitle))
+            int minimum_year = 9999;
+            int minimum_month = 12;
+            foreach (var proceedings in this.Series.Values)
             {
-                this.Series[bookTitle].Add(proceedings);
-            }
-            else
-            {
-                this.Series[bookTitle] = new DBLPProceedingsSeries();
-                this.Series[bookTitle].SeriesTitle = bookTitle;
-                this.Series[bookTitle].Add(proceedings);
-            }
-
-            this.KeyDictionary.Add(proceedings.key, bookTitle);
-        }
-        public void BuildDoiToSeriesTitleAndKeyMapper()
-        {
-            foreach (var element in this.Series)
-            {
-                if (element.Value.SeriesTitle.Length > 0)
+                if (proceedings.Year < minimum_year)
                 {
-                    foreach (var proceedings in element.Value.Series)
-                    {
-                        if (proceedings.Value.DOI.Length > 0)
-                        {
-                            if (!this.DoiToSeriesTitleAndKeyMapper.ContainsKey(proceedings.Value.DOI))
-                            {
-                                this.DoiToSeriesTitleAndKeyMapper.Add(proceedings.Value.DOI, new KeyValuePair<string, string>(element.Value.SeriesTitle, proceedings.Value.key));
-                            }
-                            else
-                            {
-                                Console.WriteLine("Conflict DOI: " + proceedings.Value.DOI + " -> " + element.Value.SeriesTitle + " vs " + this.DoiToSeriesTitleAndKeyMapper[proceedings.Value.DOI].Key);
-                            }
-                        }
-                        foreach (var doi in proceedings.Value.DOIList)
-                        {
-                            if (doi.Length > 0)
-                            {
-                                if (!this.DoiToSeriesTitleAndKeyMapper.ContainsKey(doi))
-                                {
-                                    this.DoiToSeriesTitleAndKeyMapper.Add(doi, new KeyValuePair<string, string>(element.Value.SeriesTitle, proceedings.Value.key));
-
-                                }
-                                else
-                                {
-                                    if (this.DoiToSeriesTitleAndKeyMapper[doi].Key != element.Value.SeriesTitle)
-                                    {
-                                        Console.WriteLine("DOI: " + doi);
-                                        Console.WriteLine("BookTitle: " + element.Value.SeriesTitle);
-                                        Console.WriteLine("--------------------------------");
-                                        throw new Exception("DOI is not unique");
-                                    }
-                                }
-                            }
-                        }
-                    }
-
+                    minimum_year = proceedings.Year ?? 0;
+                    minimum_month = proceedings.Month ?? 0;
                 }
             }
-            
-        }
-        /*
-
-        public void BuildDoiToSeriesTitleMapper()
-        {
-            foreach (var element in this.Series)
-            {
-                if (element.Value.SeriesTitle.Length > 0)
-                {
-                    foreach (var proceedings in element.Value.Series)
-                    {
-                        if (proceedings.Value.DOI.Length > 0)
-                        {
-                            if (!this.DoiToSeriesTitleMapper.ContainsKey(proceedings.Value.DOI))
-                            {
-                                this.DoiToSeriesTitleMapper.Add(proceedings.Value.DOI, element.Value.SeriesTitle);
-                            }
-                            else
-                            {
-                                Console.WriteLine("Conflict DOI: " + proceedings.Value.DOI + " -> " + element.Value.SeriesTitle + " vs " + this.DoiToSeriesTitleMapper[proceedings.Value.DOI]);
-                            }
-                        }
-                        foreach (var doi in proceedings.Value.DOIList)
-                        {
-                            if (doi.Length > 0)
-                            {
-                                if (!this.DoiToSeriesTitleMapper.ContainsKey(doi))
-                                {
-                                    this.DoiToSeriesTitleMapper.Add(doi, element.Value.SeriesTitle);
-
-                                }
-                                else
-                                {
-                                    if (this.DoiToSeriesTitleMapper[doi] != element.Value.SeriesTitle)
-                                    {
-                                        Console.WriteLine("DOI: " + doi);
-                                        Console.WriteLine("BookTitle: " + element.Value.SeriesTitle);
-                                        Console.WriteLine("--------------------------------");
-                                        throw new Exception("DOI is not unique");
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                }
-            }
-        }
-        */
-        public KeyValuePair<string, string>? SearchSeriesTitleAndKeyByDOI(string doi)
-        {
-            if (this.DoiToSeriesTitleAndKeyMapper.ContainsKey(doi))
-            {
-                return this.DoiToSeriesTitleAndKeyMapper[doi];
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-
-        public bool ContainsBookTitle(string bookTitle)
-        {
-            return this.Series.ContainsKey(bookTitle);
-        }
-        public bool ContainsKey(string key)
-        {
-            return this.KeyDictionary.ContainsKey(key);
-        }
-
-        public DBLPProceedings GetProceedings(string key)
-        {
-            if (this.ContainsKey(key))
-            {
-                var bookTitle = this.KeyDictionary[key];
-                return this.Series[bookTitle].GetProceedings(key);
-            }
-            else
-            {
-                throw new Exception("Key is not found: " + key);
-            }
-        }
-        public void Save(string outputFilePath)
-        {
-            using (var writer = new StreamWriter(outputFilePath, false, Encoding.UTF8))
-            {
-                foreach (var element in this.Series.Values)
-                {
-                    var jsonLines = element.ToJSONLines();
-                    foreach (var jsonLine in jsonLines)
-                    {
-                        writer.WriteLine(jsonLine);
-                    }
-                }
-            }
-        }
-
-        public static DBLPProceedingsSeriesDictionary Load(string inputFilePath)
-        {
-            var proceedingsSeriesDictionary = new DBLPProceedingsSeriesDictionary();
-            using (var reader = new StreamReader(inputFilePath, Encoding.UTF8))
-            {
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    if (line == null)
-                    {
-                        continue;
-                    }
-                    var proceedings = DBLPProceedings.BuildFromJSONLine(line);
-                    proceedingsSeriesDictionary.Add(proceedings);
-                }
-            }
-            return proceedingsSeriesDictionary;
+            return new KeyValuePair<int, int>(minimum_year, minimum_month);
         }
 
     }
 
-    class DBLPProceedingsSeriesSummary
-    {
-        public string BookTitle { get; set; } = "";
-        public string FullName { get; set; } = "";
-        public int Count { get; set; } = 0;
 
-        public List<string> DOIPrefixList { get; set; } = new List<string>();
-
-        public static DBLPProceedingsSeriesSummary Build(DBLPProceedingsSeries series)
-        {
-            var summary = new DBLPProceedingsSeriesSummary();
-            summary.BookTitle = series.SeriesTitle;
-            summary.FullName = series.ComputeFullName();
-            summary.Count = series.Series.Count;
-            return summary;
-        }
-
-        public string ToJSONLine()
-        {
-            return JsonSerializer.Serialize(this);
-        }
-
-        public static void Save(List<DBLPProceedingsSeriesSummary> summaryList, string outputFilePath)
-        {
-            using (var writer = new StreamWriter(outputFilePath, false, Encoding.UTF8))
-            {
-                foreach (var element in summaryList)
-                {
-                    writer.WriteLine(element.ToJSONLine());
-                }
-            }
-        }
-    }
 
 }
 

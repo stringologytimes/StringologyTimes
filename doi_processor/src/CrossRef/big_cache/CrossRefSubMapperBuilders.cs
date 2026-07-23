@@ -44,7 +44,7 @@ namespace DataProcessor
                 default:
                     return false;
             }
-            
+
         }
 
         public static string GetTypeListFilePath(string dataFolderPath)
@@ -112,12 +112,23 @@ namespace DataProcessor
                                                     }
                                                 }
                                             }
+                                            else if (keyName == "Alias")
+                                            {
+                                                foreach (var alias in element.ISList)
+                                                {
+                                                    if (alias.StartsWith("DOI_ALIAS:"))
+                                                    {
+                                                        var aliasStr = alias.Substring("DOI_ALIAS:".Length);
+                                                        pairs.Add(new Tuple<string, string, string>(aliasStr, element.DOI, element.Type));
+                                                    }
+                                                }
+                                            }
                                             else if (keyName == "Title")
                                             {
 
                                                 if (element.Title.Length > 0)
                                                 {
-                                                    
+
                                                     pairs.Add(new Tuple<string, string, string>(element.Title, element.DOI, element.Type));
                                                 }
                                             }
@@ -179,6 +190,13 @@ namespace DataProcessor
         {
             BuildMapperByProcessingDatasetTemplate(dataFolderPath, "Title", CrossRefDOIToGZFileCache.GetTitleFilePath(dataFolderPath));
         }
+
+        public static void BuildAliasMapper(string dataFolderPath)
+        {
+            BuildMapperByProcessingDatasetTemplate(dataFolderPath, "Alias", CrossRefDOIToGZFileCache.GetAliasFilePath(dataFolderPath));
+        }
+
+
 
 
         public static void BuildTypeListFile(string dataFolderPath)
@@ -249,5 +267,7 @@ namespace DataProcessor
             }
             CSVFunctions.WriteCSV(typeListFilePath, typeHashSet.ToList());
         }
+
+
     }
 }

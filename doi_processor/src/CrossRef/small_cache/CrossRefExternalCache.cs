@@ -41,13 +41,15 @@ namespace DataProcessor
 
 
 
-        public static async Task Update(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, string mailAddress)
+        public static async Task Update(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache, string mailAddress)
         {
-            Console.WriteLine("Building CrossRefExternalFoundDOICache");
+            CommonFunctions.OutputSystemMessageFunction("Building CrossRefExternalFoundDOICache [START]");
+            CommonFunctions.IncrementParagraphCounter();
 
-            var crossRefExternalDic = DataProcessor.CrossRefExternalCache.Load(dataFolderPath);
-            var crossRefNotFoundDic = DataProcessor.CrossRefExternalCache.LoadNotFoundDictionary(dataFolderPath);
-            var foundDOICache = DataProcessor.CrossRefLocalCache.Load(dataFolderPath);
+           // var crossRefExternalDic = DataProcessor.CrossRefExternalCache.Load(dataFolderPath);
+           // var crossRefNotFoundDic = DataProcessor.CrossRefExternalCache.LoadNotFoundDictionary(dataFolderPath);
+            //var foundDOICache = DataProcessor.CrossRefLocalCache.Load(dataFolderPath);
+            var doiAliasListMapper = CSVFunctions.ReadCSVAasDictionary(DummyCacheManager.GetDOIAliasListFilePath(dataFolderPath));
 
 
             var externalDOICandidateList = new List<string>();
@@ -57,7 +59,7 @@ namespace DataProcessor
             {
                 if (v.SourceCite == "CrossRef")
                 {
-                    if (!crossRefExternalDic.ContainsKey(v.DOI) && v.CacheCreatedDate != currentDate && !crossRefNotFoundDic.ContainsKey(v.DOI))
+                    if (!crossRefSmallCache.externalCacheDic.ContainsKey(v.DOI) && v.CacheCreatedDate != currentDate && !crossRefSmallCache.notFoundCacheDic.ContainsKey(v.DOI))
                     {
                         if (v.SourceStatus != "LocalCache")
                         {
@@ -68,8 +70,9 @@ namespace DataProcessor
                 }
             });
 
-            Console.WriteLine("ExternalDOICandidateList: " + externalDOICandidateList.Count);
-            if(externalDOICandidateList.Count == 0)
+            CommonFunctions.OutputSystemMessageFunction("ExternalDOICandidateList: " + externalDOICandidateList.Count);
+
+            if (externalDOICandidateList.Count == 0)
             {
                 return;
             }
@@ -85,30 +88,45 @@ namespace DataProcessor
                     var value = DataProcessor.JsonLib.GetValueFromJSONL(json, "message");
                     if (value != null)
                     {
-                        crossRefExternalDic[doi] = value;
+                        var doiElement = CrossRefParser.Parse(value);
+                        var mainDOI = doiElement.DOI;
+
+                        doiElement.DOIAliasList.ForEach((v) => {
+                            if (!doiAliasListMapper.ContainsKey(v)) {
+                                doiAliasListMapper[v] = mainDOI;
+                            }
+                        });
+                        
+                        crossRefSmallCache.externalCacheDic[mainDOI] = value;
+                    }
+                    else
+                    {
+                        var date = DateTime.Now.ToString("yyyy-MM");
+                        crossRefSmallCache.notFoundCacheDic[doi] = date;
                     }
                 }
                 else
                 {
                     var date = DateTime.Now.ToString("yyyy-MM");
-                    crossRefNotFoundDic[doi] = date;
+                    crossRefSmallCache.notFoundCacheDic[doi] = date;
                 }
             }
 
-            JsonLib.Save(crossRefExternalDic, GetCachePath(dataFolderPath));
-            SaveNotFoundDictionary(dataFolderPath, crossRefNotFoundDic);
+
+            CSVFunctions.WriteCSVAsDictionary(DummyCacheManager.GetDOIAliasListFilePath(dataFolderPath), doiAliasListMapper);
+
+            CommonFunctions.DecrementParagraphCounter();
+            CommonFunctions.OutputSystemMessageFunction("Building CrossRefExternalFoundDOICache [END]");
         }
 
-        public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, string dataFolderPath)
+        public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache)
         {
-            var crossRefExternalDic = DataProcessor.CrossRefExternalCache.Load(dataFolderPath);
-
             doiCacheInfoDict.Values.ToList().ForEach((v) =>
             {
                 var doiPrefix = DOIFunctions.GetPrefix(v.DOI);
                 if (v.SourceCite == "CrossRef")
                 {
-                    if (crossRefExternalDic.ContainsKey(v.DOI))
+                    if (crossRefSmallCache.externalCacheDic.ContainsKey(v.DOI))
                     {
                         v.SourceStatus = "ExternalCache";
                         v.CacheCreatedDate = DateTime.Now.ToString("yyyy-MM");
