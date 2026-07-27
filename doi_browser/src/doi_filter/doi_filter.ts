@@ -22,6 +22,17 @@ export class DOIFilter {
 
 
     public getHash(): string {
-        return this.query.getHash() + this.viewSetting.getHash();
+        var obj: any = {};
+        obj.query = this.query.getHash();
+        obj.viewSetting = this.viewSetting.getHash();
+        return JSON.stringify(obj);
+    }
+
+    public static buildFromJSON(json: string): DOIFilter {
+        var obj: any = JSON.parse(json);
+        var r = new DOIFilter();
+        r.query = DOIFilterQuery.buildFromJSON(obj.query);
+        r.viewSetting = DOIFilterViewSetting.buildFromJSON(obj.viewSetting);
+        return r;
     }
 }

@@ -29,24 +29,6 @@ function goToPage(pageNumber: number) {
   EventFunctions.updatePaginationControls(browserInfo);
 }
 
-/*
-function goToPreviousPage() {
-  if (browserInfo.doiFilterInputNumber > 0) {
-    goToPage(browserInfo.doiFilterInputNumber - 1);
-  }
-}
-
-function goToNextPage() {
-  goToNextPage(browserInfo.doiFilterInputNumber + 1);
-
-  const totalPages = browserInfo.foundDOIList
-    ? Math.ceil(browserInfo.foundDOIList.length / browserInfo.pageSize)
-    : 0;
-  if (browserInfo.pageNumber < totalPages - 1) {
-    goToPage(browserInfo.pageNumber + 1);
-  }
-}
-*/
 
 async function initialize() {
   await new Promise(resolve => setTimeout(resolve, 1000));

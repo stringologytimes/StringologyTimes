@@ -10,6 +10,7 @@ import { SortByType } from "./doi_filter/doi_filter_query";
 import { DOIStatus } from "./doi_info";
 import { ViewModeType } from "./doi_filter/doi_filter_view_setting";
 import { renderSeriesTitleList } from "./render/doi_filter_series_title_render";
+import { DOIResultCache } from "./doi_filter/doi_result_cache";
 
 
 export class BrowserInfo {
@@ -18,77 +19,34 @@ export class BrowserInfo {
     //public pageSize : number = 100;
 
     public currentDOIFilter: DOIFilter = new DOIFilter();
-    public doiFilterInputNumber: number = 0;
-    public doiFilterInputHashStack = new Array<string>();
-
-
-    public cacheAssociatedWithDOIFilterHash = new Map<string, [DOIFilter]>();
-    public cacheAssociatedWithDOIQueryHash = new Map<string, [DOIFilterResult, SummaryInfo]>();
+    public doiResultCache: DOIResultCache = new DOIResultCache();
 
     public initialize(doiInfoCollection: DOIInfoCollection): void {
         const emptyDOIFilterWithViewSetting = new DOIFilter();
         this.currentDOIFilter = emptyDOIFilterWithViewSetting.copy();
         this.doiInfoCollection = doiInfoCollection;
-        this.doiFilterInputNumber = 0;
-        this.doiFilterInputHashStack = [];
-        this.doiFilterInputHashStack.push(this.currentDOIFilter.getHash());
-
-        this.cacheAssociatedWithDOIFilterHash.clear();
-        this.cacheAssociatedWithDOIQueryHash.clear();
-
-        {
-            const emptyDOIFilterWithViewSetting = new DOIFilter();
-            const newDOIFilterResult = new DOIFilterResult(null, this.doiInfoCollection!, emptyDOIFilterWithViewSetting.query.sortBy);
-            const summaryInfo = new SummaryInfo();
-            summaryInfo.build(newDOIFilterResult, emptyDOIFilterWithViewSetting.query, this.doiInfoCollection!);
-
-            this.cacheAssociatedWithDOIFilterHash.set(emptyDOIFilterWithViewSetting.getHash(), [emptyDOIFilterWithViewSetting.copy()]);
-            this.cacheAssociatedWithDOIQueryHash.set(emptyDOIFilterWithViewSetting.query.getHash(), [newDOIFilterResult, summaryInfo]);
-        }
-
+        this.doiResultCache.initialize(doiInfoCollection, this.currentDOIFilter);
 
 
     }
 
 
     public getCurrentDOIFilterWithViewSetting(): DOIFilter {
-        if (this.doiFilterInputNumber >= this.doiFilterInputHashStack.length) {
-            return new DOIFilter();
-        } else {
-            const hash = this.doiFilterInputHashStack[this.doiFilterInputNumber];
-            if (!this.cacheAssociatedWithDOIFilterHash.has(hash)) {
-                throw new Error("No current DOI filter partial result");
-            }
-            const [result] = this.cacheAssociatedWithDOIFilterHash.get(hash)!;
-            return result;
-        }
+        return this.currentDOIFilter;
     }
+
     public getCurrentDOIFilterResult(): DOIFilterResult {
-        if (this.doiFilterInputNumber >= this.doiFilterInputHashStack.length) {
-            throw new Error("No current DOI filter result");
-        } else {
-            const rp = this.getCurrentDOIFilterWithViewSetting();
-            const hash = rp.query.getHash();
-            if (!this.cacheAssociatedWithDOIQueryHash.has(hash)) {
-                throw new Error("No current DOI filter result");
-            }
-            const [result, _] = this.cacheAssociatedWithDOIQueryHash.get(hash)!;
-            return result;
-        }
-    }
+        var [result, _] = this.doiResultCache.search(this.doiInfoCollection!, this.currentDOIFilter);
+        return result;
+    }    
+
+
+
     public getCurrentSummaryInfo(): SummaryInfo {
-        if (this.doiFilterInputNumber >= this.doiFilterInputHashStack.length) {
-            throw new Error("No current DOI filter result");
-        } else {
-            const rp = this.getCurrentDOIFilterWithViewSetting();
-            const hash = rp.query.getHash();
-            if (!this.cacheAssociatedWithDOIQueryHash.has(hash)) {
-                throw new Error("No current DOI filter result");
-            }
-            const [_, result] = this.cacheAssociatedWithDOIQueryHash.get(hash)!;
-            return result;
-        }
+        var [_, summaryInfo] = this.doiResultCache.search(this.doiInfoCollection!, this.currentDOIFilter);
+        return summaryInfo;
     }
+
     public setCurrentDOIFilterWithViewSetting(doiFilterWithViewSetting: DOIFilter): void {
         this.currentDOIFilter = doiFilterWithViewSetting.copy();
     }
@@ -174,64 +132,10 @@ export class BrowserInfo {
 
 
         if (this.doiInfoCollection != null) {
-            const currentDOIFilterWithViewSetting = this.currentDOIFilter.copy();
-            const hash = currentDOIFilterWithViewSetting.getHash();
-            const queryHash = currentDOIFilterWithViewSetting.query.getHash();
+            this.doiResultCache.processCurrentDOIFilterInput(this.doiInfoCollection, this.currentDOIFilter);
 
-
-            while (this.doiFilterInputHashStack.length - 1 > this.doiFilterInputNumber && this.doiFilterInputHashStack.length > 0) {
-
-                this.doiFilterInputHashStack.shift();
-            }
-
-            this.doiFilterInputHashStack.push(hash);
-            this.doiFilterInputNumber = this.doiFilterInputHashStack.length - 1;
-            this.cacheAssociatedWithDOIFilterHash.set(hash, [this.currentDOIFilter.copy()]);
-            //this.doiFilterWithViewSettingMap.set(hash, this.currentDOIFilterWithViewSetting);
-
-            console.log("queryHash: " + queryHash);
-
-            if (!this.cacheAssociatedWithDOIQueryHash.has(queryHash)) {
-                if (this.doiFilterInputNumber > 0) {                    
-                    const parentHash = this.doiFilterInputHashStack[this.doiFilterInputNumber - 1];
-                    const [parentDOIFilter] = this.cacheAssociatedWithDOIFilterHash.get(parentHash)!;
-                    if (this.currentDOIFilter.query.isIncluded(parentDOIFilter.query)) {
-                        const [parentDOIFilterResult, _] = this.cacheAssociatedWithDOIQueryHash.get(parentDOIFilter.query.getHash())!;
-                        const newDOIFilterResult = parentDOIFilterResult.search(this.currentDOIFilter.query, this.doiInfoCollection!);
-                        console.log("newDOIFilterResult.doiIDs.length: " + newDOIFilterResult.doiIDs.length);
-                        const newSummaryInfo = new SummaryInfo();
-                        newSummaryInfo.build(newDOIFilterResult, this.currentDOIFilter.query, this.doiInfoCollection!);
-                        this.cacheAssociatedWithDOIQueryHash.set(queryHash, [newDOIFilterResult, newSummaryInfo]);
-                    } else {
-                        const emptyDOIFilter = new DOIFilter();
-                        const emptyQueryHash = emptyDOIFilter.query.getHash();
-                        const [emptyDOIFilterResult, _] = this.cacheAssociatedWithDOIQueryHash.get(emptyQueryHash)!;
-
-                        const newDOIFilterResult = emptyDOIFilterResult.search(this.currentDOIFilter.query, this.doiInfoCollection!);
-                        const newSummaryInfo = new SummaryInfo();
-
-                        console.log("newDOIFilterResult.doiIDs.length: " + newDOIFilterResult.doiIDs.length);
-
-
-                        newSummaryInfo.build(newDOIFilterResult, this.currentDOIFilter.query, this.doiInfoCollection!);
-                        this.cacheAssociatedWithDOIQueryHash.set(queryHash, [newDOIFilterResult, newSummaryInfo]);
-                    }
-                } else {
-                    throw new Error("No parent DOI filter result");
-                }
-            }
-
-            if(!this.cacheAssociatedWithDOIFilterHash.has(hash)){
-                throw new Error("Logic error");
-            }
-            if(!this.cacheAssociatedWithDOIQueryHash.has(queryHash)){
-                throw new Error("Logic error");
-            }
         }
 
-        if (this.doiFilterInputNumber >= this.doiFilterInputHashStack.length) {
-            throw new Error("Logic error");
-        }
 
     }
     public print(): void {
@@ -242,6 +146,7 @@ export class BrowserInfo {
         });
         */
     }
+
     public render(): void {
         if (this.doiInfoCollection != null) {
 
@@ -254,11 +159,11 @@ export class BrowserInfo {
             const renderStartTime1 = performance.now();
             renderFilterBox(currentDOIFilterResult, currentDOIFilterWithViewSetting.query, this.doiInfoCollection!, currentSummaryInfo);
             const renderStartTime2 = performance.now();
-            console.log("renderFilterBox time: " + (renderStartTime2 - renderStartTime1));
+            console.log("renderFilterBox time: " + (renderStartTime2 - renderStartTime1) + " ms");
 
             renderViewSettingBox(currentDOIFilterWithViewSetting.viewSetting, currentSummaryInfo);
             const renderStartTime3 = performance.now();
-            console.log("renderViewSettingBox time: " + (renderStartTime3 - renderStartTime2));
+            console.log("renderViewSettingBox time: " + (renderStartTime3 - renderStartTime2) + " ms");
 
             if (currentDOIFilterWithViewSetting.viewSetting.viewMode == "article_list") {
                 DOIFilterStandardRender.render(currentDOIFilterResult, currentDOIFilterWithViewSetting.viewSetting.getItemIndex(), currentDOIFilterWithViewSetting.viewSetting.pageSize!, this.doiInfoCollection!);
@@ -281,13 +186,6 @@ export class BrowserInfo {
         }        
     }
 
-    public debugPrint(): void {
-        console.log("cacheAssociatedWithDOIFilterHash: ");
-        for(const key of this.cacheAssociatedWithDOIQueryHash.keys()){
-            const [a, b] = this.cacheAssociatedWithDOIQueryHash.get(key)!;
-            console.log(key + "/" + a.doiIDs.length);
-        }
-    }
 
 
 

@@ -26,6 +26,31 @@ function setSelectHTMLElement(selectElement: HTMLSelectElement, options: string[
   defaultOption.textContent = dontCareValueName;
   selectElement.appendChild(defaultOption);
 
+  var max_children_count = 300;
+  var max_index = Math.min(options.length, max_children_count);
+
+  for(var index = 0; index < max_index; index++){
+    const optionValue = options[index];
+    const option = document.createElement("option");
+    const doiCount = doiCountList[index];
+    option.value = optionValue;
+    option.textContent = `${optionValue} (${doiCount})`;
+
+    if (optionValue == selectedValue) {
+      option.selected = true;
+    }
+
+    selectElement.appendChild(option);
+  }
+
+  if(max_index < options.length){
+    const option = document.createElement("option");
+    option.value = "more";
+    option.textContent = "More";
+    selectElement.appendChild(option);
+  }
+
+  /*
 
   options.forEach((optionValue, index) => {
     const option = document.createElement("option");
@@ -36,8 +61,12 @@ function setSelectHTMLElement(selectElement: HTMLSelectElement, options: string[
     if (optionValue == selectedValue) {
       option.selected = true;
     }
-    selectElement.appendChild(option);
+
+    if(index < max_children_count){
+      selectElement.appendChild(option);
+    }
   });
+  */
 }
 
 export function setRadioBoxes(divID: string, templateName: string, selectedValue: string | null, itemNames: string[], itemValues: string[]) {
@@ -231,14 +260,37 @@ function renderKeywordBox(keywords: string[]) {
 
 
 export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIInfoCollection, summaryInfo: SummaryInfo) {
-  console.log("renderFilterBox: " + filterInput.keywords);
+  console.log("renderFilterBox (size: " + filterResult.doiIDs.length + ")");
+
+  const renderStartTime1 = performance.now();  
   renderDOICategoryBox(summaryInfo, filterInput.type);
+  const renderStartTime2 = performance.now();  
   renderContainerTitleSelectBox(summaryInfo, filterInput.container_title);
+  const renderStartTime3 = performance.now();  
   renderSeriesTitleSelectBox(summaryInfo, filterInput.series_title);
+  const renderStartTime4 = performance.now();  
   renderMinimumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
+  const renderStartTime5 = performance.now();  
   renderMaximumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
+  const renderStartTime6 = performance.now();  
   renderSortBySelectBox(filterInput.sortBy);
+  const renderStartTime7 = performance.now();  
   renderTag1SelectBox(summaryInfo, filterInput.tags[0]);
+  const renderStartTime8 = performance.now();  
   renderStatusSelectBox(filterInput.excludeStatus);
+  const renderStartTime9 = performance.now();  
   renderKeywordBox(filterInput.keywords);
+  const renderStartTime10 = performance.now();  
+
+  var time1 = renderStartTime2 - renderStartTime1;
+  var time2 = renderStartTime3 - renderStartTime2;
+  var time3 = renderStartTime4 - renderStartTime3;
+  var time4 = renderStartTime5 - renderStartTime4;
+  var time5 = renderStartTime6 - renderStartTime5;
+  var time6 = renderStartTime7 - renderStartTime6;
+  var time7 = renderStartTime8 - renderStartTime7;
+  var time8 = renderStartTime9 - renderStartTime8;
+  var time9 = renderStartTime10 - renderStartTime9;
+  console.log("renderFilterBox time: " + time1 + " ms, " + time2 + " ms, " + time3 + " ms, " + time4 + " ms, " + time5 + " ms, " + time6 + " ms, " + time7 + " ms, " + time8 + " ms, " + time9 + " ms");
+  
 }

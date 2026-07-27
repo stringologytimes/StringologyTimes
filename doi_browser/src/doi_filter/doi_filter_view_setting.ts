@@ -24,5 +24,9 @@ export class DOIFilterViewSetting {
     public getItemIndex(): number {
         return this.pageNumber! * this.pageSize!;
     }
+
+    public static buildFromJSON(json: string): DOIFilterViewSetting {
+        return JSON.parse(json);
+    }
 }
 

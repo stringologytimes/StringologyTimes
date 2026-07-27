@@ -93,10 +93,158 @@ export class DOIFilterQuery {
         return r;
     }
 
-    public getHash(): string {
-        return JSON.stringify(this);
+    public get_parents() : DOIFilterQuery[] {
+        var r = new Array<DOIFilterQuery>();
+        if(this.minimum_year != null){
+            var copy = this.copy();
+            copy.minimum_year = null;
+            r.push(copy);
+        }
+        if(this.maximum_year != null){
+            var copy = this.copy();
+            copy.maximum_year = null;
+            r.push(copy);
+        }
+        if(this.type != null){
+            var copy = this.copy();
+            copy.type = null;
+            r.push(copy);
+        }
+
+        if(this.authors.length > 0){
+            var copy = this.copy();
+            copy.authors = [];
+            r.push(copy);
+        }
+        if(this.tags.length > 0){
+            var copy = this.copy();
+            copy.tags = [];
+            r.push(copy);
+        }
+
+        if(this.volume != null){
+            var copy = this.copy();
+            copy.volume = null;
+            r.push(copy);
+        }
+        if(this.container_title != null){
+            var copy = this.copy();
+            copy.container_title = null;
+            r.push(copy);
+        }
+        if(this.series_title != null){
+            var copy = this.copy();
+            copy.series_title = null;
+            r.push(copy);
+        }
+        if(this.doiReferences.length > 0){
+            var copy = this.copy();
+            copy.doiReferences = [];
+            r.push(copy);
+        }
+        if(this.excludeStatus.length > 0){
+            var copy = this.copy();
+            copy.excludeStatus = [];
+            r.push(copy);
+        }
+        if(this.sortBy != "unordered"){
+            var copy = this.copy();
+            copy.sortBy = "unordered";
+            r.push(copy);
+        }
+        if(this.keywords.length > 0){
+            var copy = this.copy();
+            copy.keywords = [];
+            r.push(copy);
+        }
+        return r;
     }
-    
+
+    public getHash(): string {
+        var obj: any = {};
+
+        if(this.minimum_year != null){
+            obj.minimum_year = this.minimum_year;
+        }
+        if(this.maximum_year != null){
+            obj.maximum_year = this.maximum_year;
+        }
+        if(this.type != null){
+            obj.type = this.type;
+        }
+        if(this.authors.length > 0){
+            obj.authors = this.authors;
+        }
+        if(this.tags.length > 0){
+            obj.tags = this.tags;
+        }
+        if(this.volume != null){
+            obj.volume = this.volume;
+        }
+        if(this.container_title != null){
+            obj.container_title = this.container_title;
+        }
+        if(this.series_title != null){
+            obj.series_title = this.series_title;
+        }
+        if(this.doiReferences.length > 0){
+            obj.doiReferences = this.doiReferences;
+        }
+        if(this.excludeStatus.length > 0){
+            obj.excludeStatus = this.excludeStatus;
+        }
+        if(this.sortBy != "unordered"){
+            obj.sortBy = this.sortBy;
+        }
+        if(this.keywords.length > 0){
+            obj.keywords = this.keywords;
+        }
+
+        return JSON.stringify(obj);
+    }
+
+    public static buildFromJSON(json: string): DOIFilterQuery {
+        var obj: any = JSON.parse(json);
+        var r = new DOIFilterQuery();
+
+        if(obj.minimum_year != null){
+            r.minimum_year = obj.minimum_year;
+        }
+        if(obj.maximum_year != null){
+            r.maximum_year = obj.maximum_year;
+        }
+        if(obj.type != null){
+            r.type = obj.type;
+        }
+        if(obj.authors.length > 0){
+            r.authors = obj.authors.map((v: any) => v as string);
+        }
+        if(obj.tags.length > 0){
+            r.tags = obj.tags.map((v: any) => v as string);
+        }
+        if(obj.volume != null){
+            r.volume = obj.volume;
+        }
+        if(obj.container_title != null){
+            r.container_title = obj.container_title;
+        }
+        if(obj.series_title != null){
+            r.series_title = obj.series_title;
+        }
+        if(obj.doiReferences.length > 0){
+            r.doiReferences = obj.doiReferences.map((v: any) => v as string);
+        }
+        if(obj.excludeStatus.length > 0){
+            r.excludeStatus = obj.excludeStatus.map((v: any) => v as DOIStatus);
+        }
+        if(obj.sortBy != "unordered"){
+            r.sortBy = obj.sortBy;
+        }
+        if(obj.keywords.length > 0){
+            r.keywords = obj.keywords.map((v: any) => v as string);
+        }
+        return r;
+    }
     public contain(doiInfo: DOIInfo): boolean {
         if(this.minimum_year != null && doiInfo.year < this.minimum_year){
             return false;
