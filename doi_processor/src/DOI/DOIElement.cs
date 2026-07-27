@@ -34,6 +34,9 @@ namespace DataProcessor
 
         public string Source { get; set; } = "";
 
+        public string IdentifierTypeOrInstitution { get; set; } = "";
+
+
         public bool IsPrimary { get; set; } = false;
 
         public List<string> Tags { get; set; } = new List<string>();
@@ -112,9 +115,9 @@ namespace DataProcessor
 
         public void UpdateContainerDOI(DOICacheInfo v)
         {
-            if (this.ContainerDOI.Length == 0 && v.ProperContainerDOI.Length > 0)
+            if (this.ContainerDOI.Length == 0 && v.ModifiedContainerDOI.Length > 0)
             {
-                this.ContainerDOI = v.ProperContainerDOI;
+                this.ContainerDOI = v.ModifiedContainerDOI;
             }
 
             

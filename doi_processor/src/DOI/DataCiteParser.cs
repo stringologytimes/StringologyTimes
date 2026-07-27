@@ -191,6 +191,8 @@ namespace DataProcessor
             return r;
         }
 
+
+
         public static string GetTitleFromDataCiteJSONL(Dictionary<string, string> attributeDict)
         {
             var title = "";
@@ -262,6 +264,21 @@ namespace DataProcessor
             }
             element.Type = GetTypeFromDataCiteJSONL(dict, typesDict);
             element.Title = GetTitleFromDataCiteJSONL(attributeDict);
+
+            if (attributeDict.ContainsKey("identifiers"))
+            {
+                var identifiersArray = JsonLib.CreateArrayFromJSONL(attributeDict["identifiers"]);
+                if(identifiersArray.Length > 0)
+                {
+                    var identifierDict = JsonLib.CreateDictionaryFromJSONL(identifiersArray[0]);
+                    if (identifierDict.ContainsKey("identifierType"))
+                    {
+                        var identifierType = identifierDict["identifierType"];
+                        element.IdentifierTypeOrInstitution = identifierType;
+                    }
+                }
+            }
+
 
 
 

@@ -11,7 +11,7 @@ namespace DataProcessor
 {
     public class CrossRefParser
     {
-        public static List<int>? GetDataParts(Dictionary<string, string> dict, string key)
+        public static KeyValuePair<int, int>? GetDataParts(Dictionary<string, string> dict, string key)
         {
             if (dict.ContainsKey(key))
             {
@@ -23,7 +23,14 @@ namespace DataProcessor
                     var datePartsList = JsonSerializer.Deserialize<List<List<int>>>(dateParts);
                     if (datePartsList != null && datePartsList.Count > 0)
                     {
-                        return datePartsList[0];
+                        if(datePartsList[0].Count == 1)
+                        {
+                            return new KeyValuePair<int, int>(datePartsList[0][0], 0);
+                        }
+                        else
+                        {
+                            return new KeyValuePair<int, int>(datePartsList[0][0], datePartsList[0][1]);
+                        }
                     }
                     else
                     {
@@ -44,26 +51,34 @@ namespace DataProcessor
         {
             var f1 = GetDataParts(dict, "published");
             var f2 = GetDataParts(dict, "created");
-            if (f1 != null && f1.Count > 1)
+            var f3 = GetDataParts(dict, "published-print");
+
+            var candidate = new KeyValuePair<int, int>(9999, 9999);
+            if (f1 != null && f1.Value.Key < candidate.Key)
             {
-                return new KeyValuePair<int, int>(f1[0], f1[1]);
+                candidate = f1.Value;
             }
-            else if (f2 != null && f2.Count > 1)
+
+            if (f2 != null && f2.Value.Key < candidate.Key)
             {
-                return new KeyValuePair<int, int>(f2[0], f2[1]);
+                candidate = f2.Value;
             }
-            else if (f1 != null && f1.Count > 0)
+
+            if (f3 != null && f3.Value.Key < candidate.Key)
             {
-                return new KeyValuePair<int, int>(f1[0], -1);
+                candidate = f3.Value;
             }
-            else if (f2 != null && f2.Count > 0)
+
+            if(candidate.Key == 9999)
             {
-                return new KeyValuePair<int, int>(f2[0], -1);
+                return new KeyValuePair<int, int>(0, 0);
             }
             else
             {
-                return new KeyValuePair<int, int>(-1, -1);
+                return candidate;
             }
+
+
         }
         /*
         public static int? GetMonthFromJSONL(Dictionary<string, string> dict)
@@ -105,6 +120,7 @@ namespace DataProcessor
             {
                 element.DOI = dict["DOI"];
             }
+
             if (dict.ContainsKey("type"))
             {
                 //element.Type = dict["type"];
@@ -116,6 +132,7 @@ namespace DataProcessor
                 Console.WriteLine(jsonlString);
                 throw new Exception("Type is not found");
             }
+
             if (dict.ContainsKey("title"))
             {
                 var titleList = JsonSerializer.Deserialize<List<string>>(dict["title"]);
@@ -132,6 +149,21 @@ namespace DataProcessor
             {
                 element.Title = $"Dummy Title: {element.DOI}";
             }
+
+            if (dict.ContainsKey("institution"))
+            {
+                
+                var institutionArray = JsonLib.CreateArrayFromJSONL(dict["institution"]);
+                if(institutionArray.Length > 0){
+                    var institutionDict = JsonLib.CreateDictionaryFromJSONL(institutionArray[0]);
+                    if (institutionDict.ContainsKey("name"))
+                    {
+                        element.IdentifierTypeOrInstitution = institutionDict["name"];
+                    }
+                }
+            }
+
+
 
             if (dict.ContainsKey("issue"))
             {
@@ -323,6 +355,13 @@ namespace DataProcessor
             }
 
             element.Source = "CrossRef";
+
+            if(element.DOI == "10.1007/11605126")
+            {
+
+                CommonFunctions.OutputSystemMessageFunction("Yeartttt: " + element.Year + "/" + element.Month, ConsoleColor.Red);
+                
+            }
 
             return element;
         }

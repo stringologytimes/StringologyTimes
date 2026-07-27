@@ -30,6 +30,9 @@ namespace DataProcessor
 
     class Program
     {
+        public static string DataFolderPath {get;private set;} = "";
+
+
         static async Task<int> Main(string[] args)
         {
             Console.WriteLine(String.Join(", ", args));
@@ -53,6 +56,8 @@ namespace DataProcessor
                 Console.WriteLine(message);
                 Console.ResetColor();
             };
+
+            Program.DataFolderPath = opts.DataFolderPath;
 
             if (opts.Mode == "dblp_proceedings_preprocessor")
             {

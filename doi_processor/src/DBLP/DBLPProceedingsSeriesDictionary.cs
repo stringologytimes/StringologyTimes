@@ -145,6 +145,8 @@ namespace DataProcessor
         {
             if (this.DoiToSeriesTitleAndKeyMapper.ContainsKey(doi))
             {
+
+
                 return this.DoiToSeriesTitleAndKeyMapper[doi];
             }
             else
