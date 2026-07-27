@@ -303,6 +303,8 @@ export class DOIFilterStandardRender {
                         }
                     });
 
+
+
                     // クリックイベントを追加して表示/非表示を切り替え
                     /*
                     doiReferencesDiv.addEventListener('click', (e) => {
@@ -333,7 +335,27 @@ export class DOIFilterStandardRender {
                     });
                 } else {
                     throw new Error("tagsSpan is not found");
-                }                
+                }
+                
+                const childrenSpan = article.querySelector('.children');
+                if (childrenSpan) {
+                    if(doiInfo.type == "Book" || doiInfo.type == "ConferenceProceeding" || doiInfo.type == "ProceedingsSeries" || doiInfo.type == "Journal-Issue" || doiInfo.type == "ReferenceBook" || doiInfo.type == "Monograph"){
+                        const link = document.createElement('a');
+                        link.href = `#`;
+                        link.textContent = "Articles";
+                        link.addEventListener("click", (event) => {
+                            event.preventDefault();
+                            (window as any).initializeParameter([["keyword", `@CONTAINER_DOI:${doiInfo.doi}`]]);
+                        });
+                        childrenSpan.appendChild(link);    
+                    }else{
+                        childrenSpan.innerHTML = '';
+                    }
+                } else {
+                    throw new Error("childrenSpan is not found");
+                }
+
+
 
                 outputDiv.appendChild(article);
             });

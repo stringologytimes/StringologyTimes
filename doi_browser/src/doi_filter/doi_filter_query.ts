@@ -287,6 +287,7 @@ export class DOIFilterQuery {
                 var keyword = this.keywords[i];
                 let b = false;
 
+
                 if(keyword.indexOf("@DOI:") == 0){
                     const doiKeyword = keyword.substring(5);
                     if(doiKeyword.length > 0){
