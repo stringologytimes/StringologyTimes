@@ -1,6 +1,6 @@
 import { DOIFilterResult } from "./doi_filter_result";
 import { DOIFilterQuery } from "./doi_filter_query";
-import { DOIInfoCollection } from "../doi_info";
+import { DOIInfoCollection } from "../doi_record_collection";
 
 export class SummaryInfo {
     public doiCount: number = 0;

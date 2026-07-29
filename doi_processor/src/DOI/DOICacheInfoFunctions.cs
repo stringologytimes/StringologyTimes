@@ -52,14 +52,6 @@ namespace DataProcessor
 
             if (!dummyDOIElementDict.ContainsKey(proceedingsDOI) && !doiElementDict.ContainsKey(proceedingsDOI))
             {
-                if (proceedingsDOI == "10.1007/11605126")
-                {
-                    CommonFunctions.OutputSystemMessageFunction("Proceedings DOI: " + proceedingsDOI, ConsoleColor.Red);
-                    CommonFunctions.OutputSystemMessageFunction("Proceedings Name: " + proceedingsName, ConsoleColor.Red);
-                    CommonFunctions.OutputSystemMessageFunction("Container DOI: " + containerDOI, ConsoleColor.Red);
-                    Console.WriteLine(dummyDOIElementDict.ContainsKey(proceedingsDOI));
-                    Console.WriteLine(doiElementDict.ContainsKey(proceedingsDOI));
-                }
 
                 var proceedingsDummyDOIElement = new DOIElement()
                 {
@@ -67,7 +59,7 @@ namespace DataProcessor
                     Title = proceedingsName,
                     Source = "DUMMY",
                     IsPrimary = false,
-                    Type = "Proceedings?",
+                    Type = "Proceedings",
                     ContainerDOI = containerDOI
                 };
 

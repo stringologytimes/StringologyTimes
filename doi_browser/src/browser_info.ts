@@ -1,4 +1,4 @@
-import { DOIInfoCollection } from "./doi_info";
+import { DOIInfoCollection } from "./doi_record_collection";
 import { DOIFilterResult } from "./doi_filter/doi_filter_result";
 import { DOIFilter } from "./doi_filter/doi_filter";
 import { SummaryInfo } from "./doi_filter/summary_info";
@@ -7,7 +7,7 @@ import { renderViewSettingBox } from "./render/view_setting_box_render";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
 import { renderContainerTitleList } from "./render/doi_filter_container_title_render";
 import { SortByType } from "./doi_filter/doi_filter_query";
-import { DOIStatus } from "./doi_info";
+import { DOIStatus } from "./doi_record";
 import { ViewModeType } from "./doi_filter/doi_filter_view_setting";
 import { renderSeriesTitleList } from "./render/doi_filter_series_title_render";
 import { DOIResultCache } from "./doi_filter/doi_result_cache";

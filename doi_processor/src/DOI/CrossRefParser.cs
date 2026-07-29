@@ -356,12 +356,6 @@ namespace DataProcessor
 
             element.Source = "CrossRef";
 
-            if(element.DOI == "10.1007/11605126")
-            {
-
-                CommonFunctions.OutputSystemMessageFunction("Yeartttt: " + element.Year + "/" + element.Month, ConsoleColor.Red);
-                
-            }
 
             return element;
         }

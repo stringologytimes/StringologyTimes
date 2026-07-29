@@ -1,11 +1,12 @@
-import { DOIInfo } from "../doi_info";
-import { DOIInfoCollection } from "../doi_info";
+import { DOIRecord } from "../doi_record";
+import { DOIInfoCollection } from "../doi_record_collection";
 import { DOIFilterResult } from "../doi_filter/doi_filter_result";
 import { addIconToSpan, setIconToLink, setIconToSpan } from "../svg_icon";
 
 
+
 export class DOIFilterStandardRender {
-    public static getDateStr(doiInfo: DOIInfo): string {
+    public static getDateStr(doiInfo: DOIRecord): string {
         const yearStr = doiInfo.year <= 0 ? "?" : doiInfo.year.toString();
         let monthStr = "?";
         if (doiInfo.month > 0 && doiInfo.month < 10) {
@@ -16,18 +17,20 @@ export class DOIFilterStandardRender {
         const dataStr = `${yearStr}-${monthStr}`;
         return dataStr;
     }
-    public static getSummaryInfoText(doiInfo: DOIInfo): string {
+    public static getSummaryInfoText(doiInfo: DOIRecord, doiInfoCollection: DOIInfoCollection): string {
         //const dataStr = `${doiInfo.year}-${doiInfo.month <= 0 ? "?" : doiInfo.month}`;
         const containerTitle = doiInfo.container_title;
         const volumStr = doiInfo.volume_issue;
         const seriesTitle = doiInfo.seriesTitle;
 
-        if(doiInfo.doi == "10.1109/dcc.1996"){
-            console.log(doiInfo);
-        }
 
-        if(doiInfo.type == "Proceedings" || doiInfo.type == "Book" || doiInfo.type == "ConferenceProceeding"){
-            return `${seriesTitle}`;
+
+
+        if(doiInfo.isContainerType()){
+            const containerTypeChildrenCount = doiInfoCollection.getContainerTypeChildrenCount(doiInfo.id);
+            const primaryDescendantCount = doiInfoCollection.getPrimaryDescendantCount(doiInfo.id);
+            const secondaryDescendantCount = doiInfoCollection.getSecondaryDescendantCount(doiInfo.id);
+            return `${seriesTitle}(${containerTypeChildrenCount} containers, ${primaryDescendantCount} primary records, ${secondaryDescendantCount} secondary records)`;
         }else{
             if(seriesTitle.length > 0){
                 return `${seriesTitle}(${containerTitle})`;
@@ -170,7 +173,7 @@ export class DOIFilterStandardRender {
                 */
                 const summaryInfoSpan = article.querySelector('.summary-info-text');
                 if (summaryInfoSpan) {
-                    summaryInfoSpan.textContent = this.getSummaryInfoText(doiInfo);
+                    summaryInfoSpan.textContent = this.getSummaryInfoText(doiInfo, doiInfoCollection);
                 } else {
                     throw new Error("summaryInfoSpan is not found");
                 }

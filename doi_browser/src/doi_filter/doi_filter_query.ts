@@ -1,6 +1,6 @@
-import { DOIInfo } from "../doi_info";
-import { DOIInfoCollection } from "../doi_info";
-import { DOIStatus } from "../doi_info";
+import { DOIRecord } from "../doi_record";
+import { DOIInfoCollection } from "../doi_record_collection";
+import { DOIStatus } from "../doi_record";
 import { DOIFilterResult } from "./doi_filter_result";
 
 export type SortByType = "alphabetical-order-by-container-title" | "ascending-order-by-date" | "descending-order-by-date" | "article-count" | "unordered";
@@ -245,7 +245,7 @@ export class DOIFilterQuery {
         }
         return r;
     }
-    public contain(doiInfo: DOIInfo): boolean {
+    public contain(doiInfo: DOIRecord): boolean {
         if(this.minimum_year != null && doiInfo.year < this.minimum_year){
             return false;
         }

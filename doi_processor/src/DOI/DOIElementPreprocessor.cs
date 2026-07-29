@@ -256,6 +256,7 @@ namespace DataProcessor
                 smallCacheManager.UpdateContainerDOI(dataFolderPath);
                 smallCacheManager.UpdateModifiedTitleUsingDBLP(dataFolderPath, dblpSeriesDictionary);
                 smallCacheManager.InsertDOICacheInfoUsingSecondaryDOI(dataFolderPath);
+                smallCacheManager.ModifyType(dataFolderPath);
                 smallCacheManager.CacheConnectionCheck();
                 //smallCacheManager.InsertDOICacheInfoUsingContainerDOI(dataFolderPath);
                 //UpdateDummyDOI(dataFolderPath, smallCacheManager.DOICacheInfoDict);

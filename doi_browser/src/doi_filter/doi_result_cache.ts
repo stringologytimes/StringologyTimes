@@ -1,7 +1,7 @@
 import { DOIFilter } from "./doi_filter";
 import { DOIFilterResult } from "./doi_filter_result";
 import { SummaryInfo } from "./summary_info";
-import { DOIInfoCollection } from "../doi_info";
+import { DOIInfoCollection } from "../doi_record_collection";
 import { DOIFilterQuery } from "./doi_filter_query";
 
 export class DOIResultCache {

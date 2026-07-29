@@ -1,7 +1,7 @@
 
 import { BrowserInfo } from "./browser_info";
 import { SortByType } from "./doi_filter/doi_filter_query";
-import { DOIStatus } from "./doi_info";
+import { DOIStatus } from "./doi_record";
 
 export function updatePaginationControls(browserInfo: BrowserInfo) {
   /*

@@ -1,7 +1,4 @@
-import { BrowserInfo } from "../browser_info";
 import { DOIFilterResult } from "../doi_filter/doi_filter_result";
-import { DOIInfoCollection } from "../doi_info";
-import { DOIFilterQuery } from "../doi_filter/doi_filter_query";
 import { SummaryInfo } from "../doi_filter/summary_info";
 import { DOIFilterViewSetting } from "../doi_filter/doi_filter_view_setting";
 

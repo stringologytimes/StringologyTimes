@@ -1,67 +1,21 @@
-
-
-
-
+import { LightWeightDOIRecord } from "./doi_record";
+import { DOIRecord} from "./doi_record";
 import { load_gzip_text_lines, load_gzip_integer_list_lines, load_gzip_integer_lines } from "./gzip_loader";
 
-export type DOIStatus = "primary" | "secondary" | "unknown";
-
 let typeList: string[] = [];
-
-export class LightWeightDOIInfo {
-    public doi: string = "";
-    public title: string = "";
-    public year: number = 0;
-    public month: number = 0;
-    public authorIDs: number[] = [];
-    public isPrimary: boolean = false;
-    public type: string = "Unknown";
-    public seriesTitle: string = "";
-    public container_DOI: string = "";
-    public container_title: string = "";
-    public volume_issue: string = "";
-    public tags: string[] = [];    
-    public doiReferenceIDs: number[] = [];
-    public optional_ids: string[] = [];
-}
-export class DOIInfo {
-    public id: number = -1;
-    public doi: string = "";
-    public title: string = "";
-    public year: number = 0;
-    public month: number = 0;
-    public authors: string[] = [];
-    public seriesTitle: string = "";
-    public container_DOI: string = "";
-    public container_title: string = "";
-    public volume_issue: string = "";
-    public tags: string[] = [];
-    public doiReferences: string[] = [];
-    public keywords: string[] = [];
-    public type: string = "Unknown";
-    public isPrimary: boolean = false;
-    public optional_ids: string[] = [];
-
-    public getStatus(): DOIStatus {
-        if (this.isPrimary) {
-            return "primary";
-        } else {
-            return "secondary";
-        }
-    }
-}
-
 
 
 export function getDOIInfoTypeList(): string[] {
     return typeList.map(type => type);
 }
 
+
 export class DOIInfoCollection {
-    public lightweightDOIInfos: LightWeightDOIInfo[] = [];
+    public lightweightDOIInfos: LightWeightDOIRecord[] = [];
     public authorList: string[] = [];
     public tagList: string[] = [];
     public doiToIDMapper: Map<string, number> = new Map();
+    public idToDOIChildrenIDMapper: Map<number, number[]> = new Map();
 
 
     public length(): number {
@@ -88,9 +42,48 @@ export class DOIInfoCollection {
         }
         return this.lightweightDOIInfos[id].doi;
     }
+    public getContainerTypeChildrenCount(index: number): number {
+        if(this.idToDOIChildrenIDMapper.has(index)){
+            return this.idToDOIChildrenIDMapper.get(index)!.filter(id => this.getDOIInfo(id).isContainerType()).length;
+        }else{
+            return 0;
+        }
+    }
+    public getPrimaryDescendantCount(index: number): number {
+        if(this.idToDOIChildrenIDMapper.has(index)){
+            let counter = 0;
+            this.idToDOIChildrenIDMapper.get(index)!.forEach(id => {
+                var childRecord = this.getDOIInfo(id);
+                if(childRecord.isPrimary){
+                    counter++;
+                }
+                counter += this.getPrimaryDescendantCount(id);
+            });
+            return counter;
 
-    public getDOIInfo(index: number): DOIInfo {
-        let r = new DOIInfo();
+        }else{
+            return 0;
+        }
+    }
+    public getSecondaryDescendantCount(index: number): number {
+        if(this.idToDOIChildrenIDMapper.has(index)){
+            let counter = 0;
+            this.idToDOIChildrenIDMapper.get(index)!.forEach(id => {
+                var childRecord = this.getDOIInfo(id);
+                if(!childRecord.isPrimary){
+                    counter++;
+                }
+                counter += this.getSecondaryDescendantCount(id);
+            });
+            return counter;
+
+        }else{
+            return 0;
+        }
+    }
+
+    public getDOIInfo(index: number): DOIRecord {
+        let r = new DOIRecord();
         r.id = index;
         r.doi = this.lightweightDOIInfos[index].doi;
         r.title = this.lightweightDOIInfos[index].title;
@@ -119,7 +112,7 @@ export class DOIInfoCollection {
         const doi_list = await load_gzip_text_lines(folderURL + "/doi.csv.gz");
         console.log("size of doi_list: " + doi_list.length);
         doi_list.forEach(line => {
-            let doiInfo = new LightWeightDOIInfo();
+            let doiInfo = new LightWeightDOIRecord();
             doiInfo.doi = line;
             r.lightweightDOIInfos.push(doiInfo);
         });
@@ -241,6 +234,19 @@ export class DOIInfoCollection {
             }
         });
 
+        r.lightweightDOIInfos.forEach((doiInfo, index) => {
+            if(doiInfo.container_DOI.length > 0){
+                if(r.doiToIDMapper.has(doiInfo.container_DOI)){
+                    var container_id = r.doiToIDMapper.get(doiInfo.container_DOI)!;
+                    if(r.idToDOIChildrenIDMapper.has(container_id)){
+                        r.idToDOIChildrenIDMapper.get(container_id)!.push(index);
+                    }else{
+                        r.idToDOIChildrenIDMapper.set(container_id, [index])
+                    }
+                }
+            }
+        });
+
 
         console.log("lightweightDOIInfos is loaded successfully : " + r.lightweightDOIInfos.length);
 
@@ -252,6 +258,3 @@ export class DOIInfoCollection {
 }
 
 
-
-
-//export let doiInfoCollection: DOIInfoCollection = new DOIInfoCollection();

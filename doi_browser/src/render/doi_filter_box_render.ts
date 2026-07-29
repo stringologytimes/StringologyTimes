@@ -1,10 +1,9 @@
-import { BrowserInfo } from "../browser_info";
 import { DOIFilterResult } from "../doi_filter/doi_filter_result";
-import { DOIInfoCollection } from "../doi_info";
+import { DOIInfoCollection } from "../doi_record_collection";
 import { DOIFilterQuery } from "../doi_filter/doi_filter_query";
 import { SummaryInfo } from "../doi_filter/summary_info";
 import { SortByType } from "../doi_filter/doi_filter_query";
-import { getDOIInfoTypeList } from "../doi_info";
+import { getDOIInfoTypeList } from "../doi_record_collection";
 /*
 function getUniqueStringSet(items: string[]): string[] {
   const uniqueSet = new Set<string>();

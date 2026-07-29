@@ -149,54 +149,6 @@ namespace DataProcessor
                 }
 
 
-               /*
-
-                if (containerDOICandidateList.Count == 1)
-                {
-                    if (containerDOICandidateList[0] != this.DOI)
-                    {
-                        this.ProperContainerDOI = containerDOICandidateList[0];
-                        this.ProperContainerDOIType = "Title";
-                    }
-                }
-                else if (containerDOICandidateList.Count > 1)
-                {
-                    var doiPrefix = DOIElement.GetDOIPrefix(this.DOI);
-                    var doiYear = doiElement.Year;
-                    var candidateList = new List<string>();
-                    foreach (var containerDOI in containerDOICandidateList)
-                    {
-                        var candidateDOIPrefix = DOIElement.GetDOIPrefix(containerDOI);
-                        if (candidateDOIPrefix == doiPrefix && doiElementDict.ContainsKey(containerDOI) && this.DOI != containerDOI)
-                        {
-                            var candidateDOIElement = doiElementDict[containerDOI];
-                            var candidateDOIYear = candidateDOIElement.Year;
-                            if (candidateDOIYear == doiYear)
-                            {
-                                candidateList.Add(containerDOI);
-                            }
-                        }
-                    }
-
-                    if (candidateList.Count == 1)
-                    {
-                        this.ProperContainerDOI = candidateList[0];
-                        this.ProperContainerDOIType = "Title";
-                    }
-                    else if (candidateList.Count > 1)
-                    {
-                        Console.WriteLine("Multiple container DOI candidates found for title: " + title);
-                        throw new Exception("Multiple container DOI candidates found for title: " + title);
-                    }
-
-
-
-                }
-                else
-                {
-                    throw new Exception("Multiple container DOI candidates found for title: " + title);
-                }
-                */
             }
 
         }

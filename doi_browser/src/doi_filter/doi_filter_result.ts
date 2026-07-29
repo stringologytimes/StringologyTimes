@@ -1,5 +1,5 @@
-import { DOIInfoCollection } from "../doi_info";
-import { DOIInfo } from "../doi_info";
+import { DOIInfoCollection } from "../doi_record_collection";
+import { DOIRecord } from "../doi_record";
 import { DOIFilterQuery } from "./doi_filter_query";
 import { SortByType } from "./doi_filter_query";
 
@@ -166,8 +166,8 @@ export class DOIFilterResult {
     }
 
 
-    public searchByYear(minimum_year: number | null = null, maximum_year: number | null = null, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
-        const r: DOIInfo[] = [];
+    public searchByYear(minimum_year: number | null = null, maximum_year: number | null = null, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIRecord[] {
+        const r: DOIRecord[] = [];
         let minYear = minimum_year ?? this.getMinimumYear();
         let maxYear = maximum_year ?? this.getMaxmumYear();
         if (minYear > maxYear) {
@@ -185,8 +185,8 @@ export class DOIFilterResult {
         }
         return r;
     }
-    public searchByType(type: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
-        const r: DOIInfo[] = [];
+    public searchByType(type: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIRecord[] {
+        const r: DOIRecord[] = [];
         if (this.typeToDOIInfoMapper.has(type)) {
             this.typeToDOIInfoMapper.get(type)!.forEach(doiId => {
                 if (doiNumberFilterSet.has(doiId)) {
@@ -196,8 +196,8 @@ export class DOIFilterResult {
         }
         return r;
     }
-    public searchByTag(tag: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
-        const r: DOIInfo[] = [];
+    public searchByTag(tag: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIRecord[] {
+        const r: DOIRecord[] = [];
         if (this.tagToDOIInfoMapper.has(tag)) {
             this.tagToDOIInfoMapper.get(tag)!.forEach(doiId => {
                 if (doiNumberFilterSet.has(doiId)) {
@@ -208,8 +208,8 @@ export class DOIFilterResult {
         return r;
     }
 
-    public searchByAuthor(author: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
-        const r: DOIInfo[] = [];
+    public searchByAuthor(author: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIRecord[] {
+        const r: DOIRecord[] = [];
         if (this.authorToDoiMapper.has(author)) {
             this.authorToDoiMapper.get(author)!.forEach(doiId => {
                 if (doiNumberFilterSet.has(doiId)) {
@@ -219,7 +219,7 @@ export class DOIFilterResult {
         }
         return r;
     }
-    public searchByAuthors(authors: string[], collection: DOIInfoCollection): DOIInfo[] {
+    public searchByAuthors(authors: string[], collection: DOIInfoCollection): DOIRecord[] {
         throw new Error("searchByAuthors is not implemented yet");
         /*
         let r: DOIInfo[] = [];
@@ -244,8 +244,8 @@ export class DOIFilterResult {
         */
 
     }
-    public searchByDOIReference(doi_reference: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
-        const r: DOIInfo[] = [];
+    public searchByDOIReference(doi_reference: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIRecord[] {
+        const r: DOIRecord[] = [];
         if (this.doiReferencesToDoiMapper.has(doi_reference)) {
             this.doiReferencesToDoiMapper.get(doi_reference)!.forEach(doiId => {
                 if (doiNumberFilterSet.has(doiId)) {
@@ -255,7 +255,7 @@ export class DOIFilterResult {
         }
         return r;
     }
-    public searchByDOIReferences(doi_references: string[], collection: DOIInfoCollection): DOIInfo[] {
+    public searchByDOIReferences(doi_references: string[], collection: DOIInfoCollection): DOIRecord[] {
         throw new Error("searchByDOIReferences is not implemented yet");
         /*
         let r: DOIInfo[] = [];
@@ -269,8 +269,8 @@ export class DOIFilterResult {
     }
 
 
-    public searchByContainerTitle(container_title: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
-        const r: DOIInfo[] = [];
+    public searchByContainerTitle(container_title: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIRecord[] {
+        const r: DOIRecord[] = [];
         if (this.containerTitleToDoiMapper.has(container_title)) {
             this.containerTitleToDoiMapper.get(container_title)!.forEach(doiId => {
                 if (doiNumberFilterSet.has(doiId)) {
@@ -280,8 +280,8 @@ export class DOIFilterResult {
         }
         return r;
     }
-    public searchBySeriesTitle(series_title: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIInfo[] {
-        const r: DOIInfo[] = [];
+    public searchBySeriesTitle(series_title: string, doiNumberFilterSet: Set<number>, collection: DOIInfoCollection): DOIRecord[] {
+        const r: DOIRecord[] = [];
         if (this.seriesTitleToDoiMapper.has(series_title)) {
             this.seriesTitleToDoiMapper.get(series_title)!.forEach(doiId => {
                 if (doiNumberFilterSet.has(doiId)) {
