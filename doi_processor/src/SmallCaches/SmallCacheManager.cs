@@ -18,7 +18,9 @@ namespace DataProcessor
         public CrossRefSmallCache CrossRefSmallCache { get; set; } = new CrossRefSmallCache();
         public DataCiteSmallCache DataCiteSmallCache { get; set; } = new DataCiteSmallCache();
         public Dictionary<string, DOIElement> DummyDOIElementDict { get; set; } = new Dictionary<string, DOIElement>();
-        public Dictionary<string, DOICacheInfo> DOICacheInfoDict { get; set; } = new Dictionary<string, DOICacheInfo>();
+        public Dictionary<string, SmallCacheSummaryRecord> SmallCacheSummaryRecordDict { get; set; } = new Dictionary<string, SmallCacheSummaryRecord>();
+
+        public StreamWriter SmallCacheSummaryLogFile { get; set; } = new StreamWriter(SmallCacheSummaryRecord.GetSmallCacheSummaryLogPath(), true);
 
         public SmallCacheManager(string dataFolderPath, ReadOnlySet<string> primaryDOISet)
         {
@@ -30,30 +32,51 @@ namespace DataProcessor
 
             if (new FileInfo(doiCacheInfoFilePath).Exists)
             {
-                DOICacheInfoDict = DOICacheInfo.Load(doiCacheInfoFilePath);
+                SmallCacheSummaryRecordDict = SmallCacheSummaryRecord.Load(doiCacheInfoFilePath);
             }
 
 
-            DOICacheInfoDict.Values.ToList().ForEach((v) =>
+            SmallCacheSummaryRecordDict.Values.ToList().ForEach((v) =>
             {
                 v.DOIRank = 1;
             });
 
             primaryDOISet.ToList().ForEach((v) =>
             {
-                if (!DOICacheInfoDict.ContainsKey(v))
+                if (!SmallCacheSummaryRecordDict.ContainsKey(v))
                 {
-                    DOICacheInfoDict[v] = new DOICacheInfo() { DOI = v, DOIRank = 0 };
+                    SmallCacheSummaryRecordDict[v] = new SmallCacheSummaryRecord() { DOI = v, DOIRank = 0 };
                     this.DummyDOIElementDict[v] = new DOIElement() { DOI = v, Source = "Unknown", IsPrimary = true };
+                    this.SmallCacheSummaryLogFile.WriteLine($"Added Primary DOI in SmallCacheManager: {v}");
                 }
                 else
                 {
-                    DOICacheInfoDict[v].DOIRank = 0;
+                    SmallCacheSummaryRecordDict[v].DOIRank = 0;
                 }
             });
 
             this.CacheConnectionCheck();
 
+        }
+
+        private static void WriteChecksum(string dataFolderPath, string checksumFileName, ReadOnlySet<string> doiSet)
+        {
+            var currentChecksumDictionary = new Dictionary<string, string>();
+            currentChecksumDictionary["doiSet_hash"] = HashFunctions.ComputeHash(doiSet);
+            currentChecksumDictionary["date"] = DateTime.Now.ToString("yyyy-MM");
+            var checksumFilePath = dataFolderPath + "/auto_generated/cache/" + checksumFileName;
+            CSVFunctions.WriteCSVAsDictionary(checksumFilePath, currentChecksumDictionary);
+        }
+
+        public void Close(ReadOnlySet<string> primaryDOISet, string checksumFileName)
+        {
+            DOIElement.Save(DummyDOIElementDict, DummyCacheManager.GetDummyCacheFilePath(Program.DataFolderPath));
+            SmallCacheSummaryRecord.Save(SmallCacheSummaryRecordDict, SmallCacheSummaryRecord.GetSmallCacheSummaryFilePath());
+            WriteChecksum(Program.DataFolderPath, checksumFileName, primaryDOISet);
+
+
+            SmallCacheSummaryLogFile.Close();
+            SmallCacheSummaryLogFile.Dispose();
         }
 
         public void MergeCheck()
@@ -62,7 +85,7 @@ namespace DataProcessor
             var logFile = new StreamWriter(logFilePath, true);
 
 
-            DOICacheInfoDict.Values.ToList().ForEach((v) =>
+            SmallCacheSummaryRecordDict.Values.ToList().ForEach((v) =>
             {
                 var doi = v.DOI;
                 if (DummyDOIElementDict.ContainsKey(doi))
@@ -84,7 +107,7 @@ namespace DataProcessor
 
         public void CacheConnectionCheck()
         {
-            DOICacheInfoDict.Values.ToList().ForEach((v) =>
+            SmallCacheSummaryRecordDict.Values.ToList().ForEach((v) =>
             {
                 var doi = v.DOI;
                 bool b1 = CrossRefSmallCache.localCacheDic.ContainsKey(doi);
@@ -125,7 +148,7 @@ namespace DataProcessor
 
 
 
-            DOICacheInfoDict.Values.ToList().ForEach((w) =>
+            SmallCacheSummaryRecordDict.Values.ToList().ForEach((w) =>
             {
                 w.UpdateContainerDOI(doiElementDict, isbnDictionary, issnDictionary, titleDictionary, logFile);
             });
@@ -146,8 +169,8 @@ namespace DataProcessor
 
 
             //var crossRefDOIPrefixSet = CrossRefDOIToGZFileCache.GetDOIPrefixSet(dataFolderPath);
-            var crossRefdoiElementDict = CrossRefSmallCache.LoadSmallCache(dataFolderPath, DOICacheInfoDict);
-            var dataCitedoiElementDict = DataCiteSmallCache.LoadSmallCache(dataFolderPath, DOICacheInfoDict);
+            var crossRefdoiElementDict = CrossRefSmallCache.LoadSmallCache(dataFolderPath, SmallCacheSummaryRecordDict);
+            var dataCitedoiElementDict = DataCiteSmallCache.LoadSmallCache(dataFolderPath, SmallCacheSummaryRecordDict);
 
             var mergedDict = new Dictionary<string, DOIElement>();
             crossRefdoiElementDict.ToList().ForEach((v) =>
@@ -164,7 +187,7 @@ namespace DataProcessor
                 mergedDict[v.Key] = v.Value;
             });
 
-            DOICacheInfoDict.Values.ToList().ForEach((v) =>
+            SmallCacheSummaryRecordDict.Values.ToList().ForEach((v) =>
             {
                 if (!mergedDict.ContainsKey(v.DOI))
                 {
@@ -182,6 +205,51 @@ namespace DataProcessor
 
         }
 
+        public void UpdateTypeByContainer(string dataFolderPath, DBLPProceedingsSeriesDictionary dblpSeriesDictionary)
+        {
+            CommonFunctions.OutputSystemMessageFunction("Updating Type By Container [START]");
+            CommonFunctions.IncrementParagraphCounter();
+            var doiElementDict = CreateDOIElementDictionaryFromSmallCache(dataFolderPath);
+
+            SmallCacheSummaryRecordDict.Values.ToList().ForEach((v) =>
+                {
+                    if (doiElementDict.ContainsKey(v.DOI))
+                    {
+                        var doiElement = doiElementDict[v.DOI];
+                        if (v.ModifiedType.Length == 0 && v.ModifiedContainerDOI.Length > 0 && doiElementDict.ContainsKey(v.ModifiedContainerDOI))
+                        {
+                            var properContainerDOICacheInfo = SmallCacheSummaryRecordDict[v.ModifiedContainerDOI];
+                            if (properContainerDOICacheInfo.ModifiedType == "ConferenceProceeding")
+                            {
+                                v.ModifiedType = "Proceedings-Article";
+                                this.SmallCacheSummaryLogFile.WriteLine($"Updated Type By Container: {v.DOI} -> {v.ModifiedType}");
+                            }
+                            else if (properContainerDOICacheInfo.ModifiedType == "Book")
+                            {
+                                v.ModifiedType = "Book-Chapter";
+                                this.SmallCacheSummaryLogFile.WriteLine($"Updated Type By Container: {v.DOI} -> {v.ModifiedType}");
+                            }
+                            else if (properContainerDOICacheInfo.ModifiedType == "ReferenceBook")
+                            {
+                                v.ModifiedType = "ReferenceBook-Chapter";
+                                this.SmallCacheSummaryLogFile.WriteLine($"Updated Type By Container: {v.DOI} -> {v.ModifiedType}");
+                            }
+                            else if (properContainerDOICacheInfo.ModifiedType == "Monograph")
+                            {
+                                v.ModifiedType = "Monograph-Chapter";
+                                this.SmallCacheSummaryLogFile.WriteLine($"Updated Type By Container: {v.DOI} -> {v.ModifiedType}");
+                            }
+                        }
+                    }
+
+
+
+                });
+
+            CommonFunctions.DecrementParagraphCounter();
+            CommonFunctions.OutputSystemMessageFunction("Updating Type By Container [END]");
+        }
+
         public void UpdateModifiedTitleUsingDBLP(string dataFolderPath, DBLPProceedingsSeriesDictionary dblpSeriesDictionary)
         {
             CommonFunctions.OutputSystemMessageFunction("Updating Modified Title UsingDBLP [START]");
@@ -193,7 +261,7 @@ namespace DataProcessor
 
 
 
-            DOICacheInfoDict.Values.ToList().ForEach((v) =>
+            SmallCacheSummaryRecordDict.Values.ToList().ForEach((v) =>
             {
                 var doiElement = doiElementDict[v.DOI];
 
@@ -206,253 +274,57 @@ namespace DataProcessor
                     var key = dblpSeriesDictionary.ProceedingsDOIToKeyMapper[doiElement.DOI];
                     var proceedings = dblpSeriesDictionary.GetProceedings(key);
                     var proceedingsSeries = dblpSeriesDictionary.Series[proceedings.SeriesTitle];
-                    var proceedingsYear = DOICacheInfoFunctions.ComputeProceedingsYear(proceedings.Year, doiElement.Year);
+                    var proceedingsYear = SmallCacheSummaryFunctions.ComputeProceedingsYear(proceedings.Year, doiElement.Year);
                     var proceedingsName = proceedings.SeriesTitle + "(" + proceedingsYear + ")";
                     var proceedingsSeriesDummyDOI = DOIFunctions.CreateDummyDOI("proceedings_series", proceedings.SeriesTitle);
                     var (minimum_year, minimum_month) = proceedingsSeries.GetMinimumYearAndMonth();
 
-                    if (!DOICacheInfoDict.ContainsKey(proceedingsSeriesDummyDOI))
+                    if (!SmallCacheSummaryRecordDict.ContainsKey(proceedingsSeriesDummyDOI) && v.DOIRank == 0)
                     {
-                        DOICacheInfoFunctions.CreateProceedingsSeriesDummyDOIElement(DummyDOIElementDict, DOICacheInfoDict, proceedingsSeriesDummyDOI, proceedings, minimum_year.ToString(), minimum_month.ToString());
+                        SmallCacheSummaryFunctions.CreateProceedingsSeriesDummyDOIElement(proceedingsSeriesDummyDOI, proceedings, minimum_year.ToString(), minimum_month.ToString(), this);
+                    }
+
+                    if (v.ModifiedType.Length == 0)
+                    {
+                        v.ModifiedTitle = proceedingsName;
+                        v.ModifiedContainerDOI = proceedingsSeriesDummyDOI;
+                        v.ModifiedContainerDOIType = "DBLP";
+                        v.ModifiedType = "ConferenceProceeding";
                     }
 
 
-
-                    v.ModifiedTitle = proceedingsName;
-                    v.ModifiedContainerDOI = proceedingsSeriesDummyDOI;
-                    v.ModifiedContainerDOIType = "DBLP";
-                    v.ModifiedType = "ConferenceProceeding";
 
                 }
 
-                if (v.ModifiedType.Length == 0)
+
+                if (doiElement.IsJournalArticle)
                 {
-                    if (doiElement.Type == "book")
-                    {
-                        v.ModifiedType = "Book";
-                    }
-                    else if (doiElement.Type == "reference-book")
-                    {
-                        v.ModifiedType = "ReferenceBook";
-                    }
-                    else if (doiElement.Type == "monograph")
-                    {
-                        v.ModifiedType = "Monograph";
-                    }
+                    SmallCacheSummaryFunctions.UpdateForJournalArticle(doiElement, doiElementDict, this);
                 }
 
-                if (doiElement.Type == "journal-article")
+                if (doiElement.IsPostedContent)
                 {
-                    var journalTitle = doiElement.ContainerTitle;
-                    var volumeIssueString = doiElement.GetVolumeIssueString();
-                    var journalDOI = doiElement.ContainerDOI;
-                    if (journalDOI.Length == 0)
-                    {
-                        journalDOI = DOIFunctions.CreateDummyDOI("journal", journalTitle);
-                    }
-
-                    if (!DOICacheInfoDict.ContainsKey(journalDOI))
-                    {
-                        DOICacheInfoFunctions.CreateJournalDummyDOIElement(doiElementDict, DummyDOIElementDict, DOICacheInfoDict, journalDOI, journalTitle);
-                    }
-
-                    var journalIssueTitle = journalTitle + "(" + volumeIssueString + ")";
-                    var journalIssueDummyDOI = DOIFunctions.CreateDummyDOI("journal_issue", journalIssueTitle);
-
-                    if (!DOICacheInfoDict.ContainsKey(journalIssueDummyDOI))
-                    {
-                        DOICacheInfoFunctions.CreateJournalIssueDummyDOIElement(DummyDOIElementDict, DOICacheInfoDict, journalIssueDummyDOI, journalIssueTitle, journalDOI);
-                    }
-
-                    if (v.ModifiedContainerDOI.Length == 0)
-                    {
-                        v.ModifiedContainerDOI = journalIssueDummyDOI;
-                        v.ModifiedContainerDOIType = "Metadata";
-                        v.ModifiedType = "Journal-Article";
-                    }
+                    SmallCacheSummaryFunctions.UpdateForPostedContent(doiElement, this);
                 }
 
-                if (doiElement.Type == "posted-content")
+                if (doiElement.IsPreprint)
                 {
-                    if (v.ModifiedType != "Preprint" && doiElement.IdentifierTypeOrInstitution == "bioRxiv")
-                    {
-                        v.ModifiedType = "Preprint";
-
-                        var bioRxivDOI = DOIFunctions.CreateDummyDOI("preprint_repository", "biorxiv");
-                        if (!DOICacheInfoDict.ContainsKey(bioRxivDOI))
-                        {
-                            DOICacheInfoFunctions.CreatePreprintRepositoryDummyDOIElement(DummyDOIElementDict, DOICacheInfoDict, bioRxivDOI, "bioRxiv");
-                        }
-
-                        v.ModifiedContainerDOI = bioRxivDOI;
-                        v.ModifiedContainerDOIType = "Metadata";
-
-                    }
-
+                    SmallCacheSummaryFunctions.UpdateForPreprint(doiElement, this);
                 }
 
-                if (doiElement.Type == "Preprint")
+                if (doiElement.IsProceedingsArticle || doiElement.IsBookChapter)
                 {
-                    if (v.ModifiedType != "Preprint" && doiElement.IdentifierTypeOrInstitution.Length > 0)
-                    {
-                        var preprintRepositoryDOI = DOIFunctions.CreateDummyDOI("preprint_repository", doiElement.IdentifierTypeOrInstitution);
-                        if (!DOICacheInfoDict.ContainsKey(preprintRepositoryDOI))
-                        {
-                            DOICacheInfoFunctions.CreatePreprintRepositoryDummyDOIElement(DummyDOIElementDict, DOICacheInfoDict, preprintRepositoryDOI, doiElement.IdentifierTypeOrInstitution);
-                        }
-
-                        v.ModifiedContainerDOI = preprintRepositoryDOI;
-                        v.ModifiedContainerDOIType = "Metadata";
-                        v.ModifiedType = "Preprint";
-                    }
-                }
-
-
-
-
-                if (doiElement.Type == "ConferencePaper" || doiElement.Type == "proceedings-article" || doiElement.Type == "book-chapter")
-                {
-                    var seriesTitleAndKey = dblpSeriesDictionary.SearchSeriesTitleAndKeyByDOI(doiElement.DOI);
-
-
-
-                    if (seriesTitleAndKey != null)
-                    {
-                        if (!dblpSeriesDictionary.Series.ContainsKey(seriesTitleAndKey.Value.Key))
-                        {
-                            throw new Exception("Series Title and Key: " + seriesTitleAndKey.Value.Key + " is not found in dblpSeriesDictionary.Series");
-
-
-                        }
-
-
-                        var proceedingsSeries = dblpSeriesDictionary.Series[seriesTitleAndKey.Value.Key];
-                        var proceedings = proceedingsSeries.GetProceedings(seriesTitleAndKey.Value.Value);
-                        var proceedingsSeriesTitle = proceedingsSeries.SeriesTitle;
-                        var proceedingsYear = DOICacheInfoFunctions.ComputeProceedingsYear(proceedings.Year, doiElement.Year);
-                        var proceedingsName = proceedings.SeriesTitle + "(" + proceedingsYear + ")";
-
-
-
-
-                        var proceedingsDOI = doiElement.ContainerDOI;
-                        if (proceedingsDOI.Length == 0)
-                        {
-                            proceedingsDOI = proceedings.DOI.Length > 0 ? proceedings.DOI : DOIFunctions.CreateDummyDOI("proceedings", proceedingsName);
-                        }
-
-
-
-
-
-                        var (minimum_year, minimum_month) = proceedingsSeries.GetMinimumYearAndMonth();
-
-
-                        var proceedingsSeriesDummyDOI = DOIFunctions.CreateDummyDOI("proceedings_series", proceedingsSeriesTitle);
-                        if (!DOICacheInfoDict.ContainsKey(proceedingsSeriesDummyDOI))
-                        {
-                            DOICacheInfoFunctions.CreateProceedingsSeriesDummyDOIElement(DummyDOIElementDict, DOICacheInfoDict, proceedingsSeriesDummyDOI, proceedings, minimum_year.ToString(), minimum_month.ToString());
-                        }
-
-                        if (!DOICacheInfoDict.ContainsKey(proceedingsDOI))
-                        {
-                            DOICacheInfoFunctions.CreateProceedingsDummyDOIElement(doiElementDict, DummyDOIElementDict, DOICacheInfoDict, proceedingsDOI, proceedingsName, proceedingsSeriesDummyDOI);
-                        }
-
-
-
-
-                        if (v.ModifiedContainerDOI.Length > 0)
-                        {
-
-                            //var proceedingsDOI = v.ProperContainerDOI;
-                            //Console.WriteLine("Proceedings DOI: " + proceedingsDOI);
-                            if (DOICacheInfoDict.ContainsKey(proceedingsDOI))
-                            {
-                                var proceedingsCache = DOICacheInfoDict[proceedingsDOI];
-                                if (proceedingsCache.ModifiedTitle != proceedingsName && proceedingsCache.ModifiedContainerDOI != proceedingsSeriesDummyDOI)
-                                {
-                                    proceedingsCache.ModifiedTitle = proceedingsName;
-                                    proceedingsCache.ModifiedContainerDOI = proceedingsSeriesDummyDOI;
-                                    proceedingsCache.ModifiedType = "ConferenceProceeding";
-                                    proceedingsCache.ModifiedContainerDOIType = "DBLP";
-                                }
-
-                            }
-                        }
-                        else
-                        {
-                            v.ModifiedContainerDOI = proceedingsDOI;
-                            v.ModifiedContainerDOIType = "DBLP";
-                            v.ModifiedType = "Proceedings-Article";
-
-
-
-                        }
-
-
-
-
-                        //proceedingsSeries.
-                    }
-
+                    SmallCacheSummaryFunctions.UpdateProcessForProceedingsArticle(doiElement, doiElementDict, this, dblpSeriesDictionary);
                 }
 
 
             });
 
-            DOICacheInfoDict.Values.ToList().ForEach((v) =>
-                {
-                    if (doiElementDict.ContainsKey(v.DOI))
-                    {
-                        var doiElement = doiElementDict[v.DOI];
-                        if (v.ModifiedType.Length == 0 && v.ModifiedContainerDOI.Length > 0 && doiElementDict.ContainsKey(v.ModifiedContainerDOI))
-                        {
-                            var properContainerDOICacheInfo = DOICacheInfoDict[v.ModifiedContainerDOI];
-                            if (properContainerDOICacheInfo.ModifiedType == "ConferenceProceeding")
-                            {
-                                v.ModifiedType = "Proceedings-Article";
-                            }
-                            else if (properContainerDOICacheInfo.ModifiedType == "Book")
-                            {
-                                v.ModifiedType = "Book-Chapter";
-                            }
-                            else if (properContainerDOICacheInfo.ModifiedType == "ReferenceBook")
-                            {
-                                v.ModifiedType = "ReferenceBook-Chapter";
-                            }
-                            else if (properContainerDOICacheInfo.ModifiedType == "Monograph")
-                            {
-                                v.ModifiedType = "Monograph-Chapter";
-                            }
-                        }
-                    }
-
-
-
-                });
-
-            /*
-
-        var dummyDOIList = DummyDOIElementDict.Keys.ToList();
-        dummyDOIList.ForEach((v) =>
-        {
-            if (doiElementDict.ContainsKey(v))
-            {
-                DummyDOIElementDict.Remove(v);
-            }
-        });
-        */
-
-
-
-
-
             CommonFunctions.DecrementParagraphCounter();
             CommonFunctions.OutputSystemMessageFunction("Updating Modified Title UsingDBLP [END]");
         }
 
-        public void ModifyType(string dataFolderPath)
+        public void UpdateTypeByCrossRef(string dataFolderPath)
         {
             CommonFunctions.OutputSystemMessageFunction("Modifying Type [START]");
             CommonFunctions.IncrementParagraphCounter();
@@ -466,8 +338,11 @@ namespace DataProcessor
             crossRefMapper["posted-content"] = "PostedContent";
             crossRefMapper["book-chapter"] = "Book-Chapter";
             crossRefMapper["proceedings-article"] = "Proceedings-Article";
+            crossRefMapper["book"] = "Book";
+            crossRefMapper["reference-book"] = "ReferenceBook";
+            crossRefMapper["monograph"] = "Monograph";
 
-            DOICacheInfoDict.Values.ToList().ForEach((v) =>
+            SmallCacheSummaryRecordDict.Values.ToList().ForEach((v) =>
             {
                 var doiElement = doiElementDict[v.DOI];
                 if (v.ModifiedType.Length == 0)
@@ -477,10 +352,13 @@ namespace DataProcessor
                         if (crossRefMapper.ContainsKey(doiElement.Type))
                         {
                             v.ModifiedType = crossRefMapper[doiElement.Type];
+                            this.SmallCacheSummaryLogFile.WriteLine($"Updated Type By CrossRef: {v.DOI} -> {v.ModifiedType}");
                         }
                     }
                 }
             });
+
+
 
             CommonFunctions.DecrementParagraphCounter();
             CommonFunctions.OutputSystemMessageFunction("Modifying Type [END]");
@@ -497,16 +375,17 @@ namespace DataProcessor
 
             doiElementDict.Values.ToList().ForEach((v) =>
             {
-                if (DOICacheInfoDict.ContainsKey(v.DOI))
+                if (SmallCacheSummaryRecordDict.ContainsKey(v.DOI))
                 {
-                    var w = DOICacheInfoDict[v.DOI];
+                    var w = SmallCacheSummaryRecordDict[v.DOI];
 
                     if (w.DOIRank == 0)
                     {
-                        if (w.ModifiedContainerDOI.Length > 0 && !DOICacheInfoDict.ContainsKey(w.ModifiedContainerDOI))
+                        if (w.ModifiedContainerDOI.Length > 0 && !SmallCacheSummaryRecordDict.ContainsKey(w.ModifiedContainerDOI))
                         {
-                            DOICacheInfoDict[w.ModifiedContainerDOI] = new DOICacheInfo() { DOI = w.ModifiedContainerDOI, DOIRank = 1 };
+                            SmallCacheSummaryRecordDict[w.ModifiedContainerDOI] = new SmallCacheSummaryRecord() { DOI = w.ModifiedContainerDOI, DOIRank = 1 };
                             this.DummyDOIElementDict[w.ModifiedContainerDOI] = new DOIElement() { DOI = w.ModifiedContainerDOI, Source = "Unknown", IsPrimary = false };
+                            this.SmallCacheSummaryLogFile.WriteLine($"Added Dummy DOI by ModifiedContainerDOI in InsertDOICacheInfoUsingSecondaryDOI: {w.ModifiedContainerDOI}");
                         }
 
 
@@ -514,10 +393,12 @@ namespace DataProcessor
                         {
                             referenceDOI = doiAliasListMapper.ContainsKey(referenceDOI) ? doiAliasListMapper[referenceDOI] : referenceDOI;
 
-                            if (!DOICacheInfoDict.ContainsKey(referenceDOI))
+                            if (!SmallCacheSummaryRecordDict.ContainsKey(referenceDOI))
                             {
-                                DOICacheInfoDict[referenceDOI] = new DOICacheInfo() { DOI = referenceDOI, DOIRank = 1 };
+                                SmallCacheSummaryRecordDict[referenceDOI] = new SmallCacheSummaryRecord() { DOI = referenceDOI, DOIRank = 1 };
                                 this.DummyDOIElementDict[referenceDOI] = new DOIElement() { DOI = referenceDOI, Source = "Unknown", IsPrimary = false };
+                                this.SmallCacheSummaryLogFile.WriteLine($"Added Dummy DOI by referenceDOI in InsertDOICacheInfoUsingSecondaryDOI: {referenceDOI}");
+
                             }
                         });
 

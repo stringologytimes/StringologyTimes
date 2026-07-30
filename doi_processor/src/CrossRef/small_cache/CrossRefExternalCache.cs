@@ -41,7 +41,7 @@ namespace DataProcessor
 
 
 
-        public static async Task Update(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache, string mailAddress)
+        public static async Task Update(string dataFolderPath, IDictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache, string mailAddress)
         {
             CommonFunctions.OutputSystemMessageFunction("Building CrossRefExternalFoundDOICache [START]");
             CommonFunctions.IncrementParagraphCounter();
@@ -119,7 +119,7 @@ namespace DataProcessor
             CommonFunctions.OutputSystemMessageFunction("Building CrossRefExternalFoundDOICache [END]");
         }
 
-        public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache)
+        public static void UpdateDOICache(IDictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache)
         {
             doiCacheInfoDict.Values.ToList().ForEach((v) =>
             {

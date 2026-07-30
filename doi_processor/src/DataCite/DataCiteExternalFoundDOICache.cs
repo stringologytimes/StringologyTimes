@@ -47,7 +47,7 @@ namespace DataProcessor
             CSVFunctions.WriteCSVAsDictionary(dicPath, dataCiteNotFoundDic);
         }
 
-        public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, DataCiteSmallCache dataCiteSmallCache)
+        public static void UpdateDOICache(IDictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict, DataCiteSmallCache dataCiteSmallCache)
         {
 
             doiCacheInfoDict.Values.ToList().ForEach((v) =>
@@ -71,7 +71,7 @@ namespace DataProcessor
                 }
             });
         }
-        public static async Task Build(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, DataCiteSmallCache dataCiteSmallCache, string mailAddress)
+        public static async Task Build(string dataFolderPath, IDictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict, DataCiteSmallCache dataCiteSmallCache, string mailAddress)
         {
             CommonFunctions.OutputSystemMessageFunction("Building DataCite External Found DOI Cache [START]");
             CommonFunctions.IncrementParagraphCounter();

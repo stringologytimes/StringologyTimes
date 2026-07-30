@@ -50,7 +50,7 @@ namespace DataProcessor
 
 
 
-        public static async Task UpdateSmallCache(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, DataCiteSmallCache dataCiteSmallCache, string mailAddress)
+        public static async Task UpdateSmallCache(string dataFolderPath, IDictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict, DataCiteSmallCache dataCiteSmallCache, string mailAddress)
         {
             CommonFunctions.OutputSystemMessageFunction("Updating SmallCache(DataCite) [START]");
             CommonFunctions.IncrementParagraphCounter();

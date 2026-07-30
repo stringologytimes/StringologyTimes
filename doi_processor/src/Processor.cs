@@ -129,12 +129,12 @@ namespace DataProcessor
                 throw new Exception("Small cache summary file not found: " + smallCacheSummaryFilePath);
             }
 
-            Dictionary<string, DOICacheInfo> doiCacheInfoDict = DOICacheInfo.Load(smallCacheSummaryFilePath);
+            Dictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict = SmallCacheSummaryRecord.Load(smallCacheSummaryFilePath);
             if (File.Exists(smallCacheSummaryFilePath))
             {
-                doiCacheInfoDict = DOICacheInfo.Load(smallCacheSummaryFilePath);
+                doiCacheInfoDict = SmallCacheSummaryRecord.Load(smallCacheSummaryFilePath);
             }
-            var doiElementDict = DOICacheInfo.BuildDOIElementDictionary(opts.DataFolderPath, doiCacheInfoDict);
+            var doiElementDict = SmallCacheSummaryRecord.BuildDOIElementDictionary(opts.DataFolderPath, doiCacheInfoDict);
 
 
 

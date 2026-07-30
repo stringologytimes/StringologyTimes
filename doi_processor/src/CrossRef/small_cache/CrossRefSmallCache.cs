@@ -25,7 +25,7 @@ namespace DataProcessor
             CSVFunctions.WriteCSVAsDictionary(crossRefNotFoundDicPath, notFoundCacheDic);
         }
 
-        public Dictionary<string, DOIElement> LoadSmallCache(string dataFolderPath,IDictionary<string, DOICacheInfo> doiCacheInfoDict)
+        public Dictionary<string, DOIElement> LoadSmallCache(string dataFolderPath,IDictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict)
         {
             var logFilePath = dataFolderPath + "/auto_generated/log/load_small_cache.log";
             var logFile = new StreamWriter(logFilePath, true);

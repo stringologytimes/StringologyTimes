@@ -66,7 +66,7 @@ namespace DataProcessor
         }
 
 
-        public static async Task UpdateSmallCache(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache, string mailAddress)
+        public static async Task UpdateSmallCache(string dataFolderPath, IDictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache, string mailAddress)
         {
             CommonFunctions.OutputSystemMessageFunction("Updating SmallCache(CrossRef) [START]");
             CommonFunctions.IncrementParagraphCounter();

@@ -25,7 +25,7 @@ namespace DataProcessor
             return dic;
         }
 
-        public static void UpdateDOICacheStatus(IDictionary<string, DOICacheInfo> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache)
+        public static void UpdateDOICacheStatus(IDictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache)
         {
 
             doiCacheInfoDict.Values.ToList().ForEach((v) =>
@@ -39,7 +39,7 @@ namespace DataProcessor
         }
 
 
-        public static void Update(IDictionary<string, DOICacheInfo> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache, string dataFolderPath, string jsonlFolderPath)
+        public static void Update(IDictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict, CrossRefSmallCache crossRefSmallCache, string dataFolderPath, string jsonlFolderPath)
         {
             var logFilePath = dataFolderPath + "/auto_generated/log/update_crossref_found_doi_cache.log";
             var logFile = new StreamWriter(logFilePath, true);

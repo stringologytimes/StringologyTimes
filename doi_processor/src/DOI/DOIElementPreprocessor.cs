@@ -105,15 +105,6 @@ namespace DataProcessor
             throw new Exception("Not implemented");
         }
 
-        private static void WriteChecksum(string dataFolderPath, string checksumFileName, ReadOnlySet<string> doiSet)
-        {
-            var currentChecksumDictionary = new Dictionary<string, string>();
-            currentChecksumDictionary["doiSet_hash"] = HashFunctions.ComputeHash(doiSet);
-            currentChecksumDictionary["date"] = DateTime.Now.ToString("yyyy-MM");
-            var checksumFilePath = dataFolderPath + "/auto_generated/cache/" + checksumFileName;
-            CSVFunctions.WriteCSVAsDictionary(checksumFilePath, currentChecksumDictionary);
-        }
-
         private static bool ChecksumCheck(string dataFolderPath, string checksumFileName, ReadOnlySet<string> doiSet)
         {
             var checksumFilePath = dataFolderPath + "/auto_generated/cache/" + checksumFileName;
@@ -241,7 +232,7 @@ namespace DataProcessor
             {
                 round++;
                 CommonFunctions.OutputSystemMessageFunction("Round: " + round, ConsoleColor.Green);
-                foreach (var v in smallCacheManager.DOICacheInfoDict.Values)
+                foreach (var v in smallCacheManager.SmallCacheSummaryRecordDict.Values)
                 {
                     if (v.SourceCite.Length == 0)
                     {
@@ -250,19 +241,20 @@ namespace DataProcessor
                 }
 
 
-                await DataProcessor.CrossRefCacheBuilder.UpdateSmallCache(dataFolderPath, smallCacheManager.DOICacheInfoDict, smallCacheManager.CrossRefSmallCache, mailAddress);
-                await DataProcessor.DataCitePreprocessor.UpdateSmallCache(dataFolderPath, smallCacheManager.DOICacheInfoDict, smallCacheManager.DataCiteSmallCache, mailAddress);
+                await DataProcessor.CrossRefCacheBuilder.UpdateSmallCache(dataFolderPath, smallCacheManager.SmallCacheSummaryRecordDict, smallCacheManager.CrossRefSmallCache, mailAddress);
+                await DataProcessor.DataCitePreprocessor.UpdateSmallCache(dataFolderPath, smallCacheManager.SmallCacheSummaryRecordDict, smallCacheManager.DataCiteSmallCache, mailAddress);
                 smallCacheManager.MergeCheck();                
                 smallCacheManager.UpdateContainerDOI(dataFolderPath);
                 smallCacheManager.UpdateModifiedTitleUsingDBLP(dataFolderPath, dblpSeriesDictionary);
                 smallCacheManager.InsertDOICacheInfoUsingSecondaryDOI(dataFolderPath);
-                smallCacheManager.ModifyType(dataFolderPath);
+                smallCacheManager.UpdateTypeByContainer(dataFolderPath, dblpSeriesDictionary);
+                smallCacheManager.UpdateTypeByCrossRef(dataFolderPath);
                 smallCacheManager.CacheConnectionCheck();
                 //smallCacheManager.InsertDOICacheInfoUsingContainerDOI(dataFolderPath);
                 //UpdateDummyDOI(dataFolderPath, smallCacheManager.DOICacheInfoDict);
 
 
-                int unknownCounter = smallCacheManager.DOICacheInfoDict.Values.Count(v => v.SourceStatus == "");
+                int unknownCounter = smallCacheManager.SmallCacheSummaryRecordDict.Values.Count(v => v.SourceStatus == "");
                 if (unknownCounter == 0) { break; }
                 Console.WriteLine("Waiting for update... " + unknownCounter + " unknown DOIs");
 
@@ -273,9 +265,9 @@ namespace DataProcessor
                 var doiElementDict = smallCacheManager.CreateDOIElementDictionaryFromSmallCache(dataFolderPath);
                 doiElementDict.Values.ToList().ForEach((v) =>
                 {
-                    if (smallCacheManager.DOICacheInfoDict.ContainsKey(v.DOI))
+                    if (smallCacheManager.SmallCacheSummaryRecordDict.ContainsKey(v.DOI))
                     {
-                        var w = smallCacheManager.DOICacheInfoDict[v.DOI];
+                        var w = smallCacheManager.SmallCacheSummaryRecordDict[v.DOI];
                         w.ISList.Clear();
                         v.ISBNList.ForEach((isbn) =>
                         {
@@ -326,9 +318,8 @@ namespace DataProcessor
             await MainLoop(dataFolderPath, mailAddress, smallCacheManager, crossRefDOIPrefixSet, dataCiteDOIPrefixSet);
 
 
-            DOIElement.Save(smallCacheManager.DummyDOIElementDict, DummyCacheManager.GetDummyCacheFilePath(dataFolderPath));
-            DOICacheInfo.Save(smallCacheManager.DOICacheInfoDict, doiCacheInfoFilePath);
-            WriteChecksum(dataFolderPath, checksumFileName, primaryDOISet);
+
+            smallCacheManager.Close(primaryDOISet, checksumFileName);
 
             Console.WriteLine("Building SmallCache [END]");
         }

@@ -24,7 +24,7 @@ namespace DataProcessor
             var dic = JsonLib.LoadJSONLAsDictionary(dicPath, "id");
             return dic;
         }
-        public static void UpdateDOICache(IDictionary<string, DOICacheInfo> doiCacheInfoDict, DataCiteSmallCache dataCiteSmallCache)
+        public static void UpdateDOICache(IDictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict, DataCiteSmallCache dataCiteSmallCache)
         {
 
             doiCacheInfoDict.Values.ToList().ForEach((v) =>
@@ -44,7 +44,7 @@ namespace DataProcessor
 
 
 
-        public static void Update(IDictionary<string, DOICacheInfo> doiCacheInfoDict, DataCiteSmallCache dataCiteSmallCache, string dataFolderPath, string jsonlFolderPath)
+        public static void Update(IDictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict, DataCiteSmallCache dataCiteSmallCache, string dataFolderPath, string jsonlFolderPath)
         {
 
             var logFilePath = dataFolderPath + "/auto_generated/log/update_datacite_found_doi_cache.log";

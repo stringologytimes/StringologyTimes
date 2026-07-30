@@ -7,10 +7,11 @@ using System.Text.Json;
 using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using System.Runtime.CompilerServices;
 namespace DataProcessor
 {
 
-    public class DOICacheInfo
+    public class SmallCacheSummaryRecord
     {
         public string DOI { get; set; } = "";
         public string SourceCite { get; set; } = "";
@@ -24,6 +25,50 @@ namespace DataProcessor
         public string ModifiedType { get; set; } = "";
         public string ModifiedContainerDOI { get; set; } = "";
         public string ModifiedContainerDOIType { get; set; } = "";
+
+        public bool IsPreprint
+        {
+            get{return this.ModifiedType == "Preprint";}
+        }
+
+        public static string GetSmallCacheSummaryFilePath()
+        {
+            var smallCacheSummaryFilePath = Program.DataFolderPath + "/auto_generated/cache/small_cache_summary.jsonl";
+            if (!File.Exists(smallCacheSummaryFilePath))
+            {
+                File.Create(smallCacheSummaryFilePath).Close();
+            }
+            return smallCacheSummaryFilePath;
+        }
+        public static string GetSmallCacheSummaryLogPath()
+        {
+            var smallCacheSummaryLogPath = Program.DataFolderPath + "/auto_generated/log/small_cache_summary.log";
+            if (!File.Exists(smallCacheSummaryLogPath))
+            {
+                File.Create(smallCacheSummaryLogPath).Close();
+            }
+            return smallCacheSummaryLogPath;
+        }
+
+        public void UpdateForProceedings(string proceedingsSeriesTitle, int proceedingsYear, string proceedingsSeriesDummyDOI, StreamWriter logFile)
+        {
+            var proceedingsName = proceedingsSeriesTitle + "(" + proceedingsYear + ")";
+
+            this.ModifiedTitle = proceedingsName;
+
+            this.ModifiedContainerDOI = proceedingsSeriesDummyDOI;
+            this.ModifiedType = "ConferenceProceeding";
+            this.ModifiedContainerDOIType = "DBLP";
+            logFile.WriteLine($"Updated Proceedings: {this.DOI} -> {this.ModifiedTitle} -> {this.ModifiedContainerDOI} -> {this.ModifiedContainerDOIType} -> {this.ModifiedType}");
+        }
+
+        public void UpdateForProceedingsArticle(string proceedingsDOI, StreamWriter logFile)
+        {
+            this.ModifiedContainerDOI = proceedingsDOI;
+            this.ModifiedContainerDOIType = "DBLP";
+            this.ModifiedType = "Proceedings-Article";
+            logFile.WriteLine($"Updated Proceedings Article: {this.DOI} -> {this.ModifiedContainerDOI} -> {this.ModifiedContainerDOIType} -> {this.ModifiedType}");
+        }
 
 
 
@@ -44,13 +89,13 @@ namespace DataProcessor
                         */
         }
 
-        public static Dictionary<string, DOICacheInfo> Load(string doiCacheInfoFilePath)
+        public static Dictionary<string, SmallCacheSummaryRecord> Load(string doiCacheInfoFilePath)
         {
-            var doiCacheInfoDict = new Dictionary<string, DOICacheInfo>();
+            var doiCacheInfoDict = new Dictionary<string, SmallCacheSummaryRecord>();
             var jsonLString = File.ReadAllText(doiCacheInfoFilePath);
             jsonLString.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList().ForEach((v) =>
             {
-                var doiCacheInfo = JsonSerializer.Deserialize<DOICacheInfo>(v);
+                var doiCacheInfo = JsonSerializer.Deserialize<SmallCacheSummaryRecord>(v);
                 if (doiCacheInfo != null)
                 {
                     doiCacheInfoDict[doiCacheInfo.DOI] = doiCacheInfo;
@@ -59,7 +104,7 @@ namespace DataProcessor
             return doiCacheInfoDict;
         }
 
-        public static void Save(Dictionary<string, DOICacheInfo> doiCacheInfoDict, string doiCacheInfoFilePath)
+        public static void Save(Dictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict, string doiCacheInfoFilePath)
         {
             var copyList = doiCacheInfoDict.Values.ToList();
             copyList.Sort((a, b) => a.DOI.CompareTo(b.DOI));
@@ -178,7 +223,7 @@ namespace DataProcessor
 
 
 
-        public static Dictionary<string, DOIElement> BuildDOIElementDictionary(string dataFolderPath, IDictionary<string, DOICacheInfo> doiCacheInfoDict)
+        public static Dictionary<string, DOIElement> BuildDOIElementDictionary(string dataFolderPath, IDictionary<string, SmallCacheSummaryRecord> doiCacheInfoDict)
         {
             var crossRefFoundDOIFilePath = dataFolderPath + "/auto_generated/cache/crossref_cache/small_cache/found_doi.jsonl";
             var crossRefFoundExternalDOIFilePath = dataFolderPath + "/auto_generated/cache/crossref_cache/small_cache/found_external_doi.jsonl";

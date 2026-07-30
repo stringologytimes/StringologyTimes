@@ -44,54 +44,39 @@ namespace DataProcessor
         public List<string> DOIReferences { get; set; } = new List<string>();
         public List<string> UnknownReferences { get; set; } = new List<string>();
 
-
-
-       
-
-        /*
-        private static int CountChar(string s, char c)
+        public bool IsJournalArticle
         {
-            if (s is null) return 0;
-            int count = 0;
-            foreach (var ch in s)
-                if (ch == c) count++;
-            return count;
+            get{return this.Type == "journal-article";}
         }
-        */
-        /*
-        public string ToJSONLine()
+        public bool IsPostedContent
         {
-            List<string> dataList = new List<string>();
-            dataList.Add(JsonSerializer.Serialize(this.DOI));
-            dataList.Add(JsonSerializer.Serialize(this.Type));
-            dataList.Add(JsonSerializer.Serialize(this.Title));
-            dataList.Add(JsonSerializer.Serialize(this.Year));
-            dataList.Add(JsonSerializer.Serialize(this.Month));
-            dataList.Add(JsonSerializer.Serialize(this.SeriesTitle));
-            dataList.Add(JsonSerializer.Serialize(this.ContainerDOI));
-            dataList.Add(JsonSerializer.Serialize(this.ContainerTitle));
-            dataList.Add(JsonSerializer.Serialize(this.Volume));
-            dataList.Add(JsonSerializer.Serialize(this.Source));
-            dataList.Add(JsonSerializer.Serialize(this.IsPrimary));
-
-
-            List<string> authorStringList = new List<string>();
-            this.Authors.ForEach((v) =>
-            {
-                authorStringList.Add(v.to_JSON_Line());
-            });
-            var authorString = "[" + string.Join(",", authorStringList) + "]";
-            dataList.Add(authorString);
-
-            dataList.Add(JsonSerializer.Serialize(this.Tags.ToArray()));
-            dataList.Add(JsonSerializer.Serialize(this.DOIReferences.ToArray()));
-            dataList.Add(JsonSerializer.Serialize(this.UnknownReferences.ToArray()));
-            dataList.Add(JsonSerializer.Serialize(this.ISBNList.ToArray()));
-            dataList.Add(JsonSerializer.Serialize(this.ISSNList.ToArray()));
-            string dataString = "[" + string.Join(",", dataList) + "]";
-            return dataString;
+            get{return this.Type == "posted-content";}
         }
-        */
+        public bool IsPreprint
+        {
+            get{return this.Type == "Preprint";}
+        }
+        public bool IsProceedingsArticle
+        {
+            get{return this.Type == "proceedings-article" || this.Type == "ConferencePaper";}
+        }
+        public bool IsBookChapter
+        {
+            get{return this.Type == "book-chapter";}
+        }
+        public bool IsBook
+        {
+            get{return this.Type == "book" || this.Type == "Book";}
+        }
+        public bool IsReferenceBook
+        {
+            get{return this.Type == "reference-book" || this.Type == "ReferenceBook";}
+        }
+        public bool IsMonograph
+        {
+            get{return this.Type == "monograph" || this.Type == "Monograph";}
+        }
+
 
         public string GetVolumeIssueString()
         {
@@ -113,7 +98,7 @@ namespace DataProcessor
         }
         
 
-        public void UpdateContainerDOI(DOICacheInfo v)
+        public void UpdateContainerDOI(SmallCacheSummaryRecord v)
         {
             if (this.ContainerDOI.Length == 0 && v.ModifiedContainerDOI.Length > 0)
             {
