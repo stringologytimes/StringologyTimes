@@ -46,7 +46,7 @@ namespace DataProcessor
 
         }
 
-        public static void CreateProceedingsDummyDOIElement(string proceedingsDOI, string proceedingsName, string containerDOI, IDictionary<string, DOIElement> doiElementDict, SmallCacheManager manager)
+        public static void CreateProceedingsDummyDOIElement(string proceedingsDOI, string proceedingsName, string containerDOI, int year, int month, IDictionary<string, DOIElement> doiElementDict, SmallCacheManager manager)
         {
             if (!manager.DummyDOIElementDict.ContainsKey(proceedingsDOI) && !doiElementDict.ContainsKey(proceedingsDOI))
             {
@@ -58,10 +58,16 @@ namespace DataProcessor
                     Source = "DUMMY",
                     IsPrimary = false,
                     Type = "Proceedings",
-                    ContainerDOI = containerDOI
+                    ContainerDOI = containerDOI,
+                    Year = year.ToString(),
+                    Month = month.ToString()
                 };
 
-                manager.DummyDOIElementDict[proceedingsDOI] = proceedingsDummyDOIElement;
+                if (!manager.DummyDOIElementDict.ContainsKey(proceedingsDOI))
+                {
+                    manager.DummyDOIElementDict[proceedingsDOI] = proceedingsDummyDOIElement;
+                }
+
 
 
             }
@@ -160,8 +166,9 @@ namespace DataProcessor
             manager.SmallCacheSummaryLogFile.WriteLine($"Added Journal Issue Dummy DOI in DOICacheInfoFunctions: {journalIssueDummyDOI}");
         }
 
-        public static int ComputeProceedingsYear(int? proceedingsYear, string doiYear)
+        public static KeyValuePair<int, int> ComputeProceedingsYear(int? proceedingsYear, int? proceedingsMonth, string doiYear, string doiMonth)
         {
+            var proceedingsMonth_ = proceedingsMonth.HasValue ? proceedingsMonth.Value : 0;
 
             if (proceedingsYear != null)
             {
@@ -171,27 +178,27 @@ namespace DataProcessor
                     var doiYearInt = int.Parse(doiYear);
                     if (proceedingsYear.Value > doiYearInt)
                     {
-                        return doiYearInt;
+                        return new KeyValuePair<int, int>(doiYearInt, int.Parse(doiMonth));
                     }
                     else
                     {
-                        return proceedingsYear.Value;
+                        return new KeyValuePair<int, int>(proceedingsYear.Value, proceedingsMonth_);
                     }
 
                 }
                 else
                 {
-                    return proceedingsYear.Value;
+                    return new KeyValuePair<int, int>(proceedingsYear.Value, proceedingsMonth_);
                 }
 
             }
             else if (doiYear.Length > 0)
             {
-                return int.Parse(doiYear);
+                return new KeyValuePair<int, int>(int.Parse(doiYear), int.Parse(doiMonth));
             }
             else
             {
-                return 0;
+                return new KeyValuePair<int, int>(0, 0);
             }
 
 
@@ -213,13 +220,14 @@ namespace DataProcessor
                 var proceedingsSeries = dblpSeriesDictionary.Series[seriesTitleAndKey.Value.Key];
                 var proceedings = proceedingsSeries.GetProceedings(seriesTitleAndKey.Value.Value);
                 var proceedingsSeriesTitle = proceedingsSeries.SeriesTitle;
-                var proceedingsYear = SmallCacheSummaryFunctions.ComputeProceedingsYear(proceedings.Year, doiElement.Year);
-                var proceedingsName = proceedings.SeriesTitle;
+                var proceedingsYearAndMonth = SmallCacheSummaryFunctions.ComputeProceedingsYear(proceedings.Year, proceedings.Month, doiElement.Year, doiElement.Month);
+                var proceedingsNameWithYear = proceedings.SeriesTitle + "(" + proceedingsYearAndMonth.Key + ")";
+
 
                 var proceedingsDOI = doiElement.ContainerDOI;
                 if (proceedingsDOI.Length == 0)
                 {
-                    proceedingsDOI = proceedings.DOI.Length > 0 ? proceedings.DOI : DOIFunctions.CreateDummyDOI("proceedings", proceedingsName);
+                    proceedingsDOI = proceedings.DOI.Length > 0 ? proceedings.DOI : DOIFunctions.CreateDummyDOI("proceedings", proceedingsNameWithYear);
                 }
 
                 var (minimum_year, minimum_month) = proceedingsSeries.GetMinimumYearAndMonth();
@@ -233,13 +241,13 @@ namespace DataProcessor
 
                 if (!manager.SmallCacheSummaryRecordDict.ContainsKey(proceedingsDOI) && record.DOIRank == 0)
                 {
-                    SmallCacheSummaryFunctions.CreateProceedingsDummyDOIElement(proceedingsDOI, proceedingsName, proceedingsSeriesDummyDOI, doiElementDict, manager);
+                    SmallCacheSummaryFunctions.CreateProceedingsDummyDOIElement(proceedingsDOI, proceedingsNameWithYear, proceedingsSeriesDummyDOI, proceedingsYearAndMonth.Key, proceedingsYearAndMonth.Value, doiElementDict, manager);
                 }
 
                 if (manager.SmallCacheSummaryRecordDict.ContainsKey(proceedingsDOI))
                 {
                     var proceedingsCache = manager.SmallCacheSummaryRecordDict[proceedingsDOI];
-                    proceedingsCache.UpdateForProceedings(proceedingsName, proceedingsYear, proceedingsSeriesDummyDOI, manager.SmallCacheSummaryLogFile);
+                    proceedingsCache.UpdateForProceedings(proceedingsNameWithYear, proceedingsYearAndMonth.Key, proceedingsSeriesDummyDOI, manager.SmallCacheSummaryLogFile);
                 }
 
                 if (record.ModifiedContainerDOI.Length == 0)

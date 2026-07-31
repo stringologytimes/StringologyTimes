@@ -1,7 +1,7 @@
 import { DOIFilter } from "./doi_filter";
 import { DOIFilterResult } from "./doi_filter_result";
 import { SummaryInfo } from "./summary_info";
-import { DOIInfoCollection } from "../doi_record_collection";
+import { DOIRecordCollection } from "../doi_record_collection";
 import { DOIFilterQuery } from "./doi_filter_query";
 
 export class DOIResultCache {
@@ -16,7 +16,7 @@ export class DOIResultCache {
     //private cacheAssociatedWithDOIQueryHash = new Map<string, [DOIFilterResult, SummaryInfo]>();
     
 
-    public initialize(doiInfoCollection: DOIInfoCollection, currentDOIFilter: DOIFilter): void {
+    public initialize(doiInfoCollection: DOIRecordCollection, currentDOIFilter: DOIFilter): void {
         this.doiFilterResultCache.clear();
         this.summaryInfoCache.clear();
 
@@ -35,7 +35,7 @@ export class DOIResultCache {
     
 
 
-    public search(doiInfoCollection: DOIInfoCollection, currentDOIFilter: DOIFilter) : [DOIFilterResult, SummaryInfo] {
+    public search(doiInfoCollection: DOIRecordCollection, currentDOIFilter: DOIFilter) : [DOIFilterResult, SummaryInfo] {
         var queryHash = currentDOIFilter.query.getHash();
         var b1 = this.doiFilterResultCache.has(queryHash);
 
@@ -103,7 +103,7 @@ export class DOIResultCache {
     }
 
 
-    public processCurrentDOIFilterInput(doiInfoCollection: DOIInfoCollection, currentDOIFilter: DOIFilter): void {
+    public processCurrentDOIFilterInput(doiInfoCollection: DOIRecordCollection, currentDOIFilter: DOIFilter): void {
 
         const currentDOIFilterWithViewSetting = currentDOIFilter.copy();
         const hash = currentDOIFilterWithViewSetting.getHash();

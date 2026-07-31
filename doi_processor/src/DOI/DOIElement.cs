@@ -9,6 +9,7 @@ using System.Globalization;
 
 namespace DataProcessor
 {
+    
     public class DOIElement
     {
         public string DOI { get; set; } = "";

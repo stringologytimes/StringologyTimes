@@ -274,8 +274,8 @@ namespace DataProcessor
                     var key = dblpSeriesDictionary.ProceedingsDOIToKeyMapper[doiElement.DOI];
                     var proceedings = dblpSeriesDictionary.GetProceedings(key);
                     var proceedingsSeries = dblpSeriesDictionary.Series[proceedings.SeriesTitle];
-                    var proceedingsYear = SmallCacheSummaryFunctions.ComputeProceedingsYear(proceedings.Year, doiElement.Year);
-                    var proceedingsName = proceedings.SeriesTitle + "(" + proceedingsYear + ")";
+                    var proceedingsYearAndMonth = SmallCacheSummaryFunctions.ComputeProceedingsYear(proceedings.Year, proceedings.Month, doiElement.Year, doiElement.Month);
+                    var proceedingsName = proceedings.SeriesTitle + "(" + proceedingsYearAndMonth.Key + ")";
                     var proceedingsSeriesDummyDOI = DOIFunctions.CreateDummyDOI("proceedings_series", proceedings.SeriesTitle);
                     var (minimum_year, minimum_month) = proceedingsSeries.GetMinimumYearAndMonth();
 

@@ -1,5 +1,5 @@
 import { DOIRecord } from "../doi_record";
-import { DOIInfoCollection } from "../doi_record_collection";
+import { DOIRecordCollection } from "../doi_record_collection";
 import { DOIStatus } from "../doi_record";
 import { DOIFilterResult } from "./doi_filter_result";
 
@@ -59,14 +59,14 @@ export class DOIFilterQuery {
     */
 
     
-    private filter(collection: DOIInfoCollection, candidates: number[]): number[] {
+    private filter(collection: DOIRecordCollection, candidates: number[]): number[] {
         return candidates.filter(candidate => {
             const doiInfo = collection.getDOIInfo(candidate);
             return this.contain(doiInfo);
         });
     }
 
-    public search(doiInfoCollectionFilter: DOIFilterResult, collection: DOIInfoCollection): number[] {
+    public search(doiInfoCollectionFilter: DOIFilterResult, collection: DOIRecordCollection): number[] {
         let r: number[] = doiInfoCollectionFilter.doiIDs.map(doiID => doiID);
         return this.filter(collection, r);
     }

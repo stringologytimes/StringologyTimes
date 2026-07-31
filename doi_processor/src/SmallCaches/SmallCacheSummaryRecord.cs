@@ -50,12 +50,9 @@ namespace DataProcessor
             return smallCacheSummaryLogPath;
         }
 
-        public void UpdateForProceedings(string proceedingsSeriesTitle, int proceedingsYear, string proceedingsSeriesDummyDOI, StreamWriter logFile)
+        public void UpdateForProceedings(string proceedingsNameWithYear, int proceedingsYear, string proceedingsSeriesDummyDOI, StreamWriter logFile)
         {
-            var proceedingsName = proceedingsSeriesTitle + "(" + proceedingsYear + ")";
-
-            this.ModifiedTitle = proceedingsName;
-
+            this.ModifiedTitle = proceedingsNameWithYear;
             this.ModifiedContainerDOI = proceedingsSeriesDummyDOI;
             this.ModifiedType = "ConferenceProceeding";
             this.ModifiedContainerDOIType = "DBLP";

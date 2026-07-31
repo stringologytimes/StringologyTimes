@@ -1,6 +1,6 @@
 import { DOIFilterResult } from "./doi_filter_result";
 import { DOIFilterQuery } from "./doi_filter_query";
-import { DOIInfoCollection } from "../doi_record_collection";
+import { DOIRecordCollection } from "../doi_record_collection";
 
 export class SummaryInfo {
     public doiCount: number = 0;
@@ -18,7 +18,7 @@ export class SummaryInfo {
     public tagList: string[] = [];
     public tagCountList: number[] = [];
 
-    public build(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIInfoCollection){
+    public build(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIRecordCollection){
         this.doiCount = filterResult.doiIDs.length;
         this.doiCategoryList = filterResult.getTypes();
         this.doiCategoryList.sort();

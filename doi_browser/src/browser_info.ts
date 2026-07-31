@@ -1,9 +1,9 @@
-import { DOIInfoCollection } from "./doi_record_collection";
+import { DOIRecordCollection } from "./doi_record_collection";
 import { DOIFilterResult } from "./doi_filter/doi_filter_result";
 import { DOIFilter } from "./doi_filter/doi_filter";
 import { SummaryInfo } from "./doi_filter/summary_info";
-import { renderFilterBox } from "./render/doi_filter_box_render";
-import { renderViewSettingBox } from "./render/view_setting_box_render";
+import { renderFilterBox } from "./render/settings/doi_filter_box_render";
+import { renderViewSettingBox } from "./render/settings/view_setting_box_render";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
 import { renderContainerTitleList } from "./render/doi_filter_container_title_render";
 import { SortByType } from "./doi_filter/doi_filter_query";
@@ -11,17 +11,18 @@ import { DOIStatus } from "./doi_record";
 import { ViewModeType } from "./doi_filter/doi_filter_view_setting";
 import { renderSeriesTitleList } from "./render/doi_filter_series_title_render";
 import { DOIResultCache } from "./doi_filter/doi_result_cache";
+import { ContainerRecordRender } from "./render/container_record_render";
 
 
 export class BrowserInfo {
-    public doiInfoCollection: DOIInfoCollection | null = null;
+    public doiInfoCollection: DOIRecordCollection | null = null;
     //public pageNumber : number = -1;
     //public pageSize : number = 100;
 
     public currentDOIFilter: DOIFilter = new DOIFilter();
     public doiResultCache: DOIResultCache = new DOIResultCache();
 
-    public initialize(doiInfoCollection: DOIInfoCollection): void {
+    public initialize(doiInfoCollection: DOIRecordCollection): void {
         const emptyDOIFilterWithViewSetting = new DOIFilter();
         this.currentDOIFilter = emptyDOIFilterWithViewSetting.copy();
         this.doiInfoCollection = doiInfoCollection;
@@ -174,6 +175,9 @@ export class BrowserInfo {
             else if (currentDOIFilterWithViewSetting.viewSetting.viewMode == "series_title_list") {
                 console.log(currentSummaryInfo);
                 renderSeriesTitleList(currentDOIFilterResult, currentDOIFilterWithViewSetting.viewSetting, currentSummaryInfo);
+            }
+            else if (currentDOIFilterWithViewSetting.viewSetting.viewMode == "group_render") {
+                ContainerRecordRender.render(currentDOIFilterResult, currentDOIFilterWithViewSetting.viewSetting, currentSummaryInfo, this.doiInfoCollection!);
             }
             else {
                 throw new Error("Unknown view mode");

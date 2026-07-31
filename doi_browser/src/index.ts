@@ -1,4 +1,4 @@
-import { DOIInfoCollection } from "./doi_record_collection";
+import { DOIRecordCollection } from "./doi_record_collection";
 import { BrowserInfo } from "./browser_info";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
 import * as EventFunctions from "./event_functions";
@@ -33,7 +33,7 @@ function goToPage(pageNumber: number) {
 async function initialize() {
   await new Promise(resolve => setTimeout(resolve, 1000));
   if (browserInfo.doiInfoCollection == null) {
-    browserInfo.doiInfoCollection = await DOIInfoCollection.load("./lightweight_doi_info");
+    browserInfo.doiInfoCollection = await DOIRecordCollection.load("./lightweight_doi_info");
   }
 
 

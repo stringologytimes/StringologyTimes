@@ -1,4 +1,4 @@
-export type ViewModeType = "article_list" | "container_title_list" | "series_title_list" | "unkonwn";
+export type ViewModeType = "article_list" | "container_title_list" | "series_title_list" | "group_render" | "unkonwn";
 
 export class DOIFilterViewSetting {
     public viewMode: ViewModeType = "article_list";

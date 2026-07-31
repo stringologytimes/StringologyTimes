@@ -1,9 +1,9 @@
-import { DOIFilterResult } from "../doi_filter/doi_filter_result";
-import { DOIInfoCollection } from "../doi_record_collection";
-import { DOIFilterQuery } from "../doi_filter/doi_filter_query";
-import { SummaryInfo } from "../doi_filter/summary_info";
-import { SortByType } from "../doi_filter/doi_filter_query";
-import { getDOIInfoTypeList } from "../doi_record_collection";
+import { DOIFilterResult } from "../../doi_filter/doi_filter_result";
+import { DOIRecordCollection } from "../../doi_record_collection";
+import { DOIFilterQuery } from "../../doi_filter/doi_filter_query";
+import { SummaryInfo } from "../../doi_filter/summary_info";
+import { SortByType } from "../../doi_filter/doi_filter_query";
+import { getDOIInfoTypeList } from "../../doi_record_collection";
 /*
 function getUniqueStringSet(items: string[]): string[] {
   const uniqueSet = new Set<string>();
@@ -258,7 +258,7 @@ function renderKeywordBox(keywords: string[]) {
 }
 
 
-export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIInfoCollection, summaryInfo: SummaryInfo) {
+export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIRecordCollection, summaryInfo: SummaryInfo) {
   console.log("renderFilterBox (size: " + filterResult.doiIDs.length + ")");
 
   const renderStartTime1 = performance.now();  

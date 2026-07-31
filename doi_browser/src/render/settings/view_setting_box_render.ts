@@ -1,10 +1,10 @@
-import { DOIFilterViewSetting } from "../doi_filter/doi_filter_view_setting";
-import { ViewModeType } from "../doi_filter/doi_filter_view_setting";
-import { SummaryInfo } from "../doi_filter/summary_info";
+import { DOIFilterViewSetting } from "../../doi_filter/doi_filter_view_setting";
+import { ViewModeType } from "../../doi_filter/doi_filter_view_setting";
+import { SummaryInfo } from "../../doi_filter/summary_info";
 import { setRadioBoxes } from "./doi_filter_box_render";
 
 function getMaxPageNumber(viewSetting: DOIFilterViewSetting, summary_info: SummaryInfo): number {
-    if(viewSetting.viewMode == "article_list"){
+    if(viewSetting.viewMode == "article_list" || viewSetting.viewMode == "group_render"){
         if(summary_info.doiCount == 0){
             return 0;
         }else{
@@ -30,8 +30,8 @@ function getMaxPageNumber(viewSetting: DOIFilterViewSetting, summary_info: Summa
 }
 
 function setModeSelectHTMLElement(selectedValue: ViewModeType) {
-    const viewModeList = ["article_list", "container_title_list", "series_title_list"];
-    const viewModeValues = ["article_list", "container_title_list", "series_title_list"];
+    const viewModeList = ["article_list", "container_title_list", "series_title_list", "group_render"];
+    const viewModeValues = ["article_list", "container_title_list", "series_title_list", "group_render"];
     setRadioBoxes("view-mode-list-div", "view-mode-template", selectedValue, viewModeList, viewModeValues);
 
     /*
