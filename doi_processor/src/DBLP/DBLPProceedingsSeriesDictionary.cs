@@ -93,54 +93,6 @@ namespace DataProcessor
             }
 
         }
-        /*
-
-        public void BuildDoiToSeriesTitleMapper()
-        {
-            foreach (var element in this.Series)
-            {
-                if (element.Value.SeriesTitle.Length > 0)
-                {
-                    foreach (var proceedings in element.Value.Series)
-                    {
-                        if (proceedings.Value.DOI.Length > 0)
-                        {
-                            if (!this.DoiToSeriesTitleMapper.ContainsKey(proceedings.Value.DOI))
-                            {
-                                this.DoiToSeriesTitleMapper.Add(proceedings.Value.DOI, element.Value.SeriesTitle);
-                            }
-                            else
-                            {
-                                Console.WriteLine("Conflict DOI: " + proceedings.Value.DOI + " -> " + element.Value.SeriesTitle + " vs " + this.DoiToSeriesTitleMapper[proceedings.Value.DOI]);
-                            }
-                        }
-                        foreach (var doi in proceedings.Value.DOIList)
-                        {
-                            if (doi.Length > 0)
-                            {
-                                if (!this.DoiToSeriesTitleMapper.ContainsKey(doi))
-                                {
-                                    this.DoiToSeriesTitleMapper.Add(doi, element.Value.SeriesTitle);
-
-                                }
-                                else
-                                {
-                                    if (this.DoiToSeriesTitleMapper[doi] != element.Value.SeriesTitle)
-                                    {
-                                        Console.WriteLine("DOI: " + doi);
-                                        Console.WriteLine("BookTitle: " + element.Value.SeriesTitle);
-                                        Console.WriteLine("--------------------------------");
-                                        throw new Exception("DOI is not unique");
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                }
-            }
-        }
-        */
         public KeyValuePair<string, string>? SearchSeriesTitleAndKeyByDOI(string doi)
         {
             if (this.DoiToSeriesTitleAndKeyMapper.ContainsKey(doi))
@@ -194,6 +146,11 @@ namespace DataProcessor
 
         public static DBLPProceedingsSeriesDictionary Load(string inputFilePath)
         {
+            CommonFunctions.OutputSystemMessageFunction("Loading DBLP Proceedings Series Dictionary...");
+            CommonFunctions.IncrementParagraphCounter();
+            var logFile = new StreamWriter(DBLPProceedings.GetLogFilePath(), true);
+
+
             var proceedingsSeriesDictionary = new DBLPProceedingsSeriesDictionary();
             using (var reader = new StreamReader(inputFilePath, Encoding.UTF8))
             {
@@ -204,10 +161,13 @@ namespace DataProcessor
                     {
                         continue;
                     }
-                    var proceedings = DBLPProceedings.BuildFromJSONLine(line);
+                    var proceedings = DBLPProceedings.BuildFromJSONLine(line, logFile);
                     proceedingsSeriesDictionary.Add(proceedings);
                 }
             }
+
+            CommonFunctions.OutputSystemMessageFunction("DBLP Proceedings Series Dictionary loaded successfully.");
+            CommonFunctions.DecrementParagraphCounter();
             return proceedingsSeriesDictionary;
         }
 

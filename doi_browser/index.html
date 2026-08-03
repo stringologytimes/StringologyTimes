@@ -100,7 +100,27 @@
   <fieldset>
     <legend>Filter</legend>
     <ul>
-      <li> Type: <span id="type-list-div"></span></li>
+      <li> Type: 
+        <span id="type-list-div"></span>
+        <div> 
+          <fieldset>
+            <legend>Container</legend>
+            <span id="type-list-container-span"></span>
+          </fieldset>
+        </div>        
+        <div> 
+          <fieldset>
+            <legend>Paper</legend>
+            <span id="type-list-paper-span"></span>
+          </fieldset>
+        </div>
+        <div>
+          <fieldset>
+            <legend>Other</legend>
+            <span id="type-list-other-span"></span>
+          </fieldset>
+        </div>
+      </li>
       <li>
         <label>Container Title:</label> <select id="container-title-select"
           onchange="filterInputChange('container-title')"></select>

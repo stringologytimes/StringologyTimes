@@ -24,7 +24,7 @@ namespace DataProcessor
                 Title = proceedings.SeriesTitle,
                 Source = "DUMMY",
                 IsPrimary = false,
-                Type = "ProceedingsSeries",
+                Type = SmallCacheSummaryRecord.ProceedingsSeriesType,
                 ContainerDOI = "",
                 Year = minimum_year.ToString(),
                 Month = minimum_month.ToString()
@@ -57,7 +57,7 @@ namespace DataProcessor
                     Title = proceedingsName,
                     Source = "DUMMY",
                     IsPrimary = false,
-                    Type = "Proceedings",
+                    Type = SmallCacheSummaryRecord.ConferenceProceedingsType,
                     ContainerDOI = containerDOI,
                     Year = year.ToString(),
                     Month = month.ToString()
@@ -95,7 +95,7 @@ namespace DataProcessor
                     Title = journalTitle,
                     Source = "DUMMY",
                     IsPrimary = false,
-                    Type = "Journal",
+                    Type = SmallCacheSummaryRecord.JournalType,
                     ContainerDOI = ""
                 };
 
@@ -119,7 +119,7 @@ namespace DataProcessor
                 Title = preprintRepositoryTitle,
                 Source = "DUMMY",
                 IsPrimary = false,
-                Type = "PreprintRepository",
+                Type = SmallCacheSummaryRecord.PreprintRepositoryType,
                 ContainerDOI = ""
             };
 
@@ -146,7 +146,7 @@ namespace DataProcessor
                 Title = journalIssueTitle,
                 Source = "DUMMY",
                 IsPrimary = false,
-                Type = "Journal-Issue",
+                Type = SmallCacheSummaryRecord.JournalIssueType,
                 ContainerDOI = containerDOI,
                 Year = year.ToString(),
                 Month = month.ToString()
@@ -223,6 +223,11 @@ namespace DataProcessor
                 var proceedingsYearAndMonth = SmallCacheSummaryFunctions.ComputeProceedingsYear(proceedings.Year, proceedings.Month, doiElement.Year, doiElement.Month);
                 var proceedingsNameWithYear = proceedings.SeriesTitle + "(" + proceedingsYearAndMonth.Key + ")";
 
+                if(proceedings.SeriesTitle.Length == 0)
+                {
+                    CommonFunctions.OutputSystemMessageFunction("Proceedings Series Title is empty for " + doiElement.DOI, ConsoleColor.Yellow);
+                }
+
 
                 var proceedingsDOI = doiElement.ContainerDOI;
                 if (proceedingsDOI.Length == 0)
@@ -275,7 +280,7 @@ namespace DataProcessor
 
                 record.ModifiedContainerDOI = preprintRepositoryDOI;
                 record.ModifiedContainerDOIType = "Metadata";
-                record.ModifiedType = "Preprint";
+                record.ModifiedType = SmallCacheSummaryRecord.PreprintType;
             }
         }
 
@@ -284,7 +289,7 @@ namespace DataProcessor
             var record = manager.SmallCacheSummaryRecordDict[doiElement.DOI];
             if (!record.IsPreprint && doiElement.IdentifierTypeOrInstitution == "bioRxiv")
             {
-                record.ModifiedType = "Preprint";
+                record.ModifiedType = SmallCacheSummaryRecord.PreprintType;
 
                 var bioRxivDOI = DOIFunctions.CreateDummyDOI("preprint_repository", "biorxiv");
                 if (!manager.SmallCacheSummaryRecordDict.ContainsKey(bioRxivDOI) && record.DOIRank == 0)
@@ -329,7 +334,7 @@ namespace DataProcessor
             {
                 record.ModifiedContainerDOI = journalIssueDummyDOI;
                 record.ModifiedContainerDOIType = "Metadata";
-                record.ModifiedType = "Journal-Article";
+                record.ModifiedType = SmallCacheSummaryRecord.JournalArticleType;
             }
         }
     }

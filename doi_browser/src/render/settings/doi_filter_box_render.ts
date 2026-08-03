@@ -28,7 +28,7 @@ function setSelectHTMLElement(selectElement: HTMLSelectElement, options: string[
   var max_children_count = 300;
   var max_index = Math.min(options.length, max_children_count);
 
-  for(var index = 0; index < max_index; index++){
+  for (var index = 0; index < max_index; index++) {
     const optionValue = options[index];
     const option = document.createElement("option");
     const doiCount = doiCountList[index];
@@ -42,7 +42,7 @@ function setSelectHTMLElement(selectElement: HTMLSelectElement, options: string[
     selectElement.appendChild(option);
   }
 
-  if(max_index < options.length){
+  if (max_index < options.length) {
     const option = document.createElement("option");
     option.value = "more";
     option.textContent = "More";
@@ -107,10 +107,60 @@ export function setRadioBoxes(divID: string, templateName: string, selectedValue
   }
 }
 
+export function setTypeListBoxes(selectedValues: string[], itemNames: string[], itemValues: string[]) {
+  var containerSpan = document.getElementById("type-list-container-span");
+  var paperSpan = document.getElementById("type-list-paper-span");
+  var otherSpan = document.getElementById("type-list-other-span");
 
-function renderDOICategoryBox(summaryInfo: SummaryInfo, selectedValue: string | null) {
+  var containerItemNames = ["Book", "Conference Proceedings", "Journal", "Journal Issue", "Proceedings Series", "Edited Book", "Reference Book", "Preprint Repository", "Monograph"];
+  var paperItemNames = ["Proceedings Article", "Book Chapter", "Conference Paper", "Journal Article", "Report", "Preprint", "Monograph Chapter", "Posted Content"];
+
+  if (containerSpan == null) {
+    throw new Error("containerSpan is not found");
+  }
+  containerSpan.innerHTML = "";
+  if (paperSpan == null) {
+    throw new Error("paperSpan is not found");
+  }
+  paperSpan.innerHTML = "";
+  if (otherSpan == null) {
+    throw new Error("otherSpan is not found");
+  }
+  otherSpan.innerHTML = "";
+
+  itemNames.forEach((itemName, index) => {
+    console.log("itemName: " + itemName);
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.id = "checkbox_" + itemName;
+    checkbox.name = "checkbox_" + itemName;
+    checkbox.checked = selectedValues.includes(itemName);
+    const label = document.createElement("label");
+    label.htmlFor = "checkbox_type";
+    label.textContent = itemName;
+
+    if (containerItemNames.includes(itemName)) {
+      containerSpan!.appendChild(checkbox);
+      containerSpan!.appendChild(label);
+    } else if (paperItemNames.includes(itemName)) {
+      paperSpan!.appendChild(checkbox);
+      paperSpan!.appendChild(label);
+    } else {
+      otherSpan!.appendChild(checkbox);
+      otherSpan!.appendChild(label);
+    }
+
+  });
+}
+
+
+function renderDOICategoryBox(summaryInfo: SummaryInfo, selectedValues: string[]) {
   const typeList = ["Any"];
   const typeValues = ["Any"];
+
+  var selectedValue = selectedValues.length > 0 ? selectedValues[0] : null;
+
+
   getDOIInfoTypeList().forEach(type => {
     //typeList.push(type);
     var p = summaryInfo.doiCategoryList.indexOf(type);
@@ -125,6 +175,7 @@ function renderDOICategoryBox(summaryInfo: SummaryInfo, selectedValue: string | 
 
   });
   setRadioBoxes("type-list-div", "type-template", selectedValue == null ? "Any" : selectedValue, typeList, typeValues);
+  setTypeListBoxes(selectedValues, typeList, typeValues);
 
   /*
   const typeListDiv = document.getElementById("type-list-div");
@@ -261,25 +312,26 @@ function renderKeywordBox(keywords: string[]) {
 export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIRecordCollection, summaryInfo: SummaryInfo) {
   console.log("renderFilterBox (size: " + filterResult.doiIDs.length + ")");
 
-  const renderStartTime1 = performance.now();  
-  renderDOICategoryBox(summaryInfo, filterInput.type);
-  const renderStartTime2 = performance.now();  
+  const renderStartTime1 = performance.now();
+  renderDOICategoryBox(summaryInfo, filterInput.types);
+
+  const renderStartTime2 = performance.now();
   renderContainerTitleSelectBox(summaryInfo, filterInput.container_title);
-  const renderStartTime3 = performance.now();  
+  const renderStartTime3 = performance.now();
   renderSeriesTitleSelectBox(summaryInfo, filterInput.series_title);
-  const renderStartTime4 = performance.now();  
+  const renderStartTime4 = performance.now();
   renderMinimumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
-  const renderStartTime5 = performance.now();  
+  const renderStartTime5 = performance.now();
   renderMaximumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
-  const renderStartTime6 = performance.now();  
+  const renderStartTime6 = performance.now();
   renderSortBySelectBox(filterInput.sortBy);
-  const renderStartTime7 = performance.now();  
+  const renderStartTime7 = performance.now();
   renderTag1SelectBox(summaryInfo, filterInput.tags[0]);
-  const renderStartTime8 = performance.now();  
+  const renderStartTime8 = performance.now();
   renderStatusSelectBox(filterInput.excludeStatus);
-  const renderStartTime9 = performance.now();  
+  const renderStartTime9 = performance.now();
   renderKeywordBox(filterInput.keywords);
-  const renderStartTime10 = performance.now();  
+  const renderStartTime10 = performance.now();
 
   var time1 = renderStartTime2 - renderStartTime1;
   var time2 = renderStartTime3 - renderStartTime2;
@@ -291,5 +343,5 @@ export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIF
   var time8 = renderStartTime9 - renderStartTime8;
   var time9 = renderStartTime10 - renderStartTime9;
   console.log("renderFilterBox time: " + time1 + " ms, " + time2 + " ms, " + time3 + " ms, " + time4 + " ms, " + time5 + " ms, " + time6 + " ms, " + time7 + " ms, " + time8 + " ms, " + time9 + " ms");
-  
+
 }

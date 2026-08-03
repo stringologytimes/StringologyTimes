@@ -26,9 +26,27 @@ namespace DataProcessor
         public string ModifiedContainerDOI { get; set; } = "";
         public string ModifiedContainerDOIType { get; set; } = "";
 
+        public static string ProceedingsArticleType = "Proceedings Article";
+        public static string BookChapterType = "Book Chapter";
+        public static string MonographChapterType = "Monograph Chapter";
+        public static string ReferenceBookChapterType = "Reference Book Chapter";
+        public static string ConferenceProceedingsType = "Conference Proceedings";
+        public static string JournalArticleType = "Journal Article";
+        public static string BookType = "Book";
+        public static string JournalType = "Journal";
+        public static string EditedBookType = "Edited Book";
+        public static string ReferenceBookType = "Reference Book";
+        public static string MonographType = "Monograph";
+        public static string PostedContentType = "Posted Content";
+        public static string PreprintType = "Preprint";
+        public static string JournalIssueType = "Journal Issue";
+        public static string ProceedingsSeriesType = "Proceedings Series";
+        public static string PreprintRepositoryType = "Preprint Repository";
+
+
         public bool IsPreprint
         {
-            get{return this.ModifiedType == "Preprint";}
+            get{return this.ModifiedType == SmallCacheSummaryRecord.PreprintType;}
         }
 
         public static string GetSmallCacheSummaryFilePath()
@@ -54,7 +72,7 @@ namespace DataProcessor
         {
             this.ModifiedTitle = proceedingsNameWithYear;
             this.ModifiedContainerDOI = proceedingsSeriesDummyDOI;
-            this.ModifiedType = "ConferenceProceeding";
+            this.ModifiedType = SmallCacheSummaryRecord.ConferenceProceedingsType;
             this.ModifiedContainerDOIType = "DBLP";
             logFile.WriteLine($"Updated Proceedings: {this.DOI} -> {this.ModifiedTitle} -> {this.ModifiedContainerDOI} -> {this.ModifiedContainerDOIType} -> {this.ModifiedType}");
         }
@@ -63,7 +81,7 @@ namespace DataProcessor
         {
             this.ModifiedContainerDOI = proceedingsDOI;
             this.ModifiedContainerDOIType = "DBLP";
-            this.ModifiedType = "Proceedings-Article";
+            this.ModifiedType = SmallCacheSummaryRecord.ProceedingsArticleType;
             logFile.WriteLine($"Updated Proceedings Article: {this.DOI} -> {this.ModifiedContainerDOI} -> {this.ModifiedContainerDOIType} -> {this.ModifiedType}");
         }
 
@@ -72,18 +90,6 @@ namespace DataProcessor
         public string ToJSONLine()
         {
             return JsonSerializer.Serialize(this);
-            /*
-                        List<string> dataList = new List<string>();
-                        dataList.Add(JsonSerializer.Serialize(this.DOI));
-                        dataList.Add(JsonSerializer.Serialize(this.Priority));
-                        dataList.Add(JsonSerializer.Serialize(this.SourceCite));
-                        dataList.Add(JsonSerializer.Serialize(this.SourceStatus));
-                        dataList.Add(JsonSerializer.Serialize(this.ContainerDOI));
-                        dataList.Add(JsonSerializer.Serialize(this.Date));
-
-                        string dataString = "[" + string.Join(",", dataList) + "]";
-                        return dataString;
-                        */
         }
 
         public static Dictionary<string, SmallCacheSummaryRecord> Load(string doiCacheInfoFilePath)

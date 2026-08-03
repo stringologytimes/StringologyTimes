@@ -9,7 +9,7 @@ export type SortByType = "alphabetical-order-by-container-title" | "ascending-or
 export class DOIFilterQuery {
     public minimum_year: number | null = null;
     public maximum_year: number | null = null;
-    public type: string | null = null;
+    public types: string[] = [];
     public authors: string[] = [];
     public tags: string[] = [];
     public volume: string | null = null;
@@ -19,45 +19,6 @@ export class DOIFilterQuery {
     public excludeStatus: DOIStatus[] = [];
     public sortBy: SortByType = "unordered";
     public keywords: string[] = [];
-
-    /*
-
-    public static buildFromURLParameters(): DOIFilterQuery {
-        let r = new DOIFilterQuery();
-        const sp = new URL(location.href).searchParams;
-
-        for (const [k, v] of sp.entries()) {
-            if(k == "minimum_year"){
-                r.minimum_year = parseInt(v);
-            }
-            else if(k == "maximum_year"){
-                r.maximum_year = parseInt(v);
-            }
-            else if(k == "author"){
-                r.authors.push(v);
-            }
-            else if(k == "tag"){
-                r.tags.push(v);
-            }else if(k == "type"){
-                r.type = v;
-            }else if(k == "volume"){
-                r.volume = v;
-            }else if(k == "container_title"){
-                r.container_title = v;
-            }else if(k == "doi_reference"){
-                r.doiReferences.push(v);
-            }else if(k == "tag1"){
-                r.tags.push(v);
-            }else if(k == "tag2"){
-                r.tags.push(v);
-            }else if(k == "tag3"){
-                r.tags.push(v);
-            }
-        }
-        return r;
-    }
-    */
-
     
     private filter(collection: DOIRecordCollection, candidates: number[]): number[] {
         return candidates.filter(candidate => {
@@ -71,7 +32,7 @@ export class DOIFilterQuery {
         return this.filter(collection, r);
     }
     public is_empty(): boolean {
-        return this.minimum_year == null && this.maximum_year == null && this.type == null && 
+        return this.minimum_year == null && this.maximum_year == null && this.types.length == 0 && 
         this.authors.length == 0 && this.tags.length == 0 && this.volume == null && this.container_title == null 
         && this.keywords.length == 0 && this.series_title == null
         && this.excludeStatus.length == 0 && this.doiReferences.length == 0;
@@ -80,7 +41,7 @@ export class DOIFilterQuery {
         const r = new DOIFilterQuery();
         r.minimum_year = this.minimum_year;
         r.maximum_year = this.maximum_year;
-        r.type = this.type;
+        r.types = this.types.map(type => type);
         r.authors = this.authors.map(author => author);
         r.tags = this.tags.map(tag => tag);
         r.volume = this.volume;
@@ -105,9 +66,9 @@ export class DOIFilterQuery {
             copy.maximum_year = null;
             r.push(copy);
         }
-        if(this.type != null){
+        if(this.types.length > 0){
             var copy = this.copy();
-            copy.type = null;
+            copy.types = [];
             r.push(copy);
         }
 
@@ -169,8 +130,8 @@ export class DOIFilterQuery {
         if(this.maximum_year != null){
             obj.maximum_year = this.maximum_year;
         }
-        if(this.type != null){
-            obj.type = this.type;
+        if(this.types.length > 0){
+            obj.types = this.types;
         }
         if(this.authors.length > 0){
             obj.authors = this.authors;
@@ -213,8 +174,8 @@ export class DOIFilterQuery {
         if(obj.maximum_year != null){
             r.maximum_year = obj.maximum_year;
         }
-        if(obj.type != null){
-            r.type = obj.type;
+        if(obj.types.length > 0){
+            r.types = obj.types.map((v: any) => v as string);
         }
         if(obj.authors.length > 0){
             r.authors = obj.authors.map((v: any) => v as string);
@@ -252,7 +213,7 @@ export class DOIFilterQuery {
         if(this.maximum_year != null && doiInfo.year > this.maximum_year){
             return false;
         }
-        if(this.type != null && doiInfo.type != this.type){
+        if(this.types.length > 0 && !this.types.includes(doiInfo.type)){
             return false;
         }
         if(this.container_title != null && doiInfo.container_title != this.container_title){
@@ -355,15 +316,12 @@ export class DOIFilterQuery {
                 return false;
             }
         }
-        if(item.type != null){
-            if(this.type == null){
-                return false;
-            }
-            else{
-                if(this.type != item.type){
+        if(item.types.length > 0){
+            item.types.forEach(element => {
+                if(!this.types.includes(element)){
                     return false;
-                }
-            }
+                }                    
+            });
         }
         if(this.authors.length > 0){
             return false;

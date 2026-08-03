@@ -34,27 +34,18 @@ namespace DataProcessor
 
             dataList.Add(JsonSerializer.Serialize(this.DOIList));
 
-            /*
-
-        if (this.DOI.Length > 0)
-        {
-            dataList.Add(JsonSerializer.Serialize(new List<string>()));
-
-        }
-        else
-        {
-
-            dataList.Add(JsonSerializer.Serialize(this.DOIList));
-
-        }
-        */
-
-
             string dataString = "[" + string.Join(",", dataList) + "]";
             return dataString;
 
         }
-        public static DBLPProceedings BuildFromJSONLine(string jsonLine)
+
+        public static string GetLogFilePath()
+        {
+            var logFilePath = Program.DataFolderPath + "/auto_generated/log/dblp_proceedings.log";
+            return logFilePath;
+
+        }
+        public static DBLPProceedings BuildFromJSONLine(string jsonLine, StreamWriter logFile)
         {
             var dblpProceedings = new DBLPProceedings();
             var dataList = JsonSerializer.Deserialize<List<object>>(jsonLine);
@@ -74,6 +65,33 @@ namespace DataProcessor
             }
             dblpProceedings.SeriesTitle = dataList[2].ToString() ?? "";
             dblpProceedings.Title = dataList[3].ToString() ?? "";
+
+            if(dblpProceedings.SeriesTitle.Length == 0)
+            {
+                logFile.WriteLine("Series Title is not found:" + dblpProceedings.key);
+
+                var keyWords = dblpProceedings.key.Split("/");
+                if(keyWords.Length >= 3)
+                {
+                    if(keyWords[0] == "conf" || keyWords[0] == "journals" || keyWords[0] == "series" || keyWords[0] == "reference")
+                    {
+                        dblpProceedings.SeriesTitle = keyWords[1].ToUpper();                        
+                    }else if(keyWords[0] == "books")
+                    {
+                        dblpProceedings.SeriesTitle = keyWords[2].ToUpper();
+                        
+                    }
+                    
+                }
+            }
+
+
+            if(dblpProceedings.Title.Length == 0)
+            {
+                logFile.WriteLine("Title is not found:" + dblpProceedings.key);
+            }
+
+
             var yearStr = dataList[4].ToString() ?? "";
             if (yearStr != "")
             {

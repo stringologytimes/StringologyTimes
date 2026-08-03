@@ -41,6 +41,18 @@ namespace DataProcessor
 
         public static LightweightDOIElementComponent Build(Dictionary<string, DOIElement> doiElementDict)
         {
+            CommonFunctions.OutputSystemMessageFunction("Building LightweightDOIElementComponent...");
+            CommonFunctions.IncrementParagraphCounter();
+
+            foreach (var doiElement in doiElementDict.Values)
+            {
+                if(doiElement.Title.Length == 0)
+                {
+                    CommonFunctions.OutputSystemMessageFunction("Warning: Empty title, DOI: " + doiElement.DOI, ConsoleColor.Yellow);
+                }
+            }
+
+
             LightweightDOIElementComponent r = new LightweightDOIElementComponent();
             HashSet<string> knownDOISet = new HashSet<string>();
 
@@ -260,6 +272,9 @@ namespace DataProcessor
                 Console.WriteLine("DOIList.Count: " + r.DOIList.Count);
                 throw new Exception("ContainerTitleList.Count != DOIList.Count");
             }
+
+            CommonFunctions.OutputSystemMessageFunction("LightweightDOIElementComponent built successfully.", ConsoleColor.Green);
+            CommonFunctions.DecrementParagraphCounter();
 
             return r;
         }

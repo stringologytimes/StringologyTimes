@@ -47,11 +47,11 @@ namespace DataProcessor
 
         public bool IsJournalArticle
         {
-            get{return this.Type == "journal-article";}
+            get{return this.Type == "journal-article" || this.Type == "Journal Article";}
         }
         public bool IsPostedContent
         {
-            get{return this.Type == "posted-content";}
+            get{return this.Type == "posted-content" || this.Type == "Posted Content";}
         }
         public bool IsPreprint
         {
@@ -59,11 +59,11 @@ namespace DataProcessor
         }
         public bool IsProceedingsArticle
         {
-            get{return this.Type == "proceedings-article" || this.Type == "ConferencePaper";}
+            get{return this.Type == "proceedings-article" || this.Type == "ConferencePaper" || this.Type == "Proceedings Article";}
         }
         public bool IsBookChapter
         {
-            get{return this.Type == "book-chapter";}
+            get{return this.Type == "book-chapter" || this.Type == "Book Chapter";}
         }
         public bool IsBook
         {
@@ -71,7 +71,7 @@ namespace DataProcessor
         }
         public bool IsReferenceBook
         {
-            get{return this.Type == "reference-book" || this.Type == "ReferenceBook";}
+            get{return this.Type == "reference-book" || this.Type == "ReferenceBook" || this.Type == "Reference Book";}
         }
         public bool IsMonograph
         {

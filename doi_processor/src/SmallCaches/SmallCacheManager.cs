@@ -219,24 +219,24 @@ namespace DataProcessor
                         if (v.ModifiedType.Length == 0 && v.ModifiedContainerDOI.Length > 0 && doiElementDict.ContainsKey(v.ModifiedContainerDOI))
                         {
                             var properContainerDOICacheInfo = SmallCacheSummaryRecordDict[v.ModifiedContainerDOI];
-                            if (properContainerDOICacheInfo.ModifiedType == "ConferenceProceeding")
+                            if (properContainerDOICacheInfo.ModifiedType == SmallCacheSummaryRecord.ConferenceProceedingsType)
                             {
-                                v.ModifiedType = "Proceedings-Article";
+                                v.ModifiedType = SmallCacheSummaryRecord.ProceedingsArticleType;
                                 this.SmallCacheSummaryLogFile.WriteLine($"Updated Type By Container: {v.DOI} -> {v.ModifiedType}");
                             }
-                            else if (properContainerDOICacheInfo.ModifiedType == "Book")
+                            else if (properContainerDOICacheInfo.ModifiedType == SmallCacheSummaryRecord.BookType)
                             {
-                                v.ModifiedType = "Book-Chapter";
+                                v.ModifiedType = SmallCacheSummaryRecord.BookChapterType;
                                 this.SmallCacheSummaryLogFile.WriteLine($"Updated Type By Container: {v.DOI} -> {v.ModifiedType}");
                             }
-                            else if (properContainerDOICacheInfo.ModifiedType == "ReferenceBook")
+                            else if (properContainerDOICacheInfo.ModifiedType == SmallCacheSummaryRecord.ReferenceBookType)
                             {
-                                v.ModifiedType = "ReferenceBook-Chapter";
+                                v.ModifiedType = SmallCacheSummaryRecord.ReferenceBookChapterType;
                                 this.SmallCacheSummaryLogFile.WriteLine($"Updated Type By Container: {v.DOI} -> {v.ModifiedType}");
                             }
-                            else if (properContainerDOICacheInfo.ModifiedType == "Monograph")
+                            else if (properContainerDOICacheInfo.ModifiedType == SmallCacheSummaryRecord.MonographType)
                             {
-                                v.ModifiedType = "Monograph-Chapter";
+                                v.ModifiedType = SmallCacheSummaryRecord.MonographChapterType;
                                 this.SmallCacheSummaryLogFile.WriteLine($"Updated Type By Container: {v.DOI} -> {v.ModifiedType}");
                             }
                         }
@@ -275,7 +275,7 @@ namespace DataProcessor
                     var proceedings = dblpSeriesDictionary.GetProceedings(key);
                     var proceedingsSeries = dblpSeriesDictionary.Series[proceedings.SeriesTitle];
                     var proceedingsYearAndMonth = SmallCacheSummaryFunctions.ComputeProceedingsYear(proceedings.Year, proceedings.Month, doiElement.Year, doiElement.Month);
-                    var proceedingsName = proceedings.SeriesTitle + "(" + proceedingsYearAndMonth.Key + ")";
+                    var proceedingsNameWithYear = proceedings.SeriesTitle + "(" + proceedingsYearAndMonth.Key + ")";
                     var proceedingsSeriesDummyDOI = DOIFunctions.CreateDummyDOI("proceedings_series", proceedings.SeriesTitle);
                     var (minimum_year, minimum_month) = proceedingsSeries.GetMinimumYearAndMonth();
 
@@ -286,10 +286,9 @@ namespace DataProcessor
 
                     if (v.ModifiedType.Length == 0)
                     {
-                        v.ModifiedTitle = proceedingsName;
-                        v.ModifiedContainerDOI = proceedingsSeriesDummyDOI;
-                        v.ModifiedContainerDOIType = "DBLP";
-                        v.ModifiedType = "ConferenceProceeding";
+                        v.UpdateForProceedings(proceedingsNameWithYear, proceedingsYearAndMonth.Key, proceedingsSeriesDummyDOI, this.SmallCacheSummaryLogFile);
+
+                        
                     }
 
 
@@ -332,15 +331,30 @@ namespace DataProcessor
             var doiElementDict = CreateDOIElementDictionaryFromSmallCache(dataFolderPath);
 
             var crossRefMapper = new Dictionary<string, string>();
-            crossRefMapper["edited-book"] = "EditedBook";
-            crossRefMapper["journal-issue"] = "Journal-Issue";
-            crossRefMapper["proceedings"] = "Proceedings";
-            crossRefMapper["posted-content"] = "PostedContent";
-            crossRefMapper["book-chapter"] = "Book-Chapter";
-            crossRefMapper["proceedings-article"] = "Proceedings-Article";
-            crossRefMapper["book"] = "Book";
-            crossRefMapper["reference-book"] = "ReferenceBook";
-            crossRefMapper["monograph"] = "Monograph";
+            crossRefMapper["edited-book"] = SmallCacheSummaryRecord.EditedBookType;
+            crossRefMapper["journal-issue"] = SmallCacheSummaryRecord.JournalArticleType;
+            crossRefMapper["proceedings"] = SmallCacheSummaryRecord.ConferenceProceedingsType;
+            crossRefMapper["posted-content"] = SmallCacheSummaryRecord.PostedContentType;
+            crossRefMapper["book-chapter"] = SmallCacheSummaryRecord.BookChapterType;
+            crossRefMapper["proceedings-article"] = SmallCacheSummaryRecord.ProceedingsArticleType;
+            crossRefMapper["book"] = SmallCacheSummaryRecord.BookType;
+            crossRefMapper["reference-book"] = SmallCacheSummaryRecord.ReferenceBookType;
+            crossRefMapper["monograph"] = SmallCacheSummaryRecord.MonographType;
+
+            var dataCiteMapper = new Dictionary<string, string>();
+            dataCiteMapper["Book"] = SmallCacheSummaryRecord.BookType;
+            dataCiteMapper["Journal"] = SmallCacheSummaryRecord.JournalType;
+            dataCiteMapper["Journal-Article"] = SmallCacheSummaryRecord.JournalArticleType;
+            dataCiteMapper["Proceedings-Article"] = SmallCacheSummaryRecord.ProceedingsArticleType;
+            dataCiteMapper["Book-Chapter"] = SmallCacheSummaryRecord.BookChapterType;
+            dataCiteMapper["PostedContent"] = SmallCacheSummaryRecord.PostedContentType;
+            dataCiteMapper["ConferenceProceeding"] = SmallCacheSummaryRecord.ConferenceProceedingsType;
+            dataCiteMapper["ConferencePaper"] = SmallCacheSummaryRecord.ProceedingsArticleType;
+            
+            dataCiteMapper["EditedBook"] = SmallCacheSummaryRecord.EditedBookType;
+            dataCiteMapper["ReferenceBook"] = SmallCacheSummaryRecord.ReferenceBookType;
+            dataCiteMapper["Monograph"] = SmallCacheSummaryRecord.MonographType;
+
 
             SmallCacheSummaryRecordDict.Values.ToList().ForEach((v) =>
             {
@@ -353,6 +367,14 @@ namespace DataProcessor
                         {
                             v.ModifiedType = crossRefMapper[doiElement.Type];
                             this.SmallCacheSummaryLogFile.WriteLine($"Updated Type By CrossRef: {v.DOI} -> {v.ModifiedType}");
+                        }
+                    }
+                    else if (doiElement.Source == "DataCite")
+                    {
+                        if (dataCiteMapper.ContainsKey(doiElement.Type))
+                        {
+                            v.ModifiedType = dataCiteMapper[doiElement.Type];
+                            this.SmallCacheSummaryLogFile.WriteLine($"Updated Type By DataCite: {v.DOI} -> {v.ModifiedType}");
                         }
                     }
                 }

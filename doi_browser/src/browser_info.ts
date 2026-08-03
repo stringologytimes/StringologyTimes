@@ -54,11 +54,11 @@ export class BrowserInfo {
 
     public processURLParameters(): void {
         const url = new URL(window.location.href);
-        var type = url.searchParams.get("type");
-        if (type) {
-            this.currentDOIFilter.query.type = type;
+        var types = url.searchParams.getAll("type");
+        if (types.length > 0) {
+            this.currentDOIFilter.query.types = types;
         }else{
-            this.currentDOIFilter.query.type = null;
+            this.currentDOIFilter.query.types = [];
         }
 
         var containerTitle = url.searchParams.get("container_title");
