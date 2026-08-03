@@ -5,7 +5,7 @@ import { load_gzip_text_lines, load_gzip_integer_list_lines, load_gzip_integer_l
 let typeList: string[] = [];
 
 
-export function getDOIInfoTypeList(): string[] {
+export function getDOIRecordTypeList(): string[] {
     return typeList.map(type => type);
 }
 
@@ -187,7 +187,7 @@ export class DOIRecordCollection {
         });
 
         typeList = Array.from(type_set);
-
+        console.log("typeList: " + typeList);
 
         const status_list = await load_gzip_integer_lines(folderURL + "/doi_flag.csv.gz");
         console.log("size of status_list: " + status_list.length);

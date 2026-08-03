@@ -2,6 +2,7 @@
 import { BrowserInfo } from "./browser_info";
 import { SortByType } from "./doi_filter/doi_filter_query";
 import { DOIStatus } from "./doi_record";
+import { getSelectedTypeValues } from "./render/settings/doi_filter_box_render";
 
 export function updatePaginationControls(browserInfo: BrowserInfo) {
   /*
@@ -47,21 +48,24 @@ export function filterInputChange(inputElementName: string, browserInfo: Browser
   const url = new URL(window.location.href);
   
   if (inputElementName == "type") {
-    const selected = document.querySelector('input[name="type-checkbox"]:checked');
-    if (selected) {
-      var value = (selected as HTMLInputElement).value;
-      if (value == "Any") {
-        //browserInfo.currentDOIFilter.query.type = null;
-        url.searchParams.delete("type");
-        
-      } else {
-        //browserInfo.currentDOIFilter.query.type = value;
-        url.searchParams.set("type", value);
+    const selectedTypeValues = getSelectedTypeValues();
+    console.log("selectedTypeValues", selectedTypeValues);
+
+
+    const existingTypes = url.searchParams.getAll("type");
+    const removedTypesSet = new Set(existingTypes);
+
+    selectedTypeValues.forEach(type => {
+      if(existingTypes.includes(type)){
+        removedTypesSet.delete(type);
+      }else{
+        url.searchParams.append("type", type);
       }
-    } else {
-      //browserInfo.currentDOIFilter.query.type = null;
-      url.searchParams.delete("type");
-    }
+    });
+
+    removedTypesSet.forEach(type => {
+      url.searchParams.delete("type", type);
+    });
   }
   else if (inputElementName == "container-title") {
     const containerTitle = (document.getElementById("container-title-select") as HTMLSelectElement).value;

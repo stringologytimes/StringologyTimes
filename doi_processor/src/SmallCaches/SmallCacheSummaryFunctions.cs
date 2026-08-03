@@ -270,6 +270,9 @@ namespace DataProcessor
         public static void UpdateForPreprint(DOIElement doiElement, SmallCacheManager manager)
         {
             var record = manager.SmallCacheSummaryRecordDict[doiElement.DOI];
+
+
+
             if (!record.IsPreprint && doiElement.IdentifierTypeOrInstitution.Length > 0)
             {
                 var preprintRepositoryDOI = DOIFunctions.CreateDummyDOI("preprint_repository", doiElement.IdentifierTypeOrInstitution);
@@ -287,21 +290,26 @@ namespace DataProcessor
         public static void UpdateForPostedContent(DOIElement doiElement, SmallCacheManager manager)
         {
             var record = manager.SmallCacheSummaryRecordDict[doiElement.DOI];
-            if (!record.IsPreprint && doiElement.IdentifierTypeOrInstitution == "bioRxiv")
+
+            var bioRxivCheck = !record.IsPreprint && doiElement.IdentifierTypeOrInstitution == "bioRxiv";
+            var arXivCheck = !record.IsPreprint && doiElement.IdentifierTypeOrInstitution == "arXiv";
+
+
+            if (bioRxivCheck || arXivCheck)
             {
                 record.ModifiedType = SmallCacheSummaryRecord.PreprintType;
+                var repositoryTitle = bioRxivCheck ? "bioRxiv" : "arXiv";
 
-                var bioRxivDOI = DOIFunctions.CreateDummyDOI("preprint_repository", "biorxiv");
-                if (!manager.SmallCacheSummaryRecordDict.ContainsKey(bioRxivDOI) && record.DOIRank == 0)
+                var repositoryDOI = DOIFunctions.CreateDummyDOI("preprint_repository", repositoryTitle);
+                if (!manager.SmallCacheSummaryRecordDict.ContainsKey(repositoryDOI) && record.DOIRank == 0)
                 {
-                    SmallCacheSummaryFunctions.CreatePreprintRepositoryDummyDOIElement(bioRxivDOI, "bioRxiv", manager);
+                    SmallCacheSummaryFunctions.CreatePreprintRepositoryDummyDOIElement(repositoryDOI, repositoryTitle, manager);
                 }
 
-                record.ModifiedContainerDOI = bioRxivDOI;
+                record.ModifiedContainerDOI = repositoryDOI;
                 record.ModifiedContainerDOIType = "Metadata";
 
             }
-
         }
 
         public static void UpdateForJournalArticle(DOIElement doiElement, IDictionary<string, DOIElement> doiElementDict, SmallCacheManager manager)

@@ -374,7 +374,7 @@ namespace DataProcessor
                 if (containerTitleList != null && containerTitleList.Count > 0)
                 {
                     element.ContainerTitle = string.Join("---", containerTitleList.ToArray());
-                    element.SeriesTitle = element.ContainerTitle;
+                    //element.SeriesTitle = element.ContainerTitle;
                     containerTitleFlag = true;
                 }
             }
@@ -384,7 +384,7 @@ namespace DataProcessor
                 if (containerTitleList != null && containerTitleList.Count > 0)
                 {
                     element.ContainerTitle = string.Join("---", containerTitleList.ToArray());
-                    element.SeriesTitle = element.ContainerTitle;
+                    //element.SeriesTitle = element.ContainerTitle;
                     containerTitleFlag = true;
                 }
             }

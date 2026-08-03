@@ -33,6 +33,7 @@ namespace DataProcessor
 
         public List<string> TagList { get; set; } = new List<string>();
         public List<string> TagListOfEachElement { get; set; } = new List<string>();
+        public List<string> DistinctSeriesTitleList { get; set; } = new List<string>();
 
         public static string SanitizeWord(string word)
         {
@@ -46,7 +47,7 @@ namespace DataProcessor
 
             foreach (var doiElement in doiElementDict.Values)
             {
-                if(doiElement.Title.Length == 0)
+                if (doiElement.Title.Length == 0)
                 {
                     CommonFunctions.OutputSystemMessageFunction("Warning: Empty title, DOI: " + doiElement.DOI, ConsoleColor.Yellow);
                 }
@@ -143,21 +144,86 @@ namespace DataProcessor
             {
                 var compStr = String.Join(",", v.Authors.Select((v) => fullNameToIndexMapper[v.TryGetFullName()].ToString()));
                 r.CompressedFullNameList.Add(compStr);
-                r.SeriesTitleList.Add("");
-                
+                r.ContainerDOIList.Add(v.ContainerDOI);
+
+                var SeriesTitleName = "Unconfirmed";
+
+                if (v.IsSeriesContainer)
+                {
+                    var escapedSeriesTitle = ReplacementRules.Escape(v.Title);
+                    SeriesTitleName = escapedSeriesTitle;
+
+
+                }
+
+                if (v.ContainerDOI.Length > 0)
+                {
+                    if (doiElementDict.ContainsKey(v.ContainerDOI))
+                    {
+                        var containerDOIElement = doiElementDict[v.ContainerDOI];
+                        r.ContainerTitleList.Add(ReplacementRules.Escape(containerDOIElement.Title));
+
+                        if (containerDOIElement.IsSeriesContainer)
+                        {
+                            SeriesTitleName = ReplacementRules.Escape(containerDOIElement.Title);
+                        }
+
+                        if (containerDOIElement.ContainerDOI.Length > 0)
+                        {
+                            if (doiElementDict.ContainsKey(containerDOIElement.ContainerDOI))
+                            {
+                                var containerOfContainerDOIElement = doiElementDict[containerDOIElement.ContainerDOI];
+                                SeriesTitleName = ReplacementRules.Escape(containerOfContainerDOIElement.Title);
+                            }
+                        }
+                        else
+                        {
+                            if(!containerDOIElement.IsSeriesContainer){
+                                SeriesTitleName = "Unknown";
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        r.ContainerTitleList.Add(ReplacementRules.Escape(v.ContainerTitle));
+                    }
+                }
+                else
+                {
+                    var escapedContainerTitle = ReplacementRules.Escape(v.ContainerTitle);
+                    r.ContainerTitleList.Add(escapedContainerTitle.Length > 0 ? escapedContainerTitle : "Unknown");
+                    if (!v.IsSeriesContainer)
+                    {
+                        SeriesTitleName = "Unknown";
+                    }
+                }
+
+                if (SeriesTitleName.Length == 0)
+                {
+                    CommonFunctions.OutputSystemMessageFunction("Warning: Empty series title, DOI: " + v.DOI, ConsoleColor.Yellow);
+                }
+
+                r.SeriesTitleList.Add(ReplacementRules.Escape(SeriesTitleName));
+
+
+
                 //r.SeriesTitleList.Add(v.SeriesTitle);
                 //r.SeriesTitleList.Add((tmp_counter++).ToString());
-                r.ContainerDOIList.Add(v.ContainerDOI);
-                r.ContainerTitleList.Add(v.ContainerTitle.Replace("\n", ""));
+                //r.ContainerDOIList.Add(v.ContainerDOI);
+                //r.ContainerTitleList.Add(v.ContainerTitle.Replace("\n", ""));
 
                 var tmp_optionalIDList = new List<string>();
-                v.ISBNList.ForEach((v) => {
+                v.ISBNList.ForEach((v) =>
+                {
                     tmp_optionalIDList.Add($"ISBN:{v}");
                 });
-                v.ISSNList.ForEach((v) => {
+                v.ISSNList.ForEach((v) =>
+                {
                     tmp_optionalIDList.Add($"ISSN:{v}");
                 });
-                tmp_optionalIDList.ForEach((v) => {
+                tmp_optionalIDList.ForEach((v) =>
+                {
                     r.OptionalIDList.Add(v);
                 });
                 r.OptionalIDList.Add("");
@@ -231,7 +297,7 @@ namespace DataProcessor
             r.TagList = tagHashSet.ToList();
             r.TagList.Sort((a, b) => a.CompareTo(b));
 
-            if(r.TagList.Count == 0)
+            if (r.TagList.Count == 0)
             {
                 r.TagList.Add("DummyTag");
             }
@@ -273,6 +339,9 @@ namespace DataProcessor
                 throw new Exception("ContainerTitleList.Count != DOIList.Count");
             }
 
+            r.DistinctSeriesTitleList = r.SeriesTitleList.Distinct().ToList();
+            r.DistinctSeriesTitleList.Sort((a, b) => a.CompareTo(b));
+
             CommonFunctions.OutputSystemMessageFunction("LightweightDOIElementComponent built successfully.", ConsoleColor.Green);
             CommonFunctions.DecrementParagraphCounter();
 
@@ -285,6 +354,7 @@ namespace DataProcessor
             {
                 directoryInfo.Create();
             }
+
 
 
             CSVFunctions.WriteCSVByGZip(outputFolder + "/doi.csv.gz", DOIList);
@@ -305,6 +375,8 @@ namespace DataProcessor
             CSVFunctions.WriteCSVByGZip(outputFolder + "/tag.csv.gz", TagList);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/tag_of_each_element.csv.gz", TagListOfEachElement);
             CSVFunctions.WriteCSVByGZip(outputFolder + "/optional_id.csv.gz", OptionalIDList);
+            CSVFunctions.WriteCSVByGZip(outputFolder + "/distinct_series_title.csv.gz", DistinctSeriesTitleList);
+
         }
     }
 }

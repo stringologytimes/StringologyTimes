@@ -19,7 +19,7 @@ namespace DataProcessor
         public List<string> ISBNList { get; set; } = new List<string>();
         public List<string> ISSNList { get; set; } = new List<string>();
         public List<string> DOIAliasList { get; set; } = new List<string>();
-        public string SeriesTitle { get; set; } = "";
+        //public string SeriesTitle { get; set; } = "";
 
         public string ContainerDOI { get; set; } = "";
         public string ContainerType { get; set; } = "";
@@ -57,6 +57,11 @@ namespace DataProcessor
         {
             get{return this.Type == "Preprint";}
         }
+        public bool IsText
+        {
+            get{return this.Type == "Text";}
+        }
+
         public bool IsProceedingsArticle
         {
             get{return this.Type == "proceedings-article" || this.Type == "ConferencePaper" || this.Type == "Proceedings Article";}
@@ -76,6 +81,10 @@ namespace DataProcessor
         public bool IsMonograph
         {
             get{return this.Type == "monograph" || this.Type == "Monograph";}
+        }
+        public bool IsSeriesContainer
+        {
+            get{return this.Type == "Proceedings Series" || this.Type == "Preprint Repository" || this.Type == "Journal";}
         }
 
 

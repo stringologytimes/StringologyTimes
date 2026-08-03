@@ -12,6 +12,8 @@ import { ViewModeType } from "./doi_filter/doi_filter_view_setting";
 import { renderSeriesTitleList } from "./render/doi_filter_series_title_render";
 import { DOIResultCache } from "./doi_filter/doi_result_cache";
 import { ContainerRecordRender } from "./render/container_record_render";
+import { getDOIRecordTypeList } from "./doi_record_collection";
+import { containerTypeList, paperTypeList } from "./doi_record";
 
 
 export class BrowserInfo {
@@ -52,14 +54,43 @@ export class BrowserInfo {
         this.currentDOIFilter = doiFilterWithViewSetting.copy();
     }
 
-    public processURLParameters(): void {
+    public getTypesFromURLParameters(): string[] {
         const url = new URL(window.location.href);
         var types = url.searchParams.getAll("type");
         if (types.length > 0) {
-            this.currentDOIFilter.query.types = types;
+            if(types.includes("Null")){
+                return [];
+            }else{
+                var result : string[] = [];
+                types.forEach(type => {
+                    if(type == "Container-Any"){
+                        containerTypeList.forEach(type => {
+                            result.push(type);
+                        });
+                    }else if(type == "Paper-Any"){
+                        paperTypeList.forEach(type => {
+                            result.push(type);
+                        });
+                    }
+                    else if(type == "Other-Any"){
+                        throw new Error("Other-Any is not supported");
+                    }
+                    else{
+                        result.push(type);
+                    }
+                });
+                return result;
+            }
         }else{
-            this.currentDOIFilter.query.types = [];
+            return getDOIRecordTypeList();
         }
+    }
+
+
+
+    public processURLParameters(): void {
+        const url = new URL(window.location.href);
+        this.currentDOIFilter.query.types = this.getTypesFromURLParameters();
 
         var containerTitle = url.searchParams.get("container_title");
         if (containerTitle) {

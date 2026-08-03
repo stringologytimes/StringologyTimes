@@ -301,7 +301,7 @@ namespace DataProcessor
                     SmallCacheSummaryFunctions.UpdateForJournalArticle(doiElement, doiElementDict, this);
                 }
 
-                if (doiElement.IsPostedContent)
+                if (doiElement.IsPostedContent || doiElement.IsText)
                 {
                     SmallCacheSummaryFunctions.UpdateForPostedContent(doiElement, this);
                 }

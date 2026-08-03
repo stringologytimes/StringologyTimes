@@ -3,7 +3,8 @@ import { DOIRecordCollection } from "../../doi_record_collection";
 import { DOIFilterQuery } from "../../doi_filter/doi_filter_query";
 import { SummaryInfo } from "../../doi_filter/summary_info";
 import { SortByType } from "../../doi_filter/doi_filter_query";
-import { getDOIInfoTypeList } from "../../doi_record_collection";
+import { getDOIRecordTypeList } from "../../doi_record_collection";
+import { containerTypeList, paperTypeList } from "../../doi_record";
 /*
 function getUniqueStringSet(items: string[]): string[] {
   const uniqueSet = new Set<string>();
@@ -107,13 +108,78 @@ export function setRadioBoxes(divID: string, templateName: string, selectedValue
   }
 }
 
+export function getSelectedTypeValues(): string[] {
+  const typeListContainerDiv = document.getElementById("type-list-container-span");
+  if (typeListContainerDiv == null) {
+    throw new Error("typeListContainerDiv is not found");
+  }
+  const typeListPaperDiv = document.getElementById("type-list-paper-span");
+  if (typeListPaperDiv == null) {
+    throw new Error("typeListPaperDiv is not found");
+  }
+  const typeListOtherDiv = document.getElementById("type-list-other-span");
+  if (typeListOtherDiv == null) {
+    throw new Error("typeListOtherDiv is not found");
+  }
+
+
+  const typeListContainer = typeListContainerDiv as HTMLSpanElement;
+  const inputElementsForContainers = typeListContainer.querySelectorAll("input");
+  const checkedValuesForContainers = Array.from(inputElementsForContainers).filter(element => (element as HTMLInputElement).checked).map(element => (element as HTMLInputElement).value);
+  const uncheckedValuesForContainers = Array.from(inputElementsForContainers).filter(element => !(element as HTMLInputElement).checked).map(element => (element as HTMLInputElement).value);
+
+  const inputElementsForPapers = typeListPaperDiv.querySelectorAll("input");
+  const checkedValuesForPapers = Array.from(inputElementsForPapers).filter(element => (element as HTMLInputElement).checked).map(element => (element as HTMLInputElement).value);
+  const uncheckedValuesForPapers = Array.from(inputElementsForPapers).filter(element => !(element as HTMLInputElement).checked).map(element => (element as HTMLInputElement).value);
+
+  const inputElementsForOthers = typeListOtherDiv.querySelectorAll("input");
+  const checkedValuesForOthers = Array.from(inputElementsForOthers).filter(element => (element as HTMLInputElement).checked).map(element => (element as HTMLInputElement).value);
+  const uncheckedValuesForOthers = Array.from(inputElementsForOthers).filter(element => !(element as HTMLInputElement).checked).map(element => (element as HTMLInputElement).value);
+
+
+  let result: string[] = [];
+  if(uncheckedValuesForContainers.length == 0 && uncheckedValuesForPapers.length == 0 && uncheckedValuesForOthers.length == 0){
+    result = [];
+  }
+  else if(checkedValuesForContainers.length == 0 && checkedValuesForPapers.length == 0 && checkedValuesForOthers.length == 0){
+    result = ["Null"];
+  }
+  else{
+    if(uncheckedValuesForContainers.length == 0){
+      result.push("Container-Any");
+    }else{
+      checkedValuesForContainers.forEach(type => {
+        result.push(type);
+      });
+    }
+
+    if(uncheckedValuesForPapers.length == 0){
+      result.push("Paper-Any");
+    }else{
+      checkedValuesForPapers.forEach(type => {
+        result.push(type);
+      });
+    }
+    
+    checkedValuesForOthers.forEach(type => {
+      result.push(type);
+    });
+
+    /*
+    if(uncheckedElementsForOthers.length == 0){
+      result.push("Other-Any");
+    }else{
+    }
+    */
+  }
+
+  return result;
+}
+
 export function setTypeListBoxes(selectedValues: string[], itemNames: string[], itemValues: string[]) {
   var containerSpan = document.getElementById("type-list-container-span");
   var paperSpan = document.getElementById("type-list-paper-span");
   var otherSpan = document.getElementById("type-list-other-span");
-
-  var containerItemNames = ["Book", "Conference Proceedings", "Journal", "Journal Issue", "Proceedings Series", "Edited Book", "Reference Book", "Preprint Repository", "Monograph"];
-  var paperItemNames = ["Proceedings Article", "Book Chapter", "Conference Paper", "Journal Article", "Report", "Preprint", "Monograph Chapter", "Posted Content"];
 
   if (containerSpan == null) {
     throw new Error("containerSpan is not found");
@@ -128,21 +194,32 @@ export function setTypeListBoxes(selectedValues: string[], itemNames: string[], 
   }
   otherSpan.innerHTML = "";
 
-  itemNames.forEach((itemName, index) => {
-    console.log("itemName: " + itemName);
+  console.log("setTypeListBoxes")
+
+  console.log(selectedValues);
+  console.log(containerTypeList)
+  console.log(paperTypeList)
+  console.log(itemValues)
+  console.log(itemNames)
+
+
+  itemValues.forEach((itemValue, index) => {
+    var itemName = itemNames[index];
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    checkbox.id = "checkbox_" + itemName;
-    checkbox.name = "checkbox_" + itemName;
-    checkbox.checked = selectedValues.includes(itemName);
+    checkbox.id = "checkbox_" + itemValue;
+    checkbox.value = itemValue;
+    checkbox.checked = selectedValues.includes(itemValue);
     const label = document.createElement("label");
     label.htmlFor = "checkbox_type";
     label.textContent = itemName;
 
-    if (containerItemNames.includes(itemName)) {
+
+
+    if (containerTypeList.includes(itemValue)) {
       containerSpan!.appendChild(checkbox);
       containerSpan!.appendChild(label);
-    } else if (paperItemNames.includes(itemName)) {
+    } else if (paperTypeList.includes(itemValue)) {
       paperSpan!.appendChild(checkbox);
       paperSpan!.appendChild(label);
     } else {
@@ -155,13 +232,13 @@ export function setTypeListBoxes(selectedValues: string[], itemNames: string[], 
 
 
 function renderDOICategoryBox(summaryInfo: SummaryInfo, selectedValues: string[]) {
-  const typeList = ["Any"];
-  const typeValues = ["Any"];
+  const typeList: string[] = [];
+  const typeValues: string[] = [];
 
-  var selectedValue = selectedValues.length > 0 ? selectedValues[0] : null;
+  //var selectedValue = selectedValues.length > 0 ? selectedValues[0] : null;
 
 
-  getDOIInfoTypeList().forEach(type => {
+  getDOIRecordTypeList().forEach(type => {
     //typeList.push(type);
     var p = summaryInfo.doiCategoryList.indexOf(type);
     if (p != -1) {
@@ -169,68 +246,17 @@ function renderDOICategoryBox(summaryInfo: SummaryInfo, selectedValues: string[]
       typeList.push(`${type} (${count})`);
       typeValues.push(type);
     } else {
-      typeList.push(type);
-      typeValues.push("dissabled");
+      typeList.push(`${type} (0)`);
+      typeValues.push(type);
     }
 
   });
-  setRadioBoxes("type-list-div", "type-template", selectedValue == null ? "Any" : selectedValue, typeList, typeValues);
+
+
+
+  //setRadioBoxes("type-list-div", "type-template", selectedValue == null ? "Any" : selectedValue, typeList, typeValues);
   setTypeListBoxes(selectedValues, typeList, typeValues);
 
-  /*
-  const typeListDiv = document.getElementById("type-list-div");
-  if (typeListDiv && typeListDiv instanceof HTMLDivElement) {
-    typeListDiv.innerHTML = "";
-
-    const typeTemplate = document.getElementById('type-template') as HTMLTemplateElement;
-
-
-
-    typeList.forEach((type, index) => {
-      const typeClone = typeTemplate.content.cloneNode(true) as DocumentFragment;
-      const typeLabel = typeClone.querySelector('label');
-      if (typeLabel && typeLabel instanceof HTMLLabelElement) {
-        typeLabel.textContent = type;
-      } else {
-        throw new Error("typeLabel is not found");
-      }
-
-      const typeInput = typeClone.querySelector('input');
-      if (typeInput && typeInput instanceof HTMLInputElement) {
-        typeInput.value = type;
-        if (selectedValue == null && type == "Any") {
-          typeInput.checked = true;
-        }
-        else {
-          typeInput.checked = selectedValue == type;
-        }
-
-        if (type != "Any") {
-          var p = summaryInfo.doiCategoryList.indexOf(type);
-          if (p != -1) {
-            const count = summaryInfo.doiCategoryCountList[p];
-            typeLabel.textContent = `${type} (${count})`;
-          } else {
-            typeInput.disabled = true;
-            typeLabel.style.color = "gray";
-          }
-        }
-
-
-      } else {
-        throw new Error("typeInput is not found");
-      }
-      console.log("typeClone: " + type);
-      typeListDiv.appendChild(typeClone);
-    });
-  }
-  */
-  /*
-  const typeSelect = document.getElementById("type-select");
-  if (typeSelect && typeSelect instanceof HTMLSelectElement) {
-    setSelectHTMLElement(typeSelect, summaryInfo.doiCategoryList, summaryInfo.doiCategoryCountList, selectedValue, "Any");
-  }
-  */
 }
 function renderContainerTitleSelectBox(summaryInfo: SummaryInfo, selectedValue: string | null) {
   const containerTitleSelect = document.getElementById("container-title-select");

@@ -53,6 +53,13 @@ namespace DataProcessor
 
         public static void WriteCSVByGZip(string filePath, List<string> lines)
         {
+            foreach(var line in lines){
+                if (line.Contains("\n"))
+                {
+                    Console.WriteLine("Line contains newline: " + line + " / " + filePath);
+                    throw new Exception("Line contains newline: " + line + " / " + filePath);
+                }
+            }
 
             var linesString = String.Join("\n", lines);
             byte[] input1 = Encoding.UTF8.GetBytes(linesString);

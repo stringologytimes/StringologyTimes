@@ -60,7 +60,7 @@ namespace DataProcessor
             {
                 v.Title = Escape(v.Title);
                 v.ContainerTitle = Escape(v.ContainerTitle);
-                v.SeriesTitle = Escape(v.SeriesTitle);
+                //v.SeriesTitle = Escape(v.SeriesTitle);
                 /*
                 if (b)
                 {
@@ -104,57 +104,7 @@ namespace DataProcessor
             });
         }
 
-
 /*
-        public static void ReplaceContainerTitleUsingDBLPSummary(string dblpSummaryPath, Dictionary<string, DOIElement> doiElementDict, string logFolderPath)
-        {
-            var logFilePath = logFolderPath + "/replace_container_titles_using_dblp_summary.log";
-            var logFile = new StreamWriter(logFilePath, true);
-            logFile.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : Start");
-
-
-            if (File.Exists(dblpSummaryPath))
-            {
-                var dblpProceedingsSeriesDictionary = DBLPProceedingsSeriesDictionary.Load(dblpSummaryPath);
-                dblpProceedingsSeriesDictionary.BuildDoiToSeriesTitleMapper();
-
-
-                doiElementDict.Values.ToList().ForEach((doiElement) =>
-                {
-                    var doi = doiElement.DOI;
-                    if (doiElement.ContainerDOI.Length > 0)
-                    {
-                        var seriesTitle = dblpProceedingsSeriesDictionary.SearchSeriesTitleByDOI(doiElement.ContainerDOI);
-                        if (seriesTitle != null)
-                        {
-                            logFile.WriteLine($"#1 {doi}, {doiElement.SeriesTitle} -> {seriesTitle}");
-                            doiElement.SeriesTitle = seriesTitle;
-
-                        }
-                    }
-                    else
-                    {
-                        var seriesTitle = dblpProceedingsSeriesDictionary.SearchSeriesTitleByDOI(doi);
-                        if (seriesTitle != null)
-                        {
-                            logFile.WriteLine($"#2 {doi}, {doiElement.SeriesTitle} -> {seriesTitle}");
-                            doiElement.SeriesTitle = seriesTitle;
-
-                        }
-                    }
-
-                });
-
-            }
-            else
-            {
-                Console.WriteLine("NoDBLP summary file found: " + dblpSummaryPath);
-            }
-            logFile.Close();
-            Console.WriteLine("Log file: " + logFilePath);
-        }
-        */
-
         public static void ReplaceSeriesTitle(string rulePath, Dictionary<string, DOIElement> doiElementDict, string logFolderPath)
         {
             var logFilePath = logFolderPath + "/series_title_replacement_rules.log";
@@ -185,6 +135,7 @@ namespace DataProcessor
             logFile.Close();
             Console.WriteLine("Log file: " + logFilePath);
         }
+        */
 
         public static void ReplaceType(string rulePath, Dictionary<string, DOIElement> doiElementDict, string logFolderPath)
         {
@@ -259,7 +210,7 @@ namespace DataProcessor
                             if (mergedDictionary.ContainsKey(v.Value.ContainerDOI))
                             {
                                 v.Value.ContainerTitle = mergedDictionary[v.Value.ContainerDOI].Title;
-                                v.Value.SeriesTitle = mergedDictionary[v.Value.ContainerDOI].SeriesTitle;
+                                //v.Value.SeriesTitle = mergedDictionary[v.Value.ContainerDOI].SeriesTitle;
                             }
                         }
                         index++;
@@ -459,6 +410,7 @@ namespace DataProcessor
                             }
                             v.Type = rules[keyWithMark];
                         }
+                        /*
                         else if (replacedPropertyName == "SeriesTitle")
                         {
                             if (!replacedNameSet.Contains(v.SeriesTitle))
@@ -468,6 +420,7 @@ namespace DataProcessor
                             }
                             v.SeriesTitle = rules[keyWithMark];
                         }
+                        */
                     }
                 }
 

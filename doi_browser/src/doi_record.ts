@@ -5,8 +5,12 @@
 import { load_gzip_text_lines, load_gzip_integer_list_lines, load_gzip_integer_lines } from "./gzip_loader";
 
 export type DOIStatus = "primary" | "secondary" | "unknown";
-let ContainerTypeList: string[] = ["Book", "Proceedings", "ConferenceProceeding", "ProceedingsSeries", "Journal", 
-    "Journal-Issue", "PreprintRepository", "ReferenceBook", "EditedBook", "Monograph"];
+//let ContainerTypeList: string[] = ["Book", "Proceedings", "ConferenceProceeding", "ProceedingsSeries", "Journal", 
+//    "Journal-Issue", "PreprintRepository", "ReferenceBook", "EditedBook", "Monograph"];
+
+
+export let containerTypeList: string[] = ["Book", "Conference Proceedings", "Journal", "Journal Issue", "Proceedings Series", "Edited Book", "Reference Book", "Preprint Repository", "Monograph"];
+export let paperTypeList: string[] = ["Proceedings Article", "Book Chapter", "Conference Paper", "Journal Article", "Report", "Preprint", "Monograph Chapter", "Posted Content"];
 
 
 export class LightWeightDOIRecord {
@@ -54,7 +58,7 @@ export class DOIRecord {
     }
 
     public isContainerType(): boolean {
-        return ContainerTypeList.includes(this.type);
+        return containerTypeList.includes(this.type);
     }
 }
 
