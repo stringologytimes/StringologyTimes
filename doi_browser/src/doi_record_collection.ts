@@ -18,7 +18,7 @@ export class DOIRecordCollection {
     public doiToIDMapper: Map<string, number> = new Map();
     public idToDOIChildrenIDMapper: Map<number, number[]> = new Map();
     public recordTypeToIDMapper: Map<string, number[]> = new Map();
-    public idToSubContainersCountMapper: Map<number, number> = new Map();
+    //public idToSubContainersCountMapper: Map<number, number> = new Map();
     public idToPrimaryRecordCountMapper: Map<number, number> = new Map();
     public idToSecondaryRecordCountMapper: Map<number, number> = new Map();
 
@@ -263,14 +263,32 @@ export class DOIRecordCollection {
 
         
 
-        /*
+        
         r.lightweightDOIRecords.forEach((doiInfo, index) => {
-            if(subContainerTypeList.includes(doiInfo.type)){
-                if()
-
+            let ancestor = doiInfo.container_DOI;
+            while(ancestor.length > 0){
+                if(r.doiToIDMapper.has(ancestor)){
+                    var ancestor_id = r.doiToIDMapper.get(ancestor)!;
+                    if(doiInfo.isPrimary){
+                        if(r.idToPrimaryRecordCountMapper.has(ancestor_id)){
+                            r.idToPrimaryRecordCountMapper.set(ancestor_id, r.idToPrimaryRecordCountMapper.get(ancestor_id)! + 1);
+                        }else{
+                            r.idToPrimaryRecordCountMapper.set(ancestor_id, 1);
+                        }
+                    }else{
+                        if(r.idToSecondaryRecordCountMapper.has(ancestor_id)){
+                            r.idToSecondaryRecordCountMapper.set(ancestor_id, r.idToSecondaryRecordCountMapper.get(ancestor_id)! + 1);
+                        }else{
+                            r.idToSecondaryRecordCountMapper.set(ancestor_id, 1);
+                        }
+                    }
+                    ancestor = r.getDOIInfo(ancestor_id).container_DOI;
+                }else{
+                    break;
+                }
             }
         });
-        */
+        
         
 
 

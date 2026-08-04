@@ -81,7 +81,6 @@ export class PrimarySearchFilterRender {
       throw new Error("psf-sub-container-select is not found");
     }    
 
-    console.log("selectTopContainerBox/" + selectedTopContainer);
 
     subContainerSelect.innerHTML = "";
 
@@ -95,12 +94,12 @@ export class PrimarySearchFilterRender {
       console.log("selected_doi_id/" + selected_doi_id + " / " + doiRecordCollection.idToDOIChildrenIDMapper.get(selected_doi_id)?.length);
       doiRecordCollection.idToDOIChildrenIDMapper.get(selected_doi_id)?.forEach(child_id => {
         var child_doi_record = doiRecordCollection.lightweightDOIRecords[child_id];
-        var children_count = doiRecordCollection.idToDOIChildrenIDMapper.get(child_id)?.length ?? 0;
+        var primaryCount = doiRecordCollection.idToPrimaryRecordCountMapper.get(child_id) ?? 0;
+        var secondaryCount = doiRecordCollection.idToSecondaryRecordCountMapper.get(child_id) ?? 0;
 
         const option = document.createElement("option");
         option.value = child_doi_record.doi;
-        option.textContent = `${child_doi_record.title} (${children_count})`;
-        console.log("option/" + option.value + " / " + option.textContent);
+        option.textContent = `${child_doi_record.title} (${primaryCount} primary records, ${secondaryCount} secondary records)`;
         subContainerSelect.appendChild(option);
       });
     }else{
@@ -134,11 +133,12 @@ export class PrimarySearchFilterRender {
         if(recordType == key) {
           idList.forEach(id => {
             var doiRecord = doiRecordCollection.lightweightDOIRecords[id];
-            var childrenCount = doiRecordCollection.idToDOIChildrenIDMapper.get(id)?.length ?? 0;
+            var primaryCount = doiRecordCollection.idToPrimaryRecordCountMapper.get(id) ?? 0;
+            var secondaryCount = doiRecordCollection.idToSecondaryRecordCountMapper.get(id) ?? 0;
             
             const option = document.createElement("option");
             option.value = doiRecord.doi;
-            option.textContent = `${doiRecord.title} (${childrenCount})`;
+            option.textContent = `${doiRecord.title} (${primaryCount} primary records, ${secondaryCount} secondary records)`;
             topContainerSelect.appendChild(option);
           }
         );
