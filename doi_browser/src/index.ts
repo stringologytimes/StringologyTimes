@@ -82,6 +82,10 @@ function filterInputChange(inputElementName: string) {
   EventFunctions.filterInputChange(inputElementName, browserInfo);
 }
 
+function primarySearchFilterChange(inputElementName: string) {
+  EventFunctions.primarySearchFilterChange(inputElementName, browserInfo);
+}
+
 function viewSettingInputChange(inputElementName: string) {
   EventFunctions.ViewSettingInputChange(inputElementName, browserInfo);
 }
@@ -135,6 +139,7 @@ function initializeParameter(parameterList: [string, string][]) {
 
 // グローバルスコープに公開（onchange属性からアクセスできるようにする）
 (window as any).filterInputChange = filterInputChange;
+(window as any).primarySearchFilterChange = primarySearchFilterChange;
 (window as any).resetFilter = resetFilter;
 (window as any).viewSettingInputChange = viewSettingInputChange;
 (window as any).containerTitleLiElementClick = containerTitleLiElementClick;

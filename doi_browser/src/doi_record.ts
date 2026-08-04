@@ -9,6 +9,12 @@ export type DOIStatus = "primary" | "secondary" | "unknown";
 //    "Journal-Issue", "PreprintRepository", "ReferenceBook", "EditedBook", "Monograph"];
 
 
+
+
+export let topContainerTypeList: string[] = ["Journal", "Proceedings Series", "Preprint Repository"];
+export let subContainerTypeList: string[] = ["Book", "Journal Issue", "Proceedings Series", "Edited Book", "Reference Book", "Monograph"];
+
+
 export let containerTypeList: string[] = ["Book", "Conference Proceedings", "Journal", "Journal Issue", "Proceedings Series", "Edited Book", "Reference Book", "Preprint Repository", "Monograph"];
 export let paperTypeList: string[] = ["Proceedings Article", "Book Chapter", "Conference Paper", "Journal Article", "Report", "Preprint", "Monograph Chapter", "Posted Content"];
 
@@ -28,6 +34,11 @@ export class LightWeightDOIRecord {
     public tags: string[] = [];    
     public doiReferenceIDs: number[] = [];
     public optional_ids: string[] = [];
+
+    public isTopContainerType(): boolean {
+        return topContainerTypeList.includes(this.type);
+    }
+
 }
 export class DOIRecord {
     public id: number = -1;

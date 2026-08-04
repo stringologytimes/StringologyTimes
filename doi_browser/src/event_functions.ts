@@ -1,8 +1,9 @@
 
 import { BrowserInfo } from "./browser_info";
-import { SortByType } from "./doi_filter/doi_filter_query";
+import { SortByType } from "./doi_filter/primary_search_filter";
 import { DOIStatus } from "./doi_record";
-import { getSelectedTypeValues } from "./render/settings/doi_filter_box_render";
+import { getSelectedTypeValues } from "./render/settings/primary_search_filter_render";
+import { PrimarySearchFilterRender } from "./render/settings/primary_search_filter_render";
 
 export function updatePaginationControls(browserInfo: BrowserInfo) {
   /*
@@ -42,7 +43,23 @@ export function process(browserInfo: BrowserInfo) {
   browserInfo.render();
 }
 
+export function primarySearchFilterChange(inputElementName: string, browserInfo: BrowserInfo) {
+  if(browserInfo.doiInfoCollection == null) {
+    throw new Error("doiInfoCollection is null");
+  }else{
+    console.log("primarySearchFilterChange/" + inputElementName);
+    if (inputElementName == "psf-top-container-type") {
+      const selectedTopContainerType = (document.getElementById("psf-top-container-type-select") as HTMLSelectElement).value;
+      PrimarySearchFilterRender.selectTopContainerTypeBox(selectedTopContainerType, browserInfo.doiInfoCollection);
+    }
+    else if (inputElementName == "psf-top-container") {
+      const selectedTopContainer = (document.getElementById("psf-top-container-select") as HTMLSelectElement).value;      
+      PrimarySearchFilterRender.selectTopContainerBox(selectedTopContainer, browserInfo.doiInfoCollection);
+    }
+  }
 
+
+}
 
 export function filterInputChange(inputElementName: string, browserInfo: BrowserInfo) {
   const url = new URL(window.location.href);

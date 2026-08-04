@@ -1,22 +1,187 @@
-import { DOIFilterResult } from "../../doi_filter/doi_filter_result";
+import { PrimarySearchResult } from "../../doi_filter/primary_search_result";
 import { DOIRecordCollection } from "../../doi_record_collection";
-import { DOIFilterQuery } from "../../doi_filter/doi_filter_query";
+import { PrimarySearchFilter } from "../../doi_filter/primary_search_filter";
 import { SummaryInfo } from "../../doi_filter/summary_info";
-import { SortByType } from "../../doi_filter/doi_filter_query";
+import { SortByType } from "../../doi_filter/primary_search_filter";
 import { getDOIRecordTypeList } from "../../doi_record_collection";
-import { containerTypeList, paperTypeList } from "../../doi_record";
-/*
-function getUniqueStringSet(items: string[]): string[] {
-  const uniqueSet = new Set<string>();
-  items.forEach(item => {
-    uniqueSet.add(item);
-  });
-  return Array.from(uniqueSet);
+import { containerTypeList, paperTypeList, topContainerTypeList } from "../../doi_record";
+
+
+let topContainerCategories: string[] = ["Any","Journal",  "Proceedings", "Preprint"];
+let containerSelect2Items: [string, string][] = [];
+
+export class PrimarySearchFilterRender {
+  public static initialize(doiRecordCollection: DOIRecordCollection): void {
+    const recordTypeCounters: Map<string, number> = new Map<string, number>();
+
+    doiRecordCollection.lightweightDOIRecords.forEach(record => {
+      const recordType = record.type;
+      if (recordTypeCounters.has(recordType)) {
+        recordTypeCounters.set(recordType, recordTypeCounters.get(recordType)! + 1);
+      } else {
+        recordTypeCounters.set(recordType, 1);
+      }
+    }
+    );
+    this.initializeRecordTypes(recordTypeCounters, doiRecordCollection);
+    this.initializeContainerBox(doiRecordCollection);
+  }
+
+  public static initializeRecordTypes(recordTypeCounters: Map<string, number>, doiRecordCollection: DOIRecordCollection) {
+    const typeListContainerSpan = document.getElementById("psf-container-types-span");
+    if (typeListContainerSpan == null) {
+      throw new Error("psf-container-types-span is not found");
+    }
+    const typeListPaperSpan = document.getElementById("psf-paper-types-span");
+    if (typeListPaperSpan == null) {
+      throw new Error("psf-paper-types-span is not found");
+    }
+    const typeListOtherSpan = document.getElementById("psf-other-types-span");
+    if (typeListOtherSpan == null) {
+      throw new Error("typeListOtherDiv is not found");
+    }
+
+
+
+
+
+    getDOIRecordTypeList().forEach(type => {
+      let count = 0;
+      if (recordTypeCounters.has(type)) {
+        count = recordTypeCounters.get(type)!;
+      }
+      const labelName = `${type} (${count})`;
+
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.id = "psf-checkbox_" + type;
+      checkbox.value = type;
+      checkbox.checked = true;
+
+      const label = document.createElement("label");
+      label.htmlFor = "psf-checkbox_" + type;
+      label.textContent = labelName;
+
+      if (containerTypeList.includes(type)) {
+        typeListContainerSpan.appendChild(checkbox);
+        typeListContainerSpan.appendChild(label);
+      } else if (paperTypeList.includes(type)) {
+        typeListPaperSpan.appendChild(checkbox);
+        typeListPaperSpan.appendChild(label);
+      } else {
+        typeListOtherSpan.appendChild(checkbox);
+        typeListOtherSpan.appendChild(label);
+      }
+    });
+  }
+
+  public static selectTopContainerBox(selectedTopContainer: string, doiRecordCollection: DOIRecordCollection) {
+    const subContainerSelect = document.getElementById("psf-sub-container-select");
+    if (subContainerSelect == null) {
+      throw new Error("psf-sub-container-select is not found");
+    }    
+
+    console.log("selectTopContainerBox/" + selectedTopContainer);
+
+    subContainerSelect.innerHTML = "";
+
+    if(selectedTopContainer == "Any") {
+      const option = document.createElement("option");
+      option.value = "Any";
+      option.textContent = "Any";
+      subContainerSelect.appendChild(option);
+    }else if(doiRecordCollection.doiToIDMapper.has(selectedTopContainer)){
+      var selected_doi_id = doiRecordCollection.doiToIDMapper.get(selectedTopContainer)!;
+      console.log("selected_doi_id/" + selected_doi_id + " / " + doiRecordCollection.idToDOIChildrenIDMapper.get(selected_doi_id)?.length);
+      doiRecordCollection.idToDOIChildrenIDMapper.get(selected_doi_id)?.forEach(child_id => {
+        var child_doi_record = doiRecordCollection.lightweightDOIRecords[child_id];
+        var children_count = doiRecordCollection.idToDOIChildrenIDMapper.get(child_id)?.length ?? 0;
+
+        const option = document.createElement("option");
+        option.value = child_doi_record.doi;
+        option.textContent = `${child_doi_record.title} (${children_count})`;
+        console.log("option/" + option.value + " / " + option.textContent);
+        subContainerSelect.appendChild(option);
+      });
+    }else{
+      throw new Error("selectedTopContainer is not found");
+    }
+  }
+
+
+  public static selectTopContainerTypeBox(selectedTopContainerType: string, doiRecordCollection: DOIRecordCollection) {
+    const topContainerTypeSelect : HTMLSelectElement = document.getElementById("psf-top-container-type-select") as HTMLSelectElement;
+    if (topContainerTypeSelect == null) {
+      throw new Error("psf-top-container-type-select is not found");
+    }
+
+    const topContainerSelect = document.getElementById("psf-top-container-select");
+    if (topContainerSelect == null) {
+      throw new Error("psf-top-container-select is not found");
+    }
+
+    //const selectedValue : string = topContainerTypeSelect.value;
+    topContainerSelect.innerHTML = "";
+
+    const mapper: Map<string, string> = new Map<string, string>();
+    mapper.set("Journal", "Journal");
+    mapper.set("Proceedings", "Proceedings Series");
+    mapper.set("Preprint", "Preprint Repository");
+
+    if(mapper.has(selectedTopContainerType)) {
+      const key = mapper.get(selectedTopContainerType);
+      doiRecordCollection.recordTypeToIDMapper.forEach((idList, recordType) => {
+        if(recordType == key) {
+          idList.forEach(id => {
+            var doiRecord = doiRecordCollection.lightweightDOIRecords[id];
+            var childrenCount = doiRecordCollection.idToDOIChildrenIDMapper.get(id)?.length ?? 0;
+            
+            const option = document.createElement("option");
+            option.value = doiRecord.doi;
+            option.textContent = `${doiRecord.title} (${childrenCount})`;
+            topContainerSelect.appendChild(option);
+          }
+        );
+        }
+      });
+    }else{
+      const option = document.createElement("option");
+      option.value = "Any";
+      option.textContent = "Any";
+      topContainerSelect.appendChild(option);
+    }    
+  }
+
+
+
+
+  public static initializeContainerBox(doiRecordCollection: DOIRecordCollection) {
+    const topContainerTypeSelect = document.getElementById("psf-top-container-type-select");
+    if (topContainerTypeSelect == null) {
+      throw new Error("psf-top-container-type-select is not found");
+    }
+    /*
+    const topContainerSelect = document.getElementById("psf-top-container-select");
+    if (topContainerSelect == null) {
+      throw new Error("psf-top-container-select is not found");
+    }
+    const subContainerSelect = document.getElementById("psf-sub-container-select");
+    if (subContainerSelect == null) {
+      throw new Error("psf-sub-container-select is not found");
+    }
+    */
+
+    topContainerCategories.forEach((topContainerType, index) => {
+      const option = document.createElement("option");
+      option.value = topContainerType;
+      option.textContent = topContainerType;
+      topContainerTypeSelect.appendChild(option);
+    });
+
+
+  }
+
 }
-*/
-
-
-
 
 
 function setSelectHTMLElement(selectElement: HTMLSelectElement, options: string[], doiCountList: number[], selectedValue: string | null, dontCareValueName: string) {
@@ -50,23 +215,6 @@ function setSelectHTMLElement(selectElement: HTMLSelectElement, options: string[
     selectElement.appendChild(option);
   }
 
-  /*
-
-  options.forEach((optionValue, index) => {
-    const option = document.createElement("option");
-    const doiCount = doiCountList[index];
-    option.value = optionValue;
-    option.textContent = `${optionValue} (${doiCount})`;
-
-    if (optionValue == selectedValue) {
-      option.selected = true;
-    }
-
-    if(index < max_children_count){
-      selectElement.appendChild(option);
-    }
-  });
-  */
 }
 
 export function setRadioBoxes(divID: string, templateName: string, selectedValue: string | null, itemNames: string[], itemValues: string[]) {
@@ -138,29 +286,29 @@ export function getSelectedTypeValues(): string[] {
 
 
   let result: string[] = [];
-  if(uncheckedValuesForContainers.length == 0 && uncheckedValuesForPapers.length == 0 && uncheckedValuesForOthers.length == 0){
+  if (uncheckedValuesForContainers.length == 0 && uncheckedValuesForPapers.length == 0 && uncheckedValuesForOthers.length == 0) {
     result = [];
   }
-  else if(checkedValuesForContainers.length == 0 && checkedValuesForPapers.length == 0 && checkedValuesForOthers.length == 0){
+  else if (checkedValuesForContainers.length == 0 && checkedValuesForPapers.length == 0 && checkedValuesForOthers.length == 0) {
     result = ["Null"];
   }
-  else{
-    if(uncheckedValuesForContainers.length == 0){
+  else {
+    if (uncheckedValuesForContainers.length == 0) {
       result.push("Container-Any");
-    }else{
+    } else {
       checkedValuesForContainers.forEach(type => {
         result.push(type);
       });
     }
 
-    if(uncheckedValuesForPapers.length == 0){
+    if (uncheckedValuesForPapers.length == 0) {
       result.push("Paper-Any");
-    }else{
+    } else {
       checkedValuesForPapers.forEach(type => {
         result.push(type);
       });
     }
-    
+
     checkedValuesForOthers.forEach(type => {
       result.push(type);
     });
@@ -335,7 +483,7 @@ function renderKeywordBox(keywords: string[]) {
 }
 
 
-export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIRecordCollection, summaryInfo: SummaryInfo) {
+export function renderFilterBox(filterResult: PrimarySearchResult, filterInput: PrimarySearchFilter, doiInfoCollection: DOIRecordCollection, summaryInfo: SummaryInfo) {
   console.log("renderFilterBox (size: " + filterResult.doiIDs.length + ")");
 
   const renderStartTime1 = performance.now();
@@ -350,7 +498,7 @@ export function renderFilterBox(filterResult: DOIFilterResult, filterInput: DOIF
   const renderStartTime5 = performance.now();
   renderMaximumYearSelectBox(summaryInfo, filterInput.minimum_year, filterInput.maximum_year);
   const renderStartTime6 = performance.now();
-  renderSortBySelectBox(filterInput.sortBy);
+  //renderSortBySelectBox(filterInput.sortBy);
   const renderStartTime7 = performance.now();
   renderTag1SelectBox(summaryInfo, filterInput.tags[0]);
   const renderStartTime8 = performance.now();

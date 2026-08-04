@@ -1,9 +1,9 @@
 import { DOIRecordCollection } from "../doi_record_collection";
 import { DOIRecord } from "../doi_record";
-import { DOIFilterQuery } from "./doi_filter_query";
-import { SortByType } from "./doi_filter_query";
+import { PrimarySearchFilter } from "./primary_search_filter";
+import { SortByType } from "./primary_search_filter";
 
-export class DOIFilterResult {
+export class PrimarySearchResult {
     public doiIDs: number[] = [];
     private yearToDoiMapper: Map<number, number[]> = new Map();
     private authorToDoiMapper: Map<string, number[]> = new Map();
@@ -292,12 +292,12 @@ export class DOIFilterResult {
         return r;
     }
 
-    public search(doiFilterInput: DOIFilterQuery, collection: DOIRecordCollection): DOIFilterResult {
+    public search(doiFilterInput: PrimarySearchFilter, collection: DOIRecordCollection): PrimarySearchResult {
         const resultDOIIDs: number[] = this.doiIDs.filter(doiID => {
             const doiInfo = collection.getDOIInfo(doiID);
             return doiFilterInput.contain(doiInfo);
         });
-        return new DOIFilterResult(resultDOIIDs, collection, doiFilterInput.sortBy);
+        return new PrimarySearchResult(resultDOIIDs, collection, "unordered");
     }
 
 

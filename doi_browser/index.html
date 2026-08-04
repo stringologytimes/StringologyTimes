@@ -83,6 +83,11 @@
       margin-top: 10px;
       margin-left: 10px;
     }
+
+    .psf-types-span {
+      display: block;
+      margin-left: 1.5em;
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
 </head>
@@ -97,17 +102,60 @@
     </div>
   </div>
   <h1>Article Info Browser</h1>
+  <details open>
+    <summary>Primary Search Filter</summary>
+    <fieldset>
+      <legend>Record Type</legend>
+      <div>
+        <div>Container types:</div>
+        <span id="psf-container-types-span" class="psf-types-span"></span>
+      </div>
+      <div>
+        <div>Paper types:</div>
+        <span id="psf-paper-types-span" class="psf-types-span"></span>
+      </div>
+      <div>
+        <div>Other types:</div>
+        <span id="psf-other-types-span" class="psf-types-span"></span>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Container of Records</legend>
+      <div>
+        <select id="psf-top-container-type-select" onchange="primarySearchFilterChange('psf-top-container-type')"></select>
+      </div>
+      <div>
+        <select id="psf-top-container-select" onchange="primarySearchFilterChange('psf-top-container')"></select>
+      </div>
+      <div>
+        <select id="psf-sub-container-select" onchange="primarySearchFilterChange('psf-sub-container')"></select>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Publication Year</legend>
+      From <select id="psf-year-from-select"></select>
+      To <select id="psf-year-to-select"></select>
+    </fieldset>
+    <fieldset>
+      <legend>Record Type</legend>
+    </fieldset>
+    <fieldset>
+      <legend>Keywords</legend>
+      <input type="text" id="psf-keywords-input" name="psf-keywords-input" size="20" />
+    </fieldset>
+  </details>
+
   <fieldset>
     <legend>Filter</legend>
     <ul>
-      <li> Type: 
-        <div> 
+      <li> Type:
+        <div>
           <fieldset onchange="filterInputChange('type')">
             <legend>Container</legend>
             <span id="type-list-container-span"></span>
           </fieldset>
-        </div>        
-        <div> 
+        </div>
+        <div>
           <fieldset onchange="filterInputChange('type')">
             <legend>Paper</legend>
             <span id="type-list-paper-span"></span>
@@ -133,23 +181,24 @@
         <select id="year-to-select" onchange="filterInputChange('year-to')"></select>
       </li>
       <li>
-        <label>Tag1:</label> <select id="tag1-select"
-          onchange="filterInputChange('tag1')"></select>
+        <label>Tag1:</label> <select id="tag1-select" onchange="filterInputChange('tag1')"></select>
       </li>
       <li> Status: <span>
-            <input type="checkbox" id="checkbox_primary" name="checkbox_primary" onchange="filterInputChange('status')" />
-            <label for="checkbox_primary">Primary</label>
-          </span>
-          <span> 
-            <input type="checkbox" id="checkbox_secondary" name="checkbox_secondary" onchange="filterInputChange('status')" />
-            <label for="checkbox_secondary">Secondary</label>
-          </span>
+          <input type="checkbox" id="checkbox_primary" name="checkbox_primary" onchange="filterInputChange('status')" />
+          <label for="checkbox_primary">Primary</label>
+        </span>
+        <span>
+          <input type="checkbox" id="checkbox_secondary" name="checkbox_secondary"
+            onchange="filterInputChange('status')" />
+          <label for="checkbox_secondary">Secondary</label>
+        </span>
       </li>
       <li>
         <label>Sort By:</label> <select id="sort-by-select" onchange="filterInputChange('sort-by')"></select>
       </li>
       <li>
-        <label>Keywords:</label> <input type="text" id="keywords-input" name="keywords-input" size="20" onchange="filterInputChange('keywords')" />
+        <label>Keywords:</label> <input type="text" id="keywords-input" name="keywords-input" size="20"
+          onchange="filterInputChange('keywords')" />
       </li>
     </ul>
     <button>Search</button>
@@ -192,14 +241,14 @@
 
   <template id="type-template">
     <span class="type-span">
-      <input type="radio" name="type-checkbox" onchange="filterInputChange('type')" >
+      <input type="radio" name="type-checkbox" onchange="filterInputChange('type')">
       <label for="type-label"></label>
     </span>
   </template>
 
   <template id="view-mode-template">
     <span class="view-mode-span">
-      <input type="radio" name="view-mode-checkbox" onchange="viewSettingInputChange('view-mode')" >
+      <input type="radio" name="view-mode-checkbox" onchange="viewSettingInputChange('view-mode')">
       <label for="view-mode-label"></label>
     </span>
   </template>
@@ -222,8 +271,8 @@
         </summary>
         <div class="details_div"">
           <ul>
-            <li class="doi">
-            <li class="date">
+            <li class=" doi">
+          <li class="date">
           </li>
           <li>
             <div class="authors"></div>
@@ -240,7 +289,7 @@
             </details>
           </li>
           <li class="children"></li>
-        </ul>
+          </ul>
         </div>
       </details>
 

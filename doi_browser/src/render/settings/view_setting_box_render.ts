@@ -1,9 +1,9 @@
-import { DOIFilterViewSetting } from "../../doi_filter/doi_filter_view_setting";
-import { ViewModeType } from "../../doi_filter/doi_filter_view_setting";
+import { SearchResultViewSettings } from "../../doi_filter/search_result_view_settings";
+import { ViewModeType } from "../../doi_filter/search_result_view_settings";
 import { SummaryInfo } from "../../doi_filter/summary_info";
-import { setRadioBoxes } from "./doi_filter_box_render";
+import { setRadioBoxes } from "./primary_search_filter_render";
 
-function getMaxPageNumber(viewSetting: DOIFilterViewSetting, summary_info: SummaryInfo): number {
+function getMaxPageNumber(viewSetting: SearchResultViewSettings, summary_info: SummaryInfo): number {
     if(viewSetting.viewMode == "article_list" || viewSetting.viewMode == "group_render"){
         if(summary_info.doiCount == 0){
             return 0;
@@ -102,7 +102,7 @@ function setPageSizeSelectHTMLElement(selectedValue: number) {
 }
 
 
-export function renderViewSettingBox(filterResult: DOIFilterViewSetting, summary_info: SummaryInfo) {
+export function renderViewSettingBox(filterResult: SearchResultViewSettings, summary_info: SummaryInfo) {
     setModeSelectHTMLElement(filterResult.viewMode);
     setPageNumberSelectHTMLElement(filterResult.pageNumber!, getMaxPageNumber(filterResult, summary_info));
     setPageSizeSelectHTMLElement(filterResult.pageSize!);

@@ -1,8 +1,8 @@
-import { DOIFilterQuery } from "./doi_filter_query";
-import { DOIFilterViewSetting } from "./doi_filter_view_setting";
+import { PrimarySearchFilter } from "./primary_search_filter";
+import { SearchResultViewSettings } from "./search_result_view_settings";
 export class DOIFilter {
-    public query: DOIFilterQuery = new DOIFilterQuery();
-    public viewSetting: DOIFilterViewSetting = new DOIFilterViewSetting();
+    public query: PrimarySearchFilter = new PrimarySearchFilter();
+    public viewSetting: SearchResultViewSettings = new SearchResultViewSettings();
 
     /*
     public static buildFromURLParameters(): DOIFilter {        
@@ -31,8 +31,8 @@ export class DOIFilter {
     public static buildFromJSON(json: string): DOIFilter {
         var obj: any = JSON.parse(json);
         var r = new DOIFilter();
-        r.query = DOIFilterQuery.buildFromJSON(obj.query);
-        r.viewSetting = DOIFilterViewSetting.buildFromJSON(obj.viewSetting);
+        r.query = PrimarySearchFilter.buildFromJSON(obj.query);
+        r.viewSetting = SearchResultViewSettings.buildFromJSON(obj.viewSetting);
         return r;
     }
 }

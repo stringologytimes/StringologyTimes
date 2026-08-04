@@ -1,12 +1,12 @@
-import { DOIFilterResult } from "../doi_filter/doi_filter_result";
+import { PrimarySearchResult } from "../doi_filter/primary_search_result";
 import { SummaryInfo } from "../doi_filter/summary_info";
-import { DOIFilterViewSetting } from "../doi_filter/doi_filter_view_setting";
+import { SearchResultViewSettings } from "../doi_filter/search_result_view_settings";
 import { DOIRecordCollection } from "../doi_record_collection";
 import { DOIFilterStandardRender } from "./doi_filter_standard_render";
 
 
 export class ContainerRecordRender {
-    public static render(filterResult: DOIFilterResult, viewSetting: DOIFilterViewSetting, summaryInfo: SummaryInfo, doiInfoCollection: DOIRecordCollection) {
+    public static render(filterResult: PrimarySearchResult, viewSetting: SearchResultViewSettings, summaryInfo: SummaryInfo, doiInfoCollection: DOIRecordCollection) {
 
         const outputDiv = document.getElementById("output");
         if (!outputDiv) {

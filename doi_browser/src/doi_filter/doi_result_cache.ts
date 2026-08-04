@@ -1,14 +1,14 @@
 import { DOIFilter } from "./doi_filter";
-import { DOIFilterResult } from "./doi_filter_result";
+import { PrimarySearchResult } from "./primary_search_result";
 import { SummaryInfo } from "./summary_info";
 import { DOIRecordCollection } from "../doi_record_collection";
-import { DOIFilterQuery } from "./doi_filter_query";
+import { PrimarySearchFilter } from "./primary_search_filter";
 
 export class DOIResultCache {
     //private doiFilterInputNumber: number = 0;
     //private doiFilterInputHashStack = new Array<string>();
 
-    private doiFilterResultCache = new Map<string, DOIFilterResult>();
+    private doiFilterResultCache = new Map<string, PrimarySearchResult>();
     private summaryInfoCache = new Map<string, SummaryInfo>();
 
     
@@ -23,7 +23,7 @@ export class DOIResultCache {
 
         {
             const emptyDOIFilterWithViewSetting = new DOIFilter();
-            const newDOIFilterResult = new DOIFilterResult(null, doiInfoCollection!, emptyDOIFilterWithViewSetting.query.sortBy);
+            const newDOIFilterResult = new PrimarySearchResult(null, doiInfoCollection!, "unordered");
             const summaryInfo = new SummaryInfo();
             summaryInfo.build(newDOIFilterResult, emptyDOIFilterWithViewSetting.query, doiInfoCollection!);
 
@@ -35,7 +35,7 @@ export class DOIResultCache {
     
 
 
-    public search(doiInfoCollection: DOIRecordCollection, currentDOIFilter: DOIFilter) : [DOIFilterResult, SummaryInfo] {
+    public search(doiInfoCollection: DOIRecordCollection, currentDOIFilter: DOIFilter) : [PrimarySearchResult, SummaryInfo] {
         var queryHash = currentDOIFilter.query.getHash();
         var b1 = this.doiFilterResultCache.has(queryHash);
 
@@ -59,7 +59,7 @@ export class DOIResultCache {
         }else{
             var parentQueries = currentDOIFilter.query.get_parents();
             var min_count = doiInfoCollection.length() + 1;
-            var parentInfo : DOIFilterQuery | null = null;
+            var parentInfo : PrimarySearchFilter | null = null;
             for(const parentQuery of parentQueries){
                 var parentHash = parentQuery.getHash();
                 if(this.doiFilterResultCache.has(parentHash)){

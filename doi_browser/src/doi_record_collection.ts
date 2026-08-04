@@ -1,6 +1,7 @@
 import { LightWeightDOIRecord } from "./doi_record";
 import { DOIRecord} from "./doi_record";
 import { load_gzip_text_lines, load_gzip_integer_list_lines, load_gzip_integer_lines } from "./gzip_loader";
+import { subContainerTypeList } from "./doi_record";
 
 let typeList: string[] = [];
 
@@ -16,6 +17,10 @@ export class DOIRecordCollection {
     public tagList: string[] = [];
     public doiToIDMapper: Map<string, number> = new Map();
     public idToDOIChildrenIDMapper: Map<number, number[]> = new Map();
+    public recordTypeToIDMapper: Map<string, number[]> = new Map();
+    public idToSubContainersCountMapper: Map<number, number> = new Map();
+    public idToPrimaryRecordCountMapper: Map<number, number> = new Map();
+    public idToSecondaryRecordCountMapper: Map<number, number> = new Map();
 
 
     public length(): number {
@@ -246,6 +251,27 @@ export class DOIRecordCollection {
                 }
             }
         });
+
+
+        r.lightweightDOIRecords.forEach((doiInfo, index) => {
+            if(r.recordTypeToIDMapper.has(doiInfo.type)){
+                r.recordTypeToIDMapper.get(doiInfo.type)!.push(index);
+            }else{
+                r.recordTypeToIDMapper.set(doiInfo.type, [index]);
+            }
+        });
+
+        
+
+        /*
+        r.lightweightDOIRecords.forEach((doiInfo, index) => {
+            if(subContainerTypeList.includes(doiInfo.type)){
+                if()
+
+            }
+        });
+        */
+        
 
 
         console.log("lightweightDOIInfos is loaded successfully : " + r.lightweightDOIRecords.length);

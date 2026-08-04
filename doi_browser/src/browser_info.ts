@@ -1,19 +1,20 @@
 import { DOIRecordCollection } from "./doi_record_collection";
-import { DOIFilterResult } from "./doi_filter/doi_filter_result";
+import { PrimarySearchResult } from "./doi_filter/primary_search_result";
 import { DOIFilter } from "./doi_filter/doi_filter";
 import { SummaryInfo } from "./doi_filter/summary_info";
-import { renderFilterBox } from "./render/settings/doi_filter_box_render";
+import { renderFilterBox } from "./render/settings/primary_search_filter_render";
 import { renderViewSettingBox } from "./render/settings/view_setting_box_render";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
 import { renderContainerTitleList } from "./render/doi_filter_container_title_render";
-import { SortByType } from "./doi_filter/doi_filter_query";
+import { SortByType } from "./doi_filter/primary_search_filter";
 import { DOIStatus } from "./doi_record";
-import { ViewModeType } from "./doi_filter/doi_filter_view_setting";
+import { ViewModeType } from "./doi_filter/search_result_view_settings";
 import { renderSeriesTitleList } from "./render/doi_filter_series_title_render";
 import { DOIResultCache } from "./doi_filter/doi_result_cache";
 import { ContainerRecordRender } from "./render/container_record_render";
 import { getDOIRecordTypeList } from "./doi_record_collection";
 import { containerTypeList, paperTypeList } from "./doi_record";
+import { PrimarySearchFilterRender } from "./render/settings/primary_search_filter_render";
 
 
 export class BrowserInfo {
@@ -30,6 +31,8 @@ export class BrowserInfo {
         this.doiInfoCollection = doiInfoCollection;
         this.doiResultCache.initialize(doiInfoCollection, this.currentDOIFilter);
 
+        PrimarySearchFilterRender.initialize(doiInfoCollection);
+
 
     }
 
@@ -38,7 +41,7 @@ export class BrowserInfo {
         return this.currentDOIFilter;
     }
 
-    public getCurrentDOIFilterResult(): DOIFilterResult {
+    public getCurrentDOIFilterResult(): PrimarySearchResult {
         var [result, _] = this.doiResultCache.search(this.doiInfoCollection!, this.currentDOIFilter);
         return result;
     }    
@@ -118,12 +121,17 @@ export class BrowserInfo {
         }else{
             this.currentDOIFilter.query.maximum_year = null;
         }
+
+        /*
         var sortBy = url.searchParams.get("sort_by");
         if (sortBy) {
             this.currentDOIFilter.query.sortBy = sortBy as SortByType;
         }else{
             this.currentDOIFilter.query.sortBy = "unordered";
         }
+        */
+
+
         var tags = url.searchParams.getAll("tag");
         if (tags.length > 0) {
             this.currentDOIFilter.query.tags = tags;

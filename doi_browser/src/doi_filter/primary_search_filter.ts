@@ -1,12 +1,12 @@
 import { DOIRecord } from "../doi_record";
 import { DOIRecordCollection } from "../doi_record_collection";
 import { DOIStatus } from "../doi_record";
-import { DOIFilterResult } from "./doi_filter_result";
+import { PrimarySearchResult } from "./primary_search_result";
 
 export type SortByType = "alphabetical-order-by-container-title" | "ascending-order-by-date" | "descending-order-by-date" | "article-count" | "unordered";
 
 
-export class DOIFilterQuery {
+export class PrimarySearchFilter {
     public minimum_year: number | null = null;
     public maximum_year: number | null = null;
     public types: string[] = [];
@@ -17,7 +17,7 @@ export class DOIFilterQuery {
     public series_title: string | null = null;
     public doiReferences: string[] = [];    
     public excludeStatus: DOIStatus[] = [];
-    public sortBy: SortByType = "unordered";
+    //public sortBy: SortByType = "unordered";
     public keywords: string[] = [];
     
     private filter(collection: DOIRecordCollection, candidates: number[]): number[] {
@@ -27,7 +27,7 @@ export class DOIFilterQuery {
         });
     }
 
-    public search(doiInfoCollectionFilter: DOIFilterResult, collection: DOIRecordCollection): number[] {
+    public search(doiInfoCollectionFilter: PrimarySearchResult, collection: DOIRecordCollection): number[] {
         let r: number[] = doiInfoCollectionFilter.doiIDs.map(doiID => doiID);
         return this.filter(collection, r);
     }
@@ -37,8 +37,8 @@ export class DOIFilterQuery {
         && this.keywords.length == 0 && this.series_title == null
         && this.excludeStatus.length == 0 && this.doiReferences.length == 0;
     }
-    public copy(): DOIFilterQuery {
-        const r = new DOIFilterQuery();
+    public copy(): PrimarySearchFilter {
+        const r = new PrimarySearchFilter();
         r.minimum_year = this.minimum_year;
         r.maximum_year = this.maximum_year;
         r.types = this.types.map(type => type);
@@ -49,13 +49,13 @@ export class DOIFilterQuery {
         r.series_title = this.series_title;
         r.doiReferences = this.doiReferences.map(doiReference => doiReference);
         r.excludeStatus = this.excludeStatus.map(excludeStatus => excludeStatus);
-        r.sortBy = this.sortBy;
+        //r.sortBy = this.sortBy;
         r.keywords = this.keywords.map(keyword => keyword);
         return r;
     }
 
-    public get_parents() : DOIFilterQuery[] {
-        var r = new Array<DOIFilterQuery>();
+    public get_parents() : PrimarySearchFilter[] {
+        var r = new Array<PrimarySearchFilter>();
         if(this.minimum_year != null){
             var copy = this.copy();
             copy.minimum_year = null;
@@ -108,11 +108,13 @@ export class DOIFilterQuery {
             copy.excludeStatus = [];
             r.push(copy);
         }
+        /*
         if(this.sortBy != "unordered"){
             var copy = this.copy();
             copy.sortBy = "unordered";
             r.push(copy);
         }
+        */
         if(this.keywords.length > 0){
             var copy = this.copy();
             copy.keywords = [];
@@ -154,9 +156,11 @@ export class DOIFilterQuery {
         if(this.excludeStatus.length > 0){
             obj.excludeStatus = this.excludeStatus;
         }
+        /*
         if(this.sortBy != "unordered"){
             obj.sortBy = this.sortBy;
         }
+        */
         if(this.keywords.length > 0){
             obj.keywords = this.keywords;
         }
@@ -164,9 +168,9 @@ export class DOIFilterQuery {
         return JSON.stringify(obj);
     }
 
-    public static buildFromJSON(json: string): DOIFilterQuery {
+    public static buildFromJSON(json: string): PrimarySearchFilter {
         var obj: any = JSON.parse(json);
-        var r = new DOIFilterQuery();
+        var r = new PrimarySearchFilter();
 
         if(obj.minimum_year != null){
             r.minimum_year = obj.minimum_year;
@@ -198,9 +202,11 @@ export class DOIFilterQuery {
         if(obj.excludeStatus.length > 0){
             r.excludeStatus = obj.excludeStatus.map((v: any) => v as DOIStatus);
         }
+        /*
         if(obj.sortBy != "unordered"){
             r.sortBy = obj.sortBy;
         }
+        */
         if(obj.keywords.length > 0){
             r.keywords = obj.keywords.map((v: any) => v as string);
         }
@@ -305,7 +311,7 @@ export class DOIFilterQuery {
         return true;
     }
 
-    public isIncluded(item : DOIFilterQuery): boolean {
+    public isIncluded(item : PrimarySearchFilter): boolean {
         if(this.minimum_year != null && item.minimum_year != null){            
             if(this.minimum_year < item.minimum_year){
                 return false;
@@ -357,9 +363,11 @@ export class DOIFilterQuery {
             return false;
         }
 
+        /*
         if(this.sortBy != item.sortBy){
             return false;
         }
+        */
 
         for(let i = 0; i < item.tags.length; i++){
             if(!this.tags.includes(item.tags[i])){

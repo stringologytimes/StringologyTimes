@@ -1,6 +1,6 @@
 import { DOIRecord } from "../doi_record";
 import { DOIRecordCollection } from "../doi_record_collection";
-import { DOIFilterResult } from "../doi_filter/doi_filter_result";
+import { PrimarySearchResult } from "../doi_filter/primary_search_result";
 import { addIconToSpan, setIconToLink, setIconToSpan } from "../svg_icon";
 
 
@@ -309,7 +309,7 @@ export class DOIFilterStandardRender {
     }
 
 
-    public static render(doiFilterResult: DOIFilterResult, doiIndex: number, doiCount: number, doiInfoCollection: DOIRecordCollection) {
+    public static render(doiFilterResult: PrimarySearchResult, doiIndex: number, doiCount: number, doiInfoCollection: DOIRecordCollection) {
         const doiIDs = new Array<number>();
         for (let i = doiIndex; i < doiIndex + doiCount; i++) {
             if (i >= doiFilterResult.doiIDs.length) {

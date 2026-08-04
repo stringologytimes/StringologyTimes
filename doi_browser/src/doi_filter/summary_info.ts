@@ -1,5 +1,5 @@
-import { DOIFilterResult } from "./doi_filter_result";
-import { DOIFilterQuery } from "./doi_filter_query";
+import { PrimarySearchResult } from "./primary_search_result";
+import { PrimarySearchFilter } from "./primary_search_filter";
 import { DOIRecordCollection } from "../doi_record_collection";
 
 export class SummaryInfo {
@@ -18,7 +18,7 @@ export class SummaryInfo {
     public tagList: string[] = [];
     public tagCountList: number[] = [];
 
-    public build(filterResult: DOIFilterResult, filterInput: DOIFilterQuery, doiInfoCollection: DOIRecordCollection){
+    public build(filterResult: PrimarySearchResult, filterInput: PrimarySearchFilter, doiInfoCollection: DOIRecordCollection){
         this.doiCount = filterResult.doiIDs.length;
         this.doiCategoryList = filterResult.getTypes();
         this.doiCategoryList.sort();
@@ -30,6 +30,7 @@ export class SummaryInfo {
         this.seriesTitleList = filterResult.getSeriesTitles();
 
 
+        /*
         if(filterInput.sortBy == "alphabetical-order-by-container-title"){
             this.containerTitleList.sort();
             this.seriesTitleList.sort();
@@ -46,6 +47,7 @@ export class SummaryInfo {
             });
             this.seriesTitleList = this.seriesTitleList.sort((a, b) => seriesTitleToDoiCountMapper.get(b)! - seriesTitleToDoiCountMapper.get(a)!);
         }
+        */
 
 
         this.containerTitleCountList = this.containerTitleList.map(containerTitle => filterResult.searchByContainerTitle(containerTitle, doiNumberFilterSet, doiInfoCollection).length);
