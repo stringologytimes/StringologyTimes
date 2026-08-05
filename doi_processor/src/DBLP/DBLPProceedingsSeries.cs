@@ -11,7 +11,7 @@ namespace DataProcessor
 {
 
 
-    class DBLPProceedingsSeries
+    class DBLPProceedingsCollection
     {
         public string SeriesTitle { get; set; } = "";
         public Dictionary<string, DBLPProceedings> Series { get; set; } = new Dictionary<string, DBLPProceedings>();

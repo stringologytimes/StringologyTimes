@@ -221,7 +221,7 @@ namespace DataProcessor
             var dummyDOIElementDict = DOIElement.Load(DummyCacheManager.GetDummyCacheFilePath(dataFolderPath), false);
             */
 
-            var dblpSeriesDictionary = DBLPProceedingsSeriesDictionary.Load(dataFolderPath + "/auto_generated/cache/dblp_cache/dblp_proceedings.jsonl");
+            var dblpSeriesDictionary = DBLPProceedingsCollectionDictionary.Load(dataFolderPath + "/auto_generated/cache/dblp_cache/dblp_proceedings.jsonl");
             dblpSeriesDictionary.BuildDoiToSeriesTitleAndKeyMapper();
 
 

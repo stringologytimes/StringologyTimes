@@ -10,9 +10,9 @@ using System.Text.RegularExpressions;
 namespace DataProcessor
 {
 
-    class DBLPProceedingsSeriesDictionary
+    class DBLPProceedingsCollectionDictionary
     {
-        public Dictionary<string, DBLPProceedingsSeries> Series { get; set; } = new Dictionary<string, DBLPProceedingsSeries>();
+        public Dictionary<string, DBLPProceedingsCollection> Series { get; set; } = new Dictionary<string, DBLPProceedingsCollection>();
         public Dictionary<string, string> KeyDictionary { get; set; } = new Dictionary<string, string>();
         //public Dictionary<string, string> DoiToSeriesTitleMapper { get; set; } = new Dictionary<string, string>();
         public Dictionary<string, KeyValuePair<string, string>> DoiToSeriesTitleAndKeyMapper { get; set; } = new Dictionary<string, KeyValuePair<string, string>>();
@@ -33,7 +33,7 @@ namespace DataProcessor
             }
             else
             {
-                this.Series[bookTitle] = new DBLPProceedingsSeries();
+                this.Series[bookTitle] = new DBLPProceedingsCollection();
                 this.Series[bookTitle].SeriesTitle = bookTitle;
                 this.Series[bookTitle].Add(proceedings);
             }
@@ -144,14 +144,14 @@ namespace DataProcessor
             }
         }
 
-        public static DBLPProceedingsSeriesDictionary Load(string inputFilePath)
+        public static DBLPProceedingsCollectionDictionary Load(string inputFilePath)
         {
             CommonFunctions.OutputSystemMessageFunction("Loading DBLP Proceedings Series Dictionary...");
             CommonFunctions.IncrementParagraphCounter();
             var logFile = new StreamWriter(DBLPProceedings.GetLogFilePath(), true);
 
 
-            var proceedingsSeriesDictionary = new DBLPProceedingsSeriesDictionary();
+            var proceedingsCollectionDictionary = new DBLPProceedingsCollectionDictionary();
             using (var reader = new StreamReader(inputFilePath, Encoding.UTF8))
             {
                 while (!reader.EndOfStream)
@@ -162,13 +162,13 @@ namespace DataProcessor
                         continue;
                     }
                     var proceedings = DBLPProceedings.BuildFromJSONLine(line, logFile);
-                    proceedingsSeriesDictionary.Add(proceedings);
+                    proceedingsCollectionDictionary.Add(proceedings);
                 }
             }
 
             CommonFunctions.OutputSystemMessageFunction("DBLP Proceedings Series Dictionary loaded successfully.");
             CommonFunctions.DecrementParagraphCounter();
-            return proceedingsSeriesDictionary;
+            return proceedingsCollectionDictionary;
         }
 
     }

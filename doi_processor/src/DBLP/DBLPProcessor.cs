@@ -103,10 +103,10 @@ namespace DataProcessor
 
 
         }
-        public static DBLPProceedingsSeriesDictionary CollectProceedings(string xmlPath, string replaceTSVPath)
+        public static DBLPProceedingsCollectionDictionary CollectProceedings(string xmlPath, string replaceTSVPath)
         {
             var doiDictionary = new Dictionary<string, List<string>>();
-            var proceedingsSeriesDictionary = new DBLPProceedingsSeriesDictionary();
+            var proceedingsCollectionDictionary = new DBLPProceedingsCollectionDictionary();
 
             var replaceDictionary = new Dictionary<string, string>();
             if (File.Exists(replaceTSVPath))
@@ -178,7 +178,7 @@ namespace DataProcessor
                         }
 
 
-                        proceedingsSeriesDictionary.Add(ele);
+                        proceedingsCollectionDictionary.Add(ele);
                     }
                     else if (v.Name == "inproceedings")
                     {
@@ -208,9 +208,9 @@ namespace DataProcessor
             foreach (var kvp in doiDictionary)
             {
 
-                if (proceedingsSeriesDictionary.ContainsKey(kvp.Key))
+                if (proceedingsCollectionDictionary.ContainsKey(kvp.Key))
                 {
-                    var proceedings = proceedingsSeriesDictionary.GetProceedings(kvp.Key);
+                    var proceedings = proceedingsCollectionDictionary.GetProceedings(kvp.Key);
                     kvp.Value.ForEach(v =>
                     {
                         proceedings.DOIList.Add(v);
@@ -218,7 +218,7 @@ namespace DataProcessor
                 }
             }
 
-            return proceedingsSeriesDictionary;
+            return proceedingsCollectionDictionary;
         }
 
         public static void WriteDBLPElements(List<DBLPElement> dblpElements, string outputFilePath)

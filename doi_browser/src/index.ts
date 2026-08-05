@@ -25,7 +25,7 @@ function setFoundDOIList(list: any[]) {
 function goToPage(pageNumber: number) {
   browserInfo.currentDOIFilter.viewSetting.pageNumber = pageNumber;
   browserInfo.processCurrentDOIFilterInput();
-  DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterResult(), browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.getItemIndex(), browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.pageSize!, browserInfo.doiInfoCollection!);
+  DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterResult().doiIDs, browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.getItemIndex(), browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.pageSize!, browserInfo.doiInfoCollection!);
   EventFunctions.updatePaginationControls(browserInfo);
 }
 
@@ -86,16 +86,23 @@ function primarySearchFilterChange(inputElementName: string) {
   EventFunctions.primarySearchFilterChange(inputElementName, browserInfo);
 }
 
+function clickPrimarySearchFilterButton(){
+  EventFunctions.clickPrimarySearchFilterButton(browserInfo);
+  EventFunctions.process(browserInfo);
+}
+
 function viewSettingInputChange(inputElementName: string) {
   EventFunctions.ViewSettingInputChange(inputElementName, browserInfo);
 }
 
 function containerTitleLiElementClick(containerTitle: string) {
+  /*
   browserInfo.currentDOIFilter.query.container_title = containerTitle;
   browserInfo.currentDOIFilter.viewSetting.pageNumber = 0;
   browserInfo.currentDOIFilter.viewSetting.viewMode = "article_list";
   browserInfo.processCurrentDOIFilterInput();
   browserInfo.render();
+  */
 }
 
 function resetFilter() {
@@ -146,6 +153,7 @@ function initializeParameter(parameterList: [string, string][]) {
 (window as any).changeParameter = changeParameter;
 (window as any).changeParameters = changeParameters;
 (window as any).initializeParameter = initializeParameter;
+(window as any).clickPrimarySearchFilterButton = clickPrimarySearchFilterButton;
 
 async function domFinished() {
   showLoading();

@@ -88,6 +88,10 @@
       display: block;
       margin-left: 1.5em;
     }
+    .psf-main-div {
+      background-color: lavender;
+    }
+
   </style>
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
 </head>
@@ -102,7 +106,7 @@
     </div>
   </div>
   <h1>Article Info Browser</h1>
-  <details open>
+  <details open class="psf-main-div">
     <summary>Primary Search Filter</summary>
     <fieldset>
       <legend>Record Type</legend>
@@ -122,13 +126,13 @@
     <fieldset>
       <legend>Container of Records</legend>
       <div>
-        <select id="psf-top-container-type-select" onchange="primarySearchFilterChange('psf-top-container-type')"></select>
+        <span>Top container type:</span> <select id="psf-top-container-type-select" onchange="primarySearchFilterChange('psf-top-container-type')"></select>
       </div>
       <div>
-        <select id="psf-top-container-select" onchange="primarySearchFilterChange('psf-top-container')"></select>
+        <span>Top container:</span> <select id="psf-top-container-select" onchange="primarySearchFilterChange('psf-top-container')"></select>
       </div>
       <div>
-        <select id="psf-sub-container-select" onchange="primarySearchFilterChange('psf-sub-container')"></select>
+        <span>Sub container:</span> <select id="psf-sub-container-select" onchange="primarySearchFilterChange('psf-sub-container')"></select>
       </div>
     </fieldset>
     <fieldset>
@@ -138,11 +142,18 @@
     </fieldset>
     <fieldset>
       <legend>Record Type</legend>
+      <input type="checkbox" id="psf-primary-record-checkbox" checked />
+      <label for="psf-primary-record-checkbox">Primary record</label>
+      <input type="checkbox" id="psf-secondary-record-checkbox" checked />
+      <label for="psf-secondary-record-checkbox">Secondary record</label>
     </fieldset>
     <fieldset>
       <legend>Keywords</legend>
       <input type="text" id="psf-keywords-input" name="psf-keywords-input" size="20" />
     </fieldset>
+
+    <button onclick="clickPrimarySearchFilterButton()">Search</button>
+    <button>Reset</button>
   </details>
 
   <fieldset>

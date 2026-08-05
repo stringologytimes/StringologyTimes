@@ -15,6 +15,7 @@ import { ContainerRecordRender } from "./render/container_record_render";
 import { getDOIRecordTypeList } from "./doi_record_collection";
 import { containerTypeList, paperTypeList } from "./doi_record";
 import { PrimarySearchFilterRender } from "./render/settings/primary_search_filter_render";
+import { PrimarySearchFilter } from "./doi_filter/primary_search_filter";
 
 
 export class BrowserInfo {
@@ -95,19 +96,23 @@ export class BrowserInfo {
         const url = new URL(window.location.href);
         this.currentDOIFilter.query.types = this.getTypesFromURLParameters();
 
+        /*
         var containerTitle = url.searchParams.get("container_title");
         if (containerTitle) {
             this.currentDOIFilter.query.container_title = containerTitle;
         }else{
             this.currentDOIFilter.query.container_title = null;
         }
+        */
 
+        /*
         var seriesTitle = url.searchParams.get("series_title");
         if (seriesTitle) {
             this.currentDOIFilter.query.series_title = seriesTitle;
         }else{
             this.currentDOIFilter.query.series_title = null;
         }
+        */
 
         var minimumYear = url.searchParams.get("minimum_year");
         if (minimumYear) {
@@ -187,27 +192,33 @@ export class BrowserInfo {
         */
     }
 
-    public render(): void {
+    public render(PrimarySearchFilter: PrimarySearchFilter): void {
         if (this.doiInfoCollection != null) {
-
             const currentDOIFilterWithViewSetting = this.getCurrentDOIFilterWithViewSetting();
+            const foundRecordIDs = PrimarySearchFilter.search(this.doiInfoCollection!);
+
+            console.log("foundRecordIDs: " + foundRecordIDs.length);
+
+            /*
             const currentDOIFilterResult = this.getCurrentDOIFilterResult();
             const currentSummaryInfo = this.getCurrentSummaryInfo();
+            */
 
 
             console.log("Render start");
             const renderStartTime1 = performance.now();
-            renderFilterBox(currentDOIFilterResult, currentDOIFilterWithViewSetting.query, this.doiInfoCollection!, currentSummaryInfo);
+            //renderFilterBox(currentDOIFilterResult, currentDOIFilterWithViewSetting.query, this.doiInfoCollection!, currentSummaryInfo);
             const renderStartTime2 = performance.now();
             console.log("renderFilterBox time: " + (renderStartTime2 - renderStartTime1) + " ms");
 
-            renderViewSettingBox(currentDOIFilterWithViewSetting.viewSetting, currentSummaryInfo);
+            renderViewSettingBox(currentDOIFilterWithViewSetting.viewSetting, foundRecordIDs.length);
             const renderStartTime3 = performance.now();
             console.log("renderViewSettingBox time: " + (renderStartTime3 - renderStartTime2) + " ms");
 
             if (currentDOIFilterWithViewSetting.viewSetting.viewMode == "article_list") {
-                DOIFilterStandardRender.render(currentDOIFilterResult, currentDOIFilterWithViewSetting.viewSetting.getItemIndex(), currentDOIFilterWithViewSetting.viewSetting.pageSize!, this.doiInfoCollection!);
+                DOIFilterStandardRender.render(foundRecordIDs, currentDOIFilterWithViewSetting.viewSetting.getItemIndex(), currentDOIFilterWithViewSetting.viewSetting.pageSize!, this.doiInfoCollection!);
             }
+            /*
             else if (currentDOIFilterWithViewSetting.viewSetting.viewMode == "container_title_list") {
                 renderContainerTitleList(currentDOIFilterResult, currentDOIFilterWithViewSetting.viewSetting, currentSummaryInfo);
             }
@@ -221,6 +232,7 @@ export class BrowserInfo {
             else {
                 throw new Error("Unknown view mode");
             }
+            */
             const renderStartTime4 = performance.now();
             console.log("DOIFilterMainBoxRender time: " + (renderStartTime4 - renderStartTime3));
 

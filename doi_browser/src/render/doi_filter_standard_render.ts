@@ -287,7 +287,7 @@ export class DOIFilterStandardRender {
         
         const childrenSpan = article.querySelector('.children');
         if (childrenSpan) {
-            if(doiInfo.type == "Book" || doiInfo.type == "ConferenceProceeding" || doiInfo.type == "ProceedingsSeries" || doiInfo.type == "Journal-Issue" || doiInfo.type == "ReferenceBook" || doiInfo.type == "Monograph"){
+            if(doiInfo.type == "Book" || doiInfo.type == "ConferenceProceeding" || doiInfo.type == "ProceedingsCollection" || doiInfo.type == "Journal-Issue" || doiInfo.type == "ReferenceBook" || doiInfo.type == "Monograph"){
                 const link = document.createElement('a');
                 link.href = `#`;
                 link.textContent = "Articles";
@@ -309,14 +309,7 @@ export class DOIFilterStandardRender {
     }
 
 
-    public static render(doiFilterResult: PrimarySearchResult, doiIndex: number, doiCount: number, doiInfoCollection: DOIRecordCollection) {
-        const doiIDs = new Array<number>();
-        for (let i = doiIndex; i < doiIndex + doiCount; i++) {
-            if (i >= doiFilterResult.doiIDs.length) {
-                break;
-            }
-            doiIDs.push(doiFilterResult.doiIDs[i]);
-        }
+    public static render(foundRecordIDs: number[], doiIndex: number, doiCount: number, doiInfoCollection: DOIRecordCollection) {
 
         const outputDiv = document.getElementById("output");
         if (!outputDiv) {
@@ -325,7 +318,7 @@ export class DOIFilterStandardRender {
 
         outputDiv.innerHTML = "";
 
-        if (doiIDs.length == 0) {
+        if (foundRecordIDs.length == 0) {
             outputDiv.innerHTML = "<p>No articles found.</p>";
         } else {
             const doiInfoTemplate = document.getElementById('doi-record-template') as HTMLTemplateElement;
@@ -342,7 +335,7 @@ export class DOIFilterStandardRender {
 
             //const currentDOIListPart = browserInfo.getCurrentDOIListPart();
 
-            doiIDs.forEach((doiID, index) => {
+            foundRecordIDs.forEach((doiID, index) => {
                 var li = document.createElement('li');
                 this.renderDOIRecord(li, doiID, doiInfoCollection);
                 ol.appendChild(li);

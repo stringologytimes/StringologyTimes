@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 namespace DataProcessor
 {
     
-    class DBLPProceedingsSeriesSummary
+    class DBLPProceedingsCollectionSummary
     {
         public string BookTitle { get; set; } = "";
         public string FullName { get; set; } = "";
@@ -18,12 +18,12 @@ namespace DataProcessor
 
         public List<string> DOIPrefixList { get; set; } = new List<string>();
 
-        public static DBLPProceedingsSeriesSummary Build(DBLPProceedingsSeries series)
+        public static DBLPProceedingsCollectionSummary Build(DBLPProceedingsCollection collection)
         {
-            var summary = new DBLPProceedingsSeriesSummary();
-            summary.BookTitle = series.SeriesTitle;
-            summary.FullName = series.ComputeFullName();
-            summary.Count = series.Series.Count;
+            var summary = new DBLPProceedingsCollectionSummary();
+            summary.BookTitle = collection.SeriesTitle;
+            summary.FullName = collection.ComputeFullName();
+            summary.Count = collection.Series.Count;
             return summary;
         }
 
@@ -32,7 +32,7 @@ namespace DataProcessor
             return JsonSerializer.Serialize(this);
         }
 
-        public static void Save(List<DBLPProceedingsSeriesSummary> summaryList, string outputFilePath)
+        public static void Save(List<DBLPProceedingsCollectionSummary> summaryList, string outputFilePath)
         {
             using (var writer = new StreamWriter(outputFilePath, false, Encoding.UTF8))
             {

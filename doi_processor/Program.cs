@@ -75,8 +75,8 @@ namespace DataProcessor
                 if (!fileInfo.Exists)
                 {
                     var dic = new Dictionary<string, List<string>>();
-                    var proceedingsSeriesDictionary = DataProcessor.DBLPProcessor.CollectProceedings(opts.DataFolderPath + "/external/dblp.xml", opts.DataFolderPath + "/raw/dblp/additional_booktitle.tsv");
-                    proceedingsSeriesDictionary.Save(savePath);
+                    var proceedingsCollectionDictionary = DataProcessor.DBLPProcessor.CollectProceedings(opts.DataFolderPath + "/external/dblp.xml", opts.DataFolderPath + "/raw/dblp/additional_booktitle.tsv");
+                    proceedingsCollectionDictionary.Save(savePath);
                 }
                 else
                 {
@@ -87,10 +87,6 @@ namespace DataProcessor
             }
             else if (opts.Mode == "dblp_proceedings_processor")
             {
-                /*
-                var proceedingsSeriesDictionary = DBLPProceedingsSeriesDictionary.Load(opts.DataFolderPath + "/auto_generated/cache/dblp_cache/" + "dblp_proceedings.jsonl");
-                proceedingsSeriesDictionary.BuildDoiToSeriesTitleMapper();
-                */
 
                 return 0;
 

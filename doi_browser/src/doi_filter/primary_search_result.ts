@@ -295,7 +295,7 @@ export class PrimarySearchResult {
     public search(doiFilterInput: PrimarySearchFilter, collection: DOIRecordCollection): PrimarySearchResult {
         const resultDOIIDs: number[] = this.doiIDs.filter(doiID => {
             const doiInfo = collection.getDOIInfo(doiID);
-            return doiFilterInput.contain(doiInfo);
+            return doiFilterInput.contain(doiInfo, collection);
         });
         return new PrimarySearchResult(resultDOIIDs, collection, "unordered");
     }

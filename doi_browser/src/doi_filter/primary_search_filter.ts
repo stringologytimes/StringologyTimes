@@ -12,30 +12,38 @@ export class PrimarySearchFilter {
     public types: string[] = [];
     public authors: string[] = [];
     public tags: string[] = [];
-    public volume: string | null = null;
-    public container_title: string | null = null;
-    public series_title: string | null = null;
+    public ancestor_doi: string | null = null;
+    public top_container_type: string | null = null;
     public doiReferences: string[] = [];    
     public excludeStatus: DOIStatus[] = [];
     //public sortBy: SortByType = "unordered";
     public keywords: string[] = [];
-    
     private filter(collection: DOIRecordCollection, candidates: number[]): number[] {
         return candidates.filter(candidate => {
             const doiInfo = collection.getDOIInfo(candidate);
-            return this.contain(doiInfo);
+            return this.contain(doiInfo, collection);
         });
     }
 
-    public search(doiInfoCollectionFilter: PrimarySearchResult, collection: DOIRecordCollection): number[] {
-        let r: number[] = doiInfoCollectionFilter.doiIDs.map(doiID => doiID);
+    public searchUsingPreviousResult(primarySearchResult: PrimarySearchResult, collection: DOIRecordCollection): number[] {
+        let r: number[] = primarySearchResult.doiIDs.map(doiID => doiID);
         return this.filter(collection, r);
     }
+    public search(collection: DOIRecordCollection): number[] {
+        let r: number[] = [];
+        for(let i = 0; i < collection.lightweightDOIRecords.length; i++){
+            const doiInfo = collection.getDOIInfo(i);
+            if(this.contain(doiInfo, collection)){
+                r.push(i);
+            }
+        }
+        return r;
+    }
+
     public is_empty(): boolean {
         return this.minimum_year == null && this.maximum_year == null && this.types.length == 0 && 
-        this.authors.length == 0 && this.tags.length == 0 && this.volume == null && this.container_title == null 
-        && this.keywords.length == 0 && this.series_title == null
-        && this.excludeStatus.length == 0 && this.doiReferences.length == 0;
+        this.authors.length == 0 && this.tags.length == 0 && this.ancestor_doi == null 
+        && this.keywords.length == 0 && this.excludeStatus.length == 0 && this.doiReferences.length == 0 && this.top_container_type == null;
     }
     public copy(): PrimarySearchFilter {
         const r = new PrimarySearchFilter();
@@ -44,11 +52,10 @@ export class PrimarySearchFilter {
         r.types = this.types.map(type => type);
         r.authors = this.authors.map(author => author);
         r.tags = this.tags.map(tag => tag);
-        r.volume = this.volume;
-        r.container_title = this.container_title;
-        r.series_title = this.series_title;
+        r.ancestor_doi = this.ancestor_doi;
         r.doiReferences = this.doiReferences.map(doiReference => doiReference);
         r.excludeStatus = this.excludeStatus.map(excludeStatus => excludeStatus);
+        r.top_container_type = this.top_container_type;
         //r.sortBy = this.sortBy;
         r.keywords = this.keywords.map(keyword => keyword);
         return r;
@@ -83,19 +90,9 @@ export class PrimarySearchFilter {
             r.push(copy);
         }
 
-        if(this.volume != null){
+        if(this.ancestor_doi != null){
             var copy = this.copy();
-            copy.volume = null;
-            r.push(copy);
-        }
-        if(this.container_title != null){
-            var copy = this.copy();
-            copy.container_title = null;
-            r.push(copy);
-        }
-        if(this.series_title != null){
-            var copy = this.copy();
-            copy.series_title = null;
+            copy.ancestor_doi = null;
             r.push(copy);
         }
         if(this.doiReferences.length > 0){
@@ -141,20 +138,17 @@ export class PrimarySearchFilter {
         if(this.tags.length > 0){
             obj.tags = this.tags;
         }
-        if(this.volume != null){
-            obj.volume = this.volume;
-        }
-        if(this.container_title != null){
-            obj.container_title = this.container_title;
-        }
-        if(this.series_title != null){
-            obj.series_title = this.series_title;
+        if(this.ancestor_doi != null){
+            obj.ancestor_doi = this.ancestor_doi;
         }
         if(this.doiReferences.length > 0){
             obj.doiReferences = this.doiReferences;
         }
         if(this.excludeStatus.length > 0){
             obj.excludeStatus = this.excludeStatus;
+        }
+        if(this.top_container_type != null){
+            obj.top_container_type = this.top_container_type;
         }
         /*
         if(this.sortBy != "unordered"){
@@ -187,20 +181,17 @@ export class PrimarySearchFilter {
         if(obj.tags.length > 0){
             r.tags = obj.tags.map((v: any) => v as string);
         }
-        if(obj.volume != null){
-            r.volume = obj.volume;
-        }
-        if(obj.container_title != null){
-            r.container_title = obj.container_title;
-        }
-        if(obj.series_title != null){
-            r.series_title = obj.series_title;
+        if(obj.ancestor_doi != null){
+            r.ancestor_doi = obj.ancestor_doi;
         }
         if(obj.doiReferences.length > 0){
             r.doiReferences = obj.doiReferences.map((v: any) => v as string);
         }
         if(obj.excludeStatus.length > 0){
             r.excludeStatus = obj.excludeStatus.map((v: any) => v as DOIStatus);
+        }
+        if(obj.top_container_type != null){
+            r.top_container_type = obj.top_container_type;
         }
         /*
         if(obj.sortBy != "unordered"){
@@ -212,7 +203,7 @@ export class PrimarySearchFilter {
         }
         return r;
     }
-    public contain(doiInfo: DOIRecord): boolean {
+    public contain(doiInfo: DOIRecord, collection: DOIRecordCollection): boolean {
         if(this.minimum_year != null && doiInfo.year < this.minimum_year){
             return false;
         }
@@ -222,14 +213,12 @@ export class PrimarySearchFilter {
         if(this.types.length > 0 && !this.types.includes(doiInfo.type)){
             return false;
         }
-        if(this.container_title != null && doiInfo.container_title != this.container_title){
+        if(this.ancestor_doi != null && !collection.ancestorCheck(doiInfo.id, this.ancestor_doi)){
             return false;
         }
-        if(this.series_title != null && doiInfo.seriesTitle != this.series_title){
+        if(this.top_container_type != null && !collection.topContainerTypeCheck(doiInfo.id, this.top_container_type)){
             return false;
         }
-
-
         if(this.doiReferences.length > 0 && !doiInfo.doiReferences.every(doiReference => this.doiReferences.includes(doiReference))){
             return false;
         }
@@ -335,8 +324,13 @@ export class PrimarySearchFilter {
         if(this.tags.length > 0){
             return false;
         }
-        if(this.volume != null && item.volume != null){
-            if(this.volume != item.volume){
+        if(this.ancestor_doi != null && item.ancestor_doi != null){
+            if(this.ancestor_doi != item.ancestor_doi){
+                return false;
+            }
+        }
+        if(this.top_container_type != null && item.top_container_type != null){
+            if(this.top_container_type != item.top_container_type){
                 return false;
             }
         }
@@ -345,16 +339,6 @@ export class PrimarySearchFilter {
                 if(!this.excludeStatus.includes(item.excludeStatus[i])){
                     return false;
                 }
-            }
-        }
-        if(this.container_title != null && item.container_title != null){
-            if(this.container_title != item.container_title){
-                return false;
-            }
-        }
-        if(this.series_title != null && item.series_title != null){
-            if(this.series_title != item.series_title){
-                return false;
             }
         }
 
@@ -383,6 +367,7 @@ export class PrimarySearchFilter {
 
         return true;
     }
+
 
 
 }

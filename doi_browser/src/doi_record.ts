@@ -5,18 +5,17 @@
 import { load_gzip_text_lines, load_gzip_integer_list_lines, load_gzip_integer_lines } from "./gzip_loader";
 
 export type DOIStatus = "primary" | "secondary" | "unknown";
-//let ContainerTypeList: string[] = ["Book", "Proceedings", "ConferenceProceeding", "ProceedingsSeries", "Journal", 
-//    "Journal-Issue", "PreprintRepository", "ReferenceBook", "EditedBook", "Monograph"];
 
 
 
 
-export let topContainerTypeList: string[] = ["Journal", "Proceedings Series", "Preprint Repository"];
-export let subContainerTypeList: string[] = ["Book", "Journal Issue", "Proceedings Series", "Edited Book", "Reference Book", "Monograph"];
+export let topContainerTypeList: string[] = ["Journal", "Proceedings Collection", "Preprint Repository"];
+export let subContainerTypeList: string[] = ["Book", "Journal Issue", "Conference Proceedings", "Edited Book", "Reference Book", "Monograph"];
 
 
-export let containerTypeList: string[] = ["Book", "Conference Proceedings", "Journal", "Journal Issue", "Proceedings Series", "Edited Book", "Reference Book", "Preprint Repository", "Monograph"];
+export let containerTypeList: string[] = topContainerTypeList.concat(subContainerTypeList);
 export let paperTypeList: string[] = ["Proceedings Article", "Book Chapter", "Conference Paper", "Journal Article", "Report", "Preprint", "Monograph Chapter", "Posted Content"];
+export let otherTypeList: string[] = [];
 
 
 export class LightWeightDOIRecord {

@@ -4,6 +4,7 @@ import { SortByType } from "./doi_filter/primary_search_filter";
 import { DOIStatus } from "./doi_record";
 import { getSelectedTypeValues } from "./render/settings/primary_search_filter_render";
 import { PrimarySearchFilterRender } from "./render/settings/primary_search_filter_render";
+import { URLProcessor } from "./url_processor";
 
 export function updatePaginationControls(browserInfo: BrowserInfo) {
   /*
@@ -38,9 +39,20 @@ export function updatePaginationControls(browserInfo: BrowserInfo) {
 export function process(browserInfo: BrowserInfo) {
   const url = new URL(window.location.href);
   console.log("process/" + url.toString());
-  browserInfo.processURLParameters();
-  browserInfo.processCurrentDOIFilterInput();
-  browserInfo.render();
+  const primarySearchFilter = URLProcessor.buildPrimarySearchFilterFromURL();
+
+
+  //browserInfo.processURLParameters();
+  //browserInfo.processCurrentDOIFilterInput();
+  browserInfo.render(primarySearchFilter);
+}
+
+export function clickPrimarySearchFilterButton(browserInfo: BrowserInfo) {
+  if(browserInfo.doiInfoCollection == null) {
+    throw new Error("doiInfoCollection is null");
+  }else{
+    PrimarySearchFilterRender.setURLParameters(browserInfo.doiInfoCollection);
+  }
 }
 
 export function primarySearchFilterChange(inputElementName: string, browserInfo: BrowserInfo) {

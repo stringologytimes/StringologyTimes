@@ -205,7 +205,7 @@ namespace DataProcessor
 
         }
 
-        public void UpdateTypeByContainer(string dataFolderPath, DBLPProceedingsSeriesDictionary dblpSeriesDictionary)
+        public void UpdateTypeByContainer(string dataFolderPath, DBLPProceedingsCollectionDictionary dblpSeriesDictionary)
         {
             CommonFunctions.OutputSystemMessageFunction("Updating Type By Container [START]");
             CommonFunctions.IncrementParagraphCounter();
@@ -250,7 +250,7 @@ namespace DataProcessor
             CommonFunctions.OutputSystemMessageFunction("Updating Type By Container [END]");
         }
 
-        public void UpdateModifiedTitleUsingDBLP(string dataFolderPath, DBLPProceedingsSeriesDictionary dblpSeriesDictionary)
+        public void UpdateModifiedTitleUsingDBLP(string dataFolderPath, DBLPProceedingsCollectionDictionary dblpSeriesDictionary)
         {
             CommonFunctions.OutputSystemMessageFunction("Updating Modified Title UsingDBLP [START]");
             CommonFunctions.IncrementParagraphCounter();
@@ -273,20 +273,20 @@ namespace DataProcessor
                 {
                     var key = dblpSeriesDictionary.ProceedingsDOIToKeyMapper[doiElement.DOI];
                     var proceedings = dblpSeriesDictionary.GetProceedings(key);
-                    var proceedingsSeries = dblpSeriesDictionary.Series[proceedings.SeriesTitle];
+                    var proceedingsCollection = dblpSeriesDictionary.Series[proceedings.SeriesTitle];
                     var proceedingsYearAndMonth = SmallCacheSummaryFunctions.ComputeProceedingsYear(proceedings.Year, proceedings.Month, doiElement.Year, doiElement.Month);
                     var proceedingsNameWithYear = proceedings.SeriesTitle + "(" + proceedingsYearAndMonth.Key + ")";
-                    var proceedingsSeriesDummyDOI = DOIFunctions.CreateDummyDOI("proceedings_series", proceedings.SeriesTitle);
-                    var (minimum_year, minimum_month) = proceedingsSeries.GetMinimumYearAndMonth();
+                    var proceedingsCollectionDummyDOI = DOIFunctions.CreateDummyDOI("proceedings_collection", proceedings.SeriesTitle);
+                    var (minimum_year, minimum_month) = proceedingsCollection.GetMinimumYearAndMonth();
 
-                    if (!SmallCacheSummaryRecordDict.ContainsKey(proceedingsSeriesDummyDOI) && v.DOIRank == 0)
+                    if (!SmallCacheSummaryRecordDict.ContainsKey(proceedingsCollectionDummyDOI) && v.DOIRank == 0)
                     {
-                        SmallCacheSummaryFunctions.CreateProceedingsSeriesDummyDOIElement(proceedingsSeriesDummyDOI, proceedings, minimum_year.ToString(), minimum_month.ToString(), this);
+                        SmallCacheSummaryFunctions.CreateProceedingsCollectionDummyDOIElement(proceedingsCollectionDummyDOI, proceedings, minimum_year.ToString(), minimum_month.ToString(), this);
                     }
 
                     if (v.ModifiedType.Length == 0)
                     {
-                        v.UpdateForProceedings(proceedingsNameWithYear, proceedingsYearAndMonth.Key, proceedingsSeriesDummyDOI, this.SmallCacheSummaryLogFile);
+                        v.UpdateForProceedings(proceedingsNameWithYear, proceedingsYearAndMonth.Key, proceedingsCollectionDummyDOI, this.SmallCacheSummaryLogFile);
 
                         
                     }

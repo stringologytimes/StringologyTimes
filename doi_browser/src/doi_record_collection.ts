@@ -1,7 +1,7 @@
-import { LightWeightDOIRecord } from "./doi_record";
+import { LightWeightDOIRecord, topContainerTypeList } from "./doi_record";
 import { DOIRecord} from "./doi_record";
 import { load_gzip_text_lines, load_gzip_integer_list_lines, load_gzip_integer_lines } from "./gzip_loader";
-import { subContainerTypeList } from "./doi_record";
+import { containerTypeList, paperTypeList, otherTypeList } from "./doi_record";
 
 let typeList: string[] = [];
 
@@ -21,6 +21,10 @@ export class DOIRecordCollection {
     //public idToSubContainersCountMapper: Map<number, number> = new Map();
     public idToPrimaryRecordCountMapper: Map<number, number> = new Map();
     public idToSecondaryRecordCountMapper: Map<number, number> = new Map();
+    public minimumYear: number = 1950;
+    public maximumYear: number = 2050;
+    public idToRecordCountMapper: Map<number, number> = new Map();
+
 
 
     public length(): number {
@@ -110,6 +114,40 @@ export class DOIRecordCollection {
         }
         return r;
     }
+
+    public ancestorCheck(doiID: number, ancestorDOI: string): boolean {
+        var doiInfo = this.lightweightDOIRecords[doiID];
+        if(doiInfo.container_DOI.length == 0){
+            return false;
+        }else{
+            if(doiInfo.container_DOI == ancestorDOI){
+                return true;
+            }else{
+                if(this.doiToIDMapper.has(doiInfo.container_DOI)){
+                    var containerDOIID = this.doiToIDMapper.get(doiInfo.container_DOI)!;
+                    return this.ancestorCheck(containerDOIID, ancestorDOI);
+                }else{
+                    return false;
+                }
+            }
+        }
+    }
+    
+    public topContainerTypeCheck(doiID: number, topContainerType: string): boolean {
+        var doiInfo = this.lightweightDOIRecords[doiID];
+        if(doiInfo.container_DOI.length == 0){
+            return doiInfo.type == topContainerType;
+        }else{
+            if(this.doiToIDMapper.has(doiInfo.container_DOI)){
+                var containerDOIID = this.doiToIDMapper.get(doiInfo.container_DOI)!;
+                return this.topContainerTypeCheck(containerDOIID, topContainerType);
+            }else{
+                return false;
+            }
+        }
+    }
+
+
 
     public static async load(folderURL: string): Promise<DOIRecordCollection> {
         console.log("loading DOIInfoCollection from: " + folderURL);
@@ -239,7 +277,18 @@ export class DOIRecordCollection {
             }
         });
 
+
+
         r.lightweightDOIRecords.forEach((doiInfo, index) => {
+            if(doiInfo.year !== undefined && doiInfo.year !== null && !Number.isNaN(doiInfo.year) && doiInfo.year >= 0){
+                if(r.idToRecordCountMapper.has(doiInfo.year)){
+                    r.idToRecordCountMapper.set(doiInfo.year, r.idToRecordCountMapper.get(doiInfo.year)! + 1);
+                }else{
+                    r.idToRecordCountMapper.set(doiInfo.year, 1);
+                }
+    
+            }
+
             if(doiInfo.container_DOI.length > 0){
                 if(r.doiToIDMapper.has(doiInfo.container_DOI)){
                     var container_id = r.doiToIDMapper.get(doiInfo.container_DOI)!;
@@ -251,6 +300,17 @@ export class DOIRecordCollection {
                 }
             }
         });
+
+
+
+        if(r.idToRecordCountMapper.size > 0){
+            const minimumYear = Math.min(...r.idToRecordCountMapper.keys());
+            const maximumYear = Math.max(...r.idToRecordCountMapper.keys());
+            console.log("minimumYear: " + minimumYear + " maximumYear: " + maximumYear);
+            r.minimumYear = minimumYear;
+            r.maximumYear = maximumYear;
+        }
+
 
 
         r.lightweightDOIRecords.forEach((doiInfo, index) => {
@@ -286,6 +346,12 @@ export class DOIRecordCollection {
                 }else{
                     break;
                 }
+            }
+        });
+
+        Array.from(r.recordTypeToIDMapper.keys()).forEach((type) => {
+            if(!containerTypeList.includes(type) && !paperTypeList.includes(type)){
+                otherTypeList.push(type);
             }
         });
         

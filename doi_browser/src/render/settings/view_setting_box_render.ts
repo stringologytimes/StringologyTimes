@@ -3,29 +3,11 @@ import { ViewModeType } from "../../doi_filter/search_result_view_settings";
 import { SummaryInfo } from "../../doi_filter/summary_info";
 import { setRadioBoxes } from "./primary_search_filter_render";
 
-function getMaxPageNumber(viewSetting: SearchResultViewSettings, summary_info: SummaryInfo): number {
-    if(viewSetting.viewMode == "article_list" || viewSetting.viewMode == "group_render"){
-        if(summary_info.doiCount == 0){
-            return 0;
-        }else{
-            return Math.ceil(summary_info.doiCount / viewSetting.pageSize!) - 1;
-        }
-    }else if(viewSetting.viewMode == "container_title_list"){
-        if(summary_info.containerTitleCountList.length == 0){
-            return 0;
-        }else{
-            return Math.ceil(summary_info.containerTitleCountList.length / viewSetting.pageSize!) - 1;
-        }
-    }
-    else if(viewSetting.viewMode == "series_title_list"){
-        if(summary_info.seriesTitleCountList.length == 0){
-            return 0;
-        }else{
-            return Math.ceil(summary_info.seriesTitleCountList.length / viewSetting.pageSize!) - 1;
-        }
-    }
-    else{
-        throw new Error("Unknown view mode");
+function getMaxPageNumber(viewSetting: SearchResultViewSettings, foundRecordCount: number): number {
+    if(foundRecordCount == 0){
+        return 0;
+    }else{
+        return Math.ceil(foundRecordCount / viewSetting.pageSize!) - 1;
     }
 }
 
@@ -102,9 +84,9 @@ function setPageSizeSelectHTMLElement(selectedValue: number) {
 }
 
 
-export function renderViewSettingBox(filterResult: SearchResultViewSettings, summary_info: SummaryInfo) {
+export function renderViewSettingBox(filterResult: SearchResultViewSettings, foundRecordCount: number) {
     setModeSelectHTMLElement(filterResult.viewMode);
-    setPageNumberSelectHTMLElement(filterResult.pageNumber!, getMaxPageNumber(filterResult, summary_info));
+    setPageNumberSelectHTMLElement(filterResult.pageNumber!, getMaxPageNumber(filterResult, foundRecordCount));
     setPageSizeSelectHTMLElement(filterResult.pageSize!);
 }
   

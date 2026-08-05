@@ -40,7 +40,7 @@ namespace DataProcessor
         public static string PostedContentType = "Posted Content";
         public static string PreprintType = "Preprint";
         public static string JournalIssueType = "Journal Issue";
-        public static string ProceedingsSeriesType = "Proceedings Series";
+        public static string ProceedingsCollecitonType = "Proceedings Collection";
         public static string PreprintRepositoryType = "Preprint Repository";
 
 
@@ -68,10 +68,10 @@ namespace DataProcessor
             return smallCacheSummaryLogPath;
         }
 
-        public void UpdateForProceedings(string proceedingsNameWithYear, int proceedingsYear, string proceedingsSeriesDummyDOI, StreamWriter logFile)
+        public void UpdateForProceedings(string proceedingsNameWithYear, int proceedingsYear, string proceedingsCollectionDummyDOI, StreamWriter logFile)
         {
             this.ModifiedTitle = proceedingsNameWithYear;
-            this.ModifiedContainerDOI = proceedingsSeriesDummyDOI;
+            this.ModifiedContainerDOI = proceedingsCollectionDummyDOI;
             this.ModifiedType = SmallCacheSummaryRecord.ConferenceProceedingsType;
             this.ModifiedContainerDOIType = "DBLP";
             logFile.WriteLine($"Updated Proceedings: {this.DOI} -> {this.ModifiedTitle} -> {this.ModifiedContainerDOI} -> {this.ModifiedContainerDOIType} -> {this.ModifiedType}");
