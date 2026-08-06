@@ -91,6 +91,9 @@
     .psf-main-div {
       background-color: lavender;
     }
+    .ssf-main-div {
+      background-color: orange;
+    }
 
   </style>
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
@@ -155,6 +158,46 @@
     <button onclick="clickPrimarySearchFilterButton()">Search</button>
     <button>Reset</button>
   </details>
+
+  <details open class="ssf-main-div">
+    <summary>Secondary Search Filter</summary>
+    <fieldset id="ssf-record-types-fieldset">
+      <legend>Record Type</legend>
+      <div>
+        <div>Container types:</div>
+        <span id="ssf-container-types-span" class="ssf-types-span"></span>
+      </div>
+      <div>
+        <div>Paper types:</div>
+        <span id="ssf-paper-types-span" class="ssf-types-span"></span>
+      </div>
+      <div>
+        <div>Other types:</div>
+        <span id="ssf-other-types-span" class="ssf-types-span"></span>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Container of Records</legend>
+    </fieldset>
+    <fieldset id="ssf-year-fieldset">
+      <legend>Publication Year</legend>
+      From <select id="ssf-year-from-select"></select>
+      To <select id="ssf-year-to-select"></select>
+    </fieldset>
+    <fieldset>
+      <legend>Record Type</legend>
+      <input type="checkbox" id="ssf-primary-record-checkbox" checked />
+      <label for="ssf-primary-record-checkbox" id="ssf-primary-record-label">Primary record</label>
+      <input type="checkbox" id="ssf-secondary-record-checkbox" checked />
+      <label for="ssf-secondary-record-checkbox" id="ssf-secondary-record-label">Secondary record</label>
+    </fieldset>
+    <fieldset>
+      <legend>Keywords</legend>
+      <input type="text" id="ssf-keywords-input" name="ssf-keywords-input" size="20" />
+    </fieldset>
+
+  </details>
+
 
   <fieldset>
     <legend>Filter</legend>

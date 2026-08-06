@@ -1,8 +1,8 @@
 import { PrimarySearchResult } from "../../doi_filter/primary_search_result";
 import { DOIRecordCollection } from "../../doi_record_collection";
-import { PrimarySearchFilter } from "../../doi_filter/primary_search_filter";
+import { SearchFilter } from "../../doi_filter/search_filter";
 import { SummaryInfo } from "../../doi_filter/summary_info";
-import { SortByType } from "../../doi_filter/primary_search_filter";
+import { SortByType } from "../../doi_filter/search_filter";
 import { getDOIRecordTypeList } from "../../doi_record_collection";
 import { containerTypeList, paperTypeList, topContainerTypeList } from "../../doi_record";
 
@@ -155,6 +155,8 @@ export class PrimarySearchFilterRender {
       subContainerSelect.appendChild(anyOption);
     }
 
+    let index_counter = 0;
+
 
     if (topContainerTypeList.includes(selectedTopContainerType)) {
 
@@ -168,7 +170,7 @@ export class PrimarySearchFilterRender {
 
             const option = document.createElement("option");
             option.value = doiRecord.doi;
-            option.textContent = `${doiRecord.title} (${primaryCount} primary records, ${secondaryCount} secondary records)`;
+            option.textContent = `${index_counter++}. ${doiRecord.title} (${primaryCount} primary records, ${secondaryCount} secondary records)`;
             topContainerSelect.appendChild(option);
           }
           );
@@ -300,7 +302,14 @@ export class PrimarySearchFilterRender {
     const checkedContainerTypes = this.getCheckedContainerTypes();
     const checkedPaperTypes = this.getCheckedPaperTypes();
     const checkedOtherTypes = this.getCheckedOtherTypes();
-    return [...checkedContainerTypes, ...checkedPaperTypes, ...checkedOtherTypes];
+
+    if(checkedContainerTypes.length == 0 && checkedPaperTypes.length == 0 && checkedOtherTypes.length == 0) {
+      return ["None"];
+    }else if(checkedContainerTypes.length == 1 && checkedPaperTypes.length == 1 && checkedOtherTypes.length == 1 && checkedContainerTypes[0] == "Container-Any" && checkedPaperTypes[0] == "Paper-Any" && checkedOtherTypes[0] == "Other-Any") {
+      return [];
+    }else{
+      return [...checkedContainerTypes, ...checkedPaperTypes, ...checkedOtherTypes];
+    }
   }
 
   public static getTopContainerDOI(): string | null {
@@ -743,7 +752,7 @@ function renderKeywordBox(keywords: string[]) {
 }
 
 
-export function renderFilterBox(filterResult: PrimarySearchResult, filterInput: PrimarySearchFilter, doiInfoCollection: DOIRecordCollection, summaryInfo: SummaryInfo) {
+export function renderFilterBox(filterResult: PrimarySearchResult, filterInput: SearchFilter, doiInfoCollection: DOIRecordCollection, summaryInfo: SummaryInfo) {
   console.log("renderFilterBox (size: " + filterResult.doiIDs.length + ")");
 
   const renderStartTime1 = performance.now();

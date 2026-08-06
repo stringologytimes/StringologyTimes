@@ -1,7 +1,7 @@
 import { DOIRecordCollection } from "../doi_record_collection";
 import { DOIRecord } from "../doi_record";
-import { PrimarySearchFilter } from "./primary_search_filter";
-import { SortByType } from "./primary_search_filter";
+import { SearchFilter } from "./search_filter";
+import { SortByType } from "./search_filter";
 
 export class PrimarySearchResult {
     public doiIDs: number[] = [];
@@ -292,7 +292,7 @@ export class PrimarySearchResult {
         return r;
     }
 
-    public search(doiFilterInput: PrimarySearchFilter, collection: DOIRecordCollection): PrimarySearchResult {
+    public search(doiFilterInput: SearchFilter, collection: DOIRecordCollection): PrimarySearchResult {
         const resultDOIIDs: number[] = this.doiIDs.filter(doiID => {
             const doiInfo = collection.getDOIInfo(doiID);
             return doiFilterInput.contain(doiInfo, collection);

@@ -1,32 +1,45 @@
-import { PrimarySearchFilter } from "./doi_filter/primary_search_filter";
+import { SearchFilter } from "./doi_filter/search_filter";
 import { containerTypeList, paperTypeList, otherTypeList } from "./doi_record";
 
 export class URLProcessor {
 
 
-    public static buildPrimarySearchFilterFromURL() : PrimarySearchFilter {
+    public static buildPrimarySearchFilterFromURL() : SearchFilter {
         const url = new URL(window.location.href);
-        const primarySearchFilter = new PrimarySearchFilter();
+        const primarySearchFilter = new SearchFilter();
 
         const types : string[] | null = url.searchParams.getAll("psf-type");
         if(types != null) {
-            types.forEach(type => {
-                if(type == "Container-Any") {
-                    containerTypeList.forEach(containerType => {
-                        primarySearchFilter.types.push(containerType);
-                    });
-                }else if(type == "Paper-Any") {
-                    paperTypeList.forEach(paperType => {
-                        primarySearchFilter.types.push(paperType);
-                    });
-                }else if(type == "Other-Any") {
-                    otherTypeList.forEach(otherType => {
-                        primarySearchFilter.types.push(otherType);
-                    });
-                }else{
+            if(types.length == 0) {
+                containerTypeList.concat(paperTypeList).concat(otherTypeList).forEach(type => {
                     primarySearchFilter.types.push(type);
-                }
-            });
+                });
+            }else{
+                types.forEach(type => {
+                    if(type == "Container-Any") {
+                        containerTypeList.forEach(containerType => {
+                            primarySearchFilter.types.push(containerType);
+                        });
+                    }else if(type == "Paper-Any") {
+                        paperTypeList.forEach(paperType => {
+                            primarySearchFilter.types.push(paperType);
+                        });
+                    }else if(type == "Other-Any") {
+                        otherTypeList.forEach(otherType => {
+                            primarySearchFilter.types.push(otherType);
+                        });
+                    }
+                    else if(type == "None") {
+
+                    }
+                    else{
+                        primarySearchFilter.types.push(type);
+                    }
+                });
+    
+            }
+
+
         }
 
         const ancestorDOI : string | null = url.searchParams.get("ancestor-doi");

@@ -25,6 +25,8 @@ export class DOIRecordCollection {
     public maximumYear: number = 2050;
     public idToRecordCountMapper: Map<number, number> = new Map();
 
+    
+
 
 
     public length(): number {

@@ -1,5 +1,5 @@
 import { PrimarySearchResult } from "./primary_search_result";
-import { PrimarySearchFilter } from "./primary_search_filter";
+import { SearchFilter } from "./search_filter";
 import { DOIRecordCollection } from "../doi_record_collection";
 
 export class SummaryInfo {
@@ -18,7 +18,7 @@ export class SummaryInfo {
     public tagList: string[] = [];
     public tagCountList: number[] = [];
 
-    public build(filterResult: PrimarySearchResult, filterInput: PrimarySearchFilter, doiInfoCollection: DOIRecordCollection){
+    public build(filterResult: PrimarySearchResult, filterInput: SearchFilter, doiInfoCollection: DOIRecordCollection){
         this.doiCount = filterResult.doiIDs.length;
         this.doiCategoryList = filterResult.getTypes();
         this.doiCategoryList.sort();

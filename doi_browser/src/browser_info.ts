@@ -6,7 +6,7 @@ import { renderFilterBox } from "./render/settings/primary_search_filter_render"
 import { renderViewSettingBox } from "./render/settings/view_setting_box_render";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
 import { renderContainerTitleList } from "./render/doi_filter_container_title_render";
-import { SortByType } from "./doi_filter/primary_search_filter";
+import { SortByType } from "./doi_filter/search_filter";
 import { DOIStatus } from "./doi_record";
 import { ViewModeType } from "./doi_filter/search_result_view_settings";
 import { renderSeriesTitleList } from "./render/doi_filter_series_title_render";
@@ -15,7 +15,8 @@ import { ContainerRecordRender } from "./render/container_record_render";
 import { getDOIRecordTypeList } from "./doi_record_collection";
 import { containerTypeList, paperTypeList } from "./doi_record";
 import { PrimarySearchFilterRender } from "./render/settings/primary_search_filter_render";
-import { PrimarySearchFilter } from "./doi_filter/primary_search_filter";
+import { SearchFilter } from "./doi_filter/search_filter";
+import { SecondarySearchFilterRender } from "./render/settings/secondary_search_filter_render";
 
 
 export class BrowserInfo {
@@ -192,7 +193,7 @@ export class BrowserInfo {
         */
     }
 
-    public render(PrimarySearchFilter: PrimarySearchFilter): void {
+    public render(PrimarySearchFilter: SearchFilter): void {
         if (this.doiInfoCollection != null) {
             const currentDOIFilterWithViewSetting = this.getCurrentDOIFilterWithViewSetting();
             const foundRecordIDs = PrimarySearchFilter.search(this.doiInfoCollection!);
@@ -203,6 +204,8 @@ export class BrowserInfo {
             const currentDOIFilterResult = this.getCurrentDOIFilterResult();
             const currentSummaryInfo = this.getCurrentSummaryInfo();
             */
+
+            SecondarySearchFilterRender.initialize(foundRecordIDs, this.doiInfoCollection!);
 
 
             console.log("Render start");

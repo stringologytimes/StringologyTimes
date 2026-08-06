@@ -1,7 +1,7 @@
-import { PrimarySearchFilter } from "./primary_search_filter";
+import { SearchFilter } from "./search_filter";
 import { SearchResultViewSettings } from "./search_result_view_settings";
 export class DOIFilter {
-    public query: PrimarySearchFilter = new PrimarySearchFilter();
+    public query: SearchFilter = new SearchFilter();
     public viewSetting: SearchResultViewSettings = new SearchResultViewSettings();
 
     /*
@@ -31,7 +31,7 @@ export class DOIFilter {
     public static buildFromJSON(json: string): DOIFilter {
         var obj: any = JSON.parse(json);
         var r = new DOIFilter();
-        r.query = PrimarySearchFilter.buildFromJSON(obj.query);
+        r.query = SearchFilter.buildFromJSON(obj.query);
         r.viewSetting = SearchResultViewSettings.buildFromJSON(obj.viewSetting);
         return r;
     }

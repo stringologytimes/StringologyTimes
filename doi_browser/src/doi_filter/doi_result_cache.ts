@@ -2,7 +2,7 @@ import { DOIFilter } from "./doi_filter";
 import { PrimarySearchResult } from "./primary_search_result";
 import { SummaryInfo } from "./summary_info";
 import { DOIRecordCollection } from "../doi_record_collection";
-import { PrimarySearchFilter } from "./primary_search_filter";
+import { SearchFilter } from "./search_filter";
 
 export class DOIResultCache {
     //private doiFilterInputNumber: number = 0;
@@ -59,7 +59,7 @@ export class DOIResultCache {
         }else{
             var parentQueries = currentDOIFilter.query.get_parents();
             var min_count = doiInfoCollection.length() + 1;
-            var parentInfo : PrimarySearchFilter | null = null;
+            var parentInfo : SearchFilter | null = null;
             for(const parentQuery of parentQueries){
                 var parentHash = parentQuery.getHash();
                 if(this.doiFilterResultCache.has(parentHash)){

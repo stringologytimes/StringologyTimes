@@ -1,6 +1,6 @@
 
 import { BrowserInfo } from "./browser_info";
-import { SortByType } from "./doi_filter/primary_search_filter";
+import { SortByType } from "./doi_filter/search_filter";
 import { DOIStatus } from "./doi_record";
 import { getSelectedTypeValues } from "./render/settings/primary_search_filter_render";
 import { PrimarySearchFilterRender } from "./render/settings/primary_search_filter_render";
@@ -40,6 +40,8 @@ export function process(browserInfo: BrowserInfo) {
   const url = new URL(window.location.href);
   console.log("process/" + url.toString());
   const primarySearchFilter = URLProcessor.buildPrimarySearchFilterFromURL();
+
+  
 
 
   //browserInfo.processURLParameters();

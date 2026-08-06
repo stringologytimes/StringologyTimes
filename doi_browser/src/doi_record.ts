@@ -37,6 +37,9 @@ export class LightWeightDOIRecord {
     public isTopContainerType(): boolean {
         return topContainerTypeList.includes(this.type);
     }
+    public isUnknownYear(): boolean {
+        return this.year == null || Number.isNaN(this.year) || this.year < 100;
+    }
 
 }
 export class DOIRecord {

@@ -6,7 +6,7 @@ import { PrimarySearchResult } from "./primary_search_result";
 export type SortByType = "alphabetical-order-by-container-title" | "ascending-order-by-date" | "descending-order-by-date" | "article-count" | "unordered";
 
 
-export class PrimarySearchFilter {
+export class SearchFilter {
     public minimum_year: number | null = null;
     public maximum_year: number | null = null;
     public types: string[] = [];
@@ -16,7 +16,6 @@ export class PrimarySearchFilter {
     public top_container_type: string | null = null;
     public doiReferences: string[] = [];    
     public excludeStatus: DOIStatus[] = [];
-    //public sortBy: SortByType = "unordered";
     public keywords: string[] = [];
     private filter(collection: DOIRecordCollection, candidates: number[]): number[] {
         return candidates.filter(candidate => {
@@ -45,8 +44,8 @@ export class PrimarySearchFilter {
         this.authors.length == 0 && this.tags.length == 0 && this.ancestor_doi == null 
         && this.keywords.length == 0 && this.excludeStatus.length == 0 && this.doiReferences.length == 0 && this.top_container_type == null;
     }
-    public copy(): PrimarySearchFilter {
-        const r = new PrimarySearchFilter();
+    public copy(): SearchFilter {
+        const r = new SearchFilter();
         r.minimum_year = this.minimum_year;
         r.maximum_year = this.maximum_year;
         r.types = this.types.map(type => type);
@@ -61,8 +60,8 @@ export class PrimarySearchFilter {
         return r;
     }
 
-    public get_parents() : PrimarySearchFilter[] {
-        var r = new Array<PrimarySearchFilter>();
+    public get_parents() : SearchFilter[] {
+        var r = new Array<SearchFilter>();
         if(this.minimum_year != null){
             var copy = this.copy();
             copy.minimum_year = null;
@@ -162,9 +161,9 @@ export class PrimarySearchFilter {
         return JSON.stringify(obj);
     }
 
-    public static buildFromJSON(json: string): PrimarySearchFilter {
+    public static buildFromJSON(json: string): SearchFilter {
         var obj: any = JSON.parse(json);
-        var r = new PrimarySearchFilter();
+        var r = new SearchFilter();
 
         if(obj.minimum_year != null){
             r.minimum_year = obj.minimum_year;
@@ -300,7 +299,7 @@ export class PrimarySearchFilter {
         return true;
     }
 
-    public isIncluded(item : PrimarySearchFilter): boolean {
+    public isIncluded(item : SearchFilter): boolean {
         if(this.minimum_year != null && item.minimum_year != null){            
             if(this.minimum_year < item.minimum_year){
                 return false;
@@ -346,12 +345,6 @@ export class PrimarySearchFilter {
         if(this.doiReferences.length > 0){
             return false;
         }
-
-        /*
-        if(this.sortBy != item.sortBy){
-            return false;
-        }
-        */
 
         for(let i = 0; i < item.tags.length; i++){
             if(!this.tags.includes(item.tags[i])){
