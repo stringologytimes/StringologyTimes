@@ -3,6 +3,7 @@ import { BrowserInfo } from "./browser_info";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
 import * as EventFunctions from "./event_functions";
 import { DOIFilter } from "./doi_filter/doi_filter";
+import { hideLoading, showLoading } from "./loading_overlay";
 
 let browserInfo = new BrowserInfo();
 (window as any).browserInfo = browserInfo;
@@ -64,20 +65,6 @@ function setupButtons() {
   */
 }
 
-function showLoading() {
-  const loadingOverlay = document.getElementById('loading-overlay');
-  if (loadingOverlay) {
-    loadingOverlay.classList.add('show');
-  }
-}
-
-function hideLoading() {
-  const loadingOverlay = document.getElementById('loading-overlay');
-  if (loadingOverlay) {
-    loadingOverlay.classList.remove('show');
-  }
-}
-
 function filterInputChange(inputElementName: string) {
   EventFunctions.filterInputChange(inputElementName, browserInfo);
 }
@@ -86,9 +73,9 @@ function primarySearchFilterChange(inputElementName: string) {
   EventFunctions.primarySearchFilterChange(inputElementName, browserInfo);
 }
 
-function clickPrimarySearchFilterButton(){
+async function clickPrimarySearchFilterButton(){
   EventFunctions.clickPrimarySearchFilterButton(browserInfo);
-  EventFunctions.process(browserInfo);
+  await EventFunctions.process(browserInfo);
 }
 
 function viewSettingInputChange(inputElementName: string) {
@@ -109,7 +96,7 @@ function resetFilter() {
   const url = new URL(window.location.href);
   url.search = "";
   history.pushState({}, "", url);
-  EventFunctions.process(browserInfo);
+  void EventFunctions.process(browserInfo);
 }
 
 function changeParameter(parameterName: string, parameterValue: string) {
@@ -118,7 +105,7 @@ function changeParameter(parameterName: string, parameterValue: string) {
   url.searchParams.set("page_number", "0");
   url.searchParams.set("view_mode", "article_list");
   history.pushState({}, "", url);
-  EventFunctions.process(browserInfo);
+  void EventFunctions.process(browserInfo);
 }
 function changeParameters(parameterList: [string, string][]) {
   const url = new URL(window.location.href);
@@ -126,7 +113,7 @@ function changeParameters(parameterList: [string, string][]) {
     url.searchParams.set(parameterName, parameterValue);
   });
   history.pushState({}, "", url);
-  EventFunctions.process(browserInfo);
+  void EventFunctions.process(browserInfo);
 }
 
 
@@ -139,7 +126,7 @@ function initializeParameter(parameterList: [string, string][]) {
   });
 
   history.pushState({}, "", url);
-  EventFunctions.process(browserInfo);
+  void EventFunctions.process(browserInfo);
 }
 
 
@@ -156,24 +143,23 @@ function initializeParameter(parameterList: [string, string][]) {
 (window as any).clickPrimarySearchFilterButton = clickPrimarySearchFilterButton;
 
 async function domFinished() {
-  showLoading();
+  showLoading("Loading...");
 
   try {
     await initialize();
     browserInfo.initialize(browserInfo.doiInfoCollection!);
 
-    window.addEventListener("popstate", (event) => {
-      EventFunctions.process(browserInfo);
+    window.addEventListener("popstate", (_event) => {
+      void EventFunctions.process(browserInfo);
     });
 
-    
-
-    // コレクションのロード直後にも実行
-    EventFunctions.process(browserInfo);
     setupButtons();
   } finally {
     hideLoading();
   }
+
+  // コレクションのロード直後にも実行（検索中は Searching... オーバーレイを表示）
+  await EventFunctions.process(browserInfo);
 }
 document.addEventListener('DOMContentLoaded', domFinished);
 

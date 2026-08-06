@@ -36,7 +36,7 @@ export function updatePaginationControls(browserInfo: BrowserInfo) {
     */
 }
 
-export function process(browserInfo: BrowserInfo) {
+export async function process(browserInfo: BrowserInfo) {
   const url = new URL(window.location.href);
   console.log("process/" + url.toString());
   const primarySearchFilter = URLProcessor.buildPrimarySearchFilterFromURL();
@@ -46,7 +46,7 @@ export function process(browserInfo: BrowserInfo) {
 
   //browserInfo.processURLParameters();
   //browserInfo.processCurrentDOIFilterInput();
-  browserInfo.render(primarySearchFilter);
+  await browserInfo.render(primarySearchFilter);
 }
 
 export function clickPrimarySearchFilterButton(browserInfo: BrowserInfo) {
@@ -186,7 +186,7 @@ export function filterInputChange(inputElementName: string, browserInfo: Browser
   //browserInfo.currentDOIFilter.viewSetting.pageNumber = 0;
   history.pushState({}, "", url);
 
-  process(browserInfo);
+  void process(browserInfo);
 }
 
 export function ViewSettingInputChange(inputElementName: string, browserInfo: BrowserInfo) {
@@ -211,6 +211,6 @@ export function ViewSettingInputChange(inputElementName: string, browserInfo: Br
     url.searchParams.set("page_size", pageSize);
   }
   history.pushState({}, "", url);
-  process(browserInfo);
+  void process(browserInfo);
 }
 

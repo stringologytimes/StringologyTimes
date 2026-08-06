@@ -17,6 +17,7 @@ import { containerTypeList, paperTypeList } from "./doi_record";
 import { PrimarySearchFilterRender } from "./render/settings/primary_search_filter_render";
 import { SearchFilter } from "./doi_filter/search_filter";
 import { SecondarySearchFilterRender } from "./render/settings/secondary_search_filter_render";
+import { hideLoading, showLoading, yieldForPaint } from "./loading_overlay";
 
 
 export class BrowserInfo {
@@ -193,10 +194,18 @@ export class BrowserInfo {
         */
     }
 
-    public render(PrimarySearchFilter: SearchFilter): void {
+    public async render(PrimarySearchFilter: SearchFilter): Promise<void> {
         if (this.doiInfoCollection != null) {
             const currentDOIFilterWithViewSetting = this.getCurrentDOIFilterWithViewSetting();
-            const foundRecordIDs = PrimarySearchFilter.search(this.doiInfoCollection!);
+
+            showLoading("Searching...");
+            await yieldForPaint();
+            let foundRecordIDs: number[];
+            try {
+                foundRecordIDs = PrimarySearchFilter.search(this.doiInfoCollection!);
+            } finally {
+                hideLoading();
+            }
 
             console.log("foundRecordIDs: " + foundRecordIDs.length);
 
