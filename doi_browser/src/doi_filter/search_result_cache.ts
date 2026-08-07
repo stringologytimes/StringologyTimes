@@ -1,10 +1,10 @@
-import { DOIFilter } from "./doi_filter";
+//import { DOIFilter } from "./doi_filter";
 import { PrimarySearchResult } from "./primary_search_result";
 import { SummaryInfo } from "./summary_info";
 import { DOIRecordCollection } from "../doi_record_collection";
 import { SearchFilter } from "./search_filter";
 
-export class DOIResultCache {
+export class SearchResultCache {
     //private doiFilterInputNumber: number = 0;
     //private doiFilterInputHashStack = new Array<string>();
 
@@ -16,6 +16,7 @@ export class DOIResultCache {
     //private cacheAssociatedWithDOIQueryHash = new Map<string, [DOIFilterResult, SummaryInfo]>();
     
 
+    /*
     public initialize(doiInfoCollection: DOIRecordCollection, currentDOIFilter: DOIFilter): void {
         this.doiFilterResultCache.clear();
         this.summaryInfoCache.clear();
@@ -31,10 +32,12 @@ export class DOIResultCache {
             this.summaryInfoCache.set(emptyDOIFilterWithViewSetting.query.getHash(), summaryInfo);
         }
     }
+    */
 
     
 
 
+    /*
     public search(doiInfoCollection: DOIRecordCollection, currentDOIFilter: DOIFilter) : [PrimarySearchResult, SummaryInfo] {
         var queryHash = currentDOIFilter.query.getHash();
         var b1 = this.doiFilterResultCache.has(queryHash);
@@ -101,8 +104,10 @@ export class DOIResultCache {
             }
         }
     }
+    */
 
 
+    /*
     public processCurrentDOIFilterInput(doiInfoCollection: DOIRecordCollection, currentDOIFilter: DOIFilter): void {
 
         const currentDOIFilterWithViewSetting = currentDOIFilter.copy();
@@ -111,6 +116,7 @@ export class DOIResultCache {
 
         this.search(doiInfoCollection, currentDOIFilterWithViewSetting);
     }
+    */
 
 
 }

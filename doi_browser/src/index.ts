@@ -2,7 +2,7 @@ import { DOIRecordCollection } from "./doi_record_collection";
 import { BrowserInfo } from "./browser_info";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
 import * as EventFunctions from "./event_functions";
-import { DOIFilter } from "./doi_filter/doi_filter";
+//import { DOIFilter } from "./doi_filter/doi_filter";
 import { hideLoading, showLoading } from "./loading_overlay";
 
 let browserInfo = new BrowserInfo();

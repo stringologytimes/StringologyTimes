@@ -1,10 +1,4 @@
-import { PrimarySearchResult } from "../../doi_filter/primary_search_result";
 import { DOIRecordCollection } from "../../doi_record_collection";
-import { SearchFilter } from "../../doi_filter/search_filter";
-import { SummaryInfo } from "../../doi_filter/summary_info";
-import { SortByType } from "../../doi_filter/search_filter";
-import { getDOIRecordTypeList } from "../../doi_record_collection";
-import { containerTypeList, paperTypeList, topContainerTypeList } from "../../doi_record";
 import { RecordTypeFieldsetFunctions } from "./fieldset/record_type_fieldset_functions";
 import { YearFieldsetFunctions } from "./fieldset/year_fieldset_functions";
 import { RankFieldsetFunctions } from "./fieldset/rank_fieldset_functions";

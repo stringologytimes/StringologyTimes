@@ -1,12 +1,7 @@
 import { DOIRecordCollection } from "./doi_record_collection";
-import { PrimarySearchResult } from "./doi_filter/primary_search_result";
-import { DOIFilter } from "./doi_filter/doi_filter";
-import { SummaryInfo } from "./doi_filter/summary_info";
 import { renderViewSettingBox } from "./render/settings/view_setting_box_render";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
-import { DOIStatus } from "./doi_record";
-import { ViewModeType } from "./doi_filter/search_result_view_settings";
-import { DOIResultCache } from "./doi_filter/doi_result_cache";
+import { SearchResultCache } from "./doi_filter/search_result_cache";
 import { getDOIRecordTypeList } from "./doi_record_collection";
 import { containerTypeList, paperTypeList } from "./doi_record";
 import { PrimarySearchFilterRender } from "./render/settings/primary_search_filter_render";

@@ -1,17 +1,11 @@
 import { SearchFilter } from "./search_filter";
 import { SearchResultViewSettings } from "./search_result_view_settings";
+
+/*
 export class DOIFilter {
     public query: SearchFilter = new SearchFilter();
     public viewSetting: SearchResultViewSettings = new SearchResultViewSettings();
 
-    /*
-    public static buildFromURLParameters(): DOIFilter {        
-        let r = new DOIFilter();
-        r.query = DOIFilterQuery.buildFromURLParameters();
-        r.viewSetting = DOIFilterViewSetting.buildFromURLParameters();
-       return r;
-    }
-    */
 
     public copy(): DOIFilter {
         let r = new DOIFilter();
@@ -36,3 +30,4 @@ export class DOIFilter {
         return r;
     }
 }
+*/

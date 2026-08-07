@@ -74,14 +74,31 @@ export class ContainerDOIFieldsetFunctions {
         {
             const anyOption = document.createElement("option");
             anyOption.value = "Any";
-            anyOption.textContent = "Any";
+
+            if(selectedTopContainerType != "Any"){
+                anyOption.textContent = "Any " + selectedTopContainerType;
+            }else{
+                anyOption.textContent = "Any Type";
+            }
+
             topContainerSelect.appendChild(anyOption);
         }
 
         {
             const anyOption = document.createElement("option");
             anyOption.value = "Any";
-            anyOption.textContent = "Any";
+
+            if(selectedTopContainerType == "Journal"){
+                anyOption.textContent = "Any Journal Issue";
+            }else if(selectedTopContainerType == "Proceedings Collection"){
+                anyOption.textContent = "Any Conference Proceedings";
+            }else if(selectedTopContainerType == "Preprint Repository"){
+                anyOption.textContent = "Any Preprint";
+            }else{
+                anyOption.textContent = "Any Type";
+            }
+
+
             subContainerSelect.appendChild(anyOption);
         }
 
@@ -121,7 +138,7 @@ export class ContainerDOIFieldsetFunctions {
         {
             const anyOption = document.createElement("option");
             anyOption.value = "Any";
-            anyOption.textContent = "Any";
+            anyOption.textContent = "Any Type";
             topContainerTypeSelect.appendChild(anyOption);
         }
 

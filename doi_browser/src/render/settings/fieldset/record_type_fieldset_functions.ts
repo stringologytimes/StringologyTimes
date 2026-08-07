@@ -1,4 +1,5 @@
 import { containerTypeList, otherTypeList, paperTypeList, topContainerTypeList } from "../../../doi_record";
+import { AnyContainerType, AnyPaperType, AnyOtherType } from "../../../doi_record";
 
 export class RecordTypeFieldsetFunctions {
     public static initializeRecordTypes(is_primary_filter: boolean, type_to_id_count_mapper: Map<string, number>) {
@@ -108,7 +109,7 @@ export class RecordTypeFieldsetFunctions {
         if (uncheckedContainerTypes.length > 0) {
           return checkedContainerTypes;
         } else {
-          return ["Container-Any"];
+          return [AnyContainerType];
         }
       }
     
@@ -125,7 +126,7 @@ export class RecordTypeFieldsetFunctions {
         if (uncheckedPaperTypes.length > 0) {
           return checkedPaperTypes;
         } else {
-          return ["Paper-Any"];
+          return [AnyPaperType];
         }
       }
     
@@ -142,7 +143,7 @@ export class RecordTypeFieldsetFunctions {
         if (uncheckedOtherTypes.length > 0) {
           return checkedOtherTypes;
         } else {
-          return ["Other-Any"];
+          return [AnyOtherType];
         }
       }
     
@@ -152,8 +153,9 @@ export class RecordTypeFieldsetFunctions {
         const checkedOtherTypes = this.getCheckedOtherTypes(is_primary_filter);
     
         if(checkedContainerTypes.length == 0 && checkedPaperTypes.length == 0 && checkedOtherTypes.length == 0) {
-          return ["None"];
-        }else if(checkedContainerTypes.length == 1 && checkedPaperTypes.length == 1 && checkedOtherTypes.length == 1 && checkedContainerTypes[0] == "Container-Any" && checkedPaperTypes[0] == "Paper-Any" && checkedOtherTypes[0] == "Other-Any") {
+          return ["Empty"];
+        }else if(checkedContainerTypes.length == 1 && checkedPaperTypes.length == 1 && checkedOtherTypes.length == 1 && 
+          checkedContainerTypes[0] == AnyContainerType && checkedPaperTypes[0] == AnyPaperType && checkedOtherTypes[0] == AnyOtherType) {
           return [];
         }else{
           return [...checkedContainerTypes, ...checkedPaperTypes, ...checkedOtherTypes];

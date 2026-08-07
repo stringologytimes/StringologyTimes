@@ -60,7 +60,7 @@ export class SummaryInfo {
             yearFromList = Array.from({ length: maxYear - minYear + 1 }, (_, index) => minYear + index).map(year => year.toString());
 
             let yearFromDoiCountList: number[] = [];
-            const currentMaxYear = filterInput.maximum_year == null ? maxYear : filterInput.maximum_year;
+            const currentMaxYear = filterInput.maximumYear == null ? maxYear : filterInput.maximumYear;
             yearFromDoiCountList = yearFromList.map(year => filterResult.searchByYear(parseInt(year), currentMaxYear, doiNumberFilterSet, doiInfoCollection).length);
 
             for (let i = 0; i < yearFromList.length; i++) {
@@ -79,7 +79,7 @@ export class SummaryInfo {
             yearToList = Array.from({ length: maxYear - minYear + 1 }, (_, index) => minYear + index).map(year => year.toString());
 
             let yearToDoiCountList: number[] = [];
-            const currentMinimumYear = filterInput.minimum_year == null ? minYear : filterInput.minimum_year;
+            const currentMinimumYear = filterInput.minimumYear == null ? minYear : filterInput.minimumYear;
             yearToDoiCountList = yearToList.map(year => filterResult.searchByYear(currentMinimumYear, parseInt(year), doiNumberFilterSet, doiInfoCollection).length);
 
             for (let i = 0; i < yearToList.length; i++) {

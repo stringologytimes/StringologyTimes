@@ -18,12 +18,12 @@ export class YearFieldsetFunctions {
             const anyOption2 = document.createElement("option");
 
             anyOption1.value = "Any";
-            anyOption1.textContent = "Any";
+            anyOption1.textContent = "No Minimum";
             anyOption1.setAttribute("data-year", "Any");
             yearFromSelect.appendChild(anyOption1);
 
             anyOption2.value = "Any";
-            anyOption2.textContent = "Any";
+            anyOption2.textContent = "No Maximum";
             anyOption2.setAttribute("data-year", "Any");
             yearToSelect.appendChild(anyOption2);
         }
