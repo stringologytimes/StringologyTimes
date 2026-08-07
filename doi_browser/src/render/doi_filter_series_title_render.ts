@@ -9,7 +9,7 @@ export function renderSeriesTitleList(filterResult: PrimarySearchResult, viewSet
         return;
     }
 
-    outputDiv.innerHTML = "";
+    outputDiv.replaceChildren();
 
     
     const seriesTitleList = new Array<string>();

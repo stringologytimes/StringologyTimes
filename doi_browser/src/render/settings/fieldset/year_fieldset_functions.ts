@@ -10,8 +10,8 @@ export class YearFieldsetFunctions {
         if (yearToSelect == null) {
             throw new Error(`${id_prefix}-year-to-select is not found`);
         }
-        yearFromSelect.innerHTML = "";
-        yearToSelect.innerHTML = "";
+        yearFromSelect.replaceChildren();
+        yearToSelect.replaceChildren();
 
         {
             const anyOption1 = document.createElement("option");
@@ -31,7 +31,6 @@ export class YearFieldsetFunctions {
         if (year_to_id_count_mapper.size > 0) {
             let minYear = Math.min(...year_to_id_count_mapper.keys());
             let maxYear = Math.max(...year_to_id_count_mapper.keys());
-            console.log("minYear: " + minYear + " maxYear: " + maxYear);
             for (let year = minYear; year <= maxYear; year++) {
 
                 const option1 = document.createElement("option");
@@ -71,4 +70,31 @@ export class YearFieldsetFunctions {
             });
         }
     }
+
+    public static getYearFrom(is_primary_filter: boolean): string | null {
+        const id_prefix = is_primary_filter ? "psf" : "ssf";
+        const yearFromSelect: HTMLSelectElement = document.getElementById(`${id_prefix}-year-from-select`) as HTMLSelectElement;
+        if (yearFromSelect == null) {
+            throw new Error(`${id_prefix}-year-from-select is not found`);
+        }
+        const selectedValue = yearFromSelect.value;
+        if (selectedValue == "Any") {
+            return null;
+        }
+        return selectedValue;
+    }
+
+    public static getYearTo(is_primary_filter: boolean): string | null {
+        const id_prefix = is_primary_filter ? "psf" : "ssf";
+        const yearToSelect: HTMLSelectElement = document.getElementById(`${id_prefix}-year-to-select`) as HTMLSelectElement;
+        if (yearToSelect == null) {
+            throw new Error(`${id_prefix}-year-to-select is not found`);
+        }
+        const selectedValue = yearToSelect.value;
+        if (selectedValue == "Any") {
+            return null;
+        }
+        return selectedValue;
+    }
+
 }

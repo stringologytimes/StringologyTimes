@@ -2,6 +2,7 @@ import { LightWeightDOIRecord, topContainerTypeList } from "./doi_record";
 import { DOIRecord} from "./doi_record";
 import { load_gzip_text_lines, load_gzip_integer_list_lines, load_gzip_integer_lines } from "./gzip_loader";
 import { containerTypeList, paperTypeList, otherTypeList } from "./doi_record";
+import { FoundRecordSummary } from "./doi_filter/found_record_summary";
 
 let typeList: string[] = [];
 
@@ -18,12 +19,7 @@ export class DOIRecordCollection {
     public doiToIDMapper: Map<string, number> = new Map();
     public idToDOIChildrenIDMapper: Map<number, number[]> = new Map();
     public recordTypeToIDMapper: Map<string, number[]> = new Map();
-    //public idToSubContainersCountMapper: Map<number, number> = new Map();
-    public idToPrimaryRecordCountMapper: Map<number, number> = new Map();
-    public idToSecondaryRecordCountMapper: Map<number, number> = new Map();
-    public minimumYear: number = 1950;
-    public maximumYear: number = 2050;
-    public idToRecordCountMapper: Map<number, number> = new Map();
+    public recordSummary: FoundRecordSummary = new FoundRecordSummary();
 
     
 
@@ -147,6 +143,23 @@ export class DOIRecordCollection {
                 return false;
             }
         }
+    }
+
+    private getAncestorIDListHelper(doiID: number, outputList: number[]) {
+        var doiInfo = this.lightweightDOIRecords[doiID];
+        if(doiInfo.container_DOI.length > 0){
+            if(this.doiToIDMapper.has(doiInfo.container_DOI)){
+                var containerDOIID = this.doiToIDMapper.get(doiInfo.container_DOI)!;
+                outputList.push(containerDOIID);
+                this.getAncestorIDListHelper(containerDOIID, outputList);
+            }
+        }
+        return outputList;
+    }
+    public getAncestorIDList(doiID: number): number[] {
+        var ancestorIDList: number[] = [];
+        this.getAncestorIDListHelper(doiID, ancestorIDList);
+        return ancestorIDList;
     }
 
 
@@ -282,15 +295,6 @@ export class DOIRecordCollection {
 
 
         r.lightweightDOIRecords.forEach((doiInfo, index) => {
-            if(doiInfo.year !== undefined && doiInfo.year !== null && !Number.isNaN(doiInfo.year) && doiInfo.year >= 0){
-                if(r.idToRecordCountMapper.has(doiInfo.year)){
-                    r.idToRecordCountMapper.set(doiInfo.year, r.idToRecordCountMapper.get(doiInfo.year)! + 1);
-                }else{
-                    r.idToRecordCountMapper.set(doiInfo.year, 1);
-                }
-    
-            }
-
             if(doiInfo.container_DOI.length > 0){
                 if(r.doiToIDMapper.has(doiInfo.container_DOI)){
                     var container_id = r.doiToIDMapper.get(doiInfo.container_DOI)!;
@@ -305,15 +309,6 @@ export class DOIRecordCollection {
 
 
 
-        if(r.idToRecordCountMapper.size > 0){
-            const minimumYear = Math.min(...r.idToRecordCountMapper.keys());
-            const maximumYear = Math.max(...r.idToRecordCountMapper.keys());
-            console.log("minimumYear: " + minimumYear + " maximumYear: " + maximumYear);
-            r.minimumYear = minimumYear;
-            r.maximumYear = maximumYear;
-        }
-
-
 
         r.lightweightDOIRecords.forEach((doiInfo, index) => {
             if(r.recordTypeToIDMapper.has(doiInfo.type)){
@@ -326,30 +321,6 @@ export class DOIRecordCollection {
         
 
         
-        r.lightweightDOIRecords.forEach((doiInfo, index) => {
-            let ancestor = doiInfo.container_DOI;
-            while(ancestor.length > 0){
-                if(r.doiToIDMapper.has(ancestor)){
-                    var ancestor_id = r.doiToIDMapper.get(ancestor)!;
-                    if(doiInfo.isPrimary){
-                        if(r.idToPrimaryRecordCountMapper.has(ancestor_id)){
-                            r.idToPrimaryRecordCountMapper.set(ancestor_id, r.idToPrimaryRecordCountMapper.get(ancestor_id)! + 1);
-                        }else{
-                            r.idToPrimaryRecordCountMapper.set(ancestor_id, 1);
-                        }
-                    }else{
-                        if(r.idToSecondaryRecordCountMapper.has(ancestor_id)){
-                            r.idToSecondaryRecordCountMapper.set(ancestor_id, r.idToSecondaryRecordCountMapper.get(ancestor_id)! + 1);
-                        }else{
-                            r.idToSecondaryRecordCountMapper.set(ancestor_id, 1);
-                        }
-                    }
-                    ancestor = r.getDOIInfo(ancestor_id).container_DOI;
-                }else{
-                    break;
-                }
-            }
-        });
 
         Array.from(r.recordTypeToIDMapper.keys()).forEach((type) => {
             if(!containerTypeList.includes(type) && !paperTypeList.includes(type)){
@@ -357,7 +328,7 @@ export class DOIRecordCollection {
             }
         });
         
-        
+        r.recordSummary = r.buildRecordSummary(r.lightweightDOIRecords.map((record, index) => index));
 
 
         console.log("lightweightDOIInfos is loaded successfully : " + r.lightweightDOIRecords.length);
@@ -366,6 +337,58 @@ export class DOIRecordCollection {
 
         return r;
 
+    }
+
+    public buildRecordSummary(initial_record_ids: number[]): FoundRecordSummary {
+        let found_record_summary = new FoundRecordSummary();
+
+        initial_record_ids.forEach(id => {
+            const record = this.lightweightDOIRecords[id];
+            const recordType = record.type;
+            if (found_record_summary.type_to_id_count_mapper.has(recordType)) {
+                found_record_summary.type_to_id_count_mapper.set(recordType, found_record_summary.type_to_id_count_mapper.get(recordType)! + 1);
+            } else {
+                found_record_summary.type_to_id_count_mapper.set(recordType, 1);
+            }
+
+            if (record.isPrimary) {
+                found_record_summary.primary_record_count++;
+            } else {
+                found_record_summary.secondary_record_count++;
+            }
+
+            const year = record.year;
+            if (record.isUnknownYear()) {
+                found_record_summary.unknown_year_id_count++;
+            } else {
+                if (found_record_summary.year_to_id_count_mapper.has(year)) {
+                    found_record_summary.year_to_id_count_mapper.set(year, found_record_summary.year_to_id_count_mapper.get(year)! + 1);
+                } else {
+                    found_record_summary.year_to_id_count_mapper.set(year, 1);
+                }
+            }
+
+            const ancestorIDList = this.getAncestorIDList(id);
+            if (record.isPrimary) {
+                ancestorIDList.forEach(ancestorID => {
+                    if (found_record_summary.idToPrimaryRecordCountMapper.has(ancestorID)) {
+                        found_record_summary.idToPrimaryRecordCountMapper.set(ancestorID, found_record_summary.idToPrimaryRecordCountMapper.get(ancestorID)! + 1);
+                    } else {
+                        found_record_summary.idToPrimaryRecordCountMapper.set(ancestorID, 1);
+                    }
+                });
+            } else {
+                ancestorIDList.forEach(ancestorID => {
+                    if (found_record_summary.idToSecondaryRecordCountMapper.has(ancestorID)) {
+                        found_record_summary.idToSecondaryRecordCountMapper.set(ancestorID, found_record_summary.idToSecondaryRecordCountMapper.get(ancestorID)! + 1);
+                    } else {
+                        found_record_summary.idToSecondaryRecordCountMapper.set(ancestorID, 1);
+                    }
+                });
+            }
+        });
+
+        return found_record_summary;
     }
 }
 

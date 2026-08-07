@@ -14,7 +14,7 @@ export class ContainerRecordRender {
         }
 
 
-        outputDiv.innerHTML = "";
+        outputDiv.replaceChildren();
 
         if (filterResult.doiIDs.length == 0) {
             outputDiv.innerHTML = "<p>No articles found.</p>";

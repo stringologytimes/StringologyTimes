@@ -5,6 +5,10 @@ import { SummaryInfo } from "../../doi_filter/summary_info";
 import { SortByType } from "../../doi_filter/search_filter";
 import { getDOIRecordTypeList } from "../../doi_record_collection";
 import { containerTypeList, paperTypeList, topContainerTypeList } from "../../doi_record";
+import { RecordTypeFieldsetFunctions } from "./fieldset/record_type_fieldset_functions";
+import { YearFieldsetFunctions } from "./fieldset/year_fieldset_functions";
+import { RankFieldsetFunctions } from "./fieldset/rank_fieldset_functions";
+import { ContainerDOIFieldsetFunctions } from "./fieldset/container_doi_fieldset_functions";
 
 
 //let topContainerCategories: string[] = ["Journal", "Proceedings", "Preprint"];
@@ -12,397 +16,38 @@ import { containerTypeList, paperTypeList, topContainerTypeList } from "../../do
 
 export class PrimarySearchFilterRender {
   public static initialize(doiRecordCollection: DOIRecordCollection): void {
-    const recordTypeCounters: Map<string, number> = new Map<string, number>();
+   
 
-    doiRecordCollection.lightweightDOIRecords.forEach(record => {
-      const recordType = record.type;
-      if (recordTypeCounters.has(recordType)) {
-        recordTypeCounters.set(recordType, recordTypeCounters.get(recordType)! + 1);
-      } else {
-        recordTypeCounters.set(recordType, 1);
-      }
-    }
-    );
+    RecordTypeFieldsetFunctions.initializeRecordTypes(true, doiRecordCollection.recordSummary.type_to_id_count_mapper);
+    YearFieldsetFunctions.initializeYearBox(true, doiRecordCollection.recordSummary.year_to_id_count_mapper, doiRecordCollection.recordSummary.unknown_year_id_count);
+    RankFieldsetFunctions.updateRankBox(true, doiRecordCollection.recordSummary.primary_record_count, doiRecordCollection.recordSummary.secondary_record_count);
+    ContainerDOIFieldsetFunctions.initializeContainerBox(true, doiRecordCollection, false, doiRecordCollection.recordSummary.idToPrimaryRecordCountMapper, doiRecordCollection.recordSummary.idToSecondaryRecordCountMapper);
+
+
+
+
+    /*
     this.initializeRecordTypes(recordTypeCounters, doiRecordCollection);
-    this.initializeContainerBox(doiRecordCollection);
     this.initializeYearBox(doiRecordCollection);
+    */
   }
 
-  public static initializeRecordTypes(recordTypeCounters: Map<string, number>, doiRecordCollection: DOIRecordCollection) {
-    const typeListContainerSpan = document.getElementById("psf-container-types-span");
-    if (typeListContainerSpan == null) {
-      throw new Error("psf-container-types-span is not found");
-    }
-    const typeListPaperSpan = document.getElementById("psf-paper-types-span");
-    if (typeListPaperSpan == null) {
-      throw new Error("psf-paper-types-span is not found");
-    }
-    const typeListOtherSpan = document.getElementById("psf-other-types-span");
-    if (typeListOtherSpan == null) {
-      throw new Error("typeListOtherDiv is not found");
-    }
-
-    doiRecordCollection.recordTypeToIDMapper.forEach((ids, type) => {
-      let count = ids.length;
-      const labelName = `${type} (${count})`;
-
-      const checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
-      checkbox.id = "psf-checkbox_" + type;
-      checkbox.value = type;
-      checkbox.checked = true;
-
-      const label = document.createElement("label");
-      label.htmlFor = "psf-checkbox_" + type;
-      label.textContent = labelName;
 
 
-      if (containerTypeList.includes(type)) {
-        typeListContainerSpan.appendChild(checkbox);
-        typeListContainerSpan.appendChild(label);
-      } else if (paperTypeList.includes(type)) {
-        typeListPaperSpan.appendChild(checkbox);
-        typeListPaperSpan.appendChild(label);
-      } else {
-        typeListOtherSpan.appendChild(checkbox);
-        typeListOtherSpan.appendChild(label);
-      }
 
-
-    });
-  }
-
-  public static selectTopContainerBox(selectedTopContainer: string, doiRecordCollection: DOIRecordCollection) {
-    const subContainerSelect = document.getElementById("psf-sub-container-select");
-    if (subContainerSelect == null) {
-      throw new Error("psf-sub-container-select is not found");
-    }
-
-
-    subContainerSelect.innerHTML = "";
-
-    {
-      const option = document.createElement("option");
-      option.value = "Any";
-      option.textContent = "Any";
-      subContainerSelect.appendChild(option);
-    }
-
-    if (selectedTopContainer == "Any") {
-
-    } else if (doiRecordCollection.doiToIDMapper.has(selectedTopContainer)) {
-      {
-        const option = document.createElement("option");
-        option.value = "Any";
-        option.textContent = "Any";
-        subContainerSelect.appendChild(option);
-      }
-
-
-      var selected_doi_id = doiRecordCollection.doiToIDMapper.get(selectedTopContainer)!;
-      console.log("selected_doi_id/" + selected_doi_id + " / " + doiRecordCollection.idToDOIChildrenIDMapper.get(selected_doi_id)?.length);
-      doiRecordCollection.idToDOIChildrenIDMapper.get(selected_doi_id)?.forEach(child_id => {
-        var child_doi_record = doiRecordCollection.lightweightDOIRecords[child_id];
-        const child_type = child_doi_record.type;
-        if (containerTypeList.includes(child_type)) {
-          var primaryCount = doiRecordCollection.idToPrimaryRecordCountMapper.get(child_id) ?? 0;
-          var secondaryCount = doiRecordCollection.idToSecondaryRecordCountMapper.get(child_id) ?? 0;
   
-          const option = document.createElement("option");
-          option.value = child_doi_record.doi;
-          option.textContent = `${child_doi_record.title} (${primaryCount} primary records, ${secondaryCount} secondary records)`;
-          subContainerSelect.appendChild(option);  
-        }
-      });
-    } else {
-      throw new Error("selectedTopContainer is not found");
-    }
-  }
 
 
-  public static selectTopContainerTypeBox(selectedTopContainerType: string, doiRecordCollection: DOIRecordCollection) {
-    const topContainerTypeSelect: HTMLSelectElement = document.getElementById("psf-top-container-type-select") as HTMLSelectElement;
-    if (topContainerTypeSelect == null) {
-      throw new Error("psf-top-container-type-select is not found");
-    }
-
-    const topContainerSelect = document.getElementById("psf-top-container-select");
-    if (topContainerSelect == null) {
-      throw new Error("psf-top-container-select is not found");
-    }
-
-    const subContainerSelect = document.getElementById("psf-sub-container-select");
-    if (subContainerSelect == null) {
-      throw new Error("psf-sub-container-select is not found");
-    }
-
-    //const selectedValue : string = topContainerTypeSelect.value;
-    topContainerSelect.innerHTML = "";
-    subContainerSelect.innerHTML = "";
-
-
-    {
-      const anyOption = document.createElement("option");
-      anyOption.value = "Any";
-      anyOption.textContent = "Any";
-      topContainerSelect.appendChild(anyOption);
-    }
-
-    {
-      const anyOption = document.createElement("option");
-      anyOption.value = "Any";
-      anyOption.textContent = "Any";
-      subContainerSelect.appendChild(anyOption);
-    }
-
-    let index_counter = 0;
-
-
-    if (topContainerTypeList.includes(selectedTopContainerType)) {
-
-      //const key = mapper.get(selectedTopContainerType);
-      doiRecordCollection.recordTypeToIDMapper.forEach((idList, recordType) => {
-        if (recordType == selectedTopContainerType) {
-          idList.forEach(id => {
-            var doiRecord = doiRecordCollection.lightweightDOIRecords[id];
-            var primaryCount = doiRecordCollection.idToPrimaryRecordCountMapper.get(id) ?? 0;
-            var secondaryCount = doiRecordCollection.idToSecondaryRecordCountMapper.get(id) ?? 0;
-
-            const option = document.createElement("option");
-            option.value = doiRecord.doi;
-            option.textContent = `${index_counter++}. ${doiRecord.title} (${primaryCount} primary records, ${secondaryCount} secondary records)`;
-            topContainerSelect.appendChild(option);
-          }
-          );
-        }
-      });
-    }
-  }
-
-
-  public static initializeYearBox(doiRecordCollection: DOIRecordCollection) {
-    const yearFromSelect = document.getElementById("psf-year-from-select");
-    if (yearFromSelect == null) {
-      throw new Error("psf-year-from-select is not found");
-    }
-    const yearToSelect = document.getElementById("psf-year-to-select");
-    if (yearToSelect == null) {
-      throw new Error("psf-year-to-select is not found");
-    }
-    yearFromSelect.innerHTML = "";
-    yearToSelect.innerHTML = "";
-
-    console.log("initializeYearBox: " + doiRecordCollection.minimumYear + " " + doiRecordCollection.maximumYear);
-
-    {
-      const anyOption1 = document.createElement("option");
-      const anyOption2 = document.createElement("option");
-
-      anyOption1.value = "Any";
-      anyOption1.textContent = "Any";
-      yearFromSelect.appendChild(anyOption1);
-
-      anyOption2.value = "Any";
-      anyOption2.textContent = "Any";
-      yearToSelect.appendChild(anyOption2);
-    }
-
-    for (let year = doiRecordCollection.minimumYear; year <= doiRecordCollection.maximumYear; year++) {
-      const option1 = document.createElement("option");
-      const option2 = document.createElement("option");
-      const recordCount = doiRecordCollection.idToRecordCountMapper.get(year) ?? 0;
-
-      if (recordCount > 0) {
-        option1.value = year.toString();
-        option1.textContent = `${year} (${recordCount})`;
-        yearFromSelect.appendChild(option1);
-
-        option2.value = year.toString();
-        option2.textContent = `${year} (${recordCount})`;
-        yearToSelect.appendChild(option2);
-
-      }
-
-    }
-  }
-
-
-  public static initializeContainerBox(doiRecordCollection: DOIRecordCollection) {
-    const topContainerTypeSelect = document.getElementById("psf-top-container-type-select");
-    if (topContainerTypeSelect == null) {
-      throw new Error("psf-top-container-type-select is not found");
-    }
-
-    {
-      const anyOption = document.createElement("option");
-      anyOption.value = "Any";
-      anyOption.textContent = "Any";
-      topContainerTypeSelect.appendChild(anyOption);
-    }
-
-    topContainerTypeList.forEach((topContainerType) => {
-      const option = document.createElement("option");
-      option.value = topContainerType;
-      option.textContent = topContainerType;
-      topContainerTypeSelect.appendChild(option);
-    });
-
-    this.selectTopContainerTypeBox("Any", doiRecordCollection);
-  }
-
-  public static getCheckedContainerTypes(): string[] {
-    const containerTypeSelect = document.getElementById("psf-container-types-span");
-    if (containerTypeSelect == null) {
-      throw new Error("psf-container-types-span is not found");
-    }
-    const containerTypeSelectOptions = containerTypeSelect.querySelectorAll("input");
-    const checkedContainerTypes = Array.from(containerTypeSelectOptions).filter(option => (option as HTMLInputElement).checked).map(option => option.value);
-    const uncheckedContainerTypes = Array.from(containerTypeSelectOptions).filter(option => !(option as HTMLInputElement).checked).map(option => option.value);
-
-    if (uncheckedContainerTypes.length > 0) {
-      return checkedContainerTypes;
-    } else {
-      return ["Container-Any"];
-    }
-  }
-
-  public static getCheckedPaperTypes(): string[] {
-    const paperTypeSelect = document.getElementById("psf-paper-types-span");
-    if (paperTypeSelect == null) {
-      throw new Error("psf-paper-types-span is not found");
-    }
-    const paperTypeSelectOptions = paperTypeSelect.querySelectorAll("input");
-    const checkedPaperTypes = Array.from(paperTypeSelectOptions).filter(option => (option as HTMLInputElement).checked).map(option => option.value);
-    const uncheckedPaperTypes = Array.from(paperTypeSelectOptions).filter(option => !(option as HTMLInputElement).checked).map(option => option.value);
-
-    if (uncheckedPaperTypes.length > 0) {
-      return checkedPaperTypes;
-    } else {
-      return ["Paper-Any"];
-    }
-  }
-
-  public static getCheckedOtherTypes(): string[] {
-    const otherTypeSelect = document.getElementById("psf-other-types-span");
-    if (otherTypeSelect == null) {
-      throw new Error("psf-other-types-span is not found");
-    }
-    const otherTypeSelectOptions = otherTypeSelect.querySelectorAll("input");
-    const checkedOtherTypes = Array.from(otherTypeSelectOptions).filter(option => (option as HTMLInputElement).checked).map(option => option.value);
-    const uncheckedOtherTypes = Array.from(otherTypeSelectOptions).filter(option => !(option as HTMLInputElement).checked).map(option => option.value);
-
-    if (uncheckedOtherTypes.length > 0) {
-      return checkedOtherTypes;
-    } else {
-      return ["Other-Any"];
-    }
-  }
-
-  public static getCheckedTypes(): string[] {
-    const checkedContainerTypes = this.getCheckedContainerTypes();
-    const checkedPaperTypes = this.getCheckedPaperTypes();
-    const checkedOtherTypes = this.getCheckedOtherTypes();
-
-    if(checkedContainerTypes.length == 0 && checkedPaperTypes.length == 0 && checkedOtherTypes.length == 0) {
-      return ["None"];
-    }else if(checkedContainerTypes.length == 1 && checkedPaperTypes.length == 1 && checkedOtherTypes.length == 1 && checkedContainerTypes[0] == "Container-Any" && checkedPaperTypes[0] == "Paper-Any" && checkedOtherTypes[0] == "Other-Any") {
-      return [];
-    }else{
-      return [...checkedContainerTypes, ...checkedPaperTypes, ...checkedOtherTypes];
-    }
-  }
-
-  public static getTopContainerDOI(): string | null {
-    const topContainerSelect: HTMLSelectElement = document.getElementById("psf-top-container-select") as HTMLSelectElement;
-    if (topContainerSelect == null) {
-      throw new Error("psf-top-container-select is not found");
-    }
-    const selectedValue = topContainerSelect.value;
-    if (selectedValue == "Any") {
-      return null;
-    } else {
-      return selectedValue;
-    }
-  }
-  public static getTopContainerType(): string | null {
-    const topContainerTypeSelect: HTMLSelectElement = document.getElementById("psf-top-container-type-select") as HTMLSelectElement;
-    if (topContainerTypeSelect == null) {
-      throw new Error("psf-top-container-type-select is not found");
-    }
-    const selectedValue = topContainerTypeSelect.value;
-    if (selectedValue == "Any") {
-      return null;
-    }
-    return selectedValue;
-  }
-
-  public static getSubContainerDOI(): string | null {
-    const subContainerSelect: HTMLSelectElement = document.getElementById("psf-sub-container-select") as HTMLSelectElement;
-    if (subContainerSelect == null) {
-      throw new Error("psf-sub-container-select is not found");
-    }
-    const selectedValue = subContainerSelect.value;
-    if (selectedValue == "Any") {
-      return null;
-    }
-    return selectedValue;
-  }
-
-  public static getYearFrom(): string | null {
-    const yearFromSelect: HTMLSelectElement = document.getElementById("psf-year-from-select") as HTMLSelectElement;
-    if (yearFromSelect == null) {
-      throw new Error("psf-year-from-select is not found");
-    }
-    const selectedValue = yearFromSelect.value;
-    if (selectedValue == "Any") {
-      return null;
-    }
-    return selectedValue;
-  }
-
-  public static getYearTo(): string | null {
-    const yearToSelect: HTMLSelectElement = document.getElementById("psf-year-to-select") as HTMLSelectElement;
-    if (yearToSelect == null) {
-      throw new Error("psf-year-to-select is not found");
-    }
-    const selectedValue = yearToSelect.value;
-    if (selectedValue == "Any") {
-      return null;
-    }
-    return selectedValue;
-  }
-
-  public static getExcludedStatus(): string[] {
-    const excludedStatus = [];
-    const primaryRecordCheckbox: HTMLInputElement = document.getElementById("psf-primary-record-checkbox") as HTMLInputElement;
-    if (primaryRecordCheckbox == null) {
-      throw new Error("psf-primary-record-checkbox is not found");
-    }
-    const b1 = primaryRecordCheckbox.checked;
-    if (!b1) {
-      excludedStatus.push("primary");
-    }
-
-    const secondaryRecordCheckbox: HTMLInputElement = document.getElementById("psf-secondary-record-checkbox") as HTMLInputElement;
-    if (secondaryRecordCheckbox == null) {
-      throw new Error("psf-secondary-record-checkbox is not found");
-    }
-    const b2 = secondaryRecordCheckbox.checked;
-    if (!b2) {
-      excludedStatus.push("secondary");
-    }
-    return excludedStatus;
-  }
 
   public static setURLParameters(doiRecordCollection: DOIRecordCollection): void {
     const url = new URL(window.location.href);
     url.searchParams.delete("psf-type");
-    const newTypes = this.getCheckedTypes();
+    const newTypes = RecordTypeFieldsetFunctions.getCheckedTypes(true);
     newTypes.forEach(type => {
       url.searchParams.append("psf-type", type);
     });
 
-    const newSubContainerDOI = this.getSubContainerDOI();
+    const newSubContainerDOI = ContainerDOIFieldsetFunctions.getSubContainerDOI(true);
 
     url.searchParams.delete("ancestor-doi");
     url.searchParams.delete("top-container-type");
@@ -411,11 +56,11 @@ export class PrimarySearchFilterRender {
     if (newSubContainerDOI != null) {
       url.searchParams.set("ancestor-doi", newSubContainerDOI);
     } else {
-      const newTopContainerDOI = this.getTopContainerDOI();
+      const newTopContainerDOI = ContainerDOIFieldsetFunctions.getTopContainerDOI(true);
       if (newTopContainerDOI != null) {
         url.searchParams.set("ancestor-doi", newTopContainerDOI);
       } else {
-        const newTopContainerType = this.getTopContainerType();
+        const newTopContainerType = ContainerDOIFieldsetFunctions.getTopContainerType(true);
         if (newTopContainerType != null) {
           url.searchParams.set("top-container-type", newTopContainerType);
         }
@@ -425,18 +70,18 @@ export class PrimarySearchFilterRender {
 
 
 
-    const newYearFrom = this.getYearFrom();
+    const newYearFrom = YearFieldsetFunctions.getYearFrom(true);
     url.searchParams.delete("psf-year-from");
     if (newYearFrom != null) {
       url.searchParams.append("psf-year-from", newYearFrom);
     }
-    const newYearTo = this.getYearTo();
+    const newYearTo = YearFieldsetFunctions.getYearTo(true);
     url.searchParams.delete("psf-year-to");
     if (newYearTo != null) {
       url.searchParams.append("psf-year-to", newYearTo);
     }
 
-    const newExcludedStatus = this.getExcludedStatus();
+    const newExcludedStatus = RankFieldsetFunctions.getExcludedStatus(true);
     console.log("newExcludedStatus: " + newExcludedStatus);
     url.searchParams.delete("psf-excluded-status");
     if (newExcludedStatus.length > 0) {
@@ -452,7 +97,7 @@ export class PrimarySearchFilterRender {
 
 }
 
-
+/*
 function setSelectHTMLElement(selectElement: HTMLSelectElement, options: string[], doiCountList: number[], selectedValue: string | null, dontCareValueName: string) {
   selectElement.innerHTML = "";
   const defaultOption = document.createElement("option");
@@ -582,12 +227,6 @@ export function getSelectedTypeValues(): string[] {
       result.push(type);
     });
 
-    /*
-    if(uncheckedElementsForOthers.length == 0){
-      result.push("Other-Any");
-    }else{
-    }
-    */
   }
 
   return result;
@@ -788,3 +427,4 @@ export function renderFilterBox(filterResult: PrimarySearchResult, filterInput: 
   console.log("renderFilterBox time: " + time1 + " ms, " + time2 + " ms, " + time3 + " ms, " + time4 + " ms, " + time5 + " ms, " + time6 + " ms, " + time7 + " ms, " + time8 + " ms, " + time9 + " ms");
 
 }
+*/

@@ -1,10 +1,9 @@
 
 import { BrowserInfo } from "./browser_info";
-import { SortByType } from "./doi_filter/search_filter";
 import { DOIStatus } from "./doi_record";
-import { getSelectedTypeValues } from "./render/settings/primary_search_filter_render";
 import { PrimarySearchFilterRender } from "./render/settings/primary_search_filter_render";
 import { URLProcessor } from "./url_processor";
+import { ContainerDOIFieldsetFunctions } from "./render/settings/fieldset/container_doi_fieldset_functions";
 
 export function updatePaginationControls(browserInfo: BrowserInfo) {
   /*
@@ -38,7 +37,6 @@ export function updatePaginationControls(browserInfo: BrowserInfo) {
 
 export async function process(browserInfo: BrowserInfo) {
   const url = new URL(window.location.href);
-  console.log("process/" + url.toString());
   const primarySearchFilter = URLProcessor.buildPrimarySearchFilterFromURL();
 
   
@@ -64,11 +62,11 @@ export function primarySearchFilterChange(inputElementName: string, browserInfo:
     console.log("primarySearchFilterChange/" + inputElementName);
     if (inputElementName == "psf-top-container-type") {
       const selectedTopContainerType = (document.getElementById("psf-top-container-type-select") as HTMLSelectElement).value;
-      PrimarySearchFilterRender.selectTopContainerTypeBox(selectedTopContainerType, browserInfo.doiInfoCollection);
+      ContainerDOIFieldsetFunctions.selectTopContainerTypeBox(true, selectedTopContainerType, browserInfo.doiInfoCollection, false, browserInfo.doiInfoCollection.recordSummary.idToPrimaryRecordCountMapper, browserInfo.doiInfoCollection.recordSummary.idToSecondaryRecordCountMapper);
     }
     else if (inputElementName == "psf-top-container") {
       const selectedTopContainer = (document.getElementById("psf-top-container-select") as HTMLSelectElement).value;      
-      PrimarySearchFilterRender.selectTopContainerBox(selectedTopContainer, browserInfo.doiInfoCollection);
+      ContainerDOIFieldsetFunctions.selectTopContainerBox(true, selectedTopContainer, browserInfo.doiInfoCollection, false, browserInfo.doiInfoCollection.recordSummary.idToPrimaryRecordCountMapper, browserInfo.doiInfoCollection.recordSummary.idToSecondaryRecordCountMapper);
     }
   }
 
@@ -77,6 +75,8 @@ export function primarySearchFilterChange(inputElementName: string, browserInfo:
 
 export function filterInputChange(inputElementName: string, browserInfo: BrowserInfo) {
   const url = new URL(window.location.href);
+
+  /*
   
   if (inputElementName == "type") {
     const selectedTypeValues = getSelectedTypeValues();
@@ -187,6 +187,7 @@ export function filterInputChange(inputElementName: string, browserInfo: Browser
   history.pushState({}, "", url);
 
   void process(browserInfo);
+  */
 }
 
 export function ViewSettingInputChange(inputElementName: string, browserInfo: BrowserInfo) {

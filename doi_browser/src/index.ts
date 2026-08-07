@@ -24,10 +24,12 @@ function setFoundDOIList(list: any[]) {
 */
 
 function goToPage(pageNumber: number) {
+  /*
   browserInfo.currentDOIFilter.viewSetting.pageNumber = pageNumber;
   browserInfo.processCurrentDOIFilterInput();
   DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterResult().doiIDs, browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.getItemIndex(), browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.pageSize!, browserInfo.doiInfoCollection!);
   EventFunctions.updatePaginationControls(browserInfo);
+  */
 }
 
 

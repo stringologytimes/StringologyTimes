@@ -18,7 +18,7 @@ export function renderContainerTitleList(filterResult: PrimarySearchResult, view
         return;
     }
 
-    outputDiv.innerHTML = "";
+    outputDiv.replaceChildren();
 
     
     const containerTitleList = new Array<string>();

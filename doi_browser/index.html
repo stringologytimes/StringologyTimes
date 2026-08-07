@@ -77,6 +77,11 @@
       display: block;
       margin-left: 1.5em;
     }
+    .ssf-types-span {
+      display: block;
+      margin-left: 1.5em;
+    }
+
     .psf-main-div {
       background-color: lavender;
     }
@@ -98,7 +103,7 @@
   <h1>Article Info Browser</h1>
   <details open class="psf-main-div">
     <summary>Primary Search Filter</summary>
-    <fieldset>
+    <fieldset id="psf-record-types-fieldset">
       <legend>Record Type</legend>
       <div>
         <div>Container types:</div>
@@ -133,9 +138,9 @@
     <fieldset>
       <legend>Record Type</legend>
       <input type="checkbox" id="psf-primary-record-checkbox" checked />
-      <label for="psf-primary-record-checkbox">Primary record</label>
+      <label for="psf-primary-record-checkbox" id="psf-primary-record-label">Primary record</label>
       <input type="checkbox" id="psf-secondary-record-checkbox" checked />
-      <label for="psf-secondary-record-checkbox">Secondary record</label>
+      <label for="psf-secondary-record-checkbox" id="psf-secondary-record-label">Secondary record</label>
     </fieldset>
     <fieldset>
       <legend>Keywords</legend>
@@ -165,6 +170,15 @@
     </fieldset>
     <fieldset>
       <legend>Container of Records</legend>
+      <div>
+        <span>Top container type:</span> <select id="ssf-top-container-type-select"></select>
+      </div>
+      <div>
+        <span>Top container:</span> <select id="ssf-top-container-select"></select>
+      </div>
+      <div>
+        <span>Sub container:</span> <select id="ssf-sub-container-select"></select>
+      </div>
     </fieldset>
     <fieldset id="ssf-year-fieldset">
       <legend>Publication Year</legend>
@@ -184,67 +198,6 @@
     </fieldset>
 
   </details>
-
-
-  <fieldset>
-    <legend>Filter</legend>
-    <ul>
-      <li> Type:
-        <div>
-          <fieldset onchange="filterInputChange('type')">
-            <legend>Container</legend>
-            <span id="type-list-container-span"></span>
-          </fieldset>
-        </div>
-        <div>
-          <fieldset onchange="filterInputChange('type')">
-            <legend>Paper</legend>
-            <span id="type-list-paper-span"></span>
-          </fieldset>
-        </div>
-        <div>
-          <fieldset onchange="filterInputChange('type')">
-            <legend>Other</legend>
-            <span id="type-list-other-span"></span>
-          </fieldset>
-        </div>
-      </li>
-      <li>
-        <label>Container Title:</label> <select id="container-title-select"
-          onchange="filterInputChange('container-title')"></select>
-      </li>
-      <li>
-        <label>Series Title:</label> <select id="series-title-select"
-          onchange="filterInputChange('series-title')"></select>
-      </li>
-      <li>
-        <label>Year:</label> From <select id="year-from-select" onchange="filterInputChange('year-from')"></select> To
-        <select id="year-to-select" onchange="filterInputChange('year-to')"></select>
-      </li>
-      <li>
-        <label>Tag1:</label> <select id="tag1-select" onchange="filterInputChange('tag1')"></select>
-      </li>
-      <li> Status: <span>
-          <input type="checkbox" id="checkbox_primary" name="checkbox_primary" onchange="filterInputChange('status')" />
-          <label for="checkbox_primary">Primary</label>
-        </span>
-        <span>
-          <input type="checkbox" id="checkbox_secondary" name="checkbox_secondary"
-            onchange="filterInputChange('status')" />
-          <label for="checkbox_secondary">Secondary</label>
-        </span>
-      </li>
-      <li>
-        <label>Sort By:</label> <select id="sort-by-select" onchange="filterInputChange('sort-by')"></select>
-      </li>
-      <li>
-        <label>Keywords:</label> <input type="text" id="keywords-input" name="keywords-input" size="20"
-          onchange="filterInputChange('keywords')" />
-      </li>
-    </ul>
-    <button>Search</button>
-    <button onclick="resetFilter()">Reset</button>
-  </fieldset>
 
   <fieldset>
     <legend>View Setting</legend>

@@ -111,7 +111,7 @@ export class DOIFilterStandardRender {
 
         const optionalIconSpan = article.querySelector('.optional-icon-span');
         if (optionalIconSpan && optionalIconSpan instanceof HTMLSpanElement) {
-            optionalIconSpan.innerHTML = "";
+            optionalIconSpan.replaceChildren();
             var containerDOI = doiInfo.container_DOI;
             var containerDOIID = doiInfoCollection.getIDByDOI(containerDOI);
 
@@ -309,14 +309,14 @@ export class DOIFilterStandardRender {
     }
 
 
-    public static render(foundRecordIDs: number[], doiIndex: number, doiCount: number, doiInfoCollection: DOIRecordCollection) {
+    public static render(foundRecordIDs: number[], doiIndex: number, doiInfoCollection: DOIRecordCollection) {
 
         const outputDiv = document.getElementById("output");
         if (!outputDiv) {
             return;
         }
 
-        outputDiv.innerHTML = "";
+        outputDiv.replaceChildren();
 
         if (foundRecordIDs.length == 0) {
             outputDiv.innerHTML = "<p>No articles found.</p>";

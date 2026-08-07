@@ -1,7 +1,5 @@
 import { SearchResultViewSettings } from "../../doi_filter/search_result_view_settings";
 import { ViewModeType } from "../../doi_filter/search_result_view_settings";
-import { SummaryInfo } from "../../doi_filter/summary_info";
-import { setRadioBoxes } from "./primary_search_filter_render";
 
 function getMaxPageNumber(viewSetting: SearchResultViewSettings, foundRecordCount: number): number {
     if(foundRecordCount == 0){
@@ -14,7 +12,7 @@ function getMaxPageNumber(viewSetting: SearchResultViewSettings, foundRecordCoun
 function setModeSelectHTMLElement(selectedValue: ViewModeType) {
     const viewModeList = ["article_list", "container_title_list", "series_title_list", "group_render"];
     const viewModeValues = ["article_list", "container_title_list", "series_title_list", "group_render"];
-    setRadioBoxes("view-mode-list-div", "view-mode-template", selectedValue, viewModeList, viewModeValues);
+    //setRadioBoxes("view-mode-list-div", "view-mode-template", selectedValue, viewModeList, viewModeValues);
 
     /*
 
