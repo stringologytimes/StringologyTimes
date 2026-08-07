@@ -43,26 +43,26 @@ export class URLProcessor {
 
         }
 
-        const ancestorDOI : string | null = url.searchParams.get("ancestor-doi");
+        const ancestorDOI : string | null = url.searchParams.get("psf-ancestor-doi");
         if(ancestorDOI != null) {
             primarySearchFilter.ancestorDoi = ancestorDOI;
         }
 
-        const topContainerType : string | null = url.searchParams.get("top-container-type");
+        const topContainerType : string | null = url.searchParams.get("psf-top-container-type");
         if(topContainerType != null) {
             primarySearchFilter.topContainerType = topContainerType;
         }
 
-        const minimumYear : string | null = url.searchParams.get("psf-year-from");
+        const minimumYear : string | null = url.searchParams.get("psf-minimum-year");
         if(minimumYear != null) {
             primarySearchFilter.minimumYear = parseInt(minimumYear);
         }
-        const maximumYear : string | null = url.searchParams.get("psf-year-to");
+        const maximumYear : string | null = url.searchParams.get("psf-maximum-year");
         if(maximumYear != null) {
             primarySearchFilter.maximumYear = parseInt(maximumYear);
         }
 
-        const excludeStatus : string[] | null = url.searchParams.getAll("exclude-status");
+        const excludeStatus : string[] | null = url.searchParams.getAll("psf-excluded-status");
         if(excludeStatus != null) {
             excludeStatus.forEach(status => {
                 if(status == "primary") {

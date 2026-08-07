@@ -4,6 +4,7 @@ import { DOIStatus } from "./doi_record";
 import { PrimarySearchFilterRender } from "./render/settings/primary_search_filter_render";
 import { URLProcessor } from "./url_processor";
 import { ContainerDOIFieldsetFunctions } from "./render/settings/fieldset/container_doi_fieldset_functions";
+import { SearchFilterBoxFunctions } from "./render/settings/fieldset/search_filter_box_functions";
 
 export function updatePaginationControls(browserInfo: BrowserInfo) {
   /*
@@ -51,7 +52,8 @@ export function clickPrimarySearchFilterButton(browserInfo: BrowserInfo) {
   if(browserInfo.doiInfoCollection == null) {
     throw new Error("doiInfoCollection is null");
   }else{
-    PrimarySearchFilterRender.setURLParameters(browserInfo.doiInfoCollection);
+    const newParameters = SearchFilterBoxFunctions.convertInputToURLParameters(true);
+    SearchFilterBoxFunctions.setURLParameters(true, newParameters);
   }
 }
 

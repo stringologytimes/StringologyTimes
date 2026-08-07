@@ -253,10 +253,10 @@ export class SearchFilter {
         const r: [string, string][] = [];
 
         if(this.minimumYear != null){
-            r.push([prefix + "minimum_year", this.minimumYear.toString()]);
+            r.push([prefix + "minimum-year", this.minimumYear.toString()]);
         }
         if(this.maximumYear != null){
-            r.push([prefix + "maximum_year", this.maximumYear.toString()]);
+            r.push([prefix + "maximum-year", this.maximumYear.toString()]);
         }
         if(this.types.length > 0){
             const containContainerTypeAll = containerTypeList.every(type => this.types.includes(type));
@@ -306,19 +306,19 @@ export class SearchFilter {
             });
         }
         if(this.ancestorDoi != null){
-            r.push([prefix + "ancestor_doi", this.ancestorDoi]);
+            r.push([prefix + "ancestor-doi", this.ancestorDoi]);
         }
         if(this.topContainerType != null){
-            r.push([prefix + "top_container_type", this.topContainerType]);
+            r.push([prefix + "top-container-type", this.topContainerType]);
         }
         if(this.doiReferences.length > 0){
             this.doiReferences.forEach(doiReference => {
-                r.push([prefix + "doiReference", doiReference]);
+                r.push([prefix + "doi-reference", doiReference]);
             });
         }
         if(this.excludeStatus.length > 0){
             this.excludeStatus.forEach(excludeStatus => {
-                r.push([prefix + "excludeStatus", excludeStatus]);
+                r.push([prefix + "excluded-status", excludeStatus]);
             });
         }
         if(this.keywords.length > 0){
@@ -355,9 +355,9 @@ export class SearchFilter {
         for(let i = 0; i < urlParameters.length; i++){
             const key = urlParameters[i][0];
             const value = urlParameters[i][1];
-            if(key == prefix + "minimum_year"){
+            if(key == prefix + "minimum-year"){
                 r.minimumYear = parseInt(value);
-            }else if(key == prefix + "maximum_year"){
+            }else if(key == prefix + "maximum-year"){
                 r.maximumYear = parseInt(value);
             }else if(key == prefix + "type"){
                 typeCounter++;
@@ -380,13 +380,13 @@ export class SearchFilter {
                 r.authors.push(value);
             }else if(key == prefix + "tag"){
                 r.tags.push(value);
-            }else if(key == prefix + "ancestor_doi"){
+            }else if(key == prefix + "ancestor-doi"){
                 r.ancestorDoi = value;
-            }else if(key == prefix + "top_container_type"){
+            }else if(key == prefix + "top-container-type"){
                 r.topContainerType = value;
-            }else if(key == prefix + "doiReference"){
+            }else if(key == prefix + "doi-reference"){
                 r.doiReferences.push(value);
-            }else if(key == prefix + "excludeStatus"){
+            }else if(key == prefix + "excluded-status"){
                 r.excludeStatus.push(value as DOIStatus);
             }else if(key == prefix + "keyword"){
                 r.keywords.push(value);

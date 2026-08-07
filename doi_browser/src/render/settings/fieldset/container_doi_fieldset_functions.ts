@@ -190,6 +190,26 @@ export class ContainerDOIFieldsetFunctions {
         return selectedValue;
     }
 
+    public static convertInputToURLParameters(isPrimaryFilter: boolean): [string, string][] {
+        const prefix = isPrimaryFilter ? "psf-" : "ssf-";
+        const r: [string, string][] = [];
+        const subContainerDOI = this.getSubContainerDOI(isPrimaryFilter);
+        if (subContainerDOI != null) {
+            r.push([prefix + "ancestor-doi", subContainerDOI]);
+        }else{
+            const topContainerDOI = this.getTopContainerDOI(isPrimaryFilter);
+            if (topContainerDOI != null) {
+                r.push([prefix + "ancestor-doi", topContainerDOI]);
+            }else{
+                const topContainerType = this.getTopContainerType(isPrimaryFilter);
+                if (topContainerType != null) {
+                    r.push([prefix + "top-container-type", topContainerType]);
+                }        
+            } 
+        }
+        return r;
+    }
+
 
 
 }

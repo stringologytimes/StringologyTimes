@@ -38,5 +38,15 @@ export class RankFieldsetFunctions {
         }
         return excludedStatus;
       }
+
+      public static convertInputToURLParameters(isPrimaryFilter: boolean): [string, string][] {
+        const prefix = isPrimaryFilter ? "psf-" : "ssf-";
+        const r: [string, string][] = [];
+        const excludedStatus = this.getExcludedStatus(isPrimaryFilter);
+        excludedStatus.forEach(status => {
+          r.push([prefix + "excluded-status", status]);
+        });
+        return r;
+      }
     
 }

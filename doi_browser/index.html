@@ -101,7 +101,7 @@
     </div>
   </div>
   <h1>Article Info Browser</h1>
-  <details open class="psf-main-div">
+  <details open class="psf-main-div" id="psf-main">
     <summary>Primary Search Filter</summary>
     <fieldset id="psf-record-types-fieldset">
       <legend>Record Type</legend>
@@ -132,8 +132,8 @@
     </fieldset>
     <fieldset>
       <legend>Publication Year</legend>
-      From <select id="psf-year-from-select"></select>
-      To <select id="psf-year-to-select"></select>
+      From <select id="psf-minimum-year-select"></select>
+      To <select id="psf-maximum-year-select"></select>
     </fieldset>
     <fieldset>
       <legend>Record Type</legend>
@@ -151,7 +151,7 @@
     <button>Reset</button>
   </details>
 
-  <details open class="ssf-main-div">
+  <details open class="ssf-main-div" id="ssf-main">
     <summary>Secondary Search Filter</summary>
     <fieldset id="ssf-record-types-fieldset">
       <legend>Record Type</legend>
@@ -182,8 +182,8 @@
     </fieldset>
     <fieldset id="ssf-year-fieldset">
       <legend>Publication Year</legend>
-      From <select id="ssf-year-from-select"></select>
-      To <select id="ssf-year-to-select"></select>
+      From <select id="ssf-minimum-year-select"></select>
+      To <select id="ssf-maximum-year-select"></select>
     </fieldset>
     <fieldset>
       <legend>Record Type</legend>

@@ -10,17 +10,19 @@ import { SecondarySearchFilterRender } from "./render/settings/secondary_search_
 import { hideLoading, showLoading, yieldForPaint } from "./loading_overlay";
 import { FoundRecordSummary } from "./doi_filter/found_record_summary";
 import { SearchResultViewSettings } from "./doi_filter/search_result_view_settings";
+import { AnyContainerType, AnyPaperType, AnyOtherType } from "./doi_record";
 
 
 export class BrowserInfo {
     public doiInfoCollection: DOIRecordCollection | null = null;
-    public primarySearchFilter : SearchFilter | null = null;
-    public primaryResultIDs : number[] = [];
-    public primaryResultSummary : FoundRecordSummary = new FoundRecordSummary();
+    public primarySearchFilter : SearchFilter = new SearchFilter();
+    public primaryResultCache: Map<string, number[]> = new Map();
+    public primaryResultSummaryCache: Map<string, FoundRecordSummary> = new Map();
 
-    public secondarySearchFilter : SearchFilter | null = null;
-    public secondaryResultIDs : number[] = [];
-    public secondaryResultSummary : FoundRecordSummary = new FoundRecordSummary();
+    public secondarySearchFilter : SearchFilter = new SearchFilter();
+    public sortBy: string = "";
+    public finalResultCache: Map<string, number[]> = new Map();
+    public finalResultSummaryCache: Map<string, FoundRecordSummary> = new Map();
 
     public viewSetting : SearchResultViewSettings = new SearchResultViewSettings();
 
@@ -73,17 +75,17 @@ export class BrowserInfo {
             }else{
                 var result : string[] = [];
                 types.forEach(type => {
-                    if(type == "Container-Any"){
+                    if(type == AnyContainerType){
                         containerTypeList.forEach(type => {
                             result.push(type);
                         });
-                    }else if(type == "Paper-Any"){
+                    }else if(type == AnyPaperType){
                         paperTypeList.forEach(type => {
                             result.push(type);
                         });
                     }
-                    else if(type == "Other-Any"){
-                        throw new Error("Other-Any is not supported");
+                    else if(type == AnyOtherType){
+                        throw new Error("Any Other is not supported");
                     }
                     else{
                         result.push(type);
@@ -198,6 +200,17 @@ export class BrowserInfo {
             console.log(key + "/" + a.getHash() + "/" + b.doiIDs.length);
         });
         */
+    }
+
+    public reflectURLParameters(): void {
+        /*
+        const urlParams = new URLSearchParams(window.location.search);
+        const entries : [string, string][] = [...urlParams.entries()];
+        const _sortBy = urlParams.get("sort_by") ?? "";
+        const _primaryFilter = SearchFilter.buildFromURLParameters(true, entries);
+        const _secondaryFilter = SearchFilter.buildFromURLParameters(false, entries);
+        */
+
     }
 
     public async render(PrimarySearchFilter: SearchFilter): Promise<void> {

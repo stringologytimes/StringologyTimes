@@ -161,4 +161,14 @@ export class RecordTypeFieldsetFunctions {
           return [...checkedContainerTypes, ...checkedPaperTypes, ...checkedOtherTypes];
         }
       }
+
+      public static convertInputToURLParameters(isPrimaryFilter: boolean): [string, string][] {
+        const prefix = isPrimaryFilter ? "psf-" : "ssf-";
+        const r: [string, string][] = [];
+        const checkedTypes = this.getCheckedTypes(isPrimaryFilter);
+        checkedTypes.forEach(type => {
+          r.push([prefix + "type", type]);
+        });
+        return r;
+      }
 }

@@ -2,13 +2,13 @@ export class YearFieldsetFunctions {
 
     public static initializeYearBox(is_primary_filter: boolean, year_to_id_count_mapper: Map<number, number>, unknown_year_id_count: number) {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
-        const yearFromSelect = document.getElementById(`${id_prefix}-year-from-select`) as HTMLElement;
+        const yearFromSelect = document.getElementById(`${id_prefix}-minimum-year-select`) as HTMLElement;
         if (yearFromSelect == null) {
-            throw new Error(`${id_prefix}-year-from-select is not found`);
+            throw new Error(`${id_prefix}-minimum-year-select is not found`);
         }
-        const yearToSelect = document.getElementById(`${id_prefix}-year-to-select`) as HTMLElement;
+        const yearToSelect = document.getElementById(`${id_prefix}-maximum-year-select`) as HTMLElement;
         if (yearToSelect == null) {
-            throw new Error(`${id_prefix}-year-to-select is not found`);
+            throw new Error(`${id_prefix}-maximum-year-select is not found`);
         }
         yearFromSelect.replaceChildren();
         yearToSelect.replaceChildren();
@@ -73,9 +73,9 @@ export class YearFieldsetFunctions {
 
     public static getYearFrom(is_primary_filter: boolean): string | null {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
-        const yearFromSelect: HTMLSelectElement = document.getElementById(`${id_prefix}-year-from-select`) as HTMLSelectElement;
+        const yearFromSelect: HTMLSelectElement = document.getElementById(`${id_prefix}-minimum-year-select`) as HTMLSelectElement;
         if (yearFromSelect == null) {
-            throw new Error(`${id_prefix}-year-from-select is not found`);
+            throw new Error(`${id_prefix}-minimum-year-select is not found`);
         }
         const selectedValue = yearFromSelect.value;
         if (selectedValue == "Any") {
@@ -86,15 +86,29 @@ export class YearFieldsetFunctions {
 
     public static getYearTo(is_primary_filter: boolean): string | null {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
-        const yearToSelect: HTMLSelectElement = document.getElementById(`${id_prefix}-year-to-select`) as HTMLSelectElement;
+        const yearToSelect: HTMLSelectElement = document.getElementById(`${id_prefix}-maximum-year-select`) as HTMLSelectElement;
         if (yearToSelect == null) {
-            throw new Error(`${id_prefix}-year-to-select is not found`);
+            throw new Error(`${id_prefix}-maximum-year-select is not found`);
         }
         const selectedValue = yearToSelect.value;
         if (selectedValue == "Any") {
             return null;
         }
         return selectedValue;
+    }
+
+    public static convertInputToURLParameters(isPrimaryFilter: boolean): [string, string][] {
+        const prefix = isPrimaryFilter ? "psf-" : "ssf-";
+        const r: [string, string][] = [];
+        const yearFrom = this.getYearFrom(isPrimaryFilter);
+        if (yearFrom != null) {
+            r.push([prefix + "minimum-year", yearFrom]);
+        }
+        const yearTo = this.getYearTo(isPrimaryFilter);
+        if (yearTo != null) {
+            r.push([prefix + "maximum-year", yearTo]);
+        }
+        return r;
     }
 
 }
