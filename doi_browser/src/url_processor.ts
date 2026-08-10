@@ -5,11 +5,12 @@ import { AnyContainerType, AnyPaperType, AnyOtherType } from "./doi_record";
 export class URLProcessor {
 
 
-    public static buildPrimarySearchFilterFromURL() : SearchFilter {
+    public static buildSearchFilterFromURL(isPrimaryFilter: boolean) : SearchFilter {
+        const idPrefix = isPrimaryFilter ? "psf-" : "ssf-";
         const url = new URL(window.location.href);
         const primarySearchFilter = new SearchFilter();
 
-        const types : string[] | null = url.searchParams.getAll("psf-type");
+        const types : string[] | null = url.searchParams.getAll(idPrefix + "type");
         if(types != null) {
             if(types.length == 0) {
                 containerTypeList.concat(paperTypeList).concat(otherTypeList).forEach(type => {
@@ -43,26 +44,32 @@ export class URLProcessor {
 
         }
 
-        const ancestorDOI : string | null = url.searchParams.get("psf-ancestor-doi");
-        if(ancestorDOI != null) {
-            primarySearchFilter.ancestorDoi = ancestorDOI;
-        }
 
-        const topContainerType : string | null = url.searchParams.get("psf-top-container-type");
+        const topContainerType : string | null = url.searchParams.get(idPrefix + "top-container-type");
         if(topContainerType != null) {
             primarySearchFilter.topContainerType = topContainerType;
         }
 
-        const minimumYear : string | null = url.searchParams.get("psf-minimum-year");
+        const topContainerDOI : string | null = url.searchParams.get(idPrefix + "top-container-doi");
+        if(topContainerDOI != null) {
+            primarySearchFilter.topContainerDOI = topContainerDOI;
+        }
+
+        const subContainerDOI : string | null = url.searchParams.get(idPrefix + "sub-container-doi");
+        if(subContainerDOI != null) {
+            primarySearchFilter.subContainerDOI = subContainerDOI;
+        }
+
+        const minimumYear : string | null = url.searchParams.get(idPrefix + "minimum-year");
         if(minimumYear != null) {
             primarySearchFilter.minimumYear = parseInt(minimumYear);
         }
-        const maximumYear : string | null = url.searchParams.get("psf-maximum-year");
+        const maximumYear : string | null = url.searchParams.get(idPrefix + "maximum-year");
         if(maximumYear != null) {
             primarySearchFilter.maximumYear = parseInt(maximumYear);
         }
 
-        const excludeStatus : string[] | null = url.searchParams.getAll("psf-excluded-status");
+        const excludeStatus : string[] | null = url.searchParams.getAll(idPrefix + "excluded-status");
         if(excludeStatus != null) {
             excludeStatus.forEach(status => {
                 if(status == "primary") {

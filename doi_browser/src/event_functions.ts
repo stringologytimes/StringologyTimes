@@ -1,7 +1,7 @@
 
 import { BrowserInfo } from "./browser_info";
-import { DOIStatus } from "./doi_record";
-import { PrimarySearchFilterRender } from "./render/settings/primary_search_filter_render";
+//import { DOIStatus } from "./doi_record";
+//import { PrimarySearchFilterRender } from "./render/settings/primary_search_filter_render";
 import { URLProcessor } from "./url_processor";
 import { ContainerDOIFieldsetFunctions } from "./render/settings/fieldset/container_doi_fieldset_functions";
 import { SearchFilterBoxFunctions } from "./render/settings/fieldset/search_filter_box_functions";
@@ -36,160 +36,49 @@ export function updatePaginationControls(browserInfo: BrowserInfo) {
     */
 }
 
+/*
 export async function process(browserInfo: BrowserInfo) {
-  const url = new URL(window.location.href);
-  const primarySearchFilter = URLProcessor.buildPrimarySearchFilterFromURL();
-
-  
-
-
-  //browserInfo.processURLParameters();
-  //browserInfo.processCurrentDOIFilterInput();
-  await browserInfo.render(primarySearchFilter);
 }
+*/
 
-export function clickPrimarySearchFilterButton(browserInfo: BrowserInfo) {
+/*
+export async function buildFromURLParameters(browserInfo: BrowserInfo){
   if(browserInfo.doiInfoCollection == null) {
     throw new Error("doiInfoCollection is null");
   }else{
-    const newParameters = SearchFilterBoxFunctions.convertInputToURLParameters(true);
-    SearchFilterBoxFunctions.setURLParameters(true, newParameters);
+    const primarySearchFilter = URLProcessor.buildSearchFilterFromURL(true);
+    //SearchFilterBoxFunctions.setURLParameters(true, primarySearchFilter);
+
+
+    throw new Error("not implemented");  
   }
+}
+*/
+
+
+export async function clickPrimarySearchFilterButton(browserInfo: BrowserInfo) {
+  await browserInfo.rebuildByChangingPrimarySearchFilterBox();
 }
 
 export function primarySearchFilterChange(inputElementName: string, browserInfo: BrowserInfo) {
-  if(browserInfo.doiInfoCollection == null) {
+  if (browserInfo.doiInfoCollection == null) {
     throw new Error("doiInfoCollection is null");
-  }else{
-    console.log("primarySearchFilterChange/" + inputElementName);
+  } else {
     if (inputElementName == "psf-top-container-type") {
       const selectedTopContainerType = (document.getElementById("psf-top-container-type-select") as HTMLSelectElement).value;
-      ContainerDOIFieldsetFunctions.selectTopContainerTypeBox(true, selectedTopContainerType, browserInfo.doiInfoCollection, false, browserInfo.doiInfoCollection.recordSummary.idToPrimaryRecordCountMapper, browserInfo.doiInfoCollection.recordSummary.idToSecondaryRecordCountMapper);
+      const v = selectedTopContainerType == "Any" ? null : selectedTopContainerType;
+      ContainerDOIFieldsetFunctions.selectTopContainerTypeBox(true, v, null, false, browserInfo.doiInfoCollection.recordSummary.idToPrimaryRecordCountMapper, browserInfo.doiInfoCollection.recordSummary.idToSecondaryRecordCountMapper, browserInfo.doiInfoCollection);
     }
     else if (inputElementName == "psf-top-container") {
-      const selectedTopContainer = (document.getElementById("psf-top-container-select") as HTMLSelectElement).value;      
-      ContainerDOIFieldsetFunctions.selectTopContainerBox(true, selectedTopContainer, browserInfo.doiInfoCollection, false, browserInfo.doiInfoCollection.recordSummary.idToPrimaryRecordCountMapper, browserInfo.doiInfoCollection.recordSummary.idToSecondaryRecordCountMapper);
+      const selectedTopContainer = (document.getElementById("psf-top-container-select") as HTMLSelectElement).value;
+      const v = selectedTopContainer == "Any" ? null : selectedTopContainer;
+      ContainerDOIFieldsetFunctions.selectTopContainerBox(true, v, null, browserInfo.doiInfoCollection, false, browserInfo.doiInfoCollection.recordSummary.idToPrimaryRecordCountMapper, browserInfo.doiInfoCollection.recordSummary.idToSecondaryRecordCountMapper);
     }
   }
-
-
 }
 
-export function filterInputChange(inputElementName: string, browserInfo: BrowserInfo) {
-  const url = new URL(window.location.href);
-
-  /*
-  
-  if (inputElementName == "type") {
-    const selectedTypeValues = getSelectedTypeValues();
-    console.log("selectedTypeValues", selectedTypeValues);
-
-
-    const existingTypes = url.searchParams.getAll("type");
-    const removedTypesSet = new Set(existingTypes);
-
-    selectedTypeValues.forEach(type => {
-      if(existingTypes.includes(type)){
-        removedTypesSet.delete(type);
-      }else{
-        url.searchParams.append("type", type);
-      }
-    });
-
-    removedTypesSet.forEach(type => {
-      url.searchParams.delete("type", type);
-    });
-  }
-  else if (inputElementName == "container-title") {
-    const containerTitle = (document.getElementById("container-title-select") as HTMLSelectElement).value;
-    if (containerTitle == "dont-care") {
-      //browserInfo.currentDOIFilter.query.container_title = null;
-      url.searchParams.delete("container_title");
-    } else {
-      //browserInfo.currentDOIFilter.query.container_title = containerTitle;
-      url.searchParams.set("container_title", containerTitle);
-    }
-  }
-  else if (inputElementName == "series-title") {
-    const seriesTitle = (document.getElementById("series-title-select") as HTMLSelectElement).value;
-    if (seriesTitle == "dont-care") {
-      url.searchParams.delete("series_title");
-    } else {
-      url.searchParams.set("series_title", seriesTitle);
-    }
-  }
-  else if (inputElementName == "year-from") {
-    const yearFrom = (document.getElementById("year-from-select") as HTMLSelectElement).value;
-    if (yearFrom == "dont-care") {
-      //browserInfo.currentDOIFilter.query.minimum_year = null;
-      url.searchParams.delete("minimum_year");
-    } else {
-      //browserInfo.currentDOIFilter.query.minimum_year = parseInt(yearFrom);
-      url.searchParams.set("minimum_year", yearFrom);
-    }
-  }
-  else if (inputElementName == "year-to") {
-    const yearTo = (document.getElementById("year-to-select") as HTMLSelectElement).value;
-    if (yearTo == "dont-care") {
-      //browserInfo.currentDOIFilter.query.maximum_year = null;
-      url.searchParams.delete("maximum_year");
-    } else {
-      //browserInfo.currentDOIFilter.query.maximum_year = parseInt(yearTo);
-      url.searchParams.set("maximum_year", yearTo);
-    }
-  }
-  else if (inputElementName == "sort-by") {
-    const sortBy = (document.getElementById("sort-by-select") as HTMLSelectElement).value;
-    if (sortBy == "dont-care") {
-      //browserInfo.currentDOIFilter.query.sortBy = "unordered";
-      url.searchParams.delete("sort_by");
-    } else {
-      //browserInfo.currentDOIFilter.query.sortBy = sortBy as SortByType;
-      url.searchParams.set("sort_by", sortBy);
-    }
-  }
-  else if (inputElementName == "tag") {
-    const tag1 = (document.getElementById("tag1-select") as HTMLSelectElement).value;
-    url.searchParams.delete("tag");
-    if (tag1 != "dont-care") {
-      url.searchParams.append("tag", tag1);
-
-      //browserInfo.currentDOIFilter.query.tags = [];
-    }
-  }
-  else if (inputElementName == "status") {
-    const checkboxPrimary = (document.getElementById("checkbox_primary") as HTMLInputElement).checked;
-    const checkboxSecondary = (document.getElementById("checkbox_secondary") as HTMLInputElement).checked;
-
-    console.log("checkboxPrimary", checkboxPrimary);
-    console.log("checkboxSecondary", checkboxSecondary);
-    var excludeStatus: DOIStatus[] = [];
-    if (!checkboxPrimary) {
-      excludeStatus.push("primary");
-    }
-    if (!checkboxSecondary) {
-      excludeStatus.push("secondary");
-    }
-
-    url.searchParams.delete("exclude_status");
-    excludeStatus.forEach(status => {
-      url.searchParams.append("exclude_status", status);
-    });
-  //browserInfo.currentDOIFilter.query.excludeStatus = excludeStatus;
-  }
-  else if (inputElementName == "keywords") {
-    const keyword = (document.getElementById("keywords-input") as HTMLInputElement).value;
-    url.searchParams.set("keyword", keyword);
-  }
-  else {
-
-  }
-  url.searchParams.set("page_number", "0");
-  //browserInfo.currentDOIFilter.viewSetting.pageNumber = 0;
-  history.pushState({}, "", url);
-
-  void process(browserInfo);
-  */
+export async function secondarySearchFilterChange(inputElementName: string, browserInfo: BrowserInfo) {
+  await browserInfo.rebuildByChangingSecondarySearchFilterBox();
 }
 
 export function ViewSettingInputChange(inputElementName: string, browserInfo: BrowserInfo) {
@@ -214,6 +103,6 @@ export function ViewSettingInputChange(inputElementName: string, browserInfo: Br
     url.searchParams.set("page_size", pageSize);
   }
   history.pushState({}, "", url);
-  void process(browserInfo);
+  //void process(browserInfo);
 }
 

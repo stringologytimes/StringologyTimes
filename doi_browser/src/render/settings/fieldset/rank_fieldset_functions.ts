@@ -1,6 +1,20 @@
 export class RankFieldsetFunctions {
-    public static updateRankBox(is_primary_filter: boolean, primary_record_count: number, secondary_record_count: number) {
+    public static updateRankBox(is_primary_filter: boolean, primary_record_count: number, secondary_record_count: number, excludedStatus: string[]) {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
+
+        const primaryRecordCheckbox: HTMLInputElement = document.getElementById(`${id_prefix}-primary-record-checkbox`) as HTMLInputElement;
+        if (primaryRecordCheckbox == null) {
+          throw new Error(`${id_prefix}-primary-record-checkbox is not found`);
+        }
+        primaryRecordCheckbox.checked = !excludedStatus.includes("primary");
+
+        const secondaryRecordCheckbox: HTMLInputElement = document.getElementById(`${id_prefix}-secondary-record-checkbox`) as HTMLInputElement;
+        if (secondaryRecordCheckbox == null) {
+          throw new Error(`${id_prefix}-secondary-record-checkbox is not found`);
+        }
+        secondaryRecordCheckbox.checked = !excludedStatus.includes("secondary");
+
+
         const primaryRecordLabel = document.getElementById(`${id_prefix}-primary-record-label`) as HTMLElement;
         if (primaryRecordLabel == null) {
             throw new Error(`${id_prefix}-primary-record-label is not found`);

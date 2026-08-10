@@ -1,6 +1,8 @@
 export class YearFieldsetFunctions {
 
-    public static initializeYearBox(is_primary_filter: boolean, year_to_id_count_mapper: Map<number, number>, unknown_year_id_count: number) {
+    public static initializeYearBox(is_primary_filter: boolean, year_to_id_count_mapper: Map<number, number>, unknown_year_id_count: number
+        , yearFrom: number | null, yearTo: number | null
+    ) {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
         const yearFromSelect = document.getElementById(`${id_prefix}-minimum-year-select`) as HTMLElement;
         if (yearFromSelect == null) {

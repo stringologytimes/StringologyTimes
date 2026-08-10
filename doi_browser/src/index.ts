@@ -10,19 +10,6 @@ let browserInfo = new BrowserInfo();
 
 console.log("index.ts loaded");
 
-
-
-
-
-/*
-function setFoundDOIList(list: any[]) {
-  browserInfo.foundDOIList = list;
-  browserInfo.pageNumber = 0; // 検索結果が変わったら最初のページに戻る
-  Render.render(browserInfo);
-  EventFunctions.updatePaginationControls(browserInfo);
-}
-*/
-
 function goToPage(pageNumber: number) {
   /*
   browserInfo.currentDOIFilter.viewSetting.pageNumber = pageNumber;
@@ -44,40 +31,20 @@ async function initialize() {
 }
 
 
-// ボタンのイベントリスナーを設定
-function setupButtons() {
-  /*
-  const renderAllButton = document.getElementById('renderAllButton');
-  if (renderAllButton) {
-    renderAllButton.addEventListener('click', () => {
-      Render.renderAll(browserInfo);
-      EventFunctions.updatePaginationControls(browserInfo);
-    });
-  }
 
-  const prevButton = document.getElementById('prevPageButton');
-  if (prevButton) {
-    prevButton.addEventListener('click', goToPreviousPage);
-  }
-
-  const nextButton = document.getElementById('nextPageButton');
-  if (nextButton) {
-    nextButton.addEventListener('click', goToNextPage);
-  }
-  */
+async function primarySearchFilterChange(inputElementName: string) {
+  await EventFunctions.primarySearchFilterChange(inputElementName, browserInfo);
+}
+async function secondarySearchFilterChange(inputElementName: string) {
+  console.log("secondarySearchFilterChange: " + inputElementName);
+  await EventFunctions.secondarySearchFilterChange(inputElementName, browserInfo);
 }
 
-function filterInputChange(inputElementName: string) {
-  EventFunctions.filterInputChange(inputElementName, browserInfo);
-}
 
-function primarySearchFilterChange(inputElementName: string) {
-  EventFunctions.primarySearchFilterChange(inputElementName, browserInfo);
-}
 
 async function clickPrimarySearchFilterButton(){
   EventFunctions.clickPrimarySearchFilterButton(browserInfo);
-  await EventFunctions.process(browserInfo);
+  //await EventFunctions.process(browserInfo);
 }
 
 function viewSettingInputChange(inputElementName: string) {
@@ -94,6 +61,7 @@ function containerTitleLiElementClick(containerTitle: string) {
   */
 }
 
+/*
 function resetFilter() {
   const url = new URL(window.location.href);
   url.search = "";
@@ -130,18 +98,20 @@ function initializeParameter(parameterList: [string, string][]) {
   history.pushState({}, "", url);
   void EventFunctions.process(browserInfo);
 }
+*/
 
 
 
 // グローバルスコープに公開（onchange属性からアクセスできるようにする）
-(window as any).filterInputChange = filterInputChange;
+//(window as any).filterInputChange = filterInputChange;
 (window as any).primarySearchFilterChange = primarySearchFilterChange;
-(window as any).resetFilter = resetFilter;
+(window as any).secondarySearchFilterChange = secondarySearchFilterChange;
+//(window as any).resetFilter = resetFilter;
 (window as any).viewSettingInputChange = viewSettingInputChange;
 (window as any).containerTitleLiElementClick = containerTitleLiElementClick;
-(window as any).changeParameter = changeParameter;
-(window as any).changeParameters = changeParameters;
-(window as any).initializeParameter = initializeParameter;
+//(window as any).changeParameter = changeParameter;
+//(window as any).changeParameters = changeParameters;
+//(window as any).initializeParameter = initializeParameter;
 (window as any).clickPrimarySearchFilterButton = clickPrimarySearchFilterButton;
 
 async function domFinished() {
@@ -151,17 +121,22 @@ async function domFinished() {
     await initialize();
     browserInfo.initialize(browserInfo.doiInfoCollection!);
 
+    
+    /*
     window.addEventListener("popstate", (_event) => {
-      void EventFunctions.process(browserInfo);
+      void EventFunctions.buildFromURLParameters(browserInfo);
     });
+    */
+  
 
-    setupButtons();
+    //setupButtons();
+
   } finally {
     hideLoading();
   }
 
   // コレクションのロード直後にも実行（検索中は Searching... オーバーレイを表示）
-  await EventFunctions.process(browserInfo);
+  //await EventFunctions.buildFromURLParameters(browserInfo);
 }
 document.addEventListener('DOMContentLoaded', domFinished);
 

@@ -2,7 +2,7 @@ import { containerTypeList, otherTypeList, paperTypeList, topContainerTypeList }
 import { AnyContainerType, AnyPaperType, AnyOtherType } from "../../../doi_record";
 
 export class RecordTypeFieldsetFunctions {
-    public static initializeRecordTypes(is_primary_filter: boolean, type_to_id_count_mapper: Map<string, number>) {
+    public static initializeRecordTypes(is_primary_filter: boolean, type_to_id_count_mapper: Map<string, number>, checkedTypes: string[]) {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
 
 
@@ -28,8 +28,13 @@ export class RecordTypeFieldsetFunctions {
                 const checkbox = document.createElement("input");
                 checkbox.type = "checkbox";
                 checkbox.id = `${id_prefix}-checkbox_${type}`;
-                checkbox.value = type;
-                checkbox.checked = true;
+                checkbox.value = type;                
+                checkbox.checked = checkedTypes.includes(type);
+                if(!is_primary_filter){
+                  checkbox.onchange = (event) => {
+                    (window as any).secondarySearchFilterChange("ssf-record-types-fieldset");
+                  }
+                }
 
                 const count = type_to_id_count_mapper.get(type)!;
                 const label = document.createElement("label");
@@ -47,7 +52,12 @@ export class RecordTypeFieldsetFunctions {
                 checkbox.type = "checkbox";
                 checkbox.id = `${id_prefix}-checkbox_${type}`;
                 checkbox.value = type;
-                checkbox.checked = true;
+                checkbox.checked = checkedTypes.includes(type);
+                if(!is_primary_filter){
+                  checkbox.onchange = (event) => {
+                    (window as any).secondarySearchFilterChange("ssf-record-types-fieldset");
+                  }
+                }
 
                 const count = type_to_id_count_mapper.get(type)!;
                 const label = document.createElement("label");
@@ -65,7 +75,12 @@ export class RecordTypeFieldsetFunctions {
                 checkbox.type = "checkbox";
                 checkbox.id = `${id_prefix}-checkbox_${type}`;
                 checkbox.value = type;
-                checkbox.checked = true;
+                checkbox.checked = checkedTypes.includes(type);
+                if(!is_primary_filter){
+                  checkbox.onchange = (event) => {
+                    (window as any).secondarySearchFilterChange("ssf-record-types-fieldset");
+                  }
+                }
 
                 const count = type_to_id_count_mapper.get(type)!;
                 const label = document.createElement("label");

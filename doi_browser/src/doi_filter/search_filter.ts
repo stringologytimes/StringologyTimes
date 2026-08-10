@@ -14,17 +14,25 @@ export class SearchFilter {
     public types: string[] = [];
     public authors: string[] = [];
     public tags: string[] = [];
-    public ancestorDoi: string | null = null;
+    //public ancestorDoi: string | null = null;
+
     public topContainerType: string | null = null;
+    public topContainerDOI: string | null = null;
+    public subContainerDOI: string | null = null;
+
     public doiReferences: string[] = [];    
     public excludeStatus: DOIStatus[] = [];
     public keywords: string[] = [];
-    private filter(collection: DOIRecordCollection, candidates: number[]): number[] {
+
+
+    public filter(collection: DOIRecordCollection, candidates: number[]): number[] {
         return candidates.filter(candidate => {
             const doiInfo = collection.getDOIInfo(candidate);
             return this.contain(doiInfo, collection);
         });
     }
+
+
 
     
     public search(collection: DOIRecordCollection): number[] {
@@ -47,110 +55,22 @@ export class SearchFilter {
         return SearchFilter.buildFromURLParameters(true, urlParameters);
     }
 
-    /*
-    public get_parents() : SearchFilter[] {
-        var r = new Array<SearchFilter>();
-        if(this.minimumYear != null){
-            var copy = this.copy();
-            copy.minimumYear = null;
-            r.push(copy);
-        }
-        if(this.maximumYear != null){
-            var copy = this.copy();
-            copy.maximumYear = null;
-            r.push(copy);
-        }
-        if(this.types.length > 0){
-            var copy = this.copy();
-            copy.types = [];
-            r.push(copy);
-        }
-
-        if(this.authors.length > 0){
-            var copy = this.copy();
-            copy.authors = [];
-            r.push(copy);
-        }
-        if(this.tags.length > 0){
-            var copy = this.copy();
-            copy.tags = [];
-            r.push(copy);
-        }
-
-        if(this.ancestorDoi != null){
-            var copy = this.copy();
-            copy.ancestorDoi = null;
-            r.push(copy);
-        }
-        if(this.doiReferences.length > 0){
-            var copy = this.copy();
-            copy.doiReferences = [];
-            r.push(copy);
-        }
-        if(this.excludeStatus.length > 0){
-            var copy = this.copy();
-            copy.excludeStatus = [];
-            r.push(copy);
-        }
-        
-        if(this.sortBy != "unordered"){
-            var copy = this.copy();
-            copy.sortBy = "unordered";
-            r.push(copy);
-        }
-        
-        if(this.keywords.length > 0){
-            var copy = this.copy();
-            copy.keywords = [];
-            r.push(copy);
-        }
-        return r;
-    }
-    */
-
     public getHash(): string {
         const urlParameters = this.toURLParameters(true);
         return urlParameters.map(param => param[0] + "=" + param[1]).join("&");
     }
 
-    /*
-    public static buildFromJSON(json: string): SearchFilter {
-        var obj: any = JSON.parse(json);
-        var r = new SearchFilter();
+    public getAncestorDOI(): string | null {
+        if(this.subContainerDOI != null){
+            return this.subContainerDOI;
+        }else if(this.topContainerDOI != null){
+            return this.topContainerDOI;
+        }else{
+            return null;
+        }
 
-        if(obj.minimum_year != null){
-            r.minimumYear = obj.minimum_year;
-        }
-        if(obj.maximum_year != null){
-            r.maximumYear = obj.maximum_year;
-        }
-        if(obj.types.length > 0){
-            r.types = obj.types.map((v: any) => v as string);
-        }
-        if(obj.authors.length > 0){
-            r.authors = obj.authors.map((v: any) => v as string);
-        }
-        if(obj.tags.length > 0){
-            r.tags = obj.tags.map((v: any) => v as string);
-        }
-        if(obj.ancestor_doi != null){
-            r.ancestorDoi = obj.ancestor_doi;
-        }
-        if(obj.doiReferences.length > 0){
-            r.doiReferences = obj.doiReferences.map((v: any) => v as string);
-        }
-        if(obj.excludeStatus.length > 0){
-            r.excludeStatus = obj.excludeStatus.map((v: any) => v as DOIStatus);
-        }
-        if(obj.top_container_type != null){
-            r.topContainerType = obj.top_container_type;
-        }
-        if(obj.keywords.length > 0){
-            r.keywords = obj.keywords.map((v: any) => v as string);
-        }
-        return r;
     }
-    */
+
     public contain(doiInfo: DOIRecord, collection: DOIRecordCollection): boolean {
         if(this.minimumYear != null && doiInfo.year < this.minimumYear){
             return false;
@@ -161,7 +81,9 @@ export class SearchFilter {
         if(this.types.length > 0 && !this.types.includes(doiInfo.type)){
             return false;
         }
-        if(this.ancestorDoi != null && !collection.ancestorCheck(doiInfo.id, this.ancestorDoi)){
+
+        const ancestorDOI = this.getAncestorDOI();
+        if(ancestorDOI != null && !collection.ancestorCheck(doiInfo.id, ancestorDOI)){
             return false;
         }
         if(this.topContainerType != null && !collection.topContainerTypeCheck(doiInfo.id, this.topContainerType)){
@@ -305,8 +227,11 @@ export class SearchFilter {
                 r.push([prefix + "tag", tag]);
             });
         }
-        if(this.ancestorDoi != null){
-            r.push([prefix + "ancestor-doi", this.ancestorDoi]);
+        if(this.subContainerDOI != null){
+            r.push([prefix + "sub-container-doi", this.subContainerDOI]);
+        }
+        if(this.topContainerDOI != null){
+            r.push([prefix + "top-container-doi", this.topContainerDOI]);
         }
         if(this.topContainerType != null){
             r.push([prefix + "top-container-type", this.topContainerType]);
@@ -380,8 +305,10 @@ export class SearchFilter {
                 r.authors.push(value);
             }else if(key == prefix + "tag"){
                 r.tags.push(value);
-            }else if(key == prefix + "ancestor-doi"){
-                r.ancestorDoi = value;
+            }else if(key == prefix + "top-container-doi"){
+                r.topContainerDOI = value;
+            }else if(key == prefix + "sub-container-doi"){
+                r.subContainerDOI = value;
             }else if(key == prefix + "top-container-type"){
                 r.topContainerType = value;
             }else if(key == prefix + "doi-reference"){

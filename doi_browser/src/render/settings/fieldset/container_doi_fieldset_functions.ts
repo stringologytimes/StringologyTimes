@@ -2,7 +2,8 @@ import { containerTypeList, paperTypeList, topContainerTypeList } from "../../..
 import { DOIRecordCollection } from "../../../doi_record_collection";
 
 export class ContainerDOIFieldsetFunctions {
-    public static selectTopContainerBox(is_primary_filter: boolean, selectedTopContainer: string, doiRecordCollection: DOIRecordCollection,
+    public static selectTopContainerBox(is_primary_filter: boolean, selectedTopContainer: string | null, selectedSubContainerDOI: string | null, 
+        doiRecordCollection: DOIRecordCollection,
         removeEmptyContainers: boolean,
         idToPrimaryRecordCountMapper: Map<number, number>, idToSecondaryRecordCountMapper: Map<number, number>) {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
@@ -10,6 +11,8 @@ export class ContainerDOIFieldsetFunctions {
         if (subContainerSelect == null) {
             throw new Error(id_prefix + "-sub-container-select is not found");
         }
+
+        let tabIndex = 0;
 
 
         subContainerSelect.replaceChildren();
@@ -21,7 +24,9 @@ export class ContainerDOIFieldsetFunctions {
             subContainerSelect.appendChild(option);
         }
 
-        if (doiRecordCollection.doiToIDMapper.has(selectedTopContainer)) {
+        let index_counter = 0;
+
+        if (selectedTopContainer != null && doiRecordCollection.doiToIDMapper.has(selectedTopContainer!)) {
             const selected_doi_id = doiRecordCollection.doiToIDMapper.get(selectedTopContainer)!;
             const children_ids = doiRecordCollection.idToDOIChildrenIDMapper.get(selected_doi_id)!;
 
@@ -36,20 +41,25 @@ export class ContainerDOIFieldsetFunctions {
                         option.value = child_doi_record.doi;
                         option.textContent = `${child_doi_record.title} (${primaryCount} primary records, ${secondaryCount} secondary records)`;
                         subContainerSelect.appendChild(option);
+                        if (child_doi_record.doi == selectedSubContainerDOI) {
+                            tabIndex = index_counter + 1;
+                        }
+                        index_counter++;
                     }
 
                 }
             });
-        } else if (selectedTopContainer != "Any") {
-            throw new Error("selectedTopContainer is not found");
+        } else if (selectedTopContainer != null) {
+            throw new Error("selectedTopContainer is not found / selectedTopContainer: " + selectedTopContainer);
         }
+        subContainerSelect.tabIndex = tabIndex;
     }
 
 
 
-    public static selectTopContainerTypeBox(is_primary_filter: boolean, selectedTopContainerType: string, doiRecordCollection: DOIRecordCollection, 
-        removeEmptyContainers: boolean,
-        idToPrimaryRecordCountMapper: Map<number, number>, idToSecondaryRecordCountMapper: Map<number, number>) {
+    public static selectTopContainerTypeBox(is_primary_filter: boolean, selectedTopContainerType: string | null, selectedTopContainerDOI: string | null,
+        removeEmptyContainers: boolean, idToPrimaryRecordCountMapper: Map<number, number>, idToSecondaryRecordCountMapper: Map<number, number>, 
+    doiRecordCollection: DOIRecordCollection) {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
         const topContainerTypeSelect: HTMLSelectElement = document.getElementById(id_prefix + "-top-container-type-select") as HTMLSelectElement;
         if (topContainerTypeSelect == null) {
@@ -70,14 +80,16 @@ export class ContainerDOIFieldsetFunctions {
         topContainerSelect.replaceChildren();
         subContainerSelect.replaceChildren();
 
+        let tabIndex = 0;
+
 
         {
             const anyOption = document.createElement("option");
             anyOption.value = "Any";
 
-            if(selectedTopContainerType != "Any"){
+            if (selectedTopContainerType != null) {
                 anyOption.textContent = "Any " + selectedTopContainerType;
-            }else{
+            } else {
                 anyOption.textContent = "Any Type";
             }
 
@@ -88,13 +100,13 @@ export class ContainerDOIFieldsetFunctions {
             const anyOption = document.createElement("option");
             anyOption.value = "Any";
 
-            if(selectedTopContainerType == "Journal"){
+            if (selectedTopContainerType == "Journal") {
                 anyOption.textContent = "Any Journal Issue";
-            }else if(selectedTopContainerType == "Proceedings Collection"){
+            } else if (selectedTopContainerType == "Proceedings Collection") {
                 anyOption.textContent = "Any Conference Proceedings";
-            }else if(selectedTopContainerType == "Preprint Repository"){
+            } else if (selectedTopContainerType == "Preprint Repository") {
                 anyOption.textContent = "Any Preprint";
-            }else{
+            } else {
                 anyOption.textContent = "Any Type";
             }
 
@@ -105,7 +117,7 @@ export class ContainerDOIFieldsetFunctions {
         let index_counter = 0;
 
 
-        if (topContainerTypeList.includes(selectedTopContainerType)) {
+        if (selectedTopContainerType != null && topContainerTypeList.includes(selectedTopContainerType!)) {
             doiRecordCollection.recordTypeToIDMapper.forEach((idList, recordType) => {
                 if (recordType == selectedTopContainerType) {
                     idList.forEach(id => {
@@ -113,27 +125,33 @@ export class ContainerDOIFieldsetFunctions {
                         var primaryCount = idToPrimaryRecordCountMapper.get(id) ?? 0;
                         var secondaryCount = idToSecondaryRecordCountMapper.get(id) ?? 0;
 
-                        if(!removeEmptyContainers || (primaryCount > 0 || secondaryCount > 0)) {
+                        if (!removeEmptyContainers || (primaryCount > 0 || secondaryCount > 0)) {
                             const option = document.createElement("option");
                             option.value = doiRecord.doi;
-                            option.textContent = `${index_counter++}. ${doiRecord.title} (${primaryCount} primary records, ${secondaryCount} secondary records)`;
-                            topContainerSelect.appendChild(option);                                
+                            option.textContent = `${index_counter}. ${doiRecord.title} (${primaryCount} primary records, ${secondaryCount} secondary records)`;
+                            topContainerSelect.appendChild(option);
+
+                            if (doiRecord.doi == selectedTopContainerDOI) {
+                                tabIndex = index_counter + 1;
+                            }
+                            index_counter++;
                         }
                     }
                     );
                 }
             });
         }
+        topContainerTypeSelect.tabIndex = tabIndex;
     }
 
-    public static initializeContainerBox(is_primary_filter: boolean, doiRecordCollection: DOIRecordCollection, removeEmptyContainers: boolean,
-        idToPrimaryRecordCountMapper: Map<number, number>, idToSecondaryRecordCountMapper: Map<number, number>) {
+    public static initializeTopContainerTypeBox(is_primary_filter: boolean, selectedTopContainerType: string | null) {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
         const topContainerTypeSelect = document.getElementById(id_prefix + "-top-container-type-select");
         if (topContainerTypeSelect == null) {
             throw new Error(id_prefix + "-top-container-type-select is not found");
         }
         topContainerTypeSelect.replaceChildren();
+        let tabIndex = 0;
 
         {
             const anyOption = document.createElement("option");
@@ -142,14 +160,31 @@ export class ContainerDOIFieldsetFunctions {
             topContainerTypeSelect.appendChild(anyOption);
         }
 
-        topContainerTypeList.forEach((topContainerType) => {
+        topContainerTypeList.forEach((topContainerType, index) => {
             const option = document.createElement("option");
             option.value = topContainerType;
             option.textContent = topContainerType;
             topContainerTypeSelect.appendChild(option);
+
+            if (topContainerType == selectedTopContainerType) {
+                tabIndex = index + 1;
+            }
         });
 
-        this.selectTopContainerTypeBox(is_primary_filter, "Any", doiRecordCollection, removeEmptyContainers, idToPrimaryRecordCountMapper, idToSecondaryRecordCountMapper);
+        topContainerTypeSelect.tabIndex = tabIndex;
+    }
+
+
+
+
+
+    public static initialize(is_primary_filter: boolean, removeEmptyContainers: boolean, 
+        idToPrimaryRecordCountMapper: Map<number, number>, idToSecondaryRecordCountMapper: Map<number, number>, 
+        doiRecordCollection: DOIRecordCollection, 
+        selectedTopContainerType: string | null, selectedTopContainerDOI: string | null, selectedSubContainerDOI: string | null) {
+        this.initializeTopContainerTypeBox(is_primary_filter, selectedTopContainerType);
+        this.selectTopContainerTypeBox(is_primary_filter, selectedTopContainerType, selectedTopContainerDOI, removeEmptyContainers, idToPrimaryRecordCountMapper, idToSecondaryRecordCountMapper, doiRecordCollection);
+        this.selectTopContainerBox(is_primary_filter, selectedTopContainerDOI, selectedSubContainerDOI, doiRecordCollection, removeEmptyContainers, idToPrimaryRecordCountMapper, idToSecondaryRecordCountMapper);
     }
     public static getTopContainerDOI(is_primary_filter: boolean): string | null {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
@@ -196,16 +231,16 @@ export class ContainerDOIFieldsetFunctions {
         const subContainerDOI = this.getSubContainerDOI(isPrimaryFilter);
         if (subContainerDOI != null) {
             r.push([prefix + "ancestor-doi", subContainerDOI]);
-        }else{
+        } else {
             const topContainerDOI = this.getTopContainerDOI(isPrimaryFilter);
             if (topContainerDOI != null) {
                 r.push([prefix + "ancestor-doi", topContainerDOI]);
-            }else{
+            } else {
                 const topContainerType = this.getTopContainerType(isPrimaryFilter);
                 if (topContainerType != null) {
                     r.push([prefix + "top-container-type", topContainerType]);
-                }        
-            } 
+                }
+            }
         }
         return r;
     }

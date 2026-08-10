@@ -7,12 +7,14 @@ import { FoundRecordSummary } from "../../doi_filter/found_record_summary";
 
 
 
+/*
 export class SecondarySearchFilterRender {
   public static initialize(initial_record_ids: number[], found_record_summary: FoundRecordSummary, doiRecordCollection: DOIRecordCollection): void {
     RecordTypeFieldsetFunctions.initializeRecordTypes(false, found_record_summary.type_to_id_count_mapper);
     YearFieldsetFunctions.initializeYearBox(false, found_record_summary.year_to_id_count_mapper, found_record_summary.unknown_year_id_count);
     RankFieldsetFunctions.updateRankBox(false, found_record_summary.primary_record_count, found_record_summary.secondary_record_count);
-    ContainerDOIFieldsetFunctions.initializeContainerBox(false, doiRecordCollection, true, found_record_summary.idToPrimaryRecordCountMapper, found_record_summary.idToSecondaryRecordCountMapper);
+    ContainerDOIFieldsetFunctions.initialize(false, doiRecordCollection, true, found_record_summary.idToPrimaryRecordCountMapper, found_record_summary.idToSecondaryRecordCountMapper);
     //this.initializeYearBox(doiRecordCollection);
   }
 }
+*/
