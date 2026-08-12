@@ -66,19 +66,43 @@ export function primarySearchFilterChange(inputElementName: string, browserInfo:
   } else {
     if (inputElementName == "psf-top-container-type") {
       const selectedTopContainerType = (document.getElementById("psf-top-container-type-select") as HTMLSelectElement).value;
+      console.log("primarySearchFilterChange: " + inputElementName + " / " + selectedTopContainerType);
       const v = selectedTopContainerType == "Any" ? null : selectedTopContainerType;
       ContainerDOIFieldsetFunctions.selectTopContainerTypeBox(true, v, null, false, browserInfo.doiInfoCollection.recordSummary.idToPrimaryRecordCountMapper, browserInfo.doiInfoCollection.recordSummary.idToSecondaryRecordCountMapper, browserInfo.doiInfoCollection);
     }
     else if (inputElementName == "psf-top-container") {
       const selectedTopContainer = (document.getElementById("psf-top-container-select") as HTMLSelectElement).value;
       const v = selectedTopContainer == "Any" ? null : selectedTopContainer;
-      ContainerDOIFieldsetFunctions.selectTopContainerBox(true, v, null, browserInfo.doiInfoCollection, false, browserInfo.doiInfoCollection.recordSummary.idToPrimaryRecordCountMapper, browserInfo.doiInfoCollection.recordSummary.idToSecondaryRecordCountMapper);
+      ContainerDOIFieldsetFunctions.selectTopContainerBox(true, v, null, false, 
+        browserInfo.doiInfoCollection.recordSummary.idToPrimaryRecordCountMapper, browserInfo.doiInfoCollection.recordSummary.idToSecondaryRecordCountMapper, browserInfo.doiInfoCollection);
     }
   }
 }
 
 export async function secondarySearchFilterChange(inputElementName: string, browserInfo: BrowserInfo) {
-  await browserInfo.rebuildByChangingSecondarySearchFilterBox();
+  if (browserInfo.doiInfoCollection == null) {
+    throw new Error("doiInfoCollection is null");
+  } else {
+    if (inputElementName == "ssf-top-container-type") {
+      const selectedTopContainerType = (document.getElementById("ssf-top-container-type-select") as HTMLSelectElement).value;
+      const v = selectedTopContainerType == "Any" ? null : selectedTopContainerType;
+      ContainerDOIFieldsetFunctions.selectTopContainerTypeBox(false, v, null, true, 
+        browserInfo.getCurrentPrimarySummary().idToPrimaryRecordCountMapper, browserInfo.getCurrentPrimarySummary().idToSecondaryRecordCountMapper, 
+        browserInfo.doiInfoCollection);
+    }
+    else if (inputElementName == "ssf-top-container") {
+      const selectedTopContainer = (document.getElementById("ssf-top-container-select") as HTMLSelectElement).value;
+      const v = selectedTopContainer == "Any" ? null : selectedTopContainer;
+      ContainerDOIFieldsetFunctions.selectTopContainerBox(false, v, null, true,  
+        browserInfo.getCurrentPrimarySummary().idToPrimaryRecordCountMapper, browserInfo.getCurrentPrimarySummary().idToSecondaryRecordCountMapper, 
+        browserInfo.doiInfoCollection);
+    }
+
+
+    await browserInfo.rebuildByChangingSecondarySearchFilterBox();
+
+  }
+
 }
 
 export function ViewSettingInputChange(inputElementName: string, browserInfo: BrowserInfo) {

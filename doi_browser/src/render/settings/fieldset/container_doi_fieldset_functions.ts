@@ -3,16 +3,16 @@ import { DOIRecordCollection } from "../../../doi_record_collection";
 
 export class ContainerDOIFieldsetFunctions {
     public static selectTopContainerBox(is_primary_filter: boolean, selectedTopContainer: string | null, selectedSubContainerDOI: string | null, 
-        doiRecordCollection: DOIRecordCollection,
         removeEmptyContainers: boolean,
-        idToPrimaryRecordCountMapper: Map<number, number>, idToSecondaryRecordCountMapper: Map<number, number>) {
+        idToPrimaryRecordCountMapper: Map<number, number>, idToSecondaryRecordCountMapper: Map<number, number>, 
+        doiRecordCollection: DOIRecordCollection) {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
-        const subContainerSelect = document.getElementById(id_prefix + "-sub-container-select");
+        const subContainerSelect : HTMLSelectElement = document.getElementById(id_prefix + "-sub-container-select") as HTMLSelectElement;
         if (subContainerSelect == null) {
             throw new Error(id_prefix + "-sub-container-select is not found");
         }
 
-        let tabIndex = 0;
+        let selectedIndex = 0;
 
 
         subContainerSelect.replaceChildren();
@@ -42,7 +42,7 @@ export class ContainerDOIFieldsetFunctions {
                         option.textContent = `${child_doi_record.title} (${primaryCount} primary records, ${secondaryCount} secondary records)`;
                         subContainerSelect.appendChild(option);
                         if (child_doi_record.doi == selectedSubContainerDOI) {
-                            tabIndex = index_counter + 1;
+                            selectedIndex = index_counter + 1;
                         }
                         index_counter++;
                     }
@@ -52,7 +52,7 @@ export class ContainerDOIFieldsetFunctions {
         } else if (selectedTopContainer != null) {
             throw new Error("selectedTopContainer is not found / selectedTopContainer: " + selectedTopContainer);
         }
-        subContainerSelect.tabIndex = tabIndex;
+        subContainerSelect.selectedIndex = selectedIndex;
     }
 
 
@@ -61,12 +61,12 @@ export class ContainerDOIFieldsetFunctions {
         removeEmptyContainers: boolean, idToPrimaryRecordCountMapper: Map<number, number>, idToSecondaryRecordCountMapper: Map<number, number>, 
     doiRecordCollection: DOIRecordCollection) {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
-        const topContainerTypeSelect: HTMLSelectElement = document.getElementById(id_prefix + "-top-container-type-select") as HTMLSelectElement;
+        const topContainerTypeSelect = document.getElementById(id_prefix + "-top-container-type-select");
         if (topContainerTypeSelect == null) {
             throw new Error(id_prefix + "-top-container-type-select is not found");
         }
 
-        const topContainerSelect = document.getElementById(id_prefix + "-top-container-select");
+        const topContainerSelect : HTMLSelectElement = document.getElementById(id_prefix + "-top-container-select") as HTMLSelectElement;
         if (topContainerSelect == null) {
             throw new Error(id_prefix + "-top-container-select is not found");
         }
@@ -80,7 +80,7 @@ export class ContainerDOIFieldsetFunctions {
         topContainerSelect.replaceChildren();
         subContainerSelect.replaceChildren();
 
-        let tabIndex = 0;
+        let selectedIndex = 0;
 
 
         {
@@ -125,14 +125,18 @@ export class ContainerDOIFieldsetFunctions {
                         var primaryCount = idToPrimaryRecordCountMapper.get(id) ?? 0;
                         var secondaryCount = idToSecondaryRecordCountMapper.get(id) ?? 0;
 
-                        if (!removeEmptyContainers || (primaryCount > 0 || secondaryCount > 0)) {
+                        const addFlag = !removeEmptyContainers || (primaryCount > 0 || secondaryCount > 0);
+
+                        if (addFlag) {
+                            console.log("Adding: " + doiRecord.doi + " / " + primaryCount + " / " + secondaryCount + " / " + removeEmptyContainers);
+
                             const option = document.createElement("option");
                             option.value = doiRecord.doi;
                             option.textContent = `${index_counter}. ${doiRecord.title} (${primaryCount} primary records, ${secondaryCount} secondary records)`;
                             topContainerSelect.appendChild(option);
 
                             if (doiRecord.doi == selectedTopContainerDOI) {
-                                tabIndex = index_counter + 1;
+                                selectedIndex = index_counter + 1;
                             }
                             index_counter++;
                         }
@@ -141,17 +145,17 @@ export class ContainerDOIFieldsetFunctions {
                 }
             });
         }
-        topContainerTypeSelect.tabIndex = tabIndex;
+        topContainerSelect.selectedIndex = selectedIndex;
     }
 
     public static initializeTopContainerTypeBox(is_primary_filter: boolean, selectedTopContainerType: string | null) {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
-        const topContainerTypeSelect = document.getElementById(id_prefix + "-top-container-type-select");
+        const topContainerTypeSelect : HTMLSelectElement = document.getElementById(id_prefix + "-top-container-type-select") as HTMLSelectElement;
         if (topContainerTypeSelect == null) {
             throw new Error(id_prefix + "-top-container-type-select is not found");
         }
         topContainerTypeSelect.replaceChildren();
-        let tabIndex = 0;
+        let selectedIndex = 0;
 
         {
             const anyOption = document.createElement("option");
@@ -167,11 +171,12 @@ export class ContainerDOIFieldsetFunctions {
             topContainerTypeSelect.appendChild(option);
 
             if (topContainerType == selectedTopContainerType) {
-                tabIndex = index + 1;
+                console.log("FOUND: " + topContainerType + " / " + index + " / " + is_primary_filter);
+                selectedIndex = index + 1;
             }
         });
 
-        topContainerTypeSelect.tabIndex = tabIndex;
+        topContainerTypeSelect.selectedIndex = selectedIndex;
     }
 
 
@@ -182,9 +187,11 @@ export class ContainerDOIFieldsetFunctions {
         idToPrimaryRecordCountMapper: Map<number, number>, idToSecondaryRecordCountMapper: Map<number, number>, 
         doiRecordCollection: DOIRecordCollection, 
         selectedTopContainerType: string | null, selectedTopContainerDOI: string | null, selectedSubContainerDOI: string | null) {
+            console.log("SET: " + is_primary_filter + " / " + selectedTopContainerType + " / " + selectedTopContainerDOI + " / " + selectedSubContainerDOI);
         this.initializeTopContainerTypeBox(is_primary_filter, selectedTopContainerType);
         this.selectTopContainerTypeBox(is_primary_filter, selectedTopContainerType, selectedTopContainerDOI, removeEmptyContainers, idToPrimaryRecordCountMapper, idToSecondaryRecordCountMapper, doiRecordCollection);
-        this.selectTopContainerBox(is_primary_filter, selectedTopContainerDOI, selectedSubContainerDOI, doiRecordCollection, removeEmptyContainers, idToPrimaryRecordCountMapper, idToSecondaryRecordCountMapper);
+        this.selectTopContainerBox(is_primary_filter, selectedTopContainerDOI, selectedSubContainerDOI, 
+            removeEmptyContainers, idToPrimaryRecordCountMapper, idToSecondaryRecordCountMapper, doiRecordCollection);
     }
     public static getTopContainerDOI(is_primary_filter: boolean): string | null {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
@@ -230,18 +237,19 @@ export class ContainerDOIFieldsetFunctions {
         const r: [string, string][] = [];
         const subContainerDOI = this.getSubContainerDOI(isPrimaryFilter);
         if (subContainerDOI != null) {
-            r.push([prefix + "ancestor-doi", subContainerDOI]);
-        } else {
-            const topContainerDOI = this.getTopContainerDOI(isPrimaryFilter);
-            if (topContainerDOI != null) {
-                r.push([prefix + "ancestor-doi", topContainerDOI]);
-            } else {
-                const topContainerType = this.getTopContainerType(isPrimaryFilter);
-                if (topContainerType != null) {
-                    r.push([prefix + "top-container-type", topContainerType]);
-                }
-            }
+            r.push([prefix + "sub-container-doi", subContainerDOI]);
+        } 
+        const topContainerDOI = this.getTopContainerDOI(isPrimaryFilter);
+        if (topContainerDOI != null) {
+            r.push([prefix + "top-container-doi", topContainerDOI]);
+        } 
+        
+        const topContainerType = this.getTopContainerType(isPrimaryFilter);
+        if (topContainerType != null) {
+            r.push([prefix + "top-container-type", topContainerType]);
         }
+
+
         return r;
     }
 

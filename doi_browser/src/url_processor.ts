@@ -8,34 +8,34 @@ export class URLProcessor {
     public static buildSearchFilterFromURL(isPrimaryFilter: boolean) : SearchFilter {
         const idPrefix = isPrimaryFilter ? "psf-" : "ssf-";
         const url = new URL(window.location.href);
-        const primarySearchFilter = new SearchFilter();
+        const searchFilter = new SearchFilter();
 
         const types : string[] | null = url.searchParams.getAll(idPrefix + "type");
         if(types != null) {
             if(types.length == 0) {
                 containerTypeList.concat(paperTypeList).concat(otherTypeList).forEach(type => {
-                    primarySearchFilter.types.push(type);
+                    searchFilter.types.push(type);
                 });
             }else{
                 types.forEach(type => {
                     if(type == AnyContainerType) {
                         containerTypeList.forEach(containerType => {
-                            primarySearchFilter.types.push(containerType);
+                            searchFilter.types.push(containerType);
                         });
                     }else if(type == AnyPaperType) {
                         paperTypeList.forEach(paperType => {
-                            primarySearchFilter.types.push(paperType);
+                            searchFilter.types.push(paperType);
                         });
                     }else if(type == AnyOtherType) {
                         otherTypeList.forEach(otherType => {
-                            primarySearchFilter.types.push(otherType);
+                            searchFilter.types.push(otherType);
                         });
                     }
                     else if(type == "Empty") {
 
                     }
                     else{
-                        primarySearchFilter.types.push(type);
+                        searchFilter.types.push(type);
                     }
                 });
     
@@ -47,38 +47,38 @@ export class URLProcessor {
 
         const topContainerType : string | null = url.searchParams.get(idPrefix + "top-container-type");
         if(topContainerType != null) {
-            primarySearchFilter.topContainerType = topContainerType;
+            searchFilter.topContainerType = topContainerType;
         }
 
         const topContainerDOI : string | null = url.searchParams.get(idPrefix + "top-container-doi");
         if(topContainerDOI != null) {
-            primarySearchFilter.topContainerDOI = topContainerDOI;
+            searchFilter.topContainerDOI = topContainerDOI;
         }
 
         const subContainerDOI : string | null = url.searchParams.get(idPrefix + "sub-container-doi");
         if(subContainerDOI != null) {
-            primarySearchFilter.subContainerDOI = subContainerDOI;
+            searchFilter.subContainerDOI = subContainerDOI;
         }
 
         const minimumYear : string | null = url.searchParams.get(idPrefix + "minimum-year");
         if(minimumYear != null) {
-            primarySearchFilter.minimumYear = parseInt(minimumYear);
+            searchFilter.minimumYear = parseInt(minimumYear);
         }
         const maximumYear : string | null = url.searchParams.get(idPrefix + "maximum-year");
         if(maximumYear != null) {
-            primarySearchFilter.maximumYear = parseInt(maximumYear);
+            searchFilter.maximumYear = parseInt(maximumYear);
         }
 
         const excludeStatus : string[] | null = url.searchParams.getAll(idPrefix + "excluded-status");
         if(excludeStatus != null) {
             excludeStatus.forEach(status => {
                 if(status == "primary") {
-                    primarySearchFilter.excludeStatus.push("primary");
+                    searchFilter.excludeStatus.push("primary");
                 }
             });
         }
 
-        return primarySearchFilter;
+        return searchFilter;
 
     }
 }

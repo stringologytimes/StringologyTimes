@@ -32,7 +32,7 @@ export class BrowserInfo {
     //public doiResultCache: DOIResultCache = new DOIResultCache();
 
     private getFianlHash(): string {
-        return this.primarySearchFilter.getHash() + "-" + this.secondarySearchFilter.getHash();
+        return this.primarySearchFilter.getHash(true) + "-" + this.secondarySearchFilter.getHash(false);
     }
 
 
@@ -52,14 +52,14 @@ export class BrowserInfo {
             SearchFilterBoxFunctions.initializeFilterBox(true, this.doiInfoCollection!.recordSummary, this.doiInfoCollection!);
         }
         if(updateSecondaryFilterBox){
-            const foundRecordSummary = this.primaryResultSummaryCache.get(this.primarySearchFilter.getHash())!;
+            const foundRecordSummary = this.primaryResultSummaryCache.get(this.primarySearchFilter.getHash(true))!;
             SearchFilterBoxFunctions.initializeFilterBox(false, foundRecordSummary, this.doiInfoCollection!);    
         }
     }
 
     private async processPrimarySearchFilter(): Promise<void> {
-        const b1 = this.primaryResultCache.has(this.primarySearchFilter.getHash());
-        const b2 = this.primaryResultSummaryCache.has(this.primarySearchFilter.getHash());
+        const b1 = this.primaryResultCache.has(this.primarySearchFilter.getHash(true));
+        const b2 = this.primaryResultSummaryCache.has(this.primarySearchFilter.getHash(true));
 
         if(!b1 || !b2){
             showLoading("Searching...");
@@ -68,13 +68,13 @@ export class BrowserInfo {
             try {
                 if(!b1){
                     const foundRecordIDs = this.primarySearchFilter.search(this.doiInfoCollection!);
-                    this.primaryResultCache.set(this.primarySearchFilter.getHash(), foundRecordIDs);    
+                    this.primaryResultCache.set(this.primarySearchFilter.getHash(true), foundRecordIDs);    
                 }
 
                 if(!b2){
-                    const foundRecordIDs = this.primaryResultCache.get(this.primarySearchFilter.getHash())!;
+                    const foundRecordIDs = this.primaryResultCache.get(this.primarySearchFilter.getHash(true))!;
                     const foundRecordSummary = this.doiInfoCollection!.buildRecordSummary(foundRecordIDs);
-                    this.primaryResultSummaryCache.set(this.primarySearchFilter.getHash(), foundRecordSummary);
+                    this.primaryResultSummaryCache.set(this.primarySearchFilter.getHash(true), foundRecordSummary);
                 }
             } finally {
                 hideLoading();
@@ -87,7 +87,7 @@ export class BrowserInfo {
         const b2 = this.finalResultSummaryCache.has(finalHash);
 
         if(!b1 || !b2){
-            const recordIDs = this.primaryResultCache.get(this.primarySearchFilter.getHash())!;
+            const recordIDs = this.primaryResultCache.get(this.primarySearchFilter.getHash(true))!;
             if(!b1){
                 const foundRecordIDs = this.secondarySearchFilter.filter(this.doiInfoCollection!, recordIDs);
                 this.finalResultCache.set(finalHash, foundRecordIDs);   
@@ -103,6 +103,9 @@ export class BrowserInfo {
 
 
 
+    public getCurrentPrimarySummary(): FoundRecordSummary {
+        return this.primaryResultSummaryCache.get(this.primarySearchFilter.getHash(true))!;
+    }
 
 
 
@@ -113,6 +116,8 @@ export class BrowserInfo {
     public async rebuildFromURLParameters(updatePrimaryFilterBox: boolean, updateSecondaryFilterBox: boolean): Promise<void> {
         this.primarySearchFilter = URLProcessor.buildSearchFilterFromURL(true);
         this.secondarySearchFilter = URLProcessor.buildSearchFilterFromURL(false);
+
+        console.log("secondarySearchFilter: " + this.secondarySearchFilter.getHash(false));
 
         await this.processPrimarySearchFilter();
         await this.processSecondarySearchFilter();

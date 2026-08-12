@@ -55,8 +55,8 @@ export class SearchFilter {
         return SearchFilter.buildFromURLParameters(true, urlParameters);
     }
 
-    public getHash(): string {
-        const urlParameters = this.toURLParameters(true);
+    public getHash(is_primary_filter: boolean): string {
+        const urlParameters = this.toURLParameters(is_primary_filter);
         return urlParameters.map(param => param[0] + "=" + param[1]).join("&");
     }
 
@@ -185,10 +185,13 @@ export class SearchFilter {
             const containPaperTypeAll = paperTypeList.every(type => this.types.includes(type));
             const containOtherTypeAll = otherTypeList.every(type => this.types.includes(type));
 
+
             if(containContainerTypeAll && containPaperTypeAll && containOtherTypeAll){
+                /*
                 containerTypeList.concat(paperTypeList).concat(otherTypeList).forEach(type => {
                     r.push([prefix + "type", type]);
                 });        
+                */
             }else{
                 if(containContainerTypeAll){
                     r.push([prefix + "type", AnyContainerType]);
