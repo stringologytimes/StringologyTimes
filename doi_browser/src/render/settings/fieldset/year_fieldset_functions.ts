@@ -1,19 +1,22 @@
 export class YearFieldsetFunctions {
 
     public static initializeYearBox(is_primary_filter: boolean, year_to_id_count_mapper: Map<number, number>, unknown_year_id_count: number
-        , yearFrom: number | null, yearTo: number | null
+        , selectedYearFrom: number | null, selectedYearTo: number | null
     ) {
         const id_prefix = is_primary_filter ? "psf" : "ssf";
-        const yearFromSelect = document.getElementById(`${id_prefix}-minimum-year-select`) as HTMLElement;
+        const yearFromSelect = document.getElementById(`${id_prefix}-minimum-year-select`) as HTMLSelectElement;
         if (yearFromSelect == null) {
             throw new Error(`${id_prefix}-minimum-year-select is not found`);
         }
-        const yearToSelect = document.getElementById(`${id_prefix}-maximum-year-select`) as HTMLElement;
+        const yearToSelect = document.getElementById(`${id_prefix}-maximum-year-select`) as HTMLSelectElement;
         if (yearToSelect == null) {
             throw new Error(`${id_prefix}-maximum-year-select is not found`);
         }
         yearFromSelect.replaceChildren();
         yearToSelect.replaceChildren();
+
+        let selectedIndexOfYearFrom = 0;
+        let selectedIndexOfYearTo = 0;
 
         {
             const anyOption1 = document.createElement("option");
@@ -30,6 +33,8 @@ export class YearFieldsetFunctions {
             yearToSelect.appendChild(anyOption2);
         }
 
+        let index_counter = 0;
+
         if (year_to_id_count_mapper.size > 0) {
             let minYear = Math.min(...year_to_id_count_mapper.keys());
             let maxYear = Math.max(...year_to_id_count_mapper.keys());
@@ -41,17 +46,30 @@ export class YearFieldsetFunctions {
 
                 if (recordCount > 0) {
                     option1.value = year.toString();
-                    option1.textContent = `${year} (${recordCount})`;
+                    option1.textContent = `${year} (${recordCount} records)`;
                     option1.setAttribute("data-year", year.toString());
                     yearFromSelect.appendChild(option1);
 
+                    if(year == selectedYearFrom){
+                        selectedIndexOfYearFrom = index_counter + 1;
+                    }
+
                     option2.value = year.toString();
-                    option2.textContent = `${year} (${recordCount})`;
+                    option2.textContent = `${year} (${recordCount} records)`;
                     option2.setAttribute("data-year", year.toString());
                     yearToSelect.appendChild(option2);
+
+                    if(year == selectedYearTo){
+                        selectedIndexOfYearTo = index_counter + 1;
+                    }
+
+                    index_counter++;
                 }
             }
         }
+
+        yearFromSelect.selectedIndex = selectedIndexOfYearFrom;
+        yearToSelect.selectedIndex = selectedIndexOfYearTo;
     }
 
     public static updateYearBox(is_primary_filter: boolean, year_to_id_count_mapper: Map<number, number>, unknown_year_id_count: number) {

@@ -92,9 +92,12 @@ export class SearchFilter {
         if(this.doiReferences.length > 0 && !doiInfo.doiReferences.every(doiReference => this.doiReferences.includes(doiReference))){
             return false;
         }
+
+        console.log("excludeStatusX: " + this.excludeStatus.length);
         if(this.excludeStatus.length > 0){
             for(let i = 0; i < this.excludeStatus.length; i++){
-                if(doiInfo.getStatus() == this.excludeStatus[i]){
+                console.log("excludeStatus: " + this.excludeStatus[i] + " / " + doiInfo.getStatus());
+                if(this.excludeStatus.includes(doiInfo.getStatus())){
                     return false;
                 }
             }

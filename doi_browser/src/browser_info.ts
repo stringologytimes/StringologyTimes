@@ -125,6 +125,12 @@ export class BrowserInfo {
         this.renderFilterBoxes(updatePrimaryFilterBox, updateSecondaryFilterBox);
         this.renderMainWindow();
 
+        const finalRecordCount = this.finalResultCache.get(this.getFianlHash())!.length;
+        const searchResultMessageDiv = document.getElementById("search-result-message-div");
+        if(searchResultMessageDiv != null){
+            searchResultMessageDiv!.textContent = "Found " + finalRecordCount + " records";
+        }
+
 
 
     }

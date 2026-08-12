@@ -182,14 +182,14 @@
     </fieldset>
     <fieldset id="ssf-year-fieldset">
       <legend>Publication Year</legend>
-      From <select id="ssf-minimum-year-select"></select>
-      To <select id="ssf-maximum-year-select"></select>
+      From <select id="ssf-minimum-year-select"  onchange="secondarySearchFilterChange('ssf-minimum-year')"></select>
+      To <select id="ssf-maximum-year-select" onchange="secondarySearchFilterChange('ssf-maximum-year')"></select>
     </fieldset>
     <fieldset>
       <legend>Record Type</legend>
-      <input type="checkbox" id="ssf-primary-record-checkbox" checked />
+      <input type="checkbox" id="ssf-primary-record-checkbox" checked onchange="secondarySearchFilterChange('ssf-primary-record')"/>
       <label for="ssf-primary-record-checkbox" id="ssf-primary-record-label">Primary record</label>
-      <input type="checkbox" id="ssf-secondary-record-checkbox" checked />
+      <input type="checkbox" id="ssf-secondary-record-checkbox" checked onchange="secondarySearchFilterChange('ssf-secondary-record')"/>
       <label for="ssf-secondary-record-checkbox" id="ssf-secondary-record-label">Secondary record</label>
     </fieldset>
     <fieldset>
@@ -214,6 +214,7 @@
 
     </ul>
   </fieldset>
+  <div id="search-result-message-div"></div>
 
 
   <div id="output"></div>

@@ -74,6 +74,8 @@ export class URLProcessor {
             excludeStatus.forEach(status => {
                 if(status == "primary") {
                     searchFilter.excludeStatus.push("primary");
+                }else if(status == "secondary") {
+                    searchFilter.excludeStatus.push("secondary");
                 }
             });
         }
