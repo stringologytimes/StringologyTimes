@@ -40,7 +40,16 @@ async function secondarySearchFilterChange(inputElementName: string) {
   await EventFunctions.secondarySearchFilterChange(inputElementName, browserInfo);
 }
 
+async function clickResetButtonOfPrimarySearchFilterBox(){
+  await EventFunctions.clickResetButtonOfPrimarySearchFilterBox(browserInfo);
+}
+async function clickResetButtonOfSecondarySearchFilterBox(){
+  await EventFunctions.clickResetButtonOfSecondarySearchFilterBox(browserInfo);
+}
 
+async function sortOrderInputChange(inputElementName: string) {
+  await EventFunctions.sortOrderInputChange(inputElementName, browserInfo);
+}
 
 async function clickPrimarySearchFilterButton(){
   EventFunctions.clickPrimarySearchFilterButton(browserInfo);
@@ -113,6 +122,9 @@ function initializeParameter(parameterList: [string, string][]) {
 //(window as any).changeParameters = changeParameters;
 //(window as any).initializeParameter = initializeParameter;
 (window as any).clickPrimarySearchFilterButton = clickPrimarySearchFilterButton;
+(window as any).clickResetButtonOfPrimarySearchFilterBox = clickResetButtonOfPrimarySearchFilterBox;
+(window as any).clickResetButtonOfSecondarySearchFilterBox = clickResetButtonOfSecondarySearchFilterBox;
+(window as any).sortOrderInputChange = sortOrderInputChange;
 
 async function domFinished() {
   showLoading("Loading...");

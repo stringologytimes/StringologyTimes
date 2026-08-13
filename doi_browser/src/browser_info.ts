@@ -1,5 +1,5 @@
 import { DOIRecordCollection } from "./doi_record_collection";
-import { renderViewSettingBox } from "./render/settings/view_setting_box_render";
+import { renderViewSettingBox } from "./render/view_setting_box_render";
 import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
 import { SearchResultCache } from "./doi_filter/search_result_cache";
 import { getDOIRecordTypeList } from "./doi_record_collection";
@@ -13,6 +13,7 @@ import { SearchResultViewSettings } from "./doi_filter/search_result_view_settin
 import { AnyContainerType, AnyPaperType, AnyOtherType } from "./doi_record";
 import { URLProcessor } from "./url_processor";
 import { SearchFilterBoxFunctions } from "./render/settings/fieldset/search_filter_box_functions";
+import { SearchResultSortOrder } from "./render/settings/fieldset/sort_order_functions";
 
 
 export class BrowserInfo {
@@ -22,7 +23,7 @@ export class BrowserInfo {
     public primaryResultSummaryCache: Map<string, FoundRecordSummary> = new Map();
 
     public secondarySearchFilter : SearchFilter = new SearchFilter();
-    public sortBy: string = "";
+    public sortOrder: SearchResultSortOrder = new SearchResultSortOrder();
     public finalResultCache: Map<string, number[]> = new Map();
     public finalResultSummaryCache: Map<string, FoundRecordSummary> = new Map();
 
@@ -32,7 +33,7 @@ export class BrowserInfo {
     //public doiResultCache: DOIResultCache = new DOIResultCache();
 
     private getFianlHash(): string {
-        return this.primarySearchFilter.getHash(true) + "-" + this.secondarySearchFilter.getHash(false);
+        return this.primarySearchFilter.getHash(true) + "-" + this.secondarySearchFilter.getHash(false) + "-" + this.sortOrder.getHash();
     }
 
 
@@ -61,6 +62,9 @@ export class BrowserInfo {
     private renderViewSettingBox(): void {
         renderViewSettingBox(this.viewSettings, this.finalResultCache.get(this.getFianlHash())!.length);
     }
+    private renderSortOrderBox(): void {
+        this.sortOrder.render();
+    }
 
     private async processPrimarySearchFilter(): Promise<void> {
         const b1 = this.primaryResultCache.has(this.primarySearchFilter.getHash(true));
@@ -86,7 +90,7 @@ export class BrowserInfo {
             }    
         }
     }
-    private async processSecondarySearchFilter(): Promise<void> {
+    private async processSecondarySearchFilterWithSortOrder(): Promise<void> {
         const finalHash = this.getFianlHash();
         const b1 = this.finalResultCache.has(finalHash);
         const b2 = this.finalResultSummaryCache.has(finalHash);
@@ -95,6 +99,7 @@ export class BrowserInfo {
             const recordIDs = this.primaryResultCache.get(this.primarySearchFilter.getHash(true))!;
             if(!b1){
                 const foundRecordIDs = this.secondarySearchFilter.filter(this.doiInfoCollection!, recordIDs);
+                this.sortOrder.sort(foundRecordIDs, this.doiInfoCollection!);
                 this.finalResultCache.set(finalHash, foundRecordIDs);   
             }
 
@@ -116,22 +121,26 @@ export class BrowserInfo {
 
     public async initialize(doiInfoCollection: DOIRecordCollection): Promise<void> {
         this.doiInfoCollection = doiInfoCollection;
-        await this.rebuildFromURLParameters(true, true, true);
+        await this.rebuildFromURLParameters(true, true, true, true);
     }
-    public async rebuildFromURLParameters(updatePrimaryFilterBox: boolean, updateSecondaryFilterBox: boolean, updateViewSettingBox: boolean): Promise<void> {
+    public async rebuildFromURLParameters(updatePrimaryFilterBox: boolean, updateSecondaryFilterBox: boolean, updateViewSettingBox: boolean, updateSortOrderBox: boolean): Promise<void> {
         this.primarySearchFilter = URLProcessor.buildSearchFilterFromURL(true);
         this.secondarySearchFilter = URLProcessor.buildSearchFilterFromURL(false);
         this.viewSettings = SearchResultViewSettings.buildFromURLParameters();
+        this.sortOrder = SearchResultSortOrder.buildFromURLParameters();
         
         console.log("secondarySearchFilter: " + this.secondarySearchFilter.getHash(false));
 
         await this.processPrimarySearchFilter();
-        await this.processSecondarySearchFilter();
+        await this.processSecondarySearchFilterWithSortOrder();
 
         this.renderFilterBoxes(updatePrimaryFilterBox, updateSecondaryFilterBox);
         this.renderMainWindow();
         if(updateViewSettingBox){
             this.renderViewSettingBox();
+        }
+        if(updateSortOrderBox){
+            this.renderSortOrderBox();
         }
 
         const finalRecordCount = this.finalResultCache.get(this.getFianlHash())!.length;
@@ -149,24 +158,25 @@ export class BrowserInfo {
         SearchFilterBoxFunctions.setURLParameters(true, newParameters);
         SearchFilterBoxFunctions.resetURLParameters(false);
 
-        await this.rebuildFromURLParameters(false, true, true);
+        await this.rebuildFromURLParameters(false, true, true, true);
     }
 
     public async rebuildByChangingSecondarySearchFilterBox(): Promise<void> {
         const newParameters = SearchFilterBoxFunctions.convertInputToURLParameters(false);
         SearchFilterBoxFunctions.setURLParameters(false, newParameters);
 
-        await this.rebuildFromURLParameters(false, false, true);
+        await this.rebuildFromURLParameters(false, false, true, true);
     }
 
     public async rebuildByChangingViewSettingBox(): Promise<void> {
         this.viewSettings = SearchResultViewSettings.convertHTMLElementToInstance();
         const newParameters = this.viewSettings.convertToURLParameters();
-        URLProcessor.resetURLParameters(SearchResultViewSettings.getURLParameterKeys());
-        URLProcessor.setURLParameters(newParameters);
-        await this.rebuildFromURLParameters(false, false, true);
-
+        URLProcessor.resetURLParameters(SearchResultViewSettings.getURLParameterKeys(), false);
+        URLProcessor.setURLParameters(newParameters, true);
+        await this.rebuildFromURLParameters(false, false, true, true);
     }
+
+    
 
     public print(): void {
         /*

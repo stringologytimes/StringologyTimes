@@ -5,6 +5,7 @@ import { BrowserInfo } from "./browser_info";
 import { URLProcessor } from "./url_processor";
 import { ContainerDOIFieldsetFunctions } from "./render/settings/fieldset/container_doi_fieldset_functions";
 import { SearchFilterBoxFunctions } from "./render/settings/fieldset/search_filter_box_functions";
+import { SearchResultSortOrder } from "./render/settings/fieldset/sort_order_functions";
 
 export function updatePaginationControls(browserInfo: BrowserInfo) {
   /*
@@ -103,6 +104,26 @@ export async function secondarySearchFilterChange(inputElementName: string, brow
 
   }
 
+}
+
+export async function clickResetButtonOfPrimarySearchFilterBox(browserInfo: BrowserInfo) {
+  SearchFilterBoxFunctions.resetURLParameters(true);
+  SearchFilterBoxFunctions.resetURLParameters(false);
+  await browserInfo.rebuildFromURLParameters(true, true, true, true);
+}
+
+export async function clickResetButtonOfSecondarySearchFilterBox(browserInfo: BrowserInfo) {
+  SearchFilterBoxFunctions.resetURLParameters(false);
+  await browserInfo.rebuildFromURLParameters(false, true, true, true);
+}
+
+export async function sortOrderInputChange(inputElementName: string, browserInfo: BrowserInfo) {
+  const urlParameters = SearchResultSortOrder.convertInputToURLParameters();
+  const urlParameterKeys = SearchResultSortOrder.getURLParameterKeys();
+  URLProcessor.resetURLParameters(urlParameterKeys, false);
+  URLProcessor.setURLParameters(urlParameters, true);
+
+  await browserInfo.rebuildFromURLParameters(true, true, true, true);
 }
 
 export function ViewSettingInputChange(inputElementName: string, browserInfo: BrowserInfo) {

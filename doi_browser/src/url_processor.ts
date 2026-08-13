@@ -4,20 +4,27 @@ import { AnyContainerType, AnyPaperType, AnyOtherType } from "./doi_record";
 
 export class URLProcessor {
 
-    public static setURLParameters(parameters: [string, string][]): void {
+    public static setURLParameters(parameters: [string, string][], historyUpdate: boolean): void {
         const url = new URL(window.location.href);
 
         parameters.forEach(parameter => {
             url.searchParams.set(parameter[0], parameter[1]);
         });
-        window.history.replaceState(null, "", url.toString());
+
+        if(historyUpdate) {
+            window.history.replaceState(null, "", url.toString());
+        }
+
     }
-    public static resetURLParameters(parameters: string[]): void {
+    public static resetURLParameters(parameters: string[], historyUpdate: boolean): void {
         const url = new URL(window.location.href);
         parameters.forEach(parameter => {
             url.searchParams.delete(parameter);
         });
-        window.history.replaceState(null, "", url.toString());
+
+        if(historyUpdate) {
+            window.history.replaceState(null, "", url.toString());
+        }
     }
 
 

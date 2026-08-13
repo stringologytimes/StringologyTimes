@@ -1,5 +1,5 @@
-import { SearchResultViewSettings } from "../../doi_filter/search_result_view_settings";
-import { ViewModeType } from "../../doi_filter/search_result_view_settings";
+import { SearchResultViewSettings } from "../doi_filter/search_result_view_settings";
+import { ViewModeType } from "../doi_filter/search_result_view_settings";
 
 function getMaxPageNumber(viewSetting: SearchResultViewSettings, foundRecordCount: number): number {
     if(foundRecordCount == 0){
@@ -87,4 +87,5 @@ export function renderViewSettingBox(filterResult: SearchResultViewSettings, fou
     setPageNumberSelectHTMLElement(filterResult.pageNumber!, getMaxPageNumber(filterResult, foundRecordCount));
     setPageSizeSelectHTMLElement(filterResult.pageSize!);
 }
+
   

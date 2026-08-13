@@ -43,6 +43,24 @@ export class LightWeightDOIRecord {
         return this.year == null || Number.isNaN(this.year) || this.year < 100;
     }
 
+    public getDateNumber() : number {
+        let v = 0;
+        if(this.isUnknownYear()) {
+            v += 100000000;
+        }else{
+            v = this.year * 10000;
+        }
+        if(this.month > 0 && this.month < 13) {
+            v += this.month * 100;
+        }else{
+            v += 9900;
+        }
+        return v;
+    }
+    public isUnknownMonth(): boolean {
+        return this.month == null || Number.isNaN(this.month) || this.month < 1 || this.month > 12;
+    }
+
 }
 export class DOIRecord {
     public id: number = -1;

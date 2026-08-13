@@ -148,7 +148,7 @@
     </fieldset>
 
     <button onclick="clickPrimarySearchFilterButton()">Search</button>
-    <button>Reset</button>
+    <button onclick="clickResetButtonOfPrimarySearchFilterBox()">Reset</button>
   </details>
 
   <details open class="ssf-main-div" id="ssf-main">
@@ -196,8 +196,31 @@
       <legend>Keywords</legend>
       <input type="text" id="ssf-keywords-input" name="ssf-keywords-input" size="20" />
     </fieldset>
+    <button onclick="clickResetButtonOfSecondarySearchFilterBox()">Reset</button>
 
   </details>
+
+  <fieldset>
+    <legend>Sort Order</legend>
+    <div>
+      <input type="radio" id="primary-sort-order-default-radio" value="default" name="primary-sort-order-radio" onchange="sortOrderInputChange('default')" />
+      <label for="primary-sort-order-default-radio">Default</label>
+
+      <input type="radio" id="primary-sort-order-newest-first-radio" value="newest-first" name="primary-sort-order-radio" onchange="sortOrderInputChange('newest-first')" />
+      <label for="primary-sort-order-newest-first-radio">Newest first</label>
+
+      <input type="radio" id="primary-sort-order-oldest-first-radio" value="oldest-first" name="primary-sort-order-radio" onchange="sortOrderInputChange('oldest-first')" />
+      <label for="primary-sort-order-oldest-first-radio">Oldest first</label>
+
+      <input type="radio" id="primary-sort-order-title-a-z-radio" value="title-a-z" name="primary-sort-order-radio" onchange="sortOrderInputChange('title-a-z')" />
+      <label for="primary-sort-order-title-a-z-radio">Title: A–Z</label>
+
+      <input type="radio" id="primary-sort-order-title-z-a-radio" value="title-z-a" name="primary-sort-order-radio" onchange="sortOrderInputChange('title-z-a')" />
+      <label for="primary-sort-order-title-z-a-radio">Title: Z–A</label>
+
+    </div>
+  </fieldset>
+
 
   <fieldset>
     <legend>View Setting</legend>
@@ -211,7 +234,6 @@
         <label>Page size:</label> <select id="view-setting:page-size-select"
           onchange="viewSettingInputChange('page-size')"></select>
       </li>
-
     </ul>
   </fieldset>
   <div id="search-result-message-div"></div>
