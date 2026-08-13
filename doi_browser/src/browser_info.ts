@@ -26,7 +26,7 @@ export class BrowserInfo {
     public finalResultCache: Map<string, number[]> = new Map();
     public finalResultSummaryCache: Map<string, FoundRecordSummary> = new Map();
 
-    public viewSetting : SearchResultViewSettings = new SearchResultViewSettings();
+    public viewSettings : SearchResultViewSettings = new SearchResultViewSettings();
 
     //public currentDOIFilter: DOIFilter = new DOIFilter();
     //public doiResultCache: DOIResultCache = new DOIResultCache();
@@ -37,12 +37,14 @@ export class BrowserInfo {
 
 
     private renderMainWindow(): void {
-        if (this.viewSetting.viewMode == "article_list") {
+        if (this.viewSettings.mode == "article_list") {
             const finalHash = this.getFianlHash();
             const foundRecordIDs = this.finalResultCache.get(finalHash)!;
-            const startIndex = this.viewSetting.getItemIndex();
-            const endIndex = Math.min(startIndex + this.viewSetting.pageSize!, foundRecordIDs.length);
+            const startIndex = this.viewSettings.getItemIndex();
+            const endIndex = Math.min(startIndex + this.viewSettings.pageSize!, foundRecordIDs.length);
             const foundRecordIDsPart = foundRecordIDs.slice(startIndex, endIndex);
+
+            console.log("startIndex: " + startIndex + ", endIndex: " + endIndex + ", foundRecordIDsPart.length: " + foundRecordIDsPart.length);
 
             DOIFilterStandardRender.render(foundRecordIDsPart, startIndex, this.doiInfoCollection!);
         }
@@ -55,6 +57,9 @@ export class BrowserInfo {
             const foundRecordSummary = this.primaryResultSummaryCache.get(this.primarySearchFilter.getHash(true))!;
             SearchFilterBoxFunctions.initializeFilterBox(false, foundRecordSummary, this.doiInfoCollection!);    
         }
+    }
+    private renderViewSettingBox(): void {
+        renderViewSettingBox(this.viewSettings, this.finalResultCache.get(this.getFianlHash())!.length);
     }
 
     private async processPrimarySearchFilter(): Promise<void> {
@@ -111,12 +116,13 @@ export class BrowserInfo {
 
     public async initialize(doiInfoCollection: DOIRecordCollection): Promise<void> {
         this.doiInfoCollection = doiInfoCollection;
-        await this.rebuildFromURLParameters(true, true);
+        await this.rebuildFromURLParameters(true, true, true);
     }
-    public async rebuildFromURLParameters(updatePrimaryFilterBox: boolean, updateSecondaryFilterBox: boolean): Promise<void> {
+    public async rebuildFromURLParameters(updatePrimaryFilterBox: boolean, updateSecondaryFilterBox: boolean, updateViewSettingBox: boolean): Promise<void> {
         this.primarySearchFilter = URLProcessor.buildSearchFilterFromURL(true);
         this.secondarySearchFilter = URLProcessor.buildSearchFilterFromURL(false);
-
+        this.viewSettings = SearchResultViewSettings.buildFromURLParameters();
+        
         console.log("secondarySearchFilter: " + this.secondarySearchFilter.getHash(false));
 
         await this.processPrimarySearchFilter();
@@ -124,6 +130,9 @@ export class BrowserInfo {
 
         this.renderFilterBoxes(updatePrimaryFilterBox, updateSecondaryFilterBox);
         this.renderMainWindow();
+        if(updateViewSettingBox){
+            this.renderViewSettingBox();
+        }
 
         const finalRecordCount = this.finalResultCache.get(this.getFianlHash())!.length;
         const searchResultMessageDiv = document.getElementById("search-result-message-div");
@@ -140,14 +149,23 @@ export class BrowserInfo {
         SearchFilterBoxFunctions.setURLParameters(true, newParameters);
         SearchFilterBoxFunctions.resetURLParameters(false);
 
-        await this.rebuildFromURLParameters(false, true);
+        await this.rebuildFromURLParameters(false, true, true);
     }
 
     public async rebuildByChangingSecondarySearchFilterBox(): Promise<void> {
         const newParameters = SearchFilterBoxFunctions.convertInputToURLParameters(false);
         SearchFilterBoxFunctions.setURLParameters(false, newParameters);
 
-        await this.rebuildFromURLParameters(false, false);
+        await this.rebuildFromURLParameters(false, false, true);
+    }
+
+    public async rebuildByChangingViewSettingBox(): Promise<void> {
+        this.viewSettings = SearchResultViewSettings.convertHTMLElementToInstance();
+        const newParameters = this.viewSettings.convertToURLParameters();
+        URLProcessor.resetURLParameters(SearchResultViewSettings.getURLParameterKeys());
+        URLProcessor.setURLParameters(newParameters);
+        await this.rebuildFromURLParameters(false, false, true);
+
     }
 
     public print(): void {

@@ -83,7 +83,7 @@ function setPageSizeSelectHTMLElement(selectedValue: number) {
 
 
 export function renderViewSettingBox(filterResult: SearchResultViewSettings, foundRecordCount: number) {
-    setModeSelectHTMLElement(filterResult.viewMode);
+    setModeSelectHTMLElement(filterResult.mode);
     setPageNumberSelectHTMLElement(filterResult.pageNumber!, getMaxPageNumber(filterResult, foundRecordCount));
     setPageSizeSelectHTMLElement(filterResult.pageSize!);
 }

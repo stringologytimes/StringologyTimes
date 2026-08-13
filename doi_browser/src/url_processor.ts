@@ -4,6 +4,22 @@ import { AnyContainerType, AnyPaperType, AnyOtherType } from "./doi_record";
 
 export class URLProcessor {
 
+    public static setURLParameters(parameters: [string, string][]): void {
+        const url = new URL(window.location.href);
+
+        parameters.forEach(parameter => {
+            url.searchParams.set(parameter[0], parameter[1]);
+        });
+        window.history.replaceState(null, "", url.toString());
+    }
+    public static resetURLParameters(parameters: string[]): void {
+        const url = new URL(window.location.href);
+        parameters.forEach(parameter => {
+            url.searchParams.delete(parameter);
+        });
+        window.history.replaceState(null, "", url.toString());
+    }
+
 
     public static buildSearchFilterFromURL(isPrimaryFilter: boolean) : SearchFilter {
         const idPrefix = isPrimaryFilter ? "psf-" : "ssf-";

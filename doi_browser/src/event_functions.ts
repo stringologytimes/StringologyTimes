@@ -106,6 +106,9 @@ export async function secondarySearchFilterChange(inputElementName: string, brow
 }
 
 export function ViewSettingInputChange(inputElementName: string, browserInfo: BrowserInfo) {
+
+  browserInfo.rebuildByChangingViewSettingBox();
+  /*
   const url = new URL(window.location.href);
   if (inputElementName == "view-mode") {
     const selected = document.querySelector('input[name="view-mode-checkbox"]:checked');
@@ -127,6 +130,7 @@ export function ViewSettingInputChange(inputElementName: string, browserInfo: Br
     url.searchParams.set("page_size", pageSize);
   }
   history.pushState({}, "", url);
+  */
   //void process(browserInfo);
 }
 
