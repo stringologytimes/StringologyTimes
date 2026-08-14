@@ -17,9 +17,19 @@ export class DOIRecordTemplate {
     }
     private static getSummaryInfoText(doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection): string {
         //const dataStr = `${doiInfo.year}-${doiInfo.month <= 0 ? "?" : doiInfo.month}`;
-        const containerTitle = doiInfo.container_title;
-        const volumStr = doiInfo.volume_issue;
-        const seriesTitle = doiInfo.seriesTitle;
+        let containerTitle = doiInfo.container_title;
+
+        if(doiInfo.container_DOI.length > 0){
+            const containerID = doiInfoCollection.getIDByDOI(doiInfo.container_DOI);
+            if(containerID != null){
+                const containerDOIInfo = doiInfoCollection.getDOIInfo(containerID);
+                containerTitle = containerDOIInfo.title;
+            }
+        }
+
+
+        //const volumStr = doiInfo.volume_issue;
+        //const seriesTitle = doiInfo.seriesTitle;
 
 
 
@@ -28,12 +38,12 @@ export class DOIRecordTemplate {
             const containerTypeChildrenCount = doiInfoCollection.getContainerTypeChildrenCount(doiInfo.id);
             const primaryDescendantCount = doiInfoCollection.getPrimaryDescendantCount(doiInfo.id);
             const secondaryDescendantCount = doiInfoCollection.getSecondaryDescendantCount(doiInfo.id);
-            return `${seriesTitle}(${containerTypeChildrenCount} containers, ${primaryDescendantCount} primary records, ${secondaryDescendantCount} secondary records)`;
+            return `${containerTitle}(${containerTypeChildrenCount} containers, ${primaryDescendantCount} primary records, ${secondaryDescendantCount} secondary records)`;
         }else{
-            if(seriesTitle.length > 0){
-                return `${seriesTitle}(${containerTitle})`;
-            }else{
+            if(containerTitle.length > 0){
                 return `${containerTitle}`;
+            }else{
+                return `Unknown container`;
             }
     
         }
