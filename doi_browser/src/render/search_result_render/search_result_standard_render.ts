@@ -1,6 +1,8 @@
-import { DOIRecord } from "../../doi_record";
+import { containerTypeList, DOIRecord } from "../../doi_record";
 import { DOIRecordCollection } from "../../doi_record_collection";
 import { DOIRecordTemplate } from "./templates/doi_record_template";
+import { ContainerRecordRender } from "./container_record_render";
+import { DOIRecordDetailsTemplate } from "./templates/doi_record_details_template";
 
 
 
@@ -37,8 +39,19 @@ export class SearchResultStandardRender {
             //const currentDOIListPart = browserInfo.getCurrentDOIListPart();
 
             foundRecordIDs.forEach((doiID, index) => {
+                const doiInfo = doiInfoCollection.getDOIInfo(doiID);
                 var li = document.createElement('li');
-                DOIRecordTemplate.renderDOIRecord(li, doiID, doiInfoCollection);
+
+                const isContainerRecord = containerTypeList.includes(doiInfo.type);
+                DOIRecordTemplate.setArticleTemplate(li, doiInfoTemplate, isContainerRecord);
+                DOIRecordTemplate.renderDOIRecordSummary(li, doiID, doiInfoCollection);
+                
+                if(isContainerRecord){
+                    ContainerRecordRender.renderDOISub(li, doiID, doiInfoCollection);
+                }else{
+                    DOIRecordDetailsTemplate.renderDOIRecordDetails(li, doiID, doiInfoCollection, doiInfoTemplate);
+                }
+
                 ol.appendChild(li);
             });
             outputDiv.appendChild(ol);

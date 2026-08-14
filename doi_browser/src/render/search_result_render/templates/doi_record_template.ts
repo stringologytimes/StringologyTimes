@@ -1,7 +1,7 @@
 import { DOIRecordCollection } from "../../../doi_record_collection";
 import { addIconToSpan, setIconToLink, setIconToSpan } from "../../../svg_icon";
 import { DOIRecord } from "../../../doi_record";
-
+import { DOIRecordDetailsTemplate } from "./doi_record_details_template";
 
 export class DOIRecordTemplate {
     private static getDateStr(doiInfo: DOIRecord): string {
@@ -133,143 +133,7 @@ export class DOIRecordTemplate {
             throw new Error("titleNumberSpan is not found");
         }
     }
-    private static renderContainerDOISpan(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
 
-        const containerDOISpan = article.querySelector('.container_DOI');
-        if (containerDOISpan) {
-            const labelSpan = document.createElement('span');
-            labelSpan.textContent = "Container DOI: ";
-            containerDOISpan.appendChild(labelSpan);
-
-            if(doiInfo.container_DOI.length > 0){
-                const link = document.createElement('a');
-                link.href = `#`;
-                link.textContent = doiInfo.container_DOI;
-                link.addEventListener("click", (event) => {
-                    event.preventDefault();
-                    (window as any).initializeParameter([["keyword", `@DOI:${doiInfo.container_DOI}`]]);
-                });
-                containerDOISpan.appendChild(link);    
-            }else{
-                const labelSpan = document.createElement('span');
-                labelSpan.textContent = "null";
-                containerDOISpan.appendChild(labelSpan);
-
-            }
-        } else {
-            throw new Error("containerDOISpan is not found");
-        }
-
-    }
-    private static renderSeriesTitleSpan(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
-
-        const seriesTitleSpan = article.querySelector('.series_title');
-        if (seriesTitleSpan) {
-            seriesTitleSpan.textContent = `Series Title: ${doiInfo.seriesTitle}`;
-        } else {
-            throw new Error("seriesTitleSpan is not found");
-        }
-
-    }
-    private static renderDateSpan(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
-
-        const dateLi = article.querySelector('.date');
-        if (dateLi) {
-            if (doiInfo.year >= 0) {
-                if (doiInfo.month >= 0) {
-                    dateLi.textContent = `Date: ${doiInfo.year}-${doiInfo.month}`;
-                } else {
-                    dateLi.textContent = `Date: s${doiInfo.year}`;
-                }
-            } else {
-                dateLi.textContent = `Date: Unknown`;
-            }
-        } else {
-            throw new Error("dateLi is not found")
-        }
-    }
-
-    private static renderContainerTitleSpan(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
-
-        const containerTitleSpan = article.querySelector('.container_title');
-        if (containerTitleSpan) {
-            containerTitleSpan.textContent = "Container Title: " + (doiInfo.container_title || '');
-        } else {
-            throw new Error("containerTitleSpan is not found");
-        }
-    }
-
-    private static renderVolumeSpan(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
-
-        const volumeSpan = article.querySelector('.volume');
-        if (volumeSpan && volumeSpan instanceof HTMLLIElement) {
-            if (doiInfo.volume_issue.length > 0) {
-                volumeSpan.textContent = `Volume: ${doiInfo.volume_issue}`;
-            } else {
-                volumeSpan.style.display = 'none';
-            }
-        } else {
-            throw new Error("volumeSpan is not found");
-        }
-    }
-    private static renderOptionalIDs(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
-
-        const optionalIdsSpan = article.querySelector('.optional_ids');
-        if (optionalIdsSpan) {
-            optionalIdsSpan.textContent = "Optional IDs: " + doiInfo.optional_ids.join(", ");
-        } else {
-            throw new Error("optionalIdsSpan is not found");
-        }
-    }
-    private static renderAuthors(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
-        const authorTemplate = document.getElementById('author-template') as HTMLTemplateElement;
-
-        // Authorsを設定
-        const authorsDiv = article.querySelector('.authors');
-        if (authorsDiv && doiInfo.authors && doiInfo.authors.length > 0) {
-            authorsDiv.innerHTML = '';
-            doiInfo.authors.forEach((author, index) => {
-                const authorClone = authorTemplate.content.cloneNode(true) as DocumentFragment;
-                const authorSpan = authorClone.querySelector('.author');
-                if (authorSpan) {
-                    authorSpan.textContent = author;
-                }
-                authorsDiv.appendChild(authorClone);
-                // 最後の要素以外はカンマを追加
-                if (index < doiInfo.authors.length - 1) {
-                    const comma = document.createTextNode(', ');
-                    authorsDiv.appendChild(comma);
-                }
-            });
-        }
-    }
-    private static renderDoiReferences(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
-
-        const doiReferenceTemplate = document.getElementById('doi-reference-template') as HTMLTemplateElement;
-        // DOI Referencesを設定
-        const doiReferencesDiv = article.querySelector('.doi_references');
-        if (doiReferencesDiv && doiInfo.doiReferences && doiInfo.doiReferences.length > 0) {
-            doiReferencesDiv.innerHTML = '';
-            doiInfo.doiReferences.forEach((doiRef, index) => {
-                const doiRefClone = doiReferenceTemplate.content.cloneNode(true) as DocumentFragment;
-                const doiRefSpan = doiRefClone.querySelector('.doi-reference');
-                if (doiRefSpan) {
-                    const link = document.createElement('a');
-                    link.href = `https://doi.org/${encodeURIComponent(doiRef)}`;
-                    link.target = '_blank';
-                    link.textContent = doiRef;
-                    doiRefSpan.appendChild(link);
-                }
-                doiReferencesDiv.appendChild(doiRefClone);
-                // 最後の要素以外は改行を追加
-                if (index < doiInfo.doiReferences.length - 1) {
-                    const br = document.createElement('br');
-                    doiReferencesDiv.appendChild(br);
-                }
-            });
-
-        }
-    }
     private static renderTags(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
 
         const tagsSpan = article.querySelector('.tags-text');
@@ -283,36 +147,36 @@ export class DOIRecordTemplate {
             throw new Error("tagsSpan is not found");
         }
     }
-    private static renderChildrenSpan(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
+    public static renderDOIRecordSummary(outputDiv: HTMLElement, doiID: number, doiInfoCollection: DOIRecordCollection){
+        const article = outputDiv.querySelector('article');
+        if (!article) return;
+        const doiInfo = doiInfoCollection.getDOIInfo(doiID);
+        this.renderTitleNumberSpan(article, doiInfo, doiInfoCollection);
+        this.renderTitleText(article, doiInfo, doiInfoCollection);
+        this.renderDOILink(article, doiInfo, doiInfoCollection);
+        this.renderStatusIconSpan(article, doiInfo, doiInfoCollection);
+        this.renderTypeIconSpan(article, doiInfo, doiInfoCollection);
+        this.renderYearIconSpan(article, doiInfo, doiInfoCollection);
+        this.renderOptionalIconSpan(article, doiInfo, doiInfoCollection);
+        this.renderSummaryInfoText(article, doiInfo, doiInfoCollection);
+        this.renderTags(article, doiInfo, doiInfoCollection);
 
-        const childrenSpan = article.querySelector('.children');
-        if (childrenSpan) {
-            if(doiInfo.type == "Book" || doiInfo.type == "ConferenceProceeding" || doiInfo.type == "ProceedingsCollection" || doiInfo.type == "Journal-Issue" || doiInfo.type == "ReferenceBook" || doiInfo.type == "Monograph"){
-                const link = document.createElement('a');
-                link.href = `#`;
-                link.textContent = "Articles";
-                link.addEventListener("click", (event) => {
-                    event.preventDefault();
-                    (window as any).initializeParameter([["keyword", `@CONTAINER_DOI:${doiInfo.doi}`]]);
-                });
-                childrenSpan.appendChild(link);    
-            }else{
-                childrenSpan.innerHTML = '';
+    }
+
+    public static setArticleTemplate(outputDiv: HTMLElement, doiInfoTemplate: HTMLTemplateElement, openDetail : boolean){
+        const doiInfoClone = doiInfoTemplate.content.cloneNode(true) as DocumentFragment;
+        const article = doiInfoClone.querySelector('article');
+        if (!article) return;
+        if (openDetail) {
+            const details = article.querySelector('details');
+            if (details) {
+                details.open = true;
             }
-        } else {
-            throw new Error("childrenSpan is not found");
         }
-    }
-    private static renderDOILi(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
-
-        const doiLi = article.querySelector('.doi');
-        if (doiLi) {
-            doiLi.textContent = doiInfo.doi;
-        } else {
-            throw new Error("doiLi is not found");
-        }
+        outputDiv.appendChild(article);
     }
 
+    /*
 
     public static renderDOIRecord(outputDiv: HTMLElement, doiID: number, doiInfoCollection: DOIRecordCollection){
         const doiInfoTemplate = document.getElementById('doi-record-template') as HTMLTemplateElement;
@@ -331,7 +195,7 @@ export class DOIRecordTemplate {
 
         if (!article) return;
 
-        const detailsDiv = article.querySelector(".details_div");
+        const detailsDiv = article.querySelector(".details_div") as HTMLElement;
         if (detailsDiv) {
             detailsDiv.appendChild(detailsDivClone);
         } else {
@@ -341,31 +205,14 @@ export class DOIRecordTemplate {
         // 基本情報を設定
         article.setAttribute("id", `article_${doiInfo.id}`);
 
+        this.renderDOIRecordSummary(article, doiID, doiInfoCollection);
+        DOIRecordDetailsTemplate.renderDOIRecordDetails(detailsDiv, doiID, doiInfoCollection);
 
-        this.renderTitleNumberSpan(article, doiInfo, doiInfoCollection);
-        this.renderTitleText(article, doiInfo, doiInfoCollection);
-        this.renderDOILink(article, doiInfo, doiInfoCollection);
-        this.renderStatusIconSpan(article, doiInfo, doiInfoCollection);
-        this.renderTypeIconSpan(article, doiInfo, doiInfoCollection);
-        this.renderYearIconSpan(article, doiInfo, doiInfoCollection);
-        this.renderOptionalIconSpan(article, doiInfo, doiInfoCollection);
-        this.renderSummaryInfoText(article, doiInfo, doiInfoCollection);
-        this.renderDOILi(article, doiInfo, doiInfoCollection);
-
-        this.renderContainerDOISpan(article, doiInfo, doiInfoCollection);
-        this.renderSeriesTitleSpan(article, doiInfo, doiInfoCollection);
-        this.renderDateSpan(article, doiInfo, doiInfoCollection);
-        this.renderContainerTitleSpan(article, doiInfo, doiInfoCollection);
-        this.renderVolumeSpan(article, doiInfo, doiInfoCollection);
-        this.renderOptionalIDs(article, doiInfo, doiInfoCollection);
-        this.renderAuthors(article, doiInfo, doiInfoCollection);
-        this.renderDoiReferences(article, doiInfo, doiInfoCollection);
-        this.renderTags(article, doiInfo, doiInfoCollection);
-        this.renderChildrenSpan(article, doiInfo, doiInfoCollection);
         
 
 
 
         outputDiv.appendChild(article);
     }
+    */
 }
