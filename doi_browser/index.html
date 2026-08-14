@@ -77,6 +77,7 @@
       display: block;
       margin-left: 1.5em;
     }
+
     .ssf-types-span {
       display: block;
       margin-left: 1.5em;
@@ -85,10 +86,10 @@
     .psf-main-div {
       background-color: lavender;
     }
+
     .ssf-main-div {
       background-color: orange;
     }
-
   </style>
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
 </head>
@@ -121,13 +122,16 @@
     <fieldset>
       <legend>Container of Records</legend>
       <div>
-        <span>Top container type:</span> <select id="psf-top-container-type-select" onchange="primarySearchFilterChange('psf-top-container-type')"></select>
+        <span>Top container type:</span> <select id="psf-top-container-type-select"
+          onchange="primarySearchFilterChange('psf-top-container-type')"></select>
       </div>
       <div>
-        <span>Top container:</span> <select id="psf-top-container-select" onchange="primarySearchFilterChange('psf-top-container')"></select>
+        <span>Top container:</span> <select id="psf-top-container-select"
+          onchange="primarySearchFilterChange('psf-top-container')"></select>
       </div>
       <div>
-        <span>Sub container:</span> <select id="psf-sub-container-select" onchange="primarySearchFilterChange('psf-sub-container')"></select>
+        <span>Sub container:</span> <select id="psf-sub-container-select"
+          onchange="primarySearchFilterChange('psf-sub-container')"></select>
       </div>
     </fieldset>
     <fieldset>
@@ -171,25 +175,30 @@
     <fieldset>
       <legend>Container of Records</legend>
       <div>
-        <span>Top container type:</span> <select id="ssf-top-container-type-select" onchange="secondarySearchFilterChange('ssf-top-container-type')"></select>
+        <span>Top container type:</span> <select id="ssf-top-container-type-select"
+          onchange="secondarySearchFilterChange('ssf-top-container-type')"></select>
       </div>
       <div>
-        <span>Top container:</span> <select id="ssf-top-container-select" onchange="secondarySearchFilterChange('ssf-top-container')"></select>
+        <span>Top container:</span> <select id="ssf-top-container-select"
+          onchange="secondarySearchFilterChange('ssf-top-container')"></select>
       </div>
       <div>
-        <span>Sub container:</span> <select id="ssf-sub-container-select"  onchange="secondarySearchFilterChange('ssf-sub-container')"></select>
+        <span>Sub container:</span> <select id="ssf-sub-container-select"
+          onchange="secondarySearchFilterChange('ssf-sub-container')"></select>
       </div>
     </fieldset>
     <fieldset id="ssf-year-fieldset">
       <legend>Publication Year</legend>
-      From <select id="ssf-minimum-year-select"  onchange="secondarySearchFilterChange('ssf-minimum-year')"></select>
+      From <select id="ssf-minimum-year-select" onchange="secondarySearchFilterChange('ssf-minimum-year')"></select>
       To <select id="ssf-maximum-year-select" onchange="secondarySearchFilterChange('ssf-maximum-year')"></select>
     </fieldset>
     <fieldset>
       <legend>Record Type</legend>
-      <input type="checkbox" id="ssf-primary-record-checkbox" checked onchange="secondarySearchFilterChange('ssf-primary-record')"/>
+      <input type="checkbox" id="ssf-primary-record-checkbox" checked
+        onchange="secondarySearchFilterChange('ssf-primary-record')" />
       <label for="ssf-primary-record-checkbox" id="ssf-primary-record-label">Primary record</label>
-      <input type="checkbox" id="ssf-secondary-record-checkbox" checked onchange="secondarySearchFilterChange('ssf-secondary-record')"/>
+      <input type="checkbox" id="ssf-secondary-record-checkbox" checked
+        onchange="secondarySearchFilterChange('ssf-secondary-record')" />
       <label for="ssf-secondary-record-checkbox" id="ssf-secondary-record-label">Secondary record</label>
     </fieldset>
     <fieldset>
@@ -203,19 +212,24 @@
   <fieldset>
     <legend>Sort Order</legend>
     <div>
-      <input type="radio" id="primary-sort-order-default-radio" value="default" name="primary-sort-order-radio" onchange="sortOrderInputChange('default')" />
+      <input type="radio" id="primary-sort-order-default-radio" value="default" name="primary-sort-order-radio"
+        onchange="sortOrderInputChange('default')" />
       <label for="primary-sort-order-default-radio">Default</label>
 
-      <input type="radio" id="primary-sort-order-newest-first-radio" value="newest-first" name="primary-sort-order-radio" onchange="sortOrderInputChange('newest-first')" />
+      <input type="radio" id="primary-sort-order-newest-first-radio" value="newest-first"
+        name="primary-sort-order-radio" onchange="sortOrderInputChange('newest-first')" />
       <label for="primary-sort-order-newest-first-radio">Newest first</label>
 
-      <input type="radio" id="primary-sort-order-oldest-first-radio" value="oldest-first" name="primary-sort-order-radio" onchange="sortOrderInputChange('oldest-first')" />
+      <input type="radio" id="primary-sort-order-oldest-first-radio" value="oldest-first"
+        name="primary-sort-order-radio" onchange="sortOrderInputChange('oldest-first')" />
       <label for="primary-sort-order-oldest-first-radio">Oldest first</label>
 
-      <input type="radio" id="primary-sort-order-title-a-z-radio" value="title-a-z" name="primary-sort-order-radio" onchange="sortOrderInputChange('title-a-z')" />
+      <input type="radio" id="primary-sort-order-title-a-z-radio" value="title-a-z" name="primary-sort-order-radio"
+        onchange="sortOrderInputChange('title-a-z')" />
       <label for="primary-sort-order-title-a-z-radio">Title: A–Z</label>
 
-      <input type="radio" id="primary-sort-order-title-z-a-radio" value="title-z-a" name="primary-sort-order-radio" onchange="sortOrderInputChange('title-z-a')" />
+      <input type="radio" id="primary-sort-order-title-z-a-radio" value="title-z-a" name="primary-sort-order-radio"
+        onchange="sortOrderInputChange('title-z-a')" />
       <label for="primary-sort-order-title-z-a-radio">Title: Z–A</label>
 
     </div>
@@ -270,7 +284,28 @@
     </span>
   </template>
 
-
+  <template id="details-div-standard-template">
+    <ul>
+      <li class=" doi">
+      <li class="date">
+      </li>
+      <li>
+        <div class="authors"></div>
+      </li>
+      <li class="series_title"></li>
+      <li class="container_title"></li>
+      <li class="container_DOI"></li>
+      <li class="volume"></li>
+      <li class="optional_ids"></li>
+      <li>
+        <details>
+          <summary>DOI References</summary>
+          <div class="doi_references"></div>
+        </details>
+      </li>
+      <li class="children"></li>
+    </ul>
+  </template>
 
   <template id="doi-record-template">
     <article style="display: flex; align-items: center; gap: 8px;">
@@ -287,33 +322,13 @@
           <span class="tags-text"></span>
         </summary>
         <div class="details_div"">
-          <ul>
-            <li class=" doi">
-          <li class="date">
-          </li>
-          <li>
-            <div class="authors"></div>
-          </li>
-          <li class="series_title"></li>
-          <li class="container_title"></li>
-          <li class="container_DOI"></li>
-          <li class="volume"></li>
-          <li class="optional_ids"></li>
-          <li>
-            <details>
-              <summary>DOI References</summary>
-              <div class="doi_references"></div>
-            </details>
-          </li>
-          <li class="children"></li>
-          </ul>
         </div>
       </details>
 
     </article>
   </template>
-  <template id="container-title-template">
-    <div class="container-title"></div>
+  <template id=" container-title-template">
+          <div class="container-title"></div>
   </template>
   <template id="container-record-template">
     <div class="container-record"></div>

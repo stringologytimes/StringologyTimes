@@ -1,6 +1,6 @@
-import { PrimarySearchResult } from "../doi_filter/primary_search_result";
-import { SummaryInfo } from "../doi_filter/summary_info";
-import { SearchResultViewSettings } from "../doi_filter/search_result_view_settings";
+import { PrimarySearchResult } from "../../doi_filter/primary_search_result";
+import { SummaryInfo } from "../../doi_filter/summary_info";
+import { SearchResultViewSettings } from "../../doi_filter/search_result_view_settings";
 
 
 export function renderSeriesTitleList(filterResult: PrimarySearchResult, viewSetting: SearchResultViewSettings, summaryInfo: SummaryInfo) {

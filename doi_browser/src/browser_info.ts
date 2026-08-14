@@ -1,12 +1,7 @@
 import { DOIRecordCollection } from "./doi_record_collection";
-import { renderViewSettingBox } from "./render/view_setting_box_render";
-import { DOIFilterStandardRender } from "./render/doi_filter_standard_render";
-import { SearchResultCache } from "./doi_filter/search_result_cache";
-import { getDOIRecordTypeList } from "./doi_record_collection";
-import { containerTypeList, paperTypeList } from "./doi_record";
-//import { PrimarySearchFilterRender } from "./render/settings/primary_search_filter_render";
+import { renderViewSettingBox } from "./render/settings/view_setting_box_render";
+import { SearchResultStandardRender } from "./render/search_result_render/search_result_standard_render";
 import { SearchFilter } from "./doi_filter/search_filter";
-//import { SecondarySearchFilterRender } from "./render/settings/secondary_search_filter_render";
 import { hideLoading, showLoading, yieldForPaint } from "./loading_overlay";
 import { FoundRecordSummary } from "./doi_filter/found_record_summary";
 import { SearchResultViewSettings } from "./doi_filter/search_result_view_settings";
@@ -47,7 +42,7 @@ export class BrowserInfo {
 
             console.log("startIndex: " + startIndex + ", endIndex: " + endIndex + ", foundRecordIDsPart.length: " + foundRecordIDsPart.length);
 
-            DOIFilterStandardRender.render(foundRecordIDsPart, startIndex, this.doiInfoCollection!);
+            SearchResultStandardRender.render(foundRecordIDsPart, startIndex, this.doiInfoCollection!);
         }
     }
     private renderFilterBoxes(updatePrimaryFilterBox: boolean, updateSecondaryFilterBox: boolean): void {

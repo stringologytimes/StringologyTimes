@@ -1,7 +1,7 @@
-import { PrimarySearchResult } from "../doi_filter/primary_search_result";
-import { SummaryInfo } from "../doi_filter/summary_info";
-import { SearchResultViewSettings } from "../doi_filter/search_result_view_settings";
-import { DOIRecordCollection } from "../doi_record_collection";
+import { PrimarySearchResult } from "../../doi_filter/primary_search_result";
+import { SummaryInfo } from "../../doi_filter/summary_info";
+import { SearchResultViewSettings } from "../../doi_filter/search_result_view_settings";
+import { DOIRecordCollection } from "../../doi_record_collection";
 import { DOIFilterStandardRender } from "./doi_filter_standard_render";
 
 
