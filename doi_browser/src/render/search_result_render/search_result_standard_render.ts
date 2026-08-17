@@ -27,8 +27,9 @@ export class SearchResultStandardRender {
             const doiInfoTemplate = document.getElementById('doi-record-template') as HTMLTemplateElement;
             const authorTemplate = document.getElementById('author-template') as HTMLTemplateElement;
             const doiReferenceTemplate = document.getElementById('doi-reference-template') as HTMLTemplateElement;
+            const detailsDivTemplate = document.getElementById('details-div-standard-template') as HTMLTemplateElement;
 
-            if (!doiInfoTemplate || !authorTemplate || !doiReferenceTemplate) {
+            if (!doiInfoTemplate || !authorTemplate || !doiReferenceTemplate || !detailsDivTemplate) {
                 outputDiv.innerHTML = "<p>Error: Templates not found.</p>";
                 return;
             }
@@ -49,7 +50,7 @@ export class SearchResultStandardRender {
                 if(isContainerRecord){
                     ContainerRecordRender.renderDOISub(li, doiID, doiInfoCollection);
                 }else{
-                    DOIRecordDetailsTemplate.renderDOIRecordDetails(li, doiID, doiInfoCollection, doiInfoTemplate);
+                    DOIRecordDetailsTemplate.renderDOIRecordDetails(li, doiID, doiInfoCollection, detailsDivTemplate);
                 }
 
                 ol.appendChild(li);

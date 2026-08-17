@@ -29,6 +29,7 @@ export class DOIRecordDetailsTemplate {
 
             }
         } else {
+            console.log(article.outerHTML);
             throw new Error("containerDOISpan is not found");
         }
 
@@ -172,18 +173,19 @@ export class DOIRecordDetailsTemplate {
         }
     }
 
-    public static renderDOIRecordDetails(outputDiv: HTMLElement, doiID: number, doiInfoCollection: DOIRecordCollection, template: HTMLTemplateElement){
+    public static renderDOIRecordDetails(outputDiv: HTMLElement, doiID: number, doiInfoCollection: DOIRecordCollection, detailesTemplateElement: HTMLTemplateElement){
         const doiInfo = doiInfoCollection.getDOIInfo(doiID);
-        const detailsTemplate = template.content.cloneNode(true) as DocumentFragment;
+        const detailsTemplateFragment = detailesTemplateElement.content.cloneNode(true) as DocumentFragment;
         const article = outputDiv.querySelector('article');
 
         if (!article) return;
 
         const detailsDiv = article.querySelector(".details_div") as HTMLElement;
         if (detailsDiv) {
-            detailsDiv.appendChild(detailsTemplate);
+            detailsDiv.appendChild(detailsTemplateFragment);
         } else {
-            throw new Error("detailsDiv is not found");
+            console.log(article.outerHTML);
+            throw new Error("details_div is not found");
         }
         console.log(detailsDiv.innerHTML);
 
