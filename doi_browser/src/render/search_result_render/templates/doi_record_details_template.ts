@@ -173,13 +173,16 @@ export class DOIRecordDetailsTemplate {
         }
     }
 
-    public static renderDOIRecordDetails(outputDiv: HTMLElement, doiID: number, doiInfoCollection: DOIRecordCollection, detailesTemplateElement: HTMLTemplateElement){
+    public static renderDOIRecordDetails(outputDiv: HTMLElement, doiID: number, doiInfoCollection: DOIRecordCollection){
+        console.log("renderDOIRecordDetails/" + doiID);
+        console.log(outputDiv.outerHTML);
         const doiInfo = doiInfoCollection.getDOIInfo(doiID);
-        const detailsTemplateFragment = detailesTemplateElement.content.cloneNode(true) as DocumentFragment;
+        //const detailsTemplateFragment = detailesTemplateElement.content.cloneNode(true) as DocumentFragment;
         const article = outputDiv.querySelector('article');
 
         if (!article) return;
 
+        /*
         const detailsDiv = article.querySelector(".details_div") as HTMLElement;
         if (detailsDiv) {
             detailsDiv.appendChild(detailsTemplateFragment);
@@ -188,19 +191,20 @@ export class DOIRecordDetailsTemplate {
             throw new Error("details_div is not found");
         }
         console.log(detailsDiv.innerHTML);
+        */
 
 
 
-        this.renderContainerDOISpan(detailsDiv, doiInfo, doiInfoCollection);
-        this.renderSeriesTitleSpan(detailsDiv, doiInfo, doiInfoCollection);
-        this.renderDateSpan(detailsDiv, doiInfo, doiInfoCollection);
-        this.renderContainerTitleSpan(detailsDiv, doiInfo, doiInfoCollection);
-        this.renderVolumeSpan(detailsDiv, doiInfo, doiInfoCollection);
-        this.renderOptionalIDs(detailsDiv, doiInfo, doiInfoCollection);
-        this.renderAuthors(detailsDiv, doiInfo, doiInfoCollection);
-        this.renderDoiReferences(detailsDiv, doiInfo, doiInfoCollection);
-        this.renderChildrenSpan(detailsDiv, doiInfo, doiInfoCollection);
-        this.renderDOILi(detailsDiv, doiInfo, doiInfoCollection);
+        this.renderContainerDOISpan(article, doiInfo, doiInfoCollection);
+        this.renderSeriesTitleSpan(article, doiInfo, doiInfoCollection);
+        this.renderDateSpan(article, doiInfo, doiInfoCollection);
+        this.renderContainerTitleSpan(article, doiInfo, doiInfoCollection);
+        this.renderVolumeSpan(article, doiInfo, doiInfoCollection);
+        this.renderOptionalIDs(article, doiInfo, doiInfoCollection);
+        this.renderAuthors(article, doiInfo, doiInfoCollection);
+        this.renderDoiReferences(article, doiInfo, doiInfoCollection);
+        this.renderChildrenSpan(article, doiInfo, doiInfoCollection);
+        this.renderDOILi(article, doiInfo, doiInfoCollection);
 
     }
 

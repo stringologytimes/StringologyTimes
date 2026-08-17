@@ -58,14 +58,18 @@
       margin-top: 10px;
     }
 
-    .title-text {
+    .title-text, 
+    .title-text:visited {
       font-size: 20px;
       font-weight: bold;
-      color: #333;
       margin-top: 10px;
       margin-left: 10px;
+      text-decoration: none;
+      color: #0000ee;
     }
-
+    .title-text:hover {
+    text-decoration: underline;
+    }
     .summary-info-text {
       font-size: 18px;
       color: #666;
@@ -89,6 +93,9 @@
 
     .ssf-main-div {
       background-color: orange;
+    }
+    .children-ol {
+      padding-left: 30px;
     }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
@@ -284,55 +291,56 @@
     </span>
   </template>
 
-  <template id="details-div-standard-template">
-    <ul class="details-div-standard-ul">
-      <li class="doi">
-      <li class="date">
-      </li>
-      <li>
-        <div class="authors"></div>
-      </li>
-      <li class="series_title"></li>
-      <li class="container_title"></li>
-      <li class="container_DOI"></li>
-      <li class="volume"></li>
-      <li class="optional_ids"></li>
-      <li>
-        <details>
-          <summary>DOI References</summary>
-          <div class="doi_references"></div>
-        </details>
-      </li>
-      <li class="children"></li>
-    </ul>
-  </template>
 
   <template id="doi-record-template">
-    <article style="display: flex; align-items: center; gap: 8px;">
-      <details>
-        <summary class="title">
-          <span class="title-number-text"></span>
-          <a class="doi-link" target="_blank" rel="noopener" onclick="event.stopPropagation();"></a>
-          <span class="status-icon-span"></span>
-          <span class="type-icon-span"></span>
-          <span class="year-icon-span"></span>
-          <span class="optional-icon-span"></span>
-          <span class="title-text"></span>
-          <span class="summary-info-text"></span>
-          <span class="tags-text"></span>
-        </summary>
-        <div class="details_div"">
-        </div>
-      </details>
-
+    <article style="align-items: center; gap: 8px;">
+      <div class="title">
+        <span class="title-number-text"></span>
+        <a class="doi-link" target="_blank" rel="noopener" onclick="event.stopPropagation();"></a>
+        <span class="status-icon-span"></span>
+        <span class="type-icon-span"></span>
+        <span class="year-icon-span"></span>
+        <span class="optional-icon-span"></span>
+        <a class="title-text" href="#" id="openDialog" onclick="openDetailsDialog(event)"></a>
+        <span class="summary-info-text"></span>
+        <span class="tags-text"></span>
+      </div>
+      <div class="details_div"">
+      </div>
     </article>
   </template>
-  <template id="container-title-template">
-          <div class="container-title"></div>
+  <template id=" container-title-template">
+        <div class="container-title"></div>
   </template>
   <template id="container-record-template">
     <div class="container-record"></div>
   </template>
+  <dialog id="details-dialog">
+    <article>
+      <ul class="details-div-standard-ul">
+        <li class="doi">
+        <li class="date">
+        </li>
+        <li>
+          <div class="authors"></div>
+        </li>
+        <li class="series_title"></li>
+        <li class="container_title"></li>
+        <li class="container_DOI"></li>
+        <li class="volume"></li>
+        <li class="optional_ids"></li>
+        <li>
+          <details>
+            <summary>DOI References</summary>
+            <div class="doi_references"></div>
+          </details>
+        </li>
+        <li class="children"></li>
+      </ul>
+      <button onclick="closeDetailsDialog()">閉じる</button>
+    </article>
+
+  </dialog>
 
 </body>
 

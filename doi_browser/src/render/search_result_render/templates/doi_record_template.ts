@@ -115,11 +115,12 @@ export class DOIRecordTemplate {
         }
     }
 
-    private static renderTitleText(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
+    private static renderTitleText(article: HTMLElement, doiInfo: DOIRecord, doiID: number, doiInfoCollection: DOIRecordCollection){
         const titleSpan = article.querySelector('.title-text');
         if (titleSpan) {
             const titleStr = doiInfo.title || '';
             titleSpan.textContent = titleStr;
+            titleSpan.setAttribute("data-doi-id", doiID.toString());
         } else {
             throw new Error("titleSpan is not found");
         }
@@ -162,7 +163,7 @@ export class DOIRecordTemplate {
         if (!article) return;
         const doiInfo = doiInfoCollection.getDOIInfo(doiID);
         this.renderTitleNumberSpan(article, doiInfo, doiInfoCollection);
-        this.renderTitleText(article, doiInfo, doiInfoCollection);
+        this.renderTitleText(article, doiInfo, doiID, doiInfoCollection);
         this.renderDOILink(article, doiInfo, doiInfoCollection);
         this.renderStatusIconSpan(article, doiInfo, doiInfoCollection);
         this.renderTypeIconSpan(article, doiInfo, doiInfoCollection);

@@ -4,6 +4,7 @@ import { SearchResultStandardRender } from "./render/search_result_render/search
 import * as EventFunctions from "./event_functions";
 //import { DOIFilter } from "./doi_filter/doi_filter";
 import { hideLoading, showLoading } from "./loading_overlay";
+import { DOIRecordDetailsTemplate } from "./render/search_result_render/templates/doi_record_details_template";
 
 let browserInfo = new BrowserInfo();
 (window as any).browserInfo = browserInfo;
@@ -59,6 +60,30 @@ async function clickPrimarySearchFilterButton(){
 function viewSettingInputChange(inputElementName: string) {
   EventFunctions.ViewSettingInputChange(inputElementName, browserInfo);
 }
+
+function openDetailsDialog(e: Event) {
+  console.log("openDetailsDialog");
+  e.preventDefault();
+  const targetElement = e.target as HTMLElement;
+  const doiIDStr = targetElement.getAttribute("data-doi-id");
+  const doiID = parseInt(doiIDStr!);
+  const dialog = document.getElementById('details-dialog') as HTMLDialogElement;
+
+  DOIRecordDetailsTemplate.renderDOIRecordDetails(dialog, doiID, browserInfo.doiInfoCollection!);
+
+  //const scrollX = window.scrollX;
+  //const scrollY = window.scrollY;
+  
+  dialog.showModal();
+  
+  //window.scrollTo(scrollX, scrollY);
+
+}
+function closeDetailsDialog() {
+  const dialog = document.getElementById('details-dialog') as HTMLDialogElement;
+  dialog.close();
+}
+
 
 function containerTitleLiElementClick(containerTitle: string) {
   /*
@@ -125,7 +150,8 @@ function initializeParameter(parameterList: [string, string][]) {
 (window as any).clickResetButtonOfPrimarySearchFilterBox = clickResetButtonOfPrimarySearchFilterBox;
 (window as any).clickResetButtonOfSecondarySearchFilterBox = clickResetButtonOfSecondarySearchFilterBox;
 (window as any).sortOrderInputChange = sortOrderInputChange;
-
+(window as any).openDetailsDialog = openDetailsDialog;
+(window as any).closeDetailsDialog = closeDetailsDialog;
 async function domFinished() {
   showLoading("Loading...");
 

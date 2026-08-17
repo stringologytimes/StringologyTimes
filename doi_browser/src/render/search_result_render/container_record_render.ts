@@ -17,20 +17,23 @@ export class ContainerRecordRender {
         if (!doiInfoTemplate) {
             throw new Error("doiInfoTemplate is not found");
         }
+        /*
         const detailsDivTemplate = document.getElementById('details-div-standard-template') as HTMLTemplateElement;
         if (!detailsDivTemplate) {
             throw new Error("detailsDivTemplate is not found");
         }
+        */
 
         if(doiInfoCollection.idToDOIChildrenIDMapper.has(doiID)){
             const childrenIDs = doiInfoCollection.idToDOIChildrenIDMapper.get(doiID)!;
-            const ol2 = document.createElement('ol');
+            const ol2 = document.createElement('ol');            
             ol2.setAttribute("start", (1).toString());
+            ol2.setAttribute("class", "children-ol");
             childrenIDs.forEach((childrenID, index) => {
                 const li2 = document.createElement('li');
                 DOIRecordTemplate.setArticleTemplate(li2, doiInfoTemplate, false);
                 DOIRecordTemplate.renderDOIRecordSummary(li2, childrenID, doiInfoCollection);
-                DOIRecordDetailsTemplate.renderDOIRecordDetails(li2, childrenID, doiInfoCollection, detailsDivTemplate);
+                //DOIRecordDetailsTemplate.renderDOIRecordDetails(li2, childrenID, doiInfoCollection, detailsDivTemplate);
                 ol2.appendChild(li2);
             });
             detailsDiv.appendChild(ol2);

@@ -27,12 +27,18 @@ export class SearchResultStandardRender {
             const doiInfoTemplate = document.getElementById('doi-record-template') as HTMLTemplateElement;
             const authorTemplate = document.getElementById('author-template') as HTMLTemplateElement;
             const doiReferenceTemplate = document.getElementById('doi-reference-template') as HTMLTemplateElement;
-            const detailsDivTemplate = document.getElementById('details-div-standard-template') as HTMLTemplateElement;
+            //const detailsDivTemplate = document.getElementById('details-div-standard-template') as HTMLTemplateElement;
 
-            if (!doiInfoTemplate || !authorTemplate || !doiReferenceTemplate || !detailsDivTemplate) {
-                outputDiv.innerHTML = "<p>Error: Templates not found.</p>";
-                return;
+            if (!doiInfoTemplate) {
+                throw new Error("doiInfoTemplate not found.");
             }
+            if (!authorTemplate) {
+                throw new Error("authorTemplate not found.");
+            }
+            if (!doiReferenceTemplate) {
+                throw new Error("doiReferenceTemplate not found.");
+            }
+
 
             const ol = document.createElement('ol');
             ol.setAttribute("start", (doiIndex+1).toString());
@@ -50,7 +56,7 @@ export class SearchResultStandardRender {
                 if(isContainerRecord){
                     ContainerRecordRender.renderDOISub(li, doiID, doiInfoCollection);
                 }else{
-                    DOIRecordDetailsTemplate.renderDOIRecordDetails(li, doiID, doiInfoCollection, detailsDivTemplate);
+                    //DOIRecordDetailsTemplate.renderDOIRecordDetails(li, doiID, doiInfoCollection, detailsDivTemplate);
                 }
 
                 ol.appendChild(li);
