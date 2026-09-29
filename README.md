@@ -2,10 +2,15 @@
 
 ## Change Log
 
+- 26/09/29 Add the Stringology Explorer service (Experimental).
 - 25/11/26 Updated articles.
 - 25/08/27 Updated articles.
 - 25/04/30 Updated articles.
 - 24/11/06 Updated arXiv's articles.
+
+## Web Service
+- [Stringology Explorer (Experimental)](https://stringologytimes.github.io/StringologyTimes/docs/stringology_explorer/index.html)
+
 
 ## Contents
 - [List of arXiv's articles for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/arxiv_list)
