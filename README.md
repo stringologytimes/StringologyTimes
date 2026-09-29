@@ -9,12 +9,17 @@
 - 24/11/06 Updated arXiv's articles.
 
 ## Web Service (Experimental)
+
 - [Stringology Explorer](https://stringologytimes.github.io/StringologyTimes/docs/stringology_explorer/index.html)
 - [arXiv's articles](https://stringologytimes.github.io/StringologyTimes/docs/stringology_explorer/index.html?primary-sort-order=newest-first&psf-top-container-doi=dummy%2Fpreprint_repository%2Farxiv&psf-top-container-type=Preprint+Repository&psf-excluded-status=secondary)
 - [bioRxiv's articles](https://stringologytimes.github.io/StringologyTimes/docs/stringology_explorer/index.html?primary-sort-order=newest-first&psf-top-container-doi=dummy%2Fpreprint_repository%2Fbiorxiv&psf-top-container-type=Preprint+Repository&psf-excluded-status=secondary)
 
+## Add DOI List
+
+If you would like to add DOIs related to stringology to this repository, please reply to [this issue](https://github.com/stringologytimes/StringologyTimes/issues/509) with the DOIs.
 
 ## Contents (Obsolete)
+
 - [List of arXiv's articles for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/arxiv_list)
 - [Log of arXiv's articles in the cs.DS category](https://stringologytimes.github.io/StringologyTimes/docs/output/weekly_arxiv_top)
 - [List of Proceedings for Stringologist](https://stringologytimes.github.io/StringologyTimes/docs/output/list_of_proceedings)
