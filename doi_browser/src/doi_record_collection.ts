@@ -213,7 +213,7 @@ export class DOIRecordCollection {
             r.lightweightDOIRecords[index].seriesTitle = series_title;
         });
 
-        const container_DOI_list = await load_gzip_text_lines(folderURL + "/container_DOI.csv.gz");
+        const container_DOI_list = await load_gzip_text_lines(folderURL + "/container_doi.csv.gz");
         console.info("size of container_DOI_list: " + container_DOI_list.length);
         container_DOI_list.forEach((container_DOI, index) => {
             r.lightweightDOIRecords[index].container_DOI = container_DOI;
