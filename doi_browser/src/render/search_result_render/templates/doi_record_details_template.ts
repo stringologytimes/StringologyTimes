@@ -1,39 +1,38 @@
 import { DOIRecordCollection } from "../../../doi_record_collection";
-import { addIconToSpan, setIconToLink, setIconToSpan } from "../../../svg_icon";
 import { DOIRecord } from "../../../doi_record";
 
 
 export class DOIRecordDetailsTemplate {
+    private static renderContainerTitleSpan(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
 
-    private static renderContainerDOISpan(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
-
-        const containerDOISpan = article.querySelector('.container_DOI');
-        if (containerDOISpan) {
-            const labelSpan = document.createElement('span');
-            labelSpan.textContent = "Container DOI: ";
-            containerDOISpan.appendChild(labelSpan);
-
+        const containerTitleSpan = article.querySelector('#details-dialog-container-title');
+        
+        if (containerTitleSpan) {
+            containerTitleSpan.innerHTML = '';
             if(doiInfo.container_DOI.length > 0){
-                const link = document.createElement('a');
-                link.href = `#`;
-                link.textContent = doiInfo.container_DOI;
-                link.addEventListener("click", (event) => {
-                    event.preventDefault();
-                    (window as any).initializeParameter([["keyword", `@DOI:${doiInfo.container_DOI}`]]);
-                });
-                containerDOISpan.appendChild(link);    
+                const parentID = doiInfoCollection.getIDByDOI(doiInfo.container_DOI);
+                if(parentID != null){
+                    const parentDOIInfo = doiInfoCollection.getDOIInfo(parentID);
+                    const parentContainerTitle = parentDOIInfo.title;
+                    const link = document.createElement('a');
+                    link.href = `#`;
+                    link.textContent = parentContainerTitle;
+                    containerTitleSpan.appendChild(link);    
+                }else if(doiInfo.container_title.length > 0){
+                    containerTitleSpan.textContent = doiInfo.container_title;
+                }else{
+                    containerTitleSpan.textContent = "null";
+                }
+            }else if(doiInfo.container_title.length > 0){
+                containerTitleSpan.textContent = doiInfo.container_title;
             }else{
-                const labelSpan = document.createElement('span');
-                labelSpan.textContent = "null";
-                containerDOISpan.appendChild(labelSpan);
-
+                containerTitleSpan.textContent = "null";
             }
         } else {
-            console.log(article.outerHTML);
-            throw new Error("containerDOISpan is not found");
+            throw new Error("containerTitleSpan is not found");
         }
-
     }
+
     private static renderSeriesTitleSpan(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
 
         const seriesTitleSpan = article.querySelector('.series_title');
@@ -46,31 +45,22 @@ export class DOIRecordDetailsTemplate {
     }
     private static renderDateSpan(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
 
-        const dateLi = article.querySelector('.date');
-        if (dateLi) {
+        const dateSpan = article.querySelector('#details-dialog-date');
+        if (dateSpan) {
             if (doiInfo.year >= 0) {
-                if (doiInfo.month >= 0) {
-                    dateLi.textContent = `Date: ${doiInfo.year}-${doiInfo.month}`;
+                if (doiInfo.month >= 1) {
+                    dateSpan.textContent = `${doiInfo.year}-${doiInfo.month}`;
                 } else {
-                    dateLi.textContent = `Date: s${doiInfo.year}`;
+                    dateSpan.textContent = `${doiInfo.year}`;
                 }
             } else {
-                dateLi.textContent = `Date: Unknown`;
+                dateSpan.textContent = `Unknown`;
             }
         } else {
             throw new Error("dateLi is not found")
         }
     }
 
-    private static renderContainerTitleSpan(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
-
-        const containerTitleSpan = article.querySelector('.container_title');
-        if (containerTitleSpan) {
-            containerTitleSpan.textContent = "Container Title: " + (doiInfo.container_title || '');
-        } else {
-            throw new Error("containerTitleSpan is not found");
-        }
-    }
 
     private static renderVolumeSpan(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
 
@@ -87,31 +77,46 @@ export class DOIRecordDetailsTemplate {
     }
     private static renderOptionalIDs(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
 
-        const optionalIdsSpan = article.querySelector('.optional_ids');
+        const optionalIdsSpan = article.querySelector('#details-dialog-optional-ids');
         if (optionalIdsSpan) {
-            optionalIdsSpan.textContent = "Optional IDs: " + doiInfo.optional_ids.join(", ");
+            optionalIdsSpan.innerHTML = '';
+            doiInfo.optional_ids.forEach((optionalId, index) => {
+                const optionalIdSpan = document.createElement('span');
+                optionalIdSpan.textContent = optionalId;
+                optionalIdsSpan.appendChild(optionalIdSpan);
+                if (index < doiInfo.optional_ids.length - 1) {
+                    const comma = document.createTextNode(', ');
+                    optionalIdsSpan.appendChild(comma);
+                }
+            });
         } else {
             throw new Error("optionalIdsSpan is not found");
         }
     }
     private static renderAuthors(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
+
+        const authorsSpan = article.querySelector('#details-dialog-authors');
+        if (authorsSpan) {
+            authorsSpan.textContent = doiInfo.authors.join(", ");
+        } else {
+            throw new Error("authorsSpan is not found");
+        }
         const authorTemplate = document.getElementById('author-template') as HTMLTemplateElement;
 
         // Authorsを設定
-        const authorsDiv = article.querySelector('.authors');
-        if (authorsDiv && doiInfo.authors && doiInfo.authors.length > 0) {
-            authorsDiv.innerHTML = '';
+        if (authorsSpan && doiInfo.authors && doiInfo.authors.length > 0) {
+            authorsSpan.innerHTML = '';
             doiInfo.authors.forEach((author, index) => {
                 const authorClone = authorTemplate.content.cloneNode(true) as DocumentFragment;
                 const authorSpan = authorClone.querySelector('.author');
                 if (authorSpan) {
                     authorSpan.textContent = author;
                 }
-                authorsDiv.appendChild(authorClone);
+                authorsSpan.appendChild(authorClone);
                 // 最後の要素以外はカンマを追加
                 if (index < doiInfo.authors.length - 1) {
                     const comma = document.createTextNode(', ');
-                    authorsDiv.appendChild(comma);
+                    authorsSpan.appendChild(comma);
                 }
             });
         }
@@ -165,46 +170,37 @@ export class DOIRecordDetailsTemplate {
     }
     private static renderDOILi(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
 
-        const doiLi = article.querySelector('.doi');
-        if (doiLi) {
-            doiLi.textContent = doiInfo.doi;
+        const doiSpan = article.querySelector('#details-dialog-doi');
+        if (doiSpan) {
+            doiSpan.innerHTML = '';
+            const aLink = document.createElement('a');
+            aLink.href = `https://doi.org/${encodeURIComponent(doiInfo.doi)}`;
+            aLink.target = '_blank';
+            aLink.textContent = doiInfo.doi;
+            doiSpan.appendChild(aLink);
         } else {
-            throw new Error("doiLi is not found");
+            throw new Error("doiSpan is not found");
         }
     }
 
     public static renderDOIRecordDetails(outputDiv: HTMLElement, doiID: number, doiInfoCollection: DOIRecordCollection){
-        console.log("renderDOIRecordDetails/" + doiID);
-        console.log(outputDiv.outerHTML);
         const doiInfo = doiInfoCollection.getDOIInfo(doiID);
-        //const detailsTemplateFragment = detailesTemplateElement.content.cloneNode(true) as DocumentFragment;
         const article = outputDiv.querySelector('article');
 
         if (!article) return;
 
-        /*
-        const detailsDiv = article.querySelector(".details_div") as HTMLElement;
-        if (detailsDiv) {
-            detailsDiv.appendChild(detailsTemplateFragment);
+        const detailsDialogTitle = document.getElementById('details-dialog-title');
+        if (detailsDialogTitle) {
+            detailsDialogTitle.textContent = doiInfo.title;
         } else {
-            console.log(article.outerHTML);
-            throw new Error("details_div is not found");
+            throw new Error("detailsDialogTitle is not found");
         }
-        console.log(detailsDiv.innerHTML);
-        */
 
-
-
-        this.renderContainerDOISpan(article, doiInfo, doiInfoCollection);
-        this.renderSeriesTitleSpan(article, doiInfo, doiInfoCollection);
-        this.renderDateSpan(article, doiInfo, doiInfoCollection);
-        this.renderContainerTitleSpan(article, doiInfo, doiInfoCollection);
-        this.renderVolumeSpan(article, doiInfo, doiInfoCollection);
-        this.renderOptionalIDs(article, doiInfo, doiInfoCollection);
-        this.renderAuthors(article, doiInfo, doiInfoCollection);
-        this.renderDoiReferences(article, doiInfo, doiInfoCollection);
-        this.renderChildrenSpan(article, doiInfo, doiInfoCollection);
         this.renderDOILi(article, doiInfo, doiInfoCollection);
+        this.renderDateSpan(article, doiInfo, doiInfoCollection);
+        this.renderAuthors(article, doiInfo, doiInfoCollection);
+        this.renderContainerTitleSpan(article, doiInfo, doiInfoCollection);
+        this.renderOptionalIDs(article, doiInfo, doiInfoCollection);
 
     }
 

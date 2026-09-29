@@ -23,11 +23,6 @@ export function renderSeriesTitleList(filterResult: PrimarySearchResult, viewSet
 
     const ol = document.createElement('ol');
     ol.setAttribute("start", (p+1).toString());
-
-    console.log(seriesTitleList);
-    console.log(summaryInfo.seriesTitleCountList);
-
-
     seriesTitleList.forEach((seriesTitle, index) => {
 
 

@@ -1,24 +1,14 @@
 import { DOIRecordCollection } from "./doi_record_collection";
 import { BrowserInfo } from "./browser_info";
-import { SearchResultStandardRender } from "./render/search_result_render/search_result_standard_render";
 import * as EventFunctions from "./event_functions";
-//import { DOIFilter } from "./doi_filter/doi_filter";
 import { hideLoading, showLoading } from "./loading_overlay";
 import { DOIRecordDetailsTemplate } from "./render/search_result_render/templates/doi_record_details_template";
 
 let browserInfo = new BrowserInfo();
 (window as any).browserInfo = browserInfo;
 
-console.log("index.ts loaded");
+console.info("index.ts loaded");
 
-function goToPage(pageNumber: number) {
-  /*
-  browserInfo.currentDOIFilter.viewSetting.pageNumber = pageNumber;
-  browserInfo.processCurrentDOIFilterInput();
-  DOIFilterStandardRender.render(browserInfo.getCurrentDOIFilterResult().doiIDs, browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.getItemIndex(), browserInfo.getCurrentDOIFilterWithViewSetting().viewSetting.pageSize!, browserInfo.doiInfoCollection!);
-  EventFunctions.updatePaginationControls(browserInfo);
-  */
-}
 
 
 async function initialize() {
@@ -37,7 +27,6 @@ async function primarySearchFilterChange(inputElementName: string) {
   await EventFunctions.primarySearchFilterChange(inputElementName, browserInfo);
 }
 async function secondarySearchFilterChange(inputElementName: string) {
-  console.log("secondarySearchFilterChange: " + inputElementName);
   await EventFunctions.secondarySearchFilterChange(inputElementName, browserInfo);
 }
 
@@ -62,7 +51,6 @@ function viewSettingInputChange(inputElementName: string) {
 }
 
 function openDetailsDialog(e: Event) {
-  console.log("openDetailsDialog");
   e.preventDefault();
   const targetElement = e.target as HTMLElement;
   const doiIDStr = targetElement.getAttribute("data-doi-id");
@@ -178,5 +166,9 @@ async function domFinished() {
 }
 document.addEventListener('DOMContentLoaded', domFinished);
 
+
+window.addEventListener("popstate", () => {
+  browserInfo.rebuildFromURLParameters(true, true, true, true);
+});
 
 

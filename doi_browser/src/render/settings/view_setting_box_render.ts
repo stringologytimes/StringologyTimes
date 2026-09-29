@@ -9,40 +9,6 @@ function getMaxPageNumber(viewSetting: SearchResultViewSettings, foundRecordCoun
     }
 }
 
-function setModeSelectHTMLElement(selectedValue: ViewModeType) {
-    const viewModeList = ["article_list", "container_title_list", "series_title_list", "group_render"];
-    const viewModeValues = ["article_list", "container_title_list", "series_title_list", "group_render"];
-    //setRadioBoxes("view-mode-list-div", "view-mode-template", selectedValue, viewModeList, viewModeValues);
-
-    /*
-
-    const selectElement = document.getElementById("view-setting:mode-select");
-    if (selectElement && selectElement instanceof HTMLSelectElement) {
-        selectElement.innerHTML = "";
-        //const defaultOption = document.createElement("option");
-        //defaultOption.value = "dont-care";
-        //defaultOption.textContent = "article_list";
-        //selectElement.appendChild(defaultOption);
-        const options = ["article_list", "container_title_list"];
-      
-      
-        options.forEach((optionValue, index) => {
-          const option = document.createElement("option");
-          option.value = optionValue;
-          option.textContent = `${optionValue}`;
-      
-          if (optionValue == selectedValue) {
-            option.selected = true;
-          }
-          selectElement.appendChild(option);
-        });
-    
-    }else{
-        throw new Error("selectElement is not found");
-    }
-    */
-
-  }
 
 function setPageNumberSelectHTMLElement(selectedValue: number, maxPageNumber: number) {
     const selectElement = document.getElementById("view-setting:page-number-select");
@@ -83,7 +49,6 @@ function setPageSizeSelectHTMLElement(selectedValue: number) {
 
 
 export function renderViewSettingBox(filterResult: SearchResultViewSettings, foundRecordCount: number) {
-    setModeSelectHTMLElement(filterResult.mode);
     setPageNumberSelectHTMLElement(filterResult.pageNumber!, getMaxPageNumber(filterResult, foundRecordCount));
     setPageSizeSelectHTMLElement(filterResult.pageSize!);
 }

@@ -1,6 +1,6 @@
 import { containerTypeList, DOIRecord } from "../../doi_record";
 import { DOIRecordCollection } from "../../doi_record_collection";
-import { DOIRecordTemplate } from "./templates/doi_record_template";
+import { DOIRecordSummaryTemplate } from "./templates/doi_record_summary_template";
 import { ContainerRecordRender } from "./container_record_render";
 import { DOIRecordDetailsTemplate } from "./templates/doi_record_details_template";
 
@@ -50,8 +50,8 @@ export class SearchResultStandardRender {
                 var li = document.createElement('li');
 
                 const isContainerRecord = containerTypeList.includes(doiInfo.type);
-                DOIRecordTemplate.setArticleTemplate(li, doiInfoTemplate, isContainerRecord);
-                DOIRecordTemplate.renderDOIRecordSummary(li, doiID, doiInfoCollection);
+                DOIRecordSummaryTemplate.setArticleTemplate(li, doiInfoTemplate, isContainerRecord);
+                DOIRecordSummaryTemplate.renderDOIRecordSummary(li, doiID, doiInfoCollection);
                 
                 if(isContainerRecord){
                     ContainerRecordRender.renderDOISub(li, doiID, doiInfoCollection);

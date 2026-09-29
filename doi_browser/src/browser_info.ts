@@ -40,7 +40,6 @@ export class BrowserInfo {
             const endIndex = Math.min(startIndex + this.viewSettings.pageSize!, foundRecordIDs.length);
             const foundRecordIDsPart = foundRecordIDs.slice(startIndex, endIndex);
 
-            console.log("startIndex: " + startIndex + ", endIndex: " + endIndex + ", foundRecordIDsPart.length: " + foundRecordIDsPart.length);
 
             SearchResultStandardRender.render(foundRecordIDsPart, startIndex, this.doiInfoCollection!);
         }
@@ -124,7 +123,6 @@ export class BrowserInfo {
         this.viewSettings = SearchResultViewSettings.buildFromURLParameters();
         this.sortOrder = SearchResultSortOrder.buildFromURLParameters();
         
-        console.log("secondarySearchFilter: " + this.secondarySearchFilter.getHash(false));
 
         await this.processPrimarySearchFilter();
         await this.processSecondarySearchFilterWithSortOrder();
@@ -134,8 +132,9 @@ export class BrowserInfo {
         if(updateViewSettingBox){
             this.renderViewSettingBox();
         }
+
         if(updateSortOrderBox){
-            this.renderSortOrderBox();
+        this.renderSortOrderBox();
         }
 
         const finalRecordCount = this.finalResultCache.get(this.getFianlHash())!.length;
@@ -166,20 +165,16 @@ export class BrowserInfo {
     public async rebuildByChangingViewSettingBox(): Promise<void> {
         this.viewSettings = SearchResultViewSettings.convertHTMLElementToInstance();
         const newParameters = this.viewSettings.convertToURLParameters();
-        URLProcessor.resetURLParameters(SearchResultViewSettings.getURLParameterKeys(), false);
-        URLProcessor.setURLParameters(newParameters, true);
+        const url = new URL(window.location.href);
+        URLProcessor.resetURLParameters(url, SearchResultViewSettings.getURLParameterKeys());
+        URLProcessor.setURLParameters(url, newParameters);
+        URLProcessor.historyUpdate(url);
         await this.rebuildFromURLParameters(false, false, true, true);
     }
 
     
 
     public print(): void {
-        /*
-        console.log("cacheAssociatedWithDOIFilterHash: ");
-        this.cacheAssociatedWithDOIFilterHash.forEach(([a, b], key) => {
-            console.log(key + "/" + a.getHash() + "/" + b.doiIDs.length);
-        });
-        */
     }
 
     

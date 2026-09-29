@@ -4,100 +4,100 @@ import { AnyContainerType, AnyPaperType, AnyOtherType } from "./doi_record";
 
 export class URLProcessor {
 
-    public static setURLParameters(parameters: [string, string][], historyUpdate: boolean): void {
-        const url = new URL(window.location.href);
+    public static setURLParameters(url: URL, parameters: [string, string][]): void {
 
         parameters.forEach(parameter => {
             url.searchParams.set(parameter[0], parameter[1]);
         });
 
-        if(historyUpdate) {
-            window.history.replaceState(null, "", url.toString());
-        }
-
     }
-    public static resetURLParameters(parameters: string[], historyUpdate: boolean): void {
-        const url = new URL(window.location.href);
+    public static resetURLParameters(url: URL, parameters: string[]): void {
         parameters.forEach(parameter => {
             url.searchParams.delete(parameter);
         });
-
-        if(historyUpdate) {
-            window.history.replaceState(null, "", url.toString());
-        }
+    }
+    public static getURLParameters(url: URL): [string, string][] {
+        const r: [string, string][] = [];
+        url.searchParams.forEach((value, key) => {
+            r.push([key, value]);
+        });
+        return r;
+    }
+    public static historyUpdate(url: URL): void {
+        window.history.pushState(null, "", url.toString());
     }
 
 
-    public static buildSearchFilterFromURL(isPrimaryFilter: boolean) : SearchFilter {
+    public static buildSearchFilterFromURL(isPrimaryFilter: boolean): SearchFilter {
         const idPrefix = isPrimaryFilter ? "psf-" : "ssf-";
         const url = new URL(window.location.href);
         const searchFilter = new SearchFilter();
 
-        const types : string[] | null = url.searchParams.getAll(idPrefix + "type");
-        if(types != null) {
-            if(types.length == 0) {
+        const types: string[] | null = url.searchParams.getAll(idPrefix + "type");
+        if (types != null) {
+            if (types.length == 0) {
                 containerTypeList.concat(paperTypeList).concat(otherTypeList).forEach(type => {
                     searchFilter.types.push(type);
                 });
-            }else{
+            } else {
                 types.forEach(type => {
-                    if(type == AnyContainerType) {
+                    if (type == AnyContainerType) {
                         containerTypeList.forEach(containerType => {
                             searchFilter.types.push(containerType);
                         });
-                    }else if(type == AnyPaperType) {
+                    } else if (type == AnyPaperType) {
                         paperTypeList.forEach(paperType => {
                             searchFilter.types.push(paperType);
                         });
-                    }else if(type == AnyOtherType) {
+                    } else if (type == AnyOtherType) {
                         otherTypeList.forEach(otherType => {
                             searchFilter.types.push(otherType);
                         });
                     }
-                    else if(type == "Empty") {
+                    else if (type == "Empty") {
 
                     }
-                    else{
+                    else {
                         searchFilter.types.push(type);
                     }
                 });
-    
+
             }
 
 
         }
 
 
-        const topContainerType : string | null = url.searchParams.get(idPrefix + "top-container-type");
-        if(topContainerType != null) {
+        const topContainerType: string | null = url.searchParams.get(idPrefix + "top-container-type");
+        if (topContainerType != null) {
             searchFilter.topContainerType = topContainerType;
         }
 
-        const topContainerDOI : string | null = url.searchParams.get(idPrefix + "top-container-doi");
-        if(topContainerDOI != null) {
+        const topContainerDOI: string | null = url.searchParams.get(idPrefix + "top-container-doi");
+        if (topContainerDOI != null) {
             searchFilter.topContainerDOI = topContainerDOI;
         }
 
-        const subContainerDOI : string | null = url.searchParams.get(idPrefix + "sub-container-doi");
-        if(subContainerDOI != null) {
+        const subContainerDOI: string | null = url.searchParams.get(idPrefix + "sub-container-doi");
+        if (subContainerDOI != null) {
             searchFilter.subContainerDOI = subContainerDOI;
         }
 
-        const minimumYear : string | null = url.searchParams.get(idPrefix + "minimum-year");
-        if(minimumYear != null) {
+        const minimumYear: string | null = url.searchParams.get(idPrefix + "minimum-year");
+        if (minimumYear != null) {
             searchFilter.minimumYear = parseInt(minimumYear);
         }
-        const maximumYear : string | null = url.searchParams.get(idPrefix + "maximum-year");
-        if(maximumYear != null) {
+        const maximumYear: string | null = url.searchParams.get(idPrefix + "maximum-year");
+        if (maximumYear != null) {
             searchFilter.maximumYear = parseInt(maximumYear);
         }
 
-        const excludeStatus : string[] | null = url.searchParams.getAll(idPrefix + "excluded-status");
-        if(excludeStatus != null) {
+        const excludeStatus: string[] | null = url.searchParams.getAll(idPrefix + "excluded-status");
+        if (excludeStatus != null) {
             excludeStatus.forEach(status => {
-                if(status == "primary") {
+                if (status == "primary") {
                     searchFilter.excludeStatus.push("primary");
-                }else if(status == "secondary") {
+                } else if (status == "secondary") {
                     searchFilter.excludeStatus.push("secondary");
                 }
             });

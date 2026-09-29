@@ -37,14 +37,14 @@ export class DOIRecordCollection {
     }
     public getDOIByID(id: number): string {
         if(id >= this.lightweightDOIRecords.length){
-            console.log("id is greater than the length of lightweightDOIInfos");
-            console.log("id: " + id);
-            console.log("length of lightweightDOIInfos: " + this.lightweightDOIRecords.length);
+            console.error("id is greater than the length of lightweightDOIInfos");
+            console.error("id: " + id);
+            console.error("length of lightweightDOIInfos: " + this.lightweightDOIRecords.length);
             throw new Error("id is greater than the length of lightweightDOIInfos");
         }
         if(Number.isNaN(id)){
-            console.log("id is NaN");
-            console.log("id: " + id);
+            console.error("id is NaN");
+            console.error("id: " + id);
             throw new Error("id is NaN");
         }
         return this.lightweightDOIRecords[id].doi;
@@ -165,10 +165,10 @@ export class DOIRecordCollection {
 
 
     public static async load(folderURL: string): Promise<DOIRecordCollection> {
-        console.log("loading DOIInfoCollection from: " + folderURL);
+        console.info("loading DOIInfoCollection from: " + folderURL);
         let r = new DOIRecordCollection();
         const doi_list = await load_gzip_text_lines(folderURL + "/doi.csv.gz");
-        console.log("size of doi_list: " + doi_list.length);
+        console.info("size of doi_list: " + doi_list.length);
         doi_list.forEach(line => {
             let doiInfo = new LightWeightDOIRecord();
             doiInfo.doi = line;
@@ -183,57 +183,57 @@ export class DOIRecordCollection {
         });
 
         const year_list = await load_gzip_integer_lines(folderURL + "/year.csv.gz");
-        console.log("size of year_list: " + year_list.length);
+        console.info("size of year_list: " + year_list.length);
         year_list.forEach((year, index) => {
             r.lightweightDOIRecords[index].year = year;
         });
 
         const month_list = await load_gzip_integer_lines(folderURL + "/month.csv.gz");
-        console.log("size of month_list: " + month_list.length);
+        console.info("size of month_list: " + month_list.length);
         month_list.forEach((month, index) => {
             r.lightweightDOIRecords[index].month = month;
         });
 
         r.authorList = await load_gzip_text_lines(folderURL + "/full_name.csv.gz");
         const author_number_list = await load_gzip_integer_list_lines(folderURL + "/compressed_full_name.csv.gz");
-        console.log("size of author_number_list: " + author_number_list.length);
+        console.info("size of author_number_list: " + author_number_list.length);
         author_number_list.forEach((numbers, index) => {
             r.lightweightDOIRecords[index].authorIDs = numbers;
         });
 
         const volume_list = await load_gzip_text_lines(folderURL + "/volume_issue.csv.gz");
-        console.log("size of volume_issue_list: " + volume_list.length);
+        console.info("size of volume_issue_list: " + volume_list.length);
         volume_list.forEach((volume, index) => {
             r.lightweightDOIRecords[index].volume_issue = volume;
         });
 
         const series_title_list = await load_gzip_text_lines(folderURL + "/series_title.csv.gz");
-        console.log("size of series_title_list: " + series_title_list.length);
+        console.info("size of series_title_list: " + series_title_list.length);
         series_title_list.forEach((series_title, index) => {
             r.lightweightDOIRecords[index].seriesTitle = series_title;
         });
 
         const container_DOI_list = await load_gzip_text_lines(folderURL + "/container_DOI.csv.gz");
-        console.log("size of container_DOI_list: " + container_DOI_list.length);
+        console.info("size of container_DOI_list: " + container_DOI_list.length);
         container_DOI_list.forEach((container_DOI, index) => {
             r.lightweightDOIRecords[index].container_DOI = container_DOI;
         });
 
         const container_title_list = await load_gzip_text_lines(folderURL + "/container_title.csv.gz");
-        console.log("size of container_title_list: " + container_title_list.length);
+        console.info("size of container_title_list: " + container_title_list.length);
         container_title_list.forEach((container_title, index) => {
             r.lightweightDOIRecords[index].container_title = container_title;
         });
 
         const doi_references_list = await load_gzip_integer_list_lines(folderURL + "/compressed_doi_reference.csv.gz");
-        console.log("size of doi_references_list: " + doi_references_list.length);
+        console.info("size of doi_references_list: " + doi_references_list.length);
         doi_references_list.forEach((numbers, index) => {
             r.lightweightDOIRecords[index].doiReferenceIDs = numbers;
         });
         
         const type_list = await load_gzip_text_lines(folderURL + "/type.csv.gz");
         const type_set = new Set<string>();
-        console.log("size of type_list: " + type_list.length);
+        console.info("size of type_list: " + type_list.length);
         type_list.forEach((type, index) => {
             if (type.length > 0) {
                 r.lightweightDOIRecords[index].type = type;
@@ -245,13 +245,13 @@ export class DOIRecordCollection {
         });
 
         typeList = Array.from(type_set);
-        console.log("typeList: " + typeList);
+        console.info("typeList: " + typeList);
 
         const status_list = await load_gzip_integer_lines(folderURL + "/doi_flag.csv.gz");
-        console.log("size of status_list: " + status_list.length);
+        console.info("size of status_list: " + status_list.length);
         status_list.forEach((status, index) => {
             if (index >= r.lightweightDOIRecords.length) {
-                console.log("status_list is longer than lightweightDOIInfos");
+                console.info("status_list is longer than lightweightDOIInfos");
                 throw new Error("status_list is longer than lightweightDOIInfos");
             }            
             r.lightweightDOIRecords[index].isPrimary = status == 1;
@@ -259,9 +259,9 @@ export class DOIRecordCollection {
 
         for(let i = 0; i < r.lightweightDOIRecords.length; i++){
             if(r.lightweightDOIRecords[i] === undefined){
-                console.log("lightweightDOIInfos[i] is undefined");
-                console.log("i: " + i);
-                console.log("length of lightweightDOIInfos: " + r.lightweightDOIRecords.length);
+                console.info("lightweightDOIInfos[i] is undefined");
+                console.info("i: " + i);
+                console.info("length of lightweightDOIInfos: " + r.lightweightDOIRecords.length);
                 throw new Error("lightweightDOIInfos[i] is undefined");
             }
         }
@@ -282,7 +282,7 @@ export class DOIRecordCollection {
         });
 
         const optional_ids_list = await load_gzip_text_lines(folderURL + "/optional_id.csv.gz");
-        console.log("size of optional_ids_list: " + optional_ids_list.length);
+        console.info("size of optional_ids_list: " + optional_ids_list.length);
         var optional_ids_index = 0;
         optional_ids_list.forEach((optional_ids) => {
             if(optional_ids == ""){
@@ -331,7 +331,7 @@ export class DOIRecordCollection {
         r.recordSummary = r.buildRecordSummary(r.lightweightDOIRecords.map((record, index) => index));
 
 
-        console.log("lightweightDOIInfos is loaded successfully : " + r.lightweightDOIRecords.length);
+        console.info("lightweightDOIInfos is loaded successfully : " + r.lightweightDOIRecords.length);
 
 
 

@@ -66,12 +66,6 @@ export class SearchResultViewSettings {
 
     public static convertHTMLElementToInstance() : SearchResultViewSettings {
         let r = new SearchResultViewSettings();
-        /*
-        const modeElement = document.getElementById("view-mode-list-div") as HTMLSpanElement;
-        if(modeElement != null) {
-            r.mode = modeElement.textContent as ViewModeType;
-        }
-        */
         const pageNumberElement = document.getElementById("view-setting:page-number-select") as HTMLSelectElement;
         if(pageNumberElement != null) {
             r.pageNumber = parseInt(pageNumberElement.value);

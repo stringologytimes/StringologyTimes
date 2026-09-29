@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Article Info Browser</title>
+  <title>Stringology Explorer (Experimental)</title>
   <style>
     .doi_references {
       cursor: pointer;
@@ -108,7 +108,7 @@
       <div class="loading-text">Loading...</div>
     </div>
   </div>
-  <h1>Article Info Browser</h1>
+  <h1>Stringology Explorer (Experimental)</h1>
   <details open class="psf-main-div" id="psf-main">
     <summary>Primary Search Filter</summary>
     <fieldset id="psf-record-types-fieldset">
@@ -155,14 +155,14 @@
     </fieldset>
     <fieldset>
       <legend>Keywords</legend>
-      <input type="text" id="psf-keywords-input" name="psf-keywords-input" size="20" />
+      <input type="text" id="psf-keywords-input" name="psf-keywords-input" size="20" disabled/>
     </fieldset>
 
     <button onclick="clickPrimarySearchFilterButton()">Search</button>
     <button onclick="clickResetButtonOfPrimarySearchFilterBox()">Reset</button>
   </details>
 
-  <details open class="ssf-main-div" id="ssf-main">
+  <details class="ssf-main-div" id="ssf-main">
     <summary>Secondary Search Filter</summary>
     <fieldset id="ssf-record-types-fieldset">
       <legend>Record Type</legend>
@@ -210,7 +210,7 @@
     </fieldset>
     <fieldset>
       <legend>Keywords</legend>
-      <input type="text" id="ssf-keywords-input" name="ssf-keywords-input" size="20" />
+      <input type="text" id="ssf-keywords-input" name="ssf-keywords-input" size="20" disabled/>
     </fieldset>
     <button onclick="clickResetButtonOfSecondarySearchFilterBox()">Reset</button>
 
@@ -246,7 +246,6 @@
   <fieldset>
     <legend>View Setting</legend>
     <ul>
-      <li> View Mode: <span id="view-mode-list-div"></span></li>
       <li>
         <label>Page number:</label> <select id="view-setting:page-number-select"
           onchange="viewSettingInputChange('page-number')"></select>
@@ -262,14 +261,6 @@
 
   <div id="output"></div>
   <div id="error"></div>
-  <div style="margin: 20px 0;">
-    <button id="renderAllButton">Render All</button>
-    <div style="margin-top: 10px;">
-      <button id="prevPageButton">前へ</button>
-      <span id="pageInfo" style="margin: 0 10px;"></span>
-      <button id="nextPageButton">次へ</button>
-    </div>
-  </div>
   <template id="author-template">
     <span class="author"></span>
   </template>
@@ -309,35 +300,39 @@
       </div>
     </article>
   </template>
+
   <template id=" container-title-template">
         <div class="container-title"></div>
   </template>
+  
   <template id="container-record-template">
     <div class="container-record"></div>
   </template>
+  
   <dialog id="details-dialog">
     <article>
-      <ul class="details-div-standard-ul">
-        <li class="doi">
-        <li class="date">
-        </li>
-        <li>
-          <div class="authors"></div>
-        </li>
-        <li class="series_title"></li>
-        <li class="container_title"></li>
-        <li class="container_DOI"></li>
-        <li class="volume"></li>
-        <li class="optional_ids"></li>
-        <li>
-          <details>
-            <summary>DOI References</summary>
-            <div class="doi_references"></div>
-          </details>
-        </li>
-        <li class="children"></li>
-      </ul>
-      <button onclick="closeDetailsDialog()">閉じる</button>
+      <h2 id="details-dialog-title">Dummy Title</h2>
+      <div class="doi">
+        <span>DOI: </span>
+        <span id="details-dialog-doi"></span>
+      </div>
+      <div class="date">
+        <span>Date: </span>
+        <span id="details-dialog-date"></span>
+      </div>
+      <div class="authors">
+        <span>Authors: </span>
+        <span id="details-dialog-authors"></span>
+      </div>
+      <div class="container-title">
+        <span>Container Title: </span>
+        <span id="details-dialog-container-title"></span>
+      </div>
+      <div class="optional-ids">
+        <span>Optional IDs: </span>
+        <span id="details-dialog-optional-ids"></span>
+      </div>
+      <button onclick="closeDetailsDialog()">Close</button>
     </article>
 
   </dialog>

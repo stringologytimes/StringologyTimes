@@ -67,7 +67,6 @@ export function primarySearchFilterChange(inputElementName: string, browserInfo:
   } else {
     if (inputElementName == "psf-top-container-type") {
       const selectedTopContainerType = (document.getElementById("psf-top-container-type-select") as HTMLSelectElement).value;
-      console.log("primarySearchFilterChange: " + inputElementName + " / " + selectedTopContainerType);
       const v = selectedTopContainerType == "Any" ? null : selectedTopContainerType;
       ContainerDOIFieldsetFunctions.selectTopContainerTypeBox(true, v, null, false, browserInfo.doiInfoCollection.recordSummary.idToPrimaryRecordCountMapper, browserInfo.doiInfoCollection.recordSummary.idToSecondaryRecordCountMapper, browserInfo.doiInfoCollection);
     }
@@ -118,40 +117,24 @@ export async function clickResetButtonOfSecondarySearchFilterBox(browserInfo: Br
 }
 
 export async function sortOrderInputChange(inputElementName: string, browserInfo: BrowserInfo) {
+
   const urlParameters = SearchResultSortOrder.convertInputToURLParameters();
   const urlParameterKeys = SearchResultSortOrder.getURLParameterKeys();
-  URLProcessor.resetURLParameters(urlParameterKeys, false);
-  URLProcessor.setURLParameters(urlParameters, true);
+
+  const url = new URL(window.location.href);
+  URLProcessor.resetURLParameters(url, urlParameterKeys);
+  URLProcessor.setURLParameters(url, urlParameters);
+  URLProcessor.historyUpdate(url);
 
   await browserInfo.rebuildFromURLParameters(true, true, true, true);
 }
 
 export function ViewSettingInputChange(inputElementName: string, browserInfo: BrowserInfo) {
+  if(inputElementName == "page-size") {
+    const pageNumberElement = (document.getElementById("view-setting:page-number-select") as HTMLSelectElement);
+    pageNumberElement.selectedIndex = 0;
+  }
 
   browserInfo.rebuildByChangingViewSettingBox();
-  /*
-  const url = new URL(window.location.href);
-  if (inputElementName == "view-mode") {
-    const selected = document.querySelector('input[name="view-mode-checkbox"]:checked');
-    if (selected) {
-      var value = (selected as HTMLInputElement).value;
-      url.searchParams.set("view_mode", value);
-    } else {
-      url.searchParams.delete("view_mode");
-    }
-    url.searchParams.set("page_number", "0");
-  }
-  else if (inputElementName == "page-number") {
-    const pageNumber = (document.getElementById("view-setting:page-number-select") as HTMLSelectElement).value;
-    url.searchParams.set("page_number", pageNumber);
-    console.log("pageNumber", pageNumber);
-  }
-  else if (inputElementName == "page-size") {
-    const pageSize = (document.getElementById("view-setting:page-size-select") as HTMLSelectElement).value;
-    url.searchParams.set("page_size", pageSize);
-  }
-  history.pushState({}, "", url);
-  */
-  //void process(browserInfo);
 }
 

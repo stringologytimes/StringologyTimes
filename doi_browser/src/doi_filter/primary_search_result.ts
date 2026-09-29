@@ -67,9 +67,9 @@ export class PrimarySearchResult {
 
         this.doiIDs.forEach(doiID => {
             if (doiID >= r.lightweightDOIRecords.length) {
-                console.log("doiID is greater than the length of lightweightDOIInfos");
-                console.log("doiID: " + doiID);
-                console.log("length of lightweightDOIInfos: " + r.lightweightDOIRecords.length);
+                console.error("doiID is greater than the length of lightweightDOIInfos");
+                console.error("doiID: " + doiID);
+                console.error("length of lightweightDOIInfos: " + r.lightweightDOIRecords.length);
                 throw new Error("doiID is greater than the length of lightweightDOIInfos");
             }
             const doiInfo = r.lightweightDOIRecords[doiID];

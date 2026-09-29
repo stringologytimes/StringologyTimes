@@ -128,7 +128,6 @@ export class ContainerDOIFieldsetFunctions {
                         const addFlag = !removeEmptyContainers || (primaryCount > 0 || secondaryCount > 0);
 
                         if (addFlag) {
-                            console.log("Adding: " + doiRecord.doi + " / " + primaryCount + " / " + secondaryCount + " / " + removeEmptyContainers);
 
                             const option = document.createElement("option");
                             option.value = doiRecord.doi;
@@ -171,7 +170,6 @@ export class ContainerDOIFieldsetFunctions {
             topContainerTypeSelect.appendChild(option);
 
             if (topContainerType == selectedTopContainerType) {
-                console.log("FOUND: " + topContainerType + " / " + index + " / " + is_primary_filter);
                 selectedIndex = index + 1;
             }
         });
@@ -187,7 +185,6 @@ export class ContainerDOIFieldsetFunctions {
         idToPrimaryRecordCountMapper: Map<number, number>, idToSecondaryRecordCountMapper: Map<number, number>, 
         doiRecordCollection: DOIRecordCollection, 
         selectedTopContainerType: string | null, selectedTopContainerDOI: string | null, selectedSubContainerDOI: string | null) {
-            console.log("SET: " + is_primary_filter + " / " + selectedTopContainerType + " / " + selectedTopContainerDOI + " / " + selectedSubContainerDOI);
         this.initializeTopContainerTypeBox(is_primary_filter, selectedTopContainerType);
         this.selectTopContainerTypeBox(is_primary_filter, selectedTopContainerType, selectedTopContainerDOI, removeEmptyContainers, idToPrimaryRecordCountMapper, idToSecondaryRecordCountMapper, doiRecordCollection);
         this.selectTopContainerBox(is_primary_filter, selectedTopContainerDOI, selectedSubContainerDOI, 

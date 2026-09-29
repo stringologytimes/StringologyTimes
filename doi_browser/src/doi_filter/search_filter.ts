@@ -93,10 +93,8 @@ export class SearchFilter {
             return false;
         }
 
-        console.log("excludeStatusX: " + this.excludeStatus.length);
         if(this.excludeStatus.length > 0){
             for(let i = 0; i < this.excludeStatus.length; i++){
-                console.log("excludeStatus: " + this.excludeStatus[i] + " / " + doiInfo.getStatus());
                 if(this.excludeStatus.includes(doiInfo.getStatus())){
                     return false;
                 }

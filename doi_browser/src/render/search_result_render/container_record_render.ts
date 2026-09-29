@@ -2,7 +2,7 @@ import { PrimarySearchResult } from "../../doi_filter/primary_search_result";
 import { SummaryInfo } from "../../doi_filter/summary_info";
 import { SearchResultViewSettings } from "../../doi_filter/search_result_view_settings";
 import { DOIRecordCollection } from "../../doi_record_collection";
-import { DOIRecordTemplate } from "./templates/doi_record_template";
+import { DOIRecordSummaryTemplate } from "./templates/doi_record_summary_template";
 import { DOIRecordDetailsTemplate } from "./templates/doi_record_details_template";
 
 
@@ -31,8 +31,8 @@ export class ContainerRecordRender {
             ol2.setAttribute("class", "children-ol");
             childrenIDs.forEach((childrenID, index) => {
                 const li2 = document.createElement('li');
-                DOIRecordTemplate.setArticleTemplate(li2, doiInfoTemplate, false);
-                DOIRecordTemplate.renderDOIRecordSummary(li2, childrenID, doiInfoCollection);
+                DOIRecordSummaryTemplate.setArticleTemplate(li2, doiInfoTemplate, false);
+                DOIRecordSummaryTemplate.renderDOIRecordSummary(li2, childrenID, doiInfoCollection);
                 //DOIRecordDetailsTemplate.renderDOIRecordDetails(li2, childrenID, doiInfoCollection, detailsDivTemplate);
                 ol2.appendChild(li2);
             });

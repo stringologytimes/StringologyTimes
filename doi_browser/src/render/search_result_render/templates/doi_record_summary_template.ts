@@ -3,7 +3,7 @@ import { addIconToSpan, setIconToLink, setIconToSpan } from "../../../svg_icon";
 import { DOIRecord } from "../../../doi_record";
 import { DOIRecordDetailsTemplate } from "./doi_record_details_template";
 
-export class DOIRecordTemplate {
+export class DOIRecordSummaryTemplate {
     private static getDateStr(doiInfo: DOIRecord): string {
         const yearStr = doiInfo.year <= 0 ? "?" : doiInfo.year.toString();
         let monthStr = "?";
@@ -58,17 +58,17 @@ export class DOIRecordTemplate {
             var containerDOI = doiInfo.container_DOI;
             var containerDOIID = doiInfoCollection.getIDByDOI(containerDOI);
 
-            if(containerDOI.length > 0 && containerDOIID == null){
-                var iconText = "InvalidContainerDOI";
+            if(doiInfo.isPrimary && containerDOI.length > 0 && containerDOIID == null){
+                var iconText = "Container is not found (InvalidRegistrationDataError)";
                 addIconToSpan(optionalIconSpan, iconText, 14, "red", "white");
             }
             if(doiInfo.container_DOI.length == 0){
-                var iconText = "NoContainerDOI";
+                var iconText = "No container";
                 addIconToSpan(optionalIconSpan, iconText, 14, "gray", "white");
             }
 
             if(doiInfo.doi == containerDOI){
-                var iconText = "SelfContainerDOI";
+                var iconText = "Self-container (InvalidRegistrationDataError)";
                 addIconToSpan(optionalIconSpan, iconText, 14, "green", "white");
             }
         } else {
