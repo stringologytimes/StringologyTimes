@@ -110,7 +110,7 @@ namespace DataProcessor
             {
                 var fileInfo = new FileInfo(file.FullName);
 
-                if (fileInfo.Name == "url_and_doi.csv" || fileInfo.Name == "url_and_doi.tsv")
+                if (fileInfo.Name == "doi.csv" || fileInfo.Name == "doi.tsv")
                 {
                     var lines = File.ReadAllLines(fileInfo.FullName);
                     foreach (var line in lines)

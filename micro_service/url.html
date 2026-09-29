@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>URL Extractor</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 32px;
+    }
+
+    main {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .panel {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .toolbar {
+      display: flex;
+      min-height: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 8px;
+      padding: 10px 18px;
+      background: #2563eb;
+      color: #fff;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.15s ease, transform 0.05s ease;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    button:active {
+      transform: translateY(1px);
+    }
+
+    button:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid #93c5fd;
+      outline-offset: 2px;
+    }
+
+    .status {
+      color: #4b5563;
+      font-size: 0.9rem;
+    }
+
+    .filter-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+    }
+
+    .filter-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #374151;
+      font-size: 0.95rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .filter-label input {
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      accent-color: #2563eb;
+      cursor: pointer;
+    }
+
+    textarea {
+      width: 100%;
+      height: min(65vh, 560px);
+      min-height: 320px;
+      resize: vertical;
+      overflow: auto;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 14px;
+      background: #fff;
+      color: #111827;
+      font: 0.95rem/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      white-space: pre;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 20px;
+      }
+
+      .columns {
+        grid-template-columns: 1fr;
+      }
+
+      textarea {
+        height: 40vh;
+        min-height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>URL Extractor</h1>
+
+    <div class="columns">
+      <section class="panel">
+        <div class="toolbar">
+          <button id="extractButton" type="button">Extract URL</button>
+          <div class="filter-options" role="radiogroup" aria-label="URL filter">
+            <label class="filter-label">
+              <input type="radio" name="filterMode" value="all" checked>
+              All URLs
+            </label>
+            <label class="filter-label">
+              <input type="radio" name="filterMode" value="arxiv">
+              arXiv URLs only
+            </label>
+            <label class="filter-label">
+              <input type="radio" name="filterMode" value="non-arxiv">
+              Non-arXiv URLs only
+            </label>
+          </div>
+          <span id="extractStatus" class="status" aria-live="polite"></span>
+        </div>
+        <textarea id="sourceText" aria-label="Text to extract URLs from" placeholder="Paste your text here"></textarea>
+      </section>
+
+      <section class="panel">
+        <div class="toolbar">
+          <button id="copyButton" type="button">Copy</button>
+          <span id="copyStatus" class="status" aria-live="polite"></span>
+        </div>
+        <textarea id="resultText" aria-label="Extracted URLs" placeholder="Extracted URLs will appear here" readonly></textarea>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const sourceText = document.getElementById('sourceText');
+    const resultText = document.getElementById('resultText');
+    const extractButton = document.getElementById('extractButton');
+    const copyButton = document.getElementById('copyButton');
+    const extractStatus = document.getElementById('extractStatus');
+    const copyStatus = document.getElementById('copyStatus');
+
+    function extractUrls(text, filterMode = 'all') {
+      const matches = text.match(/https?:\/\/[^\s<>"'`()\\]+/giu) ?? [];
+
+      const cleanedUrls = matches
+        .map((url) => url.replace(/[.,!?;:\]\[{}()<>、。！？；：「」『』【】（）]+$/gu, ''))
+        .filter(Boolean)
+        .filter((url) => {
+          const isArxiv = /^https?:\/\/arxiv\.org(?:\/|$)/iu.test(url);
+
+          if (filterMode === 'arxiv') return isArxiv;
+          if (filterMode === 'non-arxiv') return !isArxiv;
+          return true;
+        });
+
+      return [...new Set(cleanedUrls)];
+    }
+
+    extractButton.addEventListener('click', () => {
+      const filterMode = document.querySelector('input[name="filterMode"]:checked').value;
+      const urls = extractUrls(sourceText.value, filterMode);
+      resultText.value = urls.join('\n');
+      extractStatus.textContent = `${urls.length} URL${urls.length === 1 ? '' : 's'} extracted`;
+      copyStatus.textContent = '';
+    });
+
+    copyButton.addEventListener('click', async () => {
+      if (!resultText.value) {
+        copyStatus.textContent = 'No URLs to copy';
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(resultText.value);
+        copyStatus.textContent = 'Copied';
+      } catch {
+        resultText.removeAttribute('readonly');
+        resultText.select();
+        const copied = document.execCommand('copy');
+        resultText.setAttribute('readonly', '');
+        copyStatus.textContent = copied ? 'Copied' : 'Unable to copy';
+      }
+    });
+  </script>
+</body>
+</html>
