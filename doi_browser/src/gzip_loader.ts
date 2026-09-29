@@ -2,7 +2,7 @@ export function load_gzip_text(url: string): Promise<string> {
     return fetch(url)
         .then(response => {
             if (!response.ok) {
-                throw new Error(`Failed to fetch file: ${response.statusText}`);
+                throw new Error(`Failed to fetch file: ${response.statusText}, URL: ${url}`);
             }
             return response.arrayBuffer();
         })
