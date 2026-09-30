@@ -97,6 +97,19 @@
     .children-ol {
       padding-left: 30px;
     }
+
+    #debug-mode-listbox {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .debug-mode-only {
+      display: none;
+    }
+
+    body.debug-mode .debug-mode-only {
+      display: inline-block;
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
 </head>
@@ -256,6 +269,18 @@
       </li>
     </ul>
   </fieldset>
+
+  <fieldset>
+    <legend>Options</legend>
+    <ul>
+      <li>
+        <input type="checkbox" id="opt-debug-mode-checkbox" />
+      <label for="opt-debug-mode-checkbox" id="opt-debug-mode-label">Debug mode</label>
+      </li>
+    </ul>
+  </fieldset>
+
+
   <div id="search-result-message-div"></div>
 
 
@@ -292,6 +317,7 @@
         <span class="type-icon-span"></span>
         <span class="year-icon-span"></span>
         <span class="optional-icon-span"></span>
+        <button type="button" class="debug-mode-only add-doi-button" onclick="addDOIToDebugList(event)">Add DOI</button>
         <a class="title-text" href="#" id="openDialog" onclick="openDetailsDialog(event)"></a>
         <span class="summary-info-text"></span>
         <span class="tags-text"></span>
@@ -336,6 +362,16 @@
     </article>
 
   </dialog>
+
+  <fieldset id="debug-mode-listbox-container" hidden>
+    <legend>Debug</legend>
+    <label for="debug-mode-listbox">Debug information</label>
+    <select id="debug-mode-listbox" size="8" aria-label="Debug information"></select>
+    <div>
+      <button type="button" id="download-doi-list-button" onclick="downloadDOIList()" disabled>Download</button>
+      <button type="button" onclick="resetDOIList()">Reset</button>
+    </div>
+  </fieldset>
 
 </body>
 

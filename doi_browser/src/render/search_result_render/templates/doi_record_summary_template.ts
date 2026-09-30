@@ -125,6 +125,15 @@ export class DOIRecordSummaryTemplate {
             throw new Error("titleSpan is not found");
         }
     }
+    private static renderAddDOIButton(article: HTMLElement, doiInfo: DOIRecord){
+        const addDOIButton = article.querySelector('.add-doi-button');
+        if (addDOIButton && addDOIButton instanceof HTMLButtonElement) {
+            addDOIButton.dataset.doi = doiInfo.doi;
+            addDOIButton.setAttribute("aria-label", `Add DOI ${doiInfo.doi}`);
+        } else {
+            throw new Error("addDOIButton is not found");
+        }
+    }
     private static renderSummaryInfoText(article: HTMLElement, doiInfo: DOIRecord, doiInfoCollection: DOIRecordCollection){
 
         const summaryInfoSpan = article.querySelector('.summary-info-text');
@@ -164,6 +173,7 @@ export class DOIRecordSummaryTemplate {
         const doiInfo = doiInfoCollection.getDOIInfo(doiID);
         this.renderTitleNumberSpan(article, doiInfo, doiInfoCollection);
         this.renderTitleText(article, doiInfo, doiID, doiInfoCollection);
+        this.renderAddDOIButton(article, doiInfo);
         this.renderDOILink(article, doiInfo, doiInfoCollection);
         this.renderStatusIconSpan(article, doiInfo, doiInfoCollection);
         this.renderTypeIconSpan(article, doiInfo, doiInfoCollection);

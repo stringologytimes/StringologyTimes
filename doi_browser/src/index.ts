@@ -72,6 +72,85 @@ function closeDetailsDialog() {
   dialog.close();
 }
 
+function addDOIToDebugList(event: Event) {
+  const button = event.currentTarget as HTMLButtonElement;
+  const doi = button.dataset.doi;
+  const debugModeListBox = document.getElementById("debug-mode-listbox") as HTMLSelectElement | null;
+  const downloadButton = document.getElementById("download-doi-list-button") as HTMLButtonElement | null;
+
+  if (doi == null || debugModeListBox == null || downloadButton == null) {
+    throw new Error("DOI or debug mode controls are not found");
+  }
+
+  const existingOption = Array.from(debugModeListBox.options).find(option => option.value === doi);
+  if (existingOption != null) {
+    existingOption.selected = true;
+    downloadButton.disabled = false;
+    return;
+  }
+
+  const option = new Option(doi, doi, false, true);
+  debugModeListBox.add(option);
+  downloadButton.disabled = false;
+}
+
+function downloadDOIList() {
+  const debugModeListBox = document.getElementById("debug-mode-listbox") as HTMLSelectElement | null;
+  if (debugModeListBox == null) {
+    throw new Error("Debug mode list box is not found");
+  }
+
+  const dois = Array.from(debugModeListBox.options, option => option.value);
+  if (dois.length === 0) {
+    return;
+  }
+
+  const escapeTSVValue = (value: string) => {
+    return /[\t\r\n"]/.test(value) ? `"${value.replace(/"/g, '""')}"` : value;
+  };
+  const tsv = ["DOI", ...dois.map(escapeTSVValue)].join("\n") + "\n";
+  const blob = new Blob([tsv], { type: "text/tab-separated-values;charset=utf-8" });
+  const downloadURL = URL.createObjectURL(blob);
+  const downloadLink = document.createElement("a");
+  downloadLink.href = downloadURL;
+  downloadLink.download = "dois.tsv";
+  downloadLink.hidden = true;
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  downloadLink.remove();
+  window.setTimeout(() => URL.revokeObjectURL(downloadURL), 0);
+}
+
+function resetDOIList() {
+  const debugModeListBox = document.getElementById("debug-mode-listbox") as HTMLSelectElement | null;
+  const downloadButton = document.getElementById("download-doi-list-button") as HTMLButtonElement | null;
+
+  if (debugModeListBox == null || downloadButton == null) {
+    throw new Error("Debug mode controls are not found");
+  }
+
+  debugModeListBox.replaceChildren();
+  downloadButton.disabled = true;
+}
+
+function initializeDebugModeListBox() {
+  const debugModeCheckbox = document.getElementById("opt-debug-mode-checkbox") as HTMLInputElement | null;
+  const debugModeListBoxContainer = document.getElementById("debug-mode-listbox-container");
+
+  if (debugModeCheckbox == null || debugModeListBoxContainer == null) {
+    throw new Error("Debug mode controls are not found");
+  }
+
+  const updateVisibility = () => {
+    const debugModeEnabled = debugModeCheckbox.checked;
+    debugModeListBoxContainer.hidden = !debugModeEnabled;
+    document.body.classList.toggle("debug-mode", debugModeEnabled);
+  };
+
+  debugModeCheckbox.addEventListener("change", updateVisibility);
+  updateVisibility();
+}
+
 
 function containerTitleLiElementClick(containerTitle: string) {
   /*
@@ -140,7 +219,11 @@ function initializeParameter(parameterList: [string, string][]) {
 (window as any).sortOrderInputChange = sortOrderInputChange;
 (window as any).openDetailsDialog = openDetailsDialog;
 (window as any).closeDetailsDialog = closeDetailsDialog;
+(window as any).addDOIToDebugList = addDOIToDebugList;
+(window as any).downloadDOIList = downloadDOIList;
+(window as any).resetDOIList = resetDOIList;
 async function domFinished() {
+  initializeDebugModeListBox();
   showLoading("Loading...");
 
   try {
@@ -170,5 +253,3 @@ document.addEventListener('DOMContentLoaded', domFinished);
 window.addEventListener("popstate", () => {
   browserInfo.rebuildFromURLParameters(true, true, true, true);
 });
-
-
