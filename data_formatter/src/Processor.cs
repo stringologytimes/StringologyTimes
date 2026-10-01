@@ -262,7 +262,7 @@ namespace DataProcessor
         {
             var logFolderPath = opts.DataFolderPath + "/auto_generated/log";
 
-            CommonFunctions.OutputSystemMessageFunction("Running doi_processor");
+            CommonFunctions.OutputSystemMessageFunction("Running data_formatter");
             var doiElementDict = DOIElement.Load(GetFilePathInResultFolder(opts.DataFolderPath, DOI_ELEMENT_FILENAME), true);
 
             /*
@@ -289,21 +289,21 @@ namespace DataProcessor
             ReplacementRules.ReplaceContainerTitleUsingDBLPSummary(GetFilePathInResultFolder(opts.DataFolderPath, "dblp_proceedings.jsonl"), doiElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Modifying series title using DBLP summary");
-            var seriesTitleReplacementRulesPath = opts.DataFolderPath + "/raw/doi_processor/series_title_replacement_rules.tsv";
+            var seriesTitleReplacementRulesPath = opts.DataFolderPath + "/raw/data_formatter/series_title_replacement_rules.tsv";
             ReplacementRules.ReplaceSeriesTitle(seriesTitleReplacementRulesPath, doiElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Applying type replacement rules");
-            ReplacementRules.ReplaceType(opts.DataFolderPath + "/raw/doi_processor/type_replacement_rules.tsv", doiElementDict, logFolderPath);
+            ReplacementRules.ReplaceType(opts.DataFolderPath + "/raw/data_formatter/type_replacement_rules.tsv", doiElementDict, logFolderPath);
 
 
             OutputSystemMessageFunction("Escaping container title");
             ReplacementRules.EscapeProcessing(doiElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Modifying container title by DOI prefix");
-            ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_container_title_value.tsv", doiElementDict, logFolderPath);
+            ReplacementRules.ReplaceContainerTitleByDOIPrefix(opts.DataFolderPath + "/raw/data_formatter/doi_prefix_key_container_title_value.tsv", doiElementDict, logFolderPath);
 
             OutputSystemMessageFunction("Modifying type by DOI prefix");
-            ReplacementRules.ReplaceTypeByDOIPrefix(opts.DataFolderPath + "/raw/doi_processor/doi_prefix_key_type_value.tsv", doiElementDict);
+            ReplacementRules.ReplaceTypeByDOIPrefix(opts.DataFolderPath + "/raw/data_formatter/doi_prefix_key_type_value.tsv", doiElementDict);
 
             OutputSystemMessageFunction("Appending tags to DOI element dictionary");
             ReplacementRules.AppendTags(opts.DataFolderPath, doiElementDict, logFolderPath);
@@ -312,7 +312,7 @@ namespace DataProcessor
             DOIElement.Save(doiElementDict, GetFilePathInResultFolder(opts.DataFolderPath, MODIFIED_DOI_ELEMENT_FILENAME));
 
 
-            CommonFunctions.OutputSystemMessageFunction("doi_processor is finished");
+            CommonFunctions.OutputSystemMessageFunction("data_formatter is finished");
 
 
             return 0;

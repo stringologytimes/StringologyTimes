@@ -15,14 +15,14 @@ if (!(Test-Path -Path $destinationDir)) {
     New-Item -ItemType Directory -Path $destinationDir -Force
 }
 
-$doiProcessor = "./doi_processor/bin/Release/net9.0/doi_processor"
+$doiProcessor = "./data_formatter/bin/Release/net9.0/data_formatter"
 $doiProcessorArgs = @("--data", "./data", "--skip_build", "--mode", "dblp_proceedings_preprocessor")
 #$doiProcessorArgs = @("--data", "./data", "--skip_build", "--mode", "dblp_proceedings_processor")
 
 #$doiProcessorArgs = @("--data", "./data")
 
 Write-Host "Compile: $dblpProcessor" -ForegroundColor Yellow
-cd doi_processor
+cd data_formatter
 dotnet build -c Release
 cd ..    
 
