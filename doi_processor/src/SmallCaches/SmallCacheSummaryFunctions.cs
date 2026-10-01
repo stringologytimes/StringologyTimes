@@ -259,6 +259,12 @@ namespace DataProcessor
                 {
                     record.UpdateForProceedingsArticle(proceedingsDOI, manager.SmallCacheSummaryLogFile);
                 }
+                else if (record.ModifiedType != SmallCacheSummaryRecord.ProceedingsArticleType)
+                {
+                    // DBLP confirms the article type even when its container DOI is already known.
+                    record.ModifiedType = SmallCacheSummaryRecord.ProceedingsArticleType;
+                    manager.SmallCacheSummaryLogFile.WriteLine($"Updated Type By DBLP: {record.DOI} -> {record.ModifiedType}");
+                }
 
 
                 //proceedingsSeries.

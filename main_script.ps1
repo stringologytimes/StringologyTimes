@@ -204,6 +204,8 @@ if (Test-Path $sourceFolder) {
     Write-Host "Source folder $sourceFolder does not exist. Skipping copy." -ForegroundColor Red
 }
 
+Write-Host "Execute: npm run build in ./doi_browser" -ForegroundColor Yellow
+
 
 cd ./doi_browser
 npm run build
