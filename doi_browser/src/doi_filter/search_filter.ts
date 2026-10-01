@@ -154,12 +154,11 @@ export class SearchFilter {
                     }
                 }
                 else{
-                    if(doiInfo.title.indexOf(keyword) != -1){
-                        b = true;
-                    }
-                    if(doiInfo.doi.indexOf(keyword) != -1){
-                        b = true;
-                    }
+                    b = Object.values(doiInfo).some(value =>
+                        typeof value === "string" ? value.includes(keyword) :
+                        Array.isArray(value) && value.some(item =>
+                            typeof item === "string" && item.includes(keyword))
+                    );
                 }
                 bArray.push(b);
             }

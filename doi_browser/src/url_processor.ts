@@ -103,6 +103,8 @@ export class URLProcessor {
             });
         }
 
+        searchFilter.keywords = url.searchParams.getAll(idPrefix + "keyword");
+
         return searchFilter;
 
     }

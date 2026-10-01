@@ -86,12 +86,22 @@ function addDOIToDebugList(event: Event) {
   if (existingOption != null) {
     existingOption.selected = true;
     downloadButton.disabled = false;
+    setAddDOIButtonsDisabled(doi, true);
     return;
   }
 
   const option = new Option(doi, doi, false, true);
   debugModeListBox.add(option);
   downloadButton.disabled = false;
+  setAddDOIButtonsDisabled(doi, true);
+}
+
+function setAddDOIButtonsDisabled(doi: string, disabled: boolean) {
+  document.querySelectorAll<HTMLButtonElement>(".add-doi-button").forEach(button => {
+    if (button.dataset.doi === doi) {
+      button.disabled = disabled;
+    }
+  });
 }
 
 function downloadDOIList() {
@@ -131,6 +141,9 @@ function resetDOIList() {
 
   debugModeListBox.replaceChildren();
   downloadButton.disabled = true;
+  document.querySelectorAll<HTMLButtonElement>(".add-doi-button").forEach(button => {
+    button.disabled = false;
+  });
 }
 
 function initializeDebugModeListBox() {

@@ -13,12 +13,18 @@ export class SearchFilterBoxFunctions {
     const newYearParameters = YearFieldsetFunctions.convertInputToURLParameters(isPrimaryFilter);
     const newContainerDOIParameters = ContainerDOIFieldsetFunctions.convertInputToURLParameters(isPrimaryFilter);
     const newRankParameters = RankFieldsetFunctions.convertInputToURLParameters(isPrimaryFilter);
+    const prefix = isPrimaryFilter ? "psf-" : "ssf-";
+    const keywordsInput = document.getElementById(prefix + "keywords-input") as HTMLInputElement;
+    const keywordParameters: [string, string][] = keywordsInput.value.length > 0
+      ? [[prefix + "keyword", keywordsInput.value]] : [];
 
-    return [...newTypes, ...newYearParameters, ...newContainerDOIParameters, ...newRankParameters];
+    return [...newTypes, ...newYearParameters, ...newContainerDOIParameters, ...newRankParameters, ...keywordParameters];
   }
 
   public static initializeFilterBox(isPrimaryFilter: boolean, foundRecordSummary: FoundRecordSummary, doiRecordCollection: DOIRecordCollection): void {
     const filterSearch = URLProcessor.buildSearchFilterFromURL(isPrimaryFilter);
+    const prefix = isPrimaryFilter ? "psf-" : "ssf-";
+    (document.getElementById(prefix + "keywords-input") as HTMLInputElement).value = filterSearch.keywords.join(" ");
 
     RecordTypeFieldsetFunctions.initializeRecordTypes(isPrimaryFilter, foundRecordSummary.type_to_id_count_mapper, filterSearch.types);
     YearFieldsetFunctions.initializeYearBox(isPrimaryFilter, foundRecordSummary.year_to_id_count_mapper, foundRecordSummary.unknown_year_id_count, filterSearch.minimumYear, filterSearch.maximumYear);
@@ -42,6 +48,7 @@ export class SearchFilterBoxFunctions {
     url.searchParams.delete(prefix + "sub-container-doi");
     url.searchParams.delete(prefix + "top-container-type");
     url.searchParams.delete(prefix + "excluded-status");
+    url.searchParams.delete(prefix + "keyword");
 
     parameters.forEach(parameter => {
       url.searchParams.append(parameter[0], parameter[1]);

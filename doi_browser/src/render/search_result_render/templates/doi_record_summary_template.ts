@@ -130,6 +130,9 @@ export class DOIRecordSummaryTemplate {
         if (addDOIButton && addDOIButton instanceof HTMLButtonElement) {
             addDOIButton.dataset.doi = doiInfo.doi;
             addDOIButton.setAttribute("aria-label", `Add DOI ${doiInfo.doi}`);
+            const debugModeListBox = document.getElementById("debug-mode-listbox") as HTMLSelectElement | null;
+            addDOIButton.disabled = debugModeListBox != null
+                && Array.from(debugModeListBox.options).some(option => option.value === doiInfo.doi);
         } else {
             throw new Error("addDOIButton is not found");
         }

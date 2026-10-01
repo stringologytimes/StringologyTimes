@@ -168,7 +168,8 @@
     </fieldset>
     <fieldset>
       <legend>Keywords</legend>
-      <input type="text" id="psf-keywords-input" name="psf-keywords-input" size="20" disabled/>
+      <input type="text" id="psf-keywords-input" name="psf-keywords-input" size="20"
+        onkeydown="if (event.key === 'Enter' && !event.isComposing) { event.preventDefault(); clickPrimarySearchFilterButton(); }"/>
     </fieldset>
 
     <button onclick="clickPrimarySearchFilterButton()">Search</button>
@@ -223,8 +224,10 @@
     </fieldset>
     <fieldset>
       <legend>Keywords</legend>
-      <input type="text" id="ssf-keywords-input" name="ssf-keywords-input" size="20" disabled/>
+      <input type="text" id="ssf-keywords-input" name="ssf-keywords-input" size="20"
+        onkeydown="if (event.key === 'Enter' && !event.isComposing) { event.preventDefault(); secondarySearchFilterChange('ssf-keywords-input'); }"/>
     </fieldset>
+    <button onclick="secondarySearchFilterChange('ssf-keywords-input')">Search</button>
     <button onclick="clickResetButtonOfSecondarySearchFilterBox()">Reset</button>
 
   </details>
