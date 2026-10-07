@@ -11,8 +11,13 @@
 ## Web Service (Experimental)
 
 - [Stringology Explorer](https://stringologytimes.github.io/StringologyTimes/docs/stringology_explorer/index.html)
-- [arXiv's articles](https://stringologytimes.github.io/StringologyTimes/docs/stringology_explorer/index.html?primary-sort-order=newest-first&psf-top-container-doi=dummy%2Fpreprint_repository%2Farxiv&psf-top-container-type=Preprint+Repository&psf-excluded-status=secondary)
-- [bioRxiv's articles](https://stringologytimes.github.io/StringologyTimes/docs/stringology_explorer/index.html?primary-sort-order=newest-first&psf-top-container-doi=dummy%2Fpreprint_repository%2Fbiorxiv&psf-top-container-type=Preprint+Repository&psf-excluded-status=secondary)
+
+## Lists of Papers (Experimental)
+
+- [arXiv](https://stringologytimes.github.io/StringologyTimes/docs/stringology_explorer/index.html?primary-sort-order=newest-first&psf-top-container-doi=dummy%2Fpreprint_repository%2Farxiv&psf-top-container-type=Preprint+Repository&psf-excluded-status=secondary)
+- [bioRxiv](https://stringologytimes.github.io/StringologyTimes/docs/stringology_explorer/index.html?primary-sort-order=newest-first&psf-top-container-doi=dummy%2Fpreprint_repository%2Fbiorxiv&psf-top-container-type=Preprint+Repository&psf-excluded-status=secondary)
+- [CPM](https://stringologytimes.github.io/StringologyTimes/docs/stringology_explorer/index.html?psf-type=Any+Paper&psf-top-container-doi=dummy%2Fproceedings_collection%2Fcpm&psf-top-container-type=Proceedings+Collection&psf-excluded-status=secondary&primary-sort-order=newest-first)
+
 
 ## Add DOI List
 
